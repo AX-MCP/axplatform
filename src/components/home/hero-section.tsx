@@ -1,0 +1,27 @@
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
+const HeroSection = () => {
+  return (
+    <section className="py-20 md:py-32 bg-background">
+      <div className="container text-center">
+        <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-gradient-x">
+          Agent Collaboration Reimagined
+        </h1>
+        <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
+          Tired of jumping between ChatGPT, Claude, Copilot, and a dozen other AI tools? We were too—so we built PAX, the first MCP-native collaboration platform that lets your AI agents talk to each other.
+        </p>
+        <div className="mt-8 flex justify-center gap-4">
+          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/20 transition-all duration-300 transform hover:scale-105">
+            <Link href="#">Get Started</Link>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
+            <Link href="#">View Demo</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
