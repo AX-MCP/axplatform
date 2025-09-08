@@ -9,41 +9,27 @@ import {
 } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
 
-const agents = [
+const workspaces = [
   {
-    name: "Code Companion",
-    description: "Your AI pair programmer. Helps debug, write tests, and refactor code.",
+    name: "Financial Advisors",
+    description: "A team of AI agents that analyze market data and provide investment advice.",
     imageUrl: "https://picsum.photos/600/400?random=1",
-    tags: ["Development", "Productivity"],
-    aiHint: "code abstract"
-  },
-  {
-    name: "Market Maven",
-    description: "Analyzes market trends and provides actionable investment insights.",
-    imageUrl: "https://picsum.photos/600/400?random=2",
     tags: ["Finance", "Analytics"],
-    aiHint: "stock chart"
+    aiHint: "financial chart"
   },
   {
-    name: "Creative Spark",
-    description: "Generates creative ideas, ad copy, and social media content.",
+    name: "Agents for Hire",
+    description: "A marketplace for AI agents that can be hired for specific tasks.",
+    imageUrl: "https://picsum.photos/600/400?random=2",
+    tags: ["Marketplace", "Freelance"],
+    aiHint: "team collaboration"
+  },
+  {
+    name: "Football Open DFS",
+    description: "AI-powered daily fantasy sports picks for the NFL.",
     imageUrl: "https://picsum.photos/600/400?random=3",
-    tags: ["Marketing", "Writing"],
-    aiHint: "lightbulb idea"
-  },
-  {
-    name: "Research Assistant",
-    description: "Summarizes long documents, finds key information, and fact-checks claims.",
-    imageUrl: "https://picsum.photos/600/400?random=4",
-    tags: ["Research", "Academia"],
-    aiHint: "books library"
-  },
-  {
-    name: "Support Sentinel",
-    description: "Automates customer support responses and escalates complex issues.",
-    imageUrl: "https://picsum.photos/600/400?random=5",
-    tags: ["Support", "Automation"],
-    aiHint: "headset operator"
+    tags: ["Sports", "Fantasy"],
+    aiHint: "american football"
   },
 ];
 
@@ -52,8 +38,8 @@ const AgentSpotlight = () => {
     <section className="py-20 md:py-24 bg-card">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Featured AI Agents</h2>
-          <p className="mt-4 text-lg text-muted-foreground">Discover agents built by the community and our team.</p>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">Featured Workspaces</h2>
+          <p className="mt-4 text-lg text-muted-foreground">Discover workspaces built by the community and our team.</p>
         </div>
         <Carousel
           opts={{
@@ -63,24 +49,24 @@ const AgentSpotlight = () => {
           className="w-full"
         >
           <CarouselContent>
-            {agents.map((agent, index) => (
+            {workspaces.map((workspace, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
                   <Card className="overflow-hidden h-full flex flex-col group">
                     <div className="relative h-48 w-full">
                       <Image
-                        src={agent.imageUrl}
-                        alt={agent.name}
+                        src={workspace.imageUrl}
+                        alt={workspace.name}
                         fill
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        data-ai-hint={agent.aiHint}
+                        data-ai-hint={workspace.aiHint}
                       />
                     </div>
                     <CardContent className="p-6 flex-grow flex flex-col">
-                      <h3 className="text-xl font-bold font-headline mb-2">{agent.name}</h3>
-                      <p className="text-muted-foreground flex-grow mb-4">{agent.description}</p>
+                      <h3 className="text-xl font-bold font-headline mb-2">{workspace.name}</h3>
+                      <p className="text-muted-foreground flex-grow mb-4">{workspace.description}</p>
                       <div className="flex flex-wrap gap-2">
-                        {agent.tags.map(tag => (
+                        {workspace.tags.map(tag => (
                           <Badge key={tag} variant="secondary">{tag}</Badge>
                         ))}
                       </div>
