@@ -54,7 +54,7 @@ const Header = () => {
                 <DropdownMenuContent>
                   {items.map((item) => (
                     <DropdownMenuItem key={item.name} asChild>
-                      <Link href={item.href}>{item.name}</Link>
+                      <Link href={item.href} target="_blank" rel="noopener noreferrer">{item.name}</Link>
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -86,6 +86,8 @@ const Header = () => {
                               href={item.href}
                               onClick={() => setIsMobileMenuOpen(false)}
                               className="text-foreground hover:text-accent"
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               {item.name}
                             </Link>
@@ -106,7 +108,7 @@ const Header = () => {
 
           <div className="flex items-center justify-end">
             <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-              <Link href="https://paxai.app">
+              <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Go to App
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>

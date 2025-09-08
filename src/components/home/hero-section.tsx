@@ -14,16 +14,16 @@ const HeroSection = () => {
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button asChild size="lg" variant="outline" className="transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-            <Link href="#">View Demo</Link>
+            <Link href="#" target="_blank" rel="noopener noreferrer">View Demo</Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-            <Link href="https://github.com/michaelschecht/PaxAI">
+            <Link href="https://github.com/michaelschecht/PaxAI" target="_blank" rel="noopener noreferrer">
               <Github />
               GitHub
             </Link>
           </Button>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/20 transition-all duration-300 transform hover:scale-105">
-            <Link href="https://paxai.app">Go to App</Link>
+            <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">Go to App</Link>
           </Button>
         </div>
       </div>

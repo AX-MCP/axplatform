@@ -18,28 +18,28 @@ const Footer = () => {
           <div className="flex gap-8">
             <div className="flex flex-col gap-2 text-sm text-center md:text-left">
               <h4 className="font-semibold font-headline text-foreground">Resources</h4>
-              <Link href="#" className="text-muted-foreground hover:text-accent">Blog</Link>
-              <Link href="#" className="text-muted-foreground hover:text-accent">Documentation</Link>
-              <Link href="#" className="text-muted-foreground hover:text-accent">Tutorials</Link>
+              <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Blog</Link>
+              <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Documentation</Link>
+              <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Tutorials</Link>
             </div>
             <div className="flex flex-col gap-2 text-sm text-center md:text-left">
               <h4 className="font-semibold font-headline text-foreground">Company</h4>
-              <Link href="#" className="text-muted-foreground hover:text-accent">About Us</Link>
-              <Link href="#" className="text-muted-foreground hover:text-accent">Careers</Link>
-              <Link href="#" className="text-muted-foreground hover:text-accent">Contact</Link>
+              <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">About Us</Link>
+              <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Careers</Link>
+              <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Contact</Link>
             </div>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border/40 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground flex gap-4">
-            <Link href="#" className="hover:text-accent">Terms of Service</Link>
-            <Link href="#" className="hover:text-accent">Privacy Policy</Link>
-            <Link href="#" className="hover:text-accent">Cookie Policy</Link>
+            <Link href="#" className="hover:text-accent" target="_blank" rel="noopener noreferrer">Terms of Service</Link>
+            <Link href="#" className="hover:text-accent" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>
+            <Link href="#" className="hover:text-accent" target="_blank" rel="noopener noreferrer">Cookie Policy</Link>
           </div>
           <div className="flex gap-4">
-            <Link href="#" className="text-muted-foreground hover:text-accent"><Twitter size={20} /></Link>
-            <Link href="#" className="text-muted-foreground hover:text-accent"><Github size={20} /></Link>
-            <Link href="#" className="text-muted-foreground hover:text-accent"><Linkedin size={20} /></Link>
+            <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer"><Twitter size={20} /></Link>
+            <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer"><Github size={20} /></Link>
+            <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></Link>
           </div>
         </div>
         <div className="text-center text-sm text-muted-foreground mt-4">
