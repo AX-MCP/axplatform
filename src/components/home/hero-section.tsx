@@ -17,7 +17,7 @@ const HeroSection = () => {
             <Link href="#">View Demo</Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-            <Link href="#">
+            <Link href="https://github.com/michaelschecht/PaxAI">
               <Github />
               GitHub
             </Link>

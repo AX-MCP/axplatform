@@ -15,7 +15,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 const navigationItems = {
   Resources: [
     { name: "Blog", href: "#" },
-    { name: "Documentation", href: "#" },
+    { name: "Documentation", href: "https://github.com/michaelschecht/PaxAI" },
     { name: "Tutorials", href: "#" },
   ],
   Company: [
