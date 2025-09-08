@@ -106,7 +106,7 @@ const Header = () => {
 
           <div className="flex items-center justify-end">
             <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-              <Link href="#">
+              <Link href="https://paxai.app">
                 Go to App
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
