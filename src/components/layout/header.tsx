@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Bot, Menu, ChevronDown } from "lucide-react";
+import { Bot, Menu, ChevronDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -104,9 +104,13 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="flex items-center justify-end space-x-2">
-            <Button variant="ghost">Log In</Button>
-            <Button className="bg-accent text-accent-foreground hover:bg-accent/90">Sign Up</Button>
+          <div className="flex items-center justify-end">
+            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Link href="#">
+                Go to App
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
