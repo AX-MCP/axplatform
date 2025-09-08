@@ -14,19 +14,19 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navigationItems = {
   Resources: [
-    { name: "Blog", href: "#" },
-    { name: "Documentation", href: "https://github.com/michaelschecht/PaxAI" },
-    { name: "Tutorials", href: "#" },
+    { name: "Blog", href: "#", target: "_blank" },
+    { name: "Documentation", href: "https://github.com/michaelschecht/PaxAI", target: "_blank" },
+    { name: "Tutorials", href: "#", target: "_blank" },
   ],
   Company: [
-    { name: "About Us", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "About Us", href: "#", target: "_blank" },
+    { name: "Careers", href: "#", target: "_blank" },
+    { name: "Contact", href: "/contact" },
   ],
   "AI Agents": [
-    { name: "Browse", href: "#" },
-    { name: "Featured", href: "#" },
-    { name: "Add Agent", href: "#" },
+    { name: "Browse", href: "#", target: "_blank" },
+    { name: "Featured", href: "#", target: "_blank" },
+    { name: "Add Agent", href: "#", target: "_blank" },
   ],
 };
 
@@ -54,7 +54,7 @@ const Header = () => {
                 <DropdownMenuContent>
                   {items.map((item) => (
                     <DropdownMenuItem key={item.name} asChild>
-                      <Link href={item.href} target="_blank" rel="noopener noreferrer">{item.name}</Link>
+                      <Link href={item.href} target={item.target} rel={item.target === "_blank" ? "noopener noreferrer" : undefined}>{item.name}</Link>
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>
@@ -86,8 +86,8 @@ const Header = () => {
                               href={item.href}
                               onClick={() => setIsMobileMenuOpen(false)}
                               className="text-foreground hover:text-accent"
-                              target="_blank"
-                              rel="noopener noreferrer"
+                              target={item.target}
+                              rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                             >
                               {item.name}
                             </Link>
