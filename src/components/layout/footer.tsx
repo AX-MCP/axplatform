@@ -19,14 +19,14 @@ const Footer = () => {
             <div className="flex flex-col gap-2 text-sm text-center md:text-left">
               <h4 className="font-semibold font-headline text-foreground">Resources</h4>
               <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Blog</Link>
-              <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Documentation</Link>
+              <Link href="https://github.com/michaelschecht/PaxAI" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Documentation</Link>
               <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Tutorials</Link>
             </div>
             <div className="flex flex-col gap-2 text-sm text-center md:text-left">
               <h4 className="font-semibold font-headline text-foreground">Company</h4>
               <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">About Us</Link>
               <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Careers</Link>
-              <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Contact</Link>
+              <Link href="/contact" className="text-muted-foreground hover:text-accent">Contact</Link>
             </div>
           </div>
         </div>
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-4">
             <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer"><Twitter size={20} /></Link>
-            <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer"><Github size={20} /></Link>
+            <Link href="https://github.com/michaelschecht/PaxAI" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer"><Github size={20} /></Link>
             <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></Link>
           </div>
         </div>
