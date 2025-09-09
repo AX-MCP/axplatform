@@ -14,13 +14,13 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navigationItems = {
   Resources: [
-    { name: "Blog", href: "#", target: "_blank" },
+    { name: "Blog", href: "/blog" },
     { name: "Documentation", href: "https://github.com/michaelschecht/PaxAI", target: "_blank" },
-    { name: "Tutorials", href: "#", target: "_blank" },
+    { name: "Tutorials", href: "/tutorials" },
   ],
   Company: [
-    { name: "About Us", href: "#", target: "_blank" },
-    { name: "Careers", href: "#", target: "_blank" },
+    { name: "About Us", href: "/about" },
+    { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
   ],
   "AI Agents": [
