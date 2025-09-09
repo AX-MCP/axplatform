@@ -14,8 +14,8 @@ export default function ContactPage() {
           </p>
           <div className="flex items-center justify-center gap-4">
             <Mail className="h-6 w-6 text-accent" />
-            <a href="mailto:support@paxai.app" className="text-xl font-medium text-primary hover:underline">
-              support@paxai.app
+            <a href="mailto:support@ax-platform.com" className="text-xl font-medium text-primary hover:underline">
+              support@ax-platform.com
             </a>
           </div>
           <p className="mt-6 text-sm text-muted-foreground">
