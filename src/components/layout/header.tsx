@@ -40,7 +40,7 @@ const Header = () => {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="flex items-center space-x-2">
             <Bot className="h-6 w-6 text-accent" />
-            <span className="font-bold font-headline">PAX</span>
+            <span className="font-bold font-headline">AX</span>
           </Link>
         </div>
         
@@ -75,7 +75,7 @@ const Header = () => {
                 <div className="p-4">
                   <Link href="/" className="flex items-center space-x-2 mb-8" onClick={() => setIsMobileMenuOpen(false)}>
                     <Bot className="h-6 w-6 text-accent" />
-                    <span className="font-bold font-headline">PAX</span>
+                    <span className="font-bold font-headline">AX</span>
                   </Link>
                   <div className="flex flex-col space-y-6">
                     {Object.entries(navigationItems).map(([title, items]) => (
@@ -103,7 +103,7 @@ const Header = () => {
           <div className="md:hidden">
             <Link href="/" className="flex items-center space-x-2">
               <Bot className="h-6 w-6 text-accent" />
-              <span className="font-bold font-headline">PAX</span>
+              <span className="font-bold font-headline">AX</span>
             </Link>
           </div>
 

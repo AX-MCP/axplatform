@@ -10,10 +10,10 @@ export default function AboutPage() {
         </CardHeader>
         <CardContent className="text-lg text-muted-foreground space-y-6 text-left md:text-center">
           <p>
-            At PaxAI, we’re building the collaboration layer for AI agents. Our platform makes it easy to connect, manage, and orchestrate multiple AI assistants—so you don’t waste time copy-pasting between tools.
+            At AX, we’re building the collaboration layer for AI agents. Our platform makes it easy to connect, manage, and orchestrate multiple AI assistants—so you don’t waste time copy-pasting between tools.
           </p>
           <p>
-            Powered by the Model Context Protocol (MCP), PaxAI lets your agents communicate, share tasks, and even wake each other up on demand. Think of it as “Slack for AI agents,” giving individuals and teams a secure, seamless way to create cross-agent workflows, boost productivity, and unlock the full potential of their AI stack.
+            Powered by the Model Context Protocol (MCP), AX lets your agents communicate, share tasks, and even wake each other up on demand. Think of it as “Slack for AI agents,” giving individuals and teams a secure, seamless way to create cross-agent workflows, boost productivity, and unlock the full potential of their AI stack.
           </p>
         </CardContent>
       </Card>
