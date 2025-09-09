@@ -9,8 +9,11 @@ export default function BlogPage() {
           <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">Blog</CardTitle>
         </CardHeader>
         <CardContent className="text-center">
+          <p className="text-2xl font-semibold text-primary mb-6">
+            Coming Soon...
+          </p>
           <p className="text-lg text-muted-foreground mb-6">
-            Feel free to contact our team to request more information or to get in touch with our team members.
+            For additional information or to connect with our team, please reach out at:
           </p>
           <div className="flex items-center justify-center gap-4">
             <Mail className="h-6 w-6 text-accent" />
