@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2 text-sm text-center md:text-left">
               <h4 className="font-semibold font-headline text-foreground">Company</h4>
               <Link href="/about" className="text-muted-foreground hover:text-accent">About Us</Link>
-              <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Careers</Link>
+              <Link href="/careers" className="text-muted-foreground hover:text-accent">Careers</Link>
               <Link href="/contact" className="text-muted-foreground hover:text-accent">Contact</Link>
             </div>
           </div>

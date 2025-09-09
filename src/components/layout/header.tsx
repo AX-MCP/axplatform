@@ -20,7 +20,7 @@ const navigationItems = {
   ],
   Company: [
     { name: "About Us", href: "/about" },
-    { name: "Careers", href: "#", target: "_blank" },
+    { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
   ],
   "AI Agents": [
