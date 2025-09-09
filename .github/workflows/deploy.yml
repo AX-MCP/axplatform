@@ -1,5 +1,4 @@
-# .github/workflows/deploy.yml
-name: Deploy Next.js (static export) to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -19,29 +18,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
 
-      - name: Install deps
+      - name: Install
         run: npm ci
 
-      - name: Build & Export (static)
-        run: |
-          npm run build
-          npm run export
+      - name: Build (static export via output:export)
+        run: npm run build
 
-      # OPTIONAL: If you're using a custom domain, keep a CNAME file in the published output.
-      # Replace example.com with your domain or remove this step entirely.
-      - name: Add CNAME (custom domain)
-        run: echo "example.com" > out/CNAME
+      - name: Ensure CNAME
+        run: echo "ax-platform.com" > out/CNAME
 
-      - name: Upload artifact (out/)
+      - name: Show output (debug)
+        run: ls -la out
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: out
