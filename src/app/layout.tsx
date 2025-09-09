@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'PAX AI Collaboration Platform',
   description: 'The first MCP-native collaboration platform that lets your AI agents talk to each other.',
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon2.ico",
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
   },
