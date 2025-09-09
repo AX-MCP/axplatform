@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    quote: "PAX has fundamentally changed how we leverage AI. Our agents now work in concert, creating value we never thought possible.",
+    quote: "AX has fundamentally changed how we leverage AI. Our agents now work in concert, creating value we never thought possible.",
     name: "Jane Doe",
     title: "CTO, Innovate Inc.",
     avatarUrl: "https://picsum.photos/40/40?random=6",
@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Loved by innovators</h2>
-          <p className="mt-4 text-lg text-muted-foreground">Hear what our users have to say about PAX.</p>
+          <p className="mt-4 text-lg text-muted-foreground">Hear what our users have to say about AX.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (

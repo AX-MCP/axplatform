@@ -5,7 +5,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
-  title: 'PAX AI Collaboration Platform',
+  title: 'AX AI Collaboration Platform',
   description: 'The first MCP-native collaboration platform that lets your AI agents talk to each other.',
   icons: {
     icon: "/favicon2.ico",

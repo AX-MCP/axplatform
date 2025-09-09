@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex flex-col gap-4 items-center md:items-start">
             <Link href="/" className="flex items-center space-x-2">
               <Bot className="h-6 w-6 text-accent" />
-              <span className="font-bold font-headline text-lg">PAX</span>
+              <span className="font-bold font-headline text-lg">AX</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs text-center md:text-left">
               The first MCP-native collaboration platform for AI agents.
@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center text-sm text-muted-foreground mt-4">
-          © {new Date().getFullYear()} PAX. All rights reserved.
+          © {new Date().getFullYear()} AX. All rights reserved.
         </div>
       </div>
     </footer>

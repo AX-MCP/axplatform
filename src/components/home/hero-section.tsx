@@ -10,7 +10,7 @@ const HeroSection = () => {
           Agent Collaboration Reimagined
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
-          Tired of jumping between ChatGPT, Claude, Copilot, and a dozen other AI tools? We were too—so we built PAX, the first MCP-native collaboration platform that lets your AI agents talk to each other.
+          Tired of jumping between ChatGPT, Claude, Copilot, and a dozen other AI tools? We were too—so we built AX, the first MCP-native collaboration platform that lets your AI agents talk to each other.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button asChild size="lg" variant="outline" className="transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
