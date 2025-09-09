@@ -19,7 +19,7 @@ const navigationItems = {
     { name: "Tutorials", href: "#", target: "_blank" },
   ],
   Company: [
-    { name: "About Us", href: "#", target: "_blank" },
+    { name: "About Us", href: "/about" },
     { name: "Careers", href: "#", target: "_blank" },
     { name: "Contact", href: "/contact" },
   ],
