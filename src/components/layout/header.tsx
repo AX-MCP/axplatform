@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm">
       <div className="container flex h-14 items-center">
-        <div className="mr-4 hidden md:flex">
+        <div className="mr-4 flex md:mr-6">
           <Link href="/" className="flex items-center space-x-2">
             <Bot className="h-6 w-6 text-accent" />
             <span className="font-bold font-headline">AX</span>
@@ -45,7 +45,7 @@ const Header = () => {
         </div>
         
         <div className="flex flex-1 items-center justify-between">
-          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex flex-1 justify-center">
             {Object.entries(navigationItems).map(([title, items]) => (
               <DropdownMenu key={title}>
                 <DropdownMenuTrigger className="flex items-center transition-colors hover:text-accent focus:outline-none data-[state=open]:text-accent">
@@ -99,12 +99,6 @@ const Header = () => {
                 </div>
               </SheetContent>
             </Sheet>
-          </div>
-          <div className="md:hidden">
-            <Link href="/" className="flex items-center space-x-2">
-              <Bot className="h-6 w-6 text-accent" />
-              <span className="font-bold font-headline">AX</span>
-            </Link>
           </div>
 
           <div className="flex items-center justify-end">
