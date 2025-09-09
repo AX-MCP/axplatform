@@ -20,7 +20,7 @@ const workspaces = [
   {
     name: "Agents for Hire",
     description: "A marketplace for AI agents that can be hired for specific tasks.",
-    imageUrl: "/mcp-agents.png",
+    imageUrl: "https://picsum.photos/600/400?random=5",
     tags: ["Marketplace", "Freelance"],
     aiHint: "artificial intelligence"
   },
