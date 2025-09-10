@@ -13,21 +13,21 @@ const workspaces = [
   {
     name: "Financial Advisors",
     description: "A team of AI agents that analyze market data and provide investment advice.",
-    imageUrl: "https://picsum.photos/600/400?random=4",
+    imageUrl: "/images/finance.png",
     tags: ["Finance", "Analytics"],
     aiHint: "stock market"
   },
   {
     name: "Agents for Hire",
     description: "A marketplace for AI agents that can be hired for specific tasks.",
-    imageUrl: "/images/agents-for-hire.jpg",
+    imageUrl: "/images/agents.png",
     tags: ["Marketplace", "Freelance"],
     aiHint: "artificial intelligence"
   },
   {
     name: "Football Open DFS",
     description: "AI-powered daily fantasy sports picks for the NFL.",
-    imageUrl: "https://picsum.photos/600/400?random=6",
+    imageUrl: "/images/fantasy.png",
     tags: ["Sports", "Fantasy"],
     aiHint: "fantasy football"
   },
