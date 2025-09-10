@@ -20,7 +20,7 @@ const workspaces = [
   {
     name: "Agents for Hire",
     description: "A marketplace for AI agents that can be hired for specific tasks.",
-    imageUrl: "https://picsum.photos/600/400?random=5",
+    imageUrl: "/images/agents-for-hire.jpg",
     tags: ["Marketplace", "Freelance"],
     aiHint: "artificial intelligence"
   },
@@ -57,7 +57,8 @@ const AgentSpotlight = () => {
                       <Image
                         src={workspace.imageUrl}
                         alt={workspace.name}
-                        fill
+                        width={600}
+                        height={400}
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                         data-ai-hint={workspace.aiHint}
                       />
