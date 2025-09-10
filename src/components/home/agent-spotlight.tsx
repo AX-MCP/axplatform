@@ -52,26 +52,27 @@ const AgentSpotlight = () => {
             {workspaces.map((workspace, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card className="overflow-hidden h-full flex flex-col group">
-                    <div className="relative h-48 w-full">
+                  <Card className="overflow-hidden h-[400px] flex flex-col group">
+                    <div className="relative h-full w-full">
                       <Image
                         src={workspace.imageUrl}
                         alt={workspace.name}
                         width={600}
                         height={400}
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                         data-ai-hint={workspace.aiHint}
                       />
-                    </div>
-                    <CardContent className="p-6 flex-grow flex flex-col">
-                      <h3 className="text-xl font-bold font-headline mb-2">{workspace.name}</h3>
-                      <p className="text-muted-foreground flex-grow mb-4">{workspace.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {workspace.tags.map(tag => (
-                          <Badge key={tag} variant="secondary">{tag}</Badge>
-                        ))}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                      <div className="absolute bottom-0 left-0 p-6 w-full">
+                        <h3 className="text-xl font-bold font-headline text-card-foreground mb-2">{workspace.name}</h3>
+                        <p className="text-muted-foreground mb-4">{workspace.description}</p>
+                        <div className="flex flex-wrap gap-2">
+                          {workspace.tags.map(tag => (
+                            <Badge key={tag} variant="secondary">{tag}</Badge>
+                          ))}
+                        </div>
                       </div>
-                    </CardContent>
+                    </div>
                   </Card>
                 </div>
               </CarouselItem>
