@@ -13,21 +13,21 @@ const workspaces = [
   {
     name: "Financial Advisors",
     description: "A team of AI agents that analyze market data and provide investment advice.",
-    imageUrl: "/images/finance.png",
+    imageUrl: "https://picsum.photos/600/400?random=1",
     tags: ["Finance", "Analytics"],
     aiHint: "stock market"
   },
   {
     name: "Agents for Hire",
     description: "A marketplace for AI agents that can be hired for specific tasks.",
-    imageUrl: "/images/agents.png",
+    imageUrl: "/images/agents-for-hire.jpg",
     tags: ["Marketplace", "Freelance"],
     aiHint: "artificial intelligence"
   },
   {
     name: "Football Open DFS",
     description: "AI-powered daily fantasy sports picks for the NFL.",
-    imageUrl: "/images/fantasy.png",
+    imageUrl: "https://picsum.photos/600/400?random=3",
     tags: ["Sports", "Fantasy"],
     aiHint: "fantasy football"
   },
@@ -52,13 +52,14 @@ const AgentSpotlight = () => {
             {workspaces.map((workspace, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card className="overflow-hidden h-[480px] flex flex-col group">
+                  <Card className="overflow-hidden h-[400px] flex flex-col group">
                     <div className="relative h-full w-full">
                       <Image
                         src={workspace.imageUrl}
                         alt={workspace.name}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        width={600}
+                        height={400}
+                        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                         data-ai-hint={workspace.aiHint}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
@@ -86,5 +87,3 @@ const AgentSpotlight = () => {
 };
 
 export default AgentSpotlight;
-
-    
