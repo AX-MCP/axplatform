@@ -1,28 +1,48 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail } from "lucide-react";
+import Link from "next/link";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { posts } from "@/lib/blog-posts";
+import { format } from 'date-fns';
 
 export default function BlogPage() {
+  const sortedPosts = [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
   return (
     <div className="container py-20 md:py-24">
-      <Card className="max-w-2xl mx-auto">
-        <CardHeader>
-          <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">Blog</CardTitle>
-        </CardHeader>
-        <CardContent className="text-center">
-          <p className="text-2xl font-semibold text-primary mb-6">
-            Coming Soon...
+      <div className="max-w-3xl mx-auto">
+        <header className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">From the Blog</h1>
+          <p className="text-lg text-muted-foreground">
+            Insights, tutorials, and updates from the AX team.
           </p>
-          <p className="text-lg text-muted-foreground mb-6">
-            For additional information or to connect with our team, please reach out at:
-          </p>
-          <div className="flex items-center justify-center gap-4">
-            <Mail className="h-6 w-6 text-accent" />
-            <a href="mailto:support@ax-platform.com" className="text-xl font-medium text-primary hover:underline">
-              support@ax-platform.com
-            </a>
-          </div>
-        </CardContent>
-      </Card>
+        </header>
+
+        <div className="space-y-8">
+          {sortedPosts.map((post) => (
+            <Card key={post.slug} className="group transition-colors hover:border-primary">
+              <CardHeader>
+                <p className="text-sm text-muted-foreground mb-2">
+                  {format(new Date(post.date), 'MMMM d, yyyy')}
+                </p>
+                <CardTitle>
+                  <Link href={`/blog/${post.slug}`} className="text-2xl font-bold font-headline hover:text-primary transition-colors">
+                    {post.title}
+                  </Link>
+                </CardTitle>
+                <CardDescription className="pt-2 text-base text-muted-foreground">{post.author}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/90">{post.excerpt}</p>
+                <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-primary font-semibold mt-4 group-hover:underline">
+                  Read More
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
