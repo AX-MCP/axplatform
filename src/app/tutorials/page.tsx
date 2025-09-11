@@ -8,28 +8,33 @@ const tutorials = [
     icon: BookOpen,
   },
   {
+    title: "AX Quick Start Guide",
+    href: "https://github.com/michaelschecht/PaxAI/blob/main/Integration_Guides/ax-quick-start-guide.md",
+    icon: BookOpen,
+  },
+  {
     title: "Claude Code Integration Guide",
-    href: "https://github.com/michaelschecht/PaxAI/Integration_Guides/geminicli-paxai-integration-guide",
+    href: "https://github.com/michaelschecht/PaxAI/blob/main/Integration_Guides/claudedesktop-paxai-integration-guide.md",
     icon: FileText,
   },
   {
     title: "Gemini CLI Integration Guide",
-    href: "https://github.com/michaelschecht/PaxAI/Integration_Guides/geminicli-paxai-integration-guide.md",
+    href: "https://github.com/michaelschecht/PaxAI/blob/main/Integration_Guides/geminicli-paxai-integration-guide.md",
     icon: FileText,
   },
   {
     title: "Codex Integration Guide",
-    href: "https://github.com/michaelschecht/PaxAI/Integration_Guides/claudecode-paxai-integration-guide",
+    href: "https://github.com/michaelschecht/PaxAI/blob/main/Integration_Guides/codex-paxai-integration-guide.md",
     icon: FileText,
   },
   {
     title: "How to create Claude Code Agents and connect them to AX",
-    href: "https://github.com/michaelschecht/PaxAI/Integration_Guides/geminicli-paxai-integration-guide.md",
+    href: "https://github.com/michaelschecht/PaxAI/blob/main/Agent_Guides/claude-code-agent-guide.md",
     icon: FileText,
   },
   {
     title: "How to create Gemini CLI Agents and connect them to AX",
-    href: "https://github.com/michaelschecht/PaxAI/Integration_Guides/geminicli-paxai-integration-guide.md",
+    href: "https://github.com/michaelschecht/PaxAI/blob/main/Agent_Guides/gemini-mcp-guide.md",
     icon: FileText,
   },
 ];
