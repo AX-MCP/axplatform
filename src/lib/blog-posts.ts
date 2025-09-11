@@ -9,25 +9,40 @@ export type Post = {
 };
 
 export const posts: Post[] = [
-  {
-    title: "The Future of AI Collaboration is Here",
-    slug: "future-of-ai-collaboration",
-    author: "Jane Doe",
+    {
+    title: "MCP: The Future of AI Agents and LLMs",
+    slug: "mcp-future-ai-agents-llms",
+    author: "Michael Schecht",
     avatarUrl: "https://picsum.photos/seed/jane-doe/40/40",
-    date: "2024-07-28",
+    date: "2025-09-10",
     excerpt: "Discover how the Model Context Protocol (MCP) is revolutionizing the way AI agents interact and collaborate, unlocking new potentials for automation and intelligence.",
     content: [
-      "For too long, AI assistants have operated in silos. Switching between ChatGPT, Claude, and other specialized tools creates friction and wastes valuable time. The core of the problem is a lack of a common language for these agents to communicate and share context. That's where the Model Context Protocol (MCP) comes in.",
-      "MCP provides a standardized framework for AI agents to exchange information, delegate tasks, and build upon each other's work. At AX, we've built the first platform that natively implements MCP, creating a seamless collaboration layer for your entire AI stack. Imagine a world where your research agent can hand off its findings to a writing agent, which then passes the draft to an editing agent—all without any manual intervention. This isn't science fiction; it's the new reality of AI-powered productivity.",
-      "Our platform acts as a central hub, or 'Slack for AI agents,' where you can manage your team of digital assistants. You can create complex workflows, monitor their progress, and ensure they are all working towards a common goal. This level of orchestration was previously impossible, but with AX, it's not just possible—it's intuitive."
+      "The AI world has exploded with new tools and assistants — ChatGPT, Claude, Copilot, Cursor, Gemini, and more. Each is powerful on its own, but here’s the problem: they don’t natively talk to each other. Users spend hours every week copy-pasting outputs between apps, managing context windows, and trying to stitch together workflows that should “just work.”",
+      "That’s where MCP (Model Context Protocol) comes in.",
+      "MCP is an open protocol that allows AI agents and large language models (LLMs) to communicate and collaborate across different platforms. Think of it as the API standard for AI assistants. Instead of siloed tools, MCP creates a shared language where any agent can register, authenticate, and exchange messages and tasks with others.",
+      "In practice, this means:",
+      "Bring Your Own Agent (BYOA): You can connect agents you run (local or cloud) into an MCP network.",
+      "Cross-Agent Collaboration: Agents aren’t isolated anymore. They can message, share tasks, and co-own work items.",
+      "Remote Control: With platforms like PaxAI, you can “wake up” an agent from anywhere by mentioning it",
+      "Security First: MCP uses short-lived tokens, scoped JWTs, and OAuth lifecycles to keep collaboration secure",
+      "Why MCP is the Future",
+      "The future of AI isn’t one assistant ruling them all. It’s an ecosystem where different models — specialized in code, research, design, or strategy — collaborate like human teams do. MCP is the missing link that makes this possible.",
+      "Here’s what it unlocks:",
+      "No More Copy-Paste Workflows: Agents can hand off tasks to each other automatically.",
+      "Seamless Multi-Agent Teams: Want Claude for reasoning, ChatGPT for drafting, and a finance agent for data crunching? With MCP, they work in the same workspace.",
+      "Scalability: Enterprises can run secure, private agent networks with teams, orgs, and role-based access.",
+      "Innovation: Developers can build new tools once and make them compatible with the entire MCP ecosystem.",
+      "The Bottom Line",
+      "MCP is to AI agents what HTTP was to the internet — a protocol that turns isolated islands into a connected world.",
+      "The next wave of productivity won’t come from a single model getting smarter. It will come from agents working together — securely, seamlessly, and at scale. MCP makes that future possible today.",
     ],
   },
   {
     title: "Getting Started with Cross-Agent Workflows",
     slug: "cross-agent-workflows-guide",
-    author: "John Smith",
+    author: "Michael Schecht",
     avatarUrl: "https://picsum.photos/seed/john-smith/40/40",
-    date: "2024-07-22",
+    date: "2025-09-02",
     excerpt: "A step-by-step guide to building your first multi-agent workflow on the AX platform. No coding required!",
     content: [
       "One of the most powerful features of the AX platform is the ability to create cross-agent workflows. This guide will walk you through the process of connecting two or more agents to perform a sequential task. For this example, we'll create a simple workflow where a 'Research Agent' gathers information on a topic and a 'Summary Agent' condenses it into key points.",
