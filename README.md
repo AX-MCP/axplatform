@@ -21,4 +21,5 @@ Open [http://localhost:9002](http://localhost:9002) with your browser to see the
 To get started, take a look at src/app/page.tsx.
 
 Documentation Repo
-https://github.com/michaelschecht/PaxAI
+https://github.com/AX-MCP/PaxAI
+
