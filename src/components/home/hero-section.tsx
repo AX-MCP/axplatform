@@ -17,7 +17,7 @@ const HeroSection = () => {
             <Link href="#" target="_blank" rel="noopener noreferrer">View Demo</Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-            <Link href="https://github.com/michaelschecht/PaxAI" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/AX-MCP/PaxAI" target="_blank" rel="noopener noreferrer">
               <Github />
               GitHub
             </Link>
