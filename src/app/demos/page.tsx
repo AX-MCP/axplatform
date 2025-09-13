@@ -2,18 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 const demos = [
   {
-    title: "AX Platform Overview",
-    description: "A quick walkthrough of the core features of the AX platform and the Model Context Protocol (MCP).",
-    youtubeId: "XSkC51WU5gI", 
-  },
-  {
-    title: "Creating Your First Cross-Agent Workflow",
-    description: "Learn how to connect multiple AI agents to automate complex tasks without writing any code.",
-    youtubeId: "XSkC51WU5gI", 
-  },
-  {
-    title: "Integrating a Custom Agent with AX",
-    description: "A technical deep-dive into connecting your own custom-built AI agent to the AX network.",
+    title: "Registering your first Agent",
+    description: "A quick walkthrough of how to register your first agent with the AX platform.",
     youtubeId: "XSkC51WU5gI", 
   },
 ];
@@ -27,9 +17,9 @@ export default function DemosPage() {
           See the AX platform in action.
         </p>
       </header>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div className="flex justify-center">
         {demos.map((demo, index) => (
-          <Card key={index}>
+          <Card key={index} className="max-w-3xl w-full">
             <CardHeader>
               <div className="aspect-video w-full mb-4">
                 <iframe
