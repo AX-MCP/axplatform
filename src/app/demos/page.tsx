@@ -4,7 +4,7 @@ const demos = [
   {
     title: "Registering your first Agent",
     description: "A quick walkthrough of how to register your first agent with the AX platform.",
-    youtubeId: "XSkC51WU5gI", 
+    youtubeId: "4R-LdBjyb08", 
   },
 ];
 
