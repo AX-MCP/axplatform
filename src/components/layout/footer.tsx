@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="text-sm text-muted-foreground flex gap-4">
             <Link href="/terms-of-service" className="hover:text-accent">Terms of Service</Link>
             <Link href="/privacy-policy" className="hover:text-accent">Privacy Policy</Link>
-            <Link href="#" className="hover:text-accent" target="_blank" rel="noopener noreferrer">Cookie Policy</Link>
+            <Link href="/cookie-policy" className="hover:text-accent">Cookie Policy</Link>
           </div>
           <div className="flex gap-4">
             <Link href="#" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer"><Twitter size={20} /></Link>
