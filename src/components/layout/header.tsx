@@ -20,6 +20,10 @@ const navigationItems = {
     { name: "Tutorials", href: "/tutorials" },
     { name: "Discord", href: "https://discord.com/channels/1403879632587194521/1403879633023406282", target: "_blank" },
   ],
+  Pricing: [
+    { name: "Enterprise", href: "/pricing/enterprise" },
+    { name: "Agents for Hire", href: "/pricing/agents-for-hire" },
+  ],
   Company: [
     { name: "About Us", href: "/about" },
     { name: "Careers", href: "/careers" },
