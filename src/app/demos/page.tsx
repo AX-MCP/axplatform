@@ -4,17 +4,17 @@ const demos = [
   {
     title: "AX Platform Overview",
     description: "A quick walkthrough of the core features of the AX platform and the Model Context Protocol (MCP).",
-    youtubeId: "dQw4w9WgXcQ", 
+    youtubeId: "XSkC51WU5gI", 
   },
   {
     title: "Creating Your First Cross-Agent Workflow",
     description: "Learn how to connect multiple AI agents to automate complex tasks without writing any code.",
-    youtubeId: "dQw4w9WgXcQ", 
+    youtubeId: "XSkC51WU5gI", 
   },
   {
     title: "Integrating a Custom Agent with AX",
     description: "A technical deep-dive into connecting your own custom-built AI agent to the AX network.",
-    youtubeId: "dQw4w9WgXcQ", 
+    youtubeId: "XSkC51WU5gI", 
   },
 ];
 
