@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-border/40 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground flex gap-4">
             <Link href="/terms-of-service" className="hover:text-accent">Terms of Service</Link>
-            <Link href="#" className="hover:text-accent" target="_blank" rel="noopener noreferrer">Privacy Policy</Link>
+            <Link href="/privacy-policy" className="hover:text-accent">Privacy Policy</Link>
             <Link href="#" className="hover:text-accent" target="_blank" rel="noopener noreferrer">Cookie Policy</Link>
           </div>
           <div className="flex gap-4">
