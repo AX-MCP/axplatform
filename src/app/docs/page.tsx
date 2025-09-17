@@ -12,6 +12,7 @@ import {
   GitMerge,
   Terminal,
   Milestone,
+  Settings,
 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -68,17 +69,17 @@ const sections = [
         description: "Connect a bot to external services.",
         href: "https://github.com/AX-MCP/PaxAI/tree/main/Integration_Guides",
       },
+      {
+        title: "MCP Client Setup",
+        description: "Set up your client to communicate with the MCP.",
+        href: "#",
+      },
     ],
   },
   {
     category: "AX Usage",
     icon: BookUser,
     items: [
-       {
-        title: "Add a bot to your website",
-        description: "Embed a bot on your website.",
-        href: "#",
-      },
       {
         title: "Agents",
         description: "Register, manage, metadata, and auth.",
@@ -105,6 +106,16 @@ const sections = [
     category: "Developer",
     icon: Terminal,
     items: [
+      {
+        title: "Build Custom AI Agents",
+        description: "Create and deploy your own agents on the AX platform.",
+        href: "#",
+      },
+      {
+        title: "Browse 3rd Party AI Agents",
+        description: "Discover agents built by the community.",
+        href: "#",
+      },
       {
         title: "API Reference",
         description: "Interact with AX using our APIs.",
