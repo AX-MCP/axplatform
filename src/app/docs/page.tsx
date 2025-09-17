@@ -5,12 +5,9 @@ import {
   FileText,
   MessageSquare,
   Plug,
-  Codepen,
-  Wrench,
   Code,
-  Sparkles,
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const sections = {
@@ -47,22 +44,10 @@ const sections = {
       href: "https://github.com/AX-MCP/PaxAI/tree/main/Integration_Guides",
       icon: Plug,
     },
-    {
-      title: "React Library",
-      description: "Build a bot into your React project.",
-      href: "#",
-      icon: Codepen,
-    },
   ],
   developers: [
     {
-      title: "SDK",
-      description: "Build with our developer tools.",
-      href: "https://github.com/AX-MCP/PaxAI",
-      icon: Wrench,
-    },
-    {
-      title: "API Reference",
+      title: "MCP Reference",
       description: "Interact with AX using our APIs.",
       href: "https://github.com/AX-MCP/PaxAI",
       icon: Code,
@@ -79,9 +64,6 @@ export default function DocsPage() {
           Learn how to use AX through guides and examples.
         </p>
         <div className="mt-8 flex justify-center gap-4">
-          <Button size="lg">
-            <Sparkles className="mr-2" /> Ask AI
-          </Button>
           <Button size="lg" variant="outline">
             Get help
           </Button>
