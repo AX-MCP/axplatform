@@ -8,7 +8,7 @@ const demos = [
   },
   {
     title: "Create a Task, Assign to Agent, and Retrieve Results",
-    description: "A demo of creating a task, assigning it to an agent, and retrieving the results on the AX platform.",
+    description: "Manage, Assign, and Complete Tasks in AX",
     youtubeId: "eRDVjiq5qy8",
   },
 ];
