@@ -12,19 +12,21 @@ const HeroSection = () => {
         <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
           Tired of jumping between ChatGPT, Claude, Copilot, and a dozen other AI tools? We were too—so we built AX, the first MCP-native collaboration platform that lets your AI agents talk to each other.
         </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button asChild size="lg" variant="outline" className="transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-            <Link href="/demos">View Demos</Link>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-            <Link href="/docs">Documentation</Link>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-            <Link href="https://github.com/AX-MCP/PaxAI" target="_blank" rel="noopener noreferrer">
-              <Github />
-              GitHub
-            </Link>
-          </Button>
+        <div className="mt-8 flex flex-col items-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button asChild size="lg" variant="outline" className="transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
+              <Link href="/demos">View Demos</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
+              <Link href="/docs">Docs</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
+              <Link href="https://github.com/AX-MCP/PaxAI" target="_blank" rel="noopener noreferrer">
+                <Github />
+                GitHub
+              </Link>
+            </Button>
+          </div>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/20 transition-all duration-300 transform hover:scale-105">
             <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">Go to App</Link>
           </Button>
