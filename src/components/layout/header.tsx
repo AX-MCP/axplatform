@@ -30,9 +30,9 @@ const navigationItems = {
     { name: "Contact", href: "/contact" },
   ],
   "AI Agents": [
-    { name: "Browse", href: "/ai-agents/browse" },
-    { name: "Featured", href: "/ai-agents/featured" },
-    { name: "Add Agent", href: "/ai-agents/add" },
+    { name: "AI Agent Resources", href: "/ai-agents/browse" },
+    { name: "AX Native Agents", href: "/ai-agents/featured" },
+    { name: "Add Agent", href: "https://paxai.app/register", target: "_blank" },
   ],
 };
 
