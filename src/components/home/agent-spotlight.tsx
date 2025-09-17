@@ -58,7 +58,7 @@ const AgentSpotlight = () => {
             {workspaces.map((workspace, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card className="overflow-hidden h-[450px] flex flex-col group">
+                  <Card className="overflow-hidden flex flex-col group aspect-[1/1.1]">
                     <div className="relative h-full w-full">
                       <Image
                         src={workspace.imageUrl}
