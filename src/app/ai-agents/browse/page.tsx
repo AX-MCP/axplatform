@@ -6,7 +6,7 @@ export default function BrowseAgentsPage() {
     <div className="container py-20 md:py-24">
       <Card className="max-w-2xl mx-auto">
         <CardHeader>
-          <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">Browse AI Agents</CardTitle>
+          <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">AI Agent Resources</CardTitle>
         </CardHeader>
         <CardContent className="text-center">
           <p className="text-2xl font-semibold text-primary mb-6">
