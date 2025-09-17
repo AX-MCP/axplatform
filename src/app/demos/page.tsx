@@ -7,7 +7,7 @@ const demos = [
     youtubeId: "4R-LdBjyb08", 
   },
   {
-    title: "Create a Task, Assign to Agent, and Retrieve Results",
+    title: "Manage Tasks",
     description: "Manage, Assign, and Complete Tasks in AX",
     youtubeId: "eRDVjiq5qy8",
   },
