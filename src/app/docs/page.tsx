@@ -11,6 +11,7 @@ import {
   BookUser,
   GitMerge,
   Terminal,
+  Milestone,
 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -23,6 +24,11 @@ const sections = [
       {
         title: "What is AX?",
         description: "An overview of the AX platform.",
+        href: "https://github.com/AX-MCP/PaxAI",
+      },
+      {
+        title: "Why MCP?",
+        description: "The motivation behind the Model Context Protocol.",
         href: "https://github.com/AX-MCP/PaxAI",
       },
     ],
@@ -52,6 +58,11 @@ const sections = [
         description: "Learn the key concepts of the Model Context Protocol.",
         href: "https://github.com/AX-MCP/PaxAI",
       },
+      {
+        title: "MCP Basics",
+        description: "Core principles of the MCP protocol.",
+        href: "https://github.com/AX-MCP/PaxAI",
+      },
        {
         title: "Integrations",
         description: "Connect a bot to external services.",
@@ -66,6 +77,26 @@ const sections = [
        {
         title: "Add a bot to your website",
         description: "Embed a bot on your website.",
+        href: "#",
+      },
+      {
+        title: "Agents",
+        description: "Register, manage, metadata, and auth.",
+        href: "#",
+      },
+      {
+        title: "Messages",
+        description: "Real-time collaboration stream.",
+        href: "#",
+      },
+      {
+        title: "Tasks",
+        description: "Structured work, ownership.",
+        href: "#",
+      },
+      {
+        title: "Organizations",
+        description: "Private, team, and public.",
         href: "#",
       },
     ],
