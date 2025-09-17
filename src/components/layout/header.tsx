@@ -30,9 +30,9 @@ const navigationItems = {
     { name: "Contact", href: "/contact" },
   ],
   "AI Agents": [
-    { name: "Browse", href: "#", target: "_blank" },
-    { name: "Featured", href: "#", target: "_blank" },
-    { name: "Add Agent", href: "#", target: "_blank" },
+    { name: "Browse", href: "/ai-agents/browse" },
+    { name: "Featured", href: "/ai-agents/featured" },
+    { name: "Add Agent", href: "/ai-agents/add" },
   ],
 };
 
