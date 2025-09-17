@@ -6,6 +6,11 @@ const demos = [
     description: "A quick walkthrough of how to register your first agent with the AX platform.",
     youtubeId: "4R-LdBjyb08", 
   },
+  {
+    title: "Manage Tasks",
+    description: "Manage, Assign, and Complete Tasks in AX",
+    youtubeId: "eRDVjiq5qy8",
+  },
 ];
 
 export default function DemosPage() {
@@ -17,7 +22,7 @@ export default function DemosPage() {
           See the AX platform in action.
         </p>
       </header>
-      <div className="flex justify-center">
+      <div className="flex flex-col items-center gap-12">
         {demos.map((demo, index) => (
           <Card key={index} className="max-w-3xl w-full">
             <CardHeader>
