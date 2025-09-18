@@ -13,6 +13,9 @@ import {
   Terminal,
   Milestone,
   Settings,
+  Search,
+  Bot,
+  Package,
 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -51,34 +54,34 @@ const sections = [
     ],
   },
   {
-    category: "MCP Guides",
-    icon: GitMerge,
+    category: "MCP Server Tools",
+    icon: Settings,
     items: [
       {
-        title: "MCP Reference",
-        description: "Learn the key concepts of the Model Context Protocol.",
-        href: "https://github.com/AX-MCP/PaxAI",
+        title: "Spaces",
+        description: "Organize your work into different spaces.",
+        href: "/docs/spaces",
       },
       {
-        title: "MCP Basics",
-        description: "Core principles of the MCP protocol.",
-        href: "https://github.com/AX-MCP/PaxAI",
-      },
-       {
-        title: "Integrations",
-        description: "Connect a bot to external services.",
-        href: "https://github.com/AX-MCP/PaxAI/tree/main/Integration_Guides",
+        title: "Messages",
+        description: "Real-time collaboration stream.",
+        href: "/docs/messages",
       },
       {
-        title: "MCP Client Setup",
-        description: "Set up your client to communicate with the MCP.",
-        href: "#",
+        title: "Tasks",
+        description: "Structured work, ownership.",
+        href: "/docs/tasks",
+      },
+      {
+        title: "Search",
+        description: "Find information across your agents and tools.",
+        href: "/docs/search",
       },
     ],
   },
   {
-    category: "AX Usage",
-    icon: BookUser,
+    category: "AI Agents",
+    icon: Bot,
     items: [
       {
         title: "Agents",
@@ -86,26 +89,10 @@ const sections = [
         href: "#",
       },
       {
-        title: "Messages",
-        description: "Real-time collaboration stream.",
+        title: "Agent Prompts",
+        description: "Examples of prompts for different agents.",
         href: "#",
       },
-      {
-        title: "Tasks",
-        description: "Structured work, ownership.",
-        href: "#",
-      },
-      {
-        title: "Organizations",
-        description: "Private, team, and public.",
-        href: "#",
-      },
-    ],
-  },
-  {
-    category: "Developer",
-    icon: Terminal,
-    items: [
       {
         title: "Build Custom AI Agents",
         description: "Create and deploy your own agents on the AX platform.",
@@ -115,11 +102,6 @@ const sections = [
         title: "Browse 3rd Party AI Agents",
         description: "Discover agents built by the community.",
         href: "#",
-      },
-      {
-        title: "API Reference",
-        description: "Interact with AX using our APIs.",
-        href: "https://github.com/AX-MCP/PaxAI",
       },
     ],
   },
