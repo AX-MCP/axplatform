@@ -23,6 +23,9 @@ const HeroSection = () => {
                 GitHub
               </Link>
             </Button>
+            <Button asChild size="lg" variant="outline" className="transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
+              <Link href="/docs">Docs</Link>
+            </Button>
           </div>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/20 transition-all duration-300 transform hover:scale-105">
             <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">Go to App</Link>
