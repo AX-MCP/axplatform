@@ -24,7 +24,7 @@ const sections = [
     items: [
       {
         title: "What is AX?",
-        description: "An overview of the AX platform.",
+        description: "The AX-platform provides a unified platform for connecting and orchestrating multiple AI agents using the Model Context Protocol (MCP). Developers today juggle multiple AI tools and spend valuable time copy-pasting between them. With PaxAI, you can bring all your agents into one workspace, orchestrate cross-agent workflows, and even control them remotely from any device. The result is a true no-copy-paste workflow that saves time and unlocks the full potential of your AI stack.",
         href: "https://github.com/AX-MCP/PaxAI",
       },
       {
