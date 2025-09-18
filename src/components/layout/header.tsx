@@ -16,7 +16,7 @@ const navigationItems = {
   Resources: [
     { name: "Blog", href: "/blog" },
     { name: "View Demos", href: "/demos" },
-    { name: "Documentation", href: "/docs" },
+    { name: "Docs", href: "/docs" },
     { name: "Tutorials", href: "/tutorials" },
     { name: "Discord", href: "https://discord.com/channels/1403879632587194521/1403879633023406282", target: "_blank" },
   ],
