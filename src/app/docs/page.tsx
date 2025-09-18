@@ -46,7 +46,7 @@ const sections = [
       {
         title: "Guides",
         description: "Follow detailed how-to guides.",
-        href: "https://github.com/AX-MCP/PaxAI/tree/main/Agent_Guides",
+        href: "https://github.com/AX-MCP/PaxAI/tree/main/Integration_Guides",
       },
     ],
   },
