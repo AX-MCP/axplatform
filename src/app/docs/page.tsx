@@ -13,6 +13,9 @@ import {
   Terminal,
   Milestone,
   Settings,
+  Search,
+  Bot,
+  Package,
 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -51,12 +54,12 @@ const sections = [
     ],
   },
   {
-    category: "AX Usage",
-    icon: BookUser,
+    category: "MCP Server Tools",
+    icon: Settings,
     items: [
       {
-        title: "Agents",
-        description: "Register, manage, metadata, and auth.",
+        title: "Spaces",
+        description: "Organize your work into different spaces.",
         href: "#",
       },
       {
@@ -70,16 +73,21 @@ const sections = [
         href: "#",
       },
       {
-        title: "Organizations",
-        description: "Private, team, and public.",
+        title: "Search",
+        description: "Find information across your agents and tools.",
         href: "#",
       },
     ],
   },
   {
-    category: "Developer",
-    icon: Terminal,
+    category: "AI Agents",
+    icon: Bot,
     items: [
+      {
+        title: "Agents",
+        description: "Register, manage, metadata, and auth.",
+        href: "#",
+      },
       {
         title: "Build Custom AI Agents",
         description: "Create and deploy your own agents on the AX platform.",
@@ -89,11 +97,6 @@ const sections = [
         title: "Browse 3rd Party AI Agents",
         description: "Discover agents built by the community.",
         href: "#",
-      },
-      {
-        title: "API Reference",
-        description: "Interact with AX using our APIs.",
-        href: "https://github.com/AX-MCP/PaxAI",
       },
     ],
   },
