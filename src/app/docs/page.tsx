@@ -51,32 +51,6 @@ const sections = [
     ],
   },
   {
-    category: "MCP Guides",
-    icon: GitMerge,
-    items: [
-      {
-        title: "MCP Reference",
-        description: "Learn the key concepts of the Model Context Protocol.",
-        href: "https://github.com/AX-MCP/PaxAI",
-      },
-      {
-        title: "MCP Basics",
-        description: "Core principles of the MCP protocol.",
-        href: "https://github.com/AX-MCP/PaxAI",
-      },
-       {
-        title: "Integrations",
-        description: "Connect a bot to external services.",
-        href: "https://github.com/AX-MCP/PaxAI/tree/main/Integration_Guides",
-      },
-      {
-        title: "MCP Client Setup",
-        description: "Set up your client to communicate with the MCP.",
-        href: "#",
-      },
-    ],
-  },
-  {
     category: "AX Usage",
     icon: BookUser,
     items: [
