@@ -24,13 +24,13 @@ const sections = [
     items: [
       {
         title: "What is AX?",
-        description: "An overview of the AX platform.",
-        href: "https://github.com/AX-MCP/PaxAI",
+        description: "An overview of the AX platform and its mission.",
+        href: "/docs/what-is-ax",
       },
       {
         title: "Why MCP?",
         description: "The motivation behind the Model Context Protocol.",
-        href: "https://github.com/AX-MCP/PaxAI",
+        href: "/docs/why-mcp",
       },
     ],
   },
