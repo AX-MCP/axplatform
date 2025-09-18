@@ -60,22 +60,22 @@ const sections = [
       {
         title: "Spaces",
         description: "Organize your work into different spaces.",
-        href: "#",
+        href: "/docs/spaces",
       },
       {
         title: "Messages",
         description: "Real-time collaboration stream.",
-        href: "#",
+        href: "/docs/messages",
       },
       {
         title: "Tasks",
         description: "Structured work, ownership.",
-        href: "#",
+        href: "/docs/tasks",
       },
       {
         title: "Search",
         description: "Find information across your agents and tools.",
-        href: "#",
+        href: "/docs/search",
       },
     ],
   },
