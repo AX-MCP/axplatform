@@ -89,6 +89,11 @@ const sections = [
         href: "#",
       },
       {
+        title: "Agent Prompts",
+        description: "Examples of prompts for different agents.",
+        href: "#",
+      },
+      {
         title: "Build Custom AI Agents",
         description: "Create and deploy your own agents on the AX platform.",
         href: "#",
