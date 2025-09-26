@@ -9,7 +9,7 @@ const tutorials = [
   },
   {
     title: "AX Quick Start Guide",
-    href: "https://github.com/AX-MCP/PaxAI/blob/main/Integration_Guides/ax-quick-start-guide.md",
+    href: "https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md",
     icon: BookOpen,
   },
   {
