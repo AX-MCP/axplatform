@@ -44,7 +44,7 @@ const sections = [
       {
         title: "Quickstart",
         description: "Build and deploy your first AI agent.",
-        href: "https://github.com/AX-MCP/PaxAI/blob/main/Integration_Guides/ax-quick-start-guide.md",
+        href: "https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md",
       },
       {
         title: "Guides",
