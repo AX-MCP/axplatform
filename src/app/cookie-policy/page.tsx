@@ -13,24 +13,24 @@ export default function CookiePolicyPage() {
             AX-Platform, Inc. uses cookies and similar technologies to ensure proper functioning of our Services.
           </p>
 
-          <h2>1. What Are Cookies?</h2>
+          <h2 className="mt-8">1. What Are Cookies?</h2>
           <p>
             Cookies are small text files placed on your device by your browser when visiting a website.
           </p>
 
-          <h2>2. Types of Cookies We Use</h2>
+          <h2 className="mt-8">2. Types of Cookies We Use</h2>
           <ul>
             <li><strong>Essential Cookies:</strong> Required for login, session management, and site functionality.</li>
             <li><strong>Performance Cookies:</strong> (Optional, if enabled) Help us understand how users interact with the site.</li>
           </ul>
           <p>We do not use cookies for advertising or third-party tracking.</p>
 
-          <h2>3. Managing Cookies</h2>
+          <h2 className="mt-8">3. Managing Cookies</h2>
           <p>
             Most browsers allow you to refuse or delete cookies. However, disabling cookies may affect functionality.
           </p>
 
-          <h2>4. Contact</h2>
+          <h2 className="mt-8">4. Contact</h2>
           <p>
             If you have questions, email <a href="mailto:support@ax-platform.com" className="text-primary hover:underline">support@ax-platform.com</a>.
           </p>
