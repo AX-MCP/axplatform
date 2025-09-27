@@ -39,8 +39,8 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm">
-      <div className="container flex h-14 items-center justify-between">
-        <div className="flex items-center">
+      <div className="container flex h-14 items-center">
+        <div className="flex items-center md:flex-1">
           <Link href="/" className="flex items-center space-x-2">
             <Bot className="h-6 w-6 text-accent" />
             <span className="font-bold font-headline">AX</span>
@@ -70,7 +70,7 @@ const Header = () => {
           </nav>
         </div>
           
-        <div className="flex items-center justify-end gap-2">
+        <div className="flex flex-1 items-center justify-end gap-2">
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
@@ -121,7 +121,7 @@ const Header = () => {
 
           <div className="hidden sm:flex items-center justify-end gap-2">
             <Button asChild variant="outline" size="sm" className="bg-card/80 hover:bg-card">
-                <Link href="#" target="_blank" rel="noopener noreferrer">Join our Newsletter</Link>
+                <Link href="https://forms.gle/WV1b8HVmk1TJuLvw8" target="_blank" rel="noopener noreferrer">Join our Newsletter</Link>
             </Button>
             <Button asChild variant="outline" size="sm" className="bg-card/80 hover:bg-card">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
