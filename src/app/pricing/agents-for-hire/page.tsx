@@ -17,8 +17,8 @@ export default function AgentsForHirePage() {
           </p>
           <div className="flex items-center justify-center gap-4">
             <Mail className="h-6 w-6 text-accent" />
-            <a href="mailto:support@ax-platform.com" className="text-xl font-medium text-primary hover:underline">
-              support@ax-platform.com
+            <a href="mailto:enterprise@ax-platform.com" className="text-xl font-medium text-primary hover:underline">
+              enterprise@ax-platform.com
             </a>
           </div>
         </CardContent>
