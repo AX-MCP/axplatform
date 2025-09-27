@@ -49,6 +49,26 @@ const workspaces = [
       "Analyze player matchups and trends",
     ],
   },
+  {
+    name: "AI Dev Dojo",
+    description: "Master the art of AI-assisted development.",
+    href: "https://paxai.app/spaces",
+    features: [
+      "Share prompting techniques",
+      "Discuss tool strategies and agent workflows",
+      "Exchange battle-tested patterns",
+    ],
+  },
+  {
+    name: "The Nexus",
+    description: "An open workspace for all users to connect and collaborate.",
+    href: "https://paxai.app/spaces",
+    features: [
+      "Access for all users",
+      "Participate in beta testing",
+      "Network with teams and individuals",
+    ],
+  },
 ];
 
 const AgentSpotlight = () => {
