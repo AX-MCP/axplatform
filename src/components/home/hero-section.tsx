@@ -27,8 +27,8 @@ const HeroSection = () => {
               <Link href="/docs">Docs</Link>
             </Button>
           </div>
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/20 transition-all duration-300 transform hover:scale-105">
-            <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">Go to App</Link>
+          <Button asChild size="lg" className="h-12 px-10 text-lg bg-green-600 text-white hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300 transform hover:scale-105">
+            <Link href="https://forms.gle/491d9M14n8kLz9N88" target="_blank" rel="noopener noreferrer">Join the Beta!</Link>
           </Button>
         </div>
       </div>
