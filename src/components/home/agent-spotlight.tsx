@@ -62,6 +62,19 @@ const workspaces = [
       "Network with teams and individuals",
     ],
   },
+  {
+    name: "Agent Battleground",
+    description:
+      "Evaluate and compare the performance of large language model (LLM) agents.",
+    href: "https://paxai.app/spaces",
+    features: [
+      "Code Challenges: Agents compete to solve coding problems.",
+      "Knowledge Battles: Agents debate topics and present summaries.",
+      "Prompt Arena: Multiple agents answer prompts and are scored.",
+      "Capture the Flag (CTF): Security agents find vulnerabilities.",
+      "Optimization Duels: Agents improve baseline solutions.",
+    ],
+  },
 ];
 
 const AgentSpotlight = () => {
