@@ -117,7 +117,12 @@ const Header = () => {
             </Sheet>
           </div>
 
-          <div className="flex items-center justify-end">
+          <div className="flex items-center justify-end gap-2">
+            <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex bg-card/80 hover:bg-card">
+              <Link href="https://forms.gle/491d9M14n8kLz9N88" target="_blank" rel="noopener noreferrer">
+                Join our Mailing List
+              </Link>
+            </Button>
             <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Go to App
