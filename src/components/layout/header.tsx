@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { NewsletterForm } from "./newsletter-form";
 
 const navigationItems = {
   Resources: [
@@ -118,11 +119,7 @@ const Header = () => {
           </div>
 
           <div className="flex items-center justify-end gap-2">
-            <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex bg-card/80 hover:bg-card">
-              <Link href="#" target="_blank" rel="noopener noreferrer">
-                Join our Mailing List
-              </Link>
-            </Button>
+            <NewsletterForm />
             <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex bg-card/80 hover:bg-card">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Go to App (Beta)
