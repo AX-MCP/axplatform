@@ -90,7 +90,7 @@ const AgentSpotlight = () => {
             Discover workspaces built by the community and our team.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {workspaces.map((workspace, index) => (
               <div key={index} className="aspect-square">
                 <Card className="flex flex-col h-full bg-background/50 border-border/60 group hover:border-primary transition-all">
