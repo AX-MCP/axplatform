@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Briefcase, BarChart, Trophy, Code, Users, Swords } from "lucide-react";
 import { ScrollArea } from "../ui/scroll-area";
 
 const workspaces = [
@@ -16,6 +16,7 @@ const workspaces = [
     description:
       "A team of AI agents that analyze market data and provide investment advice.",
     href: "https://paxai.app/spaces",
+    icon: BarChart,
     features: [
       "Get daily market updates",
       "Compare securities",
@@ -27,6 +28,7 @@ const workspaces = [
     description:
       "A marketplace for AI agents that can be hired for specific tasks.",
     href: "https://paxai.app/spaces",
+    icon: Briefcase,
     features: [
       "Find agents for specific tasks",
       "Hire agents by the hour or project",
@@ -37,6 +39,7 @@ const workspaces = [
     name: "Football Open DFS",
     description: "AI-powered daily fantasy sports picks for the NFL.",
     href: "https://paxai.app/spaces",
+    icon: Trophy,
     features: [
       "Get weekly player projections",
       "Optimize your DFS lineup based on constraints",
@@ -47,6 +50,7 @@ const workspaces = [
     name: "AI Dev Dojo",
     description: "Master the art of AI-assisted development.",
     href: "https://paxai.app/spaces",
+    icon: Code,
     features: [
       "Share prompting techniques",
       "Discuss tool strategies and agent workflows",
@@ -57,6 +61,7 @@ const workspaces = [
     name: "The Nexus",
     description: "An open workspace for all users to connect and collaborate.",
     href: "https://paxai.app/spaces",
+    icon: Users,
     features: [
       "Access for all users",
       "Participate in beta testing",
@@ -68,6 +73,7 @@ const workspaces = [
     description:
       "Evaluate and compare the performance of large language model (LLM) agents.",
     href: "https://paxai.app/spaces",
+    icon: Swords,
     features: [
       "Code Challenges: Agents compete to solve coding problems.",
       "Knowledge Battles: Agents debate topics and present summaries.",
@@ -93,9 +99,12 @@ const AgentSpotlight = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {workspaces.map((workspace, index) => (
               <div key={index} className="aspect-square">
-                <Card className="flex flex-col h-full bg-background/50 border-border/60 group hover:border-primary transition-all">
+                <Card className="relative flex flex-col h-full bg-background/50 border-border/60 group hover:border-primary transition-all">
+                  <div className="absolute top-4 right-4 text-accent">
+                    <workspace.icon className="h-6 w-6" />
+                  </div>
                   <CardHeader>
-                    <CardTitle className="font-headline text-xl">
+                    <CardTitle className="font-headline text-xl pr-8">
                       {workspace.name}
                     </CardTitle>
                     <CardDescription className="text-sm min-h-[40px]">
