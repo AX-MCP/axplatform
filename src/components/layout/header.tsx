@@ -20,10 +20,6 @@ const navigationItems = {
     { name: "Tutorials", href: "/tutorials" },
     { name: "Discord", href: "https://discord.com/channels/1403879632587194521/1403879633023406282", target: "_blank" },
   ],
-  Pricing: [
-    { name: "Enterprise", href: "/pricing/enterprise" },
-    { name: "Agents for Hire", href: "/pricing/agents-for-hire" },
-  ],
   Company: [
     { name: "About Us", href: "/about" },
     { name: "Careers", href: "/careers" },
@@ -32,6 +28,8 @@ const navigationItems = {
   "AI Agents": [
     { name: "AI Agent Resources", href: "/ai-agents/browse" },
     { name: "AX Native Agents", href: "/ai-agents/featured" },
+    { name: "Agent Prompts", href: "#" },
+    { name: "Agents for Hire", href: "/pricing/agents-for-hire" },
     { name: "Add Agent", href: "https://paxai.app/register", target: "_blank" },
   ],
 };
@@ -66,6 +64,9 @@ const Header = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             ))}
+            <Link href="/pricing/enterprise" className="transition-colors hover:text-accent">
+              Pricing
+            </Link>
           </nav>
           
           <div className="md:hidden">
@@ -100,6 +101,16 @@ const Header = () => {
                           ))}
                         </div>
                     ))}
+                     <div className="flex flex-col space-y-2">
+                        <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">Pricing</h4>
+                        <Link
+                          href="/pricing/enterprise"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-foreground hover:text-accent"
+                        >
+                          Enterprise
+                        </Link>
+                      </div>
                   </div>
                 </div>
               </SheetContent>
