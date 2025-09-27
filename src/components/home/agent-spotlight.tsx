@@ -6,13 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
@@ -83,55 +76,44 @@ const AgentSpotlight = () => {
             Discover workspaces built by the community and our team.
           </p>
         </div>
-        <Carousel
-          opts={{
-            align: "start",
-          }}
-          className="w-full max-w-sm md:max-w-3xl lg:max-w-5xl mx-auto"
-        >
-          <CarouselContent>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {workspaces.map((workspace, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1 h-full">
-                  <Card className="flex flex-col h-full bg-background/50 border-border/60 group hover:border-primary transition-all">
-                    <CardHeader>
-                      <CardTitle className="font-headline text-xl">
-                        {workspace.name}
-                      </CardTitle>
-                      <CardDescription className="text-sm min-h-[40px]">
-                        {workspace.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex flex-col flex-grow">
-                      <ul className="space-y-3 mb-6 text-sm flex-grow">
-                        {workspace.features.map((feature) => (
-                          <li key={feature} className="flex items-start">
-                            <CheckCircle className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                            <span className="text-muted-foreground">
-                              {feature}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                      <Button asChild size="sm" className="mt-auto w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                        <Link
-                          href={workspace.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Jump in to the workspace
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
+              <div key={index} className="h-full">
+                <Card className="flex flex-col h-full bg-background/50 border-border/60 group hover:border-primary transition-all">
+                  <CardHeader>
+                    <CardTitle className="font-headline text-xl">
+                      {workspace.name}
+                    </CardTitle>
+                    <CardDescription className="text-sm min-h-[40px]">
+                      {workspace.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex flex-col flex-grow">
+                    <ul className="space-y-3 mb-6 text-sm flex-grow">
+                      {workspace.features.map((feature) => (
+                        <li key={feature} className="flex items-start">
+                          <CheckCircle className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button asChild size="sm" className="mt-auto w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                      <Link
+                        href={workspace.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Jump in to the workspace
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
             ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex -left-12" />
-          <CarouselNext className="hidden sm:flex -right-12" />
-        </Carousel>
+        </div>
       </div>
     </section>
   );
