@@ -119,7 +119,9 @@ const Header = () => {
           </div>
 
           <div className="flex items-center justify-end gap-2">
-            <NewsletterForm />
+            <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex bg-card/80 hover:bg-card">
+                <Link href="#" target="_blank" rel="noopener noreferrer">Join our newsletter</Link>
+            </Button>
             <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex bg-card/80 hover:bg-card">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Go to App (Beta)
