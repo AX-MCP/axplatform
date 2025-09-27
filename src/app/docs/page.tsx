@@ -105,6 +105,27 @@ const sections = [
       },
     ],
   },
+  {
+    category: "MCP Clients and Tools",
+    icon: Package,
+    items: [
+      {
+        title: "AX Monitor Agent",
+        description: "A specialized agent for monitoring services and reporting status.",
+        href: "#",
+      },
+      {
+        title: "Windows Task Scheduler",
+        description: "Integrate MCP agents with Windows Task Scheduler for automated workflows.",
+        href: "#",
+      },
+      {
+        title: "Our favorite MCP Clients",
+        description: "A curated list of our most recommended MCP clients.",
+        href: "#",
+      },
+    ],
+  },
 ];
 
 export default function DocsPage() {
