@@ -11,7 +11,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { NewsletterForm } from "./newsletter-form";
 
 const navigationItems = {
   Resources: [
@@ -40,16 +39,16 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm">
-      <div className="container flex h-14 items-center">
-        <div className="mr-4 flex md:mr-6">
+      <div className="container flex h-14 items-center justify-between">
+        <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <Bot className="h-6 w-6 text-accent" />
             <span className="font-bold font-headline">AX</span>
           </Link>
         </div>
         
-        <div className="flex flex-1 items-center justify-between">
-          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex flex-1 justify-center">
+        <div className="hidden md:flex flex-1 justify-center">
+          <nav className="flex items-center space-x-6 text-sm font-medium">
             {Object.entries(navigationItems).map(([title, items]) => (
               <DropdownMenu key={title}>
                 <DropdownMenuTrigger className="flex items-center transition-colors hover:text-accent focus:outline-none data-[state=open]:text-accent">
@@ -69,7 +68,9 @@ const Header = () => {
               Pricing
             </Link>
           </nav>
+        </div>
           
+        <div className="flex items-center justify-end gap-2">
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
@@ -118,11 +119,11 @@ const Header = () => {
             </Sheet>
           </div>
 
-          <div className="flex items-center justify-end gap-2">
-            <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex bg-card/80 hover:bg-card">
-                <Link href="#" target="_blank" rel="noopener noreferrer">Join our newsletter</Link>
+          <div className="hidden sm:flex items-center justify-end gap-2">
+            <Button asChild variant="outline" size="sm" className="bg-card/80 hover:bg-card">
+                <Link href="#" target="_blank" rel="noopener noreferrer">Join our Newsletter</Link>
             </Button>
-            <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex bg-card/80 hover:bg-card">
+            <Button asChild variant="outline" size="sm" className="bg-card/80 hover:bg-card">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Go to App (Beta)
                 <ArrowRight className="ml-2 h-4 w-4" />
