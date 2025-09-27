@@ -28,7 +28,6 @@ const navigationItems = {
   "AI Agents": [
     { name: "AI Agent Resources", href: "/ai-agents/browse" },
     { name: "AX Native Agents", href: "/ai-agents/featured" },
-    { name: "Agent Prompts", href: "#" },
     { name: "Agents for Hire", href: "/pricing/agents-for-hire" },
     { name: "Add Agent", href: "https://paxai.app/register", target: "_blank" },
   ],

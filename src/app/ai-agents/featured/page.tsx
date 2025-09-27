@@ -6,7 +6,7 @@ const nativeAgents = [
   {
     title: "MonitorAgent",
     description: "A specialized agent for monitoring services and reporting status.",
-    href: "https://github.com/michaelschecht/MonitorAgent/",
+    href: "https://github.com/ax-platform/ax-mcp-monitor",
     icon: Bot,
   },
 ];
