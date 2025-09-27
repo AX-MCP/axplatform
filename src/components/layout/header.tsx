@@ -123,9 +123,9 @@ const Header = () => {
                 Join our Mailing List
               </Link>
             </Button>
-            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex bg-card/80 hover:bg-card">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
-                Go to App
+                Go to App (Beta)
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
