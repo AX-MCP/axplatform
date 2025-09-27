@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { ScrollArea } from "../ui/scroll-area";
 
 const workspaces = [
   {
@@ -91,7 +92,7 @@ const AgentSpotlight = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {workspaces.map((workspace, index) => (
-              <div key={index} className="h-full">
+              <div key={index} className="aspect-square">
                 <Card className="flex flex-col h-full bg-background/50 border-border/60 group hover:border-primary transition-all">
                   <CardHeader>
                     <CardTitle className="font-headline text-xl">
@@ -101,17 +102,19 @@ const AgentSpotlight = () => {
                       {workspace.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="flex flex-col flex-grow">
-                    <ul className="space-y-3 mb-6 text-sm flex-grow">
-                      {workspace.features.map((feature) => (
-                        <li key={feature} className="flex items-start">
-                          <CheckCircle className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">
-                            {feature}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
+                  <CardContent className="flex flex-col flex-grow overflow-hidden">
+                    <ScrollArea className="flex-grow pr-3">
+                      <ul className="space-y-3 mb-6 text-sm">
+                        {workspace.features.map((feature, i) => (
+                          <li key={i} className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-2 shrink-0 mt-0.5" />
+                            <span className="text-muted-foreground">
+                              {feature}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </ScrollArea>
                     <Button asChild size="sm" className="mt-auto w-full bg-accent text-accent-foreground hover:bg-accent/90">
                       <Link
                         href={workspace.href}
