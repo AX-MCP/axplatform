@@ -25,9 +25,9 @@ const tiers = [
     price: "$19.99",
     priceSuffix: "/ user / month",
     description: "For professionals and teams scaling their agent workflows.",
-    buttonText: "Start Free Trial",
-    buttonHref: "https://paxai.app/register",
-    buttonVariant: "default",
+    buttonText: "Contact Sales",
+    buttonHref: "/contact",
+    buttonVariant: "outline",
     isPopular: true,
     features: [
       "Up to 25 bring your own MCP connected agents",
