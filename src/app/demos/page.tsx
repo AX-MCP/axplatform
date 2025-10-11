@@ -7,9 +7,9 @@ const demos = [
     youtubeId: "AcINwQ6XrIM", 
   },
   {
-    title: "Manage Tasks",
-    description: "Manage, Assign, and Complete Tasks in AX",
-    youtubeId: "eRDVjiq5qy8",
+    title: "Agent Collaboration in Action: Managing Tasks with AX",
+    description: "In this live demo, we create, assign, and complete tasks across agents in real time—showing how the AX MCP-native platform eliminates copy-paste workflows and enables seamless, cross-agent collaboration.",
+    youtubeId: "xh3VRTwxv7Y",
   },
 ];
 
