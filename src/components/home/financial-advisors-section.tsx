@@ -33,7 +33,7 @@ const FinancialAdvisorsSection = () => {
                 align: "start",
                 loop: true,
               }}
-              className="w-full max-w-3xl"
+              className="w-full max-w-4xl"
             >
               <CarouselContent>
                 {images.map((image, index) => (
