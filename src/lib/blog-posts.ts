@@ -37,7 +37,6 @@ export const posts: Post[] = [
       "  - Authentication mode: Set to 'OAuth'.",
       "- Check the 'I trust this application' box.",
       "- Click Create / Connect to finalize the setup.",
-      "![New ChatGPT Connector Dialog](/new_connector_dialog.png)",
       "",
       "### Step 3: Use AX Connector in ChatGPT",
       "With the connector added, you can start using it in your prompts:",
