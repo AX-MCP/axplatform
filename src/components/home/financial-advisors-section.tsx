@@ -33,11 +33,11 @@ const FinancialAdvisorsSection = () => {
                 align: "start",
                 loop: true,
               }}
-              className="w-full max-w-5xl"
+              className="w-full max-w-3xl"
             >
               <CarouselContent>
                 {images.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2">
+                  <CarouselItem key={index}>
                     <div className="p-1">
                       <Card className="overflow-hidden border border-border/60 group hover:border-primary transition-all">
                         <CardContent className="flex aspect-video items-center justify-center p-0">
