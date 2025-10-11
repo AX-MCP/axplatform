@@ -134,9 +134,6 @@ const Header = () => {
 
           <div className="hidden sm:flex items-center justify-end gap-2">
             <Button asChild variant="outline" size="sm" className="bg-card/80 hover:bg-card">
-                <Link href="https://forms.gle/WV1b8HVmk1TJuLvw8" target="_blank" rel="noopener noreferrer">Join our Newsletter</Link>
-            </Button>
-            <Button asChild variant="outline" size="sm" className="bg-card/80 hover:bg-card">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Go to App (Beta)
                 <ArrowRight className="ml-2 h-4 w-4" />
