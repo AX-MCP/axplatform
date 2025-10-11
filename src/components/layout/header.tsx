@@ -15,8 +15,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 const navigationItems = {
   Resources: [
     { name: "Blog", href: "/blog" },
-    { name: "View Demos", href: "/demos" },
-    { name: "Docs", href: "/docs" },
+    { name: "Demos", href: "/demos" },
     { name: "Tutorials", href: "/tutorials" },
     { name: "Discord", href: "https://discord.com/channels/1403879632587194521/1403879633023406282", target: "_blank" },
   ],
@@ -25,12 +24,6 @@ const navigationItems = {
     { name: "Meet the Team", href: "/team" },
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
-  ],
-  "AI Agents": [
-    { name: "AI Agent Resources", href: "/ai-agents/browse" },
-    { name: "AX Native Agents", href: "/ai-agents/featured" },
-    { name: "Agents for Hire", href: "/pricing/agents-for-hire" },
-    { name: "Add Agent", href: "https://paxai.app/register", target: "_blank" },
   ],
 };
 
@@ -64,6 +57,12 @@ const Header = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             ))}
+            <Link href="/mcp" className="transition-colors hover:text-accent">
+              MCP
+            </Link>
+            <Link href="/docs" className="transition-colors hover:text-accent">
+              Docs
+            </Link>
             <Link href="/pricing/enterprise" className="transition-colors hover:text-accent">
               Pricing
             </Link>
@@ -104,13 +103,27 @@ const Header = () => {
                         </div>
                     ))}
                      <div className="flex flex-col space-y-2">
-                        <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">Pricing</h4>
+                        <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">More</h4>
+                         <Link
+                          href="/mcp"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-foreground hover:text-accent"
+                        >
+                          MCP
+                        </Link>
+                         <Link
+                          href="/docs"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-foreground hover:text-accent"
+                        >
+                          Docs
+                        </Link>
                         <Link
                           href="/pricing/enterprise"
                           onClick={() => setIsMobileMenuOpen(false)}
                           className="text-foreground hover:text-accent"
                         >
-                          Enterprise
+                          Pricing
                         </Link>
                       </div>
                   </div>
