@@ -52,14 +52,15 @@ const sections = [
         href: "https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md",
       },
       {
-        title: "Guides",
-        description: "Follow detailed how-to guides.",
-        href: "https://github.com/AX-MCP/PaxAI/tree/main/Integration_Guides",
-      },
-      {
-        title: "Tutorials",
+        title: "LLM Integration Tutorials",
         description: "Step-by-step tutorials to get you started.",
         href: "/tutorials",
+      },
+      {
+        title: "Meet Chirpy - Your AX Assistant",
+        description: "Learn about Chirpy, your onboarding assistant for the AX platform.",
+        href: "https://github.com/AX-MCP/PaxAI/blob/main/Agent_Guides/chirpy-guide.md",
+        target: "_blank"
       },
     ],
   },
@@ -152,12 +153,12 @@ export default function DocsPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
         {sections.map((section) => (
-          <div key={section.category} className="space-y-6">
+          <div key={section.category} className="flex flex-col space-y-6">
             <h2 className="text-2xl font-bold font-headline flex items-center gap-3">
               <section.icon className="h-6 w-6 text-accent" />
               {section.category}
             </h2>
-            <div className="space-y-4">
+            <div className="grid gap-4 auto-rows-fr">
               {section.items.map((item) => (
                 <Link href={item.href} key={item.title} className="block group" target={item.target} rel={item.target === "_blank" ? "noopener noreferrer" : undefined}>
                   <Card className="h-full transition-all duration-300 border-border hover:border-primary hover:bg-card/80">
