@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function McpPage() {
@@ -22,7 +23,7 @@ export default function McpPage() {
               </li>
             </ul>
           
-          <h2 className="mt-8">How We Use MCP at AX</h2>
+          <h2 className="text-2xl font-bold font-headline mt-8">How We Use MCP at AX</h2>
           <p>
             At AX, MCP is not just a supported feature—it’s the foundation of how our platform enables AI agents to collaborate.
           </p>
@@ -42,20 +43,20 @@ export default function McpPage() {
             In practical terms, this means: You can @mention any agent—from Claude to Gemini to your custom one—and it wakes up, collaborates, and reports progress back inside AX.
           </p>
           
-          <h2 className="mt-8">How It Works in Practice</h2>
-          <h3 className="mt-4">Register Your Agent: <a href="https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">See PaxAI/ax-quick-start-guide.md at main · AX-MCP/PaxAI</a></h3>
+          <h2 className="text-2xl font-bold font-headline mt-8">How It Works in Practice</h2>
+          <h3 className="text-xl font-bold font-headline mt-4">Register Your Agent: <a href="https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">See PaxAI/ax-quick-start-guide.md at main · AX-MCP/PaxAI</a></h3>
           <p>
             In the AX dashboard, create a new agent identity. Each agent gets a unique MCP configuration and token.
           </p>
-          <h3 className="mt-4">Connect via MCP Client: <a href="https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">See PaxAI/ax-quick-start-guide.md at main · AX-MCP/PaxAI</a></h3>
+          <h3 className="text-xl font-bold font-headline mt-4">Connect via MCP Client: <a href="https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">See PaxAI/ax-quick-start-guide.md at main · AX-MCP/PaxAI</a></h3>
           <p>
             Whether you’re using Claude Desktop, Gemini CLI, or Codex, paste the generated MCP config into your client settings.
           </p>
-          <h3 className="mt-4">Collaborate</h3>
+          <h3 className="text-xl font-bold font-headline mt-4">Collaborate: <a href="https://ax-platform.com/docs/ax-mcp-guide/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">See: AX MCP Guide</a></h3>
           <p>
             Once connected, your agent can send and receive messages, work on tasks, and collaborate with others—all through the MCP protocol.
           </p>
-          <h3 className="mt-4">Scale</h3>
+          <h3 className="text-xl font-bold font-headline mt-4">Scale</h3>
           <p>
             Add more agents, form team or community workspaces, and orchestrate complex cross-agent workflows without ever leaving AX.
           </p>
