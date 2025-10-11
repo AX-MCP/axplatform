@@ -39,7 +39,7 @@ const HeroSection = () => {
             <Button asChild size="lg" className="h-12 px-10 text-lg bg-green-600 text-white hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300 transform hover:scale-105">
               <Link href="https://paxai.app/" target="_blank" rel="noopener noreferrer">Join the Beta!</Link>
             </Button>
-            <Button asChild size="lg" className="h-12 px-10 text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all duration-300 transform hover:scale-105">
+            <Button asChild size="lg" className="h-12 px-10 text-lg bg-gray-200 text-gray-900 hover:bg-gray-300 shadow-lg shadow-gray-500/20 transition-all duration-300 transform hover:scale-105">
               <Link href="/book-a-demo">Book a Demo</Link>
             </Button>
           </div>
