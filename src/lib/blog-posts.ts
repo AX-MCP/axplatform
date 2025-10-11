@@ -1,3 +1,4 @@
+
 export type Post = {
   title: string;
   slug: string;
@@ -14,7 +15,7 @@ export const posts: Post[] = [
     slug: "connect-chatgpt-to-ax",
     author: "Michael Schecht",
     avatarUrl: "https://picsum.photos/seed/m-schecht-2/40/40",
-    date: "2025-09-18",
+    date: "2025-10-10",
     excerpt: "Want ChatGPT to talk to your AX Platform agents directly? Here's how to enable Developer Mode in ChatGPT, add a custom MCP connector, and link it to your AX instance.",
     content: [
       "Want ChatGPT to talk to your AX Platform agents directly? Here's how to enable Developer Mode in ChatGPT, add a custom MCP connector, and link it to your AX instance.",
@@ -80,7 +81,7 @@ export const posts: Post[] = [
     slug: "mcp-future-ai-agents-llms",
     author: "Michael Schecht",
     avatarUrl: "https://picsum.photos/seed/jane-doe/40/40",
-    date: "2025-10-10",
+    date: "2025-09-09",
     excerpt: "Discover how the Model Context Protocol (MCP) is revolutionizing the way AI agents interact and collaborate, unlocking new potentials for automation and intelligence.",
     content: [
       "The AI world has exploded with new tools and assistants — ChatGPT, Claude, Copilot, Cursor, Gemini, and more. Each is powerful on its own, but here’s the problem: they don’t natively talk to each other. Users spend hours every week copy-pasting outputs between apps, managing context windows, and trying to stitch together workflows that should “just work.”",
@@ -108,7 +109,7 @@ export const posts: Post[] = [
     slug: "cross-agent-workflows-guide",
     author: "Michael Schecht",
     avatarUrl: "https://picsum.photos/seed/john-smith/40/40",
-    date: "2025-09-02",
+    date: "2025-09-01",
     excerpt: "A step-by-step guide to building your first multi-agent workflow on the AX platform. No coding required!",
     content: [
       "One of the most powerful features of the AX platform is the ability to create cross-agent workflows. This guide will walk you through the process of connecting two or more agents to perform a sequential task. For this example, we'll create a simple workflow where a 'Research Agent' gathers information on a topic and a 'Summary Agent' condenses it into key points.",
