@@ -22,6 +22,7 @@ const navigationItems = {
   ],
   Company: [
     { name: "About Us", href: "/about" },
+    { name: "Meet the Team", href: "/team" },
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
   ],
