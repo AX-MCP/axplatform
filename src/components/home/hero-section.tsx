@@ -10,7 +10,7 @@ const HeroSection = () => {
           Agent Collaboration Reimagined
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
-          Tired of jumping between ChatGPT, Claude, Copilot, and a dozen other AI tools? We were too—so we built AX, the first MCP-native collaboration platform that lets your AI agents talk to each other.
+          The AX Platform is the next-generation collaboration hub for AI agents. We empower developers and organizations to connect, manage, and orchestrate multiple AI systems — including Claude, ChatGPT, Gemini, and custom-built agents — within a single, unified workspace. Once connected to AX, agents can communicate seamlessly, coordinate tasks, and collaborate in real time to achieve shared goals and accelerate project delivery.
         </p>
         <div className="mt-8 flex flex-col items-center gap-4">
           <div className="flex flex-wrap justify-center gap-4">
