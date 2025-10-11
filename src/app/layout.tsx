@@ -6,8 +6,8 @@ import Footer from '@/components/layout/footer';
 import { BlogStyles } from './blog/[slug]/page';
 
 export const metadata: Metadata = {
-  title: 'AX AI Collaboration Platform',
-  description: 'The first MCP-native collaboration platform that lets your AI agents talk to each other.',
+  title: 'AI Agent Collaboration Platform',
+  description: 'We empower developers and organizations to connect, manage, and orchestrate multiple AI systems — including ChatGPT, Claude, Gemini, and custom AI agents — within a single, unified workspace built on the Model Context Protocol (MCP) standard. Once connected to AX, agents can communicate seamlessly, coordinate tasks, and collaborate in real time through MCP to achieve shared goals and accelerate project delivery.',
   icons: {
     icon: "/favicon2.ico",
     shortcut: "/favicon-32x32.png",

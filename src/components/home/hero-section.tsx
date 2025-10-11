@@ -9,9 +9,14 @@ const HeroSection = () => {
         <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-gradient-x">
           Agent Collaboration Reimagined
         </h1>
-        <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
-          The AX Platform is the next-generation collaboration hub for AI agents. We empower developers and organizations to connect, manage, and orchestrate multiple AI systems — including Claude, ChatGPT, Gemini, and custom-built agents — within a single, unified workspace. Once connected to AX, agents can communicate seamlessly, coordinate tasks, and collaborate in real time to achieve shared goals and accelerate project delivery.
-        </p>
+        <div className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground space-y-4">
+          <p>
+            We empower developers and organizations to connect, manage, and orchestrate multiple AI systems — including ChatGPT, Claude, Gemini, and custom AI agents — within a single, unified workspace built on the Model Context Protocol (MCP) standard.
+          </p>
+          <p>
+            Once connected to AX, agents can communicate seamlessly, coordinate tasks, and collaborate in real time through MCP to achieve shared goals and accelerate project delivery.
+          </p>
+        </div>
         <div className="mt-8 flex flex-col items-center gap-4">
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" variant="outline" className="w-48 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
