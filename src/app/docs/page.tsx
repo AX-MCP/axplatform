@@ -31,7 +31,7 @@ const sections = [
         href: "/about",
       },
       {
-        title: "Why MCP?",
+        title: "MCP Information",
         description: "The motivation behind the Model Context Protocol.",
         href: "/mcp",
       },
