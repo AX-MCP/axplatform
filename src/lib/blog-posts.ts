@@ -54,7 +54,7 @@ export const posts: Post[] = [
     slug: "introducing-mcp-registry",
     author: "Michael Schecht",
     avatarUrl: "https://picsum.photos/seed/m-schecht/40/40",
-    date: "2025-09-15",
+    date: "2025-10-05",
     excerpt: "A unified directory for discoverable, interoperable AI servers and tools. The MCP Registry serves as a central hub for the expanding ecosystem.",
     content: [
       "The Model Context Protocol (MCP) is redefining how AI systems communicate, collaborate, and share context. As the ecosystem expands, the MCP Registry serves as a central hub — a public directory where developers, organizations, and AI enthusiasts can discover and register MCP-compatible servers, tools, and extensions.",
@@ -80,7 +80,7 @@ export const posts: Post[] = [
     slug: "mcp-future-ai-agents-llms",
     author: "Michael Schecht",
     avatarUrl: "https://picsum.photos/seed/jane-doe/40/40",
-    date: "2025-09-10",
+    date: "2025-10-10",
     excerpt: "Discover how the Model Context Protocol (MCP) is revolutionizing the way AI agents interact and collaborate, unlocking new potentials for automation and intelligence.",
     content: [
       "The AI world has exploded with new tools and assistants — ChatGPT, Claude, Copilot, Cursor, Gemini, and more. Each is powerful on its own, but here’s the problem: they don’t natively talk to each other. Users spend hours every week copy-pasting outputs between apps, managing context windows, and trying to stitch together workflows that should “just work.”",
