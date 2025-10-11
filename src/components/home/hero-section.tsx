@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Github, BookOpen } from "lucide-react";
+import { Github, BookOpen, Calendar } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -35,9 +35,14 @@ const HeroSection = () => {
               <Link href="/demos">Demos</Link>
             </Button>
           </div>
-          <Button asChild size="lg" className="h-12 px-10 text-lg bg-green-600 text-white hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300 transform hover:scale-105">
-            <Link href="https://paxai.app/" target="_blank" rel="noopener noreferrer">Join the Beta!</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <Button asChild size="lg" className="h-12 px-10 text-lg bg-green-600 text-white hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300 transform hover:scale-105">
+              <Link href="https://paxai.app/" target="_blank" rel="noopener noreferrer">Join the Beta!</Link>
+            </Button>
+            <Button asChild size="lg" className="h-12 px-10 text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all duration-300 transform hover:scale-105">
+              <Link href="/book-a-demo">Book a Demo</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
