@@ -158,9 +158,9 @@ export default function DocsPage() {
               <section.icon className="h-6 w-6 text-accent" />
               {section.category}
             </h2>
-            <div className="space-y-4 flex flex-col flex-grow">
+            <div className="grid gap-4 auto-rows-fr">
               {section.items.map((item) => (
-                <Link href={item.href} key={item.title} className="block group flex-grow" target={item.target} rel={item.target === "_blank" ? "noopener noreferrer" : undefined}>
+                <Link href={item.href} key={item.title} className="block group" target={item.target} rel={item.target === "_blank" ? "noopener noreferrer" : undefined}>
                   <Card className="h-full transition-all duration-300 border-border hover:border-primary hover:bg-card/80">
                     <CardHeader>
                         <CardTitle className="text-xl font-headline group-hover:text-primary">{item.title}</CardTitle>
