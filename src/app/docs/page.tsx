@@ -28,12 +28,17 @@ const sections = [
       {
         title: "What is AX?",
         description: "An overview of the AX platform and its mission.",
-        href: "/docs/what-is-ax",
+        href: "/about",
       },
       {
-        title: "Why MCP?",
+        title: "MCP Information",
         description: "The motivation behind the Model Context Protocol.",
-        href: "/docs/why-mcp",
+        href: "/mcp",
+      },
+      {
+        title: "AX MCP Guide",
+        description: "A guide to using the AX MCP.",
+        href: "/docs/ax-mcp-guide",
       },
     ],
   },
