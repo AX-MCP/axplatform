@@ -7,9 +7,9 @@ const teamMembers = [
     email: "heath.dorn@ax-platform.com",
     about: "Agile DevSecOps leader with over 15 years of experience in secure software engineering. Specializes in building custom AI applications, including Voice and RAG (Retrieval-Augmented Generation) models, with a focus on DoD-grade AI architecture and MCP protocol implementation.",
     certifications: [
-      "AWS Certified AI Practitioner",
-      "AWS Certified Security",
-      "AWS Certified Solutions Architect",
+      "Certified DevOps Professional",
+      "Scaled Agile Program Consultant (SPC)",
+      "TS/SCI Security Clearance",
     ],
   },
   {
@@ -17,9 +17,9 @@ const teamMembers = [
     email: "jacob.taunton@ax-platform.com",
     about: "Security Engineer with 15+ years of experience and a strong background in Generative AI (4+ years). Expert in Model Context Protocol (MCP), function calling, and agent frameworks including AutoGen, CrewAI, and LangGraph. Founder of PaxAI and lead architect behind its agent collaboration platform.",
     certifications: [
-      "Certified DevOps Professional",
-      "Scaled Agile Program Consultant (SPC)",
-      "TS/SCI Security Clearance",
+      "AWS Certified AI Practitioner",
+      "AWS Certified Security",
+      "AWS Certified Solutions Architect",
     ],
   },
   {
