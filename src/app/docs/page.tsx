@@ -124,12 +124,6 @@ const sections = [
         href: "https://paxai.app/register",
         target: "_blank"
       },
-    ],
-  },
-  {
-    category: "MCP Clients and Tools",
-    icon: Package,
-    items: [
       {
         title: "AX Monitor Agent",
         description: "A specialized agent for monitoring services and reporting status.",
@@ -141,11 +135,6 @@ const sections = [
         description: "Integrate MCP agents with Windows Task Scheduler for automated workflows.",
         href: "https://github.com/AX-MCP/PaxAI/tree/main/MCP_Client_Guides/Windows_Task_Scheduler",
         target: "_blank"
-      },
-      {
-        title: "Our favorite MCP Clients",
-        description: "A curated list of our most recommended MCP clients.",
-        href: "#",
       },
     ],
   },
