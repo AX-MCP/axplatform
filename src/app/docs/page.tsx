@@ -35,6 +35,11 @@ const sections = [
         description: "The motivation behind the Model Context Protocol.",
         href: "/mcp",
       },
+      {
+        title: "AX MCP Guide",
+        description: "A guide to using the AX MCP.",
+        href: "/docs/ax-mcp-guide",
+      },
     ],
   },
   {
