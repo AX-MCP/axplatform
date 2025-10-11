@@ -39,14 +39,14 @@ const FinancialAdvisorsSection = () => {
                 {images.map((image, index) => (
                   <CarouselItem key={index}>
                     <div className="p-1">
-                      <Card className="overflow-hidden border border-border/60 group hover:border-primary transition-all">
+                      <Card className="overflow-hidden border border-border/60">
                         <CardContent className="flex aspect-video items-center justify-center p-0">
                            <Image
                             src={image.src}
                             alt={image.alt}
-                            width={600}
-                            height={400}
-                            className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                            width={1200}
+                            height={800}
+                            className="object-contain w-full h-full"
                           />
                         </CardContent>
                       </Card>
