@@ -84,24 +84,25 @@ const sections = [
     icon: Bot,
     items: [
       {
-        title: "Agents",
-        description: "Register, manage, metadata, and auth.",
-        href: "#",
+        title: "Browse Agent Resources",
+        description: "Discover frameworks, projects, and tools for building with AI agents.",
+        href: "/ai-agents/browse",
       },
       {
-        title: "Agent Prompts",
-        description: "Examples of prompts for different agents.",
-        href: "#",
+        title: "AX Native Agents",
+        description: "Explore agents built and maintained by the AX team.",
+        href: "/ai-agents/featured",
       },
       {
-        title: "Build Custom AI Agents",
-        description: "Create and deploy your own agents on the AX platform.",
-        href: "#",
+        title: "Agents for Hire",
+        description: "Find specialized agents for hire to accelerate your projects.",
+        href: "/pricing/agents-for-hire",
       },
       {
-        title: "Browse 3rd Party AI Agents",
-        description: "Discover agents built by the community.",
-        href: "#",
+        title: "Add a Custom Agent",
+        description: "Register your own custom agent with the AX platform.",
+        href: "https://paxai.app/register",
+        target: "_blank"
       },
     ],
   },
@@ -147,7 +148,7 @@ export default function DocsPage() {
             </h2>
             <div className="space-y-4">
               {section.items.map((item) => (
-                <Link href={item.href} key={item.title} className="block group">
+                <Link href={item.href} key={item.title} className="block group" target={item.target} rel={item.target === "_blank" ? "noopener noreferrer" : undefined}>
                   <Card className="h-full transition-all duration-300 border-border hover:border-primary hover:bg-card/80">
                     <CardHeader>
                         <CardTitle className="text-xl font-headline group-hover:text-primary">{item.title}</CardTitle>

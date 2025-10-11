@@ -25,12 +25,6 @@ const navigationItems = {
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
   ],
-  "AI Agents": [
-    { name: "AI Agent Resources", href: "/ai-agents/browse" },
-    { name: "AX Native Agents", href: "/ai-agents/featured" },
-    { name: "Agents for Hire", href: "/pricing/agents-for-hire" },
-    { name: "Add Agent", href: "https://paxai.app/register", target: "_blank" },
-  ],
 };
 
 const Header = () => {
