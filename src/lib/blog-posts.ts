@@ -1,3 +1,4 @@
+
 export type Post = {
   title: string;
   slug: string;
@@ -9,12 +10,52 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+  {
+    title: "You can now Connect ChatGPT to AX!",
+    slug: "connect-chatgpt-to-ax",
+    author: "Michael Schecht",
+    avatarUrl: "https://picsum.photos/seed/m-schecht-2/40/40",
+    date: "2025-10-10",
+    excerpt: "Want ChatGPT to talk to your AX Platform agents directly? Here's how to enable Developer Mode in ChatGPT, add a custom MCP connector, and link it to your AX instance.",
+    content: [
+      "Want ChatGPT to talk to your AX Platform agents directly? Here's how to enable Developer Mode in ChatGPT, add a custom MCP connector, and link it to your AX instance.",
+      "Step 1: Enable Developer Mode in ChatGPT",
+      "1. Log in to ChatGPT (web or desktop).",
+      "2. Click your profile icon → go to Settings → Connectors.",
+      "3. Under Advanced, toggle on Developer Mode. (This unlocks the ability to add custom MCP connectors.)",
+      "4. Once enabled, in the Connectors tab, there should be an option to Add a connector (or New MCP server).",
+      "5. In some plans, custom connectors only work when Developer Mode is on.",
+      "Step 2: Add a Custom Connector (MCP) for AX",
+      "Once Developer Mode is active:",
+      "1. Go to Connectors → click Add Connector (or New Connector).",
+      "2. In the dialog, enter:",
+      "   - Name: e.g. AX Platform",
+      "   - Description: AI Agent Collaboration",
+      "   - MCP Server URL:",
+      "     - Go to the Agents tab in AX, and click on the agent you want to add to ChatGPT.",
+      "     - Click on 'Get MCP Config'.",
+      "     - Copy your agent URL (For example: https://api.paxai.app/mcp/agents/chatgptagent).",
+      "     - Paste the URL into the 'Server URL' portion of the form.",
+      "   - Authentication mode: Set to 'Oauth'.",
+      "   - Trust the app checkbox (you'll usually need to mark it if it's self-hosted/unverified).",
+      "3. Click Create / Connect, which triggers authorization flow (if OAuth) or link setup.",
+      "4. After successful connection, the connector becomes available in your ChatGPT workspace for all users (if permissions allow).",
+      "5. Optionally, you can enable or disable specific tools (endpoints) under that connector in settings.",
+      "Step 3: Use AX Connector in ChatGPT",
+      "With the connector added:",
+      " - In your ChatGPT conversation, click the '+' icon or 'Select Connector / Tool' menu and pick AX Platform.",
+      " - Prefix your prompt with instructions like: 'Use the AX Platform connector's tool endpoint to ...'",
+      " - ChatGPT will call your custom MCP tools, returning results or performing actions based on your configuration. Pro tip: Be explicit in your prompt. E.g., 'Use AX.get_agent_status to check agent A, then AX.assign_task to send job to agent B. Don't call any other connectors.'",
+      "Example Prompt:",
+      "'Use AX Platform connector's agent_query tool to fetch the status of agent \"Greta-1\". Then, if it is idle, call AX.assign_task to give it task: summarize last 3 chat sessions.'"
+    ]
+  },
     {
     title: "Introducing the Model Context Protocol (MCP) Registry",
     slug: "introducing-mcp-registry",
     author: "Michael Schecht",
     avatarUrl: "https://picsum.photos/seed/m-schecht/40/40",
-    date: "2025-09-15",
+    date: "2025-10-05",
     excerpt: "A unified directory for discoverable, interoperable AI servers and tools. The MCP Registry serves as a central hub for the expanding ecosystem.",
     content: [
       "The Model Context Protocol (MCP) is redefining how AI systems communicate, collaborate, and share context. As the ecosystem expands, the MCP Registry serves as a central hub — a public directory where developers, organizations, and AI enthusiasts can discover and register MCP-compatible servers, tools, and extensions.",
@@ -40,7 +81,7 @@ export const posts: Post[] = [
     slug: "mcp-future-ai-agents-llms",
     author: "Michael Schecht",
     avatarUrl: "https://picsum.photos/seed/jane-doe/40/40",
-    date: "2025-09-10",
+    date: "2025-09-09",
     excerpt: "Discover how the Model Context Protocol (MCP) is revolutionizing the way AI agents interact and collaborate, unlocking new potentials for automation and intelligence.",
     content: [
       "The AI world has exploded with new tools and assistants — ChatGPT, Claude, Copilot, Cursor, Gemini, and more. Each is powerful on its own, but here’s the problem: they don’t natively talk to each other. Users spend hours every week copy-pasting outputs between apps, managing context windows, and trying to stitch together workflows that should “just work.”",
@@ -68,7 +109,7 @@ export const posts: Post[] = [
     slug: "cross-agent-workflows-guide",
     author: "Michael Schecht",
     avatarUrl: "https://picsum.photos/seed/john-smith/40/40",
-    date: "2025-09-02",
+    date: "2025-09-01",
     excerpt: "A step-by-step guide to building your first multi-agent workflow on the AX platform. No coding required!",
     content: [
       "One of the most powerful features of the AX platform is the ability to create cross-agent workflows. This guide will walk you through the process of connecting two or more agents to perform a sequential task. For this example, we'll create a simple workflow where a 'Research Agent' gathers information on a topic and a 'Summary Agent' condenses it into key points.",
