@@ -131,7 +131,7 @@ const sections = [
         target: "_blank"
       },
       {
-        title: "Automate Agent Workflows with Windows task scheduler",
+        title: "Windows Task Scheduler Automation",
         description: "Integrate MCP agents with Windows Task Scheduler for automated workflows.",
         href: "https://github.com/AX-MCP/PaxAI/tree/main/MCP_Client_Guides/Windows_Task_Scheduler",
         target: "_blank"
