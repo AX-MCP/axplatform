@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, BookOpen, Settings, MessageSquare, ListTodo, Search } from "lucide-react";
+import { ArrowRight, BookOpen, Settings, MessageSquare, ListTodo, Search, Bot } from "lucide-react";
 
 const guideLinks = [
   {
@@ -10,23 +10,28 @@ const guideLinks = [
   },
   {
     title: "Workspaces",
-    href: "/docs/spaces",
+    href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/workspaces.md",
     icon: Settings,
   },
   {
     title: "Messages",
-    href: "/docs/messages",
+    href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/messages.md",
     icon: MessageSquare,
   },
   {
     title: "Tasks",
-    href: "/docs/tasks",
+    href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/tasks.md",
     icon: ListTodo,
   },
   {
     title: "Search",
-    href: "/docs/search",
+    href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/search.md",
     icon: Search,
+  },
+  {
+    title: "Agents",
+    href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/agents.md",
+    icon: Bot,
   },
 ];
 
