@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const images = [
-  { src: "/images/financialadvisors1.png", alt: "Financial Advisors Workspace - Dashboard" },
-  { src: "/images/financialadvisors2.png", alt: "Financial Advisors Workspace - Chat" },
-  { src: "/images/financialadvisors3.png", alt: "Financial Advisors Workspace - Analysis" },
-  { src: "/images/financialadvisors4.png", alt: "Financial Advisors Workspace - Agents" },
+  { src: "/images/financialadvisors_agents.png", alt: "Financial Advisors Workspace - Agents" },
+  { src: "/images/financialadvisors_messages.png", alt: "Financial Advisors Workspace - Messages" },
+  { src: "/images/financialadvisors_spaces.png", alt: "Financial Advisors Workspace - Spaces" },
+  { src: "/images/financialadvisors_tasks.png", alt: "Financial Advisors Workspace - Tasks" },
 ];
 
 const FinancialAdvisorsSection = () => {
