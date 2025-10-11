@@ -13,6 +13,11 @@ const tutorials = [
     icon: BookOpen,
   },
   {
+    title: "ChatGPT Integration Guide",
+    href: "https://github.com/AX-MCP/PaxAI/blob/main/Integration_Guides/chatgpt-paxai-integration-guide.md",
+    icon: FileText,
+  },
+  {
     title: "Claude Code Integration Guide",
     href: "https://github.com/AX-MCP/PaxAI/blob/main/Integration_Guides/claudedesktop-paxai-integration-guide.md",
     icon: FileText,
