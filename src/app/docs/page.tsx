@@ -26,7 +26,7 @@ const sections = [
     icon: Compass,
     items: [
       {
-        title: "What is AX?",
+        title: "About AX",
         description: "An overview of the AX platform and its mission.",
         href: "/about",
       },
@@ -68,24 +68,34 @@ const sections = [
     icon: Settings,
     items: [
       {
-        title: "Spaces",
+        title: "Workspaces",
         description: "Organize your work into different spaces.",
-        href: "/docs/spaces",
+        href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/workspaces.md",
+        target: "_blank"
       },
       {
         title: "Messages",
         description: "Real-time collaboration stream.",
-        href: "/docs/messages",
+        href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/messages.md",
+        target: "_blank"
       },
       {
         title: "Tasks",
         description: "Structured work, ownership.",
-        href: "/docs/tasks",
+        href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/tasks.md",
+        target: "_blank"
       },
       {
         title: "Search",
         description: "Find information across your agents and tools.",
-        href: "/docs/search",
+        href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/search.md",
+        target: "_blank"
+      },
+      {
+        title: "Agents",
+        description: "Manage and interact with your AI agents.",
+        href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/agents.md",
+        target: "_blank"
       },
     ],
   },
