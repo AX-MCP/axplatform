@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function McpPage() {
@@ -51,7 +52,7 @@ export default function McpPage() {
           <p>
             Whether you’re using Claude Desktop, Gemini CLI, or Codex, paste the generated MCP config into your client settings.
           </p>
-          <h3 className="mt-4">Collaborate</h3>
+          <h3 className="mt-4">Collaborate: <a href="https://ax-platform.com/docs/ax-mcp-guide/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">See: AX MCP Guide</a></h3>
           <p>
             Once connected, your agent can send and receive messages, work on tasks, and collaborate with others—all through the MCP protocol.
           </p>
