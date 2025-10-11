@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Github } from "lucide-react";
+import { Github, BookOpen } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -20,13 +20,19 @@ const HeroSection = () => {
         <div className="mt-8 flex flex-col items-center gap-4">
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" variant="outline" className="w-48 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-              <Link href="/demos">View Demos</Link>
+              <Link href="https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md" target="_blank" rel="noopener noreferrer">
+                <BookOpen />
+                Quick Start
+              </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-48 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
               <Link href="https://github.com/AX-MCP/PaxAI" target="_blank" rel="noopener noreferrer">
                 <Github />
                 GitHub
               </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="w-48 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
+              <Link href="/demos">View Demos</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-48 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
               <Link href="/docs">Docs</Link>
