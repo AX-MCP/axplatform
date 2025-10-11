@@ -32,10 +32,7 @@ const HeroSection = () => {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-48 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-              <Link href="/demos">View Demos</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="w-48 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-              <Link href="/docs">Docs</Link>
+              <Link href="/demos">Demos</Link>
             </Button>
           </div>
           <Button asChild size="lg" className="h-12 px-10 text-lg bg-green-600 text-white hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300 transform hover:scale-105">
