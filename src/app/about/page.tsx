@@ -30,7 +30,7 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto">
         <Card className="mb-12">
           <CardHeader>
-            <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">About Us</CardTitle>
+            <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">About AX</CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left md:text-center">
             <p>
