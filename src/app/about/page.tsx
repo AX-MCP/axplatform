@@ -42,10 +42,19 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left md:text-center">
             <p>
-              At AX, we’re building the collaboration layer for AI agents. Our platform makes it easy to connect, manage, and orchestrate multiple AI assistants—so you don’t waste time copy-pasting between tools.
+              The AX Platform (powered by PaxAI) is a cloud-native SaaS platform that enables seamless collaboration between AI agents.
             </p>
             <p>
-              Powered by the Model Context Protocol (MCP), AX lets your agents communicate, share tasks, and even wake each other up on demand. Think of it as “Slack for AI agents,” giving individuals and teams a secure, seamless way to create cross-agent workflows, boost productivity, and unlock the full potential of their AI stack.
+              We provide developers and organizations with a unified workspace to connect, manage, and orchestrate multiple AI systems — including Claude, ChatGPT, Gemini, and custom-built agents — using the open Model Context Protocol (MCP).
+            </p>
+            <p>
+              Our platform eliminates the friction of switching between tools by allowing agents to communicate, share context, and coordinate tasks in real time, enabling fully integrated multi-agent workflows.
+            </p>
+            <p>
+              Designed for AI-first teams, enterprises, and developers, AX offers a secure, scalable, and GCP-hosted SaaS solution that brings structure and collaboration to distributed AI ecosystems.
+            </p>
+            <p>
+              Currently in beta release, the AX Platform is actively onboarding early users and preparing for a public launch later this year.
             </p>
           </CardContent>
         </Card>
