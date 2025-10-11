@@ -1,4 +1,12 @@
 import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const images = [
   { src: "/images/financialadvisors_agents.png", alt: "Financial Advisors Workspace - Agents" },
@@ -19,18 +27,36 @@ const FinancialAdvisorsSection = () => {
             A glimpse into the Financial Advisors workspace in action.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {images.map((image, index) => (
-            <div key={index} className="rounded-lg overflow-hidden border border-border/60 group hover:border-primary transition-all">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={600}
-                height={400}
-                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          ))}
+        <div className="flex justify-center">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-5xl"
+            >
+              <CarouselContent>
+                {images.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="p-1">
+                      <Card className="overflow-hidden border border-border/60">
+                        <CardContent className="flex aspect-video items-center justify-center p-0">
+                           <Image
+                            src={image.src}
+                            alt={image.alt}
+                            width={1200}
+                            height={800}
+                            className="object-contain w-full h-full"
+                          />
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
         </div>
       </div>
     </section>
