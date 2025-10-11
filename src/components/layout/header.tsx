@@ -66,9 +66,6 @@ const Header = () => {
             <Link href="/pricing/enterprise" className="transition-colors hover:text-accent">
               Pricing
             </Link>
-            <Link href="/book-a-demo" className="transition-colors hover:text-accent">
-              Book a Demo
-            </Link>
           </nav>
         </div>
           
@@ -127,13 +124,6 @@ const Header = () => {
                           className="text-foreground hover:text-accent"
                         >
                           Pricing
-                        </Link>
-                        <Link
-                          href="/book-a-demo"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-foreground hover:text-accent"
-                        >
-                          Book a Demo
                         </Link>
                       </div>
                   </div>
