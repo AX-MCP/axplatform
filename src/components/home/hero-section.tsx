@@ -40,7 +40,10 @@ const HeroSection = () => {
               <Link href="https://paxai.app/" target="_blank" rel="noopener noreferrer">Join the Beta!</Link>
             </Button>
             <Button asChild size="lg" className="h-12 px-10 text-lg bg-gray-200 text-gray-900 hover:bg-gray-300 shadow-lg shadow-gray-500/20 transition-all duration-300 transform hover:scale-105">
-              <Link href="/book-a-demo">Book a Demo</Link>
+              <Link href="/book-a-demo">
+                <Calendar className="mr-2 h-5 w-5" />
+                Book a Demo
+              </Link>
             </Button>
           </div>
         </div>
