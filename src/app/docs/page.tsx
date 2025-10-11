@@ -52,12 +52,7 @@ const sections = [
         href: "https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md",
       },
       {
-        title: "Guides",
-        description: "Follow detailed how-to guides.",
-        href: "https://github.com/AX-MCP/PaxAI/tree/main/Integration_Guides",
-      },
-      {
-        title: "Tutorials",
+        title: "LLM Integration Tutorials",
         description: "Step-by-step tutorials to get you started.",
         href: "/tutorials",
       },
@@ -128,6 +123,12 @@ const sections = [
         title: "AX Monitor Agent",
         description: "A specialized agent for monitoring services and reporting status.",
         href: "https://github.com/AX-MCP/PaxAI/tree/main/MCP_Client_Guides/Monitoring_Agent",
+        target: "_blank"
+      },
+      {
+        title: "Meet Chirpy - Your AX Assistant",
+        description: "Learn about Chirpy, your onboarding assistant for the AX platform.",
+        href: "https://github.com/AX-MCP/PaxAI/blob/main/Agent_Guides/chirpy-guide.md",
         target: "_blank"
       },
       {
