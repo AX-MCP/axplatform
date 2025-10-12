@@ -243,7 +243,7 @@ export default function DocsPage() {
         </p>
       </header>
       
-      <div className="space-y-16">
+      <div className="space-y-32">
         {sectionsToRender.map((section) => (
           <div key={section.category} id={section.category} className="scroll-mt-24">
             <h2 className="text-3xl font-bold font-headline mb-8">
