@@ -240,7 +240,7 @@ export default function DocsPage() {
 
   return (
     <div className="py-16">
-      <div className="container mx-auto px-16 sm:px-18 lg:px-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <header className="mb-24">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-3">
             AX Documentation
@@ -250,7 +250,7 @@ export default function DocsPage() {
           </p>
         </header>
         
-        <div className="space-y-32">
+        <div className="space-y-8">
           {sectionsToRender.map((section) => (
             <div key={section.category} id={section.category} className="scroll-mt-24">
               <h2 className="text-3xl font-bold font-headline mb-8">
