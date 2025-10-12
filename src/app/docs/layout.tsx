@@ -47,7 +47,7 @@ const sections = [
     category: "Advanced",
     icon: Brain,
     href: "/docs#Advanced",
-_  },
+  },
   {
     category: "Tutorials & Use Cases",
     icon: Lightbulb,
