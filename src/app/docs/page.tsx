@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -256,7 +257,7 @@ export default function DocsPage() {
               <h2 className="text-3xl font-bold font-headline mb-8">
                 {section.category}
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8">
                 {section.items.map((item) => (
                   <Link
                     href={item.href}
