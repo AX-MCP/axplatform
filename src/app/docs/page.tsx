@@ -55,6 +55,12 @@ const sectionItems = {
         target: "_blank",
         icon: Code,
       },
+      {
+        title: "Enterprise Use Cases",
+        description: "Secure, scalable multi-agent collaboration for organizations.",
+        href: "/docs/enterprise-use-cases",
+        icon: Users,
+      }
   ],
   "Getting Started": [
       {
