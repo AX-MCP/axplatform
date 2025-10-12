@@ -258,7 +258,7 @@ export default function DocsPage() {
                 <Link
                   href={item.href}
                   key={item.title}
-                  className="block group"
+                  className="block group h-full"
                   target={item.target}
                   rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                 >
