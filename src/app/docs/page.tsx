@@ -230,7 +230,7 @@ const allDocsSections = allSectionsData.map(section => ({
 
 
 export default function DocsPage() {
-  const [activeSection, setActiveSection] = useState("Welcome");
+  const [activeSection, setActiveSection] = useState("Introduction");
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -238,8 +238,8 @@ export default function DocsPage() {
       const sectionFromHash = allDocsSections.find(s => s.href === `#${hash}`);
       if (sectionFromHash) {
         setActiveSection(sectionFromHash.category);
-      } else {
-        setActiveSection("Welcome");
+      } else if (allDocsSections.length > 0) {
+        setActiveSection(allDocsSections[0].category)
       }
     };
 
@@ -250,15 +250,12 @@ export default function DocsPage() {
     };
   }, []);
 
-  const sectionsToRender = activeSection === "Welcome" 
-    ? allDocsSections.filter(s => s.category !== "Welcome")
-    : allDocsSections.filter(s => s.category === activeSection);
+  const sectionsToRender = allDocsSections.filter(s => s.category === activeSection);
 
 
   return (
     <div className="py-16 px-6 md:px-12 lg:px-24">
       <header className="mb-16">
-        <p className="text-md text-primary font-semibold mb-2">Welcome</p>
         <h1 className="text-4xl md:text-5xl font-bold font-headline mb-3">
           AX Documentation
         </h1>
@@ -270,7 +267,7 @@ export default function DocsPage() {
       <div className="space-y-16">
         {sectionsToRender.map((section) => (
           <div key={section.category} id={section.href?.substring(1)}>
-            <h2 className="text-2xl font-bold font-headline mb-8">
+            <h2 className="text-3xl font-bold font-headline mb-8">
               {section.category}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -282,15 +279,15 @@ export default function DocsPage() {
                   target={item.target}
                   rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                 >
-                  <Card className="h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-2">
+                  <Card className="h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-4">
                     <CardHeader>
                       <div className="flex items-center gap-4 mb-3">
-                         <item.icon className="h-6 w-6 text-accent" />
-                         <CardTitle className="text-xl font-semibold font-headline group-hover:text-primary">
+                         <item.icon className="h-7 w-7 text-accent" />
+                         <CardTitle className="text-2xl font-semibold font-headline group-hover:text-primary">
                           {item.title}
                         </CardTitle>
                       </div>
-                      <CardDescription className="text-base">
+                      <CardDescription className="text-lg">
                         {item.description}
                       </CardDescription>
                     </CardHeader>
