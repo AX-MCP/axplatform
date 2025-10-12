@@ -240,7 +240,7 @@ export default function DocsPage() {
 
   return (
     <div className="py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4">
         <header className="mb-24 mt-8">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-3">
             AX Documentation
@@ -256,16 +256,16 @@ export default function DocsPage() {
               <h2 className="text-3xl font-bold font-headline mb-8">
                 {section.category}
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-1 gap-y-8 justify-items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
                 {section.items.map((item) => (
                   <Link
                     href={item.href}
                     key={item.title}
-                    className="block group"
+                    className="block group w-full"
                     target={item.target}
                     rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                   >
-                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[345px] w-[85%]">
+                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[17rem] w-full">
                       <CardHeader className="flex-grow">
                         <div className="flex items-center gap-4 mb-3">
                            <item.icon className="h-7 w-7 text-accent" />
