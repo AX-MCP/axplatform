@@ -21,37 +21,37 @@ export const sections = [
   {
     category: "Introduction",
     icon: Compass,
-    href: "/docs?section=Introduction",
+    href: "/docs/#Introduction",
   },
   {
     category: "Getting Started",
     icon: Rocket,
-    href: "/docs?section=Getting%20Started",
+    href: "/docs/#Getting Started",
   },
   {
     category: "Core Features",
     icon: Settings,
-    href: "/docs?section=Core%20Features",
+    href: "/docs/#Core Features",
   },
   {
     category: "LLM Integration Tutorials",
     icon: Plug,
-    href: "/docs?section=LLM%20Integration%20Tutorials",
+    href: "/docs/#LLM Integration Tutorials",
   },
   {
     category: "Advanced",
     icon: Brain,
-    href: "/docs?section=Advanced",
+    href: "/docs/#Advanced",
   },
   {
     category: "Tutorials",
     icon: Lightbulb,
-    href: "/docs?section=Tutorials",
+    href: "/docs/#Tutorials",
   },
   {
     category: "Resources",
     icon: BookCopy,
-    href: "/docs?section=Resources",
+    href: "/docs/#Resources",
   },
 ];
 

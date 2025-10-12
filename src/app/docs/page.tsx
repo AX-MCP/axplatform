@@ -230,15 +230,7 @@ const allDocsSections = allSectionsData.map(section => ({
 
 
 export default function DocsPage() {
-  const searchParams = useSearchParams();
-  const activeSectionName = searchParams.get('section') || allDocsSections[0].category;
-  
-  const sectionsToRender = allDocsSections.filter(s => s.category === activeSectionName);
-
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [activeSectionName]);
-
+  const sectionsToRender = allDocsSections;
 
   return (
     <div className="py-16 px-6 md:px-12 lg:px-24">
@@ -253,7 +245,7 @@ export default function DocsPage() {
       
       <div className="space-y-16">
         {sectionsToRender.map((section) => (
-          <div key={section.category} id={section.category.replace(/ /g, '-')}>
+          <div key={section.category} id={section.category} className="scroll-mt-24">
             <h2 className="text-3xl font-bold font-headline mb-8">
               {section.category}
             </h2>
