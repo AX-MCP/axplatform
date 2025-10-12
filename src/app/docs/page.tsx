@@ -265,7 +265,7 @@ export default function DocsPage() {
                     target={item.target}
                     rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                   >
-                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-4">
+                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[260px]">
                       <CardHeader className="flex-grow">
                         <div className="flex items-center gap-4 mb-3">
                            <item.icon className="h-7 w-7 text-accent" />
