@@ -242,7 +242,7 @@ export default function DocsPage() {
   return (
     <div className="py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <header className="mb-24">
+        <header className="mb-24 mt-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-3">
             AX Documentation
           </h1>
@@ -257,7 +257,7 @@ export default function DocsPage() {
               <h2 className="text-3xl font-bold font-headline mb-8">
                 {section.category}
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-1 gap-y-8 justify-items-center">
                 {section.items.map((item) => (
                   <Link
                     href={item.href}
