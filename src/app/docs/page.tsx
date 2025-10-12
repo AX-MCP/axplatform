@@ -247,24 +247,24 @@ const sections = [
 
 export default function DocsPage() {
   return (
-    <div className="py-12 px-4 md:px-8">
-      <header className="mb-12">
-        <p className="text-sm text-primary font-semibold mb-1">Welcome</p>
-        <h1 className="text-3xl md:text-4xl font-bold font-headline mb-2">
+    <div className="py-16 px-6 md:px-12 lg:px-24">
+      <header className="mb-16">
+        <p className="text-md text-primary font-semibold mb-2">Welcome</p>
+        <h1 className="text-4xl md:text-5xl font-bold font-headline mb-3">
           AX Documentation
         </h1>
-        <p className="text-lg text-muted-foreground">
+        <p className="text-xl text-muted-foreground">
           Build collaborative AI agents, crews, and flows — production ready from day one.
         </p>
       </header>
       
-      <div className="space-y-12">
+      <div className="space-y-16">
         {sections.map((section) => (
           <div key={section.category}>
-            <h2 className="text-xl font-bold font-headline mb-6">
+            <h2 className="text-2xl font-bold font-headline mb-8">
               {section.category}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {section.items.map((item) => (
                 <Link
                   href={item.href}
@@ -273,15 +273,15 @@ export default function DocsPage() {
                   target={item.target}
                   rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                 >
-                  <Card className="h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10">
+                  <Card className="h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-2">
                     <CardHeader>
-                      <div className="flex items-center gap-3 mb-2">
-                         <item.icon className="h-5 w-5 text-accent" />
-                         <CardTitle className="text-lg font-semibold font-headline group-hover:text-primary">
+                      <div className="flex items-center gap-4 mb-3">
+                         <item.icon className="h-6 w-6 text-accent" />
+                         <CardTitle className="text-xl font-semibold font-headline group-hover:text-primary">
                           {item.title}
                         </CardTitle>
                       </div>
-                      <CardDescription>
+                      <CardDescription className="text-base">
                         {item.description}
                       </CardDescription>
                     </CardHeader>
