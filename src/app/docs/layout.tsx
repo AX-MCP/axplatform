@@ -76,7 +76,7 @@ export default function DocsLayout({
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <SidebarInput placeholder="Search..." className="pl-8 h-12" />
           </div>
-          <SidebarMenu>
+          <SidebarMenu className="px-2">
             {sections.map((section) => (
               <SidebarMenuItem key={section.category} className="border-b border-sidebar-border last:border-b-0">
                 <SidebarMenuButton
