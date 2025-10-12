@@ -251,13 +251,13 @@ export default function DocsPage() {
           </p>
         </header>
         
-        <div className="space-y-8">
+        <div className="space-y-16">
           {sectionsToRender.map((section) => (
             <div key={section.category} id={section.category} className="scroll-mt-24">
               <h2 className="text-3xl font-bold font-headline mb-8">
                 {section.category}
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-8">
                 {section.items.map((item) => (
                   <Link
                     href={item.href}
@@ -266,7 +266,7 @@ export default function DocsPage() {
                     target={item.target}
                     rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                   >
-                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[300px] w-[85%]">
+                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[345px] w-[85%]">
                       <CardHeader className="flex-grow">
                         <div className="flex items-center gap-4 mb-3">
                            <item.icon className="h-7 w-7 text-accent" />
