@@ -181,24 +181,24 @@ const sectionItems = {
       },
   ],
   "Tutorials & Use Cases": [
-      {
-        title: "Building AI Teams",
-        description: "Create and manage teams of collaborating agents.",
-        href: "/tutorials",
-        icon: Lightbulb,
-      },
-      {
-        title: "Documentation Automation",
-        description: "Automate the generation of documentation.",
-        href: "/tutorials",
-        icon: Lightbulb,
-      },
-      {
-        title: "Research + Coding",
-        description: "Use agents for research and coding tasks.",
-        href: "/tutorials",
-        icon: Lightbulb,
-      },
+    {
+      title: "Building AI Teams",
+      description: "Create and manage teams of collaborating agents.",
+      href: "/tutorials",
+      icon: Lightbulb,
+    },
+    {
+      title: "Documentation Automation",
+      description: "Automate the generation of documentation.",
+      href: "/tutorials",
+      icon: Lightbulb,
+    },
+    {
+      title: "Research + Coding",
+      description: "Use agents for research and coding tasks.",
+      href: "/tutorials",
+      icon: Lightbulb,
+    },
   ],
   "Resources": [
       {

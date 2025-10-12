@@ -71,7 +71,7 @@ export default function DocsLayout({
             <span className="font-bold font-headline text-lg group-data-[collapsible=icon]:hidden">AX</span>
           </Link>
         </SidebarHeader>
-        <SidebarContent className="pt-[30%]">
+        <SidebarContent className="pt-[15%]">
           <div className="px-2 mb-4 relative group-data-[collapsible=icon]:hidden">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <SidebarInput placeholder="Search..." className="pl-8 h-12" />
