@@ -44,9 +44,9 @@ export const sections = [
     href: "/docs?section=Advanced",
   },
   {
-    category: "Tutorials & Use Cases",
+    category: "Tutorials",
     icon: Lightbulb,
-    href: "/docs?section=Tutorials%20&%20Use%20Cases",
+    href: "/docs?section=Tutorials",
   },
   {
     category: "Resources",

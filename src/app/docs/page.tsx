@@ -180,7 +180,7 @@ const sectionItems = {
         icon: Shield,
       },
   ],
-  "Tutorials & Use Cases": [
+  "Tutorials": [
     {
       title: "Building AI Teams",
       description: "Create and manage teams of collaborating agents.",
@@ -235,6 +235,10 @@ export default function DocsPage() {
   
   const sectionsToRender = allDocsSections.filter(s => s.category === activeSectionName);
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activeSectionName]);
+
 
   return (
     <div className="py-16 px-6 md:px-12 lg:px-24">
@@ -249,7 +253,7 @@ export default function DocsPage() {
       
       <div className="space-y-16">
         {sectionsToRender.map((section) => (
-          <div key={section.category} id={section.href}>
+          <div key={section.category} id={section.category.replace(/ /g, '-')}>
             <h2 className="text-3xl font-bold font-headline mb-8">
               {section.category}
             </h2>
