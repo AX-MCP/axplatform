@@ -14,7 +14,7 @@ import {
   SidebarInset,
   SidebarFooter,
 } from "@/components/ui/sidebar";
-import { Bot, Compass, Rocket, Settings, Plug, Brain, Lightbulb, BookCopy, FileText, Users, Code, BookOpen, Briefcase, Shield } from "lucide-react";
+import { Bot, Compass, Rocket, Settings, Plug, Brain, Lightbulb, BookCopy } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const sections = [
@@ -26,30 +26,37 @@ const sections = [
   {
     category: "Introduction",
     icon: Compass,
+    href: "/docs#Introduction"
   },
   {
     category: "Getting Started",
     icon: Rocket,
+    href: "/docs#Getting-Started",
   },
   {
     category: "Core Features",
     icon: Settings,
+    href: "/docs#Core-Features",
   },
   {
     category: "LLM Integration Tutorials",
     icon: Plug,
+    href: "/docs#LLM-Integration-Tutorials",
   },
   {
     category: "Advanced",
     icon: Brain,
-  },
+    href: "/docs#Advanced",
+_  },
   {
     category: "Tutorials & Use Cases",
     icon: Lightbulb,
+    href: "/docs#Tutorials-&-Use-Cases",
   },
   {
     category: "Resources",
     icon: BookCopy,
+    href: "/docs#Resources",
   },
 ];
 
@@ -72,11 +79,13 @@ export default function DocsLayout({
         <SidebarContent>
           <SidebarMenu>
             {sections.map((section) => (
-              <SidebarMenuItem key={section.category}>
+              <SidebarMenuItem key={section.category} className="border-b border-sidebar-border last:border-b-0">
                 <SidebarMenuButton
                   asChild
-                  isActive={section.href ? pathname === section.href : false}
+                  isActive={pathname === section.href}
                   tooltip={section.category}
+                  className="h-12 justify-start"
+                  size="lg"
                 >
                   <Link href={section.href || `/docs#${section.category.replace(/\s+/g, '-')}`}>
                     <section.icon />
