@@ -239,49 +239,51 @@ export default function DocsPage() {
   const sectionsToRender = allDocsSections;
 
   return (
-    <div className="py-16 px-6 md:px-12 lg:px-24">
-      <header className="mb-24">
-        <h1 className="text-4xl md:text-5xl font-bold font-headline mb-3">
-          AX Documentation
-        </h1>
-        <p className="text-xl text-muted-foreground">
-          Build collaborative AI agents, crews, and flows — production ready from day one.
-        </p>
-      </header>
-      
-      <div className="space-y-32">
-        {sectionsToRender.map((section) => (
-          <div key={section.category} id={section.category} className="scroll-mt-24">
-            <h2 className="text-3xl font-bold font-headline mb-8">
-              {section.category}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 grid-flow-row-dense">
-              {section.items.map((item) => (
-                <Link
-                  href={item.href}
-                  key={item.title}
-                  className="block group h-full"
-                  target={item.target}
-                  rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-                >
-                  <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-4">
-                    <CardHeader className="flex-grow">
-                      <div className="flex items-center gap-4 mb-3">
-                         <item.icon className="h-7 w-7 text-accent" />
-                         <CardTitle className="text-2xl font-semibold font-headline group-hover:text-primary">
-                          {item.title}
-                        </CardTitle>
-                      </div>
-                      <CardDescription className="text-lg">
-                        {item.description}
-                      </CardDescription>
-                    </CardHeader>
-                  </Card>
-                </Link>
-              ))}
+    <div className="py-16">
+      <div className="container max-w-7xl">
+        <header className="mb-24">
+          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-3">
+            AX Documentation
+          </h1>
+          <p className="text-xl text-muted-foreground">
+            Build collaborative AI agents, crews, and flows — production ready from day one.
+          </p>
+        </header>
+        
+        <div className="space-y-32">
+          {sectionsToRender.map((section) => (
+            <div key={section.category} id={section.category} className="scroll-mt-24">
+              <h2 className="text-3xl font-bold font-headline mb-8">
+                {section.category}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 grid-flow-row-dense">
+                {section.items.map((item) => (
+                  <Link
+                    href={item.href}
+                    key={item.title}
+                    className="block group h-full"
+                    target={item.target}
+                    rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+                  >
+                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-4">
+                      <CardHeader className="flex-grow">
+                        <div className="flex items-center gap-4 mb-3">
+                           <item.icon className="h-7 w-7 text-accent" />
+                           <CardTitle className="text-2xl font-semibold font-headline group-hover:text-primary">
+                            {item.title}
+                          </CardTitle>
+                        </div>
+                        <CardDescription className="text-lg">
+                          {item.description}
+                        </CardDescription>
+                      </CardHeader>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
