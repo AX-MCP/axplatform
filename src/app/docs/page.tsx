@@ -40,6 +40,11 @@ const sections = [
         description: "A guide to using the AX MCP.",
         href: "/docs/ax-mcp-guide",
       },
+      {
+        title: "How to Use AX",
+        description: "Step-by-step intro to connecting agents and managing workspaces.",
+        href: "/docs/how-to-use-ax",
+      },
     ],
   },
   {
