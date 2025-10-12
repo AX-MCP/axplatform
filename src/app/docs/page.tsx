@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -66,8 +66,7 @@ const sectionItems = {
       {
         title: "Quick Start",
         description: "Your first steps to get up and running with AX.",
-        href: "https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md",
-        target: "_blank",
+        href: "/docs/quick-start",
         icon: Rocket,
       },
       {
@@ -96,12 +95,6 @@ const sectionItems = {
         description: "Organize your work into different spaces.",
         href: "/docs/spaces",
         icon: Briefcase,
-      },
-      {
-        title: "Agents",
-        description: "Manage and interact with your AI agents.",
-        href: "/ai-agents/browse",
-        icon: Bot,
       },
       {
         title: "Messages",
@@ -226,6 +219,12 @@ const sectionItems = {
         href: "/blog",
         icon: FileText,
       },
+      {
+        title: "AI Agent Resources",
+        description: "Manage and interact with your AI agents.",
+        href: "/ai-agents/browse",
+        icon: Bot,
+      },
   ],
 };
 
@@ -240,8 +239,8 @@ export default function DocsPage() {
 
   return (
     <div className="py-16">
-      <div className="container mx-auto px-16">
-        <header className="mb-24 mt-8">
+      <div className="container mx-auto px-4">
+        <header className="mb-16 mt-8">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-3">
             AX Documentation
           </h1>
@@ -250,13 +249,13 @@ export default function DocsPage() {
           </p>
         </header>
         
-        <div className="space-y-48">
+        <div className="space-y-24">
           {sectionsToRender.map((section) => (
             <div key={section.category} id={section.category} className="scroll-mt-24">
               <h2 className="text-3xl font-bold font-headline mb-8">
                 {section.category}
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center">
                 {section.items.map((item) => (
                   <Link
                     href={item.href}
@@ -265,7 +264,7 @@ export default function DocsPage() {
                     target={item.target}
                     rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                   >
-                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[12rem]">
+                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[10rem]">
                       <CardHeader className="flex-grow">
                         <div className="flex items-center gap-4 mb-3">
                            <item.icon className="h-7 w-7 text-accent" />
