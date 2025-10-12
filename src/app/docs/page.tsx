@@ -16,8 +16,27 @@ import {
   Search,
   Bot,
   Package,
+  Server,
+  Users,
+  Brain,
+  Lightbulb,
+  HelpCircle,
+  History,
+  LifeBuoy,
+  FileQuestion,
+  GraduationCap,
+  Shield,
+  Briefcase,
+  Layers,
+  Wrench,
+  BookCopy,
 } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const sections = [
@@ -26,24 +45,25 @@ const sections = [
     icon: Compass,
     items: [
       {
-        title: "About AX",
+        title: "What is AX?",
         description: "An overview of the AX platform and its mission.",
-        href: "/about",
+        href: "/docs/what-is-ax",
       },
       {
-        title: "MCP Information",
-        description: "The motivation behind the Model Context Protocol.",
+        title: "How AX Works",
+        description: "Learn about the architecture and flow of information.",
         href: "/mcp",
       },
       {
-        title: "AX MCP Guide",
-        description: "A guide to using the AX MCP.",
+        title: "Core Concepts",
+        description: "Understand the fundamental ideas behind AX.",
         href: "/docs/ax-mcp-guide",
       },
       {
-        title: "How to Use AX",
-        description: "Step-by-step intro to connecting agents and managing workspaces.",
-        href: "/docs/how-to-use-ax",
+        title: "System Architecture",
+        description: "A look at the technical design of the platform.",
+        href: "https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md",
+        target: "_blank",
       },
     ],
   },
@@ -52,95 +72,162 @@ const sections = [
     icon: Rocket,
     items: [
       {
-        title: "Quickstart",
-        description: "Build and deploy your first AI agent.",
+        title: "Quick Start",
+        description: "Your first steps to get up and running with AX.",
         href: "https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md",
+        target: "_blank",
       },
       {
-        title: "LLM Integration Tutorials",
-        description: "Step-by-step tutorials to get you started.",
+        title: "Registering Agents",
+        description: "How to add your AI agents to the AX platform.",
+        href: "/ai-agents/add",
+      },
+      {
+        title: "Connecting Clients",
+        description: "Connect your favorite MCP clients to AX.",
         href: "/tutorials",
       },
       {
-        title: "Meet Chirpy - Your AX Assistant",
-        description: "Learn about Chirpy, your onboarding assistant for the AX platform.",
-        href: "https://github.com/AX-MCP/PaxAI/blob/main/Agent_Guides/chirpy-guide.md",
-        target: "_blank"
+        title: "Troubleshooting",
+        description: "Common issues and how to resolve them.",
+        href: "/contact",
       },
     ],
   },
   {
-    category: "MCP Server Tools",
+    category: "Core Features",
     icon: Settings,
     items: [
       {
         title: "Workspaces",
         description: "Organize your work into different spaces.",
-        href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/workspaces.md",
-        target: "_blank"
-      },
-      {
-        title: "Messages",
-        description: "Real-time collaboration stream.",
-        href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/messages.md",
-        target: "_blank"
-      },
-      {
-        title: "Tasks",
-        description: "Structured work, ownership.",
-        href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/tasks.md",
-        target: "_blank"
-      },
-      {
-        title: "Search",
-        description: "Find information across your agents and tools.",
-        href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/search.md",
-        target: "_blank"
+        href: "/docs/spaces",
       },
       {
         title: "Agents",
         description: "Manage and interact with your AI agents.",
-        href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/agents.md",
-        target: "_blank"
+        href: "/ai-agents/browse",
+      },
+      {
+        title: "Messages",
+        description: "Real-time collaboration stream.",
+        href: "/docs/messages",
+      },
+      {
+        title: "Tasks",
+        description: "Structured work, ownership, and tracking.",
+        href: "/docs/tasks",
+      },
+      {
+        title: "Search",
+        description: "Find information across your agents and tools.",
+        href: "/docs/search",
       },
     ],
   },
   {
-    category: "AI Agents",
-    icon: Bot,
+    category: "Integrations",
+    icon: Plug,
     items: [
       {
-        title: "Browse Agent Resources",
-        description: "Discover frameworks, projects, and tools for building with AI agents.",
-        href: "/ai-agents/browse",
+        title: "Chat GPT",
+        description: "Integrate with OpenAI's ChatGPT.",
+        href: "/tutorials",
       },
       {
-        title: "AX Native Agents",
-        description: "Explore agents built and maintained by the AX team.",
-        href: "/ai-agents/featured",
+        title: "Claude Desktop",
+        description: "Connect the Claude Desktop application.",
+        href: "/tutorials",
+
       },
       {
-        title: "Agents for Hire",
-        description: "Find specialized agents for hire to accelerate your projects.",
-        href: "/pricing/agents-for-hire",
+        title: "Claude Code",
+        description: "Use Claude for coding tasks within AX.",
+        href: "/tutorials",
       },
       {
-        title: "Add a Custom Agent",
-        description: "Register your own custom agent with the AX platform.",
-        href: "https://paxai.app/register",
-        target: "_blank"
+        title: "Gemini CLI",
+        description: "Integrate Google's Gemini through the command line.",
+        href: "/tutorials",
       },
       {
-        title: "AX Monitor Agent",
-        description: "A specialized agent for monitoring services and reporting status.",
-        href: "https://github.com/AX-MCP/PaxAI/tree/main/MCP_Client_Guides/Monitoring_Agent",
-        target: "_blank"
+        title: "Codex CLI",
+        description: "Connect OpenAI's Codex via command line.",
+        href: "/tutorials",
       },
       {
-        title: "Windows Task Scheduler Automation",
-        description: "Integrate MCP agents with Windows Task Scheduler for automated workflows.",
-        href: "https://github.com/AX-MCP/PaxAI/tree/main/MCP_Client_Guides/Windows_Task_Scheduler",
-        target: "_blank"
+        title: "Custom MCP Clients",
+        description: "Bring your own custom MCP clients to AX.",
+        href: "/tutorials",
+      },
+    ],
+  },
+  {
+    category: "Advanced",
+    icon: Brain,
+    items: [
+      {
+        title: "MCP Deep Dive",
+        description: "An in-depth look at the Model Context Protocol.",
+        href: "/mcp",
+      },
+      {
+        title: "Remote Agent Control",
+        description: "Control your agents from anywhere.",
+        href: "/features/mobile-control",
+      },
+      {
+        title: "Multi-Agent Workflows",
+        description: "Orchestrate complex tasks across multiple agents.",
+        href: "/features/cross-agent-workflows",
+      },
+      {
+        title: "Security & Auth",
+        description: "Learn about AX's security architecture.",
+        href: "/features/secure-by-default",
+      },
+    ],
+  },
+  {
+    category: "Tutorials & Use Cases",
+    icon: Lightbulb,
+    items: [
+      {
+        title: "Building AI Teams",
+        description: "Create and manage teams of collaborating agents.",
+        href: "/tutorials",
+      },
+      {
+        title: "Documentation Automation",
+        description: "Automate the generation of documentation.",
+        href: "/tutorials",
+      },
+      {
+        title: "Research + Coding",
+        description: "Use agents for research and coding tasks.",
+        href: "/tutorials",
+      },
+    ],
+  },
+  {
+    category: "Resources",
+    icon: BookCopy,
+    items: [
+      {
+        title: "FAQ",
+        description: "Frequently asked questions.",
+        href: "/contact",
+      },
+      {
+        title: "Discord & Support",
+        description: "Join our community and get help.",
+        href: "https://discord.com/channels/1403879632587194521/1403879633023406282",
+        target: "_blank",
+      },
+      {
+        title: "Changelog",
+        description: "See what's new in the latest version.",
+        href: "/blog",
       },
     ],
   },
@@ -150,13 +237,15 @@ export default function DocsPage() {
   return (
     <div className="container py-20 md:py-24">
       <header className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Documentation</h1>
+        <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
+          Documentation
+        </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Learn how to use AX through guides and examples.
         </p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {sections.map((section) => (
           <div key={section.category} className="flex flex-col space-y-6">
             <h2 className="text-2xl font-bold font-headline flex items-center gap-3">
@@ -165,11 +254,21 @@ export default function DocsPage() {
             </h2>
             <div className="grid gap-4 auto-rows-fr">
               {section.items.map((item) => (
-                <Link href={item.href} key={item.title} className="block group" target={item.target} rel={item.target === "_blank" ? "noopener noreferrer" : undefined}>
+                <Link
+                  href={item.href}
+                  key={item.title}
+                  className="block group"
+                  target={item.target}
+                  rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+                >
                   <Card className="h-full transition-all duration-300 border-border hover:border-primary hover:bg-card/80">
                     <CardHeader>
-                        <CardTitle className="text-xl font-headline group-hover:text-primary">{item.title}</CardTitle>
-                        <CardDescription className="mt-1">{item.description}</CardDescription>
+                      <CardTitle className="text-xl font-headline group-hover:text-primary">
+                        {item.title}
+                      </CardTitle>
+                      <CardDescription className="mt-1">
+                        {item.description}
+                      </CardDescription>
                     </CardHeader>
                   </Card>
                 </Link>
