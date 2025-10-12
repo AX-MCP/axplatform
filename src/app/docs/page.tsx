@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -242,7 +241,7 @@ export default function DocsPage() {
   return (
     <div className="py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <header className="mb-24 mt-12">
+        <header className="mb-24 mt-8">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-3">
             AX Documentation
           </h1>
