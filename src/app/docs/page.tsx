@@ -234,7 +234,7 @@ export default function DocsPage() {
 
   return (
     <div className="py-16 px-6 md:px-12 lg:px-24">
-      <header className="mb-16">
+      <header className="mb-24">
         <h1 className="text-4xl md:text-5xl font-bold font-headline mb-3">
           AX Documentation
         </h1>
