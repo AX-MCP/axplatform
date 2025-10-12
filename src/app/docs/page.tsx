@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import {
   Rocket,
   BookOpen,
@@ -21,12 +24,12 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
+import { sections as allSectionsData } from './layout'; // Import sections from layout
+import React, { useEffect, useState } from 'react';
 
-const sections = [
-  {
-    category: "Introduction",
-    icon: Compass,
-    items: [
+
+const sectionItems = {
+  "Introduction": [
       {
         title: "What is AX?",
         description: "An overview of the AX platform and its mission.",
@@ -52,12 +55,8 @@ const sections = [
         target: "_blank",
         icon: Code,
       },
-    ],
-  },
-  {
-    category: "Getting Started",
-    icon: Rocket,
-    items: [
+  ],
+  "Getting Started": [
       {
         title: "Quick Start",
         description: "Your first steps to get up and running with AX.",
@@ -84,12 +83,8 @@ const sections = [
         target: "_blank",
         icon: Users,
       },
-    ],
-  },
-  {
-    category: "Core Features",
-    icon: Settings,
-    items: [
+  ],
+  "Core Features": [
       {
         title: "Workspaces",
         description: "Organize your work into different spaces.",
@@ -120,12 +115,8 @@ const sections = [
         href: "/docs/search",
         icon: Code,
       },
-    ],
-  },
-  {
-    category: "LLM Integration Tutorials",
-    icon: Plug,
-    items: [
+  ],
+  "LLM Integration Tutorials": [
       {
         title: "Chat GPT",
         description: "Integrate with OpenAI's ChatGPT.",
@@ -162,12 +153,8 @@ const sections = [
         href: "/tutorials",
         icon: Plug,
       },
-    ],
-  },
-  {
-    category: "Advanced",
-    icon: Brain,
-    items: [
+  ],
+  "Advanced": [
       {
         title: "MCP Deep Dive",
         description: "An in-depth look at the Model Context Protocol.",
@@ -192,12 +179,8 @@ const sections = [
         href: "/features/secure-by-default",
         icon: Shield,
       },
-    ],
-  },
-  {
-    category: "Tutorials & Use Cases",
-    icon: Lightbulb,
-    items: [
+  ],
+  "Tutorials & Use Cases": [
       {
         title: "Building AI Teams",
         description: "Create and manage teams of collaborating agents.",
@@ -216,12 +199,8 @@ const sections = [
         href: "/tutorials",
         icon: Lightbulb,
       },
-    ],
-  },
-  {
-    category: "Resources",
-    icon: BookCopy,
-    items: [
+  ],
+  "Resources": [
       {
         title: "FAQ",
         description: "Frequently asked questions.",
@@ -241,11 +220,41 @@ const sections = [
         href: "/blog",
         icon: FileText,
       },
-    ],
-  },
-];
+  ],
+};
+
+const allDocsSections = allSectionsData.map(section => ({
+  ...section,
+  items: sectionItems[section.category as keyof typeof sectionItems] || [],
+}));
+
 
 export default function DocsPage() {
+  const [activeSection, setActiveSection] = useState("Welcome");
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.substring(1);
+      const sectionFromHash = allDocsSections.find(s => s.href === `#${hash}`);
+      if (sectionFromHash) {
+        setActiveSection(sectionFromHash.category);
+      } else {
+        setActiveSection("Welcome");
+      }
+    };
+
+    handleHashChange(); // Set initial state
+    window.addEventListener('hashchange', handleHashChange);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
+  const sectionsToRender = activeSection === "Welcome" 
+    ? allDocsSections.filter(s => s.category !== "Welcome")
+    : allDocsSections.filter(s => s.category === activeSection);
+
+
   return (
     <div className="py-16 px-6 md:px-12 lg:px-24">
       <header className="mb-16">
@@ -259,8 +268,8 @@ export default function DocsPage() {
       </header>
       
       <div className="space-y-16">
-        {sections.map((section) => (
-          <div key={section.category}>
+        {sectionsToRender.map((section) => (
+          <div key={section.category} id={section.href?.substring(1)}>
             <h2 className="text-2xl font-bold font-headline mb-8">
               {section.category}
             </h2>

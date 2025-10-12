@@ -15,9 +15,8 @@ import {
   SidebarFooter,
 } from "@/components/ui/sidebar";
 import { Bot, Compass, Rocket, Settings, Plug, Brain, Lightbulb, BookCopy } from "lucide-react";
-import { cn } from "@/lib/utils";
 
-const sections = [
+export const sections = [
   {
     category: "Welcome",
     icon: Compass,
@@ -26,37 +25,37 @@ const sections = [
   {
     category: "Introduction",
     icon: Compass,
-    href: "/docs#Introduction"
+    href: "#introduction",
   },
   {
     category: "Getting Started",
     icon: Rocket,
-    href: "/docs#Getting-Started",
+    href: "#getting-started",
   },
   {
     category: "Core Features",
     icon: Settings,
-    href: "/docs#Core-Features",
+    href: "#core-features",
   },
   {
     category: "LLM Integration Tutorials",
     icon: Plug,
-    href: "/docs#LLM-Integration-Tutorials",
+    href: "#llm-integration-tutorials",
   },
   {
     category: "Advanced",
     icon: Brain,
-    href: "/docs#Advanced",
+    href: "#advanced",
   },
   {
     category: "Tutorials & Use Cases",
     icon: Lightbulb,
-    href: "/docs#Tutorials-&-Use-Cases",
+    href: "#tutorials-use-cases",
   },
   {
     category: "Resources",
     icon: BookCopy,
-    href: "/docs#Resources",
+    href: "#resources",
   },
 ];
 
@@ -67,6 +66,13 @@ export default function DocsLayout({
 }) {
   const pathname = usePathname();
 
+  const getFullHref = (href: string) => {
+    if (href.startsWith("#")) {
+      return `/docs${href}`;
+    }
+    return href;
+  };
+
   return (
     <SidebarProvider>
       <Sidebar>
@@ -76,18 +82,18 @@ export default function DocsLayout({
             <span className="font-bold font-headline text-lg group-data-[collapsible=icon]:hidden">AX</span>
           </Link>
         </SidebarHeader>
-        <SidebarContent>
+        <SidebarContent className="pt-[50%]">
           <SidebarMenu>
             {sections.map((section) => (
               <SidebarMenuItem key={section.category} className="border-b border-sidebar-border last:border-b-0">
                 <SidebarMenuButton
                   asChild
-                  isActive={pathname === section.href}
+                  isActive={pathname === getFullHref(section.href)}
                   tooltip={section.category}
                   className="h-12 justify-start"
                   size="lg"
                 >
-                  <Link href={section.href || `/docs#${section.category.replace(/\s+/g, '-')}`}>
+                  <Link href={getFullHref(section.href)}>
                     <section.icon />
                     <span>{section.category}</span>
                   </Link>
