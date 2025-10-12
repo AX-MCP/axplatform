@@ -31,7 +31,7 @@ import React from 'react';
 const sectionItems = {
   "Introduction": [
       {
-        title: "What is AX?",
+        title: "About the AX Platform",
         description: "An overview of the AX platform and its mission.",
         href: "/docs/what-is-ax",
         icon: Compass,
@@ -240,7 +240,7 @@ export default function DocsPage() {
 
   return (
     <div className="py-16">
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="container mx-auto px-16">
         <header className="mb-24 mt-8">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-3">
             AX Documentation
@@ -250,13 +250,13 @@ export default function DocsPage() {
           </p>
         </header>
         
-        <div className="space-y-24">
+        <div className="space-y-48">
           {sectionsToRender.map((section) => (
             <div key={section.category} id={section.category} className="scroll-mt-24">
               <h2 className="text-3xl font-bold font-headline mb-8">
                 {section.category}
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center">
                 {section.items.map((item) => (
                   <Link
                     href={item.href}
@@ -265,7 +265,7 @@ export default function DocsPage() {
                     target={item.target}
                     rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                   >
-                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[13rem]">
+                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[12rem]">
                       <CardHeader className="flex-grow">
                         <div className="flex items-center gap-4 mb-3">
                            <item.icon className="h-7 w-7 text-accent" />

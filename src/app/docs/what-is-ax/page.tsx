@@ -5,7 +5,7 @@ export default function WhatIsAxPage() {
     <div className="container py-20 md:py-24">
       <Card className="max-w-3xl mx-auto">
         <CardHeader>
-          <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">What is AX?</CardTitle>
+          <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">About the AX Platform</CardTitle>
         </CardHeader>
         <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
           <p>
