@@ -24,8 +24,8 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
-import { sections as allSectionsData } from './layout'; // Import sections from layout
-import React, { useEffect, useState } from 'react';
+import { sections as allSectionsData } from './layout';
+import React from 'react';
 
 
 const sectionItems = {
@@ -230,27 +230,10 @@ const allDocsSections = allSectionsData.map(section => ({
 
 
 export default function DocsPage() {
-  const [activeSection, setActiveSection] = useState("Introduction");
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.substring(1);
-      const sectionFromHash = allDocsSections.find(s => s.href === `#${hash}`);
-      if (sectionFromHash) {
-        setActiveSection(sectionFromHash.category);
-      } else if (allDocsSections.length > 0) {
-        setActiveSection(allDocsSections[0].category)
-      }
-    };
-
-    handleHashChange(); // Set initial state
-    window.addEventListener('hashchange', handleHashChange);
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
-  }, []);
-
-  const sectionsToRender = allDocsSections.filter(s => s.category === activeSection);
+  const searchParams = useSearchParams();
+  const activeSectionName = searchParams.get('section') || allDocsSections[0].category;
+  
+  const sectionsToRender = allDocsSections.filter(s => s.category === activeSectionName);
 
 
   return (
@@ -266,7 +249,7 @@ export default function DocsPage() {
       
       <div className="space-y-16">
         {sectionsToRender.map((section) => (
-          <div key={section.category} id={section.href?.substring(1)}>
+          <div key={section.category} id={section.href}>
             <h2 className="text-3xl font-bold font-headline mb-8">
               {section.category}
             </h2>

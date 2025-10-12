@@ -21,37 +21,37 @@ export const sections = [
   {
     category: "Introduction",
     icon: Compass,
-    href: "#introduction",
+    href: "/docs?section=Introduction",
   },
   {
     category: "Getting Started",
     icon: Rocket,
-    href: "#getting-started",
+    href: "/docs?section=Getting%20Started",
   },
   {
     category: "Core Features",
     icon: Settings,
-    href: "#core-features",
+    href: "/docs?section=Core%20Features",
   },
   {
     category: "LLM Integration Tutorials",
     icon: Plug,
-    href: "#llm-integration-tutorials",
+    href: "/docs?section=LLM%20Integration%20Tutorials",
   },
   {
     category: "Advanced",
     icon: Brain,
-    href: "#advanced",
+    href: "/docs?section=Advanced",
   },
   {
     category: "Tutorials & Use Cases",
     icon: Lightbulb,
-    href: "#tutorials-use-cases",
+    href: "/docs?section=Tutorials%20&%20Use%20Cases",
   },
   {
     category: "Resources",
     icon: BookCopy,
-    href: "#resources",
+    href: "/docs?section=Resources",
   },
 ];
 
@@ -61,13 +61,6 @@ export default function DocsLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-
-  const getFullHref = (href: string) => {
-    if (href.startsWith("#")) {
-      return `/docs${href}`;
-    }
-    return href;
-  };
 
   return (
     <SidebarProvider>
@@ -88,12 +81,12 @@ export default function DocsLayout({
               <SidebarMenuItem key={section.category} className="border-b border-sidebar-border last:border-b-0">
                 <SidebarMenuButton
                   asChild
-                  isActive={pathname === getFullHref(section.href)}
+                  isActive={pathname.startsWith(section.href)}
                   tooltip={section.category}
                   className="h-12 justify-start"
                   size="lg"
                 >
-                  <Link href={getFullHref(section.href)}>
+                  <Link href={section.href}>
                     <section.icon />
                     <span>{section.category}</span>
                   </Link>
