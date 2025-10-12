@@ -13,15 +13,11 @@ import {
   SidebarMenuButton,
   SidebarInset,
   SidebarFooter,
+  SidebarInput,
 } from "@/components/ui/sidebar";
-import { Bot, Compass, Rocket, Settings, Plug, Brain, Lightbulb, BookCopy } from "lucide-react";
+import { Bot, Compass, Rocket, Settings, Plug, Brain, Lightbulb, BookCopy, Search } from "lucide-react";
 
 export const sections = [
-  {
-    category: "Welcome",
-    icon: Compass,
-    href: "/docs",
-  },
   {
     category: "Introduction",
     icon: Compass,
@@ -82,7 +78,11 @@ export default function DocsLayout({
             <span className="font-bold font-headline text-lg group-data-[collapsible=icon]:hidden">AX</span>
           </Link>
         </SidebarHeader>
-        <SidebarContent className="pt-[50%]">
+        <SidebarContent className="pt-[30%]">
+          <div className="px-2 mb-4 relative group-data-[collapsible=icon]:hidden">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <SidebarInput placeholder="Search..." className="pl-8" />
+          </div>
           <SidebarMenu>
             {sections.map((section) => (
               <SidebarMenuItem key={section.category} className="border-b border-sidebar-border last:border-b-0">
