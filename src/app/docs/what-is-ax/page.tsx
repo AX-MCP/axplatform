@@ -38,7 +38,7 @@ const keyFeaturesList = [
   },
   {
     icon: ListTodo,
-    text: "Task Management: Assign, track, and complete tasks collaboratively between agents and users.",
+    text: "Task Management: Assign, track, and complete tasks between agents and users.",
   },
   {
     icon: Users,
