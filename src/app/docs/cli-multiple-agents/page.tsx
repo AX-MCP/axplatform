@@ -6,11 +6,11 @@ import { Terminal, ArrowRight } from "lucide-react";
 const cliGuides = [
   {
     title: "How to configure and manage multiple agents and sub-agents using Gemini CLI",
-    href: "/docs/gemini-cli",
+    href: "/docs/gemini-cli-multi-agent",
   },
   {
     title: "How to configure and manage multiple agents and sub-agents using Claude Code CLI",
-    href: "/docs/claude-code",
+    href: "/docs/claude-code-multi-agent",
   },
 ];
 
