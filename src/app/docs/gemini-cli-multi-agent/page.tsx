@@ -1,7 +1,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Code } from "lucide-react";
 
-export default function GeminiCliMultiAgentPage() {
+const GeminiCliMultiAgentPage = () => {
   return (
     <div className="container py-20 md:py-24">
       <div className="max-w-4xl mx-auto space-y-8">
@@ -244,11 +245,11 @@ LINEAR_API_KEY=lin_xxx`}
 
                 <h3 className="font-semibold text-xl text-foreground pt-4">Quick commands</h3>
                 <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>
-# Add a local stdio server with env
+{`# Add a local stdio server with env
 gemini mcp add --scope project my-local python server.py --port 8080 -e API_KEY=$MY_KEY
 
 # Remove a server from the current project
-gemini mcp remove my-local
+gemini mcp remove my-local`}
                 </code></pre>
 
             </CardContent>
@@ -256,4 +257,6 @@ gemini mcp remove my-local
       </div>
     </div>
   );
-}
+};
+
+export default GeminiCliMultiAgentPage;
