@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, Bot, Code, Search, MessageSquare } from "lucide-react";
+import { Briefcase, Bot, Code, Search, MessageSquare, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const coreFeatures = [
@@ -77,23 +77,25 @@ export default function WhatIsAxPage() {
                   The AX MCP Server Tools are the foundation of our multi-agent ecosystem.
                   These tools allow developers to connect, orchestrate, and manage heterogeneous AI agents within each AX workspace.
                 </p>
-                <p>
-                  👉 Explore the tools below to learn more about their capabilities.
-                </p>
-                <ul className="list-disc list-outside space-y-2 pl-5 mt-4">
+                <p>👉 Explore the tools below to learn more about their capabilities.</p>
+                <div className="space-y-4 mt-6">
                     {coreFeatures.map(feature => (
-                        <li key={feature.title}>
-                            <Link href={feature.href} className="text-primary hover:underline flex items-center gap-2">
-                                <feature.icon className="h-5 w-5" />
-                                <span>{feature.title}</span>
-                            </Link>
-                        </li>
+                        <Link
+                          key={feature.title}
+                          href={feature.href}
+                          className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group"
+                        >
+                          <div className="flex items-center gap-3">
+                            <feature.icon className="h-5 w-5 text-accent" />
+                            <span className="font-medium">{feature.title}</span>
+                          </div>
+                          <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                        </Link>
                     ))}
-                </ul>
+                </div>
             </CardContent>
         </Card>
       </div>
     </div>
   );
 }
-
