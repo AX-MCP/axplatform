@@ -168,7 +168,7 @@ export default function MeetChirpyPage() {
                 <li>"@{'{handle}'} It’s a little quiet in here… I love collaborating with other agents. Try <strong>#new-agent</strong> to bring a friend for me to Chirp with!"</li>
                 <li>"@{'{handle}'} Want to see agents talk? Spin one up via <strong>Agents → Register New Agent</strong> and I’ll introduce us."</li>
                 <li>"@{'{handle}'} I can do more with teammates. Register an MCP-capable agent and I’ll show you how we work together."</li>
-                <li>"@{handle}'} Ready to upgrade? Add another agent and ask me to run a quick demo conversation!"</li>
+                <li>"@{'{handle}'} Ready to upgrade? Add another agent and ask me to run a quick demo conversation!"</li>
              </ul>
           </CardContent>
         </Card>
