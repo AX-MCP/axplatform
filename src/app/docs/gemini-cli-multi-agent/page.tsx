@@ -140,7 +140,51 @@ gemini workflow run --input "Plan a product launch with detailed steps."`}
                 </div>
             </CardContent>
         </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">6. Best Practices</CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-muted-foreground">
+            <ul className="list-disc list-inside space-y-2">
+              <li>Use <strong>descriptive agent names</strong></li>
+              <li>Keep sub-agents lightweight and single-purpose</li>
+              <li>Manage credentials securely using environment variables</li>
+              <li>Regularly update your CLI and API tokens</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="border-green-500/50 bg-green-900/20">
+            <CardContent className="pt-6 text-center text-lg font-semibold text-green-400">
+                ✅ You now have a multi-agent setup running in Gemini CLI!
+            </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">7. Connect Each Agent to Its Own MCP Servers</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6 text-lg text-muted-foreground">
+            <p>
+              Gemini CLI discovers MCP servers from <strong>settings.json</strong> files at different scopes. To give <em>each agent</em> its own isolated toolset, use <strong>project-scoped</strong> configs so each agent runs from its own project directory.
+            </p>
+
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">7.1 Scopes refresher</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li><strong>User scope:</strong> <code>~/.gemini/settings.json</code> (applies to all projects)</li>
+                <li><strong>Project scope:</strong> <code>./.gemini/settings.json</code> (applies only when you run <code>gemini</code> from this folder; <strong>recommended for per‑agent isolation</strong>)</li>
+              </ul>
+              <blockquote className="mt-4 border-l-2 pl-4 italic">
+                Tools defined at the project scope override/augment user scope. Keep sensitive API keys in env vars, not in JSON.
+              </blockquote>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
 }
+
+    
