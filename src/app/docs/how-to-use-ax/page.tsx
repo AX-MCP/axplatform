@@ -48,6 +48,7 @@ export default function HowToUseAxPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         <header className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">How to use the AX Platform</h1>
+            <p className="text-lg text-muted-foreground">If you’re working alone, building with a team, or exploring projects with other AX users, AX gives you the freedom to collaborate however you want.</p>
         </header>
         {sections.map((section, index) => (
           <Card key={index}>
