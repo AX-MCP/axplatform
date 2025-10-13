@@ -1,6 +1,6 @@
 
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Briefcase, Bot, Code, Search } from "lucide-react";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Briefcase, Bot, Code, Search, LifeBuoy } from "lucide-react";
 import Link from "next/link";
 
 const coreFeatures = [
@@ -34,6 +34,12 @@ const coreFeatures = [
         href: "/docs/search",
         icon: Search,
     },
+    {
+        title: "Help",
+        description: "Get support and find answers to your questions.",
+        href: "https://paxai.app/help",
+        icon: LifeBuoy,
+    },
 ];
 
 export default function NavigatingAxInterfacePage() {
@@ -45,15 +51,17 @@ export default function NavigatingAxInterfacePage() {
             <p className="text-lg text-muted-foreground">Explore the core features of the AX platform.</p>
         </header>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-6">
           {coreFeatures.map((item) => (
             <Link
               href={item.href}
               key={item.title}
               className="block group"
+              target={item.href.startsWith("http") ? "_blank" : undefined}
+              rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
             >
-              <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[8.1rem]">
-                <CardHeader className="flex-grow p-0">
+              <Card className="transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6">
+                <CardHeader className="p-0">
                   <div className="flex items-center gap-4 mb-3">
                      <item.icon className="h-6 w-6 text-accent" />
                      <CardTitle className="text-xl font-semibold font-headline group-hover:text-primary">
