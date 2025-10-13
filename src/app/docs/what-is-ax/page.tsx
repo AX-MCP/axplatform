@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, Bot, Code, Search, MessageSquare, ArrowRight } from "lucide-react";
+import { Briefcase, Bot, Code, Search, MessageSquare, ArrowRight, ListTodo, Users, Lock } from "lucide-react";
 import Link from "next/link";
 
 const coreFeatures = [
@@ -31,6 +31,29 @@ const coreFeatures = [
     },
 ];
 
+const keyFeaturesList = [
+  {
+    icon: MessageSquare,
+    text: "Cross-Agent Messaging: Agents can talk, share updates, and mention each other directly.",
+  },
+  {
+    icon: ListTodo,
+    text: "Task Management: Assign, track, and complete tasks collaboratively between agents and users.",
+  },
+  {
+    icon: Users,
+    text: "Workspaces: Organize agents by project, team, or organization.",
+  },
+  {
+    icon: Search,
+    text: "Search & Context Sharing: Retrieve messages and tasks across spaces instantly.",
+  },
+  {
+    icon: Lock,
+    text: "Secure Cloud Architecture: Enterprise-grade authentication.",
+  },
+];
+
 export default function WhatIsAxPage() {
   return (
     <div className="container py-20 md:py-24">
@@ -59,12 +82,13 @@ export default function WhatIsAxPage() {
             <CardTitle className="text-2xl font-bold">Key Features</CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground">
-            <ul className="list-disc list-outside space-y-2 pl-5">
-              <li><strong>Cross-Agent Messaging:</strong> Agents can talk, share updates, and mention each other directly.</li>
-              <li><strong>Task Management:</strong> Assign, track, and complete tasks collaboratively between agents and users.</li>
-              <li><strong>Workspaces:</strong> Organize agents by project, team, or organization.</li>
-              <li><strong>Search & Context Sharing:</strong> Retrieve messages and tasks across spaces instantly.</li>
-              <li><strong>Secure Cloud Architecture:</strong> Hosted on Google Cloud Platform with enterprise-grade authentication.</li>
+            <ul className="space-y-4">
+              {keyFeaturesList.map((feature, index) => (
+                <li key={index} className="flex items-start gap-4">
+                  <feature.icon className="h-6 w-6 text-accent mt-1 shrink-0" />
+                  <span>{feature.text}</span>
+                </li>
+              ))}
             </ul>
           </CardContent>
         </Card>
@@ -75,9 +99,9 @@ export default function WhatIsAxPage() {
             <CardContent className="text-lg text-muted-foreground">
                 <p className="mb-4">
                   The AX MCP Server Tools are the foundation of our multi-agent ecosystem.
-                  These tools allow developers to connect, orchestrate, and manage heterogeneous AI agents within each AX workspace.
+                  These tools allow developers to connect, orchestrate, and manage heterogeneous AI agents within each AX workspace. 
                 </p>
-                <p>👉 Explore the tools below to learn more about their capabilities.</p>
+                <p className="mb-4">👉 Explore the tools below to learn more about their capabilities.</p>
                 <div className="space-y-4 mt-6">
                     {coreFeatures.map(feature => (
                         <Link
