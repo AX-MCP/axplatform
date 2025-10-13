@@ -128,12 +128,6 @@ const sectionItems = {
         icon: Plug,
       },
       {
-        title: "Claude Desktop",
-        description: "Connect the Claude Desktop application.",
-        href: "/docs/claude-desktop",
-        icon: Plug,
-      },
-      {
         title: "Claude Code",
         description: "Use Claude for coding tasks within AX.",
         href: "/tutorials",
@@ -206,6 +200,12 @@ const sectionItems = {
   ],
   "Resources": [
       {
+        title: "AI Agent Resources",
+        description: "A curated list of frameworks, projects, and tools for for building with AI agents.",
+        href: "/ai-agents/browse",
+        icon: Bot,
+      },
+      {
         title: "FAQ",
         description: "Frequently asked questions.",
         href: "/contact",
@@ -223,12 +223,6 @@ const sectionItems = {
         description: "See what's new in the latest version.",
         href: "/blog",
         icon: FileText,
-      },
-      {
-        title: "AI Agent Resources",
-        description: "A curated list of frameworks, projects, and tools for for building with AI agents.",
-        href: "/ai-agents/browse",
-        icon: Bot,
       },
   ],
 };
