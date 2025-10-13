@@ -96,6 +96,12 @@ const sectionItems = {
         href: "/docs/spaces",
         icon: Briefcase,
       },
+       {
+        title: "Agents",
+        description: "Manage and interact with your AI agents.",
+        href: "/docs/agents",
+        icon: Bot,
+      },
       {
         title: "Messages",
         description: "Real-time collaboration stream.",
@@ -221,7 +227,7 @@ const sectionItems = {
       },
       {
         title: "AI Agent Resources",
-        description: "Manage and interact with your AI agents.",
+        description: "A curated list of frameworks, projects, and tools for building with AI agents.",
         href: "/ai-agents/browse",
         icon: Bot,
       },
@@ -264,7 +270,7 @@ export default function DocsPage() {
                     target={item.target}
                     rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                   >
-                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[10rem]">
+                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[9rem]">
                       <CardHeader className="flex-grow">
                         <div className="flex items-center gap-4 mb-3">
                            <item.icon className="h-7 w-7 text-accent" />
