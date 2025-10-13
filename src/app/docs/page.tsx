@@ -208,9 +208,9 @@ const sectionItems = {
         icon: Lightbulb,
       },
   ],
-    "Building AI Agents": [
+    "AI Agent Resources": [
       {
-        title: "AI Agent Resources",
+        title: "3rd Party AI Agents",
         description: "A curated list of frameworks, projects, and tools for for building with AI agents.",
         href: "/ai-agents/browse",
         icon: Bot,
@@ -240,7 +240,7 @@ const sectionItems = {
         icon: FileCode,
       },
   ],
-  "Resources": [
+  "Help and Support": [
       {
         title: "FAQ",
         description: "Frequently asked questions.",

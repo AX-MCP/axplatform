@@ -49,14 +49,14 @@ export const sections = [
     href: "/docs/#Tutorials",
   },
   {
-    category: "Building AI Agents",
+    category: "AI Agent Resources",
     icon: Wrench,
-    href: "/docs/#Building AI Agents",
+    href: "/docs/#AI Agent Resources",
   },
   {
-    category: "Resources",
+    category: "Help and Support",
     icon: BookCopy,
-    href: "/docs/#Resources",
+    href: "/docs/#Help and Support",
   },
 ];
 
