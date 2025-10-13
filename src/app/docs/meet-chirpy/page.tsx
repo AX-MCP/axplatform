@@ -8,7 +8,7 @@ export default function MeetChirpyPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            🐦 Meet Chirpy — Your Personal aX Guide
+            🐦 Meet Chirpy — Your Personal AX Guide
           </h1>
         </header>
 
