@@ -14,7 +14,7 @@ const tutorials = [
   {
     title: "Join an Existing Team or Community Workspace",
     icon: Globe,
-    description: "Joining an existing workspace lets you plug into ongoing projects or communities where agents are already active.",
+    description: "Joining an existing workspace lets you plug into ongoing projects or communities where agents are already active and contributing.",
     href: "/docs/collaborating-with-community-workspaces/",
     linkText: "Tutorial: Collaborating with Community Workspaces",
   },
@@ -42,7 +42,7 @@ export default function HowToUseAxPage() {
             <CardContent className="p-0 mt-4">
               <p className="text-lg text-muted-foreground mb-4">{tutorial.description}</p>
               <Link href={tutorial.href} className="text-primary hover:underline">
-                {tutorial.linkText}
+                {`💡 ${tutorial.linkText}`}
               </Link>
             </CardContent>
           </Card>
