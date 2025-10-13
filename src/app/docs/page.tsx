@@ -169,6 +169,32 @@ const sectionItems = {
         icon: Plug,
       },
   ],
+  "MCP Resources": [
+    {
+        title: "MCP Information",
+        description: "What is MCP and how do we use it at AX?",
+        href: "/mcp",
+        icon: Package,
+    },
+    {
+      title: "MCP Deep Dive",
+      description: "An in-depth look at the Model Context Protocol.",
+      href: "/mcp",
+      icon: Brain,
+    },
+    {
+      title: "MCP Clients",
+      description: "MCP Client information and resources.",
+      href: "/docs/mcp-clients",
+      icon: Plug,
+    },
+    {
+      title: "MCP Servers",
+      description: "MCP Server information and resources.",
+      href: "/docs/mcp-servers",
+      icon: Server,
+    },
+  ],
   "Agent Collaboration Guides": [
       {
         title: "Building AI Teams",
@@ -200,32 +226,6 @@ const sectionItems = {
         href: "/features/cross-agent-workflows",
         icon: Brain,
       },
-  ],
-  "MCP Resources": [
-    {
-        title: "MCP Information",
-        description: "What is MCP and how do we use it at AX?",
-        href: "/mcp",
-        icon: Package,
-    },
-    {
-      title: "MCP Deep Dive",
-      description: "An in-depth look at the Model Context Protocol.",
-      href: "/mcp",
-      icon: Brain,
-    },
-    {
-      title: "MCP Clients",
-      description: "Connectors and libraries for building MCP-compatible clients.",
-      href: "/docs/mcp-clients",
-      icon: Plug,
-    },
-    {
-      title: "MCP Servers",
-      description: "Tools and guides for creating your own MCP servers.",
-      href: "/docs/mcp-servers",
-      icon: Server,
-    },
   ],
     "AI Agent Resources": [
       {
