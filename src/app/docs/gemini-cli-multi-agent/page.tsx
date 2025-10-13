@@ -234,6 +234,7 @@ gemini mcp add --scope project --transport http linear https://mcp.linear.app/ss
             </blockquote>
           </CardContent>
         </Card>
+
       </div>
     </div>
   );
