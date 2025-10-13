@@ -124,13 +124,13 @@ const sectionItems = {
       {
         title: "Chat GPT",
         description: "Integrate with OpenAI's ChatGPT.",
-        href: "/tutorials",
+        href: "/docs/chat-gpt",
         icon: Plug,
       },
       {
         title: "Claude Desktop",
         description: "Connect the Claude Desktop application.",
-        href: "/tutorials",
+        href: "/docs/claude-desktop",
         icon: Plug,
       },
       {
@@ -226,7 +226,7 @@ const sectionItems = {
       },
       {
         title: "AI Agent Resources",
-        description: "A curated list of frameworks, projects, and tools for building with AI agents.",
+        description: "A curated list of frameworks, projects, and tools for for building with AI agents.",
         href: "/ai-agents/browse",
         icon: Bot,
       },
