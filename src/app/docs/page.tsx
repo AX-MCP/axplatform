@@ -77,8 +77,7 @@ const sectionItems = {
       {
         title: "Meet Chirpy - Your AX Assistant",
         description: "Learn how to interact with our onboarding assistant.",
-        href: "https://github.com/AX-MCP/PaxAI/blob/main/Agent_Guides/chirpy-guide.md",
-        target: "_blank",
+        href: "/docs/meet-chirpy",
         icon: Users,
       },
       {
