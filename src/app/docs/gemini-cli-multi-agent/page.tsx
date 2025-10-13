@@ -169,22 +169,72 @@ gemini workflow run --input "Plan a product launch with detailed steps."`}
             <p>
               Gemini CLI discovers MCP servers from <strong>settings.json</strong> files at different scopes. To give <em>each agent</em> its own isolated toolset, use <strong>project-scoped</strong> configs so each agent runs from its own project directory.
             </p>
-
             <div>
               <h3 className="text-xl font-semibold text-foreground mb-2">7.1 Scopes refresher</h3>
               <ul className="list-disc list-inside space-y-2">
                 <li><strong>User scope:</strong> <code>~/.gemini/settings.json</code> (applies to all projects)</li>
                 <li><strong>Project scope:</strong> <code>./.gemini/settings.json</code> (applies only when you run <code>gemini</code> from this folder; <strong>recommended for per‑agent isolation</strong>)</li>
               </ul>
-              <blockquote className="mt-4 border-l-2 pl-4 italic">
-                Tools defined at the project scope override/augment user scope. Keep sensitive API keys in env vars, not in JSON.
-              </blockquote>
             </div>
+          </CardContent>
+        </Card>
+        
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-xl font-bold font-headline">7.2 Add MCP servers for <em>Agent A</em> (project A)</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4 text-lg text-muted-foreground">
+            <div>
+                <h3 className="font-semibold text-foreground mb-2">1) Create a project folder for the agent and init Gemini:</h3>
+                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>mkdir -p ~/agents/agent-a/.gemini && cd ~/agents/agent-a</code></pre>
+            </div>
+            <div>
+                <h3 className="font-semibold text-foreground mb-2">2) Add MCP servers to this project only:</h3>
+                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>{`gemini mcp add --scope project --transport http github https://api.githubcopilot.com/mcp/
+gemini mcp add --scope project --transport http sentry https://mcp.sentry.dev/mcp`}</code></pre>
+            </div>
+            <div>
+                <h3 className="font-semibold text-foreground mb-2">3) Verify:</h3>
+                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>gemini mcp list</code></pre>
+                <p className="mt-2">This writes entries under <code>./.gemini/settings.json</code> → `{"mcpServers": { ... }}`.</p>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-xl font-bold font-headline">7.3 Add different MCP servers for <em>Agent B</em> (project B)</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4 text-lg text-muted-foreground">
+            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>{`mkdir -p ~/agents/agent-b/.gemini && cd ~/agents/agent-b
+# Different toolset than Agent A
+gemini mcp add --scope project --transport sse notion https://mcp.notion.com/mcp
+gemini mcp add --scope project --transport http linear https://mcp.linear.app/sse`}</code></pre>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-xl font-bold font-headline">7.4 Restrict tool visibility per agent (allowlist/denylist)</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4 text-lg text-muted-foreground">
+            <p>Within each project’s <code>./.gemini/settings.json</code>, you can scope which tools from a server are exposed via <code>includeTools</code>/<code>excludeTools</code>.</p>
+            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>{`{
+  "mcpServers": {
+    "github": {
+      "url": "https://api.githubcopilot.com/mcp/",
+      "includeTools": ["list_pull_requests", "create_issue"],
+      "excludeTools": ["delete_repo"],
+      "trust": false
+    }
+  }
+}`}</code></pre>
+            <blockquote className="mt-4 border-l-2 pl-4 italic">
+                Use <code>trust: false</code> for explicit confirmation on tool calls; set to <code>true</code> only for well‑audited servers.
+            </blockquote>
           </CardContent>
         </Card>
       </div>
     </div>
   );
 }
-
-    
