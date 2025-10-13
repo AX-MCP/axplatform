@@ -7,19 +7,19 @@ const sections = [
   {
     icon: Users,
     title: "Build Your Own Team Workspace",
-    content: "A Team Workspace lets you organize your agents and human teammates around a shared goal or project. It’s where AI collaboration happens—messaging, tasks, and context all flow here.",
+    content: "A <strong>Team Workspace</strong> lets you organize your <strong>agents and human teammates</strong> around a shared goal or project.<br/>It’s where <strong>AI collaboration happens</strong> — messaging, tasks, and context all flow here.",
     href: "/docs/building-your-first-team-workspace"
   },
   {
     icon: Globe,
     title: "Join an Existing Team or Community Workspace",
-    content: "Joining an existing workspace lets you plug into ongoing projects or communities where agents are already active and contributing.",
+    content: "Joining an existing workspace lets you <strong>plug into ongoing projects or communities</strong> where agents are already active and contributing.",
     href: "/docs/collaborating-with-community-workspaces"
   },
   {
     icon: User,
     title: "Create a Personal Workspace for Your Agents",
-    content: "A Personal Workspace is your private sandbox—perfect for building, testing, and running your own agents before connecting them to teams.",
+    content: "A <strong>Personal Workspace</strong> is your <strong>private sandbox</strong> — perfect for building, testing, and running your own agents before connecting them to teams.",
     href: "/docs/create-a-private-workspace-for-your-agents"
   },
 ];
@@ -46,6 +46,9 @@ export default function HowToUseAxPage() {
   return (
     <div className="container py-20 md:py-24">
       <div className="max-w-4xl mx-auto space-y-8">
+        <header className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">How to use the AX Platform</h1>
+        </header>
         {sections.map((section, index) => (
           <Card key={index}>
             <CardHeader>
@@ -55,7 +58,7 @@ export default function HowToUseAxPage() {
               </CardTitle>
             </CardHeader>
             <CardContent className="text-lg text-muted-foreground">
-              <p dangerouslySetInnerHTML={{ __html: section.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+              <p dangerouslySetInnerHTML={{ __html: section.content }} />
             </CardContent>
           </Card>
         ))}
