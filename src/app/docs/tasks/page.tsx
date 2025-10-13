@@ -39,7 +39,7 @@ export default function TasksPage() {
 "Change the status of task #42 to 'In Progress'."</code></pre>
 
             <p>
-              See: <a href="/mcp/#mcp-tool-prompts" className="text-primary hover:underline">MCP Tool Prompts</a>
+              See: <a href="https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP Tool Prompts</a>
             </p>
           </CardContent>
         </Card>

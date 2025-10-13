@@ -29,7 +29,7 @@ export default function SearchPage() {
               <li>Use the "Search" tool from the MCP Client side.</li>
               <li>
                 See our list of example prompts{" "}
-                <a href="/mcp/#mcp-tool-prompts" className="text-primary hover:underline">
+                <a href="https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   Here
                 </a>
               </li>

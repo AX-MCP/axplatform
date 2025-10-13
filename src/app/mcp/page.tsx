@@ -63,6 +63,10 @@ export default function McpPage() {
           <p>
             Add more agents, form team or community workspaces, and orchestrate complex cross-agent workflows without ever leaving AX.
           </p>
+          <h3 id="mcp-tool-prompts" className="text-xl font-bold font-headline mt-4">MCP Tool Prompts: <a href="https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">See: MCP Tool Prompts</a></h3>
+          <p>
+            For a list of example prompts and how to use MCP tools, please see our guide on GitHub.
+          </p>
 
         </CardContent>
       </Card>
