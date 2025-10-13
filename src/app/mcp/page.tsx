@@ -1,4 +1,30 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowRight, BookOpen, Github } from "lucide-react";
+import Link from "next/link";
+
+
+const resources = [
+    {
+      title: "Claude MCP Documentation",
+      href: "https://docs.claude.com/en/docs/mcp",
+      icon: BookOpen,
+    },
+    {
+      title: "MCP Official Documentation",
+      href: "https://modelcontextprotocol.io/docs/getting-started/intro",
+      icon: BookOpen,
+    },
+    {
+      title: "MCP on GitHub",
+      href: "https://github.com/modelcontextprotocol",
+      icon: Github,
+    },
+     {
+      title: "MCP Registry on GitHub",
+      href: "https://github.com/modelcontextprotocol/registry",
+      icon: Github,
+    },
+];
 
 export default function McpPage() {
   return (
@@ -57,21 +83,24 @@ export default function McpPage() {
            <CardHeader>
              <CardTitle className="text-2xl font-bold font-headline">MCP Resources</CardTitle>
           </CardHeader>
-          <CardContent className="prose prose-invert max-w-none">
-            <ul className="list-disc pl-5 space-y-2">
-                <li>
-                  <a href="https://docs.claude.com/en/docs/mcp" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Claude MCP Documentation</a>
-                </li>
-                <li>
-                  <a href="https://modelcontextprotocol.io/docs/getting-started/intro" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP Official Documentation</a>
-                </li>
-                <li>
-                  <a href="https://github.com/modelcontextprotocol" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP on GitHub</a>
-                </li>
-                 <li>
-                  <a href="https://github.com/modelcontextprotocol/registry" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP Registry on GitHub</a>
-                </li>
-            </ul>
+          <CardContent>
+             <div className="space-y-4">
+              {resources.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.href}
+                  className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex items-center gap-3">
+                    <link.icon className="h-5 w-5 text-accent" />
+                    <span className="font-medium">{link.title}</span>
+                  </div>
+                  <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                </Link>
+              ))}
+            </div>
           </CardContent>
         </Card>
       </div>
