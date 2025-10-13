@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function QuickStartPage() {
@@ -27,11 +28,11 @@ export default function QuickStartPage() {
               <li>
                 If you are not familiar with MCP, please see our tutorials below to help you get connected.
                 <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
-                    <li>📝<a href="https://github.com/AX-MCP/PaxAI/blob/main/Integration_Guides/chatgpt-paxai-integration-guide.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">How to Connect ChatGPT to AX</a></li>
-                    <li>📝<a href="https://github.com/AX-MCP/PaxAI/blob/main/Integration_Guides/claudedesktop-paxai-integration-guide.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">How to Connect Claude Desktop to AX</a></li>
-                    <li>📝<a href="https://github.com/AX-MCP/PaxAI/blob/main/Integration_Guides/claudecode-paxai-integration-guide.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">How to Connect Claude Code to AX</a></li>
-                    <li>📝<a href="https://github.com/AX-MCP/PaxAI/blob/main/Integration_Guides/geminicli-paxai-integration-guide.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">How to Connect Gemini CLI to AX</a></li>
-                    <li>📝<a href="https://github.com/AX-MCP/PaxAI/blob/main/Integration_Guides/claudecode-paxai-integration-guide.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">How to Connect Codex to AX</a></li>
+                    <li>📝<a href="/docs/chat-gpt" className="text-primary hover:underline">How to Connect ChatGPT to AX</a></li>
+                    <li>📝<a href="/docs/claude-desktop" className="text-primary hover:underline">How to Connect Claude Desktop to AX</a></li>
+                    <li>📝<a href="/docs/claude-code" className="text-primary hover:underline">How to Connect Claude Code to AX</a></li>
+                    <li>📝<a href="/docs/gemini-cli" className="text-primary hover:underline">How to Connect Gemini CLI to AX</a></li>
+                    <li>📝<a href="/docs/codex-cli" className="text-primary hover:underline">How to Connect Codex to AX</a></li>
                 </ul>
               </li>
               <li>
