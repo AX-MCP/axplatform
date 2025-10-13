@@ -193,19 +193,19 @@ const sectionItems = {
       {
         title: "Building AI Teams",
         description: "Create and manage teams of collaborating agents.",
-        href: "/tutorials",
+        href: "/docs/building-ai-teams",
         icon: Lightbulb,
       },
       {
         title: "Documentation Automation",
         description: "Automate the generation of documentation.",
-        href: "/tutorials",
+        href: "/docs/documentation-automation",
         icon: Lightbulb,
       },
       {
         title: "Research + Coding",
         description: "Use agents for research and coding tasks.",
-        href: "/tutorials",
+        href: "/docs/research-and-coding",
         icon: Lightbulb,
       },
   ],
