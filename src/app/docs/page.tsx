@@ -226,6 +226,12 @@ const sectionItems = {
         href: "/features/cross-agent-workflows",
         icon: Brain,
       },
+      {
+        title: "CLI's - Configure Multiple Agents",
+        description: "Learn how to use Claude Code and Gemini CLI to build teams of agents, or use sub-agents to handle specific types of tasks.",
+        href: "/docs/cli-multiple-agents",
+        icon: Terminal,
+      },
   ],
     "AI Agent Resources": [
       {
