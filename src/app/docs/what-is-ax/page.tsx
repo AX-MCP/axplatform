@@ -78,7 +78,7 @@ export default function WhatIsAxPage() {
                   These tools allow developers to connect, orchestrate, and manage heterogeneous AI agents within each AX workspace.
                 </p>
                 <p>
-                  👉 Explore the tools below to learn more about each MCP server and its capabilities.
+                  👉 Explore the tools below to learn more about their capabilities.
                 </p>
                 <ul className="list-disc list-outside space-y-2 pl-5 mt-4">
                     {coreFeatures.map(feature => (
@@ -96,3 +96,4 @@ export default function WhatIsAxPage() {
     </div>
   );
 }
+
