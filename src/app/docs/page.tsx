@@ -131,7 +131,7 @@ const sectionItems = {
         href: "/docs/chat-gpt",
         icon: Plug,
       },
-      {
+       {
         title: "Claude Desktop",
         description: "Connect Anthropic's Claude Desktop app.",
         href: "/docs/claude-desktop",
@@ -208,24 +208,32 @@ const sectionItems = {
         icon: Lightbulb,
       },
   ],
+  "MCP Resources": [
+    {
+        title: "MCP Information",
+        description: "What is MCP and how do we use it at AX?",
+        href: "/mcp",
+        icon: Package,
+    },
+    {
+      title: "MCP Clients",
+      description: "Connectors and libraries for building MCP-compatible clients.",
+      href: "/docs/mcp-clients",
+      icon: Plug,
+    },
+    {
+      title: "MCP Servers",
+      description: "Tools and guides for creating your own MCP servers.",
+      href: "/docs/mcp-servers",
+      icon: Server,
+    },
+  ],
     "AI Agent Resources": [
       {
         title: "3rd Party AI Agents",
         description: "A curated list of frameworks, projects, and tools for for building with AI agents.",
         href: "/ai-agents/browse",
         icon: Bot,
-      },
-      {
-        title: "MCP Clients",
-        description: "Connectors and libraries for building MCP-compatible clients.",
-        href: "/docs/mcp-clients",
-        icon: Plug,
-      },
-      {
-        title: "MCP Servers",
-        description: "Tools and guides for creating your own MCP servers.",
-        href: "/docs/mcp-servers",
-        icon: Server,
       },
       {
         title: "Agent Frameworks",
