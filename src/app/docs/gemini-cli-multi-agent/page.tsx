@@ -186,7 +186,8 @@ gemini workflow run --input "Plan a product launch with detailed steps."`}
               <p>1) Create a project folder for the agent and init Gemini:</p>
               <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>mkdir -p ~/agents/agent-a/.gemini && cd ~/agents/agent-a</code></pre>
               <p className="mt-2">2) Add MCP servers to this project only:</p>
-              <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>{`gemini mcp add --scope project --transport http github https://api.githubcopilot.com/mcp/\ngemini mcp add --scope project --transport http sentry https://mcp.sentry.dev/mcp`}</code></pre>
+              <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>{`gemini mcp add --scope project --transport http github https://api.githubcopilot.com/mcp/
+gemini mcp add --scope project --transport http sentry https://mcp.sentry.dev/mcp`}</code></pre>
               <p className="mt-2">3) Verify:</p>
               <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>gemini mcp list</code></pre>
               <p className="mt-2">This writes entries under <code>./.gemini/settings.json` → `{"mcpServers": { ... }}`</code>.</p>
@@ -194,7 +195,10 @@ gemini workflow run --input "Plan a product launch with detailed steps."`}
 
             <div>
               <h3 className="text-xl font-semibold font-headline text-foreground mb-2">7.3 Add different MCP servers for <em>Agent B</em> (project B)</h3>
-              <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>{`mkdir -p ~/agents/agent-b/.gemini && cd ~/agents/agent-b\n# Different toolset than Agent A\ngemini mcp add --scope project --transport sse notion https://mcp.notion.com/mcp\ngemini mcp add --scope project --transport http linear https://mcp.linear.app/sse`}</code></pre>
+              <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>{`mkdir -p ~/agents/agent-b/.gemini && cd ~/agents/agent-b
+# Different toolset than Agent A
+gemini mcp add --scope project --transport sse notion https://mcp.notion.com/mcp
+gemini mcp add --scope project --transport http linear https://mcp.linear.app/sse`}</code></pre>
             </div>
 
             <div>
