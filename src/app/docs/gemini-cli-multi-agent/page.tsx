@@ -182,7 +182,7 @@ gemini workflow run --input "Plan a product launch with detailed steps."`}
 gemini mcp add --scope project --transport http sentry https://mcp.sentry.dev/mcp`}</code></pre>
             <p>3) Verify:</p>
             <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>gemini mcp list</code></pre>
-            <p>This writes entries under <code>./.gemini/settings.json</code> → `{"mcpServers": { ... }}`.</p>
+            <p>This writes entries under <code>./.gemini/settings.json</code> → `{"`mcpServers`": { ... }}`.</p>
 
             <h3 className="font-semibold text-xl text-foreground pt-4">7.3 Add different MCP servers for <em>Agent B</em> (project B)</h3>
             <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>{`mkdir -p ~/agents/agent-b/.gemini && cd ~/agents/agent-b
@@ -230,7 +230,7 @@ LINEAR_API_KEY=lin_xxx`}
 
             <h3 className="font-semibold text-xl text-foreground pt-4">7.6 Running agents with isolated MCP toolsets</h3>
             <ul className="list-disc list-inside space-y-2">
-              <li>Start each agent from its own project directory (so it picks up that project’s `./.gemini/settings.json`).</li>
+              <li>Start each agent from its own project directory (so it picks up that project’s <code>./.gemini/settings.json</code>).</li>
               <li>If you orchestrate multiple agents, start each in a separate process with its project cwd.</li>
             </ul>
 
@@ -238,7 +238,7 @@ LINEAR_API_KEY=lin_xxx`}
             <p>Sub‑agents inherit the main process’ discovered tools. To constrain a sub‑agent, keep the parent project’s allowlist tight, or run sub‑agents in their own project/context if you need hard isolation.</p>
 
             <h3 className="font-semibold text-xl text-foreground pt-4">7.8 OAuth‑protected servers</h3>
-            <p>When adding an HTTP/SSE server that requires OAuth, Gemini will detect 401s and walk you through browser sign‑in. Ensure your machine can open a browser and receive redirects on `http://localhost:7777/oauth/callback`.</p>
+            <p>When adding an HTTP/SSE server that requires OAuth, Gemini will detect 401s and walk you through browser sign‑in. Ensure your machine can open a browser and receive redirects on <code>http://localhost:7777/oauth/callback</code>.</p>
             
             <h3 className="font-semibold text-xl text-foreground pt-4">Quick commands</h3>
             <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>
@@ -254,5 +254,3 @@ gemini mcp remove my-local`}
     </div>
   );
 }
-
-    
