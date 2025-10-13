@@ -39,14 +39,14 @@ export const sections = [
     href: "/docs/#LLM Integration Tutorials",
   },
   {
-    category: "Agent Collaboration Guides",
-    icon: Lightbulb,
-    href: "/docs/#Agent Collaboration Guides",
-  },
-  {
     category: "MCP Resources",
     icon: Package,
     href: "/docs/#MCP Resources",
+  },
+  {
+    category: "Agent Collaboration Guides",
+    icon: Lightbulb,
+    href: "/docs/#Agent Collaboration Guides",
   },
   {
     category: "AI Agent Resources",
