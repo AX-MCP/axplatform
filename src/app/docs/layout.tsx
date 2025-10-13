@@ -15,7 +15,7 @@ import {
   SidebarFooter,
   SidebarInput,
 } from "@/components/ui/sidebar";
-import { Bot, Compass, Rocket, Settings, Plug, Brain, Lightbulb, BookCopy, Search, Wrench, Package } from "lucide-react";
+import { Bot, Compass, Rocket, Settings, Plug, Brain, Lightbulb, BookCopy, Search, Wrench, Package, Terminal, MousePointerClick } from "lucide-react";
 
 export const sections = [
   {

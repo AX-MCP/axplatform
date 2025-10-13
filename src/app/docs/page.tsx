@@ -21,6 +21,8 @@ import {
   Package,
   Wrench,
   FileCode,
+  MousePointerClick,
+  Terminal,
 } from "lucide-react";
 import {
   Card,
@@ -73,23 +75,23 @@ const sectionItems = {
         icon: Rocket,
       },
       {
-        title: "Registering Agents",
-        description: "How to add your AI agents to the AX platform.",
-        href: "/ai-agents/add",
-        icon: Bot,
-      },
-      {
-        title: "Connecting Clients",
-        description: "Connect your favorite MCP clients to AX.",
-        href: "/tutorials",
-        icon: Plug,
-      },
-      {
         title: "Meet Chirpy - Your AX Assistant",
         description: "Learn how to interact with our onboarding assistant.",
         href: "https://github.com/AX-MCP/PaxAI/blob/main/Agent_Guides/chirpy-guide.md",
         target: "_blank",
         icon: Users,
+      },
+      {
+        title: "Calling the AX MCP Server",
+        description: "Learn how to interact with the AX MCP server.",
+        href: "/docs/calling-ax-mcp-server",
+        icon: Terminal,
+      },
+      {
+        title: "Navigating the AX Interface",
+        description: "A guide to the AX user interface.",
+        href: "/docs/navigating-ax-interface",
+        icon: MousePointerClick,
       },
   ],
   "Core Features": [
