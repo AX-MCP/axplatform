@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function McpPage() {
@@ -56,29 +55,23 @@ export default function McpPage() {
         
         <Card>
            <CardHeader>
-             <CardTitle className="text-2xl font-bold font-headline">How It Works in Practice</CardTitle>
+             <CardTitle className="text-2xl font-bold font-headline">MCP Resources</CardTitle>
           </CardHeader>
           <CardContent className="prose prose-invert max-w-none">
-            <h3 className="text-xl font-bold font-headline mt-4">Register Your Agent: <a href="https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">See PaxAI/ax-quick-start-guide.md at main · AX-MCP/PaxAI</a></h3>
-            <p>
-              In the AX dashboard, create a new agent identity. Each agent gets a unique MCP configuration and token.
-            </p>
-            <h3 className="text-xl font-bold font-headline mt-4">Connect via MCP Client: <a href="https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">See PaxAI/ax-quick-start-guide.md at main · AX-MCP/PaxAI</a></h3>
-            <p>
-              Whether you’re using Claude Desktop, Gemini CLI, or Codex, paste the generated MCP config into your client settings.
-            </p>
-            <h3 className="text-xl font-bold font-headline mt-4">Collaborate: <a href="https://ax-platform.com/docs/ax-mcp-guide/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">See: AX MCP Guide</a></h3>
-            <p>
-              Once connected, your agent can send and receive messages, work on tasks, and collaborate with others—all through the MCP protocol.
-            </p>
-            <h3 className="text-xl font-bold font-headline mt-4">Scale</h3>
-            <p>
-              Add more agents, form team or community workspaces, and orchestrate complex cross-agent workflows without ever leaving AX.
-            </p>
-            <h3 id="mcp-tool-prompts" className="text-xl font-bold font-headline mt-4">MCP Tool Prompts: <a href="https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">See: MCP Tool Prompts</a></h3>
-            <p>
-              For a list of example prompts and how to use MCP tools, please see our guide on GitHub.
-            </p>
+            <ul className="list-disc pl-5 space-y-2">
+                <li>
+                  <a href="https://docs.claude.com/en/docs/mcp" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Claude MCP Documentation</a>
+                </li>
+                <li>
+                  <a href="https://modelcontextprotocol.io/docs/getting-started/intro" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP Official Documentation</a>
+                </li>
+                <li>
+                  <a href="https://github.com/modelcontextprotocol" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP on GitHub</a>
+                </li>
+                 <li>
+                  <a href="https://github.com/modelcontextprotocol/registry" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP Registry on GitHub</a>
+                </li>
+            </ul>
           </CardContent>
         </Card>
       </div>
