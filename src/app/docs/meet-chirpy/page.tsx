@@ -7,10 +7,9 @@ export default function MeetChirpyPage() {
     <div className="container py-20 md:py-24">
       <div className="max-w-4xl mx-auto space-y-8">
         <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Chirpy Knowledge Base - aX Platform Guide</h1>
-          <p className="text-xl text-muted-foreground">
+          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             🐦 Meet Chirpy — your personal aX guide
-          </p>
+          </h1>
         </header>
 
         <Card>
