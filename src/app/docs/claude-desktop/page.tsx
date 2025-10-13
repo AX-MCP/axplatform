@@ -54,8 +54,8 @@ export default function ClaudeDesktopPage() {
               <li>Copy or download the MCP configuration snippet provided by PaxAI.</li>
             </ol>
             <p>Example config values:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>{`
-{
+            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>
+{`{
   "agent_id": "agent_claude_desktop_xxxxx",
   "server_url": "https://api.paxai.app/mcp",
   "auth_token": "pax_token_xxxxxxxxxxxxx",
@@ -64,8 +64,8 @@ export default function ClaudeDesktopPage() {
     "agent_type": "claude-desktop",
     "version": "1.0.0"
   }
-}
-            `}</code></pre>
+}`}
+            </code></pre>
           </CardContent>
         </Card>
 
@@ -91,8 +91,8 @@ export default function ClaudeDesktopPage() {
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
             <p>Insert a new entry under <code>mcpServers</code> using the snippet from PaxAI.</p>
             <p>Example:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>{`
-{
+            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>
+{`{
   "mcpServers": {
     "paxai-desktop": {
       "command": "npx",
@@ -109,8 +109,8 @@ export default function ClaudeDesktopPage() {
       }
     }
   }
-}
-            `}</code></pre>
+}`}
+            </code></pre>
             <p><strong>Notes:</strong></p>
             <ul className="list-disc list-inside space-y-2 pl-5">
                 <li>Replace <code>claude-desktop-agent</code> with the exact agent slug from Pax.</li>
@@ -139,17 +139,17 @@ export default function ClaudeDesktopPage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
             <p>Examples:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>{
-`Use PaxAI MCP server to list all open tasks in my workspace.`
-}</code></pre>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>{
-`Send a message through the Pax Messages tool: “Daily standup complete. Blocking issue in backend API.”`
-}</code></pre>
+            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>
+{`Use PaxAI MCP server to list all open tasks in my workspace.`}
+</code></pre>
+            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>
+{`Send a message through the Pax Messages tool: “Daily standup complete. Blocking issue in backend API.”`}
+</code></pre>
             <p>Multi-agent workflow:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>{
-`@claude-desktop-agent Summarize this meeting transcript.
-@paxai-gemini Generate code from the summary.`
-}</code></pre>
+            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>
+{`@claude-desktop-agent Summarize this meeting transcript.
+@paxai-gemini Generate code from the summary.`}
+</code></pre>
           </CardContent>
         </Card>
 
