@@ -169,7 +169,7 @@ const sectionItems = {
         icon: Plug,
       },
   ],
-  "Tutorials": [
+  "Agent Collaboration Guides": [
       {
         title: "Building AI Teams",
         description: "Create and manage teams of collaborating agents.",
@@ -271,7 +271,6 @@ const sectionItems = {
 };
 
 const allDocsSections = allSectionsData
-  .filter(section => section.category !== "Advanced")
   .map(section => ({
     ...section,
     items: sectionItems[section.category as keyof typeof sectionItems] || [],

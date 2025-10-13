@@ -40,7 +40,7 @@ export default function TutorialsPage() {
     <div className="container py-20 md:py-24">
       <Card className="max-w-4xl mx-auto">
         <CardHeader>
-          <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">Tutorials</CardTitle>
+          <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">Agent Collaboration Guides</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">

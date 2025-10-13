@@ -39,9 +39,9 @@ export const sections = [
     href: "/docs/#LLM Integration Tutorials",
   },
   {
-    category: "Tutorials",
+    category: "Agent Collaboration Guides",
     icon: Lightbulb,
-    href: "/docs/#Tutorials",
+    href: "/docs/#Agent Collaboration Guides",
   },
   {
     category: "MCP Resources",
