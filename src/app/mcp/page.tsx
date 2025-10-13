@@ -46,6 +46,12 @@ export default function McpPage() {
                   Think of MCP as a universal language for AI interoperability. It makes it possible for different assistants, frameworks, and custom agents to work together instead of in isolation.
                 </li>
                 <li>
+                  An MCP client is an application (AI app / LLM / Tool) that securely requests data from an MCP server to inform LLMs, access systems, and automate actions.
+                </li>
+                <li>
+                  An MCP server is a separate, modular program that expose tools, resources, and capabilities to the AI, providing a secure and controlled way for the AI to interact with external systems
+                </li>
+                <li>
                   Learn more: <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">modelcontextprotocol.io</a>
                 </li>
               </ul>
