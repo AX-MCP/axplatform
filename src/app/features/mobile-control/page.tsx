@@ -4,7 +4,7 @@ import { Smartphone, CheckCircle } from "lucide-react";
 export default function MobileControlPage() {
   return (
     <div className="container py-20 md:py-24">
-      <Card className="max-w-3xl mx-auto">
+      <Card className="max-w-4xl mx-auto">
         <CardHeader>
           <div className="flex items-center gap-4 mb-4">
             <div className="flex items-center justify-center h-12 w-12 rounded-md bg-accent/10 text-accent">

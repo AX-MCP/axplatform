@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export default function McpPage() {
   return (
     <div className="container py-20 md:py-24">
-      <Card className="max-w-4xl mx-auto">
+      <Card className="max-w-5xl mx-auto">
         <CardHeader>
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline">
             What Is MCP and how do we use it at AX?

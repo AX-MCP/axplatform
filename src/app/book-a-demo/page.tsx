@@ -4,7 +4,7 @@ import { Mail, Calendar } from "lucide-react";
 export default function BookADemoPage() {
   return (
     <div className="container py-20 md:py-24">
-      <Card className="max-w-2xl mx-auto">
+      <Card className="max-w-3xl mx-auto">
         <CardHeader>
           <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">Book a Demo</CardTitle>
         </CardHeader>

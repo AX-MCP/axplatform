@@ -34,7 +34,7 @@ const coreFeatures = [
 export default function WhatIsAxPage() {
   return (
     <div className="container py-20 md:py-24">
-      <div className="max-w-3xl mx-auto space-y-8">
+      <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
             <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">About AX</CardTitle>

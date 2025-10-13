@@ -56,7 +56,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <div className="container py-20 md:py-24">
-      <article className="prose prose-invert max-w-3xl mx-auto">
+      <article className="prose prose-invert max-w-4xl mx-auto">
         <header className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
             {post.title}

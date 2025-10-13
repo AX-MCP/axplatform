@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function CrossAgentWorkflowsPage() {
   return (
     <div className="container py-20 md:py-24">
-      <div className="max-w-4xl mx-auto space-y-8">
+      <div className="max-w-5xl mx-auto space-y-8">
         
         <header className="text-center mb-12">
             <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-accent/10 text-accent mb-6">

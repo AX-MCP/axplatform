@@ -14,7 +14,7 @@ const nativeAgents = [
 export default function FeaturedAgentsPage() {
   return (
     <div className="container py-20 md:py-24">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">AX Native Agents</h1>
           <p className="text-lg text-muted-foreground">
