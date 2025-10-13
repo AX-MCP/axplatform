@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Briefcase, Bot, Code, Search, MessageSquare } from "lucide-react";
 import Link from "next/link";
@@ -75,9 +76,11 @@ export default function WhatIsAxPage() {
                 <p className="mb-4">
                   The AX MCP Server Tools are the foundation of our multi-agent ecosystem.
                   These tools allow developers to connect, orchestrate, and manage heterogeneous AI agents within each AX workspace.
+                </p>
+                <p>
                   👉 Explore the tools below to learn more about each MCP server and its capabilities.
                 </p>
-                <ul className="list-disc list-outside space-y-2 pl-5">
+                <ul className="list-disc list-outside space-y-2 pl-5 mt-4">
                     {coreFeatures.map(feature => (
                         <li key={feature.title}>
                             <Link href={feature.href} className="text-primary hover:underline flex items-center gap-2">
