@@ -17,6 +17,10 @@ import {
   Settings,
   Brain,
   BookCopy,
+  Server,
+  Package,
+  Wrench,
+  FileCode,
 } from "lucide-react";
 import {
   Card,
@@ -204,13 +208,39 @@ const sectionItems = {
         icon: Lightbulb,
       },
   ],
-  "Resources": [
+    "Building AI Agents": [
       {
         title: "AI Agent Resources",
         description: "A curated list of frameworks, projects, and tools for for building with AI agents.",
         href: "/ai-agents/browse",
         icon: Bot,
       },
+      {
+        title: "MCP Clients",
+        description: "Connectors and libraries for building MCP-compatible clients.",
+        href: "/docs/mcp-clients",
+        icon: Plug,
+      },
+      {
+        title: "MCP Servers",
+        description: "Tools and guides for creating your own MCP servers.",
+        href: "/docs/mcp-servers",
+        icon: Server,
+      },
+      {
+        title: "Agent Frameworks",
+        description: "Frameworks for building autonomous and multi-agent systems.",
+        href: "/docs/agent-frameworks",
+        icon: Wrench,
+      },
+      {
+        title: "Pre-Built Agent Templates",
+        description: "Get started quickly with ready-to-use agent templates.",
+        href: "/docs/pre-built-agent-templates",
+        icon: FileCode,
+      },
+  ],
+  "Resources": [
       {
         title: "FAQ",
         description: "Frequently asked questions.",

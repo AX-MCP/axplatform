@@ -15,7 +15,7 @@ import {
   SidebarFooter,
   SidebarInput,
 } from "@/components/ui/sidebar";
-import { Bot, Compass, Rocket, Settings, Plug, Brain, Lightbulb, BookCopy, Search } from "lucide-react";
+import { Bot, Compass, Rocket, Settings, Plug, Brain, Lightbulb, BookCopy, Search, Wrench } from "lucide-react";
 
 export const sections = [
   {
@@ -47,6 +47,11 @@ export const sections = [
     category: "Tutorials",
     icon: Lightbulb,
     href: "/docs/#Tutorials",
+  },
+  {
+    category: "Building AI Agents",
+    icon: Wrench,
+    href: "/docs/#Building AI Agents",
   },
   {
     category: "Resources",
