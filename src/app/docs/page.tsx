@@ -65,7 +65,13 @@ const sectionItems = {
         description: "Secure, scalable multi-agent collaboration for organizations.",
         href: "/docs/enterprise-use-cases",
         icon: Users,
-      }
+      },
+      {
+        title: "Security & Auth",
+        description: "Learn about AX's security architecture.",
+        href: "/features/secure-by-default",
+        icon: Shield,
+      },
   ],
   "Getting Started": [
       {
@@ -163,26 +169,6 @@ const sectionItems = {
         icon: Plug,
       },
   ],
-  "Advanced": [
-      {
-        title: "Remote Agent Control",
-        description: "Control your agents from anywhere.",
-        href: "/features/mobile-control",
-        icon: Brain,
-      },
-      {
-        title: "Multi-Agent Workflows",
-        description: "Orchestrate complex tasks across multiple agents.",
-        href: "/features/cross-agent-workflows",
-        icon: Brain,
-      },
-      {
-        title: "Security & Auth",
-        description: "Learn about AX's security architecture.",
-        href: "/features/secure-by-default",
-        icon: Shield,
-      },
-  ],
   "Tutorials": [
       {
         title: "Building AI Teams",
@@ -201,6 +187,18 @@ const sectionItems = {
         description: "Use agents for research and coding tasks.",
         href: "/docs/research-and-coding",
         icon: Lightbulb,
+      },
+      {
+        title: "Remote Agent Control",
+        description: "Control your agents from anywhere.",
+        href: "/features/mobile-control",
+        icon: Brain,
+      },
+      {
+        title: "Multi-Agent Workflows",
+        description: "Orchestrate complex tasks across multiple agents.",
+        href: "/features/cross-agent-workflows",
+        icon: Brain,
       },
   ],
   "MCP Resources": [
@@ -272,10 +270,12 @@ const sectionItems = {
   ],
 };
 
-const allDocsSections = allSectionsData.map(section => ({
-  ...section,
-  items: sectionItems[section.category as keyof typeof sectionItems] || [],
-}));
+const allDocsSections = allSectionsData
+  .filter(section => section.category !== "Advanced")
+  .map(section => ({
+    ...section,
+    items: sectionItems[section.category as keyof typeof sectionItems] || [],
+  }));
 
 
 export default function DocsPage() {

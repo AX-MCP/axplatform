@@ -39,11 +39,6 @@ export const sections = [
     href: "/docs/#LLM Integration Tutorials",
   },
   {
-    category: "Advanced",
-    icon: Brain,
-    href: "/docs/#Advanced",
-  },
-  {
     category: "Tutorials",
     icon: Lightbulb,
     href: "/docs/#Tutorials",
