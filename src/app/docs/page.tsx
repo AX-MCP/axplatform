@@ -263,8 +263,7 @@ const sectionItems = {
       {
         title: "Discord & Support",
         description: "Join our community and get help.",
-        href: "https://discord.com/channels/1403879632587194521/1403879633023406282",
-        target: "_blank",
+        href: "/docs/discord-and-support",
         icon: Users,
       },
       {
