@@ -128,6 +128,12 @@ const sectionItems = {
         icon: Plug,
       },
       {
+        title: "Claude Desktop",
+        description: "Connect Anthropic's Claude Desktop app.",
+        href: "/docs/claude-desktop",
+        icon: Plug,
+      },
+      {
         title: "Claude Code",
         description: "Use Claude for coding tasks within AX.",
         href: "/docs/claude-code",
