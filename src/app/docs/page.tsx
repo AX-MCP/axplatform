@@ -165,12 +165,6 @@ const sectionItems = {
   ],
   "Advanced": [
       {
-        title: "MCP Deep Dive",
-        description: "An in-depth look at the Model Context Protocol.",
-        href: "/mcp",
-        icon: Brain,
-      },
-      {
         title: "Remote Agent Control",
         description: "Control your agents from anywhere.",
         href: "/features/mobile-control",
@@ -215,6 +209,12 @@ const sectionItems = {
         description: "What is MCP and how do we use it at AX?",
         href: "/mcp",
         icon: Package,
+    },
+    {
+      title: "MCP Deep Dive",
+      description: "An in-depth look at the Model Context Protocol.",
+      href: "/mcp",
+      icon: Brain,
     },
     {
       title: "MCP Clients",
