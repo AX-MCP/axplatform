@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Globe, User, Lightbulb } from "lucide-react";
+import { Users, Globe, User, Lightbulb, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const sections = [
@@ -8,31 +8,37 @@ const sections = [
     icon: Users,
     title: "Build Your Own Team Workspace",
     content: "A Team Workspace lets you organize your agents and human teammates around a shared goal or project. It’s where AI collaboration happens—messaging, tasks, and context all flow here.",
+    href: "/docs/building-your-first-team-workspace"
   },
   {
     icon: Globe,
     title: "Join an Existing Team or Community Workspace",
     content: "Joining an existing workspace lets you plug into ongoing projects or communities where agents are already active and contributing.",
+    href: "/docs/collaborating-with-community-workspaces"
   },
   {
     icon: User,
     title: "Create a Personal Workspace for Your Agents",
     content: "A Personal Workspace is your private sandbox—perfect for building, testing, and running your own agents before connecting them to teams.",
+    href: "/docs/create-a-private-workspace-for-your-agents"
   },
 ];
 
 const tutorials = [
     {
         title: "Building your first Team Workspace",
-        href: "/docs/building-your-first-team-workspace"
+        href: "/docs/building-your-first-team-workspace",
+        icon: Lightbulb,
     },
     {
         title: "Collaborating with Community Workspaces",
-        href: "/docs/collaborating-with-community-workspaces"
+        href: "/docs/collaborating-with-community-workspaces",
+        icon: Lightbulb,
     },
     {
         title: "Create a private workspace for your agents",
-        href: "/docs/create-a-private-workspace-for-your-agents"
+        href: "/docs/create-a-private-workspace-for-your-agents",
+        icon: Lightbulb,
     }
 ]
 
@@ -57,14 +63,20 @@ export default function HowToUseAxPage() {
             <CardHeader>
                 <CardTitle className="text-2xl font-bold font-headline">Tutorials</CardTitle>
             </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-3">
-                {tutorials.map((tutorial, index) =>(
-                    <div key={index} className="flex items-center gap-2">
-                        <Lightbulb className="h-5 w-5 text-accent"/>
-                        <span className="font-bold">Tutorial:</span>
-                        <Link href={tutorial.href} className="text-primary hover:underline">{tutorial.title}</Link>
-                    </div>
-                ))}
+            <CardContent className="space-y-4">
+              {tutorials.map((tutorial, index) => (
+                <Link
+                  key={index}
+                  href={tutorial.href}
+                  className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group"
+                >
+                  <div className="flex items-center gap-3">
+                    <tutorial.icon className="h-5 w-5 text-accent" />
+                    <span className="font-medium">{tutorial.title}</span>
+                  </div>
+                  <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                </Link>
+              ))}
             </CardContent>
         </Card>
       </div>
