@@ -51,8 +51,7 @@ const sectionItems = {
       {
         title: "System Architecture",
         description: "A look at the technical design of the platform.",
-        href: "https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md",
-        target: "_blank",
+        href: "/docs/system-architecture",
         icon: Code,
       },
       {
@@ -270,7 +269,7 @@ export default function DocsPage() {
                     target={item.target}
                     rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                   >
-                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[9rem]">
+                    <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[8.1rem]">
                       <CardHeader className="flex-grow">
                         <div className="flex items-center gap-4 mb-3">
                            <item.icon className="h-7 w-7 text-accent" />
