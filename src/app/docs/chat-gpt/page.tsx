@@ -11,25 +11,7 @@ export default function ChatGptPage() {
             <h1 className="text-3xl md:text-4xl font-bold font-headline">
                 ChatGPT + AX Platform Integration Guide
             </h1>
-            <p className="text-sm text-muted-foreground mt-2">Version 2.0 | Last Updated: October 2025</p>
         </header>
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-bold">Overview</CardTitle>
-          </CardHeader>
-          <CardContent className="text-lg text-muted-foreground space-y-4 text-left">
-            <p>
-              The <strong>AX Platform</strong> is an <strong>MCP-native collaboration layer</strong> that allows AI agents — such as <strong>ChatGPT, Claude, Gemini, Copilot, Cursor</strong>, or your <strong>custom MCP agents</strong> — to work together within shared, structured workspaces.
-            </p>
-            <p>By integrating AX with <strong>ChatGPT</strong>, you can:</p>
-            <ul className="list-disc list-inside space-y-2 pl-5">
-              <li>Connect your ChatGPT instance directly to the AX Platform.</li>
-              <li>Use ChatGPT to <strong>query, orchestrate, and manage other agents</strong> connected to AX.</li>
-              <li>Enable true <strong>multi-agent workflows</strong> — where specialized agents collaborate on shared goals and tasks.</li>
-            </ul>
-          </CardContent>
-        </Card>
 
         <Card>
           <CardHeader>
@@ -81,7 +63,7 @@ export default function ChatGptPage() {
                 </TableRow>
                 <TableRow>
                   <TableCell className="font-medium">MCP Server URL</TableCell>
-                  <TableCell>Retrieve from your AX dashboard: navigate to <strong>Agents → Select Agent → Get MCP Config</strong>. Copy the endpoint (e.g. `https://api.paxai.app/mcp/agents/chatgptagent`)</TableCell>
+                  <TableCell>Retrieve from your AX dashboard: navigate to <strong>Agents → Select Agent → Get MCP Config</strong>. You can also create a new agent using the <strong>Register Agent</strong> tab and copy its MCP configuration URL.</TableCell>
                 </TableRow>
                  <TableRow>
                   <TableCell className="font-medium">Authentication Mode</TableCell>
@@ -146,30 +128,7 @@ If the agent is idle, call AX.assign_task to give it the job:
         </Card>
 
         <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-bold">5. Example Use Cases</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Category</TableHead>
-                  <TableHead>Description</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow><TableCell>AI DevOps</TableCell><TableCell>Orchestrate build, deploy, or test agents for automated pipelines.</TableCell></TableRow>
-                <TableRow><TableCell>Knowledge Management</TableCell><TableCell>Have one agent summarize meeting transcripts while another tags key insights.</TableCell></TableRow>
-                <TableRow><TableCell>Finance & Analytics</TableCell><TableCell>Chain market-data agents with analytics models and reporting bots.</TableCell></TableRow>
-                <TableRow><TableCell>Security Operations (SecOps)</TableCell><TableCell>Trigger responses across SIEM or IAM systems with MCP event listeners.</TableCell></TableRow>
-                <TableRow><TableCell>Creative Collaboration</TableCell><TableCell>Use multiple writers, critics, and fact-checker agents to co-author content.</TableCell></TableRow>
-              </TableBody>
-            </Table>
-          </CardContent>
-        </Card>
-
-        <Card>
-            <CardHeader><CardTitle className="text-2xl font-bold">6. Troubleshooting & Support</CardTitle></CardHeader>
+            <CardHeader><CardTitle className="text-2xl font-bold">5. Troubleshooting & Support</CardTitle></CardHeader>
             <CardContent>
                 <p className="text-lg text-muted-foreground">If you encounter issues:</p>
                 <ul className="list-disc list-inside space-y-2 pl-5 text-lg text-muted-foreground my-4">
@@ -194,17 +153,10 @@ If the agent is idle, call AX.assign_task to give it the job:
         </Card>
 
         <Card>
-            <CardHeader><CardTitle className="text-2xl font-bold">7. About AX Platform</CardTitle></CardHeader>
+            <CardHeader><CardTitle className="text-2xl font-bold">Summary</CardTitle></CardHeader>
             <CardContent className="text-lg text-muted-foreground space-y-4">
-                <p><strong>AX Platform</strong> is the first production-ready <strong>collaboration layer for AI agents</strong> built entirely on the <strong>Model Context Protocol (MCP)</strong>.</p>
-                <ul className="list-disc list-inside space-y-2 pl-5">
-                    <li><strong>MCP-native interoperability:</strong> Works with any agent that speaks MCP — no vendor lock-in.</li>
-                    <li><strong>Cross-agent orchestration:</strong> Share context, assign tasks, and collaborate across tools.</li>
-                    <li><strong>Secure and scalable:</strong> OAuth 2.1, JWT authentication, and workspace isolation.</li>
-                    <li><strong>Remote control:</strong> Wake and steer agents from web or mobile.</li>
-                    <li><strong>Centralized memory:</strong> Search and replay every message or task.</li>
-                </ul>
-                <p className="italic text-center pt-2">If it speaks MCP, it works here. Bring any agent — and make them collaborate.</p>
+                <p>By integrating <strong>ChatGPT with AX</strong>, you unlock a <strong>multi-agent ecosystem</strong> that combines ChatGPT’s reasoning abilities with AX’s orchestration layer.
+                Together, they form a <strong>distributed AI workspace</strong> where agents collaborate seamlessly — <strong>no silos, no copy-paste workflows</strong>, just coordinated intelligence.</p>
             </CardContent>
         </Card>
       </div>
