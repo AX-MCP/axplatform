@@ -36,7 +36,7 @@ const HeroSection = () => {
             </Button>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Button asChild size="lg" className="w-52 h-10 px-8 text-base bg-black text-white hover:bg-gray-800 shadow-lg shadow-gray-500/20 transition-all duration-300 transform hover:scale-105">
+            <Button asChild size="lg" variant="outline" className="w-52 h-10 px-8 text-base transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
               <Link href="https://paxai.app/" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 Sign in with Github
