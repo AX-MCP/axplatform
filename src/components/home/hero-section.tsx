@@ -43,7 +43,7 @@ const HeroSection = () => {
                 Sign in with Github
               </Link>
             </Button>
-            <Button asChild size="lg" className="w-56 h-11 px-8 text-base bg-gray-200 text-gray-900 hover:bg-gray-300 shadow-lg shadow-gray-500/20 transition-all duration-300 transform hover:scale-105">
+            <Button asChild size="lg" variant="outline" className="w-56 h-11 px-8 text-base transition-all duration-300 transform hover:scale-105 bg-secondary hover:bg-secondary/80">
               <Link href="/book-a-demo">
                 <Calendar className="mr-2 h-5 w-5" />
                 Book a Demo
