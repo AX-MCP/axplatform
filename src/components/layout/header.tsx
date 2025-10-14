@@ -141,13 +141,13 @@ const Header = () => {
           <div className="hidden sm:flex items-center justify-end gap-2">
               <Button asChild variant="ghost" size="sm">
                   <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer">
-                      <DiscordIcon className="h-5 w-5 text-muted-foreground hover:text-accent" />
+                      <DiscordIcon className="h-6 w-6 text-muted-foreground hover:text-accent" />
                       <span className="ml-2">Discord</span>
                   </Link>
               </Button>
               <Button asChild variant="ghost" size="sm">
                   <Link href="https://github.com/AX-MCP/PaxAI" target="_blank" rel="noopener noreferrer">
-                      <Github className="h-5 w-5 text-muted-foreground hover:text-accent" />
+                      <Github className="h-6 w-6 text-muted-foreground hover:text-accent" />
                       <span className="ml-2">Github</span>
                   </Link>
               </Button>
