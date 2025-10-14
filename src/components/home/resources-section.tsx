@@ -1,4 +1,4 @@
-import { BookOpen, Video, Plug, FileText } from "lucide-react";
+import { BookOpen, Video, FileText, Compass } from "lucide-react";
 import Link from "next/link";
 import {
   Card,
@@ -18,9 +18,9 @@ const resources = [
     href: "/demos",
   },
   {
-    icon: Plug,
-    title: "LLM Integration Tutorials",
-    href: "/docs/#LLM Integration Tutorials",
+    icon: Compass,
+    title: "All Docs - AX Platform",
+    href: "/docs",
   },
   {
     icon: FileText,
