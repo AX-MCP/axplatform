@@ -1,5 +1,6 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, ArrowRight, FileText, BookOpen } from "lucide-react";
+import { ArrowRight, BookOpen, FileText } from "lucide-react";
 
 const tutorials = [
   {
@@ -9,7 +10,7 @@ const tutorials = [
   },
   {
     title: "AX Quick Start Guide",
-    href: "https://github.com/AX-MCP/PaxAI/blob/main/ax-quick-start-guide.md",
+    href: "/docs/quick-start",
     icon: BookOpen,
   },
   {
@@ -32,54 +33,32 @@ const tutorials = [
     href: "https://github.com/AX-MCP/PaxAI/blob/main/Integration_Guides/codex-paxai-integration-guide.md",
     icon: FileText,
   },
-  {
-    title: "How to create Claude Code Agents and connect them to AX",
-    href: "https://github.com/AX-MCP/PaxAI/blob/main/Agent_Guides/claude-code-agent-guide.md",
-    icon: FileText,
-  },
-  {
-    title: "How to create Gemini CLI Agents and connect them to AX",
-    href: "https://github.com/AX-MCP/PaxAI/blob/main/Agent_Guides/gemini-mcp-guide.md",
-    icon: FileText,
-  },
 ];
 
 export default function TutorialsPage() {
   return (
     <div className="container py-20 md:py-24">
-      <Card className="max-w-3xl mx-auto">
+      <Card className="max-w-4xl mx-auto">
         <CardHeader>
-          <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">Tutorials</CardTitle>
+          <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">Agent Collaboration Guides</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-4 mb-12">
-            {tutorials.map((tutorial, index) => (
+          <div className="space-y-4">
+            {tutorials.map((link, index) => (
               <a
                 key={index}
-                href={tutorial.href}
+                href={link.href}
                 className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group"
-                target="_blank"
-                rel="noopener noreferrer"
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
               >
                 <div className="flex items-center gap-3">
-                  <tutorial.icon className="h-5 w-5 text-accent" />
-                  <span className="font-medium">{tutorial.title}</span>
+                  <link.icon className="h-5 w-5 text-accent" />
+                  <span className="font-medium">{link.title}</span>
                 </div>
                 <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
               </a>
             ))}
-          </div>
-          
-          <div className="text-center border-t border-border pt-8 mt-8">
-            <p className="text-lg text-muted-foreground mb-6">
-              For additional information or to connect with our team, please reach out at:
-            </p>
-            <div className="flex items-center justify-center gap-4">
-              <Mail className="h-6 w-6 text-accent" />
-              <a href="mailto:support@ax-platform.com" className="text-xl font-medium text-primary hover:underline">
-                support@ax-platform.com
-              </a>
-            </div>
           </div>
         </CardContent>
       </Card>

@@ -55,43 +55,6 @@ const resourceSections = [
     ],
   },
   {
-    title: "Frameworks & Toolkits",
-    icon: Wrench,
-    resources: [
-      {
-        title: "LangChain",
-        href: "https://github.com/langchain-ai/langchain",
-        description: "Popular framework for building context-aware AI agents",
-        icon: LinkIcon,
-      },
-      {
-        title: "AutoGen",
-        href: "https://github.com/microsoft/autogen",
-        description:
-          "Microsoft’s framework for multi-agent collaboration and orchestration",
-        icon: LinkIcon,
-      },
-      {
-        title: "CrewAI",
-        href: "https://github.com/joaomdmoura/crewai",
-        description: "Framework for role-based multi-agent systems",
-        icon: LinkIcon,
-      },
-      {
-        title: "LangGraph",
-        href: "https://github.com/langchain-ai/langgraph",
-        description: "Graph-based orchestration of multi-step AI workflows",
-        icon: LinkIcon,
-      },
-      {
-        title: "OpenAgents",
-        href: "https://github.com/xlang-ai/OpenAgents",
-        description: "Open platform for running and sharing AI agents",
-        icon: LinkIcon,
-      },
-    ],
-  },
-  {
     title: "Specialized Agents",
     icon: Bot,
     resources: [
@@ -202,7 +165,7 @@ const resourceSections = [
 export default function AIResourcesPage() {
   return (
     <div className="container py-20 md:py-24">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
             AI Agent Resources

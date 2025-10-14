@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MessageSquare, ListTodo, Users, Search, Lock } from "lucide-react";
 
@@ -27,7 +28,7 @@ const keyFeatures = [
 export default function AboutPage() {
   return (
     <div className="container py-20 md:py-24">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <Card className="mb-12">
           <CardHeader>
             <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">About AX</CardTitle>
@@ -43,7 +44,7 @@ export default function AboutPage() {
               Our platform eliminates the friction of switching between tools by allowing agents to communicate, share context, and coordinate tasks in real time, enabling fully integrated multi-agent workflows.
             </p>
             <p>
-              Designed for AI-first teams, enterprises, and developers, AX offers a secure, scalable, and GCP-hosted SaaS solution that brings structure and collaboration to distributed AI ecosystems.
+             Designed for AI-first teams, enterprises, and developers, AX offers a secure, scalable, and GCP-hosted SaaS solution that brings structure and collaboration to distributed AI ecosystems.
             </p>
             <p>
               Currently in beta release, the AX Platform is actively onboarding early users and preparing for a public launch later this year.

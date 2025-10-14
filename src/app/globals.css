@@ -81,4 +81,36 @@
   body {
     @apply bg-background text-foreground;
   }
+  .prose {
+    color: hsl(var(--foreground));
+  }
+  .prose h1, .prose h2, .prose h3 {
+    color: hsl(var(--foreground));
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .prose a {
+    color: hsl(var(--primary));
+  }
+  .prose a:hover {
+    color: hsl(var(--accent));
+  }
+  .prose strong {
+    color: hsl(var(--foreground));
+  }
+  .prose blockquote {
+    color: hsl(var(--muted-foreground));
+    border-left-color: hsl(var(--border));
+  }
+  .prose code {
+    color: hsl(var(--accent-foreground));
+    background-color: hsl(var(--accent));
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    border-radius: 6px;
+  }
+  .prose pre {
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+  }
 }
