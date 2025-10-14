@@ -20,7 +20,7 @@ const Footer = () => {
               <h4 className="font-semibold font-headline text-foreground">Resources</h4>
               <Link href="/blog" className="text-muted-foreground hover:text-accent">Blog</Link>
               <Link href="https://github.com/AX-MCP/PaxAI" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Documentation</Link>
-              <Link href="/tutorials" className="text-muted-foreground hover:text-accent">Tutorials</Link>
+              <Link href="/tutorials" className="text-muted-foreground hover:text-accent">Agent Collaboration Guides</Link>
               <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Discord</Link>
             </div>
             <div className="flex flex-col gap-2 text-sm text-center md:text-left">

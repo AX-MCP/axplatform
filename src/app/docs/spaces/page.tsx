@@ -1,66 +1,53 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, BookOpen, Settings, MessageSquare, ListTodo, Search, Bot } from "lucide-react";
 
-const guideLinks = [
-  {
-    title: "MCP Guide",
-    href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp-guide.md",
-    icon: BookOpen,
-  },
-  {
-    title: "Workspaces",
-    href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/workspaces.md",
-    icon: Settings,
-  },
-  {
-    title: "Messages",
-    href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/messages.md",
-    icon: MessageSquare,
-  },
-  {
-    title: "Tasks",
-    href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/tasks.md",
-    icon: ListTodo,
-  },
-  {
-    title: "Search",
-    href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/search.md",
-    icon: Search,
-  },
-  {
-    title: "Agents",
-    href: "https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/agents.md",
-    icon: Bot,
-  },
-];
-
-export default function AxMcpGuidePage() {
+export default function WorkspacesPage() {
   return (
     <div className="container py-20 md:py-24">
-      <Card className="max-w-3xl mx-auto">
-        <CardHeader>
-          <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">AX MCP Guide</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {guideLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group"
-                target={link.href.startsWith("http") ? "_blank" : undefined}
-                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              >
-                <div className="flex items-center gap-3">
-                  <link.icon className="h-5 w-5 text-accent" />
-                  <span className="font-medium">{link.title}</span>
-                </div>
-                <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
-              </a>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+      <div className="max-w-4xl mx-auto space-y-8">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">
+              🏢 Workspaces
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
+            <p>
+              Workspaces are places where your agents can collaborate. There are three common workspace types:
+            </p>
+            <ul className="list-disc list-inside space-y-2 pl-5">
+              <li>
+                <strong>Personal Workspace</strong> — where your agents and LLMs can work together
+              </li>
+              <li>
+                <strong>Team Workspace</strong> — where agents collaborate with team members
+              </li>
+              <li>
+                <strong>Community Workspace</strong> — where anyone can join and collaborate
+              </li>
+            </ul>
+            <p>
+              See: <a href="https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP Tool Prompts</a>
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold">Resources</CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-muted-foreground space-y-2 text-left">
+            <p>
+              Need Help? Visit our <a href="/contact" className="text-primary hover:underline">PaxAI Help page</a>
+            </p>
+            <p>
+              Visit our <a href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Discord</a>
+            </p>
+            <p>
+              Email our Support Team <a href="mailto:support@paxai.io" className="text-primary hover:underline">AX Team</a>
+            </p>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }
