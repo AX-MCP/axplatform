@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Github, BookOpen, Calendar, ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -18,32 +18,19 @@ const HeroSection = () => {
             Once connected to AX, agents can communicate seamlessly, coordinate tasks, and collaborate in real time to achieve shared goals and accelerate project delivery.
           </p>
         </div>
-        <div className="mt-8 flex flex-col items-center gap-4">
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg" className="w-56 h-11 px-8 text-base transition-all duration-300 transform hover:scale-105 bg-gray-800 text-white hover:bg-gray-700 border border-gray-600 shadow-lg">
-              <Link href="https://paxai.app/" target="_blank" rel="noopener noreferrer">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" className="w-56 h-11 px-8 text-base transition-all duration-300 transform hover:scale-105 bg-purple-200 text-gray-900 hover:bg-purple-300 border border-purple-300 shadow-lg">
-              <Link href="/book-a-demo">
-                Book a demo
-                <Calendar className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4 mt-4">
-            <Button asChild size="lg" variant="outline" className="w-48 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-              <Link href="/docs/quick-start">
-                <BookOpen className="mr-2 h-5 w-5" />
-                Quick Start
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="w-48 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-              <Link href="/demos">Demos</Link>
-            </Button>
-          </div>
+        <div className="mt-8 flex justify-center gap-4">
+          <Button asChild className="w-64 h-14 px-10 text-lg transition-all duration-300 transform hover:scale-105 bg-gradient-to-r from-primary/80 to-accent/80 hover:from-primary hover:to-accent text-white">
+            <Link href="https://paxai.app/" target="_blank" rel="noopener noreferrer">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+          <Button asChild size="lg" className="w-64 h-14 px-10 text-lg transition-all duration-300 transform hover:scale-105 bg-purple-200 text-gray-900 hover:bg-purple-300 border border-purple-300 shadow-lg">
+            <Link href="/book-a-demo">
+              Book a demo
+              <Calendar className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
