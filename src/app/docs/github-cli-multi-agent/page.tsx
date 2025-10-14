@@ -22,7 +22,7 @@ export default function GithubCliMultiAgentPage() {
           </CardHeader>
           <CardContent className="text-destructive/90">
             <p>
-              GitHub Copilot <strong>CLI</strong> does not expose a native “multiple agents” or “sub-agents” feature. You *can* approximate multi-agent workflows by isolating Copilot CLI sessions (per project/terminal) and giving each session its <strong>own MCP server config</strong> and instructions. This guide shows practical patterns to do that safely.
+              GitHub Copilot <strong>CLI</strong> does not expose a native “multiple agents” or “sub‑agents” feature. You *can* approximate multi‑agent workflows by isolating Copilot CLI sessions (per project/terminal) and giving each session its <strong>own MCP server config</strong> and instructions. This guide shows practical patterns to do that safely.
             </p>
           </CardContent>
         </Card>
@@ -60,7 +60,7 @@ copilot
             <ul className="list-disc list-inside space-y-2">
               <li>Resume a previous session: <code>copilot --resume</code></li>
               <li>Trust & directory management: <code>/add-dir /path/to/dir</code>, change cwd with <code>/cwd /path/to/dir</code>.</li>
-              <li>In-session help: <code>?</code> or <code>copilot help</code>.</li>
+              <li>In‑session help: <code>?</code> or <code>copilot help</code>.</li>
             </ul>
              <blockquote className="border-l-2 pl-4 italic text-sm">
                 📌 The CLI is agentic and can read/modify/execute files; you must approve tools when prompted.
@@ -81,7 +81,7 @@ cd ~/agents/repo-b && git init`}
             </code></pre>
             <p>Start <strong>one Copilot CLI session per folder</strong> (separate terminals). Each session will keep its <strong>own MCP configuration</strong> and instruction files.</p>
             <h3 className="font-semibold text-xl text-foreground pt-4">2.1 Per‑agent instructions</h3>
-            <p>Put guidance in the repo so it’s auto-included by the CLI:</p>
+            <p>Put guidance in the repo so it’s auto‑included by the CLI:</p>
             <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>
 {`./.github/copilot-instructions.md
 ./.github/copilot-instructions/security.instructions.md
@@ -132,7 +132,7 @@ XDG_CONFIG_HOME=~/.config/agentB copilot`}
 # Press Ctrl+S to save.`}
             </code></pre>
             <ul className="list-disc list-inside space-y-2">
-                <li>Default path: <strong><code>${XDG_CONFIG_HOME:-~/.config}/mcp-config.json</code></strong>.</li>
+                <li>Default path: <strong><code>{`\${XDG_CONFIG_HOME:-~/.config}/mcp-config.json`}</code></strong>.</li>
                 <li>List/inspect via <code>/mcp</code>; remove/update via the same UI.</li>
                 <li>The GitHub MCP Server is preconfigured to act on GitHub (PRs, merges) from the CLI.</li>
             </ul>
@@ -154,18 +154,18 @@ args: mcp-server-fetch`}
 name: linear
 type: sse
 url: https://mcp.linear.app/sse
-env: LINEAR_API_KEY=$\{LINEAR_API_KEY}
+env: LINEAR_API_KEY=\${LINEAR_API_KEY}
 
 /mcp add
 name: notion
 type: http
 url: https://mcp.notion.com/mcp
-headers: Authorization=Bearer $\{NOTION_TOKEN}`}
+headers: Authorization=Bearer \${NOTION_TOKEN}`}
             </code></pre>
              <blockquote className="border-l-2 pl-4 italic text-sm">
                 Keep secrets in your shell env when you launch the session, e.g.
                 <br/>
-                <code>LINEAR_API_KEY=lin_xxx NOTION_TOKEN=secret_xxx XDG_CONFIG_HOME=~/.config/agentB copilot</code>
+                <code>{`LINEAR_API_KEY=lin_xxx NOTION_TOKEN=secret_xxx XDG_CONFIG_HOME=~/.config/agentB copilot`}</code>
             </blockquote>
              <h3 className="font-semibold text-xl text-foreground pt-4">Where the config lives (CLI‑managed)</h3>
              <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>
@@ -242,7 +242,7 @@ copilot   # add: linear, notion`}
             <CardHeader><CardTitle className="text-2xl font-bold font-headline">8. Troubleshooting</CardTitle></CardHeader>
             <CardContent className="text-lg text-muted-foreground space-y-2">
                 <ul className="list-disc list-inside space-y-2">
-                    <li><strong>“Where is my MCP file?”</strong> <code>$\{XDG_CONFIG_HOME:-~/.config}/mcp-config.json</code>.</li>
+                    <li><strong>“Where is my MCP file?”</strong> {`\${XDG_CONFIG_HOME:-~/.config}/mcp-config.json`}.</li>
                     <li><strong>Server won’t start?</strong> Ensure command/URL is reachable and required env vars are set <strong>in the same shell</strong> before launching <code>copilot</code>.</li>
                     <li><strong>OAuth server blocked?</strong> Some remote MCP servers with OAuth aren’t supported by the coding agent—prefer tokens or local servers.</li>
                     <li><strong>Org disabled MCP?</strong> Ask an admin to enable “MCP servers in Copilot” policy.</li>
