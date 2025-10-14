@@ -17,7 +17,6 @@ const navigationItems = {
   Resources: [
     { name: "Blog", href: "/blog" },
     { name: "Demos", href: "/demos" },
-    { name: "Agent Collaboration Guides", href: "/tutorials" },
     { name: "Discord", href: "https://discord.com/channels/1403879632587194521/1403879633023406282", target: "_blank" },
   ],
   Company: [
