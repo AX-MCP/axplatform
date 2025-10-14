@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Bot, Menu, ChevronDown, ArrowRight } from "lucide-react";
+import { Bot, Menu, ChevronDown, ArrowRight, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -135,8 +135,8 @@ const Header = () => {
           <div className="hidden sm:flex items-center justify-end gap-2">
             <Button asChild variant="outline" size="sm" className="bg-card/80 hover:bg-card">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
-                Go to App (Beta)
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <Github className="mr-2 h-4 w-4" />
+                Sign in to AX with GitHub
               </Link>
             </Button>
           </div>
