@@ -1,4 +1,4 @@
-import { BookOpen, Video } from "lucide-react";
+import { BookOpen, Video, Plug, FileText } from "lucide-react";
 import Link from "next/link";
 import {
   Card,
@@ -20,6 +20,18 @@ const resources = [
     description: "See the AX platform in action with guided video walkthroughs.",
     href: "/demos",
   },
+  {
+    icon: Plug,
+    title: "LLM Integration Tutorials",
+    description: "Step-by-step guides for connecting your favorite LLMs and tools.",
+    href: "/docs/#LLM Integration Tutorials",
+  },
+  {
+    icon: FileText,
+    title: "Blog",
+    description: "Read the latest news, articles, and updates from the AX team.",
+    href: "/blog",
+  },
 ];
 
 const ResourcesSection = () => {
@@ -34,7 +46,7 @@ const ResourcesSection = () => {
             Get started quickly with our guides and demos.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {resources.map((resource) => (
             <Link
               href={resource.href}
