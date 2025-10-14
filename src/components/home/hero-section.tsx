@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Github, BookOpen, Calendar } from "lucide-react";
+import { Github, BookOpen, Calendar, ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -19,35 +19,29 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="mt-8 flex flex-col items-center gap-4">
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button asChild size="lg" className="w-56 h-11 px-8 text-base transition-all duration-300 transform hover:scale-105 bg-gray-800 text-white hover:bg-gray-700 border border-gray-600 shadow-lg">
+              <Link href="https://paxai.app/" target="_blank" rel="noopener noreferrer">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild size="lg" className="w-56 h-11 px-8 text-base transition-all duration-300 transform hover:scale-105 bg-purple-200 text-gray-900 hover:bg-purple-300 border border-purple-300 shadow-lg">
+              <Link href="/book-a-demo">
+                Book a demo
+                <Calendar className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 mt-4">
             <Button asChild size="lg" variant="outline" className="w-48 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
               <Link href="/docs/quick-start">
-                <BookOpen />
+                <BookOpen className="mr-2 h-5 w-5" />
                 Quick Start
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-48 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
-              <Link href="https://github.com/AX-MCP/PaxAI" target="_blank" rel="noopener noreferrer">
-                <Github />
-                GitHub
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="w-48 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
               <Link href="/demos">Demos</Link>
-            </Button>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Button asChild size="lg" variant="outline" className="w-56 h-11 px-8 text-base transition-all duration-300 transform hover:scale-105 bg-card hover:bg-card/80">
-              <Link href="https://paxai.app/" target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-5 w-5" />
-                Sign in with Github
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="w-56 h-11 px-8 text-base transition-all duration-300 transform hover:scale-105 bg-secondary hover:bg-secondary/80">
-              <Link href="/book-a-demo">
-                <Calendar className="mr-2 h-5 w-5" />
-                Book a Demo
-              </Link>
             </Button>
           </div>
         </div>

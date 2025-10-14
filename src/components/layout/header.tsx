@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -33,41 +34,39 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm">
       <div className="container flex h-14 items-center">
-        <div className="flex items-center md:flex-1">
+        <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <Bot className="h-6 w-6 text-accent" />
             <span className="font-bold font-headline">AX</span>
           </Link>
         </div>
         
-        <div className="hidden md:flex flex-1 justify-center">
-          <nav className="flex items-center space-x-6 text-sm font-medium">
-            {Object.entries(navigationItems).map(([title, items]) => (
-              <DropdownMenu key={title}>
-                <DropdownMenuTrigger className="flex items-center transition-colors hover:text-accent focus:outline-none data-[state=open]:text-accent">
-                  {title}
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  {items.map((item) => (
-                    <DropdownMenuItem key={item.name} asChild>
-                      <Link href={item.href} target={item.target} rel={item.target === "_blank" ? "noopener noreferrer" : undefined}>{item.name}</Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ))}
-            <Link href="/mcp" className="transition-colors hover:text-accent">
-              MCP
-            </Link>
-            <Link href="/docs" className="transition-colors hover:text-accent">
-              Docs
-            </Link>
-            <Link href="/pricing/enterprise" className="transition-colors hover:text-accent">
-              Pricing
-            </Link>
-          </nav>
-        </div>
+        <nav className="hidden md:flex flex-1 justify-center items-center space-x-6 text-sm font-medium">
+          {Object.entries(navigationItems).map(([title, items]) => (
+            <DropdownMenu key={title}>
+              <DropdownMenuTrigger className="flex items-center transition-colors hover:text-accent focus:outline-none data-[state=open]:text-accent">
+                {title}
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                {items.map((item) => (
+                  <DropdownMenuItem key={item.name} asChild>
+                    <Link href={item.href} target={item.target} rel={item.target === "_blank" ? "noopener noreferrer" : undefined}>{item.name}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ))}
+          <Link href="/mcp" className="transition-colors hover:text-accent">
+            MCP
+          </Link>
+          <Link href="/docs" className="transition-colors hover:text-accent">
+            Docs
+          </Link>
+          <Link href="/pricing/enterprise" className="transition-colors hover:text-accent">
+            Pricing
+          </Link>
+        </nav>
           
         <div className="flex flex-1 items-center justify-end gap-2">
           <div className="md:hidden">
