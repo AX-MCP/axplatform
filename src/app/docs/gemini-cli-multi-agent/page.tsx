@@ -180,7 +180,7 @@ gemini workflow run --input "Plan a product launch with detailed steps."`}
             <h3 className="font-semibold text-xl text-foreground pt-4">7.2 Add MCP servers for *Agent A* (project A)</h3>
             <ol className="list-decimal list-inside space-y-2">
               <li>Create a project folder for the agent and init Gemini:
-                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto my-2"><code>mkdir -p ~/agents/agent-a/.gemini &amp;&amp; cd ~/agents/agent-a</code></pre>
+                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto my-2"><code>mkdir -p ~/agents/agent-a/.gemini && cd ~/agents/agent-a</code></pre>
               </li>
               <li>Add MCP servers to this project only:
                 <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto my-2"><code>{`gemini mcp add --scope project --transport http github https://api.githubcopilot.com/mcp/\ngemini mcp add --scope project --transport http sentry https://mcp.sentry.dev/mcp`}</code></pre>
@@ -189,7 +189,7 @@ gemini workflow run --input "Plan a product launch with detailed steps."`}
                 <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto my-2"><code>gemini mcp list</code></pre>
               </li>
             </ol>
-            <p>This writes entries under <code>./.gemini/settings.json → {"mcpServers": { ... }}</code>.</p>
+            <p>This writes entries under <code>{`./.gemini/settings.json → {"mcpServers": { ... }}`}</code>.</p>
             
             <h3 className="font-semibold text-xl text-foreground pt-4">7.3 Add different MCP servers for *Agent B* (project B)</h3>
             <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>{`mkdir -p ~/agents/agent-b/.gemini && cd ~/agents/agent-b\n# Different toolset than Agent A\ngemini mcp add --scope project --transport sse notion https://mcp.notion.com/mcp\ngemini mcp add --scope project --transport http linear https://mcp.linear.app/sse`}</code></pre>
