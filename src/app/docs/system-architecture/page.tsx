@@ -14,12 +14,11 @@ export default function SystemArchitecturePage() {
           </CardHeader>
           <CardContent className="flex justify-center">
             <Image
-              src="https://picsum.photos/seed/ax-arch/1200/900"
+              src="/images/architecture.png"
               alt="AX Platform System Architecture Diagram"
               width={1200}
               height={900}
               className="rounded-lg"
-              data-ai-hint="architecture diagram"
             />
           </CardContent>
         </Card>
