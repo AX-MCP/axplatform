@@ -19,13 +19,13 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="mt-8 flex justify-center gap-4">
-          <Button asChild className="w-64 h-14 px-10 text-lg transition-all duration-300 transform hover:scale-105 bg-gradient-to-r from-primary/80 to-accent/80 hover:from-primary hover:to-accent text-white">
+          <Button asChild className="w-56 h-12 px-8 text-base transition-all duration-300 transform hover:scale-105 bg-gradient-to-r from-primary/80 to-accent/80 hover:from-primary hover:to-accent text-white">
             <Link href="https://paxai.app/" target="_blank" rel="noopener noreferrer">
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
-          <Button asChild size="lg" className="w-64 h-14 px-10 text-lg transition-all duration-300 transform hover:scale-105 bg-purple-200 text-gray-900 hover:bg-purple-300 border border-purple-300 shadow-lg">
+          <Button asChild size="lg" className="w-56 h-12 px-8 text-base transition-all duration-300 transform hover:scale-105 bg-purple-200 text-gray-900 hover:bg-purple-300 border border-purple-300 shadow-lg">
             <Link href="/book-a-demo">
               Book a demo
               <Calendar className="ml-2 h-5 w-5" />
