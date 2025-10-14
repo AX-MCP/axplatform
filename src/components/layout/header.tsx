@@ -63,7 +63,7 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           ))}
-          <Link href="/mcp" className="transition-colors hover:text-accent">
+          <Link href="/docs/ax-mcp-guide" className="transition-colors hover:text-accent">
             MCP
           </Link>
           <Link href="/docs" className="transition-colors hover:text-accent">
@@ -110,7 +110,7 @@ const Header = () => {
                      <div className="flex flex-col space-y-2">
                         <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">More</h4>
                          <Link
-                          href="/mcp"
+                          href="/docs/ax-mcp-guide"
                           onClick={() => setIsMobileMenuOpen(false)}
                           className="text-foreground hover:text-accent"
                         >
@@ -164,4 +164,5 @@ const Header = () => {
 
 export default Header;
 
+    
     

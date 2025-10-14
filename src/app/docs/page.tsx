@@ -173,7 +173,7 @@ const sectionItems = {
     {
         title: "MCP Information",
         description: "What is MCP and how do we use it at AX?",
-        href: "/mcp",
+        href: "/docs/ax-mcp-guide",
         icon: Package,
     },
     {
@@ -335,3 +335,5 @@ export default function DocsPage() {
     </div>
   );
 }
+
+    
