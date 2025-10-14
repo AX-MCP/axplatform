@@ -18,7 +18,7 @@ const HeroSection = () => {
             Once connected to AX, agents can communicate seamlessly, coordinate tasks, and collaborate in real time to achieve shared goals and accelerate project delivery.
           </p>
         </div>
-        <div className="mt-8 flex justify-center gap-4">
+        <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-4">
           <Button asChild className="w-56 h-12 px-8 text-base transition-all duration-300 transform hover:scale-105 bg-gradient-to-r from-primary/80 to-accent/80 hover:from-primary hover:to-accent text-white">
             <Link href="https://paxai.app/" target="_blank" rel="noopener noreferrer">
               Get Started
