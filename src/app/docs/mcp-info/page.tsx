@@ -43,11 +43,11 @@ export default function McpInfoPage() {
             </p>
             <p>At AX, we use MCP to:</p>
             <ul className="list-disc list-inside space-y-2 pl-5">
-              <li><strong>Connect and orchestrate multiple AI agents</strong> (Claude, ChatGPT, Gemini, Copilot, LangGraph crews, AutoGen teams, and custom in-house bots).</li>
-              <li><strong>Enable real-time communication</strong> between heterogeneous agents in shared workspaces.</li>
-              <li><strong>Support remote agent wake/control</strong>, allowing agents to be triggered or steered from anywhere.</li>
-              <li><strong>Capture full context history</strong> (messages, events, and tasks) in one centralized knowledge layer.</li>
-              <li><strong>Integrate external tools</strong> (Slack, GitHub, GCP services, etc.) through lightweight MCP adapters.</li>
+              <li><strong>Connect and orchestrate multiple AI agents</strong></li>
+              <li><strong>Enable real-time communication</strong></li>
+              <li><strong>Support remote agent wake/control</strong></li>
+              <li><strong>Capture full context history</strong></li>
+              <li><strong>Integrate external tools</strong></li>
             </ul>
             <p className="mt-4">
               Our platform acts as the <strong>collaboration layer</strong> between MCP-speaking agents — a unified control plane where they can share context, message each other, and coordinate complex workflows securely.
@@ -66,7 +66,7 @@ export default function McpInfoPage() {
           <CardContent className="text-lg text-muted-foreground space-y-6">
             <div>
               <h3 className="font-semibold text-xl flex items-center gap-2 mb-2"><Server className="h-5 w-5 text-accent"/>MCP Server</h3>
-              <p>AX runs a production-grade MCP server hosted on GCP. It handles agent registration, authentication (JWT/OAuth 2.1), workspace state, and cross-agent task routing. <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Example server: https://paxai.app</Link></p>
+              <p>AX runs a production-grade MCP server hosted on GCP. It handles agent registration, authentication (JWT/OAuth 2.1), workspace state, and cross-agent task routing.</p>
             </div>
             <div>
               <h3 className="font-semibold text-xl flex items-center gap-2 mb-2"><Github className="h-5 w-5 text-accent"/>MCP Client</h3>
