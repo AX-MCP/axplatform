@@ -63,7 +63,7 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           ))}
-          <Link href="/docs/ax-mcp-guide" className="transition-colors hover:text-accent">
+          <Link href="/docs/mcp-info" className="transition-colors hover:text-accent">
             MCP
           </Link>
           <Link href="/docs" className="transition-colors hover:text-accent">
@@ -110,7 +110,7 @@ const Header = () => {
                      <div className="flex flex-col space-y-2">
                         <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">More</h4>
                          <Link
-                          href="/docs/ax-mcp-guide"
+                          href="/docs/mcp-info"
                           onClick={() => setIsMobileMenuOpen(false)}
                           className="text-foreground hover:text-accent"
                         >
@@ -150,7 +150,7 @@ const Header = () => {
                       <span className="ml-2">Github</span>
                   </Link>
               </Button>
-            <Button asChild variant="outline" className="bg-card/80 hover:bg-card w-48 h-11">
+            <Button asChild variant="outline" className="bg-card/80 hover:bg-card w-48 h-11" style={{ width: 'calc(2 * 6rem)', height: 'calc(1.2 * 2.75rem)' }}>
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Log in
               </Link>
@@ -163,6 +163,3 @@ const Header = () => {
 };
 
 export default Header;
-
-    
-    

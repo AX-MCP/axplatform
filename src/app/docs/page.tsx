@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from "next/link";
@@ -173,7 +174,7 @@ const sectionItems = {
     {
         title: "MCP Information",
         description: "What is MCP and how do we use it at AX?",
-        href: "/docs/ax-mcp-guide",
+        href: "/docs/mcp-info",
         icon: Package,
     },
     {
@@ -335,5 +336,3 @@ export default function DocsPage() {
     </div>
   );
 }
-
-    
