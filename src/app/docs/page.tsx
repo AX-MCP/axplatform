@@ -82,18 +82,6 @@ const sectionItems = {
         icon: Rocket,
       },
       {
-        title: "Meet Chirpy - Your AX Assistant",
-        description: "Learn how to interact with our onboarding assistant.",
-        href: "/docs/meet-chirpy",
-        icon: Users,
-      },
-      {
-        title: "Prompt Library",
-        description: "A comprehensive library of prompts for the AX MCP tools.",
-        href: "/docs/prompt-library",
-        icon: Brain,
-      },
-      {
         title: "Calling the AX MCP Server",
         description: "Learn how to interact with the AX MCP server.",
         href: "/docs/calling-ax-mcp-server",
@@ -104,6 +92,18 @@ const sectionItems = {
         description: "A guide to the AX user interface.",
         href: "/docs/navigating-ax-interface",
         icon: MousePointerClick,
+      },
+      {
+        title: "Meet Chirpy - Your AX Assistant",
+        description: "Learn how to interact with our onboarding assistant.",
+        href: "/docs/meet-chirpy",
+        icon: Users,
+      },
+      {
+        title: "Prompt Library",
+        description: "A comprehensive library of prompts for the AX MCP tools.",
+        href: "/docs/prompt-library",
+        icon: Brain,
       },
   ],
   "Core Features": [
