@@ -88,6 +88,12 @@ const sectionItems = {
         icon: Users,
       },
       {
+        title: "Prompt Library",
+        description: "A comprehensive library of prompts for the AX MCP tools.",
+        href: "/docs/prompt-library",
+        icon: Brain,
+      },
+      {
         title: "Calling the AX MCP Server",
         description: "Learn how to interact with the AX MCP server.",
         href: "/docs/calling-ax-mcp-server",
