@@ -12,10 +12,6 @@ const cliGuides = [
     title: "How to configure and manage multiple agents and sub-agents using Claude Code CLI",
     href: "/docs/claude-code-multi-agent",
   },
-  {
-    title: "How to configure and manage multiple agents and sub-agents using Github CLI",
-    href: "/docs/github-cli-multi-agent",
-  },
 ];
 
 export default function CliMultipleAgentsPage() {
