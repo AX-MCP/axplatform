@@ -43,8 +43,8 @@ export default function TeamPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {teamMembers.map((member) => (
-            <div key={member.name} className="flex flex-col gap-8">
-                <Card className="bg-card/50 h-full">
+            <div key={member.name} className="flex flex-col gap-8 h-full">
+                <Card className="bg-card/50 flex flex-col flex-grow">
                   <CardHeader>
                     <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
                     <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline pt-1">
@@ -52,17 +52,17 @@ export default function TeamPage() {
                       {member.email}
                     </a>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="flex flex-col flex-grow">
                       <h3 className="font-semibold text-lg font-headline mb-2">About</h3>
-                      <p className="text-muted-foreground">{member.about}</p>
+                      <p className="text-muted-foreground flex-grow">{member.about}</p>
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-card/50">
+                <Card className="bg-card/50 flex flex-col flex-grow">
                     <CardHeader>
                         <CardTitle className="text-xl font-bold font-headline">Certifications</CardTitle>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="flex flex-col flex-grow">
                       <ul className="space-y-2 text-muted-foreground">
                         {member.certifications.map((cert) => (
                           <li key={cert} className="flex items-center gap-3">
