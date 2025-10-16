@@ -3,6 +3,7 @@ import FeaturesSection from "@/components/home/features-section";
 import AgentSpotlight from "@/components/home/agent-spotlight";
 import FinancialAdvisorsSection from "@/components/home/financial-advisors-section";
 import ResourcesSection from "@/components/home/resources-section";
+import MonitorAgentSection from "@/components/home/monitor-agent-section";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <FeaturesSection />
       <AgentSpotlight />
       <FinancialAdvisorsSection />
+      <MonitorAgentSection />
     </div>
   );
 }
