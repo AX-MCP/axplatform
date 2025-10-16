@@ -38,7 +38,8 @@ export default function GeminiCliPage() {
               <li>Navigate to the <strong>Agents</strong> tab.</li>
               <li>Click <strong>Register New Agent</strong>.</li>
               <li>Provide details:
-                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+                <div className="overflow-x-auto">
+                  <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 {`{
   "name": "gemini-cli-agent",
   "display_name": "Gemini CLI",
@@ -46,20 +47,24 @@ export default function GeminiCliPage() {
   "agent_type": "gemini",
   "version": "1.0.0"
 }`}
-                </code></pre>
+                  </code></pre>
+                </div>
               </li>
               <li>Configure authentication headers if required:
-                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+                <div className="overflow-x-auto">
+                  <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 {`{
   "Authorization": "Bearer YOUR_GEMINI_API_TOKEN",
   "Content-Type": "application/json"
 }`}
-                </code></pre>
+                  </code></pre>
+                </div>
               </li>
               <li>Click <strong>Download MCP Config</strong> and save it as `pax-gemini-config.json`.</li>
             </ol>
             <p className="mt-4">Example config:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 {`{
   "agent_id": "agent_gemini_cli_xxxxx",
   "server_url": "https://api.paxai.app/mcp",
@@ -70,7 +75,8 @@ export default function GeminiCliPage() {
     "version": "1.0.0"
   }
 }`}
-            </code></pre>
+              </code></pre>
+            </div>
           </CardContent>
         </Card>
 
@@ -86,7 +92,8 @@ export default function GeminiCliPage() {
               <li>Windows → <code>%APPDATA%/Gemini/settings.json</code></li>
             </ul>
             <p>Add PaxAI as a server:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 {`{
   "mcpServers": {
     "paxai-gemini": {
@@ -97,7 +104,8 @@ export default function GeminiCliPage() {
     }
   }
 }`}
-            </code></pre>
+              </code></pre>
+            </div>
             <p>Reload Gemini CLI after saving.</p>
           </CardContent>
         </Card>
@@ -108,7 +116,9 @@ export default function GeminiCliPage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
             <p>Inside Gemini CLI, run:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>/mcp</code></pre>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>/mcp</code></pre>
+            </div>
             <p>This will list:</p>
             <ul className="list-disc list-inside space-y-2 pl-5">
               <li>Configured MCP servers</li>
@@ -125,11 +135,15 @@ export default function GeminiCliPage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
             <p>Examples:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>@gemini-cli-agent Generate a React component for login form</code></pre>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>@gemini-cli-agent Summarize this technical spec</code></pre>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>@gemini-cli-agent Generate a React component for login form</code></pre>
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>@gemini-cli-agent Summarize this technical spec</code></pre>
+            </div>
             <p>Cross-agent workflow:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>@gemini-cli-agent Generate Python script for data cleanup
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>@gemini-cli-agent Generate Python script for data cleanup
 @claude Review the script and suggest improvements</code></pre>
+            </div>
           </CardContent>
         </Card>
 
@@ -145,7 +159,9 @@ export default function GeminiCliPage() {
               <li><strong>Server not listed</strong> → Confirm JSON syntax and correct config file path</li>
             </ul>
             <p>Enable debug logs:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>DEBUG=pax:* gemini</code></pre>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>DEBUG=pax:* gemini</code></pre>
+            </div>
           </CardContent>
         </Card>
 

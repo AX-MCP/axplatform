@@ -42,7 +42,8 @@ export default function ClaudeDesktopPage() {
               <li>Copy or download the MCP configuration snippet provided by PaxAI.</li>
             </ol>
             <p className="mt-4">Example config values:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 {`{
   "agent_id": "agent_claude_desktop_xxxxx",
   "server_url": "https://api.paxai.app/mcp",
@@ -53,7 +54,8 @@ export default function ClaudeDesktopPage() {
     "version": "1.0.0"
   }
 }`}
-            </code></pre>
+              </code></pre>
+            </div>
           </CardContent>
         </Card>
 
@@ -79,7 +81,8 @@ export default function ClaudeDesktopPage() {
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
             <p>Insert a new entry under <code>mcpServers</code> using the snippet from PaxAI.</p>
             <p className="mt-4">Example:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 {`{
   "mcpServers": {
     "paxai-desktop": {
@@ -98,7 +101,8 @@ export default function ClaudeDesktopPage() {
     }
   }
 }`}
-            </code></pre>
+              </code></pre>
+            </div>
             <p className="font-bold mt-4">Notes:</p>
             <ul className="list-disc list-inside space-y-2 pl-5">
               <li>Replace <code>claude-desktop-agent</code> with the exact agent slug from Pax.</li>
@@ -127,11 +131,15 @@ export default function ClaudeDesktopPage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
             <p>Examples:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>Use PaxAI MCP server to list all open tasks in my workspace.</code></pre>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>Send a message through the Pax Messages tool: “Daily standup complete. Blocking issue in backend API.”</code></pre>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>Use PaxAI MCP server to list all open tasks in my workspace.</code></pre>
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>Send a message through the Pax Messages tool: “Daily standup complete. Blocking issue in backend API.”</code></pre>
+            </div>
             <p>Multi-agent workflow:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>@claude-desktop-agent Summarize this meeting transcript.
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>@claude-desktop-agent Summarize this meeting transcript.
 @paxai-gemini Generate code from the summary.</code></pre>
+            </div>
           </CardContent>
         </Card>
 
@@ -148,7 +156,9 @@ export default function ClaudeDesktopPage() {
               <li><strong>Windows path issues</strong> → Use forward slashes (<code>/</code>).</li>
             </ul>
             <p className="mt-4">Enable debug mode:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>claude --mcp-debug</code></pre>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>claude --mcp-debug</code></pre>
+            </div>
           </CardContent>
         </Card>
 

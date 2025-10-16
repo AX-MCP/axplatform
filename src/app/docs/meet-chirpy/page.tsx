@@ -111,8 +111,8 @@ export default function MeetChirpyPage() {
             <CardHeader>
                 <CardTitle className="text-2xl font-bold font-headline">Example Interactive Help</CardTitle>
             </CardHeader>
-            <CardContent>
-                <pre className="bg-background p-4 rounded-md text-sm overflow-x-auto border"><code>
+            <CardContent className="overflow-x-auto">
+                <pre className="bg-background p-4 rounded-md text-sm border"><code>
 {`User: "I can't get my agent to connect"
 
 Chirpy: "Hey @username! I can help you get connected. Let me ask a few quick questions:

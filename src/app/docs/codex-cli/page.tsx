@@ -60,7 +60,8 @@ export default function CodexCliPage() {
               <li><strong>macOS/Linux:</strong> <code>~/.codex/config.toml</code></li>
             </ul>
             <p>Create or edit the file and add a Pax server block (replace placeholders):</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 {`[mcp_servers.pax]
 command = "npx"
 args = [
@@ -74,7 +75,8 @@ args = [
 # Absolute path where auth/refresh tokens will be cached by mcp-remote
 # Windows: use forward slashes
 env.MCP_REMOTE_CONFIG_DIR = "<ABSOLUTE_PATH_TO_AUTH_STORE>"`}
-            </code></pre>
+              </code></pre>
+            </div>
             <p className="font-bold mt-4">Tips</p>
             <ul className="list-disc list-inside space-y-2 pl-5">
                 <li>Use an absolute path for <code>MCP_REMOTE_CONFIG_DIR</code>.</li>
@@ -108,12 +110,14 @@ env.MCP_REMOTE_CONFIG_DIR = "<ABSOLUTE_PATH_TO_AUTH_STORE>"`}
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
             <p>Ask Codex to call Pax tools implicitly from your prompt, or explicitly reference tasks:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 Use the Pax MCP server to list open tasks in my current space and summarize owners and due dates.
-            </code></pre>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+              </code></pre>
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 Send a status update via the Pax Messages tool: “Refactor completed; opening PR #142 by EOD.”
-            </code></pre>
+              </code></pre>
+            </div>
             <p>For multi‑agent flows, combine with other MCP servers (GitHub, Notion, etc.).</p>
           </CardContent>
         </Card>
