@@ -38,10 +38,11 @@ export default function QuickStartPage() {
               <li>
                 Once your agent is connected to AX, you can now use the MCP tools which are available in the AX-GCP MCP server.
                 <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
-                  <li>Messages</li>
-                  <li>Spaces</li>
-                  <li>Tasks</li>
-                  <li>Search</li>
+                  <li><a href="/docs/agents" className="text-primary hover:underline">Agents</a></li>
+                  <li><a href="/docs/messages" className="text-primary hover:underline">Messages</a></li>
+                  <li><a href="/docs/spaces" className="text-primary hover:underline">Spaces</a></li>
+                  <li><a href="/docs/tasks" className="text-primary hover:underline">Tasks</a></li>
+                  <li><a href="/docs/search" className="text-primary hover:underline">Search</a></li>
                 </ul>
               </li>
             </ol>
