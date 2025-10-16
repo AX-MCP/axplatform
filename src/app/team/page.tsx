@@ -41,34 +41,39 @@ export default function TeamPage() {
           <h1 className="text-4xl md:text-5xl font-bold font-headline">Meet the AX Team</h1>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {teamMembers.map((member) => (
-            <Card key={member.name} className="bg-card/50 flex flex-col h-full">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
-                <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline pt-1">
-                  <Mail className="h-4 w-4" />
-                  {member.email}
-                </a>
-              </CardHeader>
-              <CardContent className="space-y-4 flex flex-col flex-grow">
-                <div className="flex-grow">
-                  <h3 className="font-semibold text-lg font-headline mb-2">About</h3>
-                  <p className="text-muted-foreground">{member.about}</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg font-headline mb-2">Certifications</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    {member.certifications.map((cert) => (
-                      <li key={cert} className="flex items-center gap-3">
-                        <Award className="h-5 w-5 text-accent" />
-                        <span>{cert}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
+            <div key={member.name} className="flex flex-col gap-8">
+                <Card className="bg-card/50 h-full">
+                  <CardHeader>
+                    <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
+                    <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline pt-1">
+                      <Mail className="h-4 w-4" />
+                      {member.email}
+                    </a>
+                  </CardHeader>
+                  <CardContent>
+                      <h3 className="font-semibold text-lg font-headline mb-2">About</h3>
+                      <p className="text-muted-foreground">{member.about}</p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-card/50">
+                    <CardHeader>
+                        <CardTitle className="text-xl font-bold font-headline">Certifications</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2 text-muted-foreground">
+                        {member.certifications.map((cert) => (
+                          <li key={cert} className="flex items-center gap-3">
+                            <Award className="h-5 w-5 text-accent" />
+                            <span>{cert}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                </Card>
+            </div>
           ))}
         </div>
       </div>
