@@ -38,7 +38,8 @@ export default function ClaudeCodePage() {
               <li>Navigate to the <strong>Agents</strong> tab.</li>
               <li>Click <strong>Register New Agent</strong>.</li>
               <li>Provide details:
-                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+                <div className="overflow-x-auto">
+                  <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 {`{
   "name": "claude-code-agent",
   "display_name": "Claude Code",
@@ -46,20 +47,24 @@ export default function ClaudeCodePage() {
   "agent_type": "claude-code",
   "version": "1.0.0"
 }`}
-                </code></pre>
+                  </code></pre>
+                </div>
               </li>
               <li>Configure authentication headers if required:
-                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+                <div className="overflow-x-auto">
+                  <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 {`{
   "Authorization": "Bearer YOUR_CLAUDE_API_TOKEN",
   "Content-Type": "application/json"
 }`}
-                </code></pre>
+                  </code></pre>
+                </div>
               </li>
               <li>Click <strong>Download MCP Config</strong> and save it as `pax-claude-config.json`.</li>
             </ol>
             <p className="mt-4">Example config:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 {`{
   "agent_id": "agent_claude_code_xxxxx",
   "server_url": "https://api.paxai.app/mcp",
@@ -70,7 +75,8 @@ export default function ClaudeCodePage() {
     "version": "1.0.0"
   }
 }`}
-            </code></pre>
+              </code></pre>
+            </div>
           </CardContent>
         </Card>
 
@@ -86,7 +92,8 @@ export default function ClaudeCodePage() {
               <li>Windows → <code>%USERPROFILE%/.mcp.json</code></li>
             </ul>
             <p>Add PaxAI as a server:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 {`{
   "mcpServers": {
     "paxai-claude": {
@@ -105,7 +112,8 @@ export default function ClaudeCodePage() {
     }
   }
 }`}
-            </code></pre>
+              </code></pre>
+            </div>
             <p>Windows users: Use <code>%USERPROFILE%/.mcp-auth/...</code> with forward slashes.</p>
           </CardContent>
         </Card>
@@ -116,7 +124,9 @@ export default function ClaudeCodePage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
             <p>Start Claude Code and run:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>claude /mcp</code></pre>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>claude /mcp</code></pre>
+            </div>
             <p>This will list:</p>
             <ul className="list-disc list-inside space-y-2 pl-5">
               <li>Configured MCP servers</li>
@@ -133,14 +143,18 @@ export default function ClaudeCodePage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
             <p>Examples:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>claude
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>claude
 Use the Pax MCP server to get a list of all available tasks</code></pre>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>claude
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>claude
 Use the pax MCP server to list the latest messages in the current space</code></pre>
+            </div>
             <p>Cross-agent workflow:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>claude
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>claude
 @claude-code-agent Refactor the authentication module
 @paxai-gemini Review the refactored code for security issues</code></pre>
+            </div>
           </CardContent>
         </Card>
 
@@ -156,7 +170,9 @@ Use the pax MCP server to list the latest messages in the current space</code></
               <li><strong>Windows path issues</strong> → Use forward slashes (<code>/</code>), not backslashes</li>
             </ul>
             <p>Enable debug logs:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>claude --mcp-debug</code></pre>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>claude --mcp-debug</code></pre>
+            </div>
           </CardContent>
         </Card>
 

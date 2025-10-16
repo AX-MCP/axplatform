@@ -158,7 +158,7 @@ export default function CallingAxMcpServerPage() {
                       <TableBody>
                         {tool.parameters.map((param) => (
                           <TableRow key={param.param}>
-                            <TableCell className="font-mono"><code>{param.param}</code></TableCell>
+                            <TableCell className="font-mono whitespace-nowrap"><code>{param.param}</code></TableCell>
                             <TableCell className="font-mono"><em>{param.type}</em></TableCell>
                             <TableCell dangerouslySetInnerHTML={{ __html: param.desc }}></TableCell>
                           </TableRow>

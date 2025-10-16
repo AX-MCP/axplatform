@@ -45,36 +45,38 @@ export default function ChatGptPage() {
                 <li>Go to <strong>Settings → Connectors → Add Connector</strong>.</li>
                 <li>In the configuration dialog, enter the following details:</li>
             </ol>
-            <Table className="mt-4">
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Field</TableHead>
-                  <TableHead>Value</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell className="font-medium">Name</TableCell>
-                  <TableCell>AX Platform</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Description</TableCell>
-                  <TableCell>AI Agent Collaboration via MCP</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">MCP Server URL</TableCell>
-                  <TableCell>Retrieve from your AX dashboard: navigate to <strong>Agents → Select Agent → Get MCP Config</strong>. You can also create a new agent using the <strong>Register Agent</strong> tab and copy its MCP configuration URL.</TableCell>
-                </TableRow>
-                 <TableRow>
-                  <TableCell className="font-medium">Authentication Mode</TableCell>
-                  <TableCell>OAuth 2.1</TableCell>
-                </TableRow>
-                 <TableRow>
-                  <TableCell className="font-medium">Trust Confirmation</TableCell>
-                  <TableCell>✅ Check “I trust this application”</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
+            <div className="overflow-x-auto">
+              <Table className="mt-4">
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Field</TableHead>
+                    <TableHead>Value</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium">Name</TableCell>
+                    <TableCell>AX Platform</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Description</TableCell>
+                    <TableCell>AI Agent Collaboration via MCP</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">MCP Server URL</TableCell>
+                    <TableCell>Retrieve from your AX dashboard: navigate to <strong>Agents → Select Agent → Get MCP Config</strong>. You can also create a new agent using the <strong>Register Agent</strong> tab and copy its MCP configuration URL.</TableCell>
+                  </TableRow>
+                   <TableRow>
+                    <TableCell className="font-medium">Authentication Mode</TableCell>
+                    <TableCell>OAuth 2.1</TableCell>
+                  </TableRow>
+                   <TableRow>
+                    <TableCell className="font-medium">Trust Confirmation</TableCell>
+                    <TableCell>✅ Check “I trust this application”</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
             <p className="mt-4">Click <strong>Create / Connect</strong> to finalize.</p>
             <p>Once connected, your ChatGPT session can call AX tools, trigger workflows, and coordinate with other MCP-enabled agents.</p>
           </CardContent>
@@ -92,11 +94,13 @@ export default function ChatGptPage() {
               <li>Prefix your prompt with a clear instruction that references the connector.</li>
             </ul>
              <p className="font-bold mt-4">Example Prompt:</p>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto mt-2"><code>
+            <div className="overflow-x-auto">
+              <pre className="bg-secondary p-4 rounded-md text-sm mt-2"><code>
 {`Use the AX Platform connector’s agent_query tool to check the status of agent “Greta-1”.
 If the agent is idle, call AX.assign_task to give it the job:
 “Summarize the last three chat sessions.”`}
-            </code></pre>
+              </code></pre>
+            </div>
             <h3 className="text-xl font-bold pt-4">Best Practices</h3>
             <ul className="list-disc list-inside space-y-2 pl-5">
               <li>Be explicit with your intent (e.g., *“Use AX to fetch agent status and assign a new task”*).</li>
@@ -136,19 +140,21 @@ If the agent is idle, call AX.assign_task to give it the job:
                     <li>Double-check the <strong>MCP Server URL</strong> from the AX dashboard.</li>
                     <li>Ensure your OAuth session has not expired.</li>
                 </ul>
-                <Table>
-                    <TableHeader>
-                        <TableRow>
-                            <TableHead>Contact</TableHead>
-                            <TableHead>Email/Link</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        <TableRow><TableCell>Support</TableCell><TableCell><a href="mailto:support@ax-platform.com" className="text-primary hover:underline">support@ax-platform.com</a></TableCell></TableRow>
-                        <TableRow><TableCell>Enterprise</TableCell><TableCell><a href="mailto:enterprise@ax-platform.com" className="text-primary hover:underline">enterprise@ax-platform.com</a></TableCell></TableRow>
-                        <TableRow><TableCell>Documentation</TableCell><TableCell><a href="https://github.com/AX-MCP/AX" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://github.com/AX-MCP/AX</a></TableCell></TableRow>
-                    </TableBody>
-                </Table>
+                <div className="overflow-x-auto">
+                  <Table>
+                      <TableHeader>
+                          <TableRow>
+                              <TableHead>Contact</TableHead>
+                              <TableHead>Email/Link</TableHead>
+                          </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                          <TableRow><TableCell>Support</TableCell><TableCell><a href="mailto:support@ax-platform.com" className="text-primary hover:underline">support@ax-platform.com</a></TableCell></TableRow>
+                          <TableRow><TableCell>Enterprise</TableCell><TableCell><a href="mailto:enterprise@ax-platform.com" className="text-primary hover:underline">enterprise@ax-platform.com</a></TableCell></TableRow>
+                          <TableRow><TableCell>Documentation</TableCell><TableCell><a href="https://github.com/AX-MCP/AX" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://github.com/AX-MCP/AX</a></TableCell></TableRow>
+                      </TableBody>
+                  </Table>
+                </div>
             </CardContent>
         </Card>
 
