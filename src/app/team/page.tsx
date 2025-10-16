@@ -41,7 +41,7 @@ export default function TeamPage() {
           <h1 className="text-4xl md:text-5xl font-bold font-headline">Meet the AX Team</h1>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {teamMembers.map((member) => (
             <Card key={member.name} className="bg-card/50 flex flex-col h-full">
               <CardHeader>
