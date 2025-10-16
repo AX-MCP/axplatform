@@ -57,12 +57,12 @@ function renderMarkdown(text: string) {
 export default function TeamPage() {
   return (
     <div className="container py-20 md:py-24">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-screen-xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline">Meet the AX Team</h1>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {teamMembers.map((member) => (
             <Card key={member.name} className="bg-card/50 flex flex-col h-full">
                 <CardHeader>
