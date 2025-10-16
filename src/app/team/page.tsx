@@ -24,7 +24,6 @@ const teamMembers = [
     about: [
         "Experienced **Security Engineer** with 15+ years in cybersecurity and 4+ years in **Generative AI**.",
         "Deep expertise in **Model Context Protocol (MCP)**, function calling, and **agent frameworks** (AutoGen, CrewAI, LangGraph).",
-        "**Founder of PaxAI** and **lead architect** of its agent collaboration platform.",
         "Combines AI innovation with strong enterprise-level **security design** and compliance.",
     ],
     certifications: [
@@ -62,36 +61,40 @@ export default function TeamPage() {
           <h1 className="text-4xl md:text-5xl font-bold font-headline">Meet the AX Team</h1>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {teamMembers.map((member) => (
-            <Card key={member.name} className="bg-card/50 flex flex-col h-full">
-                <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
-                <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline pt-1">
-                    <Mail className="h-4 w-4" />
-                    {member.email}
-                </a>
-                </CardHeader>
-                <CardContent className="flex flex-col flex-grow">
-                    <div className="flex-grow">
-                        <h3 className="font-semibold text-lg font-headline mb-2">About</h3>
-                        <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-                            {member.about.map((point, i) => <li key={i} dangerouslySetInnerHTML={{ __html: renderMarkdown(point) }}/>)}
-                        </ul>
-                    </div>
-                    <div className="mt-6">
-                        <h3 className="font-semibold text-lg font-headline mb-2">Certifications</h3>
-                        <ul className="space-y-2 text-muted-foreground">
-                            {member.certifications.map((cert) => (
-                            <li key={cert} className="flex items-center gap-3">
-                                <Award className="h-5 w-5 text-accent" />
-                                <span>{cert}</span>
-                            </li>
-                            ))}
-                        </ul>
-                    </div>
+            <div key={member.name} className="flex flex-col h-full">
+              <Card className="bg-card/50 flex flex-col flex-grow">
+                  <CardHeader>
+                  <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
+                  <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline pt-1">
+                      <Mail className="h-4 w-4" />
+                      {member.email}
+                  </a>
+                  </CardHeader>
+                  <CardContent className="flex flex-col flex-grow">
+                      <div className="flex-grow">
+                          <h3 className="font-semibold text-lg font-headline mb-2">About</h3>
+                          <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+                              {member.about.map((point, i) => <li key={i} dangerouslySetInnerHTML={{ __html: renderMarkdown(point) }}/>)}
+                          </ul>
+                      </div>
+                  </CardContent>
+              </Card>
+              <Card className="bg-card/50 mt-4">
+                <CardContent className="pt-6">
+                    <h3 className="font-semibold text-lg font-headline mb-2">Certifications</h3>
+                    <ul className="space-y-2 text-muted-foreground">
+                        {member.certifications.map((cert) => (
+                        <li key={cert} className="flex items-center gap-3">
+                            <Award className="h-5 w-5 text-accent" />
+                            <span>{cert}</span>
+                        </li>
+                        ))}
+                    </ul>
                 </CardContent>
-            </Card>
+              </Card>
+            </div>
           ))}
         </div>
       </div>
