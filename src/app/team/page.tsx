@@ -61,11 +61,12 @@ export default function TeamPage() {
           <h1 className="text-4xl md:text-5xl font-bold font-headline">Meet the AX Team</h1>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {teamMembers.map((member) => (
             <div key={member.name} className="flex flex-col h-full">
-              <Card className="bg-card/50 flex flex-col flex-grow">
-                  <CardHeader>
+              <Card className="bg-card/50 flex flex-col flex-grow relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-accent"></div>
+                  <CardHeader className="pt-8">
                   <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
                   <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline pt-1">
                       <Mail className="h-4 w-4" />
