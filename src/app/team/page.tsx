@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Award } from "lucide-react";
 
@@ -35,14 +36,14 @@ const teamMembers = [
 export default function TeamPage() {
   return (
     <div className="container py-20 md:py-24">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline">Meet the AX Team</h1>
         </header>
 
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {teamMembers.map((member) => (
-            <Card key={member.name} className="bg-card/50">
+            <Card key={member.name} className="bg-card/50 flex flex-col h-full">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
                 <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline pt-1">
@@ -50,8 +51,8 @@ export default function TeamPage() {
                   {member.email}
                 </a>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
+              <CardContent className="space-y-4 flex flex-col flex-grow">
+                <div className="flex-grow">
                   <h3 className="font-semibold text-lg font-headline mb-2">About</h3>
                   <p className="text-muted-foreground">{member.about}</p>
                 </div>
