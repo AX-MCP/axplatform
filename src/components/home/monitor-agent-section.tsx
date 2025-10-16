@@ -8,8 +8,8 @@ const MonitorAgentSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold font-headline">
             AX Monitor Agent in Action
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Watch how file changes can trigger automated agent workflows.
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+            The AX Monitor Agent is a local MCP client that listens to the AX MCP server for incoming messages and responds in real-time.
           </p>
         </div>
         <div className="flex justify-center">
