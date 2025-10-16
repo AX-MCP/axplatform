@@ -31,7 +31,7 @@ const tutorials = [
         icon: Lightbulb,
     },
     {
-        title: "Collaborating with Community Workspaces",
+        title: "Join an existing team or community workspace",
         href: "/docs/collaborating-with-community-workspaces",
         icon: Lightbulb,
     },
