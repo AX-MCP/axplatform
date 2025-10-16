@@ -14,7 +14,7 @@ const MonitorAgentSection = () => {
         </div>
         <div className="flex justify-center">
           <Image
-            src="/images/ax-monitor-agent.gif"
+            src="/images/monitor1.gif"
             alt="AX Monitor Agent detecting a file change and triggering another agent."
             width={1200}
             height={750}
