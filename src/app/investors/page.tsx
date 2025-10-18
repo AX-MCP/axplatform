@@ -1,31 +1,31 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ndaContent } from "@/lib/nda-content";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { FileSignature } from "lucide-react";
 
 export default function InvestorsPage() {
   return (
     <div className="container py-20 md:py-24">
-      <Card className="max-w-5xl mx-auto">
+      <Card className="max-w-3xl mx-auto">
         <CardHeader>
-          <CardTitle className="text-3xl md:text-4xl font-bold font-headline">
-            Mutual Non-Disclosure Agreement
+          <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">
+            Investor Relations
           </CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-invert max-w-none">
-          <p className="text-muted-foreground">
-            This Mutual Non-Disclosure Agreement (the "Agreement") is entered
-            into between the Disclosing Party and the Receiving Party for the
-            purpose of preventing the unauthorized disclosure of Confidential
-            Information as defined below.
-          </p>
-          {ndaContent.map((section, index) => (
-            <div key={index}>
-              <h2 className="mt-8">{section.title}</h2>
-              {section.content.map((paragraph, pIndex) => (
-                <p key={pIndex}>{paragraph}</p>
-              ))}
-            </div>
-          ))}
+        <CardContent className="text-center space-y-8">
+            <p className="text-lg text-muted-foreground">
+              To proceed with investment discussions, please review and sign our Mutual Non-Disclosure Agreement.
+            </p>
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Link href="https://app.pandadoc.com/document/v2?token=f1dd6016f343d8d12c029078769112d71baf3ec4" target="_blank" rel="noopener noreferrer">
+                <FileSignature className="mr-2 h-5 w-5" />
+                Sign the NDA on PandaDoc
+              </Link>
+            </Button>
+            <p className="text-sm text-muted-foreground pt-4">
+              For any questions, please contact us at <a href="mailto:enterprise@ax-platform.com" className="text-primary hover:underline">enterprise@ax-platform.com</a>.
+            </p>
         </CardContent>
       </Card>
     </div>
