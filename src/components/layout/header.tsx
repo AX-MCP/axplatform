@@ -72,9 +72,6 @@ const Header = () => {
           <Link href="/pricing/enterprise" className="transition-colors hover:text-accent">
             Pricing
           </Link>
-          <Link href="/investors" className="transition-colors hover:text-accent">
-            Investors
-          </Link>
         </nav>
           
         <div className="flex flex-1 items-center justify-end gap-2">
@@ -132,13 +129,6 @@ const Header = () => {
                           className="text-foreground hover:text-accent"
                         >
                           Pricing
-                        </Link>
-                        <Link
-                          href="/investors"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-foreground hover:text-accent"
-                        >
-                          Investors
                         </Link>
                       </div>
                   </div>
