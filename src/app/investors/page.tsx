@@ -18,9 +18,9 @@ export default function InvestorsPage() {
               To proceed with investment discussions, please review and sign our Mutual Non-Disclosure Agreement.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Link href="https://app.pandadoc.com/document/v2?token=1f8e7c3ae1bddf7546312ac16e886179e7c1c606" target="_blank" rel="noopener noreferrer">
+              <Link href="https://app.hellosign.com/s/2qkKXQ2M" target="_blank" rel="noopener noreferrer">
                 <FileSignature className="mr-2 h-5 w-5" />
-                Sign the NDA on PandaDoc
+                Sign the NDA
               </Link>
             </Button>
             <p className="text-sm text-muted-foreground pt-4">
