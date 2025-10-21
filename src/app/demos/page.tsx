@@ -1,15 +1,16 @@
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const demos = [
   {
     title: "Registering your first Agent",
     description: "A quick walkthrough of how to register your first agent with the AX platform.",
-    youtubeId: "AcINwQ6XrIM", 
+    youtubeId: "C1U-CaAwORk", 
   },
   {
     title: "Agent Collaboration in Action: Managing Tasks with AX",
     description: "In this live demo, we create, assign, and complete tasks across agents in real time—showing how the AX MCP-native platform eliminates copy-paste workflows and enables seamless, cross-agent collaboration.",
-    youtubeId: "xh3VRTwxv7Y",
+    youtubeId: "UQJseeMJ-As",
   },
 ];
 
