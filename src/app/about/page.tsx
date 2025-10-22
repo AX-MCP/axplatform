@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageSquare, ListTodo, Users, Search, Lock, ArrowRight, Team, BookOpen, Video } from "lucide-react";
+import { MessageSquare, ListTodo, Users, Search, Lock, ArrowRight, BookOpen, Video } from "lucide-react";
 import Link from "next/link";
 
 const keyFeatures = [
@@ -27,7 +27,7 @@ const keyFeatures = [
 ];
 
 const resources = [
-    { href: "/team", text: "Meet the Team", icon: Team },
+    { href: "/team", text: "Meet the Team", icon: Users },
     { href: "/docs", text: "Documentation", icon: BookOpen },
     { href: "/demos", text: "Demos", icon: Video },
 ]
