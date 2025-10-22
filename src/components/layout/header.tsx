@@ -24,6 +24,7 @@ const navigationItems = {
     { name: "Meet the Team", href: "/team" },
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
+    { name: "Investors", href: "/investors" },
   ],
 };
 
@@ -57,7 +58,7 @@ const Header = () => {
               <DropdownMenuContent>
                 {items.map((item) => (
                   <DropdownMenuItem key={item.name} asChild>
-                    <Link href={item.href} target={item.target} rel={item.target === "_blank" ? "noopener noreferrer" : undefined}>{item.name}</Link>
+                    <Link href={item.href}>{item.name}</Link>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -71,9 +72,6 @@ const Header = () => {
           </Link>
           <Link href="/pricing/enterprise" className="transition-colors hover:text-accent">
             Pricing
-          </Link>
-          <Link href="/investors" className="transition-colors hover:text-accent">
-            Investors
           </Link>
         </nav>
           
@@ -102,8 +100,6 @@ const Header = () => {
                               href={item.href}
                               onClick={() => setIsMobileMenuOpen(false)}
                               className="text-foreground hover:text-accent"
-                              target={item.target}
-                              rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                             >
                               {item.name}
                             </Link>
@@ -132,13 +128,6 @@ const Header = () => {
                           className="text-foreground hover:text-accent"
                         >
                           Pricing
-                        </Link>
-                        <Link
-                          href="/investors"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-foreground hover:text-accent"
-                        >
-                          Investors
                         </Link>
                       </div>
                   </div>
@@ -173,5 +162,3 @@ const Header = () => {
 };
 
 export default Header;
-
-    
