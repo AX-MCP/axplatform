@@ -5,23 +5,8 @@ import Link from "next/link";
 
 const teamMembers = [
   {
-    name: "Heath Dorn",
-    email: "heath.dorn@ax-platform.com",
-    linkedinUrl: "https://www.linkedin.com/in/heathdorn/",
-    about: [
-      "Agile **DevSecOps leader** with 15+ years of experience in secure software engineering.",
-      "Specializes in **custom AI applications**, including Voice and **RAG (Retrieval-Augmented Generation)** models.",
-      "Focused on **DoD-grade AI architecture** and **MCP protocol implementation**.",
-      "Expert in integrating **security, automation, and AI** within scalable DevOps pipelines.",
-    ],
-    certifications: [
-      "Certified DevOps Professional",
-      "Scaled Agile Program Consultant (SPC)",
-      "TS/SCI Security Clearance",
-    ],
-  },
-  {
     name: "Jacob Taunton",
+    role: ["Founder / CEO", "Lead Product Engineer"],
     email: "jacob.taunton@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/jacob-taunton-cloudengineer/",
     about: [
@@ -37,6 +22,7 @@ const teamMembers = [
   },
   {
     name: "Michael Schecht",
+    role: ["Co-Founder - Product Engineering", "and Business Development"],
     email: "michael.schecht@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/michael-schecht/",
     about: [
@@ -47,6 +33,23 @@ const teamMembers = [
     ],
     certifications: [
       "Certified Information Systems Security Professional (CISSP)",
+    ],
+  },
+  {
+    name: "Heath Dorn",
+    role: ["Co-Founder - Strategy, Partnerships,", "and Go-to-Market"],
+    email: "heath.dorn@ax-platform.com",
+    linkedinUrl: "https://www.linkedin.com/in/heathdorn/",
+    about: [
+      "Agile **DevSecOps leader** with 15+ years of experience in secure software engineering.",
+      "Specializes in **custom AI applications**, including Voice and **RAG (Retrieval-Augmented Generation)** models.",
+      "Focused on **DoD-grade AI architecture** and **MCP protocol implementation**.",
+      "Expert in integrating **security, automation, and AI** within scalable DevOps pipelines.",
+    ],
+    certifications: [
+      "Certified DevOps Professional",
+      "Scaled Agile Program Consultant (SPC)",
+      "TS/SCI Security Clearance",
     ],
   },
 ];
@@ -65,26 +68,37 @@ export default function TeamPage() {
           <h1 className="text-4xl md:text-5xl font-bold font-headline">Meet the AX Team</h1>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {teamMembers.map((member) => (
-            <div key={member.name} className="flex flex-col h-full">
-              <Card className="bg-card/50 flex flex-col flex-grow relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-accent"></div>
-                  <CardHeader className="pt-8">
-                  <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
+            <div key={member.name} className="flex flex-col h-full gap-4">
+                <Card className="bg-card/50 flex flex-col relative overflow-hidden">
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-accent"></div>
+                    <CardHeader className="pt-8">
+                    <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
+                    <div>
+                      {member.role.map((line, index) => (
+                        <p key={index} className="text-muted-foreground font-semibold text-lg">{line}</p>
+                      ))}
+                    </div>
+                    </CardHeader>
+                </Card>
+              <Card className="bg-card/50 flex flex-col flex-grow">
+                  <CardHeader>
+                    <CardTitle className="text-xl font-bold font-headline">Background</CardTitle>
                   </CardHeader>
                   <CardContent className="flex flex-col flex-grow">
                       <div className="flex-grow">
-                          <h3 className="font-semibold text-lg font-headline mb-2">About</h3>
                           <ul className="space-y-2 text-muted-foreground list-disc list-inside">
                               {member.about.map((point, i) => <li key={i} dangerouslySetInnerHTML={{ __html: renderMarkdown(point) }}/>)}
                           </ul>
                       </div>
                   </CardContent>
               </Card>
-              <Card className="bg-card/50 mt-4">
-                <CardContent className="pt-6">
-                    <h3 className="font-semibold text-lg font-headline mb-2">Contact</h3>
+              <Card className="bg-card/50">
+                <CardHeader>
+                    <CardTitle className="text-xl font-bold font-headline">Contact</CardTitle>
+                </CardHeader>
+                <CardContent>
                     <div className="flex flex-col items-start gap-2">
                       <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline">
                           <Mail className="h-4 w-4" />
@@ -97,7 +111,7 @@ export default function TeamPage() {
                     </div>
                 </CardContent>
               </Card>
-              <Card className="bg-card/50 mt-4">
+              <Card className="bg-card/50">
                 <CardContent className="pt-6">
                     <h3 className="font-semibold text-lg font-headline mb-2">Certifications</h3>
                     <ul className="space-y-2 text-muted-foreground">
