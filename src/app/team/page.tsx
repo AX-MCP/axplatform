@@ -1,11 +1,12 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Award, Linkedin } from "lucide-react";
+import { Mail, Award, Linkedin, UserCircle } from "lucide-react";
 import Link from "next/link";
 
 const teamMembers = [
   {
     name: "Heath Dorn",
+    role: "Co-Founder - Strategy, Partnerships, and Go-to-Market",
     email: "heath.dorn@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/heathdorn/",
     about: [
@@ -22,6 +23,7 @@ const teamMembers = [
   },
   {
     name: "Jacob Taunton",
+    role: "Founder / CEO and Head of Engineering",
     email: "jacob.taunton@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/jacob-taunton-cloudengineer/",
     about: [
@@ -37,6 +39,7 @@ const teamMembers = [
   },
   {
     name: "Michael Schecht",
+    role: "Co-Founder - Product Engineering and Business Development",
     email: "michael.schecht@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/michael-schecht/",
     about: [
@@ -81,6 +84,15 @@ export default function TeamPage() {
                           </ul>
                       </div>
                   </CardContent>
+              </Card>
+              <Card className="bg-card/50 mt-4">
+                <CardContent className="pt-6">
+                  <h3 className="font-semibold text-lg font-headline mb-2 flex items-center gap-2">
+                    <UserCircle className="h-5 w-5 text-accent" />
+                    Team Role
+                  </h3>
+                  <p className="text-muted-foreground">{member.role}</p>
+                </CardContent>
               </Card>
               <Card className="bg-card/50 mt-4">
                 <CardContent className="pt-6">
