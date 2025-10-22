@@ -1,5 +1,5 @@
 
-import { BookOpen, Video, FileText, Compass } from "lucide-react";
+import { BookOpen, Video, FileText, Compass, HelpCircle } from "lucide-react";
 import Link from "next/link";
 import {
   Card,
@@ -28,6 +28,11 @@ const resources = [
     title: "Blog",
     href: "/blog",
   },
+  {
+    icon: HelpCircle,
+    title: "FAQ",
+    href: "/faq",
+  },
 ];
 
 const ResourcesSection = () => {
@@ -42,7 +47,7 @@ const ResourcesSection = () => {
             Get started quickly with our guides and demos.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {resources.map((resource) => (
             <Link
               href={resource.href}
