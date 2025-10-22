@@ -18,12 +18,13 @@ const navigationItems = {
     { name: "Blog", href: "/blog" },
     { name: "Demos", href: "/demos" },
     { name: "FAQ", href: "/faq" },
+    { name: "MCP", href: "/docs/mcp-info" },
   ],
   Company: [
-    { name: "About Us", href: "/about" },
     { name: "Meet the Team", href: "/team" },
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
+    { name: "Investors", href: "/investors" },
   ],
 };
 
@@ -57,23 +58,20 @@ const Header = () => {
               <DropdownMenuContent>
                 {items.map((item) => (
                   <DropdownMenuItem key={item.name} asChild>
-                    <Link href={item.href} target={item.target} rel={item.target === "_blank" ? "noopener noreferrer" : undefined}>{item.name}</Link>
+                    <Link href={item.href}>{item.name}</Link>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
           ))}
-          <Link href="/docs/mcp-info" className="transition-colors hover:text-accent">
-            MCP
+          <Link href="/about" className="transition-colors hover:text-accent">
+            About AX
           </Link>
           <Link href="/docs" className="transition-colors hover:text-accent">
             Docs
           </Link>
           <Link href="/pricing/enterprise" className="transition-colors hover:text-accent">
             Pricing
-          </Link>
-          <Link href="/investors" className="transition-colors hover:text-accent">
-            Investors
           </Link>
         </nav>
           
@@ -102,8 +100,6 @@ const Header = () => {
                               href={item.href}
                               onClick={() => setIsMobileMenuOpen(false)}
                               className="text-foreground hover:text-accent"
-                              target={item.target}
-                              rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                             >
                               {item.name}
                             </Link>
@@ -113,11 +109,11 @@ const Header = () => {
                      <div className="flex flex-col space-y-2">
                         <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">More</h4>
                          <Link
-                          href="/docs/mcp-info"
+                          href="/about"
                           onClick={() => setIsMobileMenuOpen(false)}
                           className="text-foreground hover:text-accent"
                         >
-                          MCP
+                          About AX
                         </Link>
                          <Link
                           href="/docs"
@@ -132,13 +128,6 @@ const Header = () => {
                           className="text-foreground hover:text-accent"
                         >
                           Pricing
-                        </Link>
-                        <Link
-                          href="/investors"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-foreground hover:text-accent"
-                        >
-                          Investors
                         </Link>
                       </div>
                   </div>
@@ -173,5 +162,3 @@ const Header = () => {
 };
 
 export default Header;
-
-    
