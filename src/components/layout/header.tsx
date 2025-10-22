@@ -18,7 +18,6 @@ const navigationItems = {
     { name: "Blog", href: "/blog" },
     { name: "Demos", href: "/demos" },
     { name: "FAQ", href: "/faq" },
-    { name: "Discord", href: "https://discord.com/channels/1403879632587194521/1403879633023406282", target: "_blank" },
   ],
   Company: [
     { name: "About Us", href: "/about" },
@@ -174,3 +173,5 @@ const Header = () => {
 };
 
 export default Header;
+
+    
