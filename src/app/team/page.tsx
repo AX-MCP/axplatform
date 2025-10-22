@@ -6,7 +6,7 @@ import Link from "next/link";
 const teamMembers = [
   {
     name: "Jacob Taunton",
-    role: ["Founder / CEO", "Head of Product Engineering/Development"],
+    role: ["Founder / CEO", "Lead Product Engineer"],
     email: "jacob.taunton@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/jacob-taunton-cloudengineer/",
     about: [
