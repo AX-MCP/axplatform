@@ -77,7 +77,7 @@ export default function TeamPage() {
                     <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
                     <div>
                       {member.role.map((line, index) => (
-                        <p key={index} className="text-accent font-semibold text-lg">{line}</p>
+                        <p key={index} className="text-muted-foreground font-semibold text-lg">{line}</p>
                       ))}
                     </div>
                     </CardHeader>
