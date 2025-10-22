@@ -5,23 +5,6 @@ import Link from "next/link";
 
 const teamMembers = [
   {
-    name: "Heath Dorn",
-    role: "Co-Founder - Strategy, Partnerships, and Go-to-Market",
-    email: "heath.dorn@ax-platform.com",
-    linkedinUrl: "https://www.linkedin.com/in/heathdorn/",
-    about: [
-      "Agile **DevSecOps leader** with 15+ years of experience in secure software engineering.",
-      "Specializes in **custom AI applications**, including Voice and **RAG (Retrieval-Augmented Generation)** models.",
-      "Focused on **DoD-grade AI architecture** and **MCP protocol implementation**.",
-      "Expert in integrating **security, automation, and AI** within scalable DevOps pipelines.",
-    ],
-    certifications: [
-      "Certified DevOps Professional",
-      "Scaled Agile Program Consultant (SPC)",
-      "TS/SCI Security Clearance",
-    ],
-  },
-  {
     name: "Jacob Taunton",
     role: "Founder / CEO and Head of Engineering",
     email: "jacob.taunton@ax-platform.com",
@@ -52,6 +35,23 @@ const teamMembers = [
       "Certified Information Systems Security Professional (CISSP)",
     ],
   },
+  {
+    name: "Heath Dorn",
+    role: "Co-Founder - Strategy, Partnerships, and Go-to-Market",
+    email: "heath.dorn@ax-platform.com",
+    linkedinUrl: "https://www.linkedin.com/in/heathdorn/",
+    about: [
+      "Agile **DevSecOps leader** with 15+ years of experience in secure software engineering.",
+      "Specializes in **custom AI applications**, including Voice and **RAG (Retrieval-Augmented Generation)** models.",
+      "Focused on **DoD-grade AI architecture** and **MCP protocol implementation**.",
+      "Expert in integrating **security, automation, and AI** within scalable DevOps pipelines.",
+    ],
+    certifications: [
+      "Certified DevOps Professional",
+      "Scaled Agile Program Consultant (SPC)",
+      "TS/SCI Security Clearance",
+    ],
+  },
 ];
 
 function renderMarkdown(text: string) {
@@ -71,15 +71,19 @@ export default function TeamPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {teamMembers.map((member) => (
             <div key={member.name} className="flex flex-col h-full gap-4">
-              <Card className="bg-card/50 flex flex-col flex-grow relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-accent"></div>
-                  <CardHeader className="pt-8">
-                  <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
-                  <p className="text-accent font-semibold">{member.role}</p>
+                <Card className="bg-card/50 flex flex-col relative overflow-hidden">
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-accent"></div>
+                    <CardHeader className="pt-8">
+                    <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
+                    <p className="text-accent font-semibold">{member.role}</p>
+                    </CardHeader>
+                </Card>
+              <Card className="bg-card/50 flex flex-col flex-grow">
+                  <CardHeader>
+                    <CardTitle className="text-xl font-bold font-headline">Background</CardTitle>
                   </CardHeader>
                   <CardContent className="flex flex-col flex-grow">
                       <div className="flex-grow">
-                          <h3 className="font-semibold text-lg font-headline mb-2">About</h3>
                           <ul className="space-y-2 text-muted-foreground list-disc list-inside">
                               {member.about.map((point, i) => <li key={i} dangerouslySetInnerHTML={{ __html: renderMarkdown(point) }}/>)}
                           </ul>
