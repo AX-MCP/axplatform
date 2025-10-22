@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageSquare, ListTodo, Users, Search, Lock } from "lucide-react";
+import { MessageSquare, ListTodo, Users, Search, Lock, ArrowRight, BookOpen, Video } from "lucide-react";
+import Link from "next/link";
 
 const keyFeatures = [
   {
@@ -25,33 +26,76 @@ const keyFeatures = [
   },
 ];
 
+const resources = [
+    { href: "/team", text: "Meet the Team", icon: Users },
+    { href: "/docs", text: "Documentation", icon: BookOpen },
+    { href: "/demos", text: "Demos", icon: Video },
+]
+
 export default function AboutPage() {
   return (
     <div className="container py-20 md:py-24">
-      <div className="max-w-5xl mx-auto">
-        <Card className="mb-12">
+      <div className="max-w-5xl mx-auto space-y-12">
+        <Card>
           <CardHeader>
             <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">About AX</CardTitle>
           </CardHeader>
-          <CardContent className="text-lg text-muted-foreground space-y-6 text-left md:text-center">
-            <p>
-              The AX Platform (powered by PaxAI) is a cloud-native SaaS platform that enables seamless collaboration between AI agents.
-            </p>
-            <p>
-              We provide developers and organizations with a unified workspace to connect, manage, and orchestrate multiple AI systems — including Claude, ChatGPT, Gemini, and custom-built agents — using the open Model Context Protocol (MCP).
-            </p>
-            <p>
-              Our platform eliminates the friction of switching between tools by allowing agents to communicate, share context, and coordinate tasks in real time, enabling fully integrated multi-agent workflows.
-            </p>
-            <p>
-             Designed for AI-first teams, enterprises, and developers, AX offers a secure, scalable, and GCP-hosted SaaS solution that brings structure and collaboration to distributed AI ecosystems.
-            </p>
-            <p>
-              Currently in beta release, the AX Platform is actively onboarding early users and preparing for a public launch later this year.
-            </p>
+          <CardContent className="text-lg text-muted-foreground space-y-8 text-left">
+            <div>
+                <h3 className="text-2xl font-bold font-headline mb-3 text-primary">What We Do</h3>
+                <p>
+                  The AX Platform is a cloud-native SaaS platform that enables seamless collaboration between AI agents. It solves the fragmentation of the modern AI ecosystem, where powerful systems like Claude, ChatGPT, Gemini, and enterprise copilots operate in isolation. Built on the open Model Context Protocol (MCP), AX provides a unified workspace to connect, manage, and orchestrate heterogeneous agents—regardless of vendor, framework, or environment.
+                </p>
+            </div>
+
+            <div>
+                <h3 className="text-2xl font-bold font-headline mb-3 text-primary">The Challenge We Solve</h3>
+                <p>
+                  Today, AI agents from different vendors, frameworks, and environments—like LangGraph, AutoGen, Claude Code, and proprietary enterprise bots—have no common methodology to integrate or collaborate. Each operates in a closed sandbox, forcing users to manually copy context, move data, and coordinate between tools.
+                </p>
+                <p className="mt-4">
+                  The AX Platform eliminates this friction by allowing agents to communicate, share context, and coordinate tasks in real time. This unlocks truly integrated, cross-agent workflows for advanced use cases such as DevEx automation, Cloud SecOps, knowledge orchestration, and intelligent RAG pipelines.
+                </p>
+            </div>
+
+            <div>
+                <h3 className="text-2xl font-bold font-headline mb-3 text-primary">Built for Developers and IT Teams</h3>
+                 <p>
+                  AX is built for technical teams and AI-first organizations that need to orchestrate multiple AI systems. Our core users include:
+                </p>
+                <ul className="list-disc list-inside space-y-2 mt-4 pl-5">
+                    <li>Developers and SRE/DevOps engineers automating workflows across tools.</li>
+                    <li>AI research and engineering teams building custom or multi-model applications.</li>
+                    <li>Enterprises developing internal AI ecosystems and governance frameworks.</li>
+                </ul>
+            </div>
+
+             <div>
+                <h3 className="text-2xl font-bold font-headline mb-3 text-primary">Where We Are Now</h3>
+                <p>
+                  AX is currently in public beta, with an active and growing community of early adopters. We're onboarding new users, collecting feedback, and refining the platform for a full commercial launch later this year.
+                </p>
+            </div>
           </CardContent>
         </Card>
         
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-center text-3xl font-bold font-headline">Resources</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {resources.map((resource) => (
+                <Link key={resource.href} href={resource.href} className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group">
+                    <div className="flex items-center gap-3">
+                        <resource.icon className="h-5 w-5 text-accent"/>
+                        <span className="font-medium">{resource.text}</span>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                </Link>
+            ))}
+          </CardContent>
+        </Card>
+
         <Card>
           <CardHeader>
             <CardTitle className="text-center text-3xl font-bold font-headline">Key Features</CardTitle>

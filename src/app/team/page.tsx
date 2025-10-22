@@ -1,11 +1,13 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Award } from "lucide-react";
+import { Mail, Award, Linkedin } from "lucide-react";
+import Link from "next/link";
 
 const teamMembers = [
   {
     name: "Heath Dorn",
     email: "heath.dorn@ax-platform.com",
+    linkedinUrl: "https://www.linkedin.com/in/heathdorn/",
     about: [
       "Agile **DevSecOps leader** with 15+ years of experience in secure software engineering.",
       "Specializes in **custom AI applications**, including Voice and **RAG (Retrieval-Augmented Generation)** models.",
@@ -21,6 +23,7 @@ const teamMembers = [
   {
     name: "Jacob Taunton",
     email: "jacob.taunton@ax-platform.com",
+    linkedinUrl: "https://www.linkedin.com/in/jacob-taunton-cloudengineer/",
     about: [
         "Experienced **Security Engineer** with 15+ years in cybersecurity and 4+ years in **Generative AI**.",
         "Deep expertise in **Model Context Protocol (MCP)**, function calling, and **agent frameworks** (AutoGen, CrewAI, LangGraph).",
@@ -35,6 +38,7 @@ const teamMembers = [
   {
     name: "Michael Schecht",
     email: "michael.schecht@ax-platform.com",
+    linkedinUrl: "https://www.linkedin.com/in/michael-schecht/",
     about: [
         "**Security Engineer** with 12+ years of experience specializing in **Identity & Access Management (IAM)**.",
         "Focused on developing **AI-driven automation** for secure enterprise workflows.",
@@ -68,10 +72,6 @@ export default function TeamPage() {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-accent"></div>
                   <CardHeader className="pt-8">
                   <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
-                  <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline pt-1">
-                      <Mail className="h-4 w-4" />
-                      {member.email}
-                  </a>
                   </CardHeader>
                   <CardContent className="flex flex-col flex-grow">
                       <div className="flex-grow">
@@ -81,6 +81,21 @@ export default function TeamPage() {
                           </ul>
                       </div>
                   </CardContent>
+              </Card>
+              <Card className="bg-card/50 mt-4">
+                <CardContent className="pt-6">
+                    <h3 className="font-semibold text-lg font-headline mb-2">Contact</h3>
+                    <div className="flex flex-col items-start gap-2">
+                      <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline">
+                          <Mail className="h-4 w-4" />
+                          Email
+                      </a>
+                      <Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                          <Linkedin className="h-4 w-4" />
+                          LinkedIn
+                      </Link>
+                    </div>
+                </CardContent>
               </Card>
               <Card className="bg-card/50 mt-4">
                 <CardContent className="pt-6">
