@@ -79,7 +79,8 @@ export default function TeamPage() {
                           <ul className="space-y-2 text-muted-foreground list-disc list-inside">
                               {member.about.map((point, i) => <li key={i} dangerouslySetInnerHTML={{ __html: renderMarkdown(point) }}/>)}
                           </ul>
-                          <div className="flex flex-col items-start gap-2 pt-4">
+                          <h3 className="font-semibold text-lg font-headline mt-4 mb-2">Contact</h3>
+                          <div className="flex flex-col items-start gap-2">
                             <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline">
                                 <Mail className="h-4 w-4" />
                                 Email
