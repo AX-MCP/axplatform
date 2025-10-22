@@ -18,9 +18,9 @@ const navigationItems = {
     { name: "Blog", href: "/blog" },
     { name: "Demos", href: "/demos" },
     { name: "FAQ", href: "/faq" },
+    { name: "MCP", href: "/docs/mcp-info" },
   ],
   Company: [
-    { name: "About Us", href: "/about" },
     { name: "Meet the Team", href: "/team" },
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
@@ -63,8 +63,8 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           ))}
-          <Link href="/docs/mcp-info" className="transition-colors hover:text-accent">
-            MCP
+          <Link href="/about" className="transition-colors hover:text-accent">
+            About AX
           </Link>
           <Link href="/docs" className="transition-colors hover:text-accent">
             Docs
@@ -113,11 +113,11 @@ const Header = () => {
                      <div className="flex flex-col space-y-2">
                         <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">More</h4>
                          <Link
-                          href="/docs/mcp-info"
+                          href="/about"
                           onClick={() => setIsMobileMenuOpen(false)}
                           className="text-foreground hover:text-accent"
                         >
-                          MCP
+                          About AX
                         </Link>
                          <Link
                           href="/docs"
