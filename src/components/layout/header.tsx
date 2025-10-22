@@ -23,7 +23,6 @@ const navigationItems = {
     { name: "About Us", href: "/about" },
     { name: "Meet the Team", href: "/team" },
     { name: "Careers", href: "/careers" },
-    { name: "FAQ / Contact", href: "/contact#support" },
   ],
 };
 
@@ -68,6 +67,12 @@ const Header = () => {
           </Link>
           <Link href="/docs" className="transition-colors hover:text-accent">
             Docs
+          </Link>
+          <Link href="/faq" className="transition-colors hover:text-accent">
+            FAQ
+          </Link>
+          <Link href="/contact" className="transition-colors hover:text-accent">
+            Contact
           </Link>
           <Link href="/pricing/enterprise" className="transition-colors hover:text-accent">
             Pricing
@@ -125,6 +130,20 @@ const Header = () => {
                           className="text-foreground hover:text-accent"
                         >
                           Docs
+                        </Link>
+                        <Link
+                          href="/faq"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-foreground hover:text-accent"
+                        >
+                          FAQ
+                        </Link>
+                        <Link
+                          href="/contact"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-foreground hover:text-accent"
+                        >
+                          Contact
                         </Link>
                         <Link
                           href="/pricing/enterprise"

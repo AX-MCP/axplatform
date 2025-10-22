@@ -264,7 +264,7 @@ const sectionItems = {
       {
         title: "FAQ",
         description: "Frequently asked questions.",
-        href: "/contact",
+        href: "/faq",
         icon: BookCopy,
       },
       {
