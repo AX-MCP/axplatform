@@ -79,19 +79,23 @@ export default function TeamPage() {
                           <ul className="space-y-2 text-muted-foreground list-disc list-inside">
                               {member.about.map((point, i) => <li key={i} dangerouslySetInnerHTML={{ __html: renderMarkdown(point) }}/>)}
                           </ul>
-                          <h3 className="font-semibold text-lg font-headline mt-4 mb-2">Contact</h3>
-                          <div className="flex flex-col items-start gap-2">
-                            <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline">
-                                <Mail className="h-4 w-4" />
-                                Email
-                            </a>
-                            <Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-primary hover:underline">
-                                <Linkedin className="h-4 w-4" />
-                                LinkedIn
-                            </Link>
-                          </div>
                       </div>
                   </CardContent>
+              </Card>
+              <Card className="bg-card/50 mt-4">
+                <CardContent className="pt-6">
+                    <h3 className="font-semibold text-lg font-headline mb-2">Contact</h3>
+                    <div className="flex flex-col items-start gap-2">
+                      <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline">
+                          <Mail className="h-4 w-4" />
+                          Email
+                      </a>
+                      <Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-primary hover:underline">
+                          <Linkedin className="h-4 w-4" />
+                          LinkedIn
+                      </Link>
+                    </div>
+                </CardContent>
               </Card>
               <Card className="bg-card/50 mt-4">
                 <CardContent className="pt-6">
