@@ -20,7 +20,7 @@ const resources = [
   },
   {
     icon: Compass,
-    title: "AX Documentation",
+    title: "Documentation",
     href: "/docs",
   },
   {
