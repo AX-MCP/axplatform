@@ -6,7 +6,7 @@ import Link from "next/link";
 const teamMembers = [
   {
     name: "Jacob Taunton",
-    role: "Founder / CEO and Head of Engineering",
+    role: ["Founder / CEO", "and Head of Engineering"],
     email: "jacob.taunton@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/jacob-taunton-cloudengineer/",
     about: [
@@ -22,7 +22,7 @@ const teamMembers = [
   },
   {
     name: "Michael Schecht",
-    role: "Co-Founder - Product Engineering and Business Development",
+    role: ["Co-Founder - Product Engineering", "and Business Development"],
     email: "michael.schecht@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/michael-schecht/",
     about: [
@@ -37,7 +37,7 @@ const teamMembers = [
   },
   {
     name: "Heath Dorn",
-    role: "Co-Founder - Strategy, Partnerships, and Go-to-Market",
+    role: ["Co-Founder - Strategy, Partnerships,", "and Go-to-Market"],
     email: "heath.dorn@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/heathdorn/",
     about: [
@@ -75,7 +75,11 @@ export default function TeamPage() {
                     <div className="absolute top-0 left-0 right-0 h-1 bg-accent"></div>
                     <CardHeader className="pt-8">
                     <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
-                    <p className="text-accent font-semibold">{member.role}</p>
+                    <div>
+                      {member.role.map((line, index) => (
+                        <p key={index} className="text-accent font-semibold text-lg">{line}</p>
+                      ))}
+                    </div>
                     </CardHeader>
                 </Card>
               <Card className="bg-card/50 flex flex-col flex-grow">
