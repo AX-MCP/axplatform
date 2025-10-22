@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageSquare, ListTodo, Users, Search, Lock, ArrowRight, BookOpen, Video } from "lucide-react";
+import { MessageSquare, ListTodo, Users, Search, Lock, ArrowRight, BookOpen, Video, Briefcase, Bot, Code } from "lucide-react";
 import Link from "next/link";
 
 const keyFeatures = [
@@ -31,6 +31,34 @@ const resources = [
     { href: "/docs", text: "Documentation", icon: BookOpen },
     { href: "/demos", text: "Demos", icon: Video },
 ]
+
+const coreFeatures = [
+    {
+        title: "Workspaces",
+        href: "/docs/spaces",
+        icon: Briefcase,
+    },
+    {
+        title: "Agents",
+        href: "/docs/agents",
+        icon: Bot,
+    },
+    {
+        title: "Messages",
+        href: "/docs/messages",
+        icon: MessageSquare,
+    },
+    {
+        title: "Tasks",
+        href: "/docs/tasks",
+        icon: Code,
+    },
+    {
+        title: "Search",
+        href: "/docs/search",
+        icon: Search,
+    },
+];
 
 export default function AboutPage() {
   return (
@@ -111,6 +139,35 @@ export default function AboutPage() {
             </ul>
           </CardContent>
         </Card>
+
+        <Card>
+            <CardHeader>
+                <CardTitle className="text-center text-3xl font-bold font-headline">AX MCP Server Tools</CardTitle>
+            </CardHeader>
+            <CardContent className="text-lg text-muted-foreground">
+                <p className="mb-4 text-center">
+                  The AX MCP Server Tools are the foundation of our multi-agent ecosystem.
+                  These tools allow developers to connect, orchestrate, and manage heterogeneous AI agents within each AX workspace. 
+                </p>
+                <p className="mb-4 text-center">👉 Explore the tools below to learn more about their capabilities.</p>
+                <div className="space-y-4 mt-6">
+                    {coreFeatures.map(feature => (
+                        <Link
+                          key={feature.title}
+                          href={feature.href}
+                          className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group"
+                        >
+                          <div className="flex items-center gap-3">
+                            <feature.icon className="h-5 w-5 text-accent" />
+                            <span className="font-medium">{feature.title}</span>
+                          </div>
+                          <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                    ))}
+                </div>
+            </CardContent>
+        </Card>
+
       </div>
     </div>
   );

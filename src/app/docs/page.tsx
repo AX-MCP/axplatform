@@ -40,7 +40,7 @@ const sectionItems = {
       {
         title: "About the AX Platform",
         description: "An overview of the AX platform and its mission.",
-        href: "/docs/what-is-ax",
+        href: "/about",
         icon: Compass,
       },
       {
