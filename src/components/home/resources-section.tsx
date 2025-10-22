@@ -1,3 +1,4 @@
+
 import { BookOpen, Video, FileText, Compass } from "lucide-react";
 import Link from "next/link";
 import {
@@ -14,12 +15,12 @@ const resources = [
   },
   {
     icon: Video,
-    title: "Platform Demos",
+    title: "Demo Videos",
     href: "/demos",
   },
   {
     icon: Compass,
-    title: "All Docs - AX Platform",
+    title: "AX Documentation",
     href: "/docs",
   },
   {
