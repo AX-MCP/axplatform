@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Award, Linkedin, UserCircle } from "lucide-react";
+import { Mail, Award, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 const teamMembers = [
@@ -68,13 +68,14 @@ export default function TeamPage() {
           <h1 className="text-4xl md:text-5xl font-bold font-headline">Meet the AX Team</h1>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {teamMembers.map((member) => (
-            <div key={member.name} className="flex flex-col h-full">
+            <div key={member.name} className="flex flex-col h-full gap-4">
               <Card className="bg-card/50 flex flex-col flex-grow relative overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-accent"></div>
                   <CardHeader className="pt-8">
                   <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
+                  <p className="text-accent font-semibold">{member.role}</p>
                   </CardHeader>
                   <CardContent className="flex flex-col flex-grow">
                       <div className="flex-grow">
@@ -85,18 +86,11 @@ export default function TeamPage() {
                       </div>
                   </CardContent>
               </Card>
-              <Card className="bg-card/50 mt-4">
-                <CardContent className="pt-6">
-                  <h3 className="font-semibold text-lg font-headline mb-2 flex items-center gap-2">
-                    <UserCircle className="h-5 w-5 text-accent" />
-                    Team Role
-                  </h3>
-                  <p className="text-muted-foreground">{member.role}</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-card/50 mt-4">
-                <CardContent className="pt-6">
-                    <h3 className="font-semibold text-lg font-headline mb-2">Contact</h3>
+              <Card className="bg-card/50">
+                <CardHeader>
+                    <CardTitle className="text-xl font-bold font-headline">Contact</CardTitle>
+                </CardHeader>
+                <CardContent>
                     <div className="flex flex-col items-start gap-2">
                       <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline">
                           <Mail className="h-4 w-4" />
@@ -109,7 +103,7 @@ export default function TeamPage() {
                     </div>
                 </CardContent>
               </Card>
-              <Card className="bg-card/50 mt-4">
+              <Card className="bg-card/50">
                 <CardContent className="pt-6">
                     <h3 className="font-semibold text-lg font-headline mb-2">Certifications</h3>
                     <ul className="space-y-2 text-muted-foreground">
