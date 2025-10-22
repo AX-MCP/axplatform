@@ -28,7 +28,7 @@ const Footer = () => {
               <h4 className="font-semibold font-headline text-foreground">Company</h4>
               <Link href="/about" className="text-muted-foreground hover:text-accent">About Us</Link>
               <Link href="/careers" className="text-muted-foreground hover:text-accent">Careers</Link>
-              <Link href="/contact" className="text-muted-foreground hover:text-accent">Contact</Link>
+              <Link href="/contact#support" className="text-muted-foreground hover:text-accent">Contact</Link>
               <Link href="/investors" className="text-muted-foreground hover:text-accent">Investors</Link>
             </div>
           </div>

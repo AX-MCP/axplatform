@@ -181,7 +181,7 @@ export default function FaqPage() {
             </CardContent>
         </Card>
 
-        <Card>
+        <Card id="support">
             <CardHeader><CardTitle className="text-2xl font-bold font-headline">How do I get support?</CardTitle></CardHeader>
             <CardContent className="text-lg text-muted-foreground space-y-2">
                 <p>📩 <strong>Email:</strong> <a href="mailto:support@ax-platform.com" className="text-primary hover:underline">support@ax-platform.com</a></p>

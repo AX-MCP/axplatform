@@ -23,7 +23,7 @@ const navigationItems = {
     { name: "About Us", href: "/about" },
     { name: "Meet the Team", href: "/team" },
     { name: "Careers", href: "/careers" },
-    { name: "Contact", href: "/contact" },
+    { name: "FAQ / Contact", href: "/contact#support" },
   ],
 };
 
