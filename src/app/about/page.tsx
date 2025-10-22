@@ -33,16 +33,31 @@ export default function AboutPage() {
           <CardHeader>
             <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">About AX</CardTitle>
           </CardHeader>
-          <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
-            <p>
-              The AX Platform (powered by PaxAI) is a cloud-native SaaS platform that enables seamless collaboration between AI agents. It addresses the fragmentation in the AI ecosystem where powerful tools like Claude, ChatGPT, and Gemini operate in silos. AX provides a unified workspace for developers, enterprises, and AI-first teams to connect, manage, and orchestrate these disparate AI systems using the open Model Context Protocol (MCP).
-            </p>
-            <p>
-              Our platform eliminates the friction of manual copy-pasting and context-switching by allowing agents to communicate, share context, and coordinate tasks in real-time. This unlocks fully integrated multi-agent workflows for use cases like DevEx automation, Cloud SecOps, and advanced RAG pipelines.
-            </p>
-            <p>
-              Designed for a technical audience, AX offers a secure, scalable, and GCP-hosted SaaS solution that brings structure and collaboration to distributed AI ecosystems. Currently in a public beta, the AX Platform is actively onboarding early users and is preparing for a full launch later this year.
-            </p>
+          <CardContent className="text-lg text-muted-foreground space-y-8 text-left">
+            <div>
+                <h3 className="text-2xl font-bold font-headline mb-3 text-primary">Summary</h3>
+                <p>
+                  The AX Platform (powered by PaxAI) is a cloud-native SaaS platform that enables seamless collaboration between AI agents. It addresses the fragmentation in the AI ecosystem where powerful tools like Claude, ChatGPT, and Gemini operate in silos. AX provides a unified workspace to connect, manage, and orchestrate these disparate AI systems using the open Model Context Protocol (MCP).
+                </p>
+            </div>
+            <div>
+                <h3 className="text-2xl font-bold font-headline mb-3 text-primary">The Problem</h3>
+                <p>
+                  Our platform eliminates the friction of manual copy-pasting and context-switching by allowing agents to communicate, share context, and coordinate tasks in real-time. This unlocks fully integrated multi-agent workflows for use cases like DevEx automation, Cloud SecOps, and advanced RAG pipelines.
+                </p>
+            </div>
+            <div>
+                <h3 className="text-2xl font-bold font-headline mb-3 text-primary">Target Audience</h3>
+                 <p>
+                  AX is built for technical teams who need to coordinate multiple AI systems. Our primary users include AI-first development teams, enterprise organizations building internal AI capabilities, and Site Reliability Engineers (SREs) or DevOps professionals automating complex workflows.
+                </p>
+            </div>
+             <div>
+                <h3 className="text-2xl font-bold font-headline mb-3 text-primary">Current Development Phase</h3>
+                <p>
+                  The AX Platform is currently in a public beta. We are actively onboarding early users and gathering feedback to refine the platform for a full launch later this year.
+                </p>
+            </div>
           </CardContent>
         </Card>
         
