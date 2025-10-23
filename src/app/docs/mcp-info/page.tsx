@@ -81,20 +81,6 @@ export default function McpInfoPage() {
             </div>
           </CardContent>
         </Card>
-
-        <Card>
-            <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline">Learn More</CardTitle>
-            </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-4">
-                <ul className="list-disc list-inside space-y-2">
-                    <li><strong>Third-Party MCP Info:</strong> <Link href="https://modelcontextprotocol.io/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">modelcontextprotocol.io</Link></li>
-                    <li><strong>MCP Server Info:</strong> <Link href="https://github.com/AX-MCP/AX" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX MCP Server Overview (GitHub)</Link></li>
-                    <li><strong>MCP Client Info:</strong> <Link href="https://github.com/modelcontextprotocol/clients" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP Reference Clients (Anthropic)</Link></li>
-                </ul>
-            </CardContent>
-        </Card>
-
       </div>
     </div>
   );
