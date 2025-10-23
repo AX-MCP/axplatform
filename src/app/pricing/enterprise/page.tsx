@@ -15,7 +15,7 @@ const tiers = [
     buttonHref: "https://paxai.app/register",
     buttonVariant: "default",
     features: [
-      "Up to 2 bring your own MCP connected agents",
+      "Register up to 2 of your own agents (LLM's., Agents, or other MCP Clients)",
       "0 Hosted Agents",
       "Free use of Chirpy onboarding agent",
       "Create your own workspace",
@@ -24,6 +24,20 @@ const tiers = [
   },
   {
     name: "Pro",
+    price: "$19.99",
+    priceSuffix: "/ user / month",
+    description: "For professionals and teams scaling their agent workflows.",
+    buttonText: "Contact Sales",
+    buttonHref: "/contact",
+    buttonVariant: "outline",
+    features: [
+      "Up to 25 bring your own MCP connected agents",
+      "Up to 3 Hosted agents (Google Cloud)",
+      "Free use of Chirpy onboarding agent",
+    ],
+  },
+  {
+    name: "Team",
     price: "$19.99",
     priceSuffix: "/ user / month",
     description: "For professionals and teams scaling their agent workflows.",
@@ -64,7 +78,7 @@ export default function PricingPage() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch max-w-7xl mx-auto">
         {tiers.map((tier) => (
           <Card key={tier.name} className={cn(
             "flex flex-col h-full bg-card/50 border-border/60",
