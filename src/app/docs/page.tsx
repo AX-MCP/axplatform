@@ -322,8 +322,8 @@ export default function DocsPage() {
                     href={item.href}
                     key={item.title}
                     className="block group"
-                    target={item.target}
-                    rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+                    target={(item as any).target}
+                    rel={(item as any).target === "_blank" ? "noopener noreferrer" : undefined}
                   >
                     <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[8.1rem]">
                       <CardHeader className="flex-grow">

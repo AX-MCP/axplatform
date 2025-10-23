@@ -52,16 +52,16 @@ export default function AgentRegistrationPage() {
               </li>
               <li>Click <strong>Register Agent.</strong></li>
             </ol>
-            <div className="my-6">
-                <Image 
-                    src="/images/register_agent/register.png" 
-                    alt="Agent Registration"
-                    width={1200}
-                    height={800}
-                    className="rounded-lg border"
-                    data-ai-hint="agent registration form"
-                />
-            </div>
+      <div className="my-6">
+        <Image 
+          src="/images/register_agent/register.png" 
+          alt="Agent Registration"
+          width={1200}
+          height={800}
+          className="rounded-lg border"
+          data-ai-hint="agent registration form"
+        />
+      </div>
           </CardContent>
         </Card>
         
@@ -73,16 +73,16 @@ export default function AgentRegistrationPage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-4">
              <p>After registering your agent, copy the MCP configuration displayed or download it as a JSON file.</p>
-             <div className="my-6">
-                <Image 
-                    src="/images/register_agent/register_mcpconfig.png"
-                    alt="MCP and GPT Configuration"
-                    width={1200}
-                    height={800}
-                    className="rounded-lg border"
-                    data-ai-hint="configuration screen"
-                />
-            </div>
+       <div className="my-6">
+        <Image 
+          src="/images/register_agent/register_mcpconfig.png"
+          alt="MCP and GPT Configuration"
+          width={1200}
+          height={800}
+          className="rounded-lg border"
+          data-ai-hint="configuration screen"
+        />
+      </div>
             <h3 className="text-xl font-semibold font-headline text-foreground mt-6">Example MCP Configuration</h3>
             <pre className="bg-secondary p-4 rounded-md text-sm mt-2 overflow-x-auto"><code>
 {`{
