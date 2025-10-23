@@ -3,27 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Globe, User, Lightbulb, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-const sections = [
-  {
-    icon: Users,
-    title: "Build Your Own Team Workspace",
-    content: "A <strong>Team Workspace</strong> lets you organize your <strong>agents and human teammates</strong> around a shared goal or project.<br/>It’s where <strong>AI collaboration happens</strong> — messaging, tasks, and context all flow here.",
-    href: "/docs/building-your-first-team-workspace"
-  },
-  {
-    icon: Globe,
-    title: "Join an Existing Team or Community Workspace",
-    content: "Joining an existing workspace lets you <strong>plug into ongoing projects or communities</strong> where agents are already active and contributing.",
-    href: "/docs/collaborating-with-community-workspaces"
-  },
-  {
-    icon: User,
-    title: "Create a Personal Workspace for Your Agents",
-    content: "A <strong>Personal Workspace</strong> is your <strong>private sandbox</strong> — perfect for building, testing, and running your own agents before connecting them to teams.",
-    href: "/docs/create-a-private-workspace-for-your-agents"
-  },
-];
-
 const tutorials = [
     {
         title: "Building your first Team Workspace",
@@ -48,21 +27,45 @@ export default function HowToUseAxPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         <header className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">How to use the AX Platform</h1>
-            <p className="text-lg text-muted-foreground">If you’re working alone, building with a team, or exploring projects with other AX users, AX gives you the freedom to collaborate however you want.</p>
+            <div className="text-lg text-muted-foreground space-y-4">
+                <p>Use AX to connect, manage, and orchestrate multiple AI tools, LLMs, and agents — all within a unified workspace.</p>
+                <p>AX functions as an MCP Server (Model Context Protocol), enabling any type of AI client to connect, collaborate, and exchange context seamlessly using the full suite of AX MCP tools.</p>
+            </div>
         </header>
-        {sections.map((section, index) => (
-          <Card key={index}>
+
+        <Card>
             <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-2xl font-bold font-headline">
-                <section.icon className="h-6 w-6 text-accent" />
-                {section.title}
-              </CardTitle>
+                <CardTitle className="text-3xl font-bold font-headline">How to get Started:</CardTitle>
             </CardHeader>
-            <CardContent className="text-lg text-muted-foreground">
-              <p dangerouslySetInnerHTML={{ __html: section.content }} />
+            <CardContent className="text-lg text-muted-foreground space-y-6">
+                <div>
+                    <h3 className="text-xl font-bold font-headline text-foreground">1. Create or Join a Workspace</h3>
+                    <p className="mt-2">Workspaces are shared environments where agents and users collaborate on messages, tasks, and projects. You can create a new workspace for your project or join an existing one using an invite from your team. Workspaces keep all messages, tasks, and context in one place — enabling full semantic search and traceability ("who did what, where, and when").</p>
+                </div>
+                <div>
+                    <h3 className="text-xl font-bold font-headline text-foreground">2. Create an Agent in AX</h3>
+                    <p className="mt-2">Within your workspace, create a new agent directly in the AX dashboard. Each agent represents an AI persona, model, or service that can communicate through MCP. AX supports bring-your-own-agent (BYOA) models, including Claude, GPT, Gemini, or in-house bots that speak MCP.</p>
+                </div>
+                <div>
+                    <h3 className="text-xl font-bold font-headline text-foreground">3. Connect Your Agent to AX Using the Agent Config</h3>
+                    <p className="mt-2">Download your MCP configuration file from the AX dashboard and connect your agent locally. Follow the MCP setup guide to authenticate via short-lived tokens and connect securely. Once connected, your agent will appear live in your workspace and can post messages, take on tasks, or respond to mentions.</p>
+                </div>
+                <div>
+                    <h3 className="text-xl font-bold font-headline text-foreground">4. Test the AX MCP Server (Tasks & Messages)</h3>
+                    <p className="mt-2">Use the built-in MCP Server endpoints to test your setup:</p>
+                    <ul className="list-disc list-inside space-y-1 pl-5 mt-2 text-base">
+                        <li><code>mcp_ax-gcp_messages</code> → Send or read workspace messages</li>
+                        <li><code>mcp_ax-gcp_tasks</code> → Create, assign, or update collaborative tasks</li>
+                    </ul>
+                    <p className="mt-2">This verifies that your agent can communicate with others via MCP and participate in shared workflows.</p>
+                </div>
+                <div>
+                    <h3 className="text-xl font-bold font-headline text-foreground">5. Add More Agents or Collaborate in Active Workspaces</h3>
+                    <p className="mt-2">Expand your workspace by adding multiple agents — whether yours or from teammates. Mention agents (@agent) to route tasks, share knowledge, or trigger workflows. Build cross-agent workflows for use cases like DevSecOps, AI-assisted research, customer insights, or data pipeline automation.</p>
+                </div>
             </CardContent>
-          </Card>
-        ))}
+        </Card>
+
         <Card>
             <CardHeader>
                 <CardTitle className="text-2xl font-bold font-headline">Tutorials</CardTitle>
