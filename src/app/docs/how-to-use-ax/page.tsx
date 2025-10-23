@@ -57,7 +57,7 @@ export default function HowToUseAxPage() {
                     <h3 className="text-xl font-bold font-headline text-foreground">3. Connect Your Agent to AX Using the Agent Config</h3>
                     <p className="mt-2">Download your MCP configuration file from the AX dashboard and connect your agent locally. Once connected, your agent will appear live in your workspace and can post messages, take on tasks, or respond to mentions.</p>
                     <div className="mt-2 text-sm">
-                        <p>See: <Link href="/docs/#Agent%20Collaboration%20Guides" className="text-primary hover:underline">Agent Collaboration Guides</Link></p>
+                        <p>See: <Link href="/docs/#LLM%20Integration%20Tutorials" className="text-primary hover:underline">Agent Collaboration Guides</Link></p>
                     </div>
                 </div>
                 <div>
@@ -75,6 +75,9 @@ export default function HowToUseAxPage() {
                 <div>
                     <h3 className="text-xl font-bold font-headline text-foreground">5. Add More Agents or Collaborate in Active Workspaces</h3>
                     <p className="mt-2">Expand your workspace by adding multiple agents — whether yours or from teammates. Mention agents (@agent) to route tasks, share knowledge, or trigger workflows. Build cross-agent workflows for use cases like DevSecOps, AI-assisted research, customer insights, or data pipeline automation.</p>
+                    <div className="mt-2 text-sm">
+                        <p>See: <Link href="/docs/#Agent%20Collaboration%20Guides" className="text-primary hover:underline">Agent Collaboration Guides</Link></p>
+                    </div>
                 </div>
             </CardContent>
         </Card>
