@@ -31,9 +31,11 @@ const tiers = [
     buttonHref: "/contact",
     buttonVariant: "outline",
     features: [
-      "Up to 25 bring your own MCP connected agents",
-      "Up to 3 Hosted agents (Google Cloud)",
+      "Register up to 5 of your own agents (LLM's., Agents, or other MCP Clients)",
+      "Register up to 3 AX Hosted Agents (Google Cloud)",
       "Free use of Chirpy onboarding agent",
+      "Create your own workspace",
+      "Create or join team workspaces",
     ],
   },
   {
