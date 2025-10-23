@@ -1,33 +1,49 @@
-
-import { BookOpen, Video, FileText, Compass, HelpCircle } from "lucide-react";
+import { BookOpen, Video, FileText, Compass, HelpCircle, Users } from "lucide-react";
 import Link from "next/link";
 import {
   Card,
   CardHeader,
   CardTitle,
+  CardDescription,
 } from "@/components/ui/card";
 
 const resources = [
   {
     icon: BookOpen,
     title: "Quick Start Guide",
+    description: "Build and deploy your first AI agent.",
     href: "/docs/quick-start",
   },
   {
     icon: Video,
     title: "Demo Videos",
+    description: "See the AX platform in action.",
     href: "/demos",
   },
   {
     icon: Compass,
     title: "Documentation",
+    description: "Explore guides, tutorials, and API references.",
     href: "/docs",
   },
   {
     icon: FileText,
     title: "Blog",
+    description: "Insights, tutorials, and updates from the AX team.",
     href: "/blog",
   },
+  {
+    icon: HelpCircle,
+    title: "FAQ",
+    description: "Find answers to frequently asked questions.",
+    href: "/faq",
+  },
+  {
+    icon: Users,
+    title: "Discord & Support",
+    description: "Join our community and get help from the team.",
+    href: "/docs/discord-and-support",
+  }
 ];
 
 const ResourcesSection = () => {
@@ -42,21 +58,24 @@ const ResourcesSection = () => {
             Get started quickly with our guides and demos.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {resources.map((resource) => (
             <Link
               href={resource.href}
               key={resource.title}
               className="block group h-full"
             >
-              <Card className="p-4 rounded-lg border border-border bg-background/50 hover:border-primary transition-all duration-300 h-full">
-                <CardHeader className="flex flex-row items-center justify-start gap-4 p-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-md bg-accent/10 text-accent">
-                    <resource.icon className="h-5 w-5" />
+              <Card className="p-6 rounded-lg border border-border bg-background/50 hover:border-primary transition-all duration-300 h-full">
+                <CardHeader className="p-0">
+                  <div className="flex items-center gap-4 mb-3">
+                    <resource.icon className="h-6 w-6 text-accent" />
+                    <CardTitle className="text-xl font-semibold font-headline group-hover:text-primary">
+                      {resource.title}
+                    </CardTitle>
                   </div>
-                  <CardTitle className="text-lg font-semibold font-headline">
-                    {resource.title}
-                  </CardTitle>
+                  <CardDescription>
+                    {resource.description}
+                  </CardDescription>
                 </CardHeader>
               </Card>
             </Link>

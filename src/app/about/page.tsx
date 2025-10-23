@@ -102,7 +102,7 @@ export default function AboutPage() {
              <div>
                 <h3 className="text-2xl font-bold font-headline mb-3 text-primary">Where We Are Now</h3>
                 <p>
-                  AX is currently in public beta, with an active and growing community of early adopters. We're onboarding new users, collecting feedback, and refining the platform for a full commercial launch later this year.
+                  AX is currently in Early Access, with an active and growing community of early adopters. We're onboarding new users, collecting feedback, and refining the platform for a full commercial launch later this year.
                 </p>
             </div>
           </CardContent>
