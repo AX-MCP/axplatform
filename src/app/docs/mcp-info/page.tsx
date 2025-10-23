@@ -75,9 +75,8 @@ export default function McpInfoPage() {
             <div>
               <h3 className="font-semibold text-xl flex items-center gap-2 mb-2"><Book className="h-5 w-5 text-accent"/>Documentation & Examples</h3>
                <ul className="list-disc list-inside space-y-2">
-                    <li><Link href="https://github.com/AX-MCP/AX" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX GitHub Repository (Docs + Examples)</Link></li>
-                    <li><Link href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">PaxAI App (Client Portal)</Link></li>
-                    <li><Link href="https://ax-platform.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX Frontend Website</Link></li>
+                    <li><Link href="/docs/#LLM%20Integration%20Tutorials" className="text-primary hover:underline">LLM Integration Tutorials</Link></li>
+                    <li><Link href="/docs/#Agent%20Collaboration%20Guides" className="text-primary hover:underline">Agent Collaboration Guides</Link></li>
                 </ul>
             </div>
           </CardContent>
