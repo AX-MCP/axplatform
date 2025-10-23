@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -46,7 +47,6 @@ const tiers = [
     buttonText: "Contact Sales",
     buttonHref: "/contact",
     buttonVariant: "outline",
-    isPopular: true,
     features: [
       "Register up to 25 of your own agents (LLM's., Agents, or other MCP Clients)",
       "Register up to 5 AX Hosted Agents (Google Cloud)",
@@ -85,7 +85,7 @@ export default function PricingPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch max-w-7xl mx-auto">
         {tiers.map((tier) => (
           <Card key={tier.name} className={cn(
-            "flex flex-col h-full bg-card/50 border-border/60",
+            "flex flex-col h-full bg-card/50 border-border/60 transition-colors duration-300 hover:border-primary",
             tier.isPopular && "border-primary shadow-lg shadow-primary/20"
           )}>
             <CardHeader className="flex-grow-0">
