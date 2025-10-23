@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, Linkedin, Twitter, Github, Award } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,6 +11,7 @@ const teamMembers = [
     role: "Lead Product Engineer",
     email: "jacob.taunton@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/jacob-taunton-cloudengineer/",
+    credlyUrl: "https://www.credly.com/users/jacob-taunton/badges#credly",
     about: "Experienced Security Engineer with 15+ years in cybersecurity and 4+ years in Generative AI. Deep expertise in Model Context Protocol (MCP), function calling, and agent frameworks.",
     avatarUrl: "https://picsum.photos/seed/jacob-taunton/200/200",
   },
@@ -20,6 +21,7 @@ const teamMembers = [
     role: "Product Engineering and Business Development",
     email: "michael.schecht@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/michael-schecht/",
+    credlyUrl: "https://www.credly.com/users/michael-schecht/badges#credly",
     about: "Security Engineer with 12+ years of experience specializing in Identity & Access Management (IAM). Focused on developing AI-driven automation for secure enterprise workflows.",
     avatarUrl: "https://picsum.photos/seed/michael-schecht/200/200",
   },
@@ -67,6 +69,11 @@ export default function TeamPage() {
                   <Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                     <Linkedin className="h-5 w-5" />
                   </Link>
+                  {member.credlyUrl && (
+                    <Link href={member.credlyUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                      <Award className="h-5 w-5" />
+                    </Link>
+                  )}
                 </div>
               </CardContent>
             </Card>
