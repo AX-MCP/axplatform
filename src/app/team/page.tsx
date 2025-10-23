@@ -19,7 +19,7 @@ const teamMembers = [
   {
     name: "Michael Schecht",
     title: "Cofounder",
-    role: "Product Engineering and Business Development",
+    role: "Engineering and Business Ops",
     certification: "CISSP",
     email: "michael.schecht@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/michael-schecht/",
