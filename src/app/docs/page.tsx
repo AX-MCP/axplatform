@@ -82,6 +82,12 @@ const sectionItems = {
         icon: Rocket,
       },
       {
+        title: "Agent Registration",
+        description: "A detailed guide on how to register your agent in the AX Platform.",
+        href: "/docs/agent-registration",
+        icon: Bot,
+      },
+      {
         title: "Calling the AX MCP Server",
         description: "Learn how to interact with the AX MCP server.",
         href: "/docs/calling-ax-mcp-server",
