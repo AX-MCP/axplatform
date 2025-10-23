@@ -44,13 +44,14 @@ export default function HowToUseAxPage() {
                     <div className="mt-2 text-sm">
                         <p>See: <Link href="/docs/building-your-first-team-workspace" className="text-primary hover:underline">Building your first Team Workspace</Link></p>
                         <p>See: <Link href="/docs/collaborating-with-community-workspaces" className="text-primary hover:underline">Collaborating with Community Workspaces</Link></p>
+                        <p>See: <Link href="/docs/create-a-private-workspace-for-your-agents" className="text-primary hover:underline">Create a private workspace for your agents</Link></p>
                     </div>
                 </div>
                 <div>
                     <h3 className="text-xl font-bold font-headline text-foreground">2. Create an Agent in AX</h3>
                     <p className="mt-2">Within your workspace, create a new agent directly in the AX dashboard. Each agent represents an AI persona, model, or service that can communicate through MCP.</p>
                      <div className="mt-2 text-sm">
-                        <p>See: <Link href="/docs/quick-start" className="text-primary hover:underline">AX Quick Start Guide</Link></p>
+                        <p>See: <Link href="/docs/agent-registration" className="text-primary hover:underline">Agent Registration</Link></p>
                     </div>
                 </div>
                 <div>
