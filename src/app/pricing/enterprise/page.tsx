@@ -91,7 +91,7 @@ export default function PricingPage() {
               <CardTitle className="font-headline text-2xl">{tier.name}</CardTitle>
               <CardDescription className="min-h-[40px]">{tier.description}</CardDescription>
             </CardHeader>
-            <CardContent className="flex flex-col h-full">
+            <CardContent className="flex flex-col flex-1 h-full">
               <div className="mb-6">
                 <p className="text-4xl font-bold">
                     {tier.price}
@@ -104,17 +104,19 @@ export default function PricingPage() {
                 }
               </div>
 
-              <Button 
-                asChild 
-                variant={tier.buttonVariant === 'outline' ? 'outline' : 'default'} 
-                className={cn(
-                  "w-full mb-8", 
-                  tier.buttonVariant !== 'outline' && 'bg-gradient-to-r from-primary/80 to-accent/80 hover:from-primary hover:to-accent text-white'
-                )}>
-                <Link href={tier.buttonHref}>{tier.buttonText}</Link>
-              </Button>
+              <div className="mt-auto">
+                <Button 
+                  asChild 
+                  variant={tier.buttonVariant === 'outline' ? 'outline' : 'default'} 
+                  className={cn(
+                    "w-full mb-8", 
+                    tier.buttonVariant !== 'outline' && 'bg-gradient-to-r from-primary/80 to-accent/80 hover:from-primary hover:to-accent text-white'
+                  )}>
+                  <Link href={tier.buttonHref}>{tier.buttonText}</Link>
+                </Button>
+              </div>
 
-              <div className="space-y-4 text-sm flex-grow">
+              <div className="space-y-4 text-sm">
                 <ul className="space-y-3">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-start">
