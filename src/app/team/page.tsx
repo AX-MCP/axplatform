@@ -14,7 +14,7 @@ const teamMembers = [
     linkedinUrl: "https://www.linkedin.com/in/jacob-taunton-cloudengineer/",
     credlyUrl: "https://www.credly.com/users/jacob-taunton/badges#credly",
     about: "Experienced Security Engineer with 15+ years in cybersecurity and 4+ years in Generative AI. Deep expertise in Model Context Protocol (MCP), function calling, and agent frameworks.",
-    avatarUrl: "/images/team/jacob.png",
+  avatarUrl: "/images/team/Jacob.jpeg",
   },
   {
     name: "Michael Schecht",
@@ -25,7 +25,7 @@ const teamMembers = [
     linkedinUrl: "https://www.linkedin.com/in/michael-schecht/",
     credlyUrl: "https://www.credly.com/users/michael-schecht/badges#credly",
     about: "Security Engineer with 12+ years of experience specializing in Identity & Access Management (IAM). Focused on developing AI-driven automation for secure enterprise workflows.",
-    avatarUrl: "/images/team/michael.png",
+  avatarUrl: "/images/team/Michael.jpeg",
   },
   {
     name: "Heath Dorn",
@@ -35,7 +35,7 @@ const teamMembers = [
     email: "heath.dorn@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/heathdorn/",
     about: "Agile DevSecOps leader with 15+ years of experience in secure software engineering. Specializes in custom AI applications, including Voice and RAG models.",
-    avatarUrl: "/images/team/heath.png",
+  avatarUrl: "/images/team/Heath.jpeg",
   },
 ];
 
