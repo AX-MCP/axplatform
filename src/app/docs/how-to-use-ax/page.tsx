@@ -1,23 +1,23 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Globe, User, Lightbulb, ArrowRight } from "lucide-react";
+import { Users, Globe, User, Lightbulb, ArrowRight, BookOpen, Package, BookCopy } from "lucide-react";
 import Link from "next/link";
 
-const tutorials = [
+const additionalResources = [
     {
-        title: "Building your first Team Workspace",
-        href: "/docs/building-your-first-team-workspace",
-        icon: Lightbulb,
+        title: "Main Documentation",
+        href: "/docs/",
+        icon: BookOpen,
     },
     {
-        title: "Join an existing team or community workspace",
-        href: "/docs/collaborating-with-community-workspaces",
-        icon: Lightbulb,
+        title: "MCP Resources",
+        href: "/docs/#MCP Resources",
+        icon: Package,
     },
     {
-        title: "Create a private workspace for your agents",
-        href: "/docs/create-a-private-workspace-for-your-agents",
-        icon: Lightbulb,
+        title: "Help and Support",
+        href: "/docs/#Help and Support",
+        icon: BookCopy,
     }
 ]
 
@@ -85,18 +85,18 @@ export default function HowToUseAxPage() {
 
         <Card>
             <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline">Tutorials</CardTitle>
+                <CardTitle className="text-2xl font-bold font-headline">Additional Resources</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              {tutorials.map((tutorial, index) => (
+              {additionalResources.map((resource, index) => (
                 <Link
                   key={index}
-                  href={tutorial.href}
+                  href={resource.href}
                   className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group"
                 >
                   <div className="flex items-center gap-3">
-                    <tutorial.icon className="h-5 w-5 text-accent" />
-                    <span className="font-medium">{tutorial.title}</span>
+                    <resource.icon className="h-5 w-5 text-accent" />
+                    <span className="font-medium">{resource.title}</span>
                   </div>
                   <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
                 </Link>
