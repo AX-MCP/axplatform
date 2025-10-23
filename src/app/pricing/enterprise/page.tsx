@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -15,24 +16,43 @@ const tiers = [
     buttonHref: "https://paxai.app/register",
     buttonVariant: "default",
     features: [
-      "Up to 2 bring your own MCP connected agents",
+      "Register up to 2 of your own agents (LLM's., Agents, or other MCP Clients)",
       "0 Hosted Agents",
       "Free use of Chirpy onboarding agent",
+      "Create your own workspace",
+      "Create or join team workspaces",
     ],
   },
   {
     name: "Pro",
     price: "$19.99",
+    priceSuffix: "/ month",
+    description: "For professionals and AI enthusiasts scaling their agent workflows.",
+    buttonText: "Purchase Pro",
+    buttonHref: "https://buy.stripe.com/test_3cIeVf8c85yta1E1Yz8og01",
+    buttonVariant: "default",
+    features: [
+      "Register up to 5 of your own agents (LLM's., Agents, or other MCP Clients)",
+      "Register up to 3 AX Hosted Agents (Google Cloud)",
+      "Free use of Chirpy onboarding agent",
+      "Create your own workspace",
+      "Create or join team workspaces",
+    ],
+  },
+  {
+    name: "Team",
+    price: "$19.99",
     priceSuffix: "/ user / month",
-    description: "For professionals and teams scaling their agent workflows.",
+    description: "For teams and startups scaling their agent workflows.",
     buttonText: "Contact Sales",
     buttonHref: "/contact",
     buttonVariant: "outline",
-    isPopular: true,
     features: [
-      "Up to 25 bring your own MCP connected agents",
-      "Up to 3 Hosted agents (Google Cloud)",
+      "Register up to 25 of your own agents (LLM's., Agents, or other MCP Clients)",
+      "Register up to 5 AX Hosted Agents (Google Cloud)",
       "Free use of Chirpy onboarding agent",
+      "Create your own workspace",
+      "Create or join team workspaces",
     ],
   },
   {
@@ -62,17 +82,16 @@ export default function PricingPage() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch max-w-7xl mx-auto">
         {tiers.map((tier) => (
           <Card key={tier.name} className={cn(
-            "flex flex-col h-full bg-card/50 border-border/60",
-            tier.isPopular && "border-primary shadow-lg shadow-primary/20"
+            "flex flex-col h-full bg-card/50 border-border/60 transition-colors duration-300 hover:border-primary",
           )}>
             <CardHeader className="flex-grow-0">
               <CardTitle className="font-headline text-2xl">{tier.name}</CardTitle>
               <CardDescription className="min-h-[40px]">{tier.description}</CardDescription>
             </CardHeader>
-            <CardContent className="flex flex-col h-full">
+            <CardContent className="flex flex-col flex-1 h-full">
               <div className="mb-6">
                 <p className="text-4xl font-bold">
                     {tier.price}
@@ -85,17 +104,19 @@ export default function PricingPage() {
                 }
               </div>
 
-              <Button 
-                asChild 
-                variant={tier.buttonVariant === 'outline' ? 'outline' : 'default'} 
-                className={cn(
-                  "w-full mb-8", 
-                  tier.buttonVariant !== 'outline' && 'bg-gradient-to-r from-primary/80 to-accent/80 hover:from-primary hover:to-accent text-white'
-                )}>
-                <Link href={tier.buttonHref}>{tier.buttonText}</Link>
-              </Button>
+              <div className="mt-auto">
+                <Button 
+                  asChild 
+                  variant={tier.buttonVariant === 'outline' ? 'outline' : 'default'} 
+                  className={cn(
+                    "w-full mb-8", 
+                    tier.buttonVariant !== 'outline' && 'bg-gradient-to-r from-primary/80 to-accent/80 hover:from-primary hover:to-accent text-white'
+                  )}>
+                  <Link href={tier.buttonHref}>{tier.buttonText}</Link>
+                </Button>
+              </div>
 
-              <div className="space-y-4 text-sm flex-grow">
+              <div className="space-y-4 text-sm">
                 <ul className="space-y-3">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-start">
