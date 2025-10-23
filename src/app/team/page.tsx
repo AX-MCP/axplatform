@@ -9,6 +9,7 @@ const teamMembers = [
     name: "Jacob Taunton",
     title: "Founder / CEO",
     role: "Lead Product Engineer",
+    certification: "AWS Certified",
     email: "jacob.taunton@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/jacob-taunton-cloudengineer/",
     credlyUrl: "https://www.credly.com/users/jacob-taunton/badges#credly",
@@ -19,6 +20,7 @@ const teamMembers = [
     name: "Michael Schecht",
     title: "Cofounder",
     role: "Product Engineering and Business Development",
+    certification: "CISSP",
     email: "michael.schecht@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/michael-schecht/",
     credlyUrl: "https://www.credly.com/users/michael-schecht/badges#credly",
@@ -29,6 +31,7 @@ const teamMembers = [
     name: "Heath Dorn",
     title: "Cofounder",
     role: "Strategy, Partnerships, and Go-to-Market",
+    certification: "Certified DevOps Professional",
     email: "heath.dorn@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/heathdorn/",
     about: "Agile DevSecOps leader with 15+ years of experience in secure software engineering. Specializes in custom AI applications, including Voice and RAG models.",
@@ -60,8 +63,9 @@ export default function TeamPage() {
                 </div>
                 <h2 className="text-2xl font-bold font-headline text-foreground">{member.name}</h2>
                 <p className="font-semibold text-accent mt-2">{member.title}</p>
-                <p className="text-base text-muted-foreground mt-4 mb-6 flex-grow">{member.about}</p>
-                <p className="font-semibold text-muted-foreground mb-6">{member.role}</p>
+                <p className="font-semibold text-muted-foreground mt-4 mb-4">{member.role}</p>
+                {member.certification && <p className="font-semibold text-muted-foreground mb-6">{member.certification}</p>}
+                <p className="text-base text-muted-foreground mb-6 flex-grow">{member.about}</p>
                 <div className="flex space-x-4">
                    <a href={`mailto:${member.email}`} className="text-muted-foreground hover:text-primary">
                     <Mail className="h-5 w-5" />
