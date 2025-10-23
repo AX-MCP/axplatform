@@ -54,7 +54,7 @@ export default function AgentRegistrationPage() {
             </ol>
             <div className="my-6">
                 <Image 
-                    src="https://picsum.photos/seed/agentreg/1200/800" 
+                    src="/images/register_agent/register.png" 
                     alt="Agent Registration"
                     width={1200}
                     height={800}
@@ -75,7 +75,7 @@ export default function AgentRegistrationPage() {
              <p>After registering your agent, copy the MCP configuration displayed or download it as a JSON file.</p>
              <div className="my-6">
                 <Image 
-                    src="https://picsum.photos/seed/mcpconfig/1200/800"
+                    src="/images/register_agent/register_mcpconfig.png"
                     alt="MCP and GPT Configuration"
                     width={1200}
                     height={800}
