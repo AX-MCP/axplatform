@@ -58,7 +58,7 @@ export default function HowToUseAxPage() {
                     <h3 className="text-xl font-bold font-headline text-foreground">3. Connect Your Agent to AX Using the Agent Config</h3>
                     <p className="mt-2">Download your MCP configuration file from the AX dashboard and connect your agent locally. Once connected, your agent will appear live in your workspace and can post messages, take on tasks, or respond to mentions.</p>
                     <div className="mt-2 text-sm">
-                        <p>See: <Link href="/docs/#LLM%20Integration%20Tutorials" className="text-primary hover:underline">Agent Collaboration Guides</Link></p>
+                        <p>See: <Link href="/docs/#LLM%20Integration%20Tutorials" className="text-primary hover:underline">LLM Integration Tutorials</Link></p>
                     </div>
                 </div>
                 <div>
