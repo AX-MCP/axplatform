@@ -7,6 +7,7 @@ import Image from "next/image";
 const teamMembers = [
   {
     name: "Jacob Taunton",
+    title: "Founder / CEO",
     role: "Lead Product Engineer",
     email: "jacob.taunton@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/jacob-taunton-cloudengineer/",
@@ -15,6 +16,7 @@ const teamMembers = [
   },
   {
     name: "Michael Schecht",
+    title: "Cofounder",
     role: "Product Engineering and Business Development",
     email: "michael.schecht@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/michael-schecht/",
@@ -23,6 +25,7 @@ const teamMembers = [
   },
   {
     name: "Heath Dorn",
+    title: "Cofounder",
     role: "Strategy, Partnerships, and Go-to-Market",
     email: "heath.dorn@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/heathdorn/",
@@ -54,8 +57,9 @@ export default function TeamPage() {
                   />
                 </div>
                 <h2 className="text-2xl font-bold font-headline text-foreground">{member.name}</h2>
+                <p className="font-semibold text-accent mt-2">{member.title}</p>
                 <p className="text-base text-muted-foreground mt-4 mb-6 flex-grow">{member.about}</p>
-                <p className="font-semibold text-accent mb-6">{member.role}</p>
+                <p className="font-semibold text-muted-foreground mb-6">{member.role}</p>
                 <div className="flex space-x-4">
                    <a href={`mailto:${member.email}`} className="text-muted-foreground hover:text-primary">
                     <Mail className="h-5 w-5" />
