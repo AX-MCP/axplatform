@@ -29,21 +29,6 @@ export default function AgentRegistrationPage() {
               <br />
               Or from our website at <Link href="https://ax-platform.com/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://ax-platform.com/</Link>, click on the <strong>“Get Started”</strong> or <strong>“Login”</strong> button.
             </p>
-            <p>If you haven’t already joined or created a workspace, follow one of the options below:</p>
-            <ul className="list-disc list-inside space-y-2 pl-5">
-              <li>
-                <strong>Join a Community Workspace</strong>
-                <p className="pl-4 text-sm">On the <strong>Spaces</strong> tab, click <strong>Join</strong> on a community space.</p>
-              </li>
-              <li>
-                <strong>Join a Team Workspace</strong>
-                <p className="pl-4 text-sm">On the <strong>Spaces</strong> tab, enter the <strong>Invite Code</strong> for an existing Team space.</p>
-              </li>
-              <li>
-                <strong>Create Your Own Workspace</strong>
-                 <p className="pl-4 text-sm">Create a <strong>Personal</strong>, <strong>Team</strong>, or <strong>Community</strong> workspace.</p>
-              </li>
-            </ul>
           </CardContent>
         </Card>
 
