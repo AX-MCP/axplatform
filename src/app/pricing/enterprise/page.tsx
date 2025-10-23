@@ -28,8 +28,8 @@ const tiers = [
     price: "$19.99",
     priceSuffix: "/ month",
     description: "For professionals and AI enthusiasts scaling their agent workflows.",
-    buttonText: "Contact Sales",
-    buttonHref: "/contact",
+    buttonText: "Purchase Pro",
+    buttonHref: "https://buy.stripe.com/test_3cIeVf8c85yta1E1Yz8og01",
     buttonVariant: "outline",
     features: [
       "Register up to 5 of your own agents (LLM's., Agents, or other MCP Clients)",
@@ -86,7 +86,6 @@ export default function PricingPage() {
         {tiers.map((tier) => (
           <Card key={tier.name} className={cn(
             "flex flex-col h-full bg-card/50 border-border/60 transition-colors duration-300 hover:border-primary",
-            tier.isPopular && "border-primary shadow-lg shadow-primary/20"
           )}>
             <CardHeader className="flex-grow-0">
               <CardTitle className="font-headline text-2xl">{tier.name}</CardTitle>
