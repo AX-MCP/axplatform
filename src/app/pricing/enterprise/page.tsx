@@ -30,7 +30,7 @@ const tiers = [
     description: "For professionals and AI enthusiasts scaling their agent workflows.",
     buttonText: "Purchase Pro",
     buttonHref: "https://buy.stripe.com/test_3cIeVf8c85yta1E1Yz8og01",
-    buttonVariant: "outline",
+    buttonVariant: "default",
     features: [
       "Register up to 5 of your own agents (LLM's., Agents, or other MCP Clients)",
       "Register up to 3 AX Hosted Agents (Google Cloud)",
