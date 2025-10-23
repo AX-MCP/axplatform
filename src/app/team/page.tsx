@@ -1,130 +1,71 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Award, Linkedin } from "lucide-react";
+import { Mail, Linkedin, Twitter, Github } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const teamMembers = [
   {
     name: "Jacob Taunton",
-    role: ["Founder / CEO", "Lead Product Engineer"],
+    role: "Lead Product Engineer",
     email: "jacob.taunton@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/jacob-taunton-cloudengineer/",
-    about: [
-        "Experienced **Security Engineer** with 15+ years in cybersecurity and 4+ years in **Generative AI**.",
-        "Deep expertise in **Model Context Protocol (MCP)**, function calling, and **agent frameworks** (AutoGen, CrewAI, LangGraph).",
-        "Combines AI innovation with strong enterprise-level **security design** and compliance.",
-    ],
-    certifications: [
-      "AWS Certified AI Practitioner",
-      "AWS Certified Security",
-      "AWS Certified Solutions Architect",
-    ],
+    about: "Experienced Security Engineer with 15+ years in cybersecurity and 4+ years in Generative AI. Deep expertise in Model Context Protocol (MCP), function calling, and agent frameworks.",
+    avatarUrl: "https://picsum.photos/seed/jacob-taunton/200/200",
   },
   {
     name: "Michael Schecht",
-    role: ["Co-Founder - Product Engineering", "and Business Development"],
+    role: "Product Engineering and Business Development",
     email: "michael.schecht@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/michael-schecht/",
-    about: [
-        "**Security Engineer** with 12+ years of experience specializing in **Identity & Access Management (IAM)**.",
-        "Focused on developing **AI-driven automation** for secure enterprise workflows.",
-        "Skilled in designing and integrating **agent-based systems** for IAM operations.",
-        "Experienced in **cross-domain identity orchestration** and zero-trust frameworks.",
-    ],
-    certifications: [
-      "Certified Information Systems Security Professional (CISSP)",
-    ],
+    about: "Security Engineer with 12+ years of experience specializing in Identity & Access Management (IAM). Focused on developing AI-driven automation for secure enterprise workflows.",
+    avatarUrl: "https://picsum.photos/seed/michael-schecht/200/200",
   },
   {
     name: "Heath Dorn",
-    role: ["Co-Founder - Strategy, Partnerships,", "and Go-to-Market"],
+    role: "Strategy, Partnerships, and Go-to-Market",
     email: "heath.dorn@ax-platform.com",
     linkedinUrl: "https://www.linkedin.com/in/heathdorn/",
-    about: [
-      "Agile **DevSecOps leader** with 15+ years of experience in secure software engineering.",
-      "Specializes in **custom AI applications**, including Voice and **RAG (Retrieval-Augmented Generation)** models.",
-      "Focused on **DoD-grade AI architecture** and **MCP protocol implementation**.",
-      "Expert in integrating **security, automation, and AI** within scalable DevOps pipelines.",
-    ],
-    certifications: [
-      "Certified DevOps Professional",
-      "Scaled Agile Program Consultant (SPC)",
-      "TS/SCI Security Clearance",
-    ],
+    about: "Agile DevSecOps leader with 15+ years of experience in secure software engineering. Specializes in custom AI applications, including Voice and RAG models.",
+    avatarUrl: "https://picsum.photos/seed/heath-dorn/200/200",
   },
 ];
-
-function renderMarkdown(text: string) {
-    const boldRegex = /\*\*(.*?)\*\*/g;
-    return text.replace(boldRegex, "<strong>$1</strong>");
-}
-
 
 export default function TeamPage() {
   return (
     <div className="container py-20 md:py-24">
       <div className="max-w-screen-xl mx-auto">
-        <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline">Meet the AX Team</h1>
+        <header className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold font-headline text-primary">Meet Our Team</h1>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
           {teamMembers.map((member) => (
-            <div key={member.name} className="flex flex-col h-full gap-4">
-                <Card className="bg-card/50 flex flex-col relative overflow-hidden">
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-accent"></div>
-                    <CardHeader className="pt-8">
-                    <CardTitle className="text-2xl font-bold font-headline">{member.name}</CardTitle>
-                    <div>
-                      {member.role.map((line, index) => (
-                        <p key={index} className="text-muted-foreground font-semibold text-lg">{line}</p>
-                      ))}
-                    </div>
-                    </CardHeader>
-                </Card>
-              <Card className="bg-card/50 flex flex-col flex-grow">
-                  <CardHeader>
-                    <CardTitle className="text-xl font-bold font-headline">Background</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex flex-col flex-grow">
-                      <div className="flex-grow">
-                          <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-                              {member.about.map((point, i) => <li key={i} dangerouslySetInnerHTML={{ __html: renderMarkdown(point) }}/>)}
-                          </ul>
-                      </div>
-                  </CardContent>
-              </Card>
-              <Card className="bg-card/50">
-                <CardHeader>
-                    <CardTitle className="text-xl font-bold font-headline">Contact</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <div className="flex flex-col items-start gap-2">
-                      <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-primary hover:underline">
-                          <Mail className="h-4 w-4" />
-                          Email
-                      </a>
-                      <Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-primary hover:underline">
-                          <Linkedin className="h-4 w-4" />
-                          LinkedIn
-                      </Link>
-                    </div>
-                </CardContent>
-              </Card>
-              <Card className="bg-card/50">
-                <CardContent className="pt-6">
-                    <h3 className="font-semibold text-lg font-headline mb-2">Certifications</h3>
-                    <ul className="space-y-2 text-muted-foreground">
-                        {member.certifications.map((cert) => (
-                        <li key={cert} className="flex items-center gap-3">
-                            <Award className="h-5 w-5 text-accent" />
-                            <span>{cert}</span>
-                        </li>
-                        ))}
-                    </ul>
-                </CardContent>
-              </Card>
-            </div>
+            <Card key={member.name} className="bg-card text-center rounded-lg shadow-lg transition-all duration-300 hover:shadow-primary/20 hover:-translate-y-2 flex flex-col h-full">
+              <CardContent className="p-8 flex flex-col items-center flex-grow">
+                <div className="relative mb-6">
+                  <Image
+                    src={member.avatarUrl}
+                    alt={`Portrait of ${member.name}`}
+                    width={120}
+                    height={120}
+                    className="rounded-full border-4 border-accent"
+                    data-ai-hint="professional headshot"
+                  />
+                </div>
+                <h2 className="text-2xl font-bold font-headline text-foreground">{member.name}</h2>
+                <p className="text-base text-muted-foreground mt-4 mb-6 flex-grow">{member.about}</p>
+                <p className="font-semibold text-accent mb-6">{member.role}</p>
+                <div className="flex space-x-4">
+                   <a href={`mailto:${member.email}`} className="text-muted-foreground hover:text-primary">
+                    <Mail className="h-5 w-5" />
+                  </a>
+                  <Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                    <Linkedin className="h-5 w-5" />
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
