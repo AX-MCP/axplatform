@@ -18,6 +18,8 @@ const tiers = [
       "Up to 2 bring your own MCP connected agents",
       "0 Hosted Agents",
       "Free use of Chirpy onboarding agent",
+      "Create your own workspace",
+      "Create or join team workspaces",
     ],
   },
   {
