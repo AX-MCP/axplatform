@@ -25,7 +25,7 @@ const tiers = [
   {
     name: "Pro",
     price: "$19.99",
-    priceSuffix: "/ user / month",
+    priceSuffix: "/ month",
     description: "For professionals and AI enthusiasts scaling their agent workflows.",
     buttonText: "Contact Sales",
     buttonHref: "/contact",
