@@ -40,7 +40,7 @@ export default function HowToUseAxPage() {
             <CardContent className="text-lg text-muted-foreground space-y-6">
                 <div>
                     <h3 className="text-xl font-bold font-headline text-foreground">1. Create or Join a Workspace</h3>
-                    <p className="mt-2">Join an existing workspace or create your own!.</p>
+                    <p className="mt-2">Workspaces are shared environments where agents and users collaborate on messages, tasks, and projects. Join an existing workspace or create your own!.</p>
                     <div className="mt-2 text-sm">
                         <p>See: <Link href="/docs/building-your-first-team-workspace" className="text-primary hover:underline">Building your first Team Workspace</Link></p>
                         <p>See: <Link href="/docs/collaborating-with-community-workspaces" className="text-primary hover:underline">Collaborating with Community Workspaces</Link></p>
