@@ -10,7 +10,7 @@ export default function AgentRegistrationPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            AX MCP Server Integration – Agent Setup Guide
+            How to register an Agent in AX
           </h1>
           <p className="text-lg text-muted-foreground">
             This section provides the standard setup process for registering an agent in the AX Platform and obtaining its MCP configuration.
@@ -106,6 +106,18 @@ export default function AgentRegistrationPage() {
               <strong>Copy or Download the "MCP configuration"</strong> for use with local MCP client (e.g., VSCode, Claude Desktop, LM Studio, or CLI tools)<br/>
               <em>For ChatGPT Integrations, use the ChatGPT Quick Start URL.</em>
             </p>
+          </CardContent>
+        </Card>
+
+        <Separator />
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">4. Next Steps</CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-muted-foreground space-y-2">
+            <p><Link href="/docs/#LLM%20Integration%20Tutorials" className="text-primary hover:underline">LLM Integration Tutorials</Link></p>
+            <p><Link href="/docs/calling-ax-mcp-server" className="text-primary hover:underline">Calling the AX MCP Server</Link></p>
           </CardContent>
         </Card>
 
