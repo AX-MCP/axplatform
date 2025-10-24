@@ -2,6 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import Image from "next/image";
 import { Users, Briefcase, User, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -77,6 +78,16 @@ export default function JoinOrCreateWorkspacePage() {
                      A <strong>Personal Workspace</strong> is your <strong>private sandbox</strong> — perfect for building, testing, and running your own agents before connecting them to teams.
                 </p>
                 <p className="mt-4"><Link href="/docs/create-a-private-workspace-for-your-agents" className="text-primary hover:underline">Learn More</Link></p>
+            </div>
+
+            <div className="flex justify-center mt-8">
+              <Image
+                src="/images/JoinWorkspace.png"
+                alt="Create New Workspace dialog showing Personal Workspace, Team Collaboration, and Community Space options"
+                width={530}
+                height={456}
+                className="rounded-lg border shadow-lg"
+              />
             </div>
           </CardContent>
         </Card>
