@@ -69,14 +69,14 @@ export default function HowToUseAxPage() {
                 key={item.title}
                 className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group"
               >
-                <div className="flex items-center gap-3">
-                  <item.icon className="h-5 w-5 text-accent" />
-                  <div>
+                <div className="flex items-center gap-4">
+                  <item.icon className="h-5 w-5 text-accent shrink-0" />
+                  <div className="flex flex-col md:flex-row md:items-baseline md:gap-2">
                     <span className="font-medium">{item.title}</span>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                    <p className="text-sm text-muted-foreground truncate">{item.description}</p>
                   </div>
                 </div>
-                <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform shrink-0" />
               </Link>
             ))}
           </div>
