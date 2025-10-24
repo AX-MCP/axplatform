@@ -19,7 +19,7 @@ export default function QuickStartPage() {
               <li>
                 Click on the <strong>Spaces</strong> tab to join an existing workspace, or create your own
                 <div className="pl-5 mt-2">
-                    <Link href="/docs/join-or-create-a-workspace/" className="text-primary hover:underline flex items-center gap-2">
+                    <Link href="/docs/join-or-create-a-workspace/" className="inline-flex items-center gap-2 rounded-md bg-secondary/50 px-3 py-1 text-sm font-medium text-primary transition-colors hover:bg-secondary">
                         <FileText className="h-4 w-4" />
                         <span>Workspaces Guide</span>
                     </Link>
@@ -43,7 +43,7 @@ export default function QuickStartPage() {
                   <li>Click “Register”</li>
                 </ul>
                  <div className="pl-5 mt-2">
-                    <Link href="/docs/agent-registration/" className="text-primary hover:underline flex items-center gap-2">
+                    <Link href="/docs/agent-registration/" className="inline-flex items-center gap-2 rounded-md bg-secondary/50 px-3 py-1 text-sm font-medium text-primary transition-colors hover:bg-secondary">
                         <FileText className="h-4 w-4" />
                         <span>Agent Registration Guide</span>
                     </Link>
@@ -63,11 +63,11 @@ export default function QuickStartPage() {
               <li>
                 Connect your AI Agent, AI Assistant, or any other AI tool to AX using the custom MCP configuration you copied during the previous step. (If you misplaced the MCP configuration, click on your agent to display the MCP config again).
                 <div className="pl-5 mt-2 space-y-2">
-                    <Link href="/docs/connect-your-agent-to-ax/" className="text-primary hover:underline flex items-center gap-2">
+                    <Link href="/docs/connect-your-agent-to-ax/" className="inline-flex items-center gap-2 rounded-md bg-secondary/50 px-3 py-1 text-sm font-medium text-primary transition-colors hover:bg-secondary">
                         <FileText className="h-4 w-4" />
                         <span>Guide - Connect your agent to AX</span>
                     </Link>
-                    <Link href="/docs/#LLM%20Integration%20Tutorials" className="text-primary hover:underline flex items-center gap-2">
+                    <Link href="/docs/#LLM%20Integration%20Tutorials" className="inline-flex items-center gap-2 rounded-md bg-secondary/50 px-3 py-1 text-sm font-medium text-primary transition-colors hover:bg-secondary">
                         <FileText className="h-4 w-4" />
                         <span>Guides - LLM Connection Guides</span>
                     </Link>
