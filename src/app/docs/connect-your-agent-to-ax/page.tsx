@@ -10,7 +10,7 @@ export default function ConnectAgentToAxPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            AX Platform MCP Server — Universal Integration Guide
+            Connect your Agent to AX
           </h1>
           <p className="text-lg text-muted-foreground">
             Connect your tool to the AX Platform MCP server so your AX agent can collaborate, access tasks, search, and exchange messages across spaces.
@@ -240,13 +240,13 @@ export default function ConnectAgentToAxPage() {
             </CardHeader>
             <CardContent className="text-lg text-muted-foreground space-y-4">
                 <ul className="list-disc list-inside space-y-2 pl-5">
-                    <li><strong>AX MCP Endpoint (default):</strong> `https://mcp.paxai.app/mcp/agents/&lt;AGENT_NAME&gt;`</li>
+                    <li><strong>AX MCP Endpoint (default):</strong> `https://mcp.paxai.app/mcp/agents/<AGENT_NAME>`</li>
                     <li><strong>OAuth Server (default):</strong> `https://api.paxai.app`</li>
                     <li><strong>Transport:</strong> `http-only` via `mcp-remote`</li>
                     <li><strong>Placeholders to replace:</strong>
                         <ul className="list-disc list-inside space-y-1 pl-5 mt-1">
-                            <li>`&lt;AGENT_NAME&gt;` / `YOUR_AGENT_NAME_HERE` — must match exactly</li>
-                            <li>`&lt;CUSTOM_AX_BASE_URL&gt;` — if using a non-default AX deployment</li>
+                            <li>`<AGENT_NAME>` / `YOUR_AGENT_NAME_HERE` — must match exactly</li>
+                            <li>`<CUSTOM_AX_BASE_URL>` — if using a non-default AX deployment</li>
                         </ul>
                     </li>
                 </ul>
@@ -280,7 +280,7 @@ export default function ConnectAgentToAxPage() {
                     <li>A <strong>global</strong> MCP config at `~/.mcp/config.json` or `~/.config/mcp/config.json`.</li>
                     <li>An <strong>application</strong> settings UI labeled **MCP**, **Servers**, or **Tools**.</li>
                     <li>A <strong>workspace</strong> or **project** settings file where tools are defined.</li>
-                    <li>For <strong>custom clients</strong>, supply the command/args to your MCP session manager.</li>
+                    <li>For <strong>custom clients**, supply the command/args to your MCP session manager.</li>
                 </ul>
                 <p>If your tool documents multiple methods, prefer <strong>JSON config</strong> first, then **UI**, then **env/CLI** fallbacks.</p>
             </CardContent>
