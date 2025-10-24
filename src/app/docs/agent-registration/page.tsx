@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export default function AgentRegistrationPage() {
   return (
@@ -113,11 +115,15 @@ export default function AgentRegistrationPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold font-headline">4. Next Steps</CardTitle>
+            <CardTitle className="text-2xl font-bold font-headline">Next Steps</CardTitle>
           </CardHeader>
-          <CardContent className="text-lg text-muted-foreground space-y-2">
-            <p><Link href="/docs/#LLM%20Integration%20Tutorials" className="text-primary hover:underline">LLM Integration Tutorials</Link></p>
-            <p><Link href="/docs/calling-ax-mcp-server" className="text-primary hover:underline">Calling the AX MCP Server</Link></p>
+          <CardContent className="flex justify-center">
+            <Button asChild size="lg" className="w-full max-w-md">
+              <Link href="/docs/connect-your-agent-to-ax/">
+                Connect Your Agent to AX
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </CardContent>
         </Card>
 
