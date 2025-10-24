@@ -11,6 +11,125 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    title: "MCP Proxies: One Endpoint, Many Agents",
+    slug: "mcp-proxies-one-endpoint-many-agents",
+    author: "AX Team",
+    avatarUrl: "https://picsum.photos/seed/ax-team-mcp-proxies/40/40",
+    date: "2025-10-18",
+    excerpt: "Learn how MCP proxies let teams connect dozens (or hundreds) of Model Context Protocol servers through a single endpoint. We compare Rube, MetaMCP, and Zapier’s MCP tools, show integration tips, security best practices, and real-world use cases.",
+    content: [
+      "### Intro — Why MCP proxies matter",
+      "As multi-agent ecosystems grow, each agent or model often exposes its own MCP server endpoint. Managing dozens of endpoints becomes operationally painful: configuration sprawl, differing auth schemes, observability gaps, and race conditions when workflows must call multiple agents. MCP proxies solve that by offering a single **gateway endpoint** which routes to many MCP servers, normalizes auth & telemetry, and simplifies orchestration — exactly the kind of glue the AX Platform sits on top of to enable multi-agent collaboration.",
+      "### What is an MCP proxy?",
+      "An MCP proxy is a network/service layer that:",
+      "- exposes one stable public endpoint (or small set of endpoints) to clients,",
+      "- routes requests to one or many backend MCP servers,",
+      "- can normalize or translate auth (JWTs, API keys), transform payloads, enforce rate limits, and",
+      "- centralize logging, monitoring, and admission controls.",
+      "Think of it as a modern API gateway specialized for MCP traffic and multi-agent choreography.",
+      "### Quick comparison: Rube · MetaMCP · Zapier (MCP)",
+      "#### Rube (https://rube.app/)",
+      "**What it is:** A lightweight, developer-focused proxy/gateway for MCP ecosystems that aims to make connecting many MCP endpoints easy.",
+      "**Strengths:** Simple onboarding and single-endpoint routing, built-in connector patterns, and developer ergonomics for quickly wiring agents. Good for teams that want a low-friction gateway without reinventing auth and routing.",
+      "**When to pick:** Rapid prototyping, small-to-medium-scale multi-agent setups, and teams that want minimal ops overhead.",
+      "#### MetaMCP (https://github.com/metatool-ai/metamcp)",
+      "**What it is:** An open-source implementation/kit for MCP gateway and tooling. Provides code-first components to build custom proxies, adapters, and utilities.",
+      "**Strengths:** Full code control, extensibility, and transparency. Ideal when you need custom transformations, enterprise compliance, or to embed MCP proxying into CI/CD.",
+      "**When to pick:** You need customization, open-source control, or want to extend the proxy with custom adapters (e.g., special auth, auditing, or bespoke routing).",
+      "#### Zapier’s MCP tools (https://zapier.com/mcp)",
+      "**What it is:** A no-code / low-code integration layer for MCP — brings MCP events & actions into the Zapier ecosystem so you can trigger automations across hundreds of apps.",
+      "**Strengths:** Extremely fast for building cross-system automations without writing infrastructure. Great for business users and integrations like Slack, Gmail, ClickUp, etc.",
+      "**When to pick:** Non-engineering automation, quick cross-app workflows, or proof-of-concept integrations where you want external systems to react to agent events.",
+      "### How they work together (pattern)",
+      "A common architecture:",
+      "Client → **MCP Proxy (Rube / MetaMCP / Zapier as integration layer)** → multiple MCP servers (agents)",
+      "The proxy:",
+      "- validates incoming JWTs or API keys,",
+      "- maps client requests to target agent endpoints,",
+      "- applies rate limiting, retries, and transforms,",
+      "- optionally emits events to Zapier for cross-app automations,",
+      "- centralizes logs & traces.",
+      "### Simplifying your MCP configuration",
+      "One of the most immediate benefits of using an MCP proxy like **Rube** is how much it simplifies your client configuration.",
+      "Instead of maintaining dozens or hundreds of MCP server entries in your `.mcp.json` file, you only define **one proxy connection** — and the proxy dynamically provides access to the rest.",
+      "Below is an example `.mcp.json` file that shows this simplicity in action.",
+      "Here, the client only defines two entries: one for **Rube**, and one for **AX (hosted on PaxAI)**.",
+      "Behind the scenes, Rube connects to hundreds of other MCP servers you can instantly access to enhance AI agent collaboration.",
+      "```json",
+      `{
+  "mcpServers": {
+    "rube": {
+      "type": "http",
+      "url": "https://rube.app/mcp"
+    },
+    "ax-gcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@0.1.29",
+        "https://mcp.paxai.app/mcp/agents/AGENT_NAME",
+        "--transport",
+        "http-only",
+        "--oauth-server",
+        "https://api.paxai.app"
+      ]
+    }
+  }
+}`,
+      "```",
+      "#### Why this matters",
+      "- **Fewer connections, same reach:** Instead of manually registering every agent server, Rube gives your client a single point of entry to hundreds of MCP endpoints.",
+      "- **Centralized discovery:** The proxy maintains a directory or registry of agents you can discover dynamically, rather than hardcoding each one.",
+      "- **Zero-code scalability:** As your ecosystem grows, you don’t need to update client configs — new agents added behind Rube are instantly available.",
+      "- **Better collaboration:** By pairing AX and Rube, your agents can collaborate with many others via standardized, proxied MCP calls.",
+      "This approach aligns perfectly with AX’s mission of enabling **multi-agent collaboration at scale** — minimal configuration, maximum connectivity.",
+      "### Practical integration notes",
+      "- **Auth:** Centralize JWT issuance at the proxy. The proxy can mint short-lived tokens for downstream MCP servers and rotate keys for least-privilege operations.",
+      "- **Routing:** Use explicit agent registry (by agent ID or tag). MetaMCP is useful if you want a code-based registry; Rube may provide a UI/managed registry.",
+      "- **Observability:** Send unified traces (e.g., OpenTelemetry) from the proxy so you can trace multi-agent workflows across services.",
+      "- **Rate limits & quotas:** Throttle on a per-client or per-agent basis. Proxies provide a single place to impose limits.",
+      "- **Transforms:** When agent schemas vary, the proxy can canonicalize context objects so clients send a single canonical format.",
+      "### Security & compliance checklist",
+      "- Enforce TLS end-to-end. Terminate TLS at the proxy only if the trust model allows it.",
+      "- Use short-lived JWTs and rotate signing keys regularly.",
+      "- Enforce RBAC and scopes at the proxy (don’t rely on downstream agents).",
+      "- Centralize audit logs and retain per-company/event logs for compliance.",
+      "- Apply input validation and size limits to avoid DoS through huge context blobs.",
+      "### Example snippet — conceptual (pseudocode)",
+      "```js",
+      `// conceptual: client hits proxy; proxy routes to agent by id
+POST /mcp/v1/dispatch
+{
+  "agent": "agent-123",
+  "context": { ... }
+}
+
+// proxy:
+// 1. authenticate client JWT
+// 2. find agent endpoint from registry
+// 3. mint short-lived downstream JWT
+// 4. forward request to target MCP server
+// 5. collect response, log, return to client`,
+      "```",
+      "### Use cases & who benefits",
+      "- **Engineering teams** coordinating Copilot + LangGraph + custom retrievers (fewer config headaches).",
+      "- **Enterprise**: central policy enforcement and audit for regulated workflows.",
+      "- **BizOps/automation**: Zapier integration lets non-dev teams trigger workflows off agent events.",
+      "- **AX-style collaboration platforms** that need a stable, multi-tenant gateway to bring agents together.",
+      "### Pitfalls & warnings",
+      "- Avoid over-centralizing all logic in the proxy — keep routing and auth there, but leave agent-specific business logic in agents.",
+      "- Watch for a single point of failure — run proxies in HA mode and use circuit breakers.",
+      "- Ensure observability before scaling — tracing and metrics are critical to debug cross-agent flows.",
+      "### Recommendation (short)",
+      "- If you want fast setup and an easy developer experience: start with **Rube** for a gateway + registry.",
+      "- If you need custom enterprise behavior and full control: adopt **MetaMCP** and extend it to your needs.",
+      "- If business users need to wire agent events into other apps without code: use **Zapier’s MCP connectors** as the integration layer.",
+      "Combine them: proxy core (Rube / MetaMCP) + Zapier for broad third-party automations.",
+      "### Call to action",
+      "Want to see MCP proxies in action with the AX Platform? We’ve built an MCP-native collaboration layer that integrates with proxies to enable multi-agent workspaces, remote control, and centralized history. Reply or sign up on our site and we’ll show a demo."
+    ]
+  },
+  {
     title: "You can now Connect ChatGPT to AX!",
     slug: "connect-chatgpt-to-ax",
     author: "Michael Schecht",
