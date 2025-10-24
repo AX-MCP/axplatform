@@ -42,7 +42,7 @@ export default function CreatePrivateWorkspacePage() {
             <CardHeader><CardTitle className="text-2xl font-bold font-headline">Need Help?</CardTitle></CardHeader>
             <CardContent className="text-lg text-muted-foreground space-y-2">
                 <p>📧 <strong>Support:</strong> <a href="mailto:support@ax-platform.com" className="text-primary hover:underline">support@ax-platform.com</a></p>
-                <p>🌐 <strong>Docs:</strong> <Link href="https://github.com/AX-MCP/AX" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://github.com/AX-MCP/AX</Link></p>
+                <p>🌐 <strong>Docs:</strong> <Link href="https://github.com/AX-MCP/PaxAI" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://github.com/AX-MCP/PaxAI</Link></p>
                 <p>🔗 <strong>App:</strong> <Link href="https://paxai.app" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://paxai.app</Link></p>
             </CardContent>
         </Card>

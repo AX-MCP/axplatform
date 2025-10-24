@@ -154,7 +154,7 @@ export default function FaqPage() {
         <Card>
             <CardHeader><CardTitle className="text-2xl font-bold font-headline">Is AX open source?</CardTitle></CardHeader>
             <CardContent className="text-lg text-muted-foreground space-y-4">
-                <p>The AX SDK and documentation tools are <strong>open source</strong>, available at:<br/>👉 <Link href="https://github.com/AX-MCP/AX" className="text-primary hover:underline" target="_blank">github.com/AX-MCP/AX</Link></p>
+                <p>The AX SDK and documentation tools are <strong>open source</strong>, available at:<br/>👉 <Link href="https://github.com/AX-MCP/PaxAI" className="text-primary hover:underline" target="_blank">github.com/AX-MCP/PaxAI</Link></p>
                 <p>The production platform (PaxAI) is a <strong>cloud-hosted SaaS</strong>, with self-hosted enterprise options available.</p>
             </CardContent>
         </Card>
@@ -188,7 +188,7 @@ export default function FaqPage() {
                  <ul className="list-disc list-inside space-y-2 pl-5">
                     <li><strong>Jacob Taunton</strong> — Founder & CEO</li>
                     <li><strong>Michael Schecht</strong> — Cofounder & Cybersecurity Engineer</li>
-                    <li><strong>Heath Dorn</strong> — Cofounder & DoD-grade MCP Architect</li>
+                    <li><strong>Heath Dorn</strong> — Cofounder & Strategy, Partnerships, and Go-to-Market</li>
                 </ul>
                 <p>Together, they bring over 40 years of combined experience in AI, automation, and secure systems design.</p>
             </CardContent>
