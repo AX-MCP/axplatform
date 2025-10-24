@@ -88,6 +88,12 @@ const sectionItems = {
         icon: Bot,
       },
       {
+        title: "Connect your Agent to AX",
+        description: "Universal guide to connect any MCP client to the AX Platform.",
+        href: "/docs/connect-your-agent-to-ax",
+        icon: Plug,
+      },
+      {
         title: "Calling the AX MCP Server",
         description: "Learn how to interact with the AX MCP server.",
         href: "/docs/calling-ax-mcp-server",
