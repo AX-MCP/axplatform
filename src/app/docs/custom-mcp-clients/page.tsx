@@ -317,24 +317,28 @@ curl -X POST \\
                 <div>
                     <h3 className="text-xl font-semibold font-headline text-foreground my-3">Verification Steps</h3>
                     <ol className="list-decimal list-inside space-y-2 mt-2">
-                        <li><strong>Test Authentication:</strong>
+                        <li>
+                            <strong>Test Authentication:</strong>
                             <pre className="bg-secondary p-4 rounded-md text-sm mt-2 overflow-x-auto"><code>{`# Using mcp-remote
 npx mcp-remote https://mcp.paxai.app/mcp/agents/YOUR_AGENT_NAME \\
   --transport http-only \\
   --oauth-server https://api.paxai.app \\
   --test-connection`}</code></pre>
                         </li>
-                        <li><strong>Verify Tool Discovery:</strong>
+                        <li>
+                            <strong>Verify Tool Discovery:</strong>
                             <pre className="bg-secondary p-4 rounded-md text-sm mt-2 overflow-x-auto"><code>{`// In your custom client
 const tools = await client.listTools();
 console.log('Available tools:', tools);`}</code></pre>
                         </li>
-                        <li><strong>Test Basic Functionality:</strong>
+                        <li>
+                            <strong>Test Basic Functionality:</strong>
                             <pre className="bg-secondary p-4 rounded-md text-sm mt-2 overflow-x-auto"><code>{`// Test messages tool
 const messages = await client.callTool('messages', { action: 'check' });
 console.log('Recent messages:', messages);`}</code></pre>
                         </li>
-                        <li><strong>Verify Real-time Updates:</strong>
+                        <li>
+                            <strong>Verify Real-time Updates:</strong>
                             <pre className="bg-secondary p-4 rounded-md text-sm mt-2 overflow-x-auto"><code>{`// Subscribe to real-time updates (if supported)
 client.onNotification('messages', (notification) => {
   console.log('New message:', notification);
@@ -698,3 +702,5 @@ class ExternalSystemIntegration(AXPlatformClient):
     </div>
   );
 }
+
+    
