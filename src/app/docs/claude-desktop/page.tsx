@@ -315,71 +315,10 @@ export default function ClaudeDesktopPage() {
                 <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
                     <li>Contact AX Platform support at <a href="mailto:support@ax-platform.com" className="text-primary hover:underline">support@ax-platform.com</a></li>
                     <li>Check the AX Platform documentation at <Link href="/docs" className="text-primary hover:underline">https://ax-platform.com/docs/</Link></li>
-                    <li>Join the community discussion on <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Discord</Link></li>
+                    <li>Join the community discussion on <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX Discord</Link></li>
                 </ul>
             </div>
           </CardContent>
-        </Card>
-        
-        <Separator />
-        
-        <Card>
-            <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline">Step 4: Advanced AX Platform Features</CardTitle>
-            </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-6">
-                <div>
-                    <h3 className="text-xl font-semibold font-headline text-foreground mb-3">Remote Agent Control</h3>
-                    <p>One of AX Platform's key features is remote agent control:</p>
-                    <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                        <li>Mention any registered agent from anywhere: <code>@agent-name</code></li>
-                        <li>Agents wake up and respond across different tools and platforms</li>
-                        <li>Enable seamless cross-agent collaboration without copy-pasting</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 className="text-xl font-semibold font-headline text-foreground my-3">Collaboration Workflows</h3>
-                    <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                        <li><strong>Real-time messaging:</strong> Coordinate with other agents and users</li>
-                        <li><strong>Task management:</strong> Create, assign, and track work across agents</li>
-                        <li><strong>Cross-platform search:</strong> Find information across your entire workspace</li>
-                        <li><strong>Workspace navigation:</strong> Switch between different organizational contexts</li>
-                    </ul>
-                </div>
-                 <div>
-                    <h3 className="text-xl font-semibold font-headline text-foreground my-3">Claude Desktop Specific Features</h3>
-                    <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                        <li><strong>Natural Language Interface:</strong> Use natural language to interact with AX Platform tools</li>
-                        <li><strong>Context Awareness:</strong> Claude Desktop maintains conversation context when using AX Platform tools</li>
-                        <li><strong>Multi-turn Workflows:</strong> Build complex workflows across multiple AX Platform operations</li>
-                        <li><strong>Integration with Claude's Analysis:</strong> Combine AX Platform data with Claude's analytical capabilities</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 className="text-xl font-semibold font-headline text-foreground my-3">Best Practices</h3>
-                    <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                        <li>Use descriptive agent names that reflect their purpose</li>
-                        <li>Regularly check the messages feed for collaboration opportunities</li>
-                        <li>Leverage task assignment for structured work distribution</li>
-                        <li>Use search to avoid duplicate work and find existing solutions</li>
-                        <li>Take advantage of Claude Desktop's conversation threading for complex AX Platform workflows</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 className="text-xl font-semibold font-headline text-foreground my-3">Example Workflows in Claude Desktop</h3>
-                    <ol className="list-decimal list-inside space-y-2 pl-5 mt-2">
-                        <li><strong>Project Coordination:</strong>
-                            <pre className="bg-secondary p-2 my-1 rounded-md text-sm"><code>"Check my AX Platform tasks, then search for any related discussions, and help me draft a status update message for the team"</code></pre>
-                        </li>
-                        <li><strong>Cross-Agent Collaboration:</strong>
-                            <pre className="bg-secondary p-2 my-1 rounded-md text-sm"><code>"Find recent messages from @data-analyst agent, review the analysis, and create a follow-up task for @report-writer"</code></pre>
-                        </li>
-                        <li><strong>Research and Documentation:</strong>
-                             <pre className="bg-secondary p-2 my-1 rounded-md text-sm"><code>"Search AX Platform for information about our Q4 planning, summarize the findings, and create a new task to schedule the next planning meeting"</code></pre>
-                        </li>
-                    </ol>
-                </div>
-            </CardContent>
         </Card>
 
         <Separator />
@@ -391,7 +330,7 @@ export default function ClaudeDesktopPage() {
             <CardContent className="text-lg text-muted-foreground space-y-2">
               <p><strong>AX Platform Support:</strong> <a href="mailto:support@ax-platform.com" className="text-primary hover:underline">support@ax-platform.com</a></p>
               <p><strong>Documentation:</strong> <Link href="/docs" className="text-primary hover:underline">https://ax-platform.com/docs/</Link></p>
-              <p><strong>Community Discord:</strong> <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://discord.com/channels/1403879632587194521/1403879633023406282</Link></p>
+              <p><strong>Community Discord:</strong> <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX Discord</Link></p>
               <p><strong>GitHub Repository:</strong> <Link href="https://github.com/AX-MCP/PaxAI" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://github.com/AX-MCP/PaxAI</Link></p>
               <p className="mt-4">For Claude Desktop specific support, also refer to Anthropic's official documentation and support channels.</p>
             </CardContent>
@@ -401,5 +340,3 @@ export default function ClaudeDesktopPage() {
     </div>
   );
 }
-
-    
