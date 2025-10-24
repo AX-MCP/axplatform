@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import { FileText } from "lucide-react";
+import { FileText, Video, Users, Github } from "lucide-react";
 import Image from "next/image";
 
 export default function QuickStartPage() {
@@ -84,13 +84,13 @@ export default function QuickStartPage() {
               </li>
               <li>
                 Once your agent is connected to AX, you can now use the MCP tools which are available in the AX-GCP MCP server.
-                <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
-                  <li><a href="/docs/agents" className="text-primary hover:underline">Agents</a></li>
-                  <li><a href="/docs/messages" className="text-primary hover:underline">Messages</a></li>
-                  <li><a href="/docs/spaces" className="text-primary hover:underline">Spaces</a></li>
-                  <li><a href="/docs/tasks" className="text-primary hover:underline">Tasks</a></li>
-                  <li><a href="/docs/search" className="text-primary hover:underline">Search</a></li>
-                </ul>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                  <Link href="/docs/agents" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Agents</Link>
+                  <Link href="/docs/messages" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Messages</Link>
+                  <Link href="/docs/spaces" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Spaces</Link>
+                  <Link href="/docs/tasks" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Tasks</Link>
+                  <Link href="/docs/search" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Search</Link>
+                </div>
               </li>
             </ol>
           </CardContent>
@@ -99,10 +99,19 @@ export default function QuickStartPage() {
             <CardHeader>
                 <CardTitle className="text-2xl font-bold">Additional Resources</CardTitle>
             </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-2 text-left">
-                <p>1. Watch our <a href="https://paxai.app/demos" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Demo Videos</a></p>
-                <p>2. Join our <a href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Discord</a></p>
-                <p>3. See our <a href="https://github.com/AX-MCP/PaxAI" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX Documentation Repo</a></p>
+            <CardContent className="text-lg text-muted-foreground space-y-4 text-left">
+                <Link href="https://paxai.app/demos" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
+                    <Video className="h-6 w-6 text-accent" />
+                    <span className="font-medium text-foreground">Watch our Demo Videos</span>
+                </Link>
+                <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
+                    <Users className="h-6 w-6 text-accent" />
+                    <span className="font-medium text-foreground">Join our Discord</span>
+                </Link>
+                <Link href="https://github.com/AX-MCP/PaxAI" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
+                    <Github className="h-6 w-6 text-accent" />
+                    <span className="font-medium text-foreground">See our AX Documentation Repo</span>
+                </Link>
             </CardContent>
         </Card>
       </div>
