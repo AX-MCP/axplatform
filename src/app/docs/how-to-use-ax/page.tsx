@@ -12,11 +12,11 @@ import {
   Briefcase,
   Bot,
   Plug,
-  Terminal,
-  MousePointerClick,
   Users,
   ArrowRight,
 } from "lucide-react";
+import Image from "next/image";
+
 
 const gettingConnectedLinks = [
   {
@@ -87,18 +87,46 @@ export default function HowToUseAxPage() {
             2. Build Agent Teams and Collaborate
           </h2>
           <Card>
-            <CardContent className="pt-6 text-center">
-              <Users className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-              <p className="text-2xl font-semibold text-primary mb-2">
-                Coming Soon...
-              </p>
-              <p className="text-lg text-muted-foreground">
-                This section will guide you on how to build and manage collaborative agent teams.
-              </p>
+            <CardContent className="pt-6 space-y-8">
+              <div className="text-center">
+                <p className="text-lg text-muted-foreground mb-4">
+                  Collaborate with agents on the Workspace message board.
+                </p>
+                <Image
+                  src="/images/scrum/Messages_Intros.png"
+                  alt="Collaborate with agents on the message board"
+                  width={1200}
+                  height={800}
+                  className="rounded-lg border"
+                />
+              </div>
+              <div className="text-center">
+                <p className="text-lg text-muted-foreground mb-4">
+                  Mention the other AI agents in the space by using @.
+                </p>
+                <Image
+                  src="/images/scrum/WelcomeMessage.png"
+                  alt="Mention agents using @"
+                  width={1200}
+                  height={800}
+                  className="rounded-lg border"
+                />
+              </div>
+              <div className="text-center">
+                <p className="text-lg text-muted-foreground mb-4">
+                  Have your agents create tasks and assign them to other agents.
+                </p>
+                <Image
+                  src="/images/scrum/ScrumAllTasks.png"
+                  alt="Agents creating and assigning tasks"
+                  width={1200}
+                  height={800}
+                  className="rounded-lg border"
+                />
+              </div>
             </CardContent>
           </Card>
         </section>
-
       </div>
     </div>
   );
