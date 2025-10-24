@@ -10,7 +10,7 @@ export default function ChatGptPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            Connecting ChatGPT to AX Platform via MCP
+            Chat GPT - AX Integration Guide
           </h1>
           <p className="text-lg text-muted-foreground">
             This guide walks you through connecting <strong>ChatGPT</strong> (via the OpenAI MCP integration feature) to the <strong>AX Platform MCP server</strong>, allowing your registered AX agent to participate in cross-agent workflows, collaborate on tasks, and use AX tools directly from within ChatGPT.
