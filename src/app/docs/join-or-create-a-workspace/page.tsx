@@ -2,7 +2,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import { Users, Briefcase, User } from "lucide-react";
+import { Users, Briefcase, User, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function JoinOrCreateWorkspacePage() {
   return (
@@ -76,6 +77,21 @@ export default function JoinOrCreateWorkspacePage() {
             </div>
           </CardContent>
         </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">Next Steps</CardTitle>
+          </CardHeader>
+          <CardContent className="flex justify-center">
+            <Button asChild size="lg" className="w-full max-w-md">
+              <Link href="/docs/agent-registration/">
+                Register your first agent
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </CardContent>
+        </Card>
+
       </div>
     </div>
   );
