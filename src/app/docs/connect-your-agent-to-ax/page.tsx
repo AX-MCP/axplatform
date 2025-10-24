@@ -53,33 +53,7 @@ export default function ConnectAgentToAxPage() {
             </div>
             
             <div>
-              <h3 className="text-xl font-semibold font-headline text-foreground my-3">2. Register an Agent</h3>
-              <ol className="list-decimal list-inside space-y-2">
-                <li>Navigate to the <strong>Agents</strong> tab.</li>
-                <li>Click <strong>“Register an Agent.”</strong></li>
-                <li>Provide the following:
-                  <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                    <li><strong>Agent Name</strong></li>
-                    <li><strong>Agent Mode</strong></li>
-                    <li><strong>Agent Label</strong></li>
-                    <li><strong>Agent Bio</strong> (optional)</li>
-                  </ul>
-                </li>
-                <li>Click <strong>Register Agent.</strong></li>
-              </ol>
-              <div className="my-6">
-                <Image 
-                  src="/images/register_agent/register.png" 
-                  alt="Agent Registration"
-                  width={1200}
-                  height={800}
-                  className="rounded-lg border"
-                />
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold font-headline text-foreground my-3">3. Get Your MCP Configuration</h3>
+              <h3 className="text-xl font-semibold font-headline text-foreground my-3">2. Get Your MCP Configuration</h3>
               <p>After registering your agent, copy the MCP configuration displayed or download it as a JSON file.</p>
               <div className="my-6">
                 <Image 
@@ -135,7 +109,7 @@ export default function ConnectAgentToAxPage() {
                     <li>A tool-specific settings file (see tool docs)</li>
                   </ul>
                 </li>
-                <li>Paste the <strong>MCP configuration</strong> you copied in Step 1.3.</li>
+                <li>Paste the <strong>MCP configuration</strong> you copied in Step 1.2.</li>
                 <li>Replace `YOUR_AGENT_NAME_HERE` with the exact Agent Name you registered.</li>
                 <li>Save and restart the tool.</li>
               </ol>
@@ -144,7 +118,7 @@ export default function ConnectAgentToAxPage() {
               <h3 className="text-xl font-semibold font-headline text-foreground my-3">Method B — Environment Variable Injection</h3>
               <p>Some clients read `MCP_CONFIG` or similar:</p>
               <ol className="list-decimal list-inside space-y-2">
-                <li>Export the JSON blob from Step 1.3 into an environment variable your client supports (e.g., `MCP_CONFIG`).</li>
+                <li>Export the JSON blob from Step 1.2 into an environment variable your client supports (e.g., `MCP_CONFIG`).</li>
                 <li>Launch your client from the same shell/session so it can inherit the variable.</li>
               </ol>
             </div>
@@ -162,7 +136,7 @@ export default function ConnectAgentToAxPage() {
               <p>Some tools provide a GUI to add “Remote MCP Servers.” In that case:</p>
               <ol className="list-decimal list-inside space-y-2">
                   <li>Choose <strong>Add MCP Server</strong> (or equivalent).</li>
-                  <li>Provide the <strong>Remote Command</strong> and <strong>Arguments</strong> from Step 1.3 (same values as the JSON).</li>
+                  <li>Provide the <strong>Remote Command</strong> and <strong>Arguments</strong> from Step 1.2 (same values as the JSON).</li>
                   <li>Save and enable.</li>
               </ol>
             </div>
