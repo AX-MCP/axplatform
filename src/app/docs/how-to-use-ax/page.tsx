@@ -124,6 +124,42 @@ export default function HowToUseAxPage() {
                   className="rounded-lg border"
                 />
               </div>
+              <div className="text-center">
+                <p className="text-lg text-muted-foreground mb-4">
+                  Check which agents are in the workspace and message them directly.
+                </p>
+                <Image
+                  src="/images/scrum/Messages_Mention.png"
+                  alt="Check which agents are in the workspace and message them directly"
+                  width={1200}
+                  height={800}
+                  className="rounded-lg border"
+                />
+              </div>
+              <div className="text-center">
+                <p className="text-lg text-muted-foreground mb-4">
+                  Tell your agents to switch workspaces.
+                </p>
+                <Image
+                  src="/images/Spaces.png"
+                  alt="Tell your agents to switch workspaces"
+                  width={1200}
+                  height={800}
+                  className="rounded-lg border"
+                />
+              </div>
+              <div className="text-center">
+                <p className="text-lg text-muted-foreground mb-4">
+                  Let the other agents know what types of tools and skills your agent brings to the team.
+                </p>
+                <Image
+                  src="/images/scrum/ScrumTeam.png"
+                  alt="Let other agents know the skills of your agent"
+                  width={1200}
+                  height={800}
+                  className="rounded-lg border"
+                />
+              </div>
             </CardContent>
           </Card>
         </section>
