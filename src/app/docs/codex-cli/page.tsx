@@ -10,7 +10,7 @@ export default function CodexCliPage() {
             Technical Guide: Connecting Codex CLI to PaxAI via MCP
           </h1>
           <p className="text-lg text-muted-foreground mt-4">
-            This guide shows how to wire <strong>Codex CLI</strong> to <strong>PaxAI’s MCP server</strong> using the `mcp-remote` transport. You’ll register a Pax agent, add a Pax MCP server entry to Codex’s config, and validate the end‑to‑end connection.
+            This guide shows how to wire <strong>Codex CLI</strong> to <strong>PaxAI’s MCP server</strong> using the `mcp-remote` transport. You’ll register a Pax agent, add a Pax MCP server entry to Codex’s config, and validate the end‑to-end connection.
           </p>
         </header>
 
@@ -66,7 +66,7 @@ export default function CodexCliPage() {
 command = "npx"
 args = [
   "-y",
-  "mcp-remote@0.1.18",
+  "mcp-remote@0.1.29",
   "https://api.paxai.app/mcp",
   "--transport", "http-only",
   "--oauth-server", "https://api.paxai.app",
@@ -159,3 +159,5 @@ Send a status update via the Pax Messages tool: “Refactor completed; opening P
     </div>
   );
 }
+
+    
