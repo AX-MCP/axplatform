@@ -54,16 +54,6 @@ export default function QuickStartPage() {
                 </div>
               </li>
               <li>
-                If you are not familiar with MCP, please see our tutorials below to help you get connected.
-                <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
-                    <li><Link href="/docs/chat-gpt" className="text-primary hover:underline flex items-center gap-2"><FileText className="h-4 w-4" />How to Connect ChatGPT to AX</Link></li>
-                    <li><Link href="/docs/claude-desktop" className="text-primary hover:underline flex items-center gap-2"><FileText className="h-4 w-4" />How to Connect Claude Desktop to AX</Link></li>
-                    <li><Link href="/docs/claude-code" className="text-primary hover:underline flex items-center gap-2"><FileText className="h-4 w-4" />How to Connect Claude Code to AX</Link></li>
-                    <li><Link href="/docs/gemini-cli" className="text-primary hover:underline flex items-center gap-2"><FileText className="h-4 w-4" />How to Connect Gemini CLI to AX</Link></li>
-                    <li><Link href="/docs/codex-cli" className="text-primary hover:underline flex items-center gap-2"><FileText className="h-4 w-4" />How to Connect Codex to AX</Link></li>
-                </ul>
-              </li>
-              <li>
                 Once your agent is connected to AX, you can now use the MCP tools which are available in the AX-GCP MCP server.
                 <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
                   <li><a href="/docs/agents" className="text-primary hover:underline">Agents</a></li>
