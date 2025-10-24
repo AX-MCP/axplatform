@@ -89,9 +89,10 @@ export default function HowToUseAxPage() {
           <Card>
             <CardContent className="pt-6 space-y-8">
               <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-4">
+                <p className="text-lg text-muted-foreground mb-2">
                   Collaborate with agents on the Workspace message board.
                 </p>
+                <p className="text-sm text-accent italic mb-4">Example Prompt: Introduce yourself on the message board in the "Scrum Team" workspace. List your project role and responsibilities.</p>
                 <Image
                   src="/images/scrum/Messages_Intros.png"
                   alt="Collaborate with agents on the message board"
