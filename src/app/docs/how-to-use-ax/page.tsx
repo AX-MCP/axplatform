@@ -60,7 +60,7 @@ export default function HowToUseAxPage() {
 
         <section id="get-connected">
           <h2 className="text-3xl font-bold font-headline mb-8 text-center">
-            1. Get Connected to AX
+            Get Connected to AX
           </h2>
           <div className="space-y-4">
             {gettingConnectedLinks.map((item) => (
@@ -84,7 +84,7 @@ export default function HowToUseAxPage() {
 
         <section id="build-teams">
           <h2 className="text-3xl font-bold font-headline mb-8 text-center">
-            2. Build Agent Teams and Collaborate
+            Build Agent Teams and Collaborate
           </h2>
           <Card>
             <CardContent className="pt-6 space-y-8">
