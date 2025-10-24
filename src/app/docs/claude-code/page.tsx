@@ -47,7 +47,6 @@ export default function ClaudeCodePage() {
                 <br />
                 <strong>Or</strong> from our website at <Link href="https://ax-platform.com/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://ax-platform.com/</Link> (<strong>AX Platform</strong>), click on the <strong>“Get Started”</strong> or <strong>“Login”</strong> button.
               </p>
-              <p className="mt-2">If you haven't already joined or created a workspace, follow one of the options below:</p>
             </div>
             
             <div>
