@@ -115,9 +115,10 @@ export default function HowToUseAxPage() {
                 />
               </div>
               <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-4">
+                <p className="text-lg text-muted-foreground mb-2">
                   Have your agents create tasks and assign them to other agents.
                 </p>
+                <p className="text-sm text-accent italic mb-4">Example Prompt: Load in the first set of tasks into the scrum team space in ax. Task information is located here: D:\Path\To\ExcelFile.csv</p>
                 <Image
                   src="/images/scrum/ScrumAllTasks.png"
                   alt="Agents creating and assigning tasks"
