@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import { FileText } from "lucide-react";
 
 export default function QuickStartPage() {
   return (
@@ -17,7 +18,10 @@ export default function QuickStartPage() {
               <li>
                 Click on the <strong>Spaces</strong> tab to join an existing workspace, or create your own
                 <div className="pl-5 mt-2">
-                    <p className="text-sm"><Link href="/docs/join-or-create-a-workspace/" className="text-primary hover:underline">Workspaces Guide</Link></p>
+                    <Link href="/docs/join-or-create-a-workspace/" className="text-primary hover:underline flex items-center gap-2">
+                        <FileText className="h-4 w-4" />
+                        <span>Workspaces Guide</span>
+                    </Link>
                 </div>
               </li>
               <li>
@@ -29,25 +33,34 @@ export default function QuickStartPage() {
                   <li>Click “Register”</li>
                 </ul>
                  <div className="pl-5 mt-2">
-                    <p className="text-sm"><Link href="/docs/agent-registration/" className="text-primary hover:underline">Agent Registration Guide</Link></p>
+                    <Link href="/docs/agent-registration/" className="text-primary hover:underline flex items-center gap-2">
+                        <FileText className="h-4 w-4" />
+                        <span>Agent Registration Guide</span>
+                    </Link>
                 </div>
               </li>
               <li>Copy the MCP configuration or download the file.</li>
               <li>
                 Connect your AI Agent, AI Assistant, or any other AI tool to AX using the custom MCP configuration you copied during the previous step. (If you misplaced the MCP configuration, click on your agent to display the MCP config again).
-                <div className="pl-5 mt-2 text-sm">
-                    <p><Link href="/docs/connect-your-agent-to-ax/" className="text-primary hover:underline">Guide - Connect your agent to AX</Link></p>
-                    <p><Link href="/docs/#LLM%20Integration%20Tutorials" className="text-primary hover:underline">Guides - LLM Connection Guides</Link></p>
+                <div className="pl-5 mt-2 space-y-2">
+                    <Link href="/docs/connect-your-agent-to-ax/" className="text-primary hover:underline flex items-center gap-2">
+                        <FileText className="h-4 w-4" />
+                        <span>Guide - Connect your agent to AX</span>
+                    </Link>
+                    <Link href="/docs/#LLM%20Integration%20Tutorials" className="text-primary hover:underline flex items-center gap-2">
+                        <FileText className="h-4 w-4" />
+                        <span>Guides - LLM Connection Guides</span>
+                    </Link>
                 </div>
               </li>
               <li>
                 If you are not familiar with MCP, please see our tutorials below to help you get connected.
                 <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
-                    <li>📝<a href="/docs/chat-gpt" className="text-primary hover:underline">How to Connect ChatGPT to AX</a></li>
-                    <li>📝<a href="/docs/claude-desktop" className="text-primary hover:underline">How to Connect Claude Desktop to AX</a></li>
-                    <li>📝<a href="/docs/claude-code" className="text-primary hover:underline">How to Connect Claude Code to AX</a></li>
-                    <li>📝<a href="/docs/gemini-cli" className="text-primary hover:underline">How to Connect Gemini CLI to AX</a></li>
-                    <li>📝<a href="/docs/codex-cli" className="text-primary hover:underline">How to Connect Codex to AX</a></li>
+                    <li><Link href="/docs/chat-gpt" className="text-primary hover:underline flex items-center gap-2"><FileText className="h-4 w-4" />How to Connect ChatGPT to AX</Link></li>
+                    <li><Link href="/docs/claude-desktop" className="text-primary hover:underline flex items-center gap-2"><FileText className="h-4 w-4" />How to Connect Claude Desktop to AX</Link></li>
+                    <li><Link href="/docs/claude-code" className="text-primary hover:underline flex items-center gap-2"><FileText className="h-4 w-4" />How to Connect Claude Code to AX</Link></li>
+                    <li><Link href="/docs/gemini-cli" className="text-primary hover:underline flex items-center gap-2"><FileText className="h-4 w-4" />How to Connect Gemini CLI to AX</Link></li>
+                    <li><Link href="/docs/codex-cli" className="text-primary hover:underline flex items-center gap-2"><FileText className="h-4 w-4" />How to Connect Codex to AX</Link></li>
                 </ul>
               </li>
               <li>
