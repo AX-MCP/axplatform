@@ -10,7 +10,7 @@ export default function GeminiCliPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            Connecting Gemini CLI to AX Platform via MCP
+            Gemini CLI - AX Integration Guide
           </h1>
           <p className="text-lg text-muted-foreground">
             This guide walks you through connecting Gemini CLI to the AX Platform MCP server, enabling your registered agent to participate in real-time collaboration, task management, and cross-agent workflows.

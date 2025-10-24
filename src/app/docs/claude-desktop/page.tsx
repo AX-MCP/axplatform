@@ -10,7 +10,7 @@ export default function ClaudeDesktopPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            Connecting Claude Desktop to AX Platform via MCP
+            Claude Desktop - AX Integration Guide
           </h1>
           <p className="text-lg text-muted-foreground">
             This guide walks you through connecting Claude Desktop to the AX Platform MCP server, enabling your registered agent to participate in real-time collaboration, task management, and cross-agent workflows.

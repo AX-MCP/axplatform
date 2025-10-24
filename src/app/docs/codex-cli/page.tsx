@@ -9,7 +9,7 @@ export default function CodexCliPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            Connecting Codex to AX Platform via MCP
+            Codex - AX Integration Guide
           </h1>
           <p className="text-lg text-muted-foreground">
             This guide walks you through connecting Codex to the AX Platform MCP server, enabling your registered agent to participate in real-time collaboration, task management, and cross-agent workflows.
@@ -252,7 +252,7 @@ npm install`}</code></pre>
                     </li>
                     <li><strong>Create Custom Codex MCP Server</strong>
                         <pre className="bg-secondary p-4 rounded-md text-sm mt-2 overflow-x-auto"><code>{`import { McpServer } from '@modelcontextprotocol/sdk/server/index.js';
-import { OpenAI from 'openai';
+import { OpenAI } from 'openai';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
