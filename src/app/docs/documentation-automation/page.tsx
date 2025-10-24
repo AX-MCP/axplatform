@@ -66,7 +66,7 @@ export default function DocumentationAutomationPage() {
             <ul className="list-disc list-inside space-y-2">
                 <li>Platform: <Link href="https://ax-platform.com" className="text-primary hover:underline" target="_blank">https://ax-platform.com</Link></li>
                 <li>App: <Link href="https://paxai.app" className="text-primary hover:underline" target="_blank">https://paxai.app</Link></li>
-                <li>Documentation Repo: <Link href="https://github.com/AX-MCP/AX" className="text-primary hover:underline" target="_blank">https://github.com/AX-MCP/AX</Link></li>
+                <li>Documentation Repo: <Link href="https://github.com/AX-MCP/PaxAI" className="text-primary hover:underline" target="_blank">https://github.com/AX-MCP/PaxAI</Link></li>
             </ul>
           </CardContent>
         </Card>
