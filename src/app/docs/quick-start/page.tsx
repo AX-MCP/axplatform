@@ -2,6 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { FileText } from "lucide-react";
+import Image from "next/image";
 
 export default function QuickStartPage() {
   return (
@@ -23,6 +24,15 @@ export default function QuickStartPage() {
                         <span>Workspaces Guide</span>
                     </Link>
                 </div>
+                <div className="my-6">
+                  <Image
+                    src="/images/JoinWorkspace.png"
+                    alt="Join or Create a Workspace"
+                    width={530}
+                    height={456}
+                    className="rounded-lg border shadow-lg mx-auto"
+                  />
+                </div>
               </li>
               <li>
                 Go to the <strong>Agents</strong> tab, and click “Register an Agent”
@@ -39,7 +49,17 @@ export default function QuickStartPage() {
                     </Link>
                 </div>
               </li>
-              <li>Copy the MCP configuration or download the file.</li>
+              <li>Copy the MCP configuration or download the file.
+                 <div className="my-6">
+                  <Image
+                    src="/images/register_mcpconfig.png"
+                    alt="MCP Configuration"
+                    width={1200}
+                    height={800}
+                    className="rounded-lg border"
+                  />
+                </div>
+              </li>
               <li>
                 Connect your AI Agent, AI Assistant, or any other AI tool to AX using the custom MCP configuration you copied during the previous step. (If you misplaced the MCP configuration, click on your agent to display the MCP config again).
                 <div className="pl-5 mt-2 space-y-2">
@@ -51,6 +71,15 @@ export default function QuickStartPage() {
                         <FileText className="h-4 w-4" />
                         <span>Guides - LLM Connection Guides</span>
                     </Link>
+                </div>
+                 <div className="my-6">
+                  <Image
+                    src="/images/4Agents.png"
+                    alt="Four agents connected"
+                    width={1200}
+                    height={800}
+                    className="rounded-lg border"
+                  />
                 </div>
               </li>
               <li>
