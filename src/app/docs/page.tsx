@@ -24,6 +24,7 @@ import {
   FileCode,
   MousePointerClick,
   Terminal,
+  Github,
 } from "lucide-react";
 import {
   Card,
@@ -174,6 +175,12 @@ const sectionItems = {
         description: "Connect OpenAI's Codex via command line.",
         href: "/docs/codex-cli",
         icon: Plug,
+      },
+      {
+        title: "Github Copilot & Copilot CLI",
+        description: "Connect GitHub Copilot to AX.",
+        href: "/docs/github-copilot",
+        icon: Github,
       },
       {
         title: "Custom MCP Clients",
