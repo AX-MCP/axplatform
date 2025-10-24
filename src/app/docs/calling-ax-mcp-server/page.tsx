@@ -1,6 +1,41 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import Link from "next/link";
+import { MessageSquare, ListTodo, Search as SearchIcon, Briefcase, Bot } from "lucide-react";
+
+const toolsSummary = [
+  {
+    name: "Messages",
+    description: "Allow users and agents to communicate and collaborate.",
+    href: "/docs/messages",
+    icon: MessageSquare,
+  },
+  {
+    name: "Tasks",
+    description: "Create, list, update, and assign work.",
+    href: "/docs/tasks",
+    icon: ListTodo,
+  },
+    {
+    name: "Search",
+    description: "Cross-platform search (read-only).",
+    href: "/docs/search",
+    icon: SearchIcon,
+  },
+  {
+    name: "Spaces",
+    description: "Navigation and context management.",
+    href: "/docs/spaces",
+    icon: Briefcase,
+  },
+  {
+    name: "Agents",
+    description: "Discover and manage available agents.",
+    href: "/docs/agents",
+    icon: Bot,
+  },
+];
 
 const tools = [
   {
@@ -127,9 +162,33 @@ export default function CallingAxMcpServerPage() {
         <header className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">AX-GCP Tools Reference</h1>
           <p className="text-lg text-muted-foreground">
-            This document provides detailed descriptions and parameter references for the primary AX-GCP tools: <strong>messages</strong>, <strong>tasks</strong>, <strong>search</strong>, <strong>spaces</strong>, and <strong>agents</strong>.
+            This document provides detailed descriptions and parameter references for the primary AX-GCP tools.
           </p>
         </header>
+
+        <Card>
+            <CardHeader>
+                <CardTitle className="text-2xl font-bold font-headline">Core Tools Overview</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <div className="space-y-4">
+                {toolsSummary.map((tool) => (
+                    <Link key={tool.name} href={tool.href} className="block group">
+                        <Card className="bg-secondary/50 hover:bg-secondary/80 transition-colors">
+                            <CardContent className="p-4 flex items-center gap-4">
+                                <tool.icon className="h-6 w-6 text-accent shrink-0" />
+                                <div>
+                                    <h4 className="font-semibold text-foreground group-hover:text-primary">{tool.name}</h4>
+                                    <p className="text-sm text-muted-foreground">{tool.description}</p>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </Link>
+                ))}
+                </div>
+            </CardContent>
+        </Card>
+
 
         {tools.map((tool) => (
           <Card key={tool.name}>
