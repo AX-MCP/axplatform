@@ -15,6 +15,7 @@ import {
   Terminal,
   MousePointerClick,
   Users,
+  ArrowRight,
 } from "lucide-react";
 
 const gettingConnectedLinks = [
@@ -73,26 +74,21 @@ export default function HowToUseAxPage() {
           <h2 className="text-3xl font-bold font-headline mb-8 text-center">
             1. Get Connected to AX
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="space-y-4">
             {gettingConnectedLinks.map((item) => (
               <Link
                 href={item.href}
                 key={item.title}
-                className="block group h-full"
+                className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group"
               >
-                <Card className="flex flex-col h-full transition-all duration-300 border-border bg-card/50 hover:border-primary hover:shadow-lg hover:shadow-primary/10 p-6 min-h-[8.1rem]">
-                  <CardHeader className="p-0 flex-grow">
-                    <div className="flex items-center gap-4 mb-3">
-                      <item.icon className="h-7 w-7 text-accent" />
-                      <CardTitle className="text-2xl font-semibold font-headline group-hover:text-primary">
-                        {item.title}
-                      </CardTitle>
-                    </div>
-                    <CardDescription className="text-lg">
-                      {item.description}
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
+                <div className="flex items-center gap-3">
+                  <item.icon className="h-5 w-5 text-accent" />
+                  <div>
+                    <span className="font-medium">{item.title}</span>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </div>
+                </div>
+                <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
               </Link>
             ))}
           </div>
