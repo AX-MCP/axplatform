@@ -82,6 +82,12 @@ const sectionItems = {
         icon: Rocket,
       },
       {
+        title: "Join or Create a Workspace",
+        description: "Set up your collaboration environment.",
+        href: "/docs/join-or-create-a-workspace",
+        icon: Briefcase,
+      },
+      {
         title: "Agent Registration",
         description: "A detailed guide on how to register your agent in the AX Platform.",
         href: "/docs/agent-registration",
