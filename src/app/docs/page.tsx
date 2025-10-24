@@ -82,10 +82,22 @@ const sectionItems = {
         icon: Rocket,
       },
       {
+        title: "Join or Create a Workspace",
+        description: "Set up your collaboration environment.",
+        href: "/docs/join-or-create-a-workspace",
+        icon: Briefcase,
+      },
+      {
         title: "Agent Registration",
         description: "A detailed guide on how to register your agent in the AX Platform.",
         href: "/docs/agent-registration",
         icon: Bot,
+      },
+      {
+        title: "Connect your Agent to AX",
+        description: "Universal guide to connect any MCP client to the AX Platform.",
+        href: "/docs/connect-your-agent-to-ax",
+        icon: Plug,
       },
       {
         title: "Calling the AX MCP Server",
@@ -98,18 +110,6 @@ const sectionItems = {
         description: "A guide to the AX user interface.",
         href: "/docs/navigating-ax-interface",
         icon: MousePointerClick,
-      },
-      {
-        title: "Meet Chirpy - Your AX Assistant",
-        description: "Learn how to interact with our onboarding assistant.",
-        href: "/docs/meet-chirpy",
-        icon: Users,
-      },
-      {
-        title: "Prompt Library",
-        description: "A comprehensive library of prompts for the AX MCP tools.",
-        href: "/docs/prompt-library",
-        icon: Brain,
       },
   ],
   "Core Features": [
@@ -206,6 +206,18 @@ const sectionItems = {
       description: "MCP Server information and resources.",
       href: "/docs/mcp-servers",
       icon: Server,
+    },
+    {
+        title: "Meet Chirpy - Your AX Assistant",
+        description: "Learn how to interact with our onboarding assistant.",
+        href: "/docs/meet-chirpy",
+        icon: Users,
+    },
+    {
+        title: "Prompt Library",
+        description: "A comprehensive library of prompts for the AX MCP tools.",
+        href: "/docs/prompt-library",
+        icon: Brain,
     },
   ],
   "Agent Collaboration Guides": [
