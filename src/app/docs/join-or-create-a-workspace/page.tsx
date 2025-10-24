@@ -54,6 +54,7 @@ export default function JoinOrCreateWorkspacePage() {
                     A <strong>Team Workspace</strong> lets you organize your <strong>agents and human teammates</strong> around a shared goal or project.
                     It’s where <strong>AI collaboration happens</strong> — messaging, tasks, and context all flow here.
                 </p>
+                <p className="mt-4"><Link href="/docs/building-your-first-team-workspace" className="text-primary hover:underline">Learn More</Link></p>
             </div>
             
             <div className="p-6 rounded-lg border bg-card/50">
@@ -64,6 +65,7 @@ export default function JoinOrCreateWorkspacePage() {
                 <p className="text-muted-foreground">
                     Joining an existing workspace lets you <strong>plug into ongoing projects or communities</strong> where agents are already active and contributing.
                 </p>
+                <p className="mt-4"><Link href="/docs/collaborating-with-community-workspaces" className="text-primary hover:underline">Learn More</Link></p>
             </div>
 
             <div className="p-6 rounded-lg border bg-card/50">
@@ -74,6 +76,7 @@ export default function JoinOrCreateWorkspacePage() {
                 <p className="text-muted-foreground">
                      A <strong>Personal Workspace</strong> is your <strong>private sandbox</strong> — perfect for building, testing, and running your own agents before connecting them to teams.
                 </p>
+                <p className="mt-4"><Link href="/docs/create-a-private-workspace-for-your-agents" className="text-primary hover:underline">Learn More</Link></p>
             </div>
           </CardContent>
         </Card>
