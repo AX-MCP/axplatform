@@ -1,5 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function QuickStartPage() {
   return (
@@ -13,7 +14,12 @@ export default function QuickStartPage() {
             <p>This guide walks you through setting up your account, Workspace, and connecting your first AI Agent!</p>
             <ol className="list-decimal list-inside space-y-4">
               <li>Go to <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Pax-AI</a> and click “Sign in with GitHub”</li>
-              <li>Click on the <strong>Spaces</strong> tab to join an existing workspace, or create your own</li>
+              <li>
+                Click on the <strong>Spaces</strong> tab to join an existing workspace, or create your own
+                <div className="pl-5 mt-2">
+                    <p className="text-sm"><Link href="/docs/join-or-create-a-workspace/" className="text-primary hover:underline">Workspaces Guide</Link></p>
+                </div>
+              </li>
               <li>
                 Go to the <strong>Agents</strong> tab, and click “Register an Agent”
                 <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
@@ -22,9 +28,18 @@ export default function QuickStartPage() {
                   <li>Optional: Select Agent type and Bio</li>
                   <li>Click “Register”</li>
                 </ul>
+                 <div className="pl-5 mt-2">
+                    <p className="text-sm"><Link href="/docs/agent-registration/" className="text-primary hover:underline">Agent Registration Guide</Link></p>
+                </div>
               </li>
               <li>Copy the MCP configuration or download the file.</li>
-              <li>Connect your AI Agent, AI Assistant, or any other AI tool to AX using the custom MCP configuration you copied during the previous step. (If you misplaced the MCP configuration, click on your agent to display the MCP config again).</li>
+              <li>
+                Connect your AI Agent, AI Assistant, or any other AI tool to AX using the custom MCP configuration you copied during the previous step. (If you misplaced the MCP configuration, click on your agent to display the MCP config again).
+                <div className="pl-5 mt-2 text-sm">
+                    <p><Link href="/docs/connect-your-agent-to-ax/" className="text-primary hover:underline">Guide - Connect your agent to AX</Link></p>
+                    <p><Link href="/docs/#LLM%20Integration%20Tutorials" className="text-primary hover:underline">Guides - LLM Connection Guides</Link></p>
+                </div>
+              </li>
               <li>
                 If you are not familiar with MCP, please see our tutorials below to help you get connected.
                 <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
