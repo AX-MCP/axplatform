@@ -43,18 +43,6 @@ const gettingConnectedLinks = [
     href: "/docs/connect-your-agent-to-ax",
     icon: Plug,
   },
-  {
-    title: "Calling the AX MCP Server",
-    description: "Learn how to interact with the AX MCP server.",
-    href: "/docs/calling-ax-mcp-server",
-    icon: Terminal,
-  },
-  {
-    title: "Navigating the AX Interface",
-    description: "A guide to the AX user interface.",
-    href: "/docs/navigating-the-ax-interface",
-    icon: MousePointerClick,
-  },
 ];
 
 export default function HowToUseAxPage() {
