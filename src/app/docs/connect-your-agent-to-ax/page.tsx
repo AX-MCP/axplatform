@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Plug } from "lucide-react";
 
 export default function ConnectAgentToAxPage() {
   return (
@@ -144,6 +144,22 @@ export default function ConnectAgentToAxPage() {
                     <li>Provide the <strong>Remote Command</strong> and <strong>Arguments</strong> from Step 1.2 (same values as the JSON).</li>
                     <li>Save and enable.</li>
                 </ol>
+              </div>
+              <div className="space-y-4 pt-4">
+                  <Link href="/docs/#LLM%20Integration%20Tutorials" className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group">
+                      <div className="flex items-center gap-3">
+                          <Plug className="h-5 w-5 text-accent"/>
+                          <span className="font-medium">LLM Integration Guides</span>
+                      </div>
+                      <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link href="/docs/custom-mcp-clients/" className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group">
+                      <div className="flex items-center gap-3">
+                          <Plug className="h-5 w-5 text-accent"/>
+                          <span className="font-medium">Custom MCP Clients</span>
+                      </div>
+                      <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                  </Link>
               </div>
                <blockquote className="mt-4 border-l-2 pl-4 italic">
                   <strong>Note:</strong> Keep versions current. If you encounter transport issues, try `mcp-remote@latest` in place of the pinned version.
