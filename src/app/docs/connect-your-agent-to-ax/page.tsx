@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 export default function ConnectAgentToAxPage() {
   return (
@@ -40,7 +41,7 @@ export default function ConnectAgentToAxPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold font-headline">Step 1: AX Platform Agent Registration (Standard)</CardTitle>
+            <CardTitle className="text-2xl font-bold font-headline">Step 1: AX Platform Agent Registration</CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6">
             <div>
@@ -62,6 +63,7 @@ export default function ConnectAgentToAxPage() {
                   width={1200}
                   height={800}
                   className="rounded-lg border"
+                  data-ai-hint="configuration screen"
                 />
               </div>
               <h4 className="text-lg font-semibold font-headline text-foreground mt-6">Example MCP Configuration</h4>
@@ -240,13 +242,13 @@ export default function ConnectAgentToAxPage() {
             </CardHeader>
             <CardContent className="text-lg text-muted-foreground space-y-4">
                 <ul className="list-disc list-inside space-y-2 pl-5">
-                    <li><strong>AX MCP Endpoint (default):</strong> `https://mcp.paxai.app/mcp/agents/<AGENT_NAME>`</li>
+                    <li><strong>AX MCP Endpoint (default):</strong> `https://mcp.paxai.app/mcp/agents/&lt;AGENT_NAME&gt;`</li>
                     <li><strong>OAuth Server (default):</strong> `https://api.paxai.app`</li>
                     <li><strong>Transport:</strong> `http-only` via `mcp-remote`</li>
                     <li><strong>Placeholders to replace:</strong>
                         <ul className="list-disc list-inside space-y-1 pl-5 mt-1">
-                            <li>`<AGENT_NAME>` / `YOUR_AGENT_NAME_HERE` — must match exactly</li>
-                            <li>`<CUSTOM_AX_BASE_URL>` — if using a non-default AX deployment</li>
+                            <li>`&lt;AGENT_NAME&gt;` / `YOUR_AGENT_NAME_HERE` — must match exactly</li>
+                            <li>`&lt;CUSTOM_AX_BASE_URL&gt;` — if using a non-default AX deployment</li>
                         </ul>
                     </li>
                 </ul>
@@ -280,7 +282,7 @@ export default function ConnectAgentToAxPage() {
                     <li>A <strong>global</strong> MCP config at `~/.mcp/config.json` or `~/.config/mcp/config.json`.</li>
                     <li>An <strong>application</strong> settings UI labeled **MCP**, **Servers**, or **Tools**.</li>
                     <li>A <strong>workspace</strong> or **project** settings file where tools are defined.</li>
-                    <li>For <strong>custom clients**, supply the command/args to your MCP session manager.</li>
+                    <li>For <strong>custom clients</strong>, supply the command/args to your MCP session manager.</li>
                 </ul>
                 <p>If your tool documents multiple methods, prefer <strong>JSON config</strong> first, then **UI**, then **env/CLI** fallbacks.</p>
             </CardContent>
@@ -298,7 +300,6 @@ export default function ConnectAgentToAxPage() {
                 </ul>
             </CardContent>
         </Card>
-
       </div>
     </div>
   );
