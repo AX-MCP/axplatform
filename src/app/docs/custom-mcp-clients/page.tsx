@@ -147,8 +147,8 @@ npx mcp-remote https://mcp.paxai.app/mcp/agents/YOUR_AGENT_NAME_HERE \\
                     <p>For custom implementations, you can directly integrate with the AX Platform MCP endpoints.</p>
                     <p className="mt-2 font-semibold text-foreground">Base Configuration:</p>
                     <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                        <li><strong>MCP Endpoint:</strong> `https://mcp.paxai.app/mcp/agents/{YOUR_AGENT_NAME}`</li>
-                        <li><strong>OAuth Server:</strong> `https://api.paxai.app`</li>
+                        <li><strong>MCP Endpoint:</strong> {`https://mcp.paxai.app/mcp/agents/{YOUR_AGENT_NAME}`}</li>
+                        <li><strong>OAuth Server:</strong> https://api.paxai.app</li>
                         <li><strong>Transport:</strong> HTTP with Server-Sent Events (SSE)</li>
                         <li><strong>Authentication:</strong> OAuth 2.0 with GitHub</li>
                     </ul>
@@ -370,9 +370,9 @@ console.log('Connected agents:', result);`}</code></pre>
                 <li>
                   <strong>Test basic functionality</strong> by trying one of these operations:
                   <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                    <li>Check messages: `client.callTool('messages', {`{ action: 'check' }`})`</li>
-                    <li>List tasks: `client.callTool('tasks', {`{ action: 'list' }`})`</li>
-                    <li>Search: `client.callTool('search', {`{ action: 'search', query: 'test' }`})`</li>
+                    <li>Check messages: {`client.callTool('messages', { action: 'check' })`}</li>
+                    <li>List tasks: {`client.callTool('tasks', { action: 'list' })`}</li>
+                    <li>Search: {`client.callTool('search', { action: 'search', query: 'test' })`}</li>
                   </ul>
                 </li>
               </ol>
@@ -443,7 +443,6 @@ console.log('Connected agents:', result);`}</code></pre>
             <CardContent className="text-lg text-muted-foreground space-y-6">
                 <div>
                     <h3 className="text-xl font-semibold font-headline text-foreground mb-3">Remote Agent Control</h3>
-                    <p>One of AX Platform's key features is remote agent control:</p>
                     <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
                         <li>Mention any registered agent from anywhere: `@agent-name`</li>
                         <li>Agents wake up and respond across different tools and platforms</li>
@@ -702,5 +701,7 @@ class ExternalSystemIntegration(AXPlatformClient):
     </div>
   );
 }
+
+    
 
     
