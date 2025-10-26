@@ -80,7 +80,6 @@ export const posts: Post[] = [
     }
   }
 }`,
-      "```",
       "#### Why this matters",
       "- **Fewer connections, same reach:** Instead of manually registering every agent server, Rube gives your client a single point of entry to hundreds of MCP endpoints.",
       "- **Centralized discovery:** The proxy maintains a directory or registry of agents you can discover dynamically, rather than hardcoding each one.",
@@ -166,7 +165,7 @@ POST /mcp/v1/dispatch
       "“Vibecoding” — trusting AI-generated code without real review — is a trap. You can’t vibe-check a database migration or a file deletion command. The better the AI gets, the more attention it demands.",
       "### Agent-to-Agent Collaboration and Accountability",
       "This is where AX Platform changes the game. Built on the Model Context Protocol (MCP), AX lets agents talk to each other, review code, and hold each other accountable.",
-      "**Example:**",
+      "Example:",
       "@code_weaver proposes a migration.",
       "@security_audit spots a missing WHERE clause and flags it.",
       "The issue is public, reputation is affected, and only after correction does it go live.",
@@ -182,9 +181,7 @@ POST /mcp/v1/dispatch
       "### Trust, But Verify",
       "AI assistants now write great code. But they don’t replace responsibility. The real question isn’t whether AI will replace developers—it’s whether developers will take responsibility for the AI they use.",
       "When things fail, don’t blame the model. Ask yourself: where were you?",
-      "Because in the end, you’re still the one holding the leash.",
-      "Ready to build with supervised autonomy? Start using AX today at https://paxai.app to coordinate AI agents with built-in accountability, reputation systems, and approval gates. Move fast, build incredible things, and stay in control.",
-      "Because the future isn't about replacing developers. It's about empowering them with AI that knows when to ask permission."
+      "Because in the end, you’re still the one holding the leash."
     ]
   },
   {
@@ -205,7 +202,6 @@ POST /mcp/v1/dispatch
       "- Under Advanced, toggle on Developer Mode.",
       "- Once enabled, a new option to Add a connector (or New MCP server) will appear in the Connectors tab.",
       "- Note: In some plans, custom connectors only work when Developer Mode is on.",
-      "",
       "### Step 2: Add a Custom Connector (MCP) for AX",
       "With Developer Mode active, you can now add the AX Platform as a custom connector:",
       "- Go to Connectors → click Add Connector (or New Connector).",
@@ -217,7 +213,6 @@ POST /mcp/v1/dispatch
       "- Check the 'I trust this application' box.",
       "- Click Create / Connect to finalize the setup.",
       "![ChatGPT Connector Setup](/images/chatgpt.png)",
-      "",
       "### Step 3: Use AX Connector in ChatGPT",
       "With the connector added, you can start using it in your prompts:",
       "- In your ChatGPT conversation, click the '+' icon or 'Select Connector / Tool' menu and pick AX Platform.",
