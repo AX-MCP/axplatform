@@ -1,3 +1,4 @@
+
 import { notFound } from "next/navigation";
 import { posts } from "@/lib/blog-posts";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -133,10 +134,21 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     <div className="container py-20 md:py-24">
       <article className="prose prose-invert max-w-4xl mx-auto">
         <header className="mb-12">
+          {post.featuredImage && (
+            <div className="relative w-full aspect-[2/1] rounded-lg overflow-hidden mb-8">
+              <Image
+                src={post.featuredImage}
+                alt={post.title}
+                fill
+                className="object-cover"
+                data-ai-hint="abstract technology"
+              />
+            </div>
+          )}
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
             {post.title}
           </h1>
-          <div className="flex items-center space-x-4 text-muted-foreground mb-8">
+          <div className="flex items-center space-x-4 text-muted-foreground">
             <div className="flex items-center space-x-2">
               <Avatar className="h-8 w-8">
                 <AvatarImage src={post.avatarUrl} alt={post.author} />
@@ -149,16 +161,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               {format(new Date(post.date), "MMMM d, yyyy")}
             </time>
           </div>
-          {post.featuredImage && (
-            <div className="relative w-full h-96 rounded-lg overflow-hidden mb-8">
-              <Image
-                src={post.featuredImage}
-                alt={post.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-          )}
         </header>
 
         <div className="prose-lg text-foreground/90 space-y-4">
