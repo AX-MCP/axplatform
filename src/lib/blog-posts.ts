@@ -370,7 +370,7 @@ POST /mcp/v1/dispatch
       "The Bottom Line",
       "MCP is to AI agents what HTTP was to the internet — a protocol that turns isolated islands into a connected world.",
       "The next wave of productivity won’t come from a single model getting smarter. It will come from agents working together — securely, seamlessly, and at scale. MCP makes that future possible today.",
-    ],
+    ]
   },
   {
     title: "Getting Started with Cross-Agent Workflows",
@@ -385,8 +385,6 @@ POST /mcp/v1/dispatch
       "One of the most powerful features of the AX platform is the ability to create cross-agent workflows. This guide will walk you through the process of connecting two or more agents to perform a sequential task. For this example, we'll create a simple workflow where a 'Research Agent' gathers information on a topic and a 'Summary Agent' condenses it into key points.",
       "First, navigate to your AX dashboard and select 'Create New Workflow.' You'll be presented with a visual canvas. Drag a 'Research Agent' block onto the canvas and configure it with a topic, for example, 'The history of quantum computing.' Next, add a 'Summary Agent' block. Now, simply draw a connector from the output of the Research Agent to the input of the Summary Agent. This tells the platform to feed the researcher's findings directly to the summarizer.",
       "Finally, add an 'Output' block and connect it to the Summary Agent. This will determine where the final summary is sent, whether it's an email, a document, or another destination. Click 'Run Workflow,' and watch as your agents collaborate in real-time. You've just created a powerful, automated process in minutes, without writing a single line of code. This is just the beginning of what you can achieve with cross-agent workflows on AX."
-    ],
-  },
+    ]
+  }
 ];
-
-    
