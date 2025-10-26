@@ -39,7 +39,7 @@ export default function BlogPage() {
               <article key={post.slug}>
                 <Link href={`/blog/${post.slug}`} className="block group mb-4">
                   {post.featuredImage && (
-                    <div className="relative w-full aspect-[2/1] rounded-lg overflow-hidden border border-border/10 mb-6">
+                    <div className="relative w-full aspect-[8/3] rounded-lg overflow-hidden border border-border/10 mb-6">
                       <Image
                         src={post.featuredImage}
                         alt={post.title}
@@ -64,7 +64,7 @@ export default function BlogPage() {
                   </p>
                   <Button variant="link" asChild className="p-0 h-auto text-primary">
                     <Link href={`/blog/${post.slug}`}>
-                      {post.category}
+                      Read More
                     </Link>
                   </Button>
                 </div>
