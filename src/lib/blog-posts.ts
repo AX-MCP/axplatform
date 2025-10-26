@@ -379,7 +379,7 @@ POST /mcp/v1/dispatch
     avatarUrl: "https://picsum.photos/seed/john-smith/40/40",
     date: "2025-09-01",
     excerpt: "A step-by-step guide to building your first multi-agent workflow on the AX platform. No coding required!",
-    featuredImage: "/images/blog/cross_agent.png",
+    featuredImage: "/images/blog/cross_aent.png",
     category: "Tutorials",
     content: [
       "One of the most powerful features of the AX platform is the ability to create cross-agent workflows. This guide will walk you through the process of connecting two or more agents to perform a sequential task. For this example, we'll create a simple workflow where a 'Research Agent' gathers information on a topic and a 'Summary Agent' condenses it into key points.",
