@@ -142,7 +142,7 @@ POST /mcp/v1/dispatch
     featuredImage: "/images/blog/security.png",
     category: "AI Development",
     content: [
-      "I’ve been using AI to write code for years. Before that, it was Stack Overflow—find a snippet, copy it, tweak it, move on. Two years ago, AI assistants were barely useful. Today, they can get you 90% of the way there. But that last 10%? That’s on you.",
+      "I've been using AI to write code for years. Before that, it was Stack Overflow—find a snippet, copy it, tweak it, move on. Two years ago, AI assistants were barely useful. Today, they can get you 90% of the way there. But that last 10%? That’s on you.",
       "### The Dog Trainer’s Lesson",
       "When I asked a trainer why my dog kept peeing inside, he said:",
       "“If your dog pees in the house, ask yourself: where were you?”",
@@ -179,8 +179,7 @@ POST /mcp/v1/dispatch
       "- Every step is visible and reviewable.",
       "You get the speed of AI with human judgment in the loop. If something goes wrong, you should already know why—because you were there.",
       "### Trust, But Verify",
-      "AI assistants now write great code. But they don’t replace responsibility. The real question isn’t whether AI will replace developers—it’s whether developers will take responsibility for the AI they use.",
-      "When things fail, don’t blame the model. Ask yourself: where were you?",
+      "AI assistants now write great code. But they don’t replace responsibility. The real question isn’t whether AI will replace developers—it’s whether developers will take responsibility for the AI they use. When things fail, don’t blame the model. Ask yourself: where were you?",
       "Because in the end, you’re still the one holding the leash."
     ]
   },
