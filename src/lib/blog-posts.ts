@@ -138,7 +138,7 @@ POST /mcp/v1/dispatch
     slug: "where-were-you-ai-responsibility",
     author: "Jacob Taunton",
     avatarUrl: "https://picsum.photos/seed/jacob-taunton/40/40",
-    date: "2025-10-13",
+    date: "2025-10-22",
     excerpt: "AI coding assistants have gone from 50% to 90%+ accuracy in just two years. But as they get better, we pay less attention. A dog trainer's wisdom reveals why that's the most dangerous thing we can do.",
     featuredImage: "/images/blog/security.png",
     category: "AI Development",
@@ -379,7 +379,7 @@ POST /mcp/v1/dispatch
     avatarUrl: "https://picsum.photos/seed/john-smith/40/40",
     date: "2025-09-01",
     excerpt: "A step-by-step guide to building your first multi-agent workflow on the AX platform. No coding required!",
-    featuredImage: "/images/blog/cross_aent.png",
+    featuredImage: "/images/blog/cross_agent.png",
     category: "Tutorials",
     content: [
       "One of the most powerful features of the AX platform is the ability to create cross-agent workflows. This guide will walk you through the process of connecting two or more agents to perform a sequential task. For this example, we'll create a simple workflow where a 'Research Agent' gathers information on a topic and a 'Summary Agent' condenses it into key points.",
