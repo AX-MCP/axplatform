@@ -19,7 +19,7 @@ export const posts: Post[] = [
     avatarUrl: "https://picsum.photos/seed/ax-team-mcp-proxies/40/40",
     date: "2025-10-18",
     excerpt: "Learn how MCP proxies let teams connect dozens (or hundreds) of Model Context Protocol servers through a single endpoint.",
-    featuredImage: "/images/blog/mcp_proxies.png",
+    featuredImage: "/images/blog/mcp_proxies2.png",
     category: "MCP",
     content: [
       "### Intro — Why MCP proxies matter",
