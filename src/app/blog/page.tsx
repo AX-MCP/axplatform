@@ -1,60 +1,77 @@
+
 import Link from "next/link";
 import Image from "next/image";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { posts } from "@/lib/blog-posts";
 import { format } from 'date-fns';
+import { Button } from "@/components/ui/button";
 
 export default function BlogPage() {
   const sortedPosts = [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
-    <div className="container py-20 md:py-24">
-      <div className="max-w-4xl mx-auto">
-        <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">From the Blog</h1>
-          <p className="text-lg text-muted-foreground">
-            Insights, tutorials, and updates from the AX team.
-          </p>
-        </header>
+    <div className="container py-16 md:py-24">
+      <header className="text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">AX Platform Blog</h1>
+        <p className="text-lg text-muted-foreground">
+          Insights for developers building with AX.
+        </p>
+      </header>
 
-        <div className="space-y-8">
-          {sortedPosts.map((post) => (
-            <Card key={post.slug} className="group transition-colors hover:border-primary overflow-hidden">
-              {post.featuredImage && (
-                <div className="relative w-full h-64 overflow-hidden">
-                  <Link href={`/blog/${post.slug}`}>
-                    <Image
-                      src={post.featuredImage}
-                      alt={post.title}
-                      fill
-                      className="object-cover transition-transform group-hover:scale-105"
-                    />
-                  </Link>
-                </div>
-              )}
-              <CardHeader>
-                <p className="text-sm text-muted-foreground mb-2">
-                  {format(new Date(post.date), 'MMMM d, yyyy')}
-                </p>
-                <CardTitle>
-                  <Link href={`/blog/${post.slug}`} className="text-2xl font-bold font-headline hover:text-primary transition-colors">
-                    {post.title}
-                  </Link>
-                </CardTitle>
-                <CardDescription className="pt-2 text-base text-muted-foreground">{post.author}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/90">{post.excerpt}</p>
-                <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-primary font-semibold mt-4 group-hover:underline">
-                  Read More
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+      <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-12 lg:gap-16">
+        <aside className="hidden md:block">
+          <h2 className="text-sm font-semibold uppercase text-muted-foreground tracking-wider mb-4">All Posts</h2>
+          <nav className="flex flex-col space-y-3">
+            {sortedPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="text-sm text-foreground/80 hover:text-primary transition-colors"
+              >
+                {post.title}
+              </Link>
+            ))}
+          </nav>
+        </aside>
+
+        <main>
+          <div className="space-y-16">
+            {sortedPosts.map((post) => (
+              <article key={post.slug}>
+                <Link href={`/blog/${post.slug}`} className="block group mb-4">
+                  {post.featuredImage && (
+                    <div className="relative w-full aspect-[8/3] rounded-lg overflow-hidden border border-border/10 mb-6">
+                      <Image
+                        src={post.featuredImage}
+                        alt={post.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        data-ai-hint="abstract technology"
+                      />
+                    </div>
+                  )}
                 </Link>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                <div>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {format(new Date(post.date), 'MMMM d, yyyy')}
+                  </p>
+                  <h3 className="text-2xl font-bold font-headline mb-3">
+                    <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
+                      {post.title}
+                    </Link>
+                  </h3>
+                  <p className="text-foreground/80 mb-4 leading-relaxed">
+                    {post.excerpt}
+                  </p>
+                  <Button variant="link" asChild className="p-0 h-auto text-primary">
+                    <Link href={`/blog/${post.slug}`}>
+                      Read More
+                    </Link>
+                  </Button>
+                </div>
+              </article>
+            ))}
+          </div>
+        </main>
       </div>
     </div>
   );

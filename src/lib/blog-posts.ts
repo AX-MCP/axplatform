@@ -8,6 +8,7 @@ export type Post = {
   excerpt: string;
   content: string[];
   featuredImage?: string;
+  category: string;
 };
 
 export const posts: Post[] = [
@@ -17,7 +18,9 @@ export const posts: Post[] = [
     author: "AX Team",
     avatarUrl: "https://picsum.photos/seed/ax-team-mcp-proxies/40/40",
     date: "2025-10-18",
-    excerpt: "Learn how MCP proxies let teams connect dozens (or hundreds) of Model Context Protocol servers through a single endpoint. We compare Rube, MetaMCP, and Zapier's MCP tools, show integration tips, security best practices, and real-world use cases.",
+    excerpt: "Learn how MCP proxies let teams connect dozens (or hundreds) of Model Context Protocol servers through a single endpoint.",
+    featuredImage: "https://picsum.photos/seed/mcp-proxies/1200/600",
+    category: "MCP",
     content: [
       "### Intro — Why MCP proxies matter",
       "As multi-agent ecosystems grow, each agent or model often exposes its own MCP server endpoint. Managing dozens of endpoints becomes operationally painful: configuration sprawl, differing auth schemes, observability gaps, and race conditions when workflows must call multiple agents. MCP proxies solve that by offering a single **gateway endpoint** which routes to many MCP servers, normalizes auth & telemetry, and simplifies orchestration — exactly the kind of glue the AX Platform sits on top of to enable multi-agent collaboration.",
@@ -137,7 +140,8 @@ POST /mcp/v1/dispatch
     avatarUrl: "https://picsum.photos/seed/jacob-taunton/40/40",
     date: "2025-10-13",
     excerpt: "AI coding assistants have gone from 50% to 90%+ accuracy in just two years. But as they get better, we pay less attention. A dog trainer's wisdom reveals why that's the most dangerous thing we can do.",
-    featuredImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop",
+    featuredImage: "https://picsum.photos/seed/responsibility/1200/600",
+    category: "AI Development",
     content: [
       "I've been using AI to write code for a long time. Before that, it was Stack Overflow. You'd figure out stuff somewhere — learn basic practices, copy patterns, adapt solutions. Two years ago, AI code assistants were pretty awful, but I'd still use them. They got you maybe 50% of the way there.",
       "By early this year, that jumped to 70%. Then suddenly, it felt like 90%. Almost 100% if you're not paying attention at all. But here's the thing: you do have to pay attention. And that's exactly my point.",
@@ -277,7 +281,8 @@ POST /mcp/v1/dispatch
     avatarUrl: "https://picsum.photos/seed/m-schecht-2/40/40",
     date: "2025-10-10",
     excerpt: "Want ChatGPT to talk to your AX Platform agents directly? Here's how to enable Developer Mode in ChatGPT, add a custom MCP connector, and link it to your AX instance.",
-    featuredImage: "/images/chatgpt.png",
+    featuredImage: "https://picsum.photos/seed/chatgpt/1200/600",
+    category: "Integrations",
     content: [
       "Want ChatGPT to talk to your AX Platform agents directly? Here's how to enable Developer Mode in ChatGPT, add a custom MCP connector, and link it to your AX instance.",
       "### Step 1: Enable Developer Mode in ChatGPT",
@@ -316,9 +321,10 @@ POST /mcp/v1/dispatch
     avatarUrl: "https://picsum.photos/seed/m-schecht/40/40",
     date: "2025-10-05",
     excerpt: "A unified directory for discoverable, interoperable AI servers and tools. The MCP Registry serves as a central hub for the expanding ecosystem.",
-    featuredImage: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200&h=600&fit=crop",
+    featuredImage: "https://picsum.photos/seed/registry/1200/600",
+    category: "MCP",
     content: [
-      "The Model Context Protocol (MCP) is redefining how AI systems communicate, collaborate, and share context. As the ecosystem expands, the MCP Registry serves as a central hub — a public directory where developers, organizations, and AI enthusiasts can discover and register MCP-compatible servers, tools, and extensions.",
+      "The Model Context Protocol (MCP) is redefining how AI systems communicate, collaborate, and share context. As the ecosystem expands, the MCP Registry serves as a central hub — a public directory where developers, organizations, and AI enthusiasts can discover and register MCP-compatible servers, tools, and extensions. Repository: github.com/modelcontextprotocol/registry",
       "What Is the MCP Registry?",
       "The MCP Registry is an open-source project on GitHub, created to catalog the rapidly growing network of servers that implement the Model Context Protocol. Each entry describes an MCP-compatible server — including its capabilities, configuration details, and supported actions — allowing anyone to quickly find, connect, or contribute new integrations. Repository: github.com/modelcontextprotocol/registry",
       "Why It Matters",
@@ -343,7 +349,8 @@ POST /mcp/v1/dispatch
     avatarUrl: "https://picsum.photos/seed/jane-doe/40/40",
     date: "2025-09-09",
     excerpt: "Discover how the Model Context Protocol (MCP) is revolutionizing the way AI agents interact and collaborate, unlocking new potentials for automation and intelligence.",
-    featuredImage: "/images/agents.png",
+    featuredImage: "https://picsum.photos/seed/future-ai/1200/600",
+    category: "MCP",
     content: [
       "The AI world has exploded with new tools and assistants — ChatGPT, Claude, Copilot, Cursor, Gemini, and more. Each is powerful on its own, but here’s the problem: they don’t natively talk to each other. Users spend hours every week copy-pasting outputs between apps, managing context windows, and trying to stitch together workflows that should “just work.”",
       "That’s where MCP (Model Context Protocol) comes in.",
@@ -372,7 +379,8 @@ POST /mcp/v1/dispatch
     avatarUrl: "https://picsum.photos/seed/john-smith/40/40",
     date: "2025-09-01",
     excerpt: "A step-by-step guide to building your first multi-agent workflow on the AX platform. No coding required!",
-    featuredImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=600&fit=crop",
+    featuredImage: "https://picsum.photos/seed/workflows/1200/600",
+    category: "Tutorials",
     content: [
       "One of the most powerful features of the AX platform is the ability to create cross-agent workflows. This guide will walk you through the process of connecting two or more agents to perform a sequential task. For this example, we'll create a simple workflow where a 'Research Agent' gathers information on a topic and a 'Summary Agent' condenses it into key points.",
       "First, navigate to your AX dashboard and select 'Create New Workflow.' You'll be presented with a visual canvas. Drag a 'Research Agent' block onto the canvas and configure it with a topic, for example, 'The history of quantum computing.' Next, add a 'Summary Agent' block. Now, simply draw a connector from the output of the Research Agent to the input of the Summary Agent. This tells the platform to feed the researcher's findings directly to the summarizer.",
