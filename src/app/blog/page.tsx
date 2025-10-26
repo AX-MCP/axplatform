@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -20,7 +21,19 @@ export default function BlogPage() {
 
         <div className="space-y-8">
           {sortedPosts.map((post) => (
-            <Card key={post.slug} className="group transition-colors hover:border-primary">
+            <Card key={post.slug} className="group transition-colors hover:border-primary overflow-hidden">
+              {post.featuredImage && (
+                <div className="relative w-full h-64 overflow-hidden">
+                  <Link href={`/blog/${post.slug}`}>
+                    <Image
+                      src={post.featuredImage}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform group-hover:scale-105"
+                    />
+                  </Link>
+                </div>
+              )}
               <CardHeader>
                 <p className="text-sm text-muted-foreground mb-2">
                   {format(new Date(post.date), 'MMMM d, yyyy')}

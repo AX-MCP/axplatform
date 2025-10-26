@@ -28,7 +28,7 @@ function renderContent(paragraph: string, index: number) {
   if (paragraph.startsWith("```")) {
     const lang = paragraph.substring(3);
     // This assumes the next paragraph is the code.
-    return null; 
+    return null;
   }
   if (index > 0 && posts.flatMap(p => p.content).some(c => c.startsWith("```") && c === posts.flatMap(p => p.content)[index-1])) {
     const codeContent = paragraph;
@@ -38,6 +38,41 @@ function renderContent(paragraph: string, index: number) {
         <code className={`language-${lang}`}>{codeContent}</code>
       </pre>
     );
+  }
+  // Video embedding support: [video](url)
+  if (paragraph.startsWith("[video]") && paragraph.endsWith(")")) {
+    const match = paragraph.match(/\[video\]\((.*)\)/);
+    if (match) {
+      const videoUrl = match[1];
+      return (
+        <div key={index} className="my-8 rounded-lg overflow-hidden">
+          <video
+            controls
+            className="w-full rounded-lg"
+            src={videoUrl}
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      );
+    }
+  }
+  // YouTube/Vimeo embed support: [embed](url)
+  if (paragraph.startsWith("[embed]") && paragraph.endsWith(")")) {
+    const match = paragraph.match(/\[embed\]\((.*)\)/);
+    if (match) {
+      const embedUrl = match[1];
+      return (
+        <div key={index} className="my-8 aspect-video rounded-lg overflow-hidden">
+          <iframe
+            src={embedUrl}
+            className="w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      );
+    }
   }
   if (paragraph.startsWith("![") && paragraph.endsWith(")")) {
     const match = paragraph.match(/!\[(.*)\]\((.*)\)/);
@@ -101,7 +136,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
             {post.title}
           </h1>
-          <div className="flex items-center space-x-4 text-muted-foreground">
+          <div className="flex items-center space-x-4 text-muted-foreground mb-8">
             <div className="flex items-center space-x-2">
               <Avatar className="h-8 w-8">
                 <AvatarImage src={post.avatarUrl} alt={post.author} />
@@ -114,6 +149,16 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               {format(new Date(post.date), "MMMM d, yyyy")}
             </time>
           </div>
+          {post.featuredImage && (
+            <div className="relative w-full h-96 rounded-lg overflow-hidden mb-8">
+              <Image
+                src={post.featuredImage}
+                alt={post.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+          )}
         </header>
 
         <div className="prose-lg text-foreground/90 space-y-4">
