@@ -3,6 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
+import { BookOpen, Video, HelpCircle, Users, ArrowRight } from "lucide-react";
+
+const resources = [
+    { href: "/docs", text: "Documentation", icon: BookOpen },
+    { href: "/demos", text: "Demos", icon: Video },
+    { href: "/faq", text: "FAQ", icon: HelpCircle },
+    { href: "/docs/discord-and-support", text: "Discord and Support", icon: Users },
+]
 
 export default function ClaudeDesktopPage() {
   return (
@@ -310,12 +318,6 @@ export default function ClaudeDesktopPage() {
                 <li>Verify the MCP remote package is up to date: <code>npx mcp-remote@latest</code></li>
                 <li>On corporate networks, ensure the required domains are not blocked</li>
               </ul>
-               <p className="mt-4">If problems persist:</p>
-                <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                    <li>Contact AX Platform support at <a href="mailto:support@ax-platform.com" className="text-primary hover:underline">support@ax-platform.com</a></li>
-                    <li>Check the AX Platform documentation at <Link href="/docs" className="text-primary hover:underline">https://ax-platform.com/docs/</Link></li>
-                    <li>Join the community discussion on <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX Discord</Link></li>
-                </ul>
             </div>
           </CardContent>
         </Card>
@@ -323,16 +325,20 @@ export default function ClaudeDesktopPage() {
         <Separator />
         
         <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold font-headline">Support Resources</CardTitle>
-            </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-2">
-              <p><strong>AX Platform Support:</strong> <a href="mailto:support@ax-platform.com" className="text-primary hover:underline">support@ax-platform.com</a></p>
-              <p><strong>Documentation:</strong> <Link href="/docs" className="text-primary hover:underline">https://ax-platform.com/docs/</Link></p>
-              <p><strong>Community Discord:</strong> <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX Discord</Link></p>
-              <p><strong>GitHub Repository:</strong> <Link href="https://github.com/AX-MCP/PaxAI" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://github.com/AX-MCP/PaxAI</Link></p>
-              <p className="mt-4">For Claude Desktop specific support, also refer to Anthropic's official documentation and support channels.</p>
-            </CardContent>
+          <CardHeader>
+            <CardTitle className="text-center text-3xl font-bold font-headline">Resources</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {resources.map((resource) => (
+                <Link key={resource.href} href={resource.href} className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group">
+                    <div className="flex items-center gap-3">
+                        <resource.icon className="h-5 w-5 text-accent"/>
+                        <span className="font-medium">{resource.text}</span>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                </Link>
+            ))}
+          </CardContent>
         </Card>
 
       </div>

@@ -2,6 +2,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+import { BookOpen, Video, HelpCircle, Users, ArrowRight } from "lucide-react";
+
+const resources = [
+    { href: "/docs", text: "Documentation", icon: BookOpen },
+    { href: "/demos", text: "Demos", icon: Video },
+    { href: "/faq", text: "FAQ", icon: HelpCircle },
+    { href: "/docs/discord-and-support", text: "Discord and Support", icon: Users },
+]
+
 
 export default function CodexCliPage() {
   return (
@@ -465,12 +474,18 @@ def register_code_review_tool():
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold font-headline">Support and Resources</CardTitle>
+            <CardTitle className="text-center text-3xl font-bold font-headline">Resources</CardTitle>
           </CardHeader>
-          <CardContent className="text-lg text-muted-foreground space-y-2">
-            <p><strong>AX Platform Documentation:</strong> <Link href="https://ax-platform.com/docs/" className="text-primary hover:underline">https://ax-platform.com/docs/</Link></p>
-            <p><strong>MCP Protocol Specification:</strong> <Link href="https://spec.modelcontextprotocol.io/" className="text-primary hover:underline">https://spec.modelcontextprotocol.io/</Link></p>
-            <p><strong>OpenAI Codex Documentation:</strong> <Link href="https://platform.openai.com/docs/guides/code" className="text-primary hover:underline">https://platform.openai.com/docs/guides/code</Link></p>
+          <CardContent className="space-y-4">
+            {resources.map((resource) => (
+                <Link key={resource.href} href={resource.href} className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group">
+                    <div className="flex items-center gap-3">
+                        <resource.icon className="h-5 w-5 text-accent"/>
+                        <span className="font-medium">{resource.text}</span>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                </Link>
+            ))}
           </CardContent>
         </Card>
 

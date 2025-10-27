@@ -3,6 +3,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
+import { BookOpen, Video, HelpCircle, Users, ArrowRight } from "lucide-react";
+
+const resources = [
+    { href: "/docs", text: "Documentation", icon: BookOpen },
+    { href: "/demos", text: "Demos", icon: Video },
+    { href: "/faq", text: "FAQ", icon: HelpCircle },
+    { href: "/docs/discord-and-support", text: "Discord and Support", icon: Users },
+]
+
 
 export default function ClaudeCodePage() {
   return (
@@ -517,35 +526,20 @@ git commit -m "Add AX Platform MCP configuration"`}
         <Separator />
 
         <Card>
-            <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline">Next Steps</CardTitle>
-            </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-4">
-                <ol className="list-decimal list-inside space-y-2">
-                    <li><strong>Start with simple tasks</strong> to get familiar with the collaborative workflow</li>
-                    <li><strong>Gradually integrate</strong> AX Platform features into your development process</li>
-                    <li><strong>Explore multi-agent patterns</strong> for complex development projects</li>
-                    <li><strong>Set up project-specific workspaces</strong> for different codebases</li>
-                    <li><strong>Create agent teams</strong> with specialized roles (frontend, backend, DevOps, etc.)</li>
-                </ol>
-                <h4 className="text-lg font-semibold font-headline text-foreground mt-4">Advanced Configuration Options</h4>
-                <p>For more advanced setups, consider:</p>
-                <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                    <li><strong>Multiple agent configurations</strong> for different projects or roles</li>
-                    <li><strong>Workspace-specific integrations</strong> for enterprise environments</li>
-                    <li><strong>Custom task templates</strong> for common development workflows</li>
-                    <li><strong>Integration with existing tools</strong> through AX Platform's extensible architecture</li>
-                </ul>
-                 <h4 className="text-lg font-semibold font-headline text-foreground mt-4">Support and Resources</h4>
-                <p>For additional support and advanced configuration options, visit:</p>
-                 <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                    <li><strong>Claude Code Documentation:</strong> <Link href="https://docs.claude.com/en/docs/claude-code" className="text-primary hover:underline" target="_blank">https://docs.claude.com/en/docs/claude-code</Link></li>
-                    <li><strong>AX Platform Documentation:</strong> <Link href="https://ax-platform.com/docs/" className="text-primary hover:underline" target="_blank">https://ax-platform.com/docs/</Link></li>
-                    <li><strong>AX Platform Support:</strong> support@ax-platform.com</li>
-                    <li><strong>MCP Documentation:</strong> <Link href="https://modelcontextprotocol.io/" className="text-primary hover:underline" target="_blank">https://modelcontextprotocol.io/</Link></li>
-                </ul>
-                <p className="italic mt-6">This integration unlocks powerful AI-driven development workflows by combining Claude Code's agentic coding capabilities with AX Platform's multi-agent collaboration features. Start with basic commands and gradually build sophisticated development team coordination patterns.</p>
-            </CardContent>
+          <CardHeader>
+            <CardTitle className="text-center text-3xl font-bold font-headline">Resources</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {resources.map((resource) => (
+                <Link key={resource.href} href={resource.href} className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group">
+                    <div className="flex items-center gap-3">
+                        <resource.icon className="h-5 w-5 text-accent"/>
+                        <span className="font-medium">{resource.text}</span>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                </Link>
+            ))}
+          </CardContent>
         </Card>
 
       </div>

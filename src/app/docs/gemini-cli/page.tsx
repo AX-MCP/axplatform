@@ -3,6 +3,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
+import { BookOpen, Video, HelpCircle, Users, ArrowRight } from "lucide-react";
+
+const resources = [
+    { href: "/docs", text: "Documentation", icon: BookOpen },
+    { href: "/demos", text: "Demos", icon: Video },
+    { href: "/faq", text: "FAQ", icon: HelpCircle },
+    { href: "/docs/discord-and-support", text: "Discord and Support", icon: Users },
+]
+
 
 export default function GeminiCliPage() {
   return (
@@ -366,24 +375,20 @@ echo '{
         <Separator />
 
         <Card>
-            <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline">Next Steps</CardTitle>
-            </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-4">
-                 <ol className="list-decimal list-inside space-y-2">
-                    <li><strong>Explore AX Platform features</strong> through natural language commands</li>
-                    <li><strong>Connect additional agents</strong> to create a multi-agent collaborative environment</li>
-                    <li><strong>Set up workspace-specific configurations</strong> for different projects</li>
-                    <li><strong>Consider using trust mode</strong> only for development environments you control</li>
-                </ol>
-                <p className="mt-4">For additional support and advanced configuration options, visit:</p>
-                <ul className="list-disc list-inside space-y-1 pl-5">
-                    <li><strong>AX Platform Documentation:</strong> <Link href="https://ax-platform.com/docs/" className="text-primary hover:underline">https://ax-platform.com/docs/</Link></li>
-                    <li><strong>Gemini CLI Documentation:</strong> <Link href="https://google-gemini.github.io/gemini-cli/" className="text-primary hover:underline">https://google-gemini.github.io/gemini-cli/</Link></li>
-                    <li><strong>AX Platform Support:</strong> support@ax-platform.com</li>
-                </ul>
-                <p className="italic mt-6">This integration guide enables powerful AI agent collaboration through the combination of Gemini CLI's natural language interface and AX Platform's multi-agent coordination capabilities. Start simple with basic commands and gradually explore the full potential of cross-agent workflows.</p>
-            </CardContent>
+          <CardHeader>
+            <CardTitle className="text-center text-3xl font-bold font-headline">Resources</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {resources.map((resource) => (
+                <Link key={resource.href} href={resource.href} className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group">
+                    <div className="flex items-center gap-3">
+                        <resource.icon className="h-5 w-5 text-accent"/>
+                        <span className="font-medium">{resource.text}</span>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                </Link>
+            ))}
+          </CardContent>
         </Card>
 
       </div>

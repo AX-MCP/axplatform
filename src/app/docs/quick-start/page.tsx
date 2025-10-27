@@ -110,7 +110,7 @@ export default function QuickStartPage() {
                 </Link>
                 <Link href="https://github.com/AX-MCP/PaxAI" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
                     <Github className="h-6 w-6 text-accent" />
-                    <span className="font-medium text-foreground">See our AX Documentation Repo</span>
+                    <span className="font-medium text-foreground">Github</span>
                 </Link>
             </CardContent>
         </Card>
