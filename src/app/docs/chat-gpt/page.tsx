@@ -3,6 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
+import { BookOpen, Video, HelpCircle, Users, ArrowRight } from "lucide-react";
+
+const resources = [
+    { href: "/docs", text: "Documentation", icon: BookOpen },
+    { href: "/demos", text: "Demos", icon: Video },
+    { href: "/faq", text: "FAQ", icon: HelpCircle },
+    { href: "/docs/discord-and-support", text: "Discord and Support", icon: Users },
+]
 
 export default function ChatGptPage() {
   return (
@@ -251,12 +259,20 @@ export default function ChatGptPage() {
         </Card>
 
         <Card>
-            <CardHeader><CardTitle className="text-2xl font-bold font-headline">Resources</CardTitle></CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-2">
-                <p><Link href="https://ax-platform.com" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">AX Platform</Link></p>
-                <p><Link href="https://paxai.app" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">AX Web Console</Link></p>
-                <p><Link href="https://github.com/AX-MCP/PaxAI" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">AX GitHub</Link></p>
-            </CardContent>
+          <CardHeader>
+            <CardTitle className="text-center text-3xl font-bold font-headline">Resources</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {resources.map((resource) => (
+                <Link key={resource.href} href={resource.href} className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group">
+                    <div className="flex items-center gap-3">
+                        <resource.icon className="h-5 w-5 text-accent"/>
+                        <span className="font-medium">{resource.text}</span>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                </Link>
+            ))}
+          </CardContent>
         </Card>
 
       </div>

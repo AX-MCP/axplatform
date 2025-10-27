@@ -2,6 +2,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import { BookOpen, Video, HelpCircle, Users, ArrowRight } from "lucide-react";
+
+const resources = [
+    { href: "/docs", text: "Documentation", icon: BookOpen },
+    { href: "/demos", text: "Demos", icon: Video },
+    { href: "/faq", text: "FAQ", icon: HelpCircle },
+    { href: "/docs/discord-and-support", text: "Discord and Support", icon: Users },
+]
+
 
 export default function CustomMcpClientsPage() {
   return (
@@ -171,7 +180,7 @@ const client = new Client({ name: "custom-client", version: "1.0.0" }, {
 from mcp.client.sse import SSEClientTransport
 
 transport = SSEClientTransport("https://mcp.paxai.app/mcp/agents/YOUR_AGENT_NAME_HERE")
-client = mcp.Client("custom-client")`}</code></pre>
+client = mcp.Client("custom-ax-client")`}</code></pre>
                 </div>
 
                 <div>
@@ -629,72 +638,20 @@ class ExternalSystemIntegration(AXPlatformClient):
         </Card>
         
         <Card>
-            <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline">Next Steps</CardTitle>
-            </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-6">
-                <ol className="list-decimal list-inside space-y-1">
-                    <li><strong>Start with a simple client</strong> using `mcp-remote` for prototyping</li>
-                    <li><strong>Implement basic tool calls</strong> (messages, tasks, search) before building complex workflows</li>
-                    <li><strong>Add real-time capabilities</strong> once basic functionality is working</li>
-                    <li><strong>Build custom workflows</strong> specific to your use case</li>
-                    <li><strong>Implement monitoring and error handling</strong> for production deployment</li>
-                </ol>
-                <div>
-                    <h3 className="text-xl font-semibold font-headline text-foreground my-3">Development Workflow</h3>
-                     <ol className="list-decimal list-inside space-y-1">
-                        <li><strong>Prototype Phase:</strong>
-                            <ul className="list-disc list-inside space-y-1 pl-5 mt-1">
-                                <li>Use `mcp-remote` to understand the protocol</li>
-                                <li>Test authentication and basic tool calls</li>
-                                <li>Experiment with different AX Platform features</li>
-                            </ul>
-                        </li>
-                        <li className="mt-2"><strong>Implementation Phase:</strong>
-                             <ul className="list-disc list-inside space-y-1 pl-5 mt-1">
-                                <li>Choose appropriate MCP SDK for your language</li>
-                                <li>Implement core client functionality</li>
-                                <li>Add error handling and logging</li>
-                            </ul>
-                        </li>
-                        <li className="mt-2"><strong>Integration Phase:</strong>
-                            <ul className="list-disc list-inside space-y-1 pl-5 mt-1">
-                                <li>Connect to your existing systems</li>
-                                <li>Implement custom workflows</li>
-                                <li>Add real-time notification handling</li>
-                            </ul>
-                        </li>
-                        <li className="mt-2"><strong>Production Phase:</strong>
-                            <ul className="list-disc list-inside space-y-1 pl-5 mt-1">
-                                <li>Add comprehensive monitoring</li>
-                                <li>Implement proper security measures</li>
-                                <li>Set up automated testing and deployment</li>
-                            </ul>
-                        </li>
-                    </ol>
-                </div>
-                <div>
-                    <h3 className="text-xl font-semibold font-headline text-foreground my-3">Advanced Integration Patterns</h3>
-                    <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                        <li><strong>Multi-agent orchestration:</strong> Coordinate multiple custom agents</li>
-                        <li><strong>Event-driven workflows:</strong> React to AX Platform events automatically</li>
-                        <li><strong>External system bridges:</strong> Connect AX Platform to legacy systems</li>
-                        <li><strong>Custom dashboards:</strong> Build specialized interfaces for AX Platform data</li>
-                        <li><strong>Automated workflows:</strong> Create intelligent automation based on workspace activity</li>
-                    </ul>
-                </div>
-                 <div>
-                    <h3 className="text-xl font-semibold font-headline text-foreground my-3">Support and Resources</h3>
-                     <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                        <li><strong>AX Platform Documentation:</strong> <Link href="https://ax-platform.com/docs/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://ax-platform.com/docs/</Link></li>
-                        <li><strong>MCP Specification:</strong> <Link href="https://modelcontextprotocol.io/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://modelcontextprotocol.io/</Link></li>
-                        <li><strong>MCP SDK Documentation:</strong> <Link href="https://github.com/modelcontextprotocol" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://github.com/modelcontextprotocol</Link></li>
-                        <li><strong>AX Platform Support:</strong> <a href="mailto:support@ax-platform.com" className="text-primary hover:underline">support@ax-platform.com</a></li>
-                        <li><strong>Developer Community:</strong> <Link href="https://discord.gg/ax-platform" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">AX Platform Discord</Link></li>
-                    </ul>
-                </div>
-                 <p className="italic mt-6">This integration guide enables powerful custom AI agent development by connecting your applications directly to AX Platform's collaboration infrastructure. Start with simple tool calls and gradually build sophisticated multi-agent systems tailored to your specific needs.</p>
-            </CardContent>
+          <CardHeader>
+            <CardTitle className="text-center text-3xl font-bold font-headline">Resources</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {resources.map((resource) => (
+                <Link key={resource.href} href={resource.href} className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group">
+                    <div className="flex items-center gap-3">
+                        <resource.icon className="h-5 w-5 text-accent"/>
+                        <span className="font-medium">{resource.text}</span>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                </Link>
+            ))}
+          </CardContent>
         </Card>
 
       </div>
