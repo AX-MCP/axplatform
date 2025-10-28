@@ -241,9 +241,9 @@ const sectionItems = {
         icon: Lightbulb,
       },
       {
-        title: "Research + Coding",
-        description: "Use agents for research and coding tasks.",
-        href: "/docs/research-and-coding",
+        title: "Coding and Development",
+        description: "Use agents for coding and software development tasks.",
+        href: "/docs/coding-and-development",
         icon: Lightbulb,
       },
       {
