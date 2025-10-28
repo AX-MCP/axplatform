@@ -18,7 +18,7 @@ export default function InvestorsPage() {
               To proceed with investment discussions, please review and sign our Mutual Non-Disclosure Agreement.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Link href="https://app.hellosign.com/s/2qkKXQ2M" target="_blank" rel="noopener noreferrer">
+              <Link href="https://app.hellosign.com/s/5zyewZzF" target="_blank" rel="noopener noreferrer">
                 <FileSignature className="mr-2 h-5 w-5" />
                 Sign the NDA
               </Link>
