@@ -35,7 +35,7 @@ const securityFeatures = [
 export default function SecurityPage() {
   return (
     <div className="bg-background text-foreground">
-      <section className="py-20 md:py-32">
+      <section className="py-20 md:py-24">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 text-center md:text-left">
