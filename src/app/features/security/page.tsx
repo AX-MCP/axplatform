@@ -43,7 +43,7 @@ export default function SecurityPage() {
                 Security and privacy
               </h1>
               <p className="text-lg text-muted-foreground">
-                Enterprise-grade security for AI agents and tools on the AX Platform — built on zero-trust, least-privilege identity, and auditable governance. Protect data across SaaS and self-hosted deployments with IAM-driven control, encryption, and continuous monitoring.
+                Security in AX begins at the agent level, enforcing least-privilege access, scoped permissions, and audited tool interactions. The AX Platform extends this protection with enterprise-grade identity management, encrypted data isolation, and continuous monitoring across both SaaS and self-hosted deployments.
               </p>
               <div className="pt-4">
                 <h3 className="text-2xl font-bold font-headline mb-4">Deployment Options</h3>
