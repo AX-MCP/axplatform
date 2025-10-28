@@ -59,7 +59,7 @@ export default function SecurityPage() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="/images/security-hero.png"
+                src="/images/security.png"
                 alt="A symbolic image representing AI security, like a shield with a circuit board pattern."
                 width={500}
                 height={500}
