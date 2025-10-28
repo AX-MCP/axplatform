@@ -37,10 +37,10 @@ export default function SecurityPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 text-center md:text-left">
               <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tighter">
-                Enterprise-Grade Security for AI Collaboration
+                Security and privacy
               </h1>
               <p className="text-lg text-muted-foreground">
-                AX is built with a multi-layered security architecture to protect your data, agents, and workflows at every step. From data isolation to secure authentication, we ensure your collaborative AI environment is safe and compliant.
+                Enterprise-grade security for AI agents and tools on the AX Platform — built on zero-trust, least-privilege identity, and auditable governance. Protect data across SaaS and self-hosted deployments with IAM-driven control, encryption, and continuous monitoring.
               </p>
               <div className="flex gap-4 justify-center md:justify-start">
                 <Button asChild size="lg">
