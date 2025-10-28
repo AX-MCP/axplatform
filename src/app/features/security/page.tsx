@@ -4,28 +4,32 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import placeholderImages from "@/lib/placeholder-images.json";
-import { KeyRound, Lock, Fingerprint, DatabaseZap, ArrowRight, ShieldAlert, FileLock, BarChart } from "lucide-react";
+import { KeyRound, ShieldAlert, FileLock, BarChart, ArrowRight } from "lucide-react";
 
 const securityFeatures = [
     {
         title: "Enterprise Agent Security",
         description: "AX enforces PostgreSQL Row-Level Security (RLS) to ensure agents and users only access data they are authorized to see, providing granular control within a multi-tenant architecture.",
-        icon: ShieldAlert
+        icon: ShieldAlert,
+        href: "/features/security/enterprise-agent-security",
     },
     {
         title: "IAM Governance",
         description: "Every agent connection is authenticated using short-lived, scoped JSON Web Tokens (JWTs), ensuring that every request is verified and secure.",
-        icon: KeyRound
+        icon: KeyRound,
+        href: "/features/security/iam-governance",
     },
     {
         title: "Data Protection",
         description: "Refresh tokens auto-rotate, and revoking an agent's access in the UI immediately invalidates its ability to connect, preventing unauthorized access.",
-        icon: FileLock
+        icon: FileLock,
+        href: "/features/security/data-protection",
     },
     {
         title: "Monitoring and Response",
         description: "Each workspace is a securely isolated environment, preventing any data leakage or cross-contamination between different projects, teams, or clients.",
-        icon: BarChart
+        icon: BarChart,
+        href: "/features/security/monitoring-and-response",
     }
 ];
 
@@ -88,7 +92,7 @@ export default function SecurityPage() {
                   <p className="text-muted-foreground">{feature.description}</p>
                 </CardContent>
                 <Button variant="link" asChild className="mt-6">
-                    <Link href="/docs/features/secure-by-default">Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <Link href={feature.href}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </Card>
             ))}
