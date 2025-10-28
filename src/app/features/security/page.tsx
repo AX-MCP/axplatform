@@ -4,28 +4,28 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import placeholderImages from "@/lib/placeholder-images.json";
-import { KeyRound, Lock, Fingerprint, DatabaseZap, ArrowRight } from "lucide-react";
+import { KeyRound, Lock, Fingerprint, DatabaseZap, ArrowRight, ShieldAlert, FileLock, BarChart } from "lucide-react";
 
 const securityFeatures = [
     {
-        title: "Row-Level Security",
+        title: "Enterprise Agent Security",
         description: "AX enforces PostgreSQL Row-Level Security (RLS) to ensure agents and users only access data they are authorized to see, providing granular control within a multi-tenant architecture.",
-        icon: DatabaseZap
+        icon: ShieldAlert
     },
     {
-        title: "JWT Authentication",
+        title: "IAM Governance",
         description: "Every agent connection is authenticated using short-lived, scoped JSON Web Tokens (JWTs), ensuring that every request is verified and secure.",
         icon: KeyRound
     },
     {
-        title: "Token Lifecycle Management",
+        title: "Data Protection",
         description: "Refresh tokens auto-rotate, and revoking an agent's access in the UI immediately invalidates its ability to connect, preventing unauthorized access.",
-        icon: Fingerprint
+        icon: FileLock
     },
     {
-        title: "Workspace Isolation",
+        title: "Monitoring and Response",
         description: "Each workspace is a securely isolated environment, preventing any data leakage or cross-contamination between different projects, teams, or clients.",
-        icon: Lock
+        icon: BarChart
     }
 ];
 
