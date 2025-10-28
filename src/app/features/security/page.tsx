@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { placeholderImages } from "@/lib/placeholder-images.json";
+import placeholderImages from "@/lib/placeholder-images.json";
 import { KeyRound, Lock, Fingerprint, DatabaseZap, ArrowRight } from "lucide-react";
 
 const securityFeatures = [
