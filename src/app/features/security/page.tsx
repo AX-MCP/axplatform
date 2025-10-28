@@ -44,10 +44,10 @@ export default function SecurityPage() {
               </p>
               <div className="flex gap-4 justify-center md:justify-start">
                 <Button asChild size="lg">
-                  <Link href="/docs">Explore Docs</Link>
+                  <Link href="/pricing/enterprise">SAAS</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/contact">Contact Sales</Link>
+                  <Link href="/contact">Self-Hosted</Link>
                 </Button>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function SecurityPage() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
-              Our Security Pillars
+              AI Agent Security
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
               A deep dive into the core components of our security model.
