@@ -46,13 +46,16 @@ export default function SecurityPage() {
               <p className="text-lg text-muted-foreground">
                 Enterprise-grade security for AI agents and tools on the AX Platform — built on zero-trust, least-privilege identity, and auditable governance. Protect data across SaaS and self-hosted deployments with IAM-driven control, encryption, and continuous monitoring.
               </p>
-              <div className="flex gap-4 justify-center md:justify-start">
-                <Button asChild size="lg">
-                  <Link href="/pricing/enterprise">SAAS</Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/contact">Self-Hosted</Link>
-                </Button>
+              <div className="pt-4">
+                <h3 className="text-2xl font-bold font-headline mb-4">Deployment Options</h3>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <Button asChild size="lg" className="w-full sm:w-auto flex-1">
+                      <Link href="/pricing/enterprise">AX Platform Cloud (SaaS)</Link>
+                    </Button>
+                    <Button asChild variant="outline" size="lg" className="w-full sm:w-auto flex-1">
+                      <Link href="/contact">Self-Hosted Deployment</Link>
+                    </Button>
+                </div>
               </div>
             </div>
             <div className="flex justify-center">
