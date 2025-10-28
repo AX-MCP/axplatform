@@ -3,7 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import placeholderImages from "@/lib/placeholder-images.json";
 import { KeyRound, ShieldAlert, FileLock, BarChart, ArrowRight } from "lucide-react";
 
 const securityFeatures = [
@@ -60,8 +59,8 @@ export default function SecurityPage() {
             </div>
             <div className="flex justify-center">
               <Image
-                src={placeholderImages.securityBot.src}
-                alt={placeholderImages.securityBot.alt}
+                src="/images/security-hero.png"
+                alt="A symbolic image representing AI security, like a shield with a circuit board pattern."
                 width={500}
                 height={500}
                 data-ai-hint="robot security"
