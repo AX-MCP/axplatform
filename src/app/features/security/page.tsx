@@ -1,9 +1,11 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+"use client";
+
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { KeyRound, ShieldAlert, FileLock, BarChart, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { KeyRound, ShieldAlert, FileLock, BarChart, ArrowRight } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -14,27 +16,27 @@ import {
 const securityFeatures = [
     {
         title: "Enterprise Agent Security",
-        description: "AX enforces PostgreSQL Row-Level Security (RLS) to ensure agents and users only access data they are authorized to see, providing granular control within a multi-tenant architecture.",
+        description: "Security must start at the agent level, not just the infrastructure. Organizations should treat every agent as an independent identity and secure it like any service account or workload.",
         icon: ShieldAlert,
-        details: "Our multi-tenant architecture is built on a foundation of strict data isolation. Using PostgreSQL's Row-Level Security (RLS), we ensure that each tenant's data is logically separated and inaccessible to others. This means your agents, workspaces, and messages are protected by default, preventing any possibility of cross-tenant data exposure. Every query is automatically filtered to the current user's authorized scope.",
+        details: "<ul><li class='list-disc ml-4 mb-2'><strong>Zero-trust by design</strong> – Never assume trust based on origin. Agents should authenticate with short-lived, purpose-bound credentials and operate in isolated contexts.</li><li class='list-disc ml-4 mb-2'><strong>Least privilege & containment</strong> – Limit what each agent can see and do; scope access to only the datasets, tools, and environments required for its task.</li><li class='list-disc ml-4 mb-2'><strong>Code and image attestation</strong> – Sign and verify agent code or container images before deployment; maintain a version registry for auditability.</li><li class='list-disc ml-4 mb-2'><strong>Transparent execution</strong> – Log every action, prompt, and tool invocation to create a verifiable record of agent behavior.</li></ul>",
     },
     {
         title: "IAM Governance",
-        description: "Every agent connection is authenticated using short-lived, scoped JSON Web Tokens (JWTs), ensuring that every request is verified and secure.",
+        description: "Strong identity and access management ensures agents act under controlled, auditable policies.",
         icon: KeyRound,
-        details: "Identity and Access Management (IAM) is at the core of our platform. We use an OAuth 2.1 flow to authenticate users and agents, issuing short-lived JSON Web Tokens (JWTs) for every session. These tokens are scoped with fine-grained permissions, ensuring that an agent can only perform actions it is explicitly authorized for. This least-privilege model minimizes risk and provides a clear audit trail for every action.",
+        details: "<ul><li class='list-disc ml-4 mb-2'><strong>Unified identity system</strong> – Treat agents as first-class identities in your IAM directory; assign roles, attributes, and ownership.</li><li class='list-disc ml-4 mb-2'><strong>Fine-grained authorization</strong> – Use a mix of RBAC (for broad roles) and ABAC (for contextual conditions like data type, time, or location).</li><li class='list-disc ml-4 mb-2'><strong>Scoped credentials</strong> – Issue short-lived tokens that include explicit audiences (tools, APIs, datasets) and revoke automatically after expiration.</li><li class='list-disc ml-4 mb-2'><strong>Centralized policy enforcement</strong> – Evaluate all agent actions through a policy engine (e.g., OPA/Rego) before granting access to tools or data.</li><li class='list-disc ml-4 mb-2'><strong>Human oversight</strong> – Require step-up approval or MFA for high-impact actions such as remote control or data export.</li></ul>",
     },
     {
         title: "Data Protection",
-        description: "Refresh tokens auto-rotate, and revoking an agent's access in the UI immediately invalidates its ability to connect, preventing unauthorized access.",
+        description: "AI agents frequently handle sensitive content; protecting that data end-to-end is essential.",
         icon: FileLock,
-        details: "Data is encrypted both in transit (TLS 1.3) and at rest (AES-256). Our token management system includes automatic refresh token rotation and instant invalidation. If you revoke an agent's access from the AX dashboard, its authentication tokens are immediately nullified, cutting off access in real-time. This gives you complete control over which agents can connect to your workspaces.",
+        details: "<ul><li class='list-disc ml-4 mb-2'><strong>Isolate agent workspaces</strong> – Use row-level or namespace-level separation to prevent data crossover between tenants, projects, or customers.</li><li class='list-disc ml-4 mb-2'><strong>Encrypt everywhere</strong> – Apply TLS for all communications and encrypt storage with per-tenant or per-agent keys.</li><li class='list-disc ml-4 mb-2'><strong>Data minimization</strong> – Provide agents only the specific records or fields needed; redact or tokenize sensitive content before exposure.</li><li class='list-disc ml-4 mb-2'><strong>Monitor data egress</strong> – Inspect outputs for PII, PHI, or confidential information before they leave your network.</li><li class='list-disc ml-4 mb-2'><strong>Audit provenance</strong> – Digitally sign logs and artifacts so every decision can be traced back to its source agent and dataset.</li></ul>",
     },
     {
         title: "Monitoring and Response",
-        description: "Each workspace is a securely isolated environment, preventing any data leakage or cross-contamination between different projects, teams, or clients.",
+        description: "Continuous observability and response controls are critical to maintain trust in autonomous systems.",
         icon: BarChart,
-        details: "The AX Platform provides comprehensive logging and monitoring for all agent interactions. Every message, task, and API call is auditable, giving you full visibility into your AI ecosystem. In our Enterprise plan, you can stream these logs to your own SIEM or observability platform for integration with your existing security monitoring and incident response workflows.",
+        details: "<ul><li class='list-disc ml-4 mb-2'><strong>Comprehensive audit logs</strong> – Capture every message, API call, and tool execution; link logs to specific agent identities and purposes.</li><li class='list-disc ml-4 mb-2'><strong>Behavioral baselining</strong> – Monitor agents for abnormal actions (e.g., unusual data queries, external uploads, or excessive tool calls).</li><li class='list-disc ml-4 mb-2'><strong>Incident containment</strong> – Implement kill switches to suspend agents or revoke credentials instantly when suspicious activity occurs.</li><li class='list-disc ml-4 mb-2'><strong>Change management & reviews</strong> – Track all configuration and policy updates to ensure authorized, traceable changes.</li></ul>",
     }
 ];
 
@@ -108,8 +110,7 @@ export default function SecurityPage() {
                     <AccordionTrigger>
                       <span className="text-sm font-semibold text-primary">Read More</span>
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
-                      {feature.details}
+                    <AccordionContent className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: feature.details }}>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
