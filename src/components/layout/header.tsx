@@ -18,7 +18,7 @@ const navigationItems = {
     { name: "Blog", href: "/blog" },
     { name: "Demos", href: "/demos" },
     { name: "FAQ", href: "/faq" },
-    { name: "MCP", href: "/docs/mcp-info" },
+    { name: "MCP", href: "/docs/calling-ax-mcp-server/" },
   ],
   Company: [
     { name: "Meet the Team", href: "/team" },
