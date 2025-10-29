@@ -110,7 +110,8 @@ export default function SecurityPage() {
                     <AccordionTrigger>
                       <span className="text-sm font-semibold text-primary">Read More</span>
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: feature.details }}>
+                    <AccordionContent>
+                      <div className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: feature.details }}/>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
