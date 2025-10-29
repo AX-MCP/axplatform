@@ -160,7 +160,7 @@ export default function CallingAxMcpServerPage() {
     <div className="container py-20 md:py-24">
       <div className="max-w-5xl mx-auto space-y-12">
         <header className="text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">AX-GCP Tools Reference</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">MCP Tools Reference</h1>
           <p className="text-lg text-muted-foreground">
             This document provides detailed descriptions and parameter references for the primary AX-GCP tools.
           </p>
