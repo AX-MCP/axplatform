@@ -2,8 +2,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { KeyRound, ShieldAlert, FileLock, BarChart, ArrowRight } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { KeyRound, ShieldAlert, FileLock, BarChart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -57,10 +57,10 @@ export default function SecurityPage() {
                 <h3 className="text-2xl font-bold font-headline mb-4">Deployment Options</h3>
                 <div className="flex flex-col gap-4 max-w-md mx-auto md:mx-0">
                     <Button asChild size="lg" className="w-full">
-                      <Link href="/pricing/enterprise">AX Platform Cloud (SaaS)</Link>
+                      <Link href="/pricing/saas">AX Platform Cloud (SaaS)</Link>
                     </Button>
                     <Button asChild variant="outline" size="lg" className="w-full">
-                      <Link href="/contact">Self-Hosted Deployment</Link>
+                      <Link href="/pricing/self-hosted">Self-Hosted Deployment</Link>
                     </Button>
                 </div>
               </div>
@@ -89,35 +89,33 @@ export default function SecurityPage() {
               A deep dive into the core components of our security model.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Accordion type="single" collapsible className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {securityFeatures.map((feature) => (
-              <Card key={feature.title} className="bg-background/40 border-border/70 p-6 flex flex-col text-left">
-                <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-accent/10 text-accent shrink-0">
-                        <feature.icon className="h-6 w-6" />
-                    </div>
-                    <div className="flex-1">
-                        <CardHeader className="p-0 mb-2">
-                            <CardTitle className="font-headline text-xl">{feature.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="p-0">
-                            <p className="text-muted-foreground">{feature.description}</p>
-                        </CardContent>
-                    </div>
-                </div>
-                 <Accordion type="single" collapsible className="w-full mt-4">
-                  <AccordionItem value="item-1" className="border-b-0">
-                    <AccordionTrigger>
-                      <span className="text-sm font-semibold text-primary">Read More</span>
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <div className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: feature.details }}/>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              </Card>
+              <AccordionItem value={feature.title} key={feature.title} className="bg-background/40 border-border/70 p-6 flex flex-col text-left rounded-lg">
+                <Card className="bg-transparent border-0 shadow-none">
+                  <div className="flex items-start gap-4">
+                      <div className="flex items-center justify-center h-12 w-12 rounded-md bg-accent/10 text-accent shrink-0">
+                          <feature.icon className="h-6 w-6" />
+                      </div>
+                      <div className="flex-1">
+                          <CardHeader className="p-0 mb-2">
+                              <CardTitle className="font-headline text-xl">{feature.title}</CardTitle>
+                          </CardHeader>
+                          <CardContent className="p-0">
+                              <p className="text-muted-foreground">{feature.description}</p>
+                          </CardContent>
+                      </div>
+                  </div>
+                </Card>
+                <AccordionTrigger>
+                  <span className="text-sm font-semibold text-primary">Read More</span>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: feature.details }}/>
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
         </div>
       </section>
     </div>
