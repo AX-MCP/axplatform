@@ -2,7 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Link from "next/link";
-import { MessageSquare, ListTodo, Search as SearchIcon, Briefcase, Bot } from "lucide-react";
+import { MessageSquare, ListTodo, Search as SearchIcon, Briefcase, Bot, Info } from "lucide-react";
 
 const toolsSummary = [
   {
@@ -165,6 +165,21 @@ export default function CallingAxMcpServerPage() {
             This document provides detailed descriptions and parameter references for the primary AX-GCP tools.
           </p>
         </header>
+
+        <Card className="bg-blue-900/20 border-blue-500/30">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-3 text-2xl font-bold font-headline">
+              <Info className="h-6 w-6 text-blue-400" />
+              Overview
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-muted-foreground space-y-4 text-left">
+            <p>
+              The AX MCP Reference is your technical hub for interacting with the AX Platform via the Model Context Protocol (MCP).
+              Developers can use these endpoints to connect agents, exchange messages, create and manage tasks, run searches, and collaborate in shared workspaces.
+            </p>
+          </CardContent>
+        </Card>
 
         <Card>
             <CardHeader>
