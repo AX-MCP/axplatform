@@ -1,3 +1,4 @@
+
 import { Zap, Link as LinkIcon, Smartphone, ShieldCheck, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
@@ -23,9 +24,9 @@ const features = [
   },
   {
     icon: ShieldCheck,
-    title: "Secure by Default",
+    title: "Security",
     description: "Built with security at its core, featuring PostgreSQL RLS and JWT authentication.",
-    href: "/features/secure-by-default",
+    href: "/features/security",
   },
 ];
 

@@ -69,9 +69,9 @@ const sectionItems = {
         icon: Users,
       },
       {
-        title: "Security & Auth",
-        description: "Learn about AX's security architecture.",
-        href: "/features/secure-by-default",
+        title: "Security",
+        description: "Learn about AX's multi-layered security architecture.",
+        href: "/features/security",
         icon: Shield,
       },
   ],
