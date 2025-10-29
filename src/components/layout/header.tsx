@@ -24,7 +24,6 @@ const navigationItems = {
     { name: "Meet the Team", href: "/team" },
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
-    { name: "Investors", href: "/investors" },
   ],
 };
 
@@ -72,6 +71,9 @@ const Header = () => {
           </Link>
           <Link href="/pricing/enterprise" className="transition-colors hover:text-accent">
             Pricing
+          </Link>
+          <Link href="/investors" className="transition-colors hover:text-accent">
+            Investors
           </Link>
         </nav>
           
@@ -128,6 +130,13 @@ const Header = () => {
                           className="text-foreground hover:text-accent"
                         >
                           Pricing
+                        </Link>
+                        <Link
+                          href="/investors"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-foreground hover:text-accent"
+                        >
+                          Investors
                         </Link>
                       </div>
                   </div>
