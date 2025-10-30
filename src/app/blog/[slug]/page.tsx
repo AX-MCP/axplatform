@@ -3,16 +3,11 @@ import { getPostData, getAllPostSlugs } from "@/lib/blog";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { format } from "date-fns";
 import Image from "next/image";
-import { MDXRemote } from 'next-mdx-remote/rsc';
 
 export async function generateStaticParams() {
   const paths = getAllPostSlugs();
   return paths;
 }
-
-const components = {
-  Image,
-};
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = await getPostData(params.slug);
@@ -54,9 +49,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           </div>
         </header>
 
-        <div className="prose-lg text-foreground/90 space-y-4">
-            <MDXRemote source={post.content} components={components} />
-        </div>
+        {post.contentHtml && (
+          <div
+            className="prose-lg text-foreground/90 space-y-4"
+            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+          />
+        )}
       </article>
     </div>
   );

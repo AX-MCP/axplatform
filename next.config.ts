@@ -9,8 +9,6 @@ const nextConfig: NextConfig = {
   // ✅ static export for GitHub Pages
   output: "export",
 
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-
   // ✅ use <img> under the hood (no server image optimizer)
   images: {
     unoptimized: true,
