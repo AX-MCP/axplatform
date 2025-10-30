@@ -1,12 +1,11 @@
-
 import Link from "next/link";
 import Image from "next/image";
-import { posts } from "@/lib/blog-posts";
+import { getSortedPostsData, PostMetadata } from "@/lib/blog";
 import { format } from 'date-fns';
 import { Button } from "@/components/ui/button";
 
 export default function BlogPage() {
-  const sortedPosts = [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const sortedPosts: PostMetadata[] = getSortedPostsData();
 
   return (
     <div className="container py-16 md:py-24">
