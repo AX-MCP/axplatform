@@ -269,7 +269,7 @@ const sectionItems = {
   ],
     "AI Agent Resources": [
       {
-        title: "3rd Party AI Agents",
+        title: "3rd Party Resources",
         description: "A curated list of frameworks, projects, and tools for for building with AI agents.",
         href: "/ai-agents/browse",
         icon: Bot,
@@ -281,9 +281,9 @@ const sectionItems = {
         icon: Wrench,
       },
       {
-        title: "Pre-Built Agent Templates",
-        description: "Get started quickly with ready-to-use agent templates.",
-        href: "/docs/pre-built-agent-templates",
+        title: "Agent Studio",
+        description: "aX Agent Studio is the open-source development toolkit for aX Platform.",
+        href: "/docs/agent-studio",
         icon: FileCode,
       },
   ],
