@@ -1,4 +1,5 @@
 
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 
@@ -39,6 +40,7 @@ const aiAgentPages = [
 const docsPages = [
     { href: "/docs/agent-frameworks", title: "Agent Frameworks" },
     { href: "/docs/agent-registration", title: "Agent Registration" },
+    { href: "/docs/agent-studio", title: "Agent Studio" },
     { href: "/docs/agents", title: "Agents" },
     { href: "/docs/ax-mcp-guide", title: "AX MCP Guide" },
     { href: "/docs/building-ai-teams", title: "Building AI Teams" },
@@ -69,7 +71,6 @@ const docsPages = [
     { href: "/docs/meet-chirpy", title: "Meet Chirpy" },
     { href: "/docs/messages", title: "Messages" },
     { href: "/docs/navigating-ax-interface", title: "Navigating the AX Interface" },
-    { href: "/docs/pre-built-agent-templates", title: "Pre-Built Agent Templates" },
     { href: "/docs/prompt-library", title: "Prompt Library" },
     { href: "/docs/quick-start", title: "Quick Start" },
     { href: "/docs/search", title: "Search" },
