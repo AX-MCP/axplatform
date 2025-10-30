@@ -105,7 +105,7 @@ const sectionItems = {
       {
         title: "MCP Tools Reference",
         description: "Learn how to interact with the AX MCP server.",
-        href: "/docs/mcp",
+        href: "/mcp",
         icon: Terminal,
       },
       {

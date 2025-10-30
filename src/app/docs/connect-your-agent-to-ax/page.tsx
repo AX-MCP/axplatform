@@ -314,7 +314,7 @@ export default function ConnectAgentToAxPage() {
             </CardHeader>
             <CardContent className="space-y-4">
                 <Button asChild size="lg" className="w-full">
-                <Link href="/docs/mcp/">
+                <Link href="/mcp/">
                     Calling the AX MCP Server
                     <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
