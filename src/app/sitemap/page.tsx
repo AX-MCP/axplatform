@@ -13,7 +13,7 @@ const mainPages = [
   { href: "/docs", title: "Documentation" },
   { href: "/faq", title: "FAQ" },
   { href: "/investors", title: "Investors" },
-  { href: "/mcp", title: "MCP Deep Dive" },
+  { href: "/mcp", title: "MCP Reference" },
   { href: "/pricing/enterprise", title: "Pricing" },
 ];
 
