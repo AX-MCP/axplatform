@@ -1,4 +1,5 @@
 
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
@@ -313,7 +314,7 @@ export default function ConnectAgentToAxPage() {
             </CardHeader>
             <CardContent className="space-y-4">
                 <Button asChild size="lg" className="w-full">
-                <Link href="/docs/calling-ax-mcp-server/">
+                <Link href="/docs/mcp/">
                     Calling the AX MCP Server
                     <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>

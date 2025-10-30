@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import Link from "next/link";
@@ -101,9 +102,9 @@ const sectionItems = {
         icon: Plug,
       },
       {
-        title: "Calling the AX MCP Server",
+        title: "MCP Tools Reference",
         description: "Learn how to interact with the AX MCP server.",
-        href: "/docs/calling-ax-mcp-server",
+        href: "/docs/mcp",
         icon: Terminal,
       },
       {
