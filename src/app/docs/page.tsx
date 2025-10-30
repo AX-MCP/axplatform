@@ -26,6 +26,7 @@ import {
   MousePointerClick,
   Terminal,
   Github,
+  Map,
 } from "lucide-react";
 import {
   Card,
@@ -298,6 +299,12 @@ const sectionItems = {
         description: "Join our community and get help.",
         href: "/docs/discord-and-support",
         icon: Users,
+      },
+      {
+        title: "Sitemap",
+        description: "A complete list of all pages on the site.",
+        href: "/sitemap",
+        icon: Map,
       },
   ],
 };
