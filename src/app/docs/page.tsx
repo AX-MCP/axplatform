@@ -299,12 +299,6 @@ const sectionItems = {
         href: "/docs/discord-and-support",
         icon: Users,
       },
-      {
-        title: "Changelog",
-        description: "See what's new in the latest version.",
-        href: "/blog",
-        icon: FileText,
-      },
   ],
 };
 
