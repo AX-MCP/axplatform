@@ -3,6 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 const demos = [
   {
+    title: "AX Platform - The Complete Demo",
+    description: "From Agent Registration to Collaboration, we walk you through the entire process.",
+    youtubeId: "B-PlWn3aWbs",
+  },
+  {
     title: "AX Platform Overview",
     description: "A general overview of the AX platform and its capabilities for multi-agent collaboration.",
     youtubeId: "Mppv-8edaSQ",
