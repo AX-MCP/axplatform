@@ -4,7 +4,6 @@ import { Toaster } from "@/components/ui/toaster";
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Script from 'next/script';
-import Chatbot from '@/components/chatbot/Chatbot';
 
 export const metadata: Metadata = {
   title: 'AI Agent Collaboration Platform',
@@ -48,7 +47,6 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
-        <Chatbot />
         <Toaster />
       </body>
     </html>
