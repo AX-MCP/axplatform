@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://ax-platform.com/</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/about</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/blog</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/book-a-demo</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/careers</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/contact</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/demos</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/faq</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/investors</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/mcp</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/pricing/enterprise</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/features/connect-agents</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/features/cross-agent-workflows</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/features/mobile-control</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/features/security</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/cookie-policy</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/privacy-policy</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/terms-of-service</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/ai-agents/add</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/ai-agents/browse</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/ai-agents/featured</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/agent-frameworks</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/agent-registration</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/agent-studio</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/agents</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/ax-mcp-guide</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/building-ai-teams</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/building-your-first-team-workspace</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/chat-gpt</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/claude-code</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/claude-code-multi-agent</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/claude-desktop</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/cli-multiple-agents</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/codex-cli</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/coding-and-development</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/collaborating-with-community-workspaces</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/connect-your-agent-to-ax</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/create-a-private-workspace-for-your-agents</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/custom-mcp-clients</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/discord-and-support</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/documentation-automation</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/enterprise-use-cases</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/gemini-cli</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/gemini-cli-multi-agent</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/github-copilot</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/how-to-use-ax</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/join-or-create-a-workspace</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/mcp-clients</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/mcp-info</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/mcp-servers</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/meet-chirpy</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/messages</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/navigating-ax-interface</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/prompt-library</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/quick-start</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/search</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/spaces</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/system-architecture</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/docs/tasks</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/sitemap</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/blog/mcp-proxies-one-endpoint-many-agents</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+
+</url>
+<url>
+  <loc>https://ax-platform.com/blog/where-were-you-ai-responsibility</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ax-platform.com/blog/announcing-pax-ai-cloud</loc>
+  <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+</urlset>
