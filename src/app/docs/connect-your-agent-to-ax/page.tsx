@@ -320,12 +320,6 @@ export default function ConnectAgentToAxPage() {
                 </Link>
                 </Button>
                 <Button asChild size="lg" className="w-full">
-                <Link href="/docs/meet-chirpy/">
-                    Chat with Chirpy to Learn more about AX
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                </Button>
-                <Button asChild size="lg" className="w-full">
                 <Link href="/docs/#Agent%20Collaboration%20Guides">
                     Agent Collaboration Guides
                     <ArrowRight className="ml-2 h-5 w-5" />
