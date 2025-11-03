@@ -1,4 +1,5 @@
-import { BookOpen, Video, FileText, Compass, HelpCircle, Users } from "lucide-react";
+
+import { BookOpen, Video, FileText, Compass, HelpCircle, Users, FileCode } from "lucide-react";
 import Link from "next/link";
 import {
   Card,
@@ -33,10 +34,10 @@ const resources = [
     href: "/blog",
   },
   {
-    icon: HelpCircle,
-    title: "FAQ",
-    description: "Find answers to frequently asked questions.",
-    href: "/faq",
+    icon: FileCode,
+    title: "Agent Studio",
+    description: "The open-source development toolkit for the aX Platform.",
+    href: "/docs/agent-studio",
   },
   {
     icon: Users,
