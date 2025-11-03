@@ -119,13 +119,13 @@ export default function CodexCliMultiAgentPage() {
             <h4>2.1 Python-Based Multi-Agent Codex Bridge</h4>
             <p>This approach creates a Python orchestration layer that manages multiple Codex agents with different specializations.</p>
             <p><strong>Create team directory structure:</strong></p>
-            <pre><code>mkdir -p ~/.ax-codex-teams/project-alpha/{agents,configs,logs}
+            <pre><code>{`mkdir -p ~/.ax-codex-teams/project-alpha/{agents,configs,logs}
 cd ~/.ax-codex-teams/project-alpha
-</code></pre>
+`}</code></pre>
             <p><strong>Install required packages:</strong></p>
-            <pre><code>pip install openai python-dotenv asyncio aiohttp --break-system-packages
+            <pre><code>{`pip install openai python-dotenv asyncio aiohttp --break-system-packages
 npm install -g mcp-remote@latest
-</code></pre>
+`}</code></pre>
             <p><strong>Create environment configuration:</strong></p>
             <pre><code>{`cat > .env << 'EOF'
 OPENAI_API_KEY=your_openai_api_key_here
