@@ -70,7 +70,7 @@ const Header = () => {
           <Link href="/docs" className="transition-colors hover:text-accent">
             Docs
           </Link>
-          <Link href="/pricing/enterprise" className="transition-colors hover:text-accent">
+          <Link href="/pricing" className="transition-colors hover:text-accent">
             Pricing
           </Link>
           <Link href="/investors" className="transition-colors hover:text-accent">
@@ -126,7 +126,7 @@ const Header = () => {
                           Docs
                         </Link>
                         <Link
-                          href="/pricing/enterprise"
+                          href="/pricing"
                           onClick={() => setIsMobileMenuOpen(false)}
                           className="text-foreground hover:text-accent"
                         >
