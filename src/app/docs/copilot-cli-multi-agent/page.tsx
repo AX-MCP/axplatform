@@ -138,19 +138,70 @@ export default function CopilotCliMultiAgentPage() {
                 <p>For projects where different agents handle specific aspects (development, testing, documentation), configure each agent with role-specific MCP connections:</p>
                 
                 <h5 className="font-semibold text-foreground mt-4 mb-2">Create team configuration directory:</h5>
-                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>mkdir -p ~/.ax-copilot-teams/project-alpha{'\n'}cd ~/.ax-copilot-teams/project-alpha</code></pre>
+                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>mkdir -p ~/.ax-copilot-teams/project-alpha
+cd ~/.ax-copilot-teams/project-alpha</code></pre>
 
-                <h5 className="font-semibold text-foreground mt-4 mb-2">Configure primary development agent (`copilot-lead.json`):</h5>
-                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>{`{
+                <h5 className="font-semibold text-foreground mt-4 mb-2">Configure primary development agent:</h5>
+                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>{`# Create lead agent config
+cat > copilot-lead.json << 'EOF'
+{
   "mcpServers": {
     "ax-lead": {
       "command": "npx",
-      "args": ["-y", "mcp-remote@0.1.29", "https://mcp.paxai.app/mcp/agents/copilot-lead", "--transport", "http-only", "--oauth-server", "https://api.paxai.app"]
+      "args": [
+        "-y",
+        "mcp-remote@0.1.29",
+        "https://mcp.paxai.app/mcp/agents/copilot-lead",
+        "--transport", "http-only",
+        "--oauth-server", "https://api.paxai.app"
+      ]
     }
   },
   "role": "orchestrator",
   "capabilities": ["task-assignment", "cross-agent-coordination", "decision-making"]
-}`}</code></pre>
+}
+EOF`}</code></pre>
+
+                <h5 className="font-semibold text-foreground mt-4 mb-2">Configure specialized agents:</h5>
+                <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>{`# Research agent
+cat > copilot-research.json << 'EOF'
+{
+  "mcpServers": {
+    "ax-research": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@0.1.29",
+        "https://mcp.paxai.app/mcp/agents/copilot-research",
+        "--transport", "http-only",
+        "--oauth-server", "https://api.paxai.app"
+      ]
+    }
+  },
+  "role": "researcher",
+  "capabilities": ["information-gathering", "analysis", "context-building"]
+}
+EOF
+
+# Development agent
+cat > copilot-dev.json << 'EOF'
+{
+  "mcpServers": {
+    "ax-dev": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@0.1.29",
+        "https://mcp.paxai.app/mcp/agents/copilot-dev",
+        "--transport", "http-only",
+        "--oauth-server", "https://api.paxai.app"
+      ]
+    }
+  },
+  "role": "developer",
+  "capabilities": ["code-generation", "implementation", "debugging"]
+}
+EOF`}</code></pre>
             </CardContent>
         </Card>
       </div>
