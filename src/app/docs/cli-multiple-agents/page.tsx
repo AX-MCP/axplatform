@@ -12,6 +12,14 @@ const cliGuides = [
     title: "How to configure and manage multiple agents and sub-agents using Claude Code CLI",
     href: "/docs/claude-code-multi-agent",
   },
+  {
+    title: "Building Agent Teams with Codex CLI and AX Platform",
+    href: "/docs/codex-cli-multi-agent",
+  },
+  {
+    title: "Building Agent Teams with GitHub Copilot CLI and AX Platform",
+    href: "/docs/copilot-cli-multi-agent",
+  },
 ];
 
 export default function CliMultipleAgentsPage() {
