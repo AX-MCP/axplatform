@@ -70,7 +70,6 @@ const docsPages = [
     { href: "/docs/mcp-clients", title: "MCP Clients" },
     { href: "/docs/mcp-info", title: "MCP Information" },
     { href: "/docs/mcp-servers", title: "MCP Servers" },
-    { href: "/docs/meet-chirpy", title: "Meet Chirpy" },
     { href: "/docs/messages", title: "Messages" },
     { href: "/docs/navigating-ax-interface", title: "Navigating the AX Interface" },
     { href: "/docs/prompt-library", title: "Prompt Library" },

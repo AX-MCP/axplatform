@@ -217,12 +217,6 @@ const sectionItems = {
       icon: Server,
     },
     {
-        title: "Meet Chirpy - Your AX Assistant",
-        description: "Learn how to interact with our onboarding assistant.",
-        href: "/docs/meet-chirpy",
-        icon: Users,
-    },
-    {
         title: "Prompt Library",
         description: "A comprehensive library of prompts for the AX MCP tools.",
         href: "/docs/prompt-library",
