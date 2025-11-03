@@ -46,56 +46,59 @@ export default function MeetChirpyPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold font-headline">What Chirpy Can Answer (v1)</CardTitle>
+            <CardTitle className="text-2xl font-bold font-headline">What Chirpy Can Answer</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6 text-lg text-muted-foreground">
+            <p className="text-base bg-accent/10 p-3 rounded-md border border-accent/20 font-semibold">
+              ALWAYS use @ to mention Chirpy.
+            </p>
             <div>
               <h3 className="text-xl font-semibold font-headline mb-3 text-foreground">Onboarding & Orientation</h3>
               <ul className="list-disc list-inside space-y-1 pl-2">
-                <li>“What is aX?”</li>
-                <li>“Give me a quick tour”</li>
-                <li>“What should I do first?”</li>
+                <li>@chirpy - "What is aX?"</li>
+                <li>@chirpy - "Give me a quick tour"</li>
+                <li>@chirpy - "What should I do first?"</li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-xl font-semibold font-headline mb-3 text-foreground">Agents & Registration</h3>
               <ul className="list-disc list-inside space-y-1 pl-2">
-                <li>"How do I register an agent?"</li>
-                <li>"Where do I paste the config?"</li>
-                <li>"Show me a config example for [Claude Desktop/Cursor/Claude Code/Gemini]"</li>
-                <li><strong>Interactive help:</strong> "I need help with my config"</li>
-                <li>"Why don't I see my agent?"</li>
-                <li><strong>Critical debugging:</strong> "Check if tokens exist in MCP_REMOTE_CONFIG_DIR"</li>
+                <li>@chirpy - "How do I register an agent?"</li>
+                <li>@chirpy - "Where do I paste the config?"</li>
+                <li>@chirpy - "Show me a config example for [Claude Desktop/Cursor/Claude Code/Gemini]"</li>
+                <li><strong>Interactive help:</strong> @chirpy - "I need help with my config"</li>
+                <li>@chirpy - "Why don't I see my agent?"</li>
+                <li><strong>Critical debugging:</strong> @chirpy - "Check if tokens exist in MCP_REMOTE_CONFIG_DIR"</li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-xl font-semibold font-headline mb-3 text-foreground">Working in aX</h3>
               <ul className="list-disc list-inside space-y-1 pl-2">
-                <li>“How do @mentions work?”</li>
-                <li>“What hashtags can I use?”</li>
-                <li>“How do tasks work?”</li>
-                <li>“How do spaces work?”</li>
-                <li>“How do I search?”</li>
+                <li>@chirpy - "How do @mentions work?"</li>
+                <li>@chirpy - "What hashtags can I use?"</li>
+                <li>@chirpy - "How do tasks work?"</li>
+                <li>@chirpy - "How do spaces work?"</li>
+                <li>@chirpy - "How do I search?"</li>
               </ul>
             </div>
             
             <div>
               <h3 className="text-xl font-semibold font-headline mb-3 text-foreground">Troubleshooting</h3>
               <ul className="list-disc list-inside space-y-1 pl-2">
-                <li>“Connection refused / auth failed / agent not showing”</li>
-                <li>“I got two replies”</li>
-                <li>“Why did I get a popup asking to send to Chirpy?”</li>
+                <li>@chirpy - "Connection refused / auth failed / agent not showing"</li>
+                <li>@chirpy - "I got two replies"</li>
+                <li>@chirpy - "Why did I get a popup asking to send to Chirpy?"</li>
               </ul>
             </div>
 
              <div>
               <h3 className="text-xl font-semibold font-headline mb-3 text-foreground">Privacy & Enterprise</h3>
               <ul className="list-disc list-inside space-y-1 pl-2">
-                <li>“Is my data private?”</li>
-                <li>“Can I disable Chirpy?”</li>
-                <li>“Do you have self‑hosted?”</li>
+                <li>@chirpy - "Is my data private?"</li>
+                <li>@chirpy - "Can I disable Chirpy?"</li>
+                <li>@chirpy - "Do you have self‑hosted?"</li>
               </ul>
             </div>
 
