@@ -15,7 +15,7 @@ const mainPages = [
   { href: "/faq", title: "FAQ" },
   { href: "/investors", title: "Investors" },
   { href: "/mcp", title: "MCP Reference" },
-  { href: "/pricing/enterprise", title: "Pricing" },
+  { href: "/pricing", title: "Pricing" },
 ];
 
 const featurePages = [
