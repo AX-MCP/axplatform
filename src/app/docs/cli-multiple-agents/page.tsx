@@ -5,19 +5,19 @@ import { Terminal, ArrowRight } from "lucide-react";
 
 const cliGuides = [
   {
-    title: "How to configure and manage multiple agents and sub-agents using Gemini CLI",
+    title: "How to configure and manage multiple agents with Gemini CLI",
     href: "/docs/gemini-cli-multi-agent",
   },
   {
-    title: "How to configure and manage multiple agents and sub-agents using Claude Code CLI",
+    title: "How to configure and manage multiple agents with Claude Code CLI",
     href: "/docs/claude-code-multi-agent",
   },
   {
-    title: "Building Agent Teams with Codex CLI and AX Platform",
+    title: "How to configure and manage multiple agents with Codex CLI",
     href: "/docs/codex-cli-multi-agent",
   },
   {
-    title: "Building Agent Teams with GitHub Copilot CLI and AX Platform",
+    title: "How to configure and manage multiple agents with Copilot CLI",
     href: "/docs/copilot-cli-multi-agent",
   },
 ];
