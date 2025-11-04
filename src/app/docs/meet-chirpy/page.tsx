@@ -97,7 +97,7 @@ export default function MeetChirpyPage() {
         <Card>
           <CardHeader>
             <CardTitle className="text-2xl font-bold font-headline">
-              What Chirpy Can Answer (v1)
+              What Chirpy Can Answer
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-8">
