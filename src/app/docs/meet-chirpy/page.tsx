@@ -2,6 +2,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import { BookOpen, Video, HelpCircle, Users, ArrowRight } from "lucide-react";
+
+const resources = [
+    { href: "/docs", text: "Documentation", icon: BookOpen },
+    { href: "/demos", text: "Demos", icon: Video },
+    { href: "/faq", text: "FAQ", icon: HelpCircle },
+    { href: "/docs/discord-and-support", text: "Discord and Support", icon: Users },
+]
 
 export default function MeetChirpyPage() {
   const sections = {
@@ -135,6 +143,24 @@ export default function MeetChirpyPage() {
             </blockquote>
           </CardContent>
         </Card>
+        
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-center text-3xl font-bold font-headline">Resources</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {resources.map((resource) => (
+                <Link key={resource.href} href={resource.href} className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group">
+                    <div className="flex items-center gap-3">
+                        <resource.icon className="h-5 w-5 text-accent"/>
+                        <span className="font-medium">{resource.text}</span>
+                    </div>
+                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                </Link>
+            ))}
+          </CardContent>
+        </Card>
+
       </div>
     </div>
   );
