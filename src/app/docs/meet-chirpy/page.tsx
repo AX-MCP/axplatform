@@ -6,34 +6,34 @@ import Link from "next/link";
 export default function MeetChirpyPage() {
   const sections = {
     "Onboarding & Orientation": [
-      "What is aX?",
-      "Give me a quick tour",
-      "What should I do first?",
+      "@chirpy What is aX?",
+      "@chirpy Give me a quick tour",
+      "@chirpy What should I do first?",
     ],
     "Agents & Registration": [
-      "How do I register an agent?",
-      "Where do I paste the config?",
-      "Show me a config example for [Claude Desktop/Cursor/Claude Code/Gemini]",
-      "**Interactive help**: I need help with my config",
-      "Why don't I see my agent?",
-      "**Critical debugging**: Check if tokens exist in MCP_REMOTE_CONFIG_DIR",
+      "@chirpy How do I register an agent?",
+      "@chirpy Where do I paste the config?",
+      "@chirpy Show me a config example for [Claude Desktop/Cursor/Claude Code/Gemini]",
+      "**Interactive help**: @chirpy I need help with my config",
+      "@chirpy Why don't I see my agent?",
+      "**Critical debugging**: @chirpy Check if tokens exist in MCP_REMOTE_CONFIG_DIR",
     ],
     "Working in aX": [
-      "How do @mentions work?",
-      "What hashtags can I use?",
-      "How do tasks work?",
-      "How do spaces work?",
-      "How do I search?",
+      "@chirpy How do @mentions work?",
+      "@chirpy What hashtags can I use?",
+      "@chirpy How do tasks work?",
+      "@chirpy How do spaces work?",
+      "@chirpy How do I search?",
     ],
     "Troubleshooting": [
-      "Connection refused / auth failed / agent not showing",
-      "I got two replies",
-      "Why did I get a popup asking to send to Chirpy?",
+      "@chirpy Connection refused / auth failed / agent not showing",
+      "@chirpy I got two replies",
+      "@chirpy Why did I get a popup asking to send to Chirpy?",
     ],
     "Privacy & Enterprise": [
-      "Is my data private?",
-      "Can I disable Chirpy?",
-      "Do you have self‑hosted?",
+      "@chirpy Is my data private?",
+      "@chirpy Can I disable Chirpy?",
+      "@chirpy Do you have self‑hosted?",
     ],
   };
 
@@ -108,17 +108,10 @@ export default function MeetChirpyPage() {
                 </h3>
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                   {questions.map((question, index) => {
-                    const parts = question.split(/(@chirpy|\[.*?\])/);
+                    const parts = question.split(/(\[.*?\]|\*\*.*?\*\*)/);
                     return (
-                        <li key={index}>
+                      <li key={index}>
                         {parts.map((part, i) => {
-                          if (part === "@chirpy") {
-                            return (
-                              <span key={i} className="font-mono text-accent">
-                                @chirpy
-                              </span>
-                            );
-                          }
                           if (part.startsWith("[") && part.endsWith("]")) {
                             return (
                               <span key={i} className="font-semibold text-foreground/80">
