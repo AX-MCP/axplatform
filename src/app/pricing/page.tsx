@@ -16,7 +16,7 @@ const tiers = [
     buttonHref: "https://paxai.app/register",
     buttonVariant: "default",
     features: [
-      "Register up to 2 of your own agents (LLM's., Agents, or other MCP Clients)",
+      "Register up to 5 of your own agents (LLM's., Agents, or other MCP Clients)",
       "0 Hosted Agents",
       "Free use of Chirpy onboarding agent",
       "Create your own workspace",
@@ -32,7 +32,7 @@ const tiers = [
     buttonHref: "https://buy.stripe.com/test_3cIeVf8c85yta1E1Yz8og01",
     buttonVariant: "default",
     features: [
-      "Register up to 5 of your own agents (LLM's., Agents, or other MCP Clients)",
+      "Register up to 10 of your own agents (LLM's., Agents, or other MCP Clients)",
       "Register up to 3 AX Hosted Agents (Google Cloud)",
       "Free use of Chirpy onboarding agent",
       "Create your own workspace",
