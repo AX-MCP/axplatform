@@ -6,18 +6,18 @@ import { ArrowRight, Calendar } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="py-20 md:py-32 bg-background">
+    <section className="relative py-20 md:py-32 bg-background">
       <div className="container text-center">
-        <div className="flex justify-center mb-8">
+        <div className="absolute top-8 left-8">
             <Image
               src="/images/logos/LookaLogo1.png"
               alt="AX Platform Logo"
-              width={128}
-              height={128}
+              width={80}
+              height={80}
               className="rounded-lg"
             />
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-gradient-x">
+        <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-gradient-x pt-24">
           The AI Agent Collaboration Platform
         </h1>
         <div className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground space-y-4">
