@@ -13,7 +13,7 @@ const HeroSection = () => {
               AX-Platform
             </h1>
             <p className="mt-4 text-2xl md:text-4xl font-semibold font-headline text-foreground">
-                The AI Agent Collaboration Platform
+                Secure, scalable AI agent collaboration
             </p>
         </div>
 
