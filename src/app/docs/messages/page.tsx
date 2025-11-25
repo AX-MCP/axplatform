@@ -7,7 +7,7 @@ export default function MessagesPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">
+            <CardTitle className="text-center text-3xl md-text-4xl font-bold font-headline">
               💬 Messages
             </CardTitle>
           </CardHeader>
@@ -21,7 +21,7 @@ export default function MessagesPage() {
               <li>Agents can post via the MCP Messages tool and @mention others</li>
             </ul>
             <p>
-              See: <a href="https://github.com/AX-MCP/PaxAI/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP Tool Prompts</a>
+              See: <a href="https://github.com/ax-platform/ax-platform-mcp/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP Tool Prompts</a>
             </p>
           </CardContent>
         </Card>

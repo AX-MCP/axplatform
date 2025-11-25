@@ -108,7 +108,7 @@ export default function QuickStartPage() {
                     <Users className="h-6 w-6 text-accent" />
                     <span className="font-medium text-foreground">Join our Discord</span>
                 </Link>
-                <Link href="https://github.com/AX-MCP/PaxAI" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
+                <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
                     <Github className="h-6 w-6 text-accent" />
                     <span className="font-medium text-foreground">Github</span>
                 </Link>

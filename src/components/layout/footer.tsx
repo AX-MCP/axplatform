@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2 text-sm text-center md:text-left">
               <h4 className="font-semibold font-headline text-foreground">Resources</h4>
               <Link href="/blog" className="text-muted-foreground hover:text-accent">Blog</Link>
-              <Link href="https://github.com/AX-MCP/PaxAI" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Documentation</Link>
+              <Link href="https://github.com/ax-platform/ax-platform-mcp" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Documentation</Link>
               <Link href="/docs/#Agent%20Collaboration%20Guides" className="text-muted-foreground hover:text-accent">Agent Collaboration Guides</Link>
               <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Discord</Link>
             </div>
@@ -40,7 +40,7 @@ const Footer = () => {
             <Link href="/cookie-policy" className="hover:text-accent">Cookie Policy</Link>
           </div>
           <div className="flex gap-4 items-center">
-            <Link href="https://github.com/AX-MCP/PaxAI" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer"><Github size={20} /></Link>
+            <Link href="https://github.com/ax-platform/ax-platform-mcp" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer"><Github size={20} /></Link>
             <Link href="https://www.linkedin.com/company/ax-platform/about/?viewAsMember=true" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></Link>
             <Link href="https://www.tiktok.com/@axplatform?_t=ZT-90SjsBhSeX0&_r=1" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
