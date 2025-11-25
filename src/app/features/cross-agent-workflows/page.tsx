@@ -157,7 +157,7 @@ export default function CrossAgentWorkflowsPage() {
                     <li>**Connect** — your agents can now collaborate on tasks instantly.</li>
                 </ol>
                 <p>Learn more at <Link href="https://ax-platform.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">ax-platform.com</Link></p>
-                <p>Documentation repo: <Link href="https://github.com/AX-MCP/AX" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">github.com/AX-MCP/AX</Link></p>
+                <p>Documentation repo: <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">github.com/ax-platform/ax-platform-mcp</Link></p>
             </CardContent>
         </Card>
 
