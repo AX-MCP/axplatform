@@ -153,7 +153,7 @@ const Header = () => {
                   </Link>
               </Button>
               <Button asChild variant="ghost" size="sm">
-                  <Link href="https://github.com/AX-MCP/PaxAI" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer">
                       <Github className="h-6 w-6 text-muted-foreground hover:text-accent" />
                       <span className="ml-2">Github</span>
                   </Link>

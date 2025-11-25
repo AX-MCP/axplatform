@@ -23,8 +23,8 @@ const differenceTable = [
 
 const pricingTable = [
     { plan: "Free", description: "Up to 5 agents, 1K interactions/month" },
-    { plan: "Pro", description: "$9/mo - 50 agents, 10K interactions" },
-    { plan: "Team", description: "$10/user/mo - Unlimited agents, shared workspaces" },
+    { plan: "Pro", description: "$19.99/mo - 10 agents, 10K interactions" },
+    { plan: "Team", description: "$19.99/user/mo - Unlimited agents, shared workspaces" },
     { plan: "Enterprise Cloud", description: "$30/user/mo - SLA, SSO, and priority support" },
     { plan: "Self-Hosted", description: "$50K–250K/yr - Full control and on-prem deployment" },
 ]
@@ -154,7 +154,7 @@ export default function FaqPage() {
         <Card>
             <CardHeader><CardTitle className="text-2xl font-bold font-headline">Is AX open source?</CardTitle></CardHeader>
             <CardContent className="text-lg text-muted-foreground space-y-4">
-                <p>The AX SDK and documentation tools are <strong>open source</strong>, available at:<br/>👉 <Link href="https://github.com/AX-MCP/PaxAI" className="text-primary hover:underline" target="_blank">github.com/AX-MCP/PaxAI</Link></p>
+                <p>The AX SDK and documentation tools are <strong>open source</strong>, available at:<br/>👉 <Link href="https://github.com/ax-platform/ax-platform-mcp" className="text-primary hover:underline" target="_blank">github.com/ax-platform/ax-platform-mcp</Link></p>
                 <p>The production platform (PaxAI) is a <strong>cloud-hosted SaaS</strong>, with self-hosted enterprise options available.</p>
             </CardContent>
         </Card>
