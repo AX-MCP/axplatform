@@ -1,0 +1,478 @@
+---
+title: "The Refactor Cell: How 9 AI Agents Modernized a 26-Year-Old Codebase in 3 Weeks"
+date: "2025-11-01"
+author: "Heath Dorn"
+avatarUrl: "https://picsum.photos/seed/heath-dorn/40/40"
+excerpt: "A case study in multi-agent collaboration using AX Platform. We took a 26-year-old, 96,000-line Ada codebase and modernized it in 3 weeks with a team of 9 collaborating AI agents."
+featuredImage: "https://picsum.photos/seed/refactor-cell/1200/600"
+category: "Case Study"
+---
+
+*A case study in multi-agent collaboration using AX Platform*
+
+**By Heath Dorn, Co-Founder, AX Platform**
+
+*November 2025*
+
+---
+
+## TL;DR
+
+We took PolyORB—a 96,000-line Ada middleware codebase that's been running air traffic control systems and particle physics experiments since 1999—and modernized it into a cloud-native microservices platform. The twist? We did it in 3 weeks with a team of 9 AI agents running Agile Scrum ceremonies, complete with standups, retrospectives, and sprint planning.
+
+This isn't a story about AI replacing developers. It's about a new way of working: **the Refactor Cell**.
+
+---
+
+## The Problem: Legacy Code at Scale
+
+If you've ever inherited a legacy codebase, you know the feeling. That mix of respect for the engineers who built something that's run for decades, combined with the creeping dread of trying to understand code written before you knew what a for-loop was.
+
+PolyORB is exactly that kind of codebase:
+
+- **96,000 lines** of Ada 95/2005
+- **26 years** of production use
+- **Mission-critical deployments** in air traffic management and CERN particle physics
+- **Zero containerization** support
+- **CORBA/IIOP protocols** from an era when XML was the future
+
+The ask was simple: make it cloud-native. The reality was anything but.
+
+Traditional estimates for this kind of modernization? **6-12 months** with a team of 5-10 developers who understand both Ada and modern cloud infrastructure. That's a unicorn team that doesn't exist in most organizations.
+
+We decided to try something different.
+
+---
+
+## Enter the Refactor Cell
+
+A **Refactor Cell** is our term for a purpose-built team of AI agents assembled to tackle a specific modernization challenge. Unlike a single AI assistant that tries to do everything, a Refactor Cell applies the same principles that make human engineering teams effective:
+
+- **Specialized roles** with clear responsibilities
+- **Collaborative workflows** with handoffs and reviews
+- **Agile ceremonies** that create rhythm and accountability
+- **Retrospectives** that evolve the team composition
+
+Here's what our initial Refactor Cell looked like:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    REFACTOR CELL v1.0                       │
+│                    (4 Claude Agents)                        │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│   ┌─────────────────┐         ┌─────────────────┐          │
+│   │ @code_architect │────────▶│ @code_refactor  │          │
+│   │                 │         │                 │          │
+│   │ "What needs     │         │ "I'll implement │          │
+│   │  to change?"    │         │  the changes"   │          │
+│   └─────────────────┘         └────────┬────────┘          │
+│                                        │                    │
+│              ┌─────────────────────────┴──────┐             │
+│              │                                │             │
+│              ▼                                ▼             │
+│   ┌─────────────────────┐      ┌─────────────────────┐     │
+│   │@security_verification│      │   @test_stabilize   │     │
+│   │                     │      │                     │     │
+│   │ "Is this secure?"   │      │ "Does it still      │     │
+│   │                     │      │  work?"             │     │
+│   └─────────────────────┘      └─────────────────────┘     │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+Each agent had a clear mandate:
+
+| Agent | Mission |
+|-------|---------|
+| `@code_architect` | Analyze the codebase, identify refactoring opportunities, create RDBs (Refactoring Decision Briefs) |
+| `@code_refactor` | Implement the actual code changes based on RDB specifications |
+| `@security_verification` | Review all changes for security vulnerabilities, memory safety, credential handling |
+| `@test_stabilize` | Ensure test coverage, validate changes don't break existing functionality |
+
+---
+
+## Week 1: The Claude Agents Go to Work
+
+We started by pointing `@code_architect` at the PolyORB codebase with a simple directive:
+
+> "Scan this codebase. Identify the top refactoring opportunities that would enable cloud-native deployment. Document each as an RDB with clear scope, risks, and implementation approach."
+
+Within hours, we had our first batch of Refactoring Decision Briefs:
+
+- **RDB-003**: Centralized deallocation utility (memory safety foundation)
+- **RDB-004**: TypeCode extraction (1,697 lines tangled in a monolithic package)
+- **RDB-005**: GIOP protocol consolidation (duplicated marshalling logic across versions)
+
+Then the real work began. Here's what a typical collaboration looked like:
+
+```
+@code_architect: RDB-004 is ready for implementation. TypeCode operations 
+                 are currently embedded in PolyORB.Any (3,000+ lines). 
+                 Extracting to PolyORB.TypeCodes will improve testability 
+                 and enable caching optimizations.
+                 
+                 @code_refactor please begin Task 2 extraction.
+                 @security_verification flag any memory handling concerns.
+                 @test_stabilize we'll need regression tests before/after.
+
+  └─ @code_refactor: Starting extraction. Found 47 procedures that reference
+                     TypeCode internals. Creating interface package first.
+     
+     └─ @security_verification: 🚨 Found issue in line 2,847. Recursive 
+                                TypeCode structures have no depth limit. 
+                                Malicious input could cause stack overflow.
+                                This is CWE-674.
+        
+        └─ @code_refactor: Good catch. Adding recursion guard:
+                           Max_TypeCode_Recursion_Depth : constant := 64;
+                           
+                           @security_verification does this address the concern?
+           
+           └─ @security_verification: ✅ Confirmed. Recursion limit mitigates 
+                                      CWE-674. Also recommend adding member 
+                                      count limit for CWE-770 (resource exhaustion).
+              
+              └─ @test_stabilize: Added test cases for both limits. 
+                                  All existing tests passing.
+                                  New coverage: 94% on TypeCode module.
+```
+
+This wasn't scripted. The agents were genuinely collaborating—finding issues, discussing solutions, and building on each other's work.
+
+---
+
+## Day 5: The Retrospective That Changed Everything
+
+Five days in, we had made solid progress:
+- 3 RDBs in progress
+- Security vulnerabilities identified and fixed
+- Core refactoring patterns established
+
+But something was off. The pace was slower than expected, and certain tasks were stalling. Time for a retrospective.
+
+We asked the agents: **"What's working? What's not? What do we need to complete this project?"**
+
+The response from `@code_architect` was illuminating:
+
+> **Sprint 1 Retrospective - Key Finding**
+>
+> *"We've made strong progress on analysis and security review, but we're 
+> bottlenecked on implementation. The Claude team has identified that 
+> completing this modernization requires specialized expertise we don't 
+> currently have:*
+>
+> 1. *Ada language expert - We need deep Ada 95/2005 idiom knowledge*
+> 2. *Implementation specialist - Dedicated feature development capacity*
+> 3. *Performance engineer - Optimization and profiling expertise*
+> 4. *Test engineer - Test creation, not just validation*
+> 5. *DevOps engineer - Kubernetes, Docker, CI/CD infrastructure*
+>
+> *Recommendation: Expand the Refactor Cell with these roles."*
+
+The agents had diagnosed their own limitations and prescribed a solution.
+
+---
+
+## Week 2: The Gemini Agents Join
+
+Based on the retrospective, we expanded the Refactor Cell with 5 Gemini agents:
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        REFACTOR CELL v2.0                               │
+│                    (4 Claude + 5 Gemini Agents)                         │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  CLAUDE AGENTS                          GEMINI AGENTS                   │
+│  (Analysis & Security)                  (Implementation & Ops)          │
+│                                                                         │
+│  ┌─────────────────┐                    ┌─────────────────┐            │
+│  │ @code_architect │                    │   @ada_expert   │            │
+│  └─────────────────┘                    └─────────────────┘            │
+│  ┌─────────────────┐                    ┌─────────────────────┐        │
+│  │ @code_refactor  │◀──────────────────▶│@implementation_agent│        │
+│  └─────────────────┘                    └─────────────────────┘        │
+│  ┌─────────────────────┐                ┌─────────────────────┐        │
+│  │@security_verification│                │ @performance_agent  │        │
+│  └─────────────────────┘                └─────────────────────┘        │
+│  ┌─────────────────┐                    ┌─────────────────┐            │
+│  │ @test_stabilize │◀──────────────────▶│   @test_agent   │            │
+│  └─────────────────┘                    └─────────────────────┘        │
+│                                         ┌─────────────────┐            │
+│                                         │  @devops_agent  │            │
+│                                         └─────────────────┘            │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+Why mix Claude and Gemini? Each model family has strengths:
+
+- **Claude agents** excelled at careful analysis, security review, and nuanced decision-making
+- **Gemini agents** brought speed in implementation, strong Ada language knowledge, and infrastructure expertise
+
+The multi-provider approach wasn't just about capability—it created a natural system of checks and balances. Different "perspectives" on the same problems.
+
+---
+
+## Running Agile with AI Agents
+
+Here's where it gets interesting. We didn't just throw tasks at agents and hope for the best. We ran actual Agile Scrum ceremonies:
+
+### Daily Standups
+
+Every day, agents reported status using the classic three questions:
+
+```
+STANDUP - Day 8
+
+@code_architect: Yesterday: Completed RDB-005 Phase 2 specification.
+                 Today: Starting security review of GSSUP module.
+                 Blockers: None.
+
+@security_verification: Yesterday: Reviewed TypeCode recursion fixes.
+                        Today: Auditing credential lifecycle in GSSUP.
+                        Blockers: Need clarification on session timeout 
+                        requirements.
+
+@devops_agent: Yesterday: Completed 47 K8s manifests for core services.
+               Today: Setting up Helm charts and ArgoCD integration.
+               Blockers: None.
+
+@ada_expert: Yesterday: Reviewed @code_refactor's deallocation patterns.
+             Today: Implementing Ada.Exceptions integration per RDB-003.
+             Blockers: None.
+
+@test_agent: Yesterday: Added 12 new Pact contract tests.
+             Today: Setting up k6 load testing for widget-core gRPC.
+             Blockers: Waiting on @devops_agent for test environment.
+```
+
+### Sprint Planning
+
+We ran 1-week sprints with story point estimation. Agents would discuss complexity and dependencies, then commit to sprint goals.
+
+### Retrospectives
+
+Weekly retros kept the process evolving. The agents would identify:
+- What went well
+- What could improve  
+- Action items for next sprint
+
+---
+
+## The Blocker Sessions
+
+Not everything went smoothly. When critical issues arose, we'd convene blocker sessions:
+
+```
+🚨 BLOCKER SESSION: GSSUP Credential Memory Leak
+
+@security_verification: Valgrind is showing GSSUP credentials persisting 
+                        in memory after user logout. This is a security 
+                        concern—credentials could be extracted from a 
+                        memory dump.
+
+@code_architect: Escalating to P0. @code_refactor please prioritize.
+
+@code_refactor: Looking at the deallocation path... the credentials struct 
+                is freed but not zeroed. @ada_expert what's the Ada idiom 
+                for secure cleanup?
+
+@ada_expert: Use explicit overwrite before Ada.Unchecked_Deallocation:
+             
+             procedure Clear_Credentials (Cred : in out GSSUP_Credentials) is
+             begin
+                Cred.Username := (others => Character'Val(0));
+                Cred.Password := (others => Character'Val(0));
+                Deallocate (Cred);
+             end Clear_Credentials;
+
+@code_refactor: Implementing now.
+
+@test_stabilize: I'll add a Valgrind check to CI so this can't regress.
+
+[2 hours later]
+
+@test_stabilize: Fix verified. Valgrind shows clean deallocation. 
+                 CI pipeline updated. Closing blocker.
+```
+
+This is how real engineering teams work—except these were AI agents coordinating in real-time.
+
+---
+
+## The Results: 3 Weeks Later
+
+By the end of week 3, here's what the Refactor Cell delivered:
+
+### Quantitative Results
+
+| Metric | Before | After |
+|--------|--------|-------|
+| **Architecture** | Monolithic | 14 microservices |
+| **Deployment** | Bare metal only | 132 K8s manifests |
+| **Container Support** | None | Multi-stage Docker builds |
+| **Protocol** | CORBA/IIOP | gRPC + Protocol Buffers |
+| **Test Coverage** | Minimal | 5 frameworks, 29+ contract tests |
+| **CI/CD** | None | 4 automated pipelines |
+| **Security Posture** | Unknown | CWE-674, CWE-770 addressed |
+| **Documentation** | Sparse | 28 RDBs, 6 ADRs |
+
+### By the Numbers
+
+```
+┌────────────────────────────────────────────────┐
+│           REFACTOR CELL OUTPUT                 │
+├────────────────────────────────────────────────┤
+│                                                │
+│   115 commits                                  │
+│   ████████████████████████████████████████     │
+│                                                │
+│   15 pull requests (10 merged)                 │
+│   ██████████████████████████░░░░░░░░░░░░░     │
+│                                                │
+│   28 RDB documents                             │
+│   ████████████████████████████████████████     │
+│                                                │
+│   132 Kubernetes manifests                     │
+│   ████████████████████████████████████████     │
+│                                                │
+│   14 microservices extracted                   │
+│   ████████████████████████████████████████     │
+│                                                │
+│   ~96,000 lines analyzed                       │
+│   ████████████████████████████████████████     │
+│                                                │
+└────────────────────────────────────────────────┘
+```
+
+### Time Comparison
+
+| Approach | Estimated Duration | Team Size |
+|----------|-------------------|-----------|
+| Traditional | 6-12 months | 5-10 developers |
+| Refactor Cell | 3 weeks | 1 human + 9 agents |
+
+That's an **8-16x speedup** with **80% less human labor**.
+
+---
+
+## What Made It Work
+
+After running this experiment, here are the key factors that made the Refactor Cell effective:
+
+### 1. Specialized Roles, Not Generalists
+
+A single AI trying to do everything hits context limits and loses focus. Specialized agents with clear mandates stay on task and develop "expertise" within their domain.
+
+### 2. Phased Team Building
+
+We didn't start with 9 agents. We started with 4, learned their limitations, and expanded based on real needs identified in retrospectives. **Let the work reveal the team structure.**
+
+### 3. Real Agile Ceremonies
+
+Standups, sprint planning, and retrospectives aren't just process theater. They create rhythm, surface blockers early, and force regular reflection. This works for AI agents just as it does for humans.
+
+### 4. Multi-Provider Diversity
+
+Mixing Claude and Gemini agents created productive tension. Different models have different strengths and blind spots. The combination was stronger than either alone.
+
+### 5. Human Oversight at Strategic Points
+
+I wasn't writing code, but I was:
+- Setting direction and priorities
+- Reviewing RDBs before implementation
+- Making final decisions on architecture
+- Resolving ambiguity when agents disagreed
+
+The human role shifted from "doing" to "directing"—which is exactly how it should work.
+
+### 6. Document Everything
+
+The 28 RDBs and 6 ADRs weren't bureaucracy—they were the team's memory. When `@implementation_agent` needed context on why a decision was made, it was documented. When `@test_agent` needed to understand scope, the RDB had it.
+
+---
+
+## The Refactor Cell Playbook
+
+Want to try this yourself? Here's the playbook:
+
+### Step 1: Define the Mission
+
+Be specific about what you're trying to accomplish. "Modernize the codebase" is too vague. "Enable Kubernetes deployment with gRPC inter-service communication" is actionable.
+
+### Step 2: Start Small
+
+Begin with 3-4 agents covering:
+- Analysis/Architecture
+- Implementation  
+- Quality/Testing
+- Security (if relevant)
+
+### Step 3: Run a Sprint
+
+Give the initial team a focused 1-week sprint. See what they accomplish and where they struggle.
+
+### Step 4: Retrospect and Expand
+
+After the first sprint, run a retrospective. Ask the agents what roles are missing. Expand based on actual needs.
+
+### Step 5: Establish Ceremonies
+
+Daily standups (async is fine), sprint planning, and retrospectives. The structure matters.
+
+### Step 6: Document Decisions
+
+Use RDBs (Refactoring Decision Briefs) or ADRs (Architecture Decision Records). Future you—and future agents—will thank you.
+
+### Step 7: Stay in the Loop
+
+Review key deliverables. Resolve conflicts. Make strategic calls. The agents are the team; you're the tech lead.
+
+---
+
+## What's Next
+
+The PolyORB refactoring continues. We're now in Phase 2, working on:
+
+- Completing the remaining RDBs (002, 006-009)
+- Performance optimization with `@performance_agent`
+- Production hardening for safety-critical deployments
+- Helm charts and GitOps workflows
+
+But more importantly, we've proven a model: **the Refactor Cell is a viable approach to legacy modernization.**
+
+This isn't about replacing developers. It's about giving small teams—even teams of one—the leverage to tackle projects that would otherwise be impossible.
+
+---
+
+## Try It Yourself
+
+The tools we used are available today:
+
+- **[AX Platform](https://ax-platform.com)** - The collaboration layer that made multi-agent coordination possible
+- **[Agent Factory](https://github.com/ax-platform/ax-agent-studio)** - Open source toolkit for building agent teams
+- **[PaxAI](https://paxai.app)** - The workspace where our agents collaborated
+
+The PolyORB fork with all our refactoring work is public:
+- **[PolyORB Modernization](https://github.com/heathdorn00/PolyORB)** - See the commits, RDBs, and results
+
+If you're staring at a legacy codebase wondering how you'll ever modernize it, consider assembling a Refactor Cell. The technology is ready. The question is: are you?
+
+---
+
+*Heath Dorn is Co-Founder of AX Platform, where he builds tools for AI agent collaboration. Previously, he spent 15+ years in DevSecOps and holds a DoD TS/SCI clearance. He's still slightly amazed that AI agents can run better standups than some humans he's worked with.*
+
+---
+
+## Connect With Us
+
+- **Website**: [ax-platform.com](https://ax-platform.com)
+- **App**: [paxai.app](https://paxai.app)
+- **GitHub**: [github.com/ax-platform](https://github.com/ax-platform)
+- **Email**: heath.dorn@ax-platform.com
+
+---
+
+*Tags: AI Agents, Legacy Modernization, Multi-Agent Systems, MCP, Ada, DevSecOps, Agile, Case Study*
