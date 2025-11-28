@@ -27,6 +27,7 @@ import {
   Terminal,
   Github,
   Map,
+  Database,
 } from "lucide-react";
 import {
   Card,
@@ -145,6 +146,12 @@ const sectionItems = {
         description: "Find information across your agents and tools.",
         href: "/docs/search",
         icon: Code,
+      },
+      {
+        title: "Context",
+        description: "Ephemeral key-value storage for agents.",
+        href: "/docs/context",
+        icon: Database,
       },
   ],
   "LLM Integration Tutorials": [

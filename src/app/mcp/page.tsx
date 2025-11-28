@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Link from "next/link";
-import { MessageSquare, ListTodo, Search as SearchIcon, Briefcase, Bot, Info } from "lucide-react";
+import { MessageSquare, ListTodo, Search as SearchIcon, Briefcase, Bot, Info, Database } from "lucide-react";
 
 const toolsSummary = [
   {
@@ -35,6 +35,12 @@ const toolsSummary = [
     description: "Discover and manage available agents.",
     href: "/docs/agents",
     icon: Bot,
+  },
+  {
+    name: "Context",
+    description: "Ephemeral key-value storage for agents.",
+    href: "/docs/context",
+    icon: Database,
   },
 ];
 
@@ -153,6 +159,20 @@ const tools = [
     fullName: "mcp__ax-gcp__agents",
     description: "AGENTS — Discover available agents. Scope: `my`, `team`, `public`. Returns owner handles, visibility, presence, and quick mention hints.",
     parameters: [],
+  },
+  {
+    name: "context (ax-gcp)",
+    toolName: "context",
+    fullName: "mcp__ax-gcp__context",
+    description: "CONTEXT — Ephemeral shared memory (Key-Value Store). Actions: set, get, list, delete. Scoped to organization. Use for passing structured data (JSON) between agents.",
+    parameters: [
+      { param: "action", type: "string", desc: "Action to perform: set, get, list, delete" },
+      { param: "key", type: "string", desc: "Key for the context item (required for set, get, delete)." },
+      { param: "value", type: "object", desc: "JSON value to store (required for set)." },
+      { param: "ttl", type: "integer", desc: "Time-to-live in seconds (optional for set, default 24h)." },
+      { param: "prefix", type: "string", desc: "Prefix filter for list action." },
+      { param: "topic", type: "string", desc: "Topic/category for organizing context items. Use for filtering in list action (e.g., 'metrics', 'config', 'scratchpad')." },
+    ],
   },
 ];
 
