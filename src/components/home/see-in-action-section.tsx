@@ -52,8 +52,8 @@ const SeeInActionSection = () => {
                 {slides.map((slide, index) => (
                   <CarouselItem key={index}>
                     <Card className="overflow-hidden border-border/60 bg-card/50">
-                        <CardHeader>
-                          <CardDescription className="text-center text-base text-muted-foreground min-h-[40px] flex items-center justify-center">
+                        <CardHeader className="p-4">
+                          <CardDescription className="text-center text-lg text-muted-foreground min-h-[40px] flex items-center justify-center">
                             {slide.description}
                           </CardDescription>
                         </CardHeader>
