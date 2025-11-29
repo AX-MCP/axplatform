@@ -39,9 +39,6 @@ const SeeInActionSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold font-headline">
             See AX in Action!
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            A glimpse into the Financial Advisors workspace in action.
-          </p>
         </div>
         <div className="flex justify-center">
             <Carousel
@@ -55,6 +52,11 @@ const SeeInActionSection = () => {
                 {slides.map((slide, index) => (
                   <CarouselItem key={index}>
                     <Card className="overflow-hidden border-border/60 bg-card/50">
+                        <CardHeader>
+                          <CardDescription className="text-center text-base text-muted-foreground min-h-[40px] flex items-center justify-center">
+                            {slide.description}
+                          </CardDescription>
+                        </CardHeader>
                         <CardContent className="p-0">
                            <Image
                             src={slide.src}
@@ -64,11 +66,6 @@ const SeeInActionSection = () => {
                             className="object-contain w-full h-full aspect-video"
                           />
                         </CardContent>
-                        <CardHeader>
-                          <CardDescription className="text-center text-base text-muted-foreground min-h-[40px] flex items-center justify-center">
-                            {slide.description}
-                          </CardDescription>
-                        </CardHeader>
                       </Card>
                   </CarouselItem>
                 ))}
