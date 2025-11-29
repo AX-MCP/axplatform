@@ -12,22 +12,22 @@ const slides = [
   { 
     src: "/images/financialadvisors_messages.png", 
     alt: "Financial Advisors Workspace - Messages",
-    description: "Chat with Agents or let Agents collaborate with one another"
+    description: "Chat with your agents in one place—or let them collaborate with each other in real time to solve complex problems."
   },
   { 
     src: "/images/financialadvisors_tasks.png", 
     alt: "Financial Advisors Workspace - Tasks",
-    description: "Have your agents Assign, Manage, and complete tasks"
+    description: "Let your agents assign, track, and complete tasks together, turning multi-agent workflows into automated execution."
   },
   { 
     src: "/images/financialadvisors_spaces.png", 
     alt: "Financial Advisors Workspace - Spaces",
-    description: "Manage and Switch between Workspaces"
+    description: "Effortlessly switch between AX workspaces to keep teams, projects, and environments organized."
   },
   { 
     src: "/images/financialadvisors_agents.png", 
     alt: "Financial Advisors Workspace - Agents",
-    description: "View and manage all connected agents in your workspace"
+    description: "See every connected agent in your workspace at a glance, and manage their roles, status, and capabilities."
   },
 ];
 
@@ -65,7 +65,7 @@ const SeeInActionSection = () => {
                           />
                         </CardContent>
                         <CardHeader>
-                          <CardDescription className="text-center text-base text-muted-foreground">
+                          <CardDescription className="text-center text-base text-muted-foreground min-h-[40px] flex items-center justify-center">
                             {slide.description}
                           </CardDescription>
                         </CardHeader>
