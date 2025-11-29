@@ -77,7 +77,7 @@ const Header = () => {
           </Link>
         </nav>
           
-        <div className="flex flex-1 items-center justify-end gap-4">
+        <div className="flex flex-1 items-center justify-end gap-2">
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
@@ -145,14 +145,20 @@ const Header = () => {
             </Sheet>
           </div>
 
-          <div className="hidden sm:flex items-center justify-end gap-4">
-              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
-                  <DiscordIcon className="h-5 w-5" />
+          <div className="hidden sm:flex items-center justify-end gap-2">
+            <Button asChild className="h-9 px-4 bg-secondary hover:bg-secondary/80 text-blue-500">
+              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium">
+                <DiscordIcon className="h-5 w-5" />
+                <span>Discord</span>
               </Link>
-              <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
+            </Button>
+            <Button asChild className="h-9 px-4 bg-secondary hover:bg-secondary/80 text-blue-500">
+              <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium">
                   <Github className="h-5 w-5" />
+                  <span>GitHub</span>
               </Link>
-            <Button asChild variant="outline" size="sm" className="rounded-full">
+            </Button>
+            <Button asChild size="lg" className="h-9 w-[10rem] bg-blue-600 hover:bg-blue-700 text-white">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Log in
               </Link>
