@@ -158,7 +158,7 @@ const Header = () => {
                    <span>GitHub</span>
                 </Link>
               </Button>
-            <Button asChild variant="outline" size="sm" className="h-11 w-24">
+            <Button asChild size="lg" className="h-11 w-36 bg-blue-600 hover:bg-blue-700 text-white">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Log in
               </Link>
@@ -171,5 +171,3 @@ const Header = () => {
 };
 
 export default Header;
-
-    
