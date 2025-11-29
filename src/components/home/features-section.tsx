@@ -41,16 +41,26 @@ const FeaturesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature) => (
             <Link href={feature.href} key={feature.title} className="block group h-full">
-              <Card className="p-6 rounded-lg border border-border bg-card hover:border-primary transition-all duration-300 flex flex-col h-full">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-accent/10 text-accent mb-4">
-                  <feature.icon className="h-6 w-6" />
-                </div>
-                <h3 className="text-xl font-bold font-headline mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground flex-grow">{feature.description}</p>
-                <div className="flex items-center text-sm font-semibold text-primary mt-4 group-hover:underline">
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </div>
+              <Card className="rounded-lg border border-border/60 bg-background/50 hover:border-primary transition-all duration-300 h-full">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center h-10 w-10 rounded-md bg-secondary text-blue-500 shrink-0 mt-1">
+                      <feature.icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg font-semibold font-headline mb-1 group-hover:text-primary">
+                        {feature.title}
+                      </CardTitle>
+                      <CardDescription className="text-sm">
+                        {feature.description}
+                      </CardDescription>
+                    </div>
+                  </div>
+                   <div className="flex items-center text-sm font-semibold text-primary mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </div>
+                </CardContent>
               </Card>
             </Link>
           ))}

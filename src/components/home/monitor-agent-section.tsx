@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Github } from "lucide-react";
 
 const MonitorAgentSection = () => {
   return (
@@ -11,6 +14,13 @@ const MonitorAgentSection = () => {
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
             The AX Monitor Agent is a local MCP client that listens to the AX MCP server for incoming messages and responds in real-time.
           </p>
+          <div className="mt-6 flex justify-center">
+            <Button asChild variant="outline">
+              <Link href="https://github.com/ax-platform/ax-agent-studio" target="_blank" rel="noopener noreferrer">
+                <Github className="mr-2 h-4 w-4" /> Agent Repo
+              </Link>
+            </Button>
+          </div>
         </div>
         <div className="flex justify-center">
           <Image

@@ -1,6 +1,6 @@
 import HeroSection from "@/components/home/hero-section";
 import FeaturesSection from "@/components/home/features-section";
-import FinancialAdvisorsSection from "@/components/home/financial-advisors-section";
+import SeeInActionSection from "@/components/home/see-in-action-section";
 import ResourcesSection from "@/components/home/resources-section";
 import MonitorAgentSection from "@/components/home/monitor-agent-section";
 
@@ -10,7 +10,7 @@ export default function Home() {
       <HeroSection />
       <ResourcesSection />
       <FeaturesSection />
-      <FinancialAdvisorsSection />
+      <SeeInActionSection />
       <MonitorAgentSection />
     </div>
   );

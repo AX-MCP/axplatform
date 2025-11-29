@@ -6,13 +6,14 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
+  CardContent,
 } from "@/components/ui/card";
 
 const resources = [
   {
     icon: BookOpen,
     title: "Quick Start Guide",
-    description: "Build and deploy your first AI agent.",
+    description: "Build and deploy your first AI agent in minutes.",
     href: "/docs/quick-start",
   },
   {
@@ -66,18 +67,22 @@ const ResourcesSection = () => {
               key={resource.title}
               className="block group h-full"
             >
-              <Card className="p-6 rounded-lg border border-border bg-background/50 hover:border-primary transition-all duration-300 h-full">
-                <CardHeader className="p-0">
-                  <div className="flex items-center gap-4 mb-3">
-                    <resource.icon className="h-6 w-6 text-accent" />
-                    <CardTitle className="text-xl font-semibold font-headline group-hover:text-primary">
-                      {resource.title}
-                    </CardTitle>
+              <Card className="rounded-lg border border-border/60 bg-background/50 hover:border-primary transition-all duration-300 h-full">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center h-10 w-10 rounded-md bg-secondary text-blue-500 shrink-0 mt-1">
+                      <resource.icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg font-semibold font-headline mb-1 group-hover:text-primary">
+                        {resource.title}
+                      </CardTitle>
+                      <CardDescription className="text-sm">
+                        {resource.description}
+                      </CardDescription>
+                    </div>
                   </div>
-                  <CardDescription>
-                    {resource.description}
-                  </CardDescription>
-                </CardHeader>
+                </CardContent>
               </Card>
             </Link>
           ))}
