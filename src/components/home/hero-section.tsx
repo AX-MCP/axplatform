@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Calendar, Dot } from "lucide-react";
 
-const trustedByLogos = ["Enterprise", "StartupCo", "TechCorp", "InnovateLab", "AI Solutions"];
-
 const HeroSection = () => {
   return (
     <section className="relative py-20 md:py-32 bg-background overflow-hidden">
@@ -46,14 +44,6 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        <div className="mt-20">
-            <p className="text-sm text-muted-foreground mb-4">Trusted by innovative teams worldwide</p>
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-                {trustedByLogos.map((logo) => (
-                    <span key={logo} className="text-muted-foreground font-medium">{logo}</span>
-                ))}
-            </div>
-        </div>
       </div>
     </section>
   );
