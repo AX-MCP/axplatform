@@ -6,7 +6,8 @@ import { ArrowRight, Calendar, Dot } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative py-20 md:py-32 bg-background overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+      <div className="absolute inset-0 bg-gradient-radial" />
+      <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="container relative text-center z-10">
         <div className="pt-16 md:pt-24">
 
