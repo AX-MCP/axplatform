@@ -146,19 +146,19 @@ const Header = () => {
           </div>
 
           <div className="hidden sm:flex items-center justify-end gap-2">
-            <Button asChild className="h-9 px-4 bg-gray-300 hover:bg-gray-400 text-blue-600">
+            <Button asChild className="h-9 px-4 bg-gray-400 hover:bg-gray-500 text-blue-600">
               <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium">
                 <DiscordIcon className="h-5 w-5" />
                 <span>Discord</span>
               </Link>
             </Button>
-            <Button asChild className="h-9 px-4 bg-gray-300 hover:bg-gray-400 text-blue-600">
+            <Button asChild className="h-9 px-4 bg-gray-400 hover:bg-gray-500 text-blue-600">
               <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium">
                   <Github className="h-5 w-5" />
                   <span>GitHub</span>
               </Link>
             </Button>
-            <Button asChild size="lg" className="h-9 w-[10rem] bg-blue-600 hover:bg-blue-700 text-white">
+            <Button asChild size="lg" className="h-9 w-[8rem] bg-blue-600 hover:bg-blue-700 text-white">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Log in
               </Link>
