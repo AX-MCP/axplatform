@@ -146,12 +146,16 @@ const Header = () => {
           </div>
 
           <div className="hidden sm:flex items-center justify-end gap-6">
-              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
-                  <DiscordIcon className="h-5 w-5" />
+              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground group">
+                  <div className="flex items-center justify-center h-8 w-8 rounded-md bg-secondary text-blue-500 group-hover:text-primary transition-colors">
+                    <DiscordIcon className="h-5 w-5" />
+                  </div>
                   <span>Discord</span>
               </Link>
-              <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
-                  <Github className="h-5 w-5" />
+              <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground group">
+                  <div className="flex items-center justify-center h-8 w-8 rounded-md bg-secondary text-blue-500 group-hover:text-primary transition-colors">
+                    <Github className="h-5 w-5" />
+                  </div>
                    <span>GitHub</span>
               </Link>
             <Button asChild variant="outline" size="sm">
@@ -167,3 +171,5 @@ const Header = () => {
 };
 
 export default Header;
+
+    
