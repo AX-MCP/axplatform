@@ -213,12 +213,6 @@ const sectionItems = {
         icon: Package,
     },
     {
-      title: "MCP Deep Dive",
-      description: "An in-depth look at the Model Context Protocol.",
-      href: "/mcp",
-      icon: Brain,
-    },
-    {
       title: "MCP Clients",
       description: "MCP Client information and resources.",
       href: "/docs/mcp-clients",
