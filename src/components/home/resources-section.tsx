@@ -70,7 +70,7 @@ const ResourcesSection = () => {
               <Card className="rounded-lg border border-border/60 bg-background/50 hover:border-primary transition-all duration-300 h-full">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-8 w-8 rounded-md bg-accent/50 text-accent shrink-0 mt-1">
+                    <div className="flex items-center justify-center h-10 w-10 rounded-md bg-secondary text-blue-500 shrink-0 mt-1">
                       <resource.icon className="h-5 w-5" />
                     </div>
                     <div>
