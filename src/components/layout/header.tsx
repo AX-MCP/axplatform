@@ -146,18 +146,18 @@ const Header = () => {
           </div>
 
           <div className="hidden sm:flex items-center justify-end gap-2">
+            <Button asChild variant="outline" className="h-10 px-4">
               <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary">
-                  <Button variant="outline" size="icon" className="h-10 w-10">
-                    <DiscordIcon className="h-5 w-5" />
-                  </Button>
-                  <span>Discord</span>
+                <DiscordIcon className="h-5 w-5" />
+                <span>Discord</span>
               </Link>
+            </Button>
+            <Button asChild variant="outline" className="h-10 px-4">
               <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary">
-                  <Button variant="outline" size="icon" className="h-10 w-10">
-                    <Github className="h-5 w-5" />
-                  </Button>
-                   <span>GitHub</span>
+                  <Github className="h-5 w-5" />
+                  <span>GitHub</span>
               </Link>
+            </Button>
             <Button asChild size="lg" className="h-10 w-[14rem] bg-blue-600 hover:bg-blue-700 text-white">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Log in
@@ -171,5 +171,3 @@ const Header = () => {
 };
 
 export default Header;
-
-    
