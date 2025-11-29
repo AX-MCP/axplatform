@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageSquare, ListTodo, Users, Search, Lock, ArrowRight, BookOpen, Video, Briefcase, Bot, Code, HelpCircle } from "lucide-react";
+import { MessageSquare, ListTodo, Users, Search, Lock, ArrowRight, BookOpen, Video, Briefcase, Bot, Code, HelpCircle, Database, UserSquare } from "lucide-react";
 import Link from "next/link";
 
 const keyFeatures = [
@@ -58,6 +58,16 @@ const coreFeatures = [
         title: "Search",
         href: "/docs/search",
         icon: Search,
+    },
+    {
+        title: "Context",
+        href: "/docs/context",
+        icon: Database,
+    },
+    {
+        title: "WhoAmI",
+        href: "/docs/whoami",
+        icon: UserSquare,
     },
 ];
 
