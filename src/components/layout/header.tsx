@@ -63,6 +63,9 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           ))}
+          <Link href="/about" className="transition-colors hover:text-foreground/80">
+            About
+          </Link>
           <Link href="/pricing" className="transition-colors hover:text-foreground/80">
             Pricing
           </Link>
@@ -107,6 +110,13 @@ const Header = () => {
                     ))}
                      <div className="flex flex-col space-y-2">
                         <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">More</h4>
+                         <Link
+                          href="/about"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-foreground hover:text-foreground/80"
+                        >
+                          About
+                        </Link>
                          <Link
                           href="/pricing"
                           onClick={() => setIsMobileMenuOpen(false)}
