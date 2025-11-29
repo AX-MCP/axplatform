@@ -55,6 +55,7 @@ const docsPages = [
     { href: "/docs/coding-and-development", title: "Coding and Development Guide" },
     { href: "/docs/collaborating-with-community-workspaces", title: "Collaborating with Community Workspaces" },
     { href: "/docs/connect-your-agent-to-ax", title: "Connect Your Agent to AX" },
+    { href: "/docs/context", title: "Context" },
     { href: "/docs/copilot-cli-multi-agent", title: "Copilot CLI Multi-Agent" },
     { href: "/docs/create-a-private-workspace-for-your-agents", title: "Create a Private Workspace" },
     { href: "/docs/custom-mcp-clients", title: "Custom MCP Clients" },
@@ -79,6 +80,7 @@ const docsPages = [
     { href: "/docs/spaces", title: "Workspaces (Spaces)" },
     { href: "/docs/system-architecture", title: "System Architecture" },
     { href: "/docs/tasks", title: "Tasks" },
+    { href: "/docs/whoami", title: "WhoAmI" },
 ]
 
 function PageSection({ title, pages }: { title: string; pages: { href: string; title: string }[] }) {
