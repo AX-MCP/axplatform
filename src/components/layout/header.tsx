@@ -42,15 +42,15 @@ const Header = () => {
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <Bot className="h-6 w-6 text-accent" />
-            <span className="font-bold font-headline">AX</span>
+            <Bot className="h-6 w-6 text-blue-500" />
+            <span className="font-bold font-headline text-lg">AX</span>
           </Link>
         </div>
         
-        <nav className="hidden md:flex flex-1 justify-center items-center space-x-6 text-sm font-medium">
+        <nav className="hidden md:flex flex-1 items-center space-x-6 text-sm font-medium">
           {Object.entries(navigationItems).map(([title, items]) => (
             <DropdownMenu key={title}>
-              <DropdownMenuTrigger className="flex items-center transition-colors hover:text-accent focus:outline-none data-[state=open]:text-accent">
+              <DropdownMenuTrigger className="flex items-center transition-colors hover:text-foreground/80 focus:outline-none data-[state=open]:text-foreground/80">
                 {title}
                 <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
@@ -63,21 +63,18 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           ))}
-          <Link href="/about" className="transition-colors hover:text-accent">
-            About AX
-          </Link>
-          <Link href="/docs" className="transition-colors hover:text-accent">
-            Docs
-          </Link>
-          <Link href="/pricing" className="transition-colors hover:text-accent">
+          <Link href="/pricing" className="transition-colors hover:text-foreground/80">
             Pricing
           </Link>
-          <Link href="/investors" className="transition-colors hover:text-accent">
+          <Link href="/docs" className="transition-colors hover:text-foreground/80">
+            Docs
+          </Link>
+          <Link href="/investors" className="transition-colors hover:text-foreground/80">
             Investors
           </Link>
         </nav>
           
-        <div className="flex flex-1 items-center justify-end gap-2">
+        <div className="flex flex-1 items-center justify-end gap-4">
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
@@ -89,8 +86,8 @@ const Header = () => {
               <SheetContent side="left" className="w-[240px]">
                 <div className="p-4">
                   <Link href="/" className="flex items-center space-x-2 mb-8" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Bot className="h-6 w-6 text-accent" />
-                    <span className="font-bold font-headline">AX</span>
+                    <Bot className="h-6 w-6 text-blue-500" />
+                    <span className="font-bold font-headline text-lg">AX</span>
                   </Link>
                   <div className="flex flex-col space-y-6">
                     {Object.entries(navigationItems).map(([title, items]) => (
@@ -101,7 +98,7 @@ const Header = () => {
                               key={item.name}
                               href={item.href}
                               onClick={() => setIsMobileMenuOpen(false)}
-                              className="text-foreground hover:text-accent"
+                              className="text-foreground hover:text-foreground/80"
                             >
                               {item.name}
                             </Link>
@@ -111,30 +108,23 @@ const Header = () => {
                      <div className="flex flex-col space-y-2">
                         <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">More</h4>
                          <Link
-                          href="/about"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-foreground hover:text-accent"
-                        >
-                          About AX
-                        </Link>
-                         <Link
-                          href="/docs"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-foreground hover:text-accent"
-                        >
-                          Docs
-                        </Link>
-                        <Link
                           href="/pricing"
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-foreground hover:text-accent"
+                          className="text-foreground hover:text-foreground/80"
                         >
                           Pricing
                         </Link>
                         <Link
+                          href="/docs"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-foreground hover:text-foreground/80"
+                        >
+                          Docs
+                        </Link>
+                        <Link
                           href="/investors"
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-foreground hover:text-accent"
+                          className="text-foreground hover:text-foreground/80"
                         >
                           Investors
                         </Link>
@@ -145,20 +135,14 @@ const Header = () => {
             </Sheet>
           </div>
 
-          <div className="hidden sm:flex items-center justify-end gap-2">
-              <Button asChild variant="ghost" size="sm">
-                  <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer">
-                      <DiscordIcon className="h-6 w-6 text-muted-foreground hover:text-accent" />
-                      <span className="ml-2">Discord</span>
-                  </Link>
-              </Button>
-              <Button asChild variant="ghost" size="sm">
-                  <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer">
-                      <Github className="h-6 w-6 text-muted-foreground hover:text-accent" />
-                      <span className="ml-2">Github</span>
-                  </Link>
-              </Button>
-            <Button asChild variant="outline" className="bg-card/80 hover:bg-card w-48 h-10">
+          <div className="hidden sm:flex items-center justify-end gap-4">
+              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
+                  <DiscordIcon className="h-5 w-5" />
+              </Link>
+              <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
+                  <Github className="h-5 w-5" />
+              </Link>
+            <Button asChild variant="outline" size="sm" className="rounded-full">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Log in
               </Link>
