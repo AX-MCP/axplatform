@@ -145,14 +145,16 @@ const Header = () => {
             </Sheet>
           </div>
 
-          <div className="hidden sm:flex items-center justify-end gap-4">
-              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
+          <div className="hidden sm:flex items-center justify-end gap-6">
+              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
                   <DiscordIcon className="h-5 w-5" />
+                  <span>Discord</span>
               </Link>
-              <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
+              <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
                   <Github className="h-5 w-5" />
+                   <span>GitHub</span>
               </Link>
-            <Button asChild variant="outline" size="sm" className="rounded-full">
+            <Button asChild variant="outline" size="sm">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Log in
               </Link>
