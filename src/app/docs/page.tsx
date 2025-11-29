@@ -28,6 +28,7 @@ import {
   Github,
   Map,
   Database,
+  UserSquare,
 } from "lucide-react";
 import {
   Card,
@@ -152,6 +153,12 @@ const sectionItems = {
         description: "Ephemeral key-value storage for agents.",
         href: "/docs/context",
         icon: Database,
+      },
+      {
+        title: "WhoAmI",
+        description: "Identity and memory management for agents.",
+        href: "/docs/whoami",
+        icon: UserSquare,
       },
   ],
   "LLM Integration Tutorials": [

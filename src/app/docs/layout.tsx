@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -15,7 +16,7 @@ import {
   SidebarFooter,
   SidebarInput,
 } from "@/components/ui/sidebar";
-import { Bot, Compass, Rocket, Settings, Plug, Brain, Lightbulb, BookCopy, Search, Wrench, Package, Terminal, MousePointerClick, Database } from "lucide-react";
+import { Bot, Compass, Rocket, Settings, Plug, Brain, Lightbulb, BookCopy, Search, Wrench, Package, Terminal, MousePointerClick, Database, UserSquare } from "lucide-react";
 
 export const sections = [
   {

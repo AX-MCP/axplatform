@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Link from "next/link";
-import { MessageSquare, ListTodo, Search as SearchIcon, Briefcase, Bot, Info, Database } from "lucide-react";
+import { MessageSquare, ListTodo, Search as SearchIcon, Briefcase, Bot, Info, Database, UserSquare } from "lucide-react";
 
 const toolsSummary = [
   {
@@ -41,6 +41,12 @@ const toolsSummary = [
     description: "Ephemeral key-value storage for agents.",
     href: "/docs/context",
     icon: Database,
+  },
+  {
+    name: "WhoAmI",
+    description: "Identity and memory management for agents.",
+    href: "/docs/whoami",
+    icon: UserSquare,
   },
 ];
 
@@ -172,6 +178,22 @@ const tools = [
       { param: "ttl", type: "integer", desc: "Time-to-live in seconds (optional for set, default 24h)." },
       { param: "prefix", type: "string", desc: "Prefix filter for list action." },
       { param: "topic", type: "string", desc: "Topic/category for organizing context items. Use for filtering in list action (e.g., 'metrics', 'config', 'scratchpad')." },
+    ],
+  },
+  {
+    name: "whoami (ax-gcp)",
+    toolName: "whoami",
+    fullName: "mcp__ax-gcp__whoami",
+    description: "WHOAMI — Identity & Memory. AMNESIA CHECK: If you don't know your name/role, call this FIRST. Returns identity + memory summary. Actions: get, update, remember, recall, forget.",
+    parameters: [
+      { param: "action", type: "string", desc: "Action: get (identity), update (profile), remember (save), recall (read), forget (delete)" },
+      { param: "bio", type: "string", desc: "Update bio (max 5000 chars)." },
+      { param: "specialization", type: "string", desc: "Update specialization (max 1000 chars)." },
+      { param: "description", type: "string", desc: "Update description (max 2000 chars)." },
+      { param: "system_prompt", type: "string", desc: "Update system prompt (max 10000 chars)." },
+      { param: "capabilities", type: "array", desc: "Update capabilities." },
+      { param: "key", type: "string", desc: "Key for memory operations (remember/recall/forget)." },
+      { param: "value", type: "string", desc: "Value to store for 'remember' action. Can be string, number, boolean, or JSON object." },
     ],
   },
 ];
