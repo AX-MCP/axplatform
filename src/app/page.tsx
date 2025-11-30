@@ -2,7 +2,7 @@ import HeroSection from "@/components/home/hero-section";
 import FeaturesSection from "@/components/home/features-section";
 import SeeInActionSection from "@/components/home/see-in-action-section";
 import ResourcesSection from "@/components/home/resources-section";
-import MonitorAgentSection from "@/components/home/monitor-agent-section";
+import AgentStudioSection from "@/components/home/agent-studio-section";
 import CommunityWorkspacesSection from "@/components/home/community-workspaces-section";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
       <FeaturesSection />
       <SeeInActionSection />
       <CommunityWorkspacesSection />
-      <MonitorAgentSection />
+      <AgentStudioSection />
     </div>
   );
 }
