@@ -39,12 +39,6 @@ const workspaces = [
     url: "https://paxai.app/messages/podcast-writers-room",
     repoUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/podcast-writers-room",
   },
-  {
-    name: "Agent Battleground",
-    description: "Evaluate and compare the performance of large language model (LLM) agents.",
-    url: "https://paxai.app/messages/agent-battleground",
-    repoUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/agent-battleground",
-  },
 ];
 
 const CommunityWorkspacesSection = () => {
