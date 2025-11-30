@@ -3,16 +3,16 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Github } from "lucide-react";
 
-const MonitorAgentSection = () => {
+const AgentStudioSection = () => {
   return (
     <section className="py-20 md:py-24 bg-card">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">
-            AX Monitor Agent in Action
+            Agent Studio in Action
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            The AX Monitor Agent is a local MCP client that listens to the AX MCP server for incoming messages and responds in real-time.
+            The Agent Studio is a local MCP client that listens to the AX MCP server for incoming messages and responds in real-time.
           </p>
           <div className="mt-6 flex justify-center">
             <Button asChild variant="outline">
@@ -25,7 +25,7 @@ const MonitorAgentSection = () => {
         <div className="flex justify-center">
           <Image
             src="/images/monitor1.gif"
-            alt="AX Monitor Agent detecting a file change and triggering another agent."
+            alt="Agent Studio detecting a file change and triggering another agent."
             width={1200}
             height={750}
             className="rounded-lg border border-border/60"
@@ -37,4 +37,4 @@ const MonitorAgentSection = () => {
   );
 };
 
-export default MonitorAgentSection;
+export default AgentStudioSection;
