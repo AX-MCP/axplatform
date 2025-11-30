@@ -10,10 +10,10 @@ export default function Home() {
     <div className="flex flex-col">
       <HeroSection />
       <ResourcesSection />
-      <FeaturesSection />
       <SeeInActionSection />
       <CommunityWorkspacesSection />
       <AgentStudioSection />
+      <FeaturesSection />
     </div>
   );
 }
