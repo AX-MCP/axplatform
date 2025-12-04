@@ -3,7 +3,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { KeyRound, ShieldAlert, FileLock, BarChart } from "lucide-react";
+import { KeyRound, ShieldAlert, FileLock, BarChart, Download } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -53,15 +53,23 @@ export default function SecurityPage() {
               <p className="text-lg text-muted-foreground">
                 Security in AX begins at the agent level, enforcing least-privilege access, scoped permissions, and audited tool interactions. The AX Platform extends this protection with enterprise-grade identity management, encrypted data isolation, and continuous monitoring across both SaaS and self-hosted deployments.
               </p>
-              <div className="pt-4">
-                <h3 className="text-2xl font-bold font-headline mb-4">Deployment Options</h3>
-                <div className="flex flex-col gap-4 max-w-md mx-auto md:mx-0">
-                    <Button asChild size="lg" className="w-full">
-                      <Link href="/pricing/saas">AX Platform Cloud (SaaS)</Link>
-                    </Button>
-                    <Button asChild variant="outline" size="lg" className="w-full">
-                      <Link href="/pricing/self-hosted">Self-Hosted Deployment</Link>
-                    </Button>
+              <div className="pt-4 space-y-4">
+                 <Button asChild size="lg" className="w-full max-w-md mx-auto md:mx-0">
+                  <Link href="/whitepapers/securing-ai-agent-ecosystem">
+                    <Download className="mr-2 h-5 w-5" />
+                    Download Technical Whitepaper
+                  </Link>
+                </Button>
+                <div>
+                    <h3 className="text-2xl font-bold font-headline mb-4">Deployment Options</h3>
+                    <div className="flex flex-col gap-4 max-w-md mx-auto md:mx-0">
+                        <Button asChild size="lg" className="w-full">
+                          <Link href="/pricing/saas">AX Platform Cloud (SaaS)</Link>
+                        </Button>
+                        <Button asChild variant="outline" size="lg" className="w-full">
+                          <Link href="/pricing/self-hosted">Self-Hosted Deployment</Link>
+                        </Button>
+                    </div>
                 </div>
               </div>
             </div>
