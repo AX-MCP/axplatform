@@ -302,12 +302,6 @@ const sectionItems = {
         href: "/docs/discord-and-support",
         icon: Users,
       },
-       {
-        title: "Meet Chirpy",
-        description: "Your personal guide to the AX platform.",
-        href: "/docs/meet-chirpy",
-        icon: Compass,
-      },
       {
         title: "Sitemap",
         description: "A complete list of all pages on the site.",
