@@ -270,7 +270,7 @@ const sectionItems = {
       },
       {
         title: "AX Workspace Cookbooks",
-        description: "Shared library of reusable “recipes” for building AX workspaces and multi-agent teams. Each cookbook captures a proven pattern—agents, roles, tools, MCP configs, and workflows for real use cases like SecOps, RAG knowledge hubs, support triage, and more.",
+        description: "Shared library of reusable “recipes” for building AX workspaces and multi-agent teams. Each cookbook captures agent team setup, workflows, MCP servers, and visual diagrams.",
         href: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/ax-workspace-cookbooks",
         icon: BookCopy,
         target: "_blank",
