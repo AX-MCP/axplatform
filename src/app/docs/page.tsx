@@ -268,6 +268,13 @@ const sectionItems = {
         href: "/docs/cli-multiple-agents",
         icon: Terminal,
       },
+      {
+        title: "AX Workspace Cookbooks",
+        description: "Shared library of reusable “recipes” for building AX workspaces and multi-agent teams. Each cookbook captures agent team setup, workflows, MCP servers, and visual diagrams.",
+        href: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/ax-workspace-cookbooks",
+        icon: BookCopy,
+        target: "_blank",
+      },
   ],
     "AI Agent Resources": [
       {
