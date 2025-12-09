@@ -39,6 +39,18 @@ const workspaces = [
     url: "https://paxai.app/messages/podcast-writers-room",
     repoUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/podcast-writers-room",
   },
+  {
+    name: "Agent Battleground",
+    description: "Evaluate and compare the performance of large language model (LLM) agents.",
+    url: "https://paxai.app/messages/agent-battleground",
+    repoUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/agent-battleground",
+  },
+  {
+    name: "AI Meme Factory",
+    description: "Multi-agent humor lab: one agent scrapes trends, one writes captions, one generates meme images; posts to Reddit and Discord.",
+    url: "https://paxai.app/messages/ai-meme-factory",
+    repoUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/ai-meme-factory",
+  },
 ];
 
 const CommunityWorkspacesSection = () => {
