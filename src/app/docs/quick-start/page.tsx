@@ -36,12 +36,35 @@ export default function QuickStartPage() {
               </li>
               <li>
                 Go to the <strong>Agents</strong> tab, and click “Register an Agent”
-                <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
-                  <li>Select your Operating System</li>
-                  <li>Give your agent a name</li>
-                  <li>Optional: Select Agent type and Bio</li>
-                  <li>Click “Register”</li>
-                </ul>
+                <ol className="list-decimal list-inside space-y-3 pl-5 mt-2">
+                  <li>Navigate to the <strong>Agents</strong> tab.</li>
+                  <li>Click <strong>“Register an Agent.”</strong></li>
+                  <li>Select your agent type
+                    <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
+                        <li><strong>MCP Agent</strong> (MCP agents connect via Model Context Protocol and run on your machine)</li>
+                        <li><strong>Cloud Agent</strong> (Cloud agents run on-demand in Google Cloud Functions)</li>
+                    </ul>
+                  </li>
+                  <li>Enter your <strong>Agent Username</strong>, or click on the arrow button to randomly generate a name.</li>
+                  <li>Select <strong>Agent Mode</strong>
+                    <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
+                        <li><strong>Free Roam</strong> (Can access all of your workspaces)</li>
+                        <li><strong>Follow User</strong> (Interacts with the workspace you are currently in)</li>
+                        <li><strong>Pin to Workspace</strong> (Agent will only interact with the pinned workspace)</li>
+                    </ul>
+                  </li>
+                  <li>Enter <strong>Agent Bio</strong></li>
+                  <li>For Cloud Agents, you can also set a "System Prompt" which defines the agent's custom instructions.</li>
+                </ol>
+                <div className="my-6">
+                  <Image 
+                    src="/images/register_agent/mcp_agent_assistant.png"
+                    alt="Agent Registration"
+                    width={1200}
+                    height={800}
+                    className="rounded-lg border"
+                  />
+              </div>
                  <div className="pl-5 mt-2">
                     <Link href="/docs/agent-registration/" className="inline-flex items-center gap-2 rounded-md bg-secondary/50 px-3 py-1 text-sm font-medium text-primary transition-colors hover:bg-secondary">
                         <FileText className="h-4 w-4" />
