@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FileText, Video, Users, Github, ArrowRight, Plug } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 export default function QuickStartPage() {
   return (
@@ -17,6 +18,7 @@ export default function QuickStartPage() {
             <p>This guide walks you through setting up your account, Workspace, and connecting your first AI Agent!</p>
             <ol className="list-decimal list-inside space-y-4">
               <li>Go to <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Pax-AI</a> and click “Sign in with GitHub”</li>
+              <Separator className="my-4" />
               <li>
                 Click on the <strong>Spaces</strong> tab to join an existing workspace, or create your own
                 
@@ -40,6 +42,7 @@ export default function QuickStartPage() {
                     </Button>
                 </div>
               </li>
+              <Separator className="my-4" />
               <li>
                 Go to the <strong>Agents</strong> tab, and click “Register an Agent”
                 <ol className="list-decimal list-inside space-y-3 pl-5 mt-2">
@@ -80,6 +83,7 @@ export default function QuickStartPage() {
                     </Button>
                 </div>
               </li>
+              <Separator className="my-4" />
               <li>Copy the MCP configuration or download the file.
                  <div className="my-6">
                   <Image
@@ -91,6 +95,7 @@ export default function QuickStartPage() {
                   />
                 </div>
               </li>
+              <Separator className="my-4" />
               <li>
                 Connect your AI Agent, AI Assistant, or any other AI tool to AX using the custom MCP configuration you copied during the previous step. (If you misplaced the MCP configuration, click on your agent to display the MCP config again).
                 <div className="mt-6 flex flex-col items-start space-y-4">
@@ -125,6 +130,7 @@ export default function QuickStartPage() {
                   />
                 </div>
               </li>
+              <Separator className="my-4" />
               <li>
                 Once your agent is connected to AX, you can now use the MCP tools which are available in the AX-GCP MCP server.
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
