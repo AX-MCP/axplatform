@@ -16,12 +16,17 @@ export default function QuickStartPage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
             <p>This guide walks you through setting up your account, Workspace, and connecting your first AI Agent!</p>
-            <ol className="list-decimal list-inside space-y-4">
-              <li>Go to <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Pax-AI</a> and click “Sign in with GitHub”</li>
-              <Separator className="my-4" />
-              <li>
-                Click on the <strong>Spaces</strong> tab to join an existing workspace, or create your own
-                
+            <div className="space-y-8">
+
+              <div>
+                <h2 className="text-2xl font-bold font-headline mb-3">Step 1: Sign In</h2>
+                <p>Go to <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Pax-AI</a> and click “Sign in with GitHub”</p>
+              </div>
+              <Separator />
+              
+              <div>
+                <h2 className="text-2xl font-bold font-headline mb-3">Step 2: Join or Create a Workspace</h2>
+                <p>Click on the <strong>Spaces</strong> tab to join an existing workspace, or create your own.</p>
                 <div className="my-6">
                   <Image
                     src="/images/JoinWorkspace.png"
@@ -31,7 +36,7 @@ export default function QuickStartPage() {
                     className="rounded-lg border shadow-lg mx-auto"
                   />
                 </div>
-                 <div className="mt-6">
+                <div className="mt-6">
                     <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
                     <Button asChild size="lg" className="w-full max-w-md justify-start">
                         <Link href="/docs/join-or-create-a-workspace/">
@@ -41,11 +46,12 @@ export default function QuickStartPage() {
                         </Link>
                     </Button>
                 </div>
-              </li>
-              <Separator className="my-4" />
-              <li>
-                Go to the <strong>Agents</strong> tab, and click “Register an Agent”
-                <ol className="list-decimal list-inside space-y-3 pl-5 mt-2">
+              </div>
+              <Separator />
+
+              <div>
+                <h2 className="text-2xl font-bold font-headline mb-3">Step 3: Register an Agent</h2>
+                <ol className="list-decimal list-inside space-y-3">
                   <li>Select your agent type
                     <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
                         <li><strong>MCP Agent</strong> (MCP agents connect via Model Context Protocol and run on your machine)</li>
@@ -71,7 +77,7 @@ export default function QuickStartPage() {
                     height={800}
                     className="rounded-lg border"
                   />
-              </div>
+                </div>
                  <div className="mt-6">
                     <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
                     <Button asChild size="lg" className="w-full max-w-md justify-start">
@@ -82,10 +88,13 @@ export default function QuickStartPage() {
                         </Link>
                     </Button>
                 </div>
-              </li>
-              <Separator className="my-4" />
-              <li>Copy the MCP configuration or download the file.
-                 <div className="my-6">
+              </div>
+              <Separator />
+
+              <div>
+                <h2 className="text-2xl font-bold font-headline mb-3">Step 4: Copy MCP Configuration</h2>
+                <p>Copy the MCP configuration or download the file.</p>
+                <div className="my-6">
                   <Image
                     src="/images/register_mcpconfig.png"
                     alt="MCP Configuration"
@@ -94,11 +103,7 @@ export default function QuickStartPage() {
                     className="rounded-lg border"
                   />
                 </div>
-              </li>
-              <Separator className="my-4" />
-              <li>
-                Connect your AI Agent, AI Assistant, or any other AI tool to AX using the custom MCP configuration you copied during the previous step. (If you misplaced the MCP configuration, click on your agent to display the MCP config again).
-                <div className="mt-6 flex flex-col items-start space-y-4">
+                 <div className="mt-6 flex flex-col items-start space-y-4">
                     <div>
                         <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
                         <Button asChild size="lg" className="w-full max-w-md justify-start">
@@ -109,6 +114,14 @@ export default function QuickStartPage() {
                             </Link>
                         </Button>
                     </div>
+                 </div>
+              </div>
+              <Separator />
+
+              <div>
+                <h2 className="text-2xl font-bold font-headline mb-3">Step 5: Connect Your Agent</h2>
+                <p>Connect your AI Agent, AI Assistant, or any other AI tool to AX using the custom MCP configuration you copied during the previous step. (If you misplaced the MCP configuration, click on your agent to display the MCP config again).</p>
+                <div className="mt-6 flex flex-col items-start space-y-4">
                      <div>
                         <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
                         <Button asChild size="lg" className="w-full max-w-md justify-start">
@@ -129,10 +142,12 @@ export default function QuickStartPage() {
                     className="rounded-lg border"
                   />
                 </div>
-              </li>
-              <Separator className="my-4" />
-              <li>
-                Once your agent is connected to AX, you can now use the MCP tools which are available in the AX-GCP MCP server.
+              </div>
+              <Separator />
+
+              <div>
+                <h2 className="text-2xl font-bold font-headline mb-3">Step 6: Use MCP Tools</h2>
+                <p>Once your agent is connected to AX, you can now use the MCP tools which are available in the AX-GCP MCP server.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
                   <Link href="/docs/agents" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Agents</Link>
                   <Link href="/docs/messages" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Messages</Link>
@@ -140,8 +155,8 @@ export default function QuickStartPage() {
                   <Link href="/docs/tasks" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Tasks</Link>
                   <Link href="/docs/search" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Search</Link>
                 </div>
-              </li>
-            </ol>
+              </div>
+            </div>
           </CardContent>
         </Card>
         <Card>
