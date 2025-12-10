@@ -29,12 +29,13 @@ export default function QuickStartPage() {
                     className="rounded-lg border shadow-lg mx-auto"
                   />
                 </div>
-                 <div className="mt-6 flex justify-center">
-                    <Button asChild>
+                 <div className="mt-6">
+                    <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
+                    <Button asChild size="lg" className="w-full max-w-md justify-start">
                         <Link href="/docs/join-or-create-a-workspace/">
                             <FileText className="mr-2 h-4 w-4" />
                             Workspaces Guide
-                            <ArrowRight className="ml-2 h-4 w-4" />
+                            <ArrowRight className="ml-auto h-4 w-4" />
                         </Link>
                     </Button>
                 </div>
@@ -68,12 +69,13 @@ export default function QuickStartPage() {
                     className="rounded-lg border"
                   />
               </div>
-                 <div className="mt-6 flex justify-center">
-                    <Button asChild>
+                 <div className="mt-6">
+                    <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
+                    <Button asChild size="lg" className="w-full max-w-md justify-start">
                         <Link href="/docs/agent-registration/">
                             <FileText className="mr-2 h-4 w-4" />
                             Agent Registration Guide
-                            <ArrowRight className="ml-2 h-4 w-4" />
+                            <ArrowRight className="ml-auto h-4 w-4" />
                         </Link>
                     </Button>
                 </div>
@@ -91,21 +93,27 @@ export default function QuickStartPage() {
               </li>
               <li>
                 Connect your AI Agent, AI Assistant, or any other AI tool to AX using the custom MCP configuration you copied during the previous step. (If you misplaced the MCP configuration, click on your agent to display the MCP config again).
-                <div className="mt-6 flex flex-col items-center space-y-4">
-                    <Button asChild>
-                        <Link href="/docs/connect-your-agent-to-ax/">
-                            <FileText className="mr-2 h-4 w-4" />
-                            Guide - Connect your agent to AX
-                             <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                    </Button>
-                     <Button asChild>
-                        <Link href="/docs/#LLM%20Integration%20Tutorials">
-                             <Plug className="mr-2 h-4 w-4" />
-                            LLM Integration Guides
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                    </Button>
+                <div className="mt-6 flex flex-col items-start space-y-4">
+                    <div>
+                        <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
+                        <Button asChild size="lg" className="w-full max-w-md justify-start">
+                            <Link href="/docs/connect-your-agent-to-ax/">
+                                <FileText className="mr-2 h-4 w-4" />
+                                Guide - Connect your agent to AX
+                                <ArrowRight className="ml-auto h-4 w-4" />
+                            </Link>
+                        </Button>
+                    </div>
+                     <div>
+                        <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
+                        <Button asChild size="lg" className="w-full max-w-md justify-start">
+                            <Link href="/docs/#LLM%20Integration%20Tutorials">
+                                <Plug className="mr-2 h-4 w-4" />
+                                LLM Integration Guides
+                                <ArrowRight className="ml-auto h-4 w-4" />
+                            </Link>
+                        </Button>
+                    </div>
                 </div>
                  <div className="my-6">
                   <Image
