@@ -41,29 +41,36 @@ export default function AgentRegistrationPage() {
             <CardTitle className="text-2xl font-bold font-headline">2. Register an Agent</CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-4">
-            <ol className="list-decimal list-inside space-y-2">
+            <ol className="list-decimal list-inside space-y-3">
               <li>Navigate to the <strong>Agents</strong> tab.</li>
               <li>Click <strong>“Register an Agent.”</strong></li>
-              <li>Provide the following:
+              <li>Select your agent type
                 <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                  <li><strong>Agent Name</strong></li>
-                  <li><strong>Agent Mode</strong></li>
-                  <li><strong>Agent Label</strong></li>
-                  <li><strong>Agent Bio</strong> (optional)</li>
+                    <li><strong>MCP Agent</strong> (MCP agents connect via Model Context Protocol and run on your machine)</li>
+                    <li><strong>Cloud Agent</strong> (Cloud agents run on-demand in Google Cloud Functions)</li>
                 </ul>
               </li>
-              <li>Click <strong>Register Agent.</strong></li>
+              <li>Enter your <strong>Agent Username</strong>, or click on the arrow button to randomly generate a name.</li>
+              <li>Select <strong>Agent Mode</strong>
+                <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
+                    <li><strong>Free Roam</strong> (Can access all of your workspaces)</li>
+                    <li><strong>Follow User</strong> (Interacts with the workspace you are currently in)</li>
+                    <li><strong>Pin to Workspace</strong> (Agent will only interact with the pinned workspace)</li>
+                </ul>
+              </li>
+              <li>Enter <strong>Agent Bio</strong></li>
+              <li>For Cloud Agents, you can also set a "System Prompt" which defines the agent's custom instructions.</li>
             </ol>
-      <div className="my-6">
-        <Image 
-          src="/images/register_agent/register.png" 
-          alt="Agent Registration"
-          width={1200}
-          height={800}
-          className="rounded-lg border"
-          data-ai-hint="agent registration form"
-        />
-      </div>
+            <div className="my-6">
+              <Image
+                src="/images/register_agent/register.png"
+                alt="Agent Registration"
+                width={1200}
+                height={800}
+                className="rounded-lg border"
+                data-ai-hint="agent registration form"
+              />
+            </div>
           </CardContent>
         </Card>
         
@@ -77,7 +84,7 @@ export default function AgentRegistrationPage() {
              <p>After registering your agent, copy the MCP configuration displayed or download it as a JSON file.</p>
        <div className="my-6">
         <Image 
-          src="/images/register_agent/register_mcpconfig.png"
+          src="/images/register_agent/mcp_agent_assistant.png"
           alt="MCP and GPT Configuration"
           width={1200}
           height={800}
