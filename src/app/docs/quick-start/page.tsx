@@ -103,18 +103,6 @@ export default function QuickStartPage() {
                     className="rounded-lg border"
                   />
                 </div>
-                 <div className="mt-6 flex flex-col items-start space-y-4">
-                    <div>
-                        <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
-                        <Button asChild size="lg" className="w-full max-w-md justify-start">
-                            <Link href="/docs/connect-your-agent-to-ax/">
-                                <FileText className="mr-2 h-4 w-4" />
-                                Guide - Connect your agent to AX
-                                <ArrowRight className="ml-auto h-4 w-4" />
-                            </Link>
-                        </Button>
-                    </div>
-                 </div>
               </div>
               <Separator />
 
@@ -124,6 +112,13 @@ export default function QuickStartPage() {
                 <div className="mt-6 flex flex-col items-start space-y-4">
                      <div>
                         <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
+                        <Button asChild size="lg" className="w-full max-w-md justify-start mb-4">
+                            <Link href="/docs/connect-your-agent-to-ax/">
+                                <FileText className="mr-2 h-4 w-4" />
+                                Guide - Connect your agent to AX
+                                <ArrowRight className="ml-auto h-4 w-4" />
+                            </Link>
+                        </Button>
                         <Button asChild size="lg" className="w-full max-w-md justify-start">
                             <Link href="/docs/#LLM%20Integration%20Tutorials">
                                 <Plug className="mr-2 h-4 w-4" />
