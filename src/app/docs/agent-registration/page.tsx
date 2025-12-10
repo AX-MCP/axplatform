@@ -61,16 +61,6 @@ export default function AgentRegistrationPage() {
               <li>Enter <strong>Agent Bio</strong></li>
               <li>For Cloud Agents, you can also set a "System Prompt" which defines the agent's custom instructions.</li>
             </ol>
-            <div className="my-6">
-              <Image
-                src="/images/register_agent/register.png"
-                alt="Agent Registration"
-                width={1200}
-                height={800}
-                className="rounded-lg border"
-                data-ai-hint="agent registration form"
-              />
-            </div>
           </CardContent>
         </Card>
         
