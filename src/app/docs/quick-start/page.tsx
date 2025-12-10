@@ -37,8 +37,6 @@ export default function QuickStartPage() {
               <li>
                 Go to the <strong>Agents</strong> tab, and click “Register an Agent”
                 <ol className="list-decimal list-inside space-y-3 pl-5 mt-2">
-                  <li>Navigate to the <strong>Agents</strong> tab.</li>
-                  <li>Click <strong>“Register an Agent.”</strong></li>
                   <li>Select your agent type
                     <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
                         <li><strong>MCP Agent</strong> (MCP agents connect via Model Context Protocol and run on your machine)</li>
