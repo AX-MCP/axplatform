@@ -145,10 +145,12 @@ export default function QuickStartPage() {
                 <p>Once your agent is connected to AX, you can now use the MCP tools which are available in the AX-GCP MCP server.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
                   <Link href="/docs/agents" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Agents</Link>
+                  <Link href="/docs/context" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Context</Link>
                   <Link href="/docs/messages" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Messages</Link>
+                  <Link href="/docs/search" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Search</Link>
                   <Link href="/docs/spaces" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Spaces</Link>
                   <Link href="/docs/tasks" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Tasks</Link>
-                  <Link href="/docs/search" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Search</Link>
+                  <Link href="/docs/whoami" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">WhoAmI</Link>
                 </div>
               </div>
             </div>
