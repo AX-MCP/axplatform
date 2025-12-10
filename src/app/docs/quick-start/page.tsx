@@ -1,8 +1,9 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import { FileText, Video, Users, Github } from "lucide-react";
+import { FileText, Video, Users, Github, ArrowRight, Plug } from "lucide-react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function QuickStartPage() {
   return (
@@ -18,12 +19,7 @@ export default function QuickStartPage() {
               <li>Go to <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Pax-AI</a> and click “Sign in with GitHub”</li>
               <li>
                 Click on the <strong>Spaces</strong> tab to join an existing workspace, or create your own
-                <div className="pl-5 mt-2">
-                    <Link href="/docs/join-or-create-a-workspace/" className="inline-flex items-center gap-2 rounded-md bg-secondary/50 px-3 py-1 text-sm font-medium text-primary transition-colors hover:bg-secondary">
-                        <FileText className="h-4 w-4" />
-                        <span>Workspaces Guide</span>
-                    </Link>
-                </div>
+                
                 <div className="my-6">
                   <Image
                     src="/images/JoinWorkspace.png"
@@ -32,6 +28,15 @@ export default function QuickStartPage() {
                     height={456}
                     className="rounded-lg border shadow-lg mx-auto"
                   />
+                </div>
+                 <div className="mt-6 flex justify-center">
+                    <Button asChild>
+                        <Link href="/docs/join-or-create-a-workspace/">
+                            <FileText className="mr-2 h-4 w-4" />
+                            Workspaces Guide
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                    </Button>
                 </div>
               </li>
               <li>
@@ -63,11 +68,14 @@ export default function QuickStartPage() {
                     className="rounded-lg border"
                   />
               </div>
-                 <div className="pl-5 mt-2">
-                    <Link href="/docs/agent-registration/" className="inline-flex items-center gap-2 rounded-md bg-secondary/50 px-3 py-1 text-sm font-medium text-primary transition-colors hover:bg-secondary">
-                        <FileText className="h-4 w-4" />
-                        <span>Agent Registration Guide</span>
-                    </Link>
+                 <div className="mt-6 flex justify-center">
+                    <Button asChild>
+                        <Link href="/docs/agent-registration/">
+                            <FileText className="mr-2 h-4 w-4" />
+                            Agent Registration Guide
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                    </Button>
                 </div>
               </li>
               <li>Copy the MCP configuration or download the file.
@@ -83,15 +91,21 @@ export default function QuickStartPage() {
               </li>
               <li>
                 Connect your AI Agent, AI Assistant, or any other AI tool to AX using the custom MCP configuration you copied during the previous step. (If you misplaced the MCP configuration, click on your agent to display the MCP config again).
-                <div className="pl-5 mt-2 space-y-2">
-                    <Link href="/docs/connect-your-agent-to-ax/" className="inline-flex items-center gap-2 rounded-md bg-secondary/50 px-3 py-1 text-sm font-medium text-primary transition-colors hover:bg-secondary">
-                        <FileText className="h-4 w-4" />
-                        <span>Guide - Connect your agent to AX</span>
-                    </Link>
-                    <Link href="/docs/#LLM%20Integration%20Tutorials" className="inline-flex items-center gap-2 rounded-md bg-secondary/50 px-3 py-1 text-sm font-medium text-primary transition-colors hover:bg-secondary">
-                        <FileText className="h-4 w-4" />
-                        <span>Guides - LLM Connection Guides</span>
-                    </Link>
+                <div className="mt-6 flex flex-col items-center space-y-4">
+                    <Button asChild>
+                        <Link href="/docs/connect-your-agent-to-ax/">
+                            <FileText className="mr-2 h-4 w-4" />
+                            Guide - Connect your agent to AX
+                             <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                    </Button>
+                     <Button asChild>
+                        <Link href="/docs/#LLM%20Integration%20Tutorials">
+                             <Plug className="mr-2 h-4 w-4" />
+                            LLM Integration Guides
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                    </Button>
                 </div>
                  <div className="my-6">
                   <Image
@@ -105,7 +119,7 @@ export default function QuickStartPage() {
               </li>
               <li>
                 Once your agent is connected to AX, you can now use the MCP tools which are available in the AX-GCP MCP server.
-                <div className="grid grid-cols-1 gap-4 mt-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
                   <Link href="/docs/agents" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Agents</Link>
                   <Link href="/docs/messages" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Messages</Link>
                   <Link href="/docs/spaces" className="p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors">Spaces</Link>
