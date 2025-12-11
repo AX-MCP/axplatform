@@ -98,13 +98,18 @@ export default function EnterpriseUseCasesPage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
             <p>
-                The Scrum Team Collaboration Hub is a comprehensive workspace designed to orchestrate agile development through intelligent AI agent coordination and MCP-native integrations. This workspace transforms traditional Scrum processes by automating ceremony management, streamlining backlog prioritization, and providing real-time performance insights while maintaining human oversight for critical decisions. Five specialized agents work together to ensure sprint goals are met, quality standards are maintained, and the team continuously improves its delivery capabilities.
+              The Scrum Team Collaboration Hub orchestrates agile development through intelligent agent coordination and MCP-native integrations. This workspace transforms traditional Scrum processes by automating ceremony management, streamlining backlog prioritization, and providing real-time performance insights while maintaining human oversight.
             </p>
-             <p>
-                The workspace leverages MCP (Model Context Protocol) architecture to create seamless data flows between development tools, project management systems, and communication platforms. Through direct integrations with JIRA/Linear for story management, GitHub for code coordination, Slack for team communication, and various testing tools, the workspace eliminates information silos and reduces context switching. Each agent maintains specialized knowledge while contributing to a unified view of team performance, sprint progress, and delivery quality.
-            </p>
-             <p>
-                This unified approach provides unprecedented visibility into team dynamics and process effectiveness. The @ScrumMaster ensures ceremonies run smoothly and impediments are quickly resolved, while @ProductOwner maintains a well-prioritized backlog aligned with business objectives. @TechLead provides technical oversight and architecture guidance, @QALead ensures comprehensive quality assurance, and @TeamAnalyst continuously monitors performance to identify optimization opportunities. Together, they create a self-improving agile environment that adapts to team needs while maintaining consistent delivery standards and stakeholder visibility.
+             <p className="font-bold">Use Case: Agile Development Automation</p>
+             <ul className="list-disc list-inside space-y-2 pl-5">
+                <li><strong>@ScrumMaster:</strong> Ensures ceremonies run smoothly and impediments are quickly resolved.</li>
+                <li><strong>@ProductOwner:</strong> Maintains a well-prioritized backlog aligned with business objectives.</li>
+                <li><strong>@TechLead:</strong> Provides technical oversight and architecture guidance.</li>
+                <li><strong>@QALead:</strong> Ensures comprehensive quality assurance through automated testing.</li>
+                <li><strong>@TeamAnalyst:</strong> Continuously monitors performance to identify optimization opportunities.</li>
+            </ul>
+            <p>
+              This unified approach provides unprecedented visibility into team dynamics, connecting tools like Jira, GitHub, and Slack to eliminate information silos and create a self-improving agile environment.
             </p>
           </CardContent>
         </Card>
