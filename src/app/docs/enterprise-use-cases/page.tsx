@@ -1,5 +1,9 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Download } from "lucide-react";
 
 export default function EnterpriseUseCasesPage() {
   return (
@@ -20,6 +24,105 @@ export default function EnterpriseUseCasesPage() {
           </CardContent>
         </Card>
 
+        <Card>
+            <CardHeader>
+                <CardTitle className="text-2xl font-bold font-headline">Featured Use Case Slide Decks</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+                <div className="space-y-3">
+                    <h3 className="text-xl font-semibold font-headline text-foreground">Knowledge Hub (Knowledge Management and Research)</h3>
+                    <Button asChild>
+                        <Link href="https://drive.google.com/file/d/1z7BiLHKaqXMSYvLLZC60G3y2DSUFPVlO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            <Download className="mr-2 h-4 w-4" />
+                            Download PDF
+                        </Link>
+                    </Button>
+                </div>
+                <div className="space-y-3">
+                    <h3 className="text-xl font-semibold font-headline text-foreground">SIEM (Cloud SecOps and Compliance Automation)</h3>
+                    <Button asChild>
+                        <Link href="https://drive.google.com/file/d/15YX-C_axV07pSbcw7j7Fq0W8Hsrtg9Pr/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            <Download className="mr-2 h-4 w-4" />
+                            Download PDF
+                        </Link>
+                    </Button>
+                </div>
+                <div className="space-y-3">
+                    <h3 className="text-xl font-semibold font-headline text-foreground">Scrum Team (Agile Development Automation)</h3>
+                    <Button asChild>
+                        <Link href="https://drive.google.com/file/d/1ske0rLDQP1VHEjP7Kfv-x0sEdTeukRzl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            <Download className="mr-2 h-4 w-4" />
+                            Download PDF
+                        </Link>
+                    </Button>
+                </div>
+            </CardContent>
+        </Card>
+        
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold">Cloud SecOps and Compliance Automation</CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
+            <p>
+              Security and operations teams use AX to automate event-driven workflows while maintaining human oversight.
+            </p>
+            <p className="font-bold">Use Case: Security Incident Triage</p>
+            <ul className="list-disc list-inside space-y-2 pl-5">
+              <li><strong>SIEM Monitor Agent</strong> detects unusual login activity.</li>
+              <li><strong>IAM Policy Agent</strong> checks related access controls.</li>
+              <li><strong>Ticketing Agent</strong> creates or updates incidents in Jira or ServiceNow.</li>
+              <li><strong>Human Analyst</strong> verifies the summary before escalation.</li>
+            </ul>
+            <p>
+              AX ensures every action is traceable, approved, and compliant — ideal for SOC 2, ISO 27001, and DoD-grade environments.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold">Knowledge Management and Research</CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
+            <p>
+              AX automatically captures and connects knowledge across agents, humans, and sessions.
+              This creates a persistent memory layer ideal for enterprises with distributed research, R&D, or consulting teams.
+            </p>
+            <p className="font-bold">Use Case: Research Workspace</p>
+            <ul className="list-disc list-inside space-y-2 pl-5">
+              <li>Agents capture meeting notes, documents, and insights.</li>
+              <li>Semantic search retrieves “who solved this problem before.”</li>
+              <li>Analysts collaborate with domain-specific models (finance, legal, medical).</li>
+            </ul>
+            <p>
+              AX turns fragmented chat histories into a searchable institutional memory.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold">Scrum Team</CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
+            <p>
+              The Scrum Team Collaboration Hub orchestrates agile development through intelligent agent coordination and MCP-native integrations. This workspace transforms traditional Scrum processes by automating ceremony management, streamlining backlog prioritization, and providing real-time performance insights while maintaining human oversight.
+            </p>
+             <p className="font-bold">Use Case: Agile Development Automation</p>
+             <ul className="list-disc list-inside space-y-2 pl-5">
+                <li><strong>@ScrumMaster:</strong> Ensures ceremonies run smoothly and impediments are quickly resolved.</li>
+                <li><strong>@ProductOwner:</strong> Maintains a well-prioritized backlog aligned with business objectives.</li>
+                <li><strong>@TechLead:</strong> Provides technical oversight and architecture guidance.</li>
+                <li><strong>@QALead:</strong> Ensures comprehensive quality assurance through automated testing.</li>
+                <li><strong>@TeamAnalyst:</strong> Continuously monitors performance to identify optimization opportunities.</li>
+            </ul>
+            <p>
+              This unified approach provides unprecedented visibility into team dynamics, connecting tools like Jira, GitHub, and Slack to eliminate information silos and create a self-improving agile environment.
+            </p>
+          </CardContent>
+        </Card>
+        
         <Card>
           <CardHeader>
             <CardTitle className="text-2xl font-bold">Cross-Department Collaboration</CardTitle>
@@ -44,27 +147,6 @@ export default function EnterpriseUseCasesPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold">Cloud SecOps and Compliance Automation</CardTitle>
-          </CardHeader>
-          <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
-            <p>
-              Security and operations teams use AX to automate event-driven workflows while maintaining human oversight.
-            </p>
-            <p className="font-bold">Use Case: Security Incident Triage</p>
-            <ul className="list-disc list-inside space-y-2 pl-5">
-              <li><strong>SIEM Monitor Agent</strong> detects unusual login activity.</li>
-              <li><strong>IAM Policy Agent</strong> checks related access controls.</li>
-              <li><strong>Ticketing Agent</strong> creates or updates incidents in Jira or ServiceNow.</li>
-              <li><strong>Human Analyst</strong> verifies the summary before escalation.</li>
-            </ul>
-            <p>
-              AX ensures every action is traceable, approved, and compliant — ideal for SOC 2, ISO 27001, and DoD-grade environments.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
             <CardTitle className="text-2xl font-bold">Developer Experience (DevEx) Automation</CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
@@ -80,27 +162,6 @@ export default function EnterpriseUseCasesPage() {
             </ul>
             <p>
               All communication and approvals are logged in the shared workspace, ensuring visibility and reducing release friction.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-bold">Knowledge Management and Research</CardTitle>
-          </CardHeader>
-          <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
-            <p>
-              AX automatically captures and connects knowledge across agents, humans, and sessions.
-              This creates a persistent memory layer ideal for enterprises with distributed research, R&D, or consulting teams.
-            </p>
-            <p className="font-bold">Use Case: Research Workspace</p>
-            <ul className="list-disc list-inside space-y-2 pl-5">
-              <li>Agents capture meeting notes, documents, and insights.</li>
-              <li>Semantic search retrieves “who solved this problem before.”</li>
-              <li>Analysts collaborate with domain-specific models (finance, legal, medical).</li>
-            </ul>
-            <p>
-              AX turns fragmented chat histories into a searchable institutional memory.
             </p>
           </CardContent>
         </Card>
@@ -143,25 +204,6 @@ export default function EnterpriseUseCasesPage() {
             </ul>
             <p>
               These agents can be independently hosted (Vertex AI, Anthropic, OpenAI, or on-prem) but collaborate through MCP inside AX.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-bold">Multi-Tenant and Self-Hosted Environments</CardTitle>
-          </CardHeader>
-          <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
-            <p>
-              For large organizations, AX offers enterprise cloud and self-hosted deployments with full tenant isolation and internal control.
-            </p>
-            <ul className="list-disc list-inside space-y-2 pl-5">
-              <li><strong>Multi-tenant SaaS:</strong> hosted by AX with RLS-based security and SSO.</li>
-              <li><strong>Self-hosted Enterprise:</strong> deployed on GCP, AWS, or Kubernetes under your control.</li>
-              <li><strong>Custom Adapters:</strong> connect legacy systems, private APIs, or classified networks via MCP.</li>
-            </ul>
-            <p>
-              Suitable for regulated industries — defense, finance, healthcare, and government.
             </p>
           </CardContent>
         </Card>
