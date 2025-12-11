@@ -1,5 +1,9 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Download } from "lucide-react";
 
 export default function EnterpriseUseCasesPage() {
   return (
@@ -18,6 +22,32 @@ export default function EnterpriseUseCasesPage() {
               This page outlines how enterprise teams use AX to orchestrate workflows, automate tasks, and securely manage AI collaboration at scale.
             </p>
           </CardContent>
+        </Card>
+
+        <Card>
+            <CardHeader>
+                <CardTitle className="text-2xl font-bold font-headline">Featured Use Case Slide Decks</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+                <div className="space-y-3">
+                    <h3 className="text-xl font-semibold font-headline text-foreground">Knowledge Hub (Knowledge Management and Research)</h3>
+                    <Button asChild>
+                        <Link href="https://drive.google.com/file/d/1z7BiLHKaqXMSYvLLZC60G3y2DSUFPVIO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            <Download className="mr-2 h-4 w-4" />
+                            Download PDF
+                        </Link>
+                    </Button>
+                </div>
+                <div className="space-y-3">
+                    <h3 className="text-xl font-semibold font-headline text-foreground">SIEM (Cloud SecOps and Compliance Automation)</h3>
+                    <Button asChild>
+                        <Link href="https://drive.google.com/file/d/15YX-C_axV07pSbcw7j7Fq0W8Hsrtg9Pr/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            <Download className="mr-2 h-4 w-4" />
+                            Download PDF
+                        </Link>
+                    </Button>
+                </div>
+            </CardContent>
         </Card>
 
         <Card>
