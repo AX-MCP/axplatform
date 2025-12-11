@@ -48,7 +48,7 @@ export default function EnterpriseUseCasesPage() {
                     </Button>
                 </div>
                 <div className="space-y-3">
-                    <h3 className="text-xl font-semibold font-headline text-foreground">Scrum Team</h3>
+                    <h3 className="text-xl font-semibold font-headline text-foreground">Scrum Team (Agile Development Automation)</h3>
                     <Button asChild>
                         <Link href="https://drive.google.com/file/d/1ske0rLDQP1VHEjP7Kfv-x0sEdTeukRzl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                             <Download className="mr-2 h-4 w-4" />
