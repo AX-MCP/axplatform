@@ -32,7 +32,7 @@ export default function EnterpriseUseCasesPage() {
                 <div className="space-y-3">
                     <h3 className="text-xl font-semibold font-headline text-foreground">Knowledge Hub (Knowledge Management and Research)</h3>
                     <Button asChild>
-                        <Link href="https://drive.google.com/file/d/1z7BiLHKaqXMSYvLLZC60G3y2DSUFPVIO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <Link href="https://drive.google.com/file/d/1z7BiLHKaqXMSYvLLZC60G3y2DSUFPVlO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                             <Download className="mr-2 h-4 w-4" />
                             Download PDF
                         </Link>
