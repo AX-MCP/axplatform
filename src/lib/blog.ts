@@ -1,8 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
 
 const postsDirectory = path.join(process.cwd(), 'src/content/blog');
 
@@ -16,10 +14,9 @@ export type Post = {
   featuredImage?: string;
   category: string;
   content: string;
-  contentHtml?: string;
 };
 
-export type PostMetadata = Omit<Post, 'content' | 'contentHtml'>;
+export type PostMetadata = Omit<Post, 'content'>;
 
 
 export function getSortedPostsData(): PostMetadata[] {
@@ -37,7 +34,7 @@ export function getSortedPostsData(): PostMetadata[] {
   });
 
   return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
+    if (new Date(a.date) < new Date(b.date)) {
       return 1;
     } else {
       return -1;
@@ -60,15 +57,9 @@ export async function getPostData(slug: string): Promise<Post> {
 
   const matterResult = matter(fileContents);
 
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
-
   return {
     slug,
     content: matterResult.content,
-    contentHtml,
-    ...(matterResult.data as Omit<Post, 'slug' | 'content' | 'contentHtml'>),
+    ...(matterResult.data as Omit<Post, 'slug' | 'content'>),
   };
 }
