@@ -82,9 +82,11 @@
     @apply bg-background text-foreground;
   }
   .prose {
-    color: hsl(var(--foreground));
+    color: hsl(var(--muted-foreground));
+    font-size: 1.125rem;
+    line-height: 1.777;
   }
-  .prose h1, .prose h2, .prose h3 {
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
     color: hsl(var(--foreground));
     font-family: 'Space Grotesk', sans-serif;
   }
@@ -92,7 +94,7 @@
     color: hsl(var(--primary));
   }
   .prose a:hover {
-    color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
   }
   .prose strong {
     color: hsl(var(--foreground));
@@ -110,7 +112,12 @@
     border-radius: 6px;
   }
   .prose pre {
-    background-color: hsl(var(--card));
+    background-color: hsl(var(--secondary));
     border: 1px solid hsl(var(--border));
+    padding: 1em;
+    border-radius: 0.5rem;
+  }
+  .prose ul > li::before {
+    background-color: hsl(var(--muted-foreground));
   }
 }
