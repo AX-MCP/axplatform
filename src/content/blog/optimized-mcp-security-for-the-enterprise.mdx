@@ -10,183 +10,173 @@ category: "Security"
 
 # Optimized MCP Security for the Enterprise
 
-Model Context Protocol (MCP) makes it straightforward for LLM agents to call tools and retrieve context from systems. That convenience is also the risk: once a model can *do things* (create tickets, pull repos, rotate keys, deploy services), the “tool layer” becomes a high-value control plane.
+## Introduction
+
+Model Context Protocol (MCP) makes it straightforward for LLM agents to call tools and retrieve context from systems. That convenience is also the risk: once a model can *do things* (create tickets, pull repos, rotate keys, deploy services), the "tool layer" becomes a high-value control plane.
 
 This post distills pragmatic controls for MCP deployments and shows how teams can operationalize them with **AX-Platform**—a shared workspace and collaboration layer for coordinating heterogeneous agents and humans across projects.
 
-This guidance is informed by multiple public sources, including Wiz’s MCP security guidance, OWASP’s LLM security work, and NIST’s AI risk management framework (links at the end).
+**Sources**: This guidance is informed by multiple public sources, including Wiz's MCP security guidance, OWASP's LLM security work, and NIST's AI risk management framework (links at the end).
 
 ---
 
-## 1) Start with an MCP inventory and a clear trust boundary
+## MCP Inventory and Trust Boundaries
 
 Before you can secure tool access, you need to know **what MCP servers exist**, **what tools they expose**, and **who is allowed to use them**.
 
-**What to do**
-- Maintain an **approved MCP server registry** (owner, purpose, environment, tool list, risk tier).
-- Enforce **tool allowlists** per workspace/environment (dev vs prod).
-- **Pin versions/digests** for servers and dependencies (avoid floating tags).
-- Require basic **provenance checks** for anything third‑party (who built it, where it came from, what it depends on).
+**Use Case: MCP Server Registry and Approval**
 
-**How AX helps**
-- Create a repeatable “**MCP Server Intake**” workflow in AX (template) that captures ownership, risk tier, and approval status.
-- Use an AX workspace as the **source of truth** for the registry: server onboarding tasks, discussions, decisions, and exceptions live together for later audit and incident review.
+- **Registry Agent** maintains an approved MCP server registry (owner, purpose, environment, tool list, risk tier).
+- **Allowlist Agent** enforces tool allowlists per workspace/environment (dev vs prod).
+- **Version Control Agent** pins versions/digests for servers and dependencies (avoid floating tags).
+- **Provenance Checker** requires basic provenance checks for anything third‑party (who built it, where it came from, what it depends on).
 
----
-
-## 2) Treat every tool call like a privileged operation (least privilege + separation)
-
-MCP doesn’t remove the need for classic access control—it makes it more urgent. The goal is to keep each agent/tool interaction **narrowly scoped** and **auditable**.
-
-**What to do**
-- Use **separate identities** for humans vs agents (service accounts per agent or per workflow).
-- Prefer **short-lived, scoped credentials** over long-lived secrets.
-- Apply **per-tool authorization** (read-only by default; explicit grants for write tools).
-- Add **step-up controls** for sensitive operations (extra approvals, additional auth, or constrained modes).
-
-**How AX helps**
-- Model your “agent roles” as explicit AX operational roles (e.g., *Build Agent*, *Ticketing Agent*, *Prod Change Agent*) and tie each role to a minimal tool set.
-- Build “**permission boundary**” checklists into AX runbooks so new workspaces inherit sane defaults instead of reinventing controls each time.
+AX-Platform enables teams to create a repeatable "**MCP Server Intake**" workflow that captures ownership, risk tier, and approval status — ideal for maintaining an auditable source of truth where server onboarding tasks, discussions, decisions, and exceptions live together.
 
 ---
 
-## 3) Defend against prompt injection and unsafe tool output (OWASP-informed)
+## Least Privilege and Access Separation
 
-Two failure modes show up repeatedly in agent/tool systems:
+MCP doesn't remove the need for classic access control—it makes it more urgent. The goal is to keep each agent/tool interaction **narrowly scoped** and **auditable**.
 
-1) **Prompt Injection**: untrusted text convinces the agent to do something it shouldn’t.
-2) **Insecure Output Handling**: the model’s output is treated as executable or trusted without validation.
+**Use Case: Identity and Authorization Controls**
 
-Both are emphasized by OWASP’s Top 10 for LLM Applications.
+- **Identity Manager** uses separate identities for humans vs agents (service accounts per agent or per workflow).
+- **Credential Agent** prefers short-lived, scoped credentials over long-lived secrets.
+- **Authorization Agent** applies per-tool authorization (read-only by default; explicit grants for write tools).
+- **Step-up Control Agent** adds extra approvals, additional auth, or constrained modes for sensitive operations.
 
-**What to do**
-- Treat **all external content** (issues, emails, web pages, docs, tickets) as **untrusted input**.
-- Use **strict tool schemas** and validate arguments (types, ranges, allowed values).
-- Require **output validation** before downstream execution (e.g., when output becomes code, SQL, shell, IAM policy, deployment config).
-- Keep **system/tool instructions isolated** from user-provided context; avoid concatenating raw user content into tool command strings.
-
-**How AX helps**
-- Make “**plan then act**” the default: agents post a short execution plan in the AX workspace, then call tools only after checks pass.
-- Add validation steps as explicit AX tasks (e.g., “Validate generated Terraform plan,” “Confirm least-privilege IAM diff,” “Approve production change”).
+AX-Platform allows you to model "agent roles" as explicit operational roles (e.g., *Build Agent*, *Ticketing Agent*, *Prod Change Agent*) tied to minimal tool sets, with "**permission boundary**" checklists built into runbooks so new workspaces inherit sane defaults.
 
 ---
 
-## 4) Put guardrails on high-impact actions (human-in-the-loop by design)
+## Prompt Injection and Output Safety
 
-Not every tool call needs manual review, but some absolutely should—especially anything that:
-- changes production systems,
-- touches credentials/secrets,
-- deletes data,
-- or triggers irreversible actions.
+Two failure modes show up repeatedly in agent/tool systems: **Prompt Injection** (untrusted text convinces the agent to do something it shouldn't) and **Insecure Output Handling** (the model's output is treated as executable without validation). Both are emphasized by OWASP's Top 10 for LLM Applications.
 
-**What to do**
-- Add **approval gates** for destructive or high-risk tools.
-- Require **previews** (diffs, dry runs, “what will change”) before execution.
-- Use **two-person review** for production changes when appropriate.
+**Use Case: Input and Output Validation**
 
-**How AX helps**
-- Implement approval gates as AX tasks assigned to specific approver roles.
-- Store evidence (diff outputs, run logs, approvals) in the same workspace thread for quick incident reconstruction.
+- **Input Sanitizer** treats all external content (issues, emails, web pages, docs, tickets) as untrusted input.
+- **Schema Validator** uses strict tool schemas and validates arguments (types, ranges, allowed values).
+- **Output Inspector** requires output validation before downstream execution (when output becomes code, SQL, shell, IAM policy, deployment config).
+- **Isolation Agent** keeps system/tool instructions isolated from user-provided context.
+
+AX-Platform makes "**plan then act**" the default: agents post execution plans in the workspace, then call tools only after validation checks pass. Validation steps become explicit AX tasks (e.g., "Validate generated Terraform plan," "Confirm least-privilege IAM diff," "Approve production change").
 
 ---
 
-## 5) Centralize MCP traffic with a gateway (policy, auth, logging, rate limits)
+## Guardrails on High-Impact Actions
 
-As MCP usage grows, direct client→server connections become hard to manage. A gateway/proxy gives you a single choke point for:
-- authentication/authorization,
-- structured audit logs,
-- rate limiting and concurrency controls,
-- and (optionally) inline content checks.
+Not every tool call needs manual review, but some absolutely should—especially anything that changes production systems, touches credentials/secrets, deletes data, or triggers irreversible actions.
 
-**What to do**
-- Front MCP servers with a **gateway/proxy** that enforces:
-  - **mTLS or equivalent strong client auth**
-  - centralized **authorization** decisions
-  - **audit logs** with user/agent identity + tool + parameters (as appropriate)
-  - **rate limits / quotas** to prevent abuse and “runaway agents”
+**Use Case: Human-in-the-Loop Approval Gates**
 
-**How AX helps**
-- Use AX workspaces as the operational layer for gateway policy changes, incident triage, and approvals (who changed what policy, why, and when).
+- **Approval Gate Agent** adds approval gates for destructive or high-risk tools.
+- **Preview Agent** requires previews (diffs, dry runs, "what will change") before execution.
+- **Review Orchestrator** implements two-person review for production changes when appropriate.
+- **Evidence Collector** stores diff outputs, run logs, and approvals for audit trails.
 
-### Examples of MCP gateways / proxies (for inspiration)
-
-These examples span “enterprise governance gateways” and “transport bridges”:
-
-- **Microsoft MCP Gateway** — reverse proxy + management layer for MCP servers (Kubernetes-oriented).  
-  https://github.com/microsoft/mcp-gateway
-
-- **Docker MCP Gateway** — centralized orchestration of containerized MCP servers with security defaults and observability.  
-  https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/
-
-- **IBM ContextForge MCP Gateway** — gateway/proxy + registry with discovery, auth, rate limiting, and observability.  
-  https://github.com/IBM/mcp-context-forge
-
-- **Lasso Security MCP Gateway** — security-focused intermediary for MCP interactions (governance/monitoring).  
-  https://github.com/lasso-security/mcp-gateway
-
-- **sparfenyuk/mcp-proxy** — transport proxy/bridge between stdio and SSE/StreamableHTTP.  
-  https://github.com/sparfenyuk/mcp-proxy
-
-- **SecretiveShell/MCP-Bridge** — OpenAI-API-compatible interface for calling MCP tools (bridge pattern).  
-  https://github.com/SecretiveShell/MCP-Bridge
+AX-Platform implements approval gates as tasks assigned to specific approver roles, storing all evidence (diff outputs, run logs, approvals) in the same workspace thread for quick incident reconstruction and compliance verification.
 
 ---
 
-## 6) Contain blast radius at runtime (sandboxing + egress control + quotas)
+## Centralized MCP Gateway
 
-Even with perfect auth, tools fail and servers get compromised. Treat MCP servers as **potentially hostile** and limit what they can touch.
+As MCP usage grows, direct client→server connections become hard to manage. A gateway/proxy gives you a single choke point for authentication/authorization, structured audit logs, rate limiting and concurrency controls, and optional inline content checks.
 
-**What to do**
-- Run MCP servers in **isolated containers** (non-root, no privilege escalation).
-- Restrict **network egress** to only what’s required (API allowlists).
-- Apply **resource quotas** (CPU/RAM/timeouts) and **concurrency limits**.
-- Separate **dev/test/prod** MCP runtimes so experimentation doesn’t bleed into production.
+**Use Case: Gateway Policy and Enforcement**
 
-**How AX helps**
-- Turn your runtime requirements into “**deployment checklists**” and enforce them via AX runbooks for each environment.
-- Capture exceptions explicitly (who approved bypassing egress restrictions and why).
+- **Auth Gateway** enforces mTLS or equivalent strong client authentication.
+- **Authorization Service** makes centralized authorization decisions.
+- **Audit Logger** captures user/agent identity + tool + parameters (as appropriate).
+- **Rate Limiter** prevents abuse and "runaway agents" with quotas and concurrency controls.
 
----
+AX-Platform serves as the operational layer for gateway policy changes, incident triage, and approvals — providing a clear audit trail of who changed what policy, why, and when.
 
-## 7) Make it a lifecycle program, not a one-time hardening pass (NIST AI RMF mindset)
+**Example MCP Gateways:**
 
-NIST’s AI Risk Management Framework (AI RMF 1.0) emphasizes continuous risk management across the lifecycle—govern, map, measure, manage—rather than a single checklist.
-
-**What to do**
-- **Govern**: define ownership and risk acceptance for agent/tool workflows.
-- **Map**: document where the agent can pull context from and where it can act.
-- **Measure**: track incidents, near-misses, and control coverage.
-- **Manage**: continuously improve controls, rotate credentials, patch servers, and update gateway policies.
-
-**How AX helps**
-- Use AX as the “**operating system**” for continuous improvement: incidents become tasks, postmortems become new controls, and controls become templates that roll out to every workspace.
+- **[Microsoft MCP Gateway](https://github.com/microsoft/mcp-gateway)** — Reverse proxy + management layer (Kubernetes-oriented)
+- **[Docker MCP Gateway](https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/)** — Centralized orchestration with security defaults
+- **[IBM ContextForge](https://github.com/IBM/mcp-context-forge)** — Gateway/proxy + registry with discovery and auth
+- **[Lasso Security](https://github.com/lasso-security/mcp-gateway)** — Security-focused intermediary for governance
+- **[sparfenyuk/mcp-proxy](https://github.com/sparfenyuk/mcp-proxy)** — Transport bridge (stdio/SSE)
+- **[SecretiveShell/MCP-Bridge](https://github.com/SecretiveShell/MCP-Bridge)** — OpenAI-API-compatible interface
 
 ---
 
-## Implementation starter pack for AX customers
+## Runtime Containment
 
-If you want a practical starting point, implement these in order:
+Even with perfect auth, tools fail and servers get compromised. Treat MCP servers as **potentially hostile** and limit what they can touch through sandboxing, egress control, and resource quotas.
 
-1. **Registry + allowlists**: approve MCP servers and tools; pin versions/digests.
-2. **Identity boundaries**: agent service accounts; short-lived scoped tokens; per-tool auth.
-3. **Input/output safety**: schema validation; output checks before execution; avoid prompt injection sinks.
-4. **High-risk approvals**: gates + previews for production and destructive operations.
-5. **Gateway standardization**: central auth/logging/rate limits.
-6. **Runtime containment**: containers, egress restrictions, quotas, environment separation.
-7. **Lifecycle metrics**: incident trends, log coverage, onboarding compliance, MTTR for MCP-related fixes.
+**Use Case: Isolated Runtime Environments**
+
+- **Container Orchestrator** runs MCP servers in isolated containers (non-root, no privilege escalation).
+- **Egress Controller** restricts network egress to only what's required (API allowlists).
+- **Resource Manager** applies resource quotas (CPU/RAM/timeouts) and concurrency limits.
+- **Environment Separator** maintains separate dev/test/prod MCP runtimes so experimentation doesn't bleed into production.
+
+AX-Platform turns runtime requirements into "**deployment checklists**" enforced via runbooks for each environment, capturing exceptions explicitly (who approved bypassing egress restrictions and why) for audit and compliance.
 
 ---
 
-## References
+## Lifecycle Program and Continuous Improvement
 
-- OWASP Top 10 for Large Language Model Applications (Prompt Injection, Insecure Output Handling):  
-  https://owasp.org/www-project-top-10-for-large-language-model-applications/
+NIST's AI Risk Management Framework (AI RMF 1.0) emphasizes continuous risk management across the lifecycle—govern, map, measure, manage—rather than a one-time checklist.
 
-- OWASP LLM Prompt Injection Prevention Cheat Sheet:  
-  https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html
+**Use Case: Continuous Risk Management**
 
-- NIST AI Risk Management Framework (AI RMF 1.0):  
-  https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf
+- **@GovernanceOwner:** Defines ownership and risk acceptance for agent/tool workflows.
+- **@ContextMapper:** Documents where the agent can pull context from and where it can act.
+- **@MetricsAnalyst:** Tracks incidents, near-misses, and control coverage.
+- **@ImprovementManager:** Continuously improves controls, rotates credentials, patches servers, and updates gateway policies.
 
-- NIST SP 800-53 (Least Privilege control family reference):  
-  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+AX-Platform serves as the "**operating system**" for continuous improvement: incidents become tasks, postmortems become new controls, and controls become templates that roll out to every workspace — ensuring organizational learning compounds over time.
+
+---
+
+## Implementation Roadmap
+
+### Getting Started with AX-Platform
+
+If you want a practical starting point, implement these controls in order:
+
+1. **Registry + Allowlists**
+   Approve MCP servers and tools; pin versions/digests
+
+2. **Identity Boundaries**
+   Agent service accounts; short-lived scoped tokens; per-tool auth
+
+3. **Input/Output Safety**
+   Schema validation; output checks before execution; avoid prompt injection sinks
+
+4. **High-Risk Approvals**
+   Gates + previews for production and destructive operations
+
+5. **Gateway Standardization**
+   Central auth/logging/rate limits
+
+6. **Runtime Containment**
+   Containers, egress restrictions, quotas, environment separation
+
+7. **Lifecycle Metrics**
+   Incident trends, log coverage, onboarding compliance, MTTR for MCP-related fixes
+
+---
+
+## References and Resources
+
+### Security Standards and Frameworks
+
+- **[OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)**
+  Prompt Injection, Insecure Output Handling, and other LLM-specific risks
+
+- **[OWASP LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)**
+  Practical guidance for defending against prompt injection attacks
+
+- **[NIST AI Risk Management Framework (AI RMF 1.0)](https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf)**
+  Comprehensive framework for managing AI risks across the lifecycle
+
+- **[NIST SP 800-53](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf)**
+  Least Privilege control family reference and security controls catalog
+
+---
