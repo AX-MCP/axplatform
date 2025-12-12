@@ -1,9 +1,9 @@
+
 import { notFound } from "next/navigation";
 import { getPostData, getAllPostSlugs } from "@/lib/blog";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { format } from "date-fns";
 import Image from "next/image";
-import { MDXRemote } from 'next-mdx-remote/rsc';
 
 export async function generateStaticParams() {
   const paths = getAllPostSlugs();
@@ -50,7 +50,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           </div>
         </header>
 
-        <MDXRemote source={post.content} />
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
       </article>
     </div>
   );
