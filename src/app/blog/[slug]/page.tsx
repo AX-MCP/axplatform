@@ -1,3 +1,4 @@
+
 import { notFound } from "next/navigation";
 import { getPostData, getAllPostSlugs } from "@/lib/blog";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -49,12 +50,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           </div>
         </header>
 
-        {post.contentHtml && (
-          <div
-            className="prose-lg text-foreground/90 space-y-4"
-            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-          />
-        )}
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
       </article>
     </div>
   );
