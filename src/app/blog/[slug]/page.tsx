@@ -1,11 +1,18 @@
 
 import { notFound } from "next/navigation";
-import { getPostData } from "@/lib/blog";
+import { getPostData, getAllPostSlugs } from "@/lib/blog";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { format } from "date-fns";
 import Image from "next/image";
 import { Fragment } from "react";
+
+export async function generateStaticParams() {
+  const posts = getAllPostSlugs();
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = await getPostData(params.slug);
