@@ -37,6 +37,13 @@ export function getSortedPostsData(): PostMetadata[] {
   });
 
   return allPostsData.sort((a, b) => {
+    const slugToMoveToTop = 'optimized-mcp-security-for-the-enterprise';
+    if (a.slug === slugToMoveToTop) {
+      return -1;
+    }
+    if (b.slug === slugToMoveToTop) {
+      return 1;
+    }
     if (new Date(a.date) < new Date(b.date)) {
       return 1;
     } else {
