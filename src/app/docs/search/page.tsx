@@ -1,5 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function SearchPage() {
   return (
@@ -34,6 +35,22 @@ export default function SearchPage() {
                 </a>
               </li>
             </ul>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">UI Example</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Image
+              src="https://picsum.photos/seed/search-ui/1200/800"
+              alt="UI Example for Search"
+              width={1200}
+              height={800}
+              className="rounded-lg border"
+              data-ai-hint="search results"
+            />
           </CardContent>
         </Card>
 

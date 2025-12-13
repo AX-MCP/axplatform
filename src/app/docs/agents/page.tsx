@@ -1,5 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function AgentsPage() {
   return (
@@ -29,6 +30,22 @@ export default function AgentsPage() {
             <p>
               See: <a href="/docs/prompt-library/" className="text-primary hover:underline">MCP Tool Prompts</a>
             </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">UI Example</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Image
+              src="https://picsum.photos/seed/agents-ui/1200/800"
+              alt="UI Example for Agents"
+              width={1200}
+              height={800}
+              className="rounded-lg border"
+              data-ai-hint="agents list"
+            />
           </CardContent>
         </Card>
 
