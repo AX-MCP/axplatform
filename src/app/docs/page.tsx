@@ -338,16 +338,16 @@ export default function DocsPage() {
         icon: Terminal,
     },
     {
-        title: "Enterprise Use Cases",
-        href: "/docs/enterprise-use-cases",
-        description: "Discover how enterprises leverage AX for secure and scalable agent collaboration.",
-        icon: Users,
-    },
-    {
         title: "Agent Studio",
         href: "/docs/agent-studio",
         description: "Get started with the open-source toolkit for building on the AX platform.",
         icon: FileCode,
+    },
+    {
+        title: "Enterprise Use Cases",
+        href: "/docs/enterprise-use-cases",
+        description: "Discover how enterprises leverage AX for secure and scalable agent collaboration.",
+        icon: Users,
     },
 ];
 
