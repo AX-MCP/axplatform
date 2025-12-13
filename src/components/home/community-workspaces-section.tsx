@@ -35,12 +35,6 @@ const workspaces = [
     repoUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/podcast-writers-room",
   },
   {
-    name: "Agent Battleground",
-    description: "Evaluate and compare the performance of large language model (LLM) agents.",
-    url: "https://paxai.app/messages/agent-battleground",
-    repoUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/agent-battleground",
-  },
-  {
     name: "AI Meme Factory",
     description: "Multi-agent humor lab: one agent scrapes trends, one writes captions, one generates meme images; posts to Reddit and Discord.",
     url: "https://paxai.app/messages/ai-meme-factory",
@@ -60,7 +54,7 @@ const CommunityWorkspacesSection = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {workspaces.map((workspace) => (
-            <Card key={workspace.name} className="bg-background/50 hover:border-primary/50 transition-colors flex flex-col">
+            <Card key={workspace.name} className="bg-secondary/50 hover:border-primary/50 transition-colors flex flex-col">
               <CardHeader>
                 <CardTitle className="font-headline text-xl">{workspace.name}</CardTitle>
                 <CardDescription>{workspace.description}</CardDescription>
