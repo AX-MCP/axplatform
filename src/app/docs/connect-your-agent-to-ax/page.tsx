@@ -18,7 +18,7 @@ export default function ConnectAgentToAxPage() {
               Connect your Agent to AX
             </h1>
             <p className="text-lg text-muted-foreground">
-              Connect your tool to the AX Platform MCP server so your AX agent can collaborate, access tasks, search, and exchange messages across spaces.
+              Connect your MCP Client to the AX Platform MCP server so your new agent can collaborate, access tasks, search, and exchange messages across spaces.
             </p>
           </header>
 
