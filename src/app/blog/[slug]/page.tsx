@@ -74,10 +74,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   
   return (
     <div className="container py-20 md:py-24">
-      <div className="max-w-4xl mx-auto space-y-8">
-        <header className="mb-8 text-center">
+      <div className="max-w-5xl mx-auto space-y-12">
+        <header className="mb-4 text-center space-y-6">
             {post.featuredImage && (
-              <div className="relative w-full aspect-[2/1] rounded-lg overflow-hidden mb-8">
+              <div className="relative w-full aspect-[2/1] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-border/40">
                 <Image
                   src={post.featuredImage}
                   alt={post.title}
@@ -87,40 +87,59 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 />
               </div>
             )}
-            <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-              {post.title}
-            </h1>
+            <div className="space-y-3">
+              <p className="inline-flex items-center rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary/80 ring-1 ring-primary/20">
+                Latest from AX Platform
+              </p>
+              <h1 className="text-4xl md:text-5xl font-extrabold font-headline leading-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-foreground to-accent">
+                {post.title}
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                {post.excerpt}
+              </p>
+            </div>
             <div className="flex items-center justify-center space-x-4 text-muted-foreground">
               <div className="flex items-center space-x-2">
-                <Avatar className="h-8 w-8">
+                <Avatar className="h-10 w-10">
                   <AvatarImage src={post.avatarUrl} alt={post.author} />
                   <AvatarFallback>{post.author.charAt(0)}</AvatarFallback>
                 </Avatar>
-                <span className="font-medium">{post.author}</span>
+                <div className="text-left">
+                  <span className="block text-sm uppercase tracking-wide text-primary/80">Author</span>
+                  <span className="font-semibold text-foreground">{post.author}</span>
+                </div>
               </div>
-              <span>•</span>
-              <time dateTime={post.date}>
+              <span className="text-xl">•</span>
+              <time dateTime={post.date} className="text-sm uppercase tracking-wide">
                 {format(new Date(post.date), "MMMM d, yyyy")}
               </time>
             </div>
         </header>
 
-        {contentSections.map((section, index) => (
-          <Fragment key={section.id}>
-            {section.content.trim() && (
-                 <Card>
-                    {section.title && (
-                        <CardHeader>
-                            <CardTitle className="text-2xl font-bold font-headline">{section.title}</CardTitle>
-                        </CardHeader>
-                    )}
-                    <CardContent className="prose prose-invert max-w-none text-lg text-muted-foreground">
-                        <div dangerouslySetInnerHTML={{ __html: section.content }} />
-                    </CardContent>
+        {contentSections.map((section, index) => {
+          const sectionTitle = section.title || (index === 0 ? post.title : `Section ${index + 1}`);
+          return (
+            <Fragment key={section.id}>
+              {section.content.trim() && (
+                <Card className="border border-border/60 bg-secondary/30 shadow-xl backdrop-blur-sm transition-all duration-300 hover:border-primary/40">
+                  <CardHeader className="border-b border-border/50 bg-gradient-to-r from-primary/15 via-accent/10 to-transparent">
+                    <div className="flex items-center justify-between text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                      <span className="rounded-full bg-primary/15 px-3 py-1 font-semibold text-primary/80">Section {index + 1}</span>
+                      <span className="h-px flex-1 mx-3 bg-border" />
+                      <span className="text-muted-foreground/70">Updated for modern reading</span>
+                    </div>
+                    <CardTitle className="text-3xl md:text-[32px] font-extrabold font-headline leading-tight text-foreground">
+                      {sectionTitle}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="blog-prose">
+                    <div dangerouslySetInnerHTML={{ __html: section.content }} />
+                  </CardContent>
                 </Card>
-            )}
-          </Fragment>
-        ))}
+              )}
+            </Fragment>
+          );
+        })}
       </div>
     </div>
   );
