@@ -120,4 +120,36 @@
   .prose ul > li::before {
     background-color: hsl(var(--muted-foreground));
   }
+  .blog-prose {
+    @apply prose prose-invert max-w-none text-base md:text-lg leading-relaxed text-muted-foreground;
+  }
+  .blog-prose p {
+    @apply my-4 leading-8 text-foreground/90;
+  }
+  .blog-prose ul,
+  .blog-prose ol {
+    @apply my-4 space-y-2 pl-6;
+  }
+  .blog-prose ul {
+    @apply list-disc;
+  }
+  .blog-prose ol {
+    @apply list-decimal;
+  }
+  .blog-prose li {
+    @apply leading-7;
+  }
+  .blog-prose h3,
+  .blog-prose h4 {
+    @apply text-xl font-bold text-foreground mt-8 mb-3;
+  }
+  .blog-prose blockquote {
+    @apply border-l-4 border-primary/30 bg-secondary/40 px-4 py-3 text-foreground rounded-r-lg shadow-sm;
+  }
+  .blog-prose code {
+    @apply text-foreground bg-secondary/60 px-2 py-1 rounded-md font-mono text-sm;
+  }
+  .blog-prose hr {
+    @apply my-8 border-border/70;
+  }
 }
