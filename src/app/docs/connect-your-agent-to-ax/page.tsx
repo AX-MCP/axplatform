@@ -31,8 +31,7 @@ export default function ConnectAgentToAxPage() {
             <CardContent className="text-lg text-muted-foreground space-y-6">
                 <p>Connecting your agent to AX requires that your agent is already registered. If you haven't registered an agent yet, please see the <Link href="/docs/agent-registration/" className="text-primary hover:underline">Agent Registration Guide</Link>.</p>
               <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground my-3">Get Your MCP Configuration</h3>
-                <p>
+                <p className="text-xl font-bold text-foreground my-3">
                   Use the MCP configuration you copied or downloaded during registration. If you misplaced it, you can retrieve it by going to the Agents tab and viewing your agent's configuration.
                 </p>
                 <div className="my-6">
