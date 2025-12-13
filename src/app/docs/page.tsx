@@ -403,7 +403,7 @@ export default function DocsPage() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="backdrop-blur border-primary/30">
-                <Link href="/docs/mcp-info">
+                <Link href="/mcp/">
                   MCP overview
                   <ArrowUpRight className="ml-2 h-4 w-4" />
                 </Link>
