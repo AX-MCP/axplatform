@@ -84,7 +84,7 @@ export default function QuickStartPage() {
                     </CardHeader>
                     <CardContent className="text-lg text-muted-foreground">
                         <ul className="list-disc list-inside space-y-2">
-                            <li>If you registered a cloud agent, you do not need to continue through the remaining steps of this guide. You are ready to start putting your cloud agent to work!</li>
+                            <li className="text-green-400 font-bold">If you registered a cloud agent, you do not need to continue through the remaining steps of this guide. You are ready to start putting your cloud agent to work!</li>
                             <li>If you registered an MCP Agent, move on to steps 4. and 5. to complete the setup.</li>
                         </ul>
                     </CardContent>
