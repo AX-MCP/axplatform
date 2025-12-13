@@ -398,13 +398,19 @@ export default function DocsPage() {
             <div className="flex flex-wrap gap-3 pt-2">
               <Button asChild size="lg" className="group">
                 <Link href="/docs/quick-start">
-                  Start building
+                  Quick Start
                   <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="backdrop-blur border-primary/30">
                 <Link href="/mcp/">
-                  MCP overview
+                  MCP Tools
+                  <ArrowUpRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="backdrop-blur border-primary/30">
+                <Link href="/docs/how-to-use-ax/">
+                  Interactive Guide
                   <ArrowUpRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
