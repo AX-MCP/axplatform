@@ -52,7 +52,7 @@ export default function ClaudeCodePage() {
             <div>
               <h3 className="text-xl font-semibold font-headline text-foreground mb-3">1. Access the AX Platform</h3>
               <p>
-                Click the Sign In button in the top-right corner.
+                Click Log in at the top right of the page or click <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">here</a>
               </p>
             </div>
             
@@ -143,17 +143,17 @@ export default function ClaudeCodePage() {
             </div>
             <div>
                 <h4 className="text-lg font-semibold font-headline text-foreground mt-4">Understanding Configuration Scopes</h4>
-                <p><strong>User Config</strong> (`~/.claude.json` or `C:\\Users\\username\\.claude.json` on Windows):</p>
+                <p><strong>User Config:</strong> (`~/.claude.json` or `C:\\Users\\username\\.claude.json` on Windows):</p>
                 <ul className="list-disc list-inside pl-5">
                     <li>Available across all your projects</li>
                     <li>Good for personal MCP servers you use frequently</li>
                 </ul>
-                <p className="mt-2"><strong>Project Config</strong> (`.mcp.json` in project root):</p>
+                <p className="mt-2"><strong>Project Config:</strong> (`.mcp.json` in project root):</p>
                 <ul className="list-disc list-inside pl-5">
                     <li>Shared with your team via version control</li>
                     <li>Perfect for project-specific integrations like AX Platform workspaces</li>
                 </ul>
-                <p className="mt-2"><strong>Local Config</strong> (stored in `~/.claude.json` with project-specific sections):</p>
+                <p className="mt-2"><strong>Local Config:</strong> (stored in `~/.claude.json` with project-specific sections):</p>
                 <ul className="list-disc list-inside pl-5">
                     <li>Private to you within a specific project</li>
                     <li>Useful for personal development setups</li>

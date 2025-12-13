@@ -22,7 +22,7 @@ export default function JoinOrCreateWorkspacePage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-2">
             <p>
-              Click the Sign In button in the top-right corner.
+              Click Log in at the top right of the page or click <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">here</a>
             </p>
           </CardContent>
         </Card>
