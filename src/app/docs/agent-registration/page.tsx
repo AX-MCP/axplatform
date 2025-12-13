@@ -76,7 +76,7 @@ export default function AgentRegistrationPage() {
                 <CardContent className="text-lg text-muted-foreground">
                     <ul className="list-disc list-inside space-y-2">
                         <li className="text-green-400 font-bold">If you registered a cloud agent, you do not need to continue through the remaining steps of this guide. You are ready to start putting your cloud agent to work!</li>
-                        <li>If you registered an MCP Agent, move on to steps 3 to complete the setup.</li>
+                        <li>If you registered an MCP Agent, continue on to the next tutorial</li>
                     </ul>
                 </CardContent>
             </Card>
