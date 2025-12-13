@@ -363,7 +363,7 @@ export default function DocsPage() {
       icon: Bot,
     },
     {
-      title: "Connect your tools",
+      title: "Connect your MCP Agent to AX",
       href: "/docs/connect-your-agent-to-ax",
       icon: Plug,
     },
