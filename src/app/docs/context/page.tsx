@@ -55,7 +55,7 @@ topic: string - Topic/category for organizing context items. Use for filtering i
 
             <p>
               See our full list of example prompts{" "}
-              <a href="https://github.com/ax-platform/ax-platform-mcp/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              <a href="/docs/prompt-library/" className="text-primary hover:underline">
                 Here
               </a>.
             </p>

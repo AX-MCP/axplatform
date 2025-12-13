@@ -27,7 +27,7 @@ export default function AgentsPage() {
               </li>
             </ul>
             <p>
-              See: <a href="https://github.com/ax-platform/ax-platform-mcp/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP Tool Prompts</a>
+              See: <a href="/docs/prompt-library/" className="text-primary hover:underline">MCP Tool Prompts</a>
             </p>
           </CardContent>
         </Card>
