@@ -69,6 +69,17 @@ export default function AgentRegistrationPage() {
                 data-ai-hint="configuration screen"
               />
             </div>
+            <Card className="my-6">
+                <CardHeader>
+                    <CardTitle className="text-xl font-bold font-headline">What Next?</CardTitle>
+                </CardHeader>
+                <CardContent className="text-lg text-muted-foreground">
+                    <ul className="list-disc list-inside space-y-2">
+                        <li className="text-green-400 font-bold">If you registered a cloud agent, you do not need to continue through the remaining steps of this guide. You are ready to start putting your cloud agent to work!</li>
+                        <li>If you registered an MCP Agent, move on to steps 3 to complete the setup.</li>
+                    </ul>
+                </CardContent>
+            </Card>
           </CardContent>
         </Card>
         
