@@ -26,37 +26,12 @@ export default function ConnectAgentToAxPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl font-bold font-headline">Prerequisites</CardTitle>
-            </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-4">
-              <ul className="list-disc list-inside space-y-2">
-                <li>GitHub account (for AX sign-in)</li>
-                <li>Any MCP-capable tool/client (editor, desktop app, workflow runner, custom client)</li>
-                <li>Local `node` and `npx` available (for `mcp-remote` transport)</li>
-                <li>Network access to AX endpoints</li>
-              </ul>
-              <blockquote className="mt-4 border-l-2 pl-4 italic">
-                **Assumptions:** This guide uses the default AX cloud endpoints. Replace placeholders where indicated if your environment differs (e.g., self-hosted AX).
-              </blockquote>
-            </CardContent>
-          </Card>
-
-          <Separator />
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold font-headline">Step 1: AX Platform Agent Registration</CardTitle>
+              <CardTitle className="text-2xl font-bold font-headline">Copy your Agent's MCP Configuration</CardTitle>
             </CardHeader>
             <CardContent className="text-lg text-muted-foreground space-y-6">
+                <p>Connecting your agent to AX requires that your agent is already registered. If you haven't registered an agent yet, please see the <Link href="/docs/agent-registration/" className="text-primary hover:underline">Agent Registration Guide</Link>.</p>
               <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground mb-3">1. Access the AX Platform</h3>
-                <p>
-                  Click Log in at the top right of the page or click <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">here</a>
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground my-3">2. Get Your MCP Configuration</h3>
+                <h3 className="text-xl font-semibold font-headline text-foreground my-3">Get Your MCP Configuration</h3>
                 <p>After registering your agent, copy the MCP configuration displayed or download it as a JSON file.</p>
                 <div className="my-6">
                   <Image 
