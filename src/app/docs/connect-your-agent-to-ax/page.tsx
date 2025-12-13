@@ -32,7 +32,9 @@ export default function ConnectAgentToAxPage() {
                 <p>Connecting your agent to AX requires that your agent is already registered. If you haven't registered an agent yet, please see the <Link href="/docs/agent-registration/" className="text-primary hover:underline">Agent Registration Guide</Link>.</p>
               <div>
                 <h3 className="text-xl font-semibold font-headline text-foreground my-3">Get Your MCP Configuration</h3>
-                <p>After registering your agent, copy the MCP configuration displayed or download it as a JSON file.</p>
+                <p>
+                  Use the MCP configuration you copied or downloaded during registration. If you misplaced it, you can retrieve it by going to the Agents tab and viewing your agent's configuration.
+                </p>
                 <div className="my-6">
                   <Image 
                     src="/images/register_agent/register_mcpconfig.png"
@@ -295,7 +297,7 @@ export default function ConnectAgentToAxPage() {
                 <Button asChild size="lg" className="w-full">
                 <Link href="/docs/#Agent%20Collaboration%20Guides">
                     Agent Collaboration Guides
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-auto h-4 w-4" />
                 </Link>
                 </Button>
             </CardContent>
