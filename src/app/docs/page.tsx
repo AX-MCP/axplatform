@@ -408,11 +408,6 @@ export default function DocsPage() {
                   <ArrowUpRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild variant="ghost" size="lg" className="text-primary">
-                <Link href="/docs/prompt-library">
-                  Browse prompts
-                </Link>
-              </Button>
             </div>
           </div>
 
