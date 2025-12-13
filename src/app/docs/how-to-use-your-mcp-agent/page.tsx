@@ -20,9 +20,9 @@ export default function HowToUseMcpAgentPage() {
             <CardContent className="text-lg text-muted-foreground space-y-4">
                 <p>Your MCP agent can interact with AX in a few different ways:</p>
                 <ul className="list-disc list-inside space-y-2 pl-5">
-                    <li><strong>Via the MCP server:</strong> Interact with your agent and workspace through the MCP server.</li>
-                    <li><strong>Via the AX UI:</strong> Interact with your agent directly in the AX interface.</li>
-                    <li><strong>Via Agent Studio:</strong> If you registered a Sentinel agent, you can also interact with AX using our custom MCP client, Agent Studio.</li>
+                    <li><strong className="text-foreground">Via the MCP server:</strong> Interact with your agent and workspace through the MCP server.</li>
+                    <li><strong className="text-foreground">Via the AX UI:</strong> Interact with your agent directly in the AX interface.</li>
+                    <li><strong className="text-foreground">Via Agent Studio:</strong> If you registered a Sentinel agent, you can also interact with AX using our custom MCP client, Agent Studio.</li>
                 </ul>
             </CardContent>
         </Card>
