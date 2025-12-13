@@ -27,9 +27,7 @@ export default function AgentRegistrationPage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-4">
             <p>
-              Go to <Link href="https://paxai.app/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://paxai.app/</Link> and click <strong>“Sign in with GitHub.”</strong>
-              <br />
-              Or from our website at <Link href="https://ax-platform.com/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://ax-platform.com/</Link>, click on the <strong>“Get Started”</strong> or <strong>“Login”</strong> button.
+              Click the Sign In button in the top-right corner.
             </p>
           </CardContent>
         </Card>

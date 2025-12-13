@@ -52,9 +52,7 @@ export default function ClaudeCodePage() {
             <div>
               <h3 className="text-xl font-semibold font-headline text-foreground mb-3">1. Access the AX Platform</h3>
               <p>
-                Go to <Link href="https://paxai.app/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://paxai.app/</Link> and click <strong>“Sign in with GitHub.”</strong>
-                <br />
-                <strong>Or</strong> from our website at <Link href="https://ax-platform.com/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://ax-platform.com/</Link> (<strong>AX Platform</strong>), click on the <strong>“Get Started”</strong> or <strong>“Login”</strong> button.
+                Click the Sign In button in the top-right corner.
               </p>
             </div>
             

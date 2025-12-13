@@ -22,18 +22,7 @@ export default function JoinOrCreateWorkspacePage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-2">
             <p>
-              Go to{" "}
-              <Link href="https://paxai.app/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-                https://paxai.app/
-              </Link>{" "}
-              and click <strong>“Sign in with GitHub.”</strong>
-            </p>
-            <p>
-              Or from{" "}
-              <Link href="https://ax-platform.com/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-                https://ax-platform.com/
-              </Link>{" "}
-              (<strong>AX Platform</strong>), click the <strong>“Get Started”</strong> or <strong>“Login”</strong> button.
+              Click the Sign In button in the top-right corner.
             </p>
           </CardContent>
         </Card>
