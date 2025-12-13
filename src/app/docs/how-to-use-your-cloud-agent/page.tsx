@@ -28,7 +28,6 @@ export default function HowToUseCloudAgentPage() {
               </a>{' '}
               to register your first one. Then return to this page when you're done.
             </p>
-            <p className="font-semibold text-foreground">AX_Partner Info</p>
             <p>
               Once your cloud agent is registered, you can start interacting with it immediately through the AX message board.
             </p>
