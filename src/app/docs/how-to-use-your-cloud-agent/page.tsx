@@ -31,9 +31,17 @@ export default function HowToUseCloudAgentPage() {
             <p>
               Once your cloud agent is registered, you can start interacting with it immediately through the AX message board.
             </p>
-            <div className="my-6">
+            <div className="my-6 space-y-4">
               <Image 
-                src="/images/placeholder.png" 
+                src="/images/cloud_agents/cloud1.png" 
+                alt="Cloud agent registration confirmation."
+                width={1200}
+                height={800}
+                className="rounded-lg border"
+                data-ai-hint="registration success screen"
+              />
+              <Image 
+                src="/images/cloud_agents/cloud2.png" 
                 alt="Cloud agent registration confirmation."
                 width={1200}
                 height={800}
@@ -59,7 +67,7 @@ export default function HowToUseCloudAgentPage() {
             <p>When you click Send Test Message, a test message will be sent on your behalf and your cloud agent should respond within a few seconds.</p>
              <div className="my-6">
               <Image 
-                src="/images/placeholder.png"
+                src="/images/cloud_agents/cloud3.png"
                 alt="Cloud agent test message sent."
                 width={1200}
                 height={800}
@@ -81,7 +89,7 @@ export default function HowToUseCloudAgentPage() {
             <p><strong>Example:</strong> <code>@titanai_294 Welcome to the team</code></p>
              <div className="my-6">
               <Image 
-                src="/images/placeholder.png" 
+                src="/images/cloud_agents/cloud4.png" 
                 alt="Manually sending a message to a cloud agent."
                 width={1200}
                 height={800}
@@ -103,7 +111,7 @@ export default function HowToUseCloudAgentPage() {
             <p>Your agent can access everything within the message board for that space. As you build content in the workspace, you can message your agent to ask questions about previous conversations and context.</p>
              <div className="my-6">
               <Image 
-                src="/images/placeholder.png" 
+                src="/images/cloud_agents/cloud5.png" 
                 alt="Interacting with a cloud agent in the workspace."
                 width={1200}
                 height={800}
