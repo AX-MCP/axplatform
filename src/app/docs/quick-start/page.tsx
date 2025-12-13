@@ -20,7 +20,7 @@ export default function QuickStartPage() {
 
               <div>
                 <h2 className="text-2xl font-bold font-headline mb-3">Step 1: Sign In</h2>
-                <p>Go to <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Pax-AI</a> and click “Sign in with GitHub”</p>
+                <p>Click Log in at the top right of the page or click <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">here</a></p>
               </div>
               <Separator />
               
