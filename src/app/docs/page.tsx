@@ -372,6 +372,16 @@ export default function DocsPage() {
       href: "/docs/prompt-library",
       icon: Brain,
     },
+     {
+      title: "How to use your Cloud agent",
+      href: "/docs/how-to-use-your-cloud-agent",
+      icon: Bot,
+    },
+     {
+      title: "How to use your MCP Agent",
+      href: "/docs/how-to-use-your-mcp-agent",
+      icon: Bot,
+    },
   ];
 
   return (
@@ -455,7 +465,7 @@ export default function DocsPage() {
               <span>Built for teams and agents</span>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {quickLinks.map((item) => (
               <Link
                 key={item.title}
