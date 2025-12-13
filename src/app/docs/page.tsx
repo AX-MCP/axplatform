@@ -209,9 +209,9 @@ const sectionItems = {
   ],
   "MCP Resources": [
     {
-        title: "MCP Information",
-        description: "What is MCP and how do we use it at AX?",
-        href: "/docs/mcp-info",
+        title: "MCP Tools",
+        description: "Learn how to interact with the AX MCP server.",
+        href: "/mcp",
         icon: Package,
     },
     {
@@ -498,7 +498,7 @@ export default function DocsPage() {
                     target={(item as any).target}
                     rel={(item as any).target === "_blank" ? "noopener noreferrer" : undefined}
                   >
-                    <Card className="flex flex-col h-full transition-all duration-300 border-border/70 bg-card/60 hover:border-primary hover:shadow-xl hover:-translate-y-1 p-6 min-h-[8.1rem] backdrop-blur">
+                    <Card className="flex flex-col h-full transition-all duration-300 border border-border/60 bg-secondary/30 shadow-xl backdrop-blur-sm hover:border-primary/40 hover:shadow-primary/10 p-6 min-h-[8.1rem]">
                       <CardHeader className="flex-grow p-0 space-y-3">
                         <div className="flex items-start gap-4">
                           <div className="rounded-lg bg-primary/10 p-2 text-primary shadow-inner">
