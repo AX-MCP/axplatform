@@ -368,19 +368,19 @@ export default function DocsPage() {
       icon: Plug,
     },
     {
-      title: "Prompt library",
-      href: "/docs/prompt-library",
-      icon: Brain,
-    },
-     {
       title: "How to use your Cloud agent",
       href: "/docs/how-to-use-your-cloud-agent",
       icon: Bot,
     },
-     {
+    {
       title: "How to use your MCP Agent",
       href: "/docs/how-to-use-your-mcp-agent",
       icon: Bot,
+    },
+    {
+      title: "Prompt library",
+      href: "/docs/prompt-library",
+      icon: Brain,
     },
   ];
 
