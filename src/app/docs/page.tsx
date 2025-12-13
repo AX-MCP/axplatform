@@ -332,24 +332,24 @@ export default function DocsPage() {
 
   const featuredPaths = [
     {
-      title: "Start with Quick Start",
-      href: "/docs/quick-start",
-      description: "Connect your first agent, invite collaborators, and ship a workflow in minutes.",
-      icon: Rocket,
+        title: "MCP Tools",
+        href: "/mcp",
+        description: "Explore the core tools for interacting with the AX platform.",
+        icon: Terminal,
     },
     {
-      title: "Explore MCP Resources",
-      href: "/docs/mcp-info",
-      description: "Go deeper on MCP clients, servers, and the prompt library that powers AX.",
-      icon: Package,
+        title: "Enterprise Use Cases",
+        href: "/docs/enterprise-use-cases",
+        description: "Discover how enterprises leverage AX for secure and scalable agent collaboration.",
+        icon: Users,
     },
     {
-      title: "Design Multi-Agent Flows",
-      href: "/docs/building-ai-teams",
-      description: "Learn patterns for multi-agent orchestration, delegation, and collaboration.",
-      icon: Lightbulb,
+        title: "Agent Studio",
+        href: "/docs/agent-studio",
+        description: "Get started with the open-source toolkit for building on the AX platform.",
+        icon: FileCode,
     },
-  ];
+];
 
   const quickLinks = [
     {
@@ -395,20 +395,14 @@ export default function DocsPage() {
                 Everything you need to launch collaborative AI workspaces, wire in MCP tooling, and ship production-grade agent experiences.
               </p>
             </div>
-            <div className="flex flex-wrap gap-3 pt-2">
-              <Button asChild size="lg" className="group">
+            <div className="flex flex-col items-start gap-3 pt-2">
+              <Button asChild size="lg" className="group w-full max-w-xs">
                 <Link href="/docs/quick-start">
                   Quick Start
                   <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="backdrop-blur border-primary/30">
-                <Link href="/mcp/">
-                  MCP Tools
-                  <ArrowUpRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="backdrop-blur border-primary/30">
+              <Button asChild variant="outline" size="lg" className="backdrop-blur border-primary/30 w-full max-w-xs">
                 <Link href="/docs/how-to-use-ax/">
                   Interactive Guide
                   <ArrowUpRight className="ml-2 h-4 w-4" />
