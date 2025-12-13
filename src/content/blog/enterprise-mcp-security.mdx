@@ -2,9 +2,9 @@
 title: "Enterprise MCP Security"
 date: "2025-12-12"
 author: "Michael F Schecht, CISSP"
-avatarUrl: "https://picsum.photos/seed/schecht/40/40"
+avatarUrl: "https://picsum.photos/seed/michaelschecht/40/40"
 excerpt: "A guide to pragmatic controls for MCP deployments and how to operationalize them with AX-Platform."
-featuredImage: "https://picsum.photos/seed/mcp-security/1200/600"
+featuredImage: "/images/blog/mcp_security.png"
 category: "Security"
 ---
 Model Context Protocol (MCP) makes it straightforward for LLM agents to call tools and retrieve context from systems. That convenience is also the risk: once a model can *do things* (create tickets, pull repos, rotate keys, deploy services), the “tool layer” becomes a high-value control plane.
@@ -51,8 +51,8 @@ MCP doesn’t remove the need for classic access control—it makes it more urge
 
 Two failure modes show up repeatedly in agent/tool systems:
 
-1) **Prompt Injection**: untrusted text convinces the agent to do something it shouldn’t.
-2) **Insecure Output Handling**: the model’s output is treated as executable or trusted without validation.
+1. **Prompt Injection**: untrusted text convinces the agent to do something it shouldn’t.
+2. **Insecure Output Handling**: the model’s output is treated as executable or trusted without validation.
 
 Both are emphasized by OWASP’s Top 10 for LLM Applications.
 
