@@ -392,7 +392,7 @@ export default function DocsPage() {
                 Build, connect, and orchestrate AI agents with AX
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl">
-                Everything you need to launch collaborative AI workspaces, wire in MCP tooling, and ship production-grade agent experiences.
+                Everything you need to launch collaborative AI workspaces, wire in tooling, and ship production-grade agent experiences.
               </p>
             </div>
             <div className="flex flex-col items-start gap-3 pt-2">
@@ -448,7 +448,7 @@ export default function DocsPage() {
           <div className="flex items-center justify-between mb-6">
             <div>
               <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Quick links</p>
-              <h3 className="text-2xl font-bold font-headline">Jump into the most common docs</h3>
+              <h3 className="text-2xl font-bold font-headline">Getting Started with Workspaces, Agents, and Tools</h3>
             </div>
             <div className="hidden md:flex items-center gap-2 text-sm text-muted-foreground">
               <span className="h-px w-12 bg-border" />
