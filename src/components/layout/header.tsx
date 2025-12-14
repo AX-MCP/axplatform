@@ -72,6 +72,9 @@ const Header = () => {
           <Link href="/docs" className="transition-colors hover:text-foreground/80">
             Docs
           </Link>
+          <Link href="/blog" className="transition-colors hover:text-foreground/80">
+            Blog
+          </Link>
           <Link href="/investors" className="transition-colors hover:text-foreground/80">
             Investors
           </Link>
@@ -130,6 +133,13 @@ const Header = () => {
                           className="text-foreground hover:text-foreground/80"
                         >
                           Docs
+                        </Link>
+                        <Link
+                          href="/blog"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-foreground hover:text-foreground/80"
+                        >
+                          Blog
                         </Link>
                         <Link
                           href="/investors"
