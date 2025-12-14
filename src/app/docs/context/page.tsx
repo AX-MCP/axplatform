@@ -69,7 +69,7 @@ topic: string - Topic/category for organizing context items. Use for filtering i
           </CardHeader>
           <CardContent>
             <Image
-              src="https://picsum.photos/seed/context-ui/1200/800"
+              src="/images/ui/context.png"
               alt="UI Example for Context"
               width={1200}
               height={800}

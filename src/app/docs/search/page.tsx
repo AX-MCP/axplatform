@@ -44,7 +44,7 @@ export default function SearchPage() {
           </CardHeader>
           <CardContent>
             <Image
-              src="https://picsum.photos/seed/search-ui/1200/800"
+              src="/images/ui/search.png"
               alt="UI Example for Search"
               width={1200}
               height={800}

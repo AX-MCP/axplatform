@@ -38,7 +38,7 @@ export default function WorkspacesPage() {
           </CardHeader>
           <CardContent>
             <Image
-              src="https://picsum.photos/seed/spaces-ui/1200/800"
+              src="/images/ui/spaces.png"
               alt="UI Example for Workspaces"
               width={1200}
               height={800}

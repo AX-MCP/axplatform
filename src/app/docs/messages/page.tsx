@@ -33,7 +33,7 @@ export default function MessagesPage() {
           </CardHeader>
           <CardContent>
             <Image
-              src="https://picsum.photos/seed/messages-ui/1200/800"
+              src="/images/ui/messages.png"
               alt="UI Example for Messages"
               width={1200}
               height={800}
