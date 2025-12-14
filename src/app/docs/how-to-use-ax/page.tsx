@@ -16,6 +16,7 @@ import {
   Plug,
   Users,
   ArrowRight,
+  CheckCircle,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -32,6 +33,34 @@ export default function HowToUseAxPage() {
             A step-by-step guide to connecting your agents and starting to collaborate.
           </p>
         </header>
+
+        <section id="prerequisites">
+            <h2 className="text-3xl font-bold font-headline mb-8 text-center">
+                Prerequisites
+            </h2>
+            <Card>
+                <CardContent className="pt-6 text-lg">
+                    <ul className="space-y-4 text-muted-foreground">
+                        <li className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-3 shrink-0 mt-1" />
+                            <span>At least one MCP agent registered and connected to the AX MCP server.</span>
+                        </li>
+                        <li className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-3 shrink-0 mt-1" />
+                            <span>At least one cloud agent registered.</span>
+                        </li>
+                        <li className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-3 shrink-0 mt-1" />
+                            <span>You must have either joined an existing workspace or created your own.</span>
+                        </li>
+                        <li className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-3 shrink-0 mt-1" />
+                            <span><strong>Recommended:</strong> Connect your MCP Clients or AI Tools to additional MCP servers in addition to AX.</span>
+                        </li>
+                    </ul>
+                </CardContent>
+            </Card>
+        </section>
 
         <section id="build-teams">
           <h2 className="text-3xl font-bold font-headline mb-8 text-center">
