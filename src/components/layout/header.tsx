@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Bot, Menu, ChevronDown, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { HeaderSearch } from "@/components/header-search";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,6 +18,7 @@ const navigationItems = {
   Resources: [
     { name: "Blog", href: "/blog" },
     { name: "Demos", href: "/demos" },
+    { name: "Pricing", href: "/pricing" },
     { name: "FAQ", href: "/faq" },
     { name: "MCP", href: "/mcp" },
   ],
@@ -28,9 +30,9 @@ const navigationItems = {
 };
 
 const DiscordIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg {...props} fill="currentColor" viewBox="0 0 24 24">
-        <path d="M20.317 4.36981C18.7915 3.72559 17.1825 3.28784 15.5245 3.09381C15.4385 3.33381 15.3465 3.59781 15.2545 3.86181C13.5905 3.54381 11.9645 3.54381 10.3345 3.86181C10.2425 3.59781 10.1505 3.33381 10.0645 3.09381C8.39953 3.28784 6.79153 3.72559 5.26653 4.36981C3.16453 7.03581 2.47653 9.68781 2.78253 12.3218C4.15653 13.4358 5.48053 14.2858 6.76253 14.9558C6.58353 15.2258 6.40953 15.4958 6.23553 15.7598C5.55153 15.5438 4.88753 15.2558 4.25353 14.8898C4.25353 14.8898 4.24753 14.8838 4.24153 14.8778C3.99153 14.6558 3.80153 14.3858 3.67053 14.0738C3.67053 14.0678 3.66453 14.0618 3.65853 14.0558C2.52253 11.9738 2.37853 9.94581 2.75853 7.91781C3.15053 5.82381 4.37053 4.00581 6.13653 2.64981C6.29253 2.52981 6.47153 2.45181 6.64953 2.45181C6.79953 2.45181 6.94953 2.49381 7.08053 2.57181C7.42053 2.77581 7.55053 3.19581 7.34053 3.53181C5.78653 4.67181 4.81653 6.13581 4.37653 7.72581C4.37653 7.72581 4.37653 7.73181 4.37053 7.73781C5.23053 7.03581 6.15453 6.42981 7.13253 5.91981C7.29453 6.18981 7.45653 6.45381 7.61253 6.71181C9.00653 6.13581 10.4645 5.79381 11.9645 5.75181C13.4645 5.79381 14.9225 6.13581 16.3165 6.71181C16.4725 6.45381 16.6345 6.18981 16.7965 5.91981C17.7745 6.42981 18.6985 7.03581 19.5585 7.73781C19.5585 7.73781 19.5585 7.73181 19.5525 7.72581C19.1125 6.13581 18.1425 4.67181 16.5885 3.53181C16.3785 3.19581 16.5085 2.77581 16.8485 2.57181C17.1885 2.36781 17.6085 2.49981 17.8125 2.83581C19.5785 4.00581 20.7985 5.82381 21.1905 7.91781C21.5765 9.94581 21.4265 11.9738 20.2905 14.0558C20.2905 14.0618 20.2845 14.0678 20.2785 14.0738C20.1475 14.3858 19.9575 14.6558 19.7075 14.8778C19.7015 14.8838 19.6955 14.8898 19.6955 14.8898C19.0615 15.2558 18.3975 15.5438 17.7135 15.7598C17.5395 15.4958 17.3655 15.2258 17.1865 14.9558C18.4685 14.2858 19.7925 13.4358 21.1665 12.3218C21.4905 9.53781 20.9145 6.91581 19.5585 4.71981L20.317 4.36981ZM8.34453 12.8018C7.45053 12.8018 6.72453 12.0038 6.72453 11.0258C6.72453 10.0478 7.45653 9.24981 8.34453 9.24981C9.23253 9.24981 9.95853 10.0478 9.95253 11.0258C9.95253 12.0038 9.23253 12.8018 8.34453 12.8018ZM15.5845 12.8018C14.6905 12.8018 13.9645 12.0038 13.9645 11.0258C13.9645 10.0478 14.6965 9.24981 15.5845 9.24981C16.4725 9.24981 17.1985 10.0478 17.1925 11.0258C17.1925 12.0038 16.4725 12.8018 15.5845 12.8018Z"/>
-    </svg>
+  <svg {...props} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M20.317 4.36981C18.7915 3.72559 17.1825 3.28784 15.5245 3.09381C15.4385 3.33381 15.3465 3.59781 15.2545 3.86181C13.5905 3.54381 11.9645 3.54381 10.3345 3.86181C10.2425 3.59781 10.1505 3.33381 10.0645 3.09381C8.39953 3.28784 6.79153 3.72559 5.26653 4.36981C3.16453 7.03581 2.47653 9.68781 2.78253 12.3218C4.15653 13.4358 5.48053 14.2858 6.76253 14.9558C6.58353 15.2258 6.40953 15.4958 6.23553 15.7598C5.55153 15.5438 4.88753 15.2558 4.25353 14.8898C4.25353 14.8898 4.24753 14.8838 4.24153 14.8778C3.99153 14.6558 3.80153 14.3858 3.67053 14.0738C3.67053 14.0678 3.66453 14.0618 3.65853 14.0558C2.52253 11.9738 2.37853 9.94581 2.75853 7.91781C3.15053 5.82381 4.37053 4.00581 6.13653 2.64981C6.29253 2.52981 6.47153 2.45181 6.64953 2.45181C6.79953 2.45181 6.94953 2.49381 7.08053 2.57181C7.42053 2.77581 7.55053 3.19581 7.34053 3.53181C5.78653 4.67181 4.81653 6.13581 4.37653 7.72581C4.37653 7.72581 4.37653 7.73181 4.37053 7.73781C5.23053 7.03581 6.15453 6.42981 7.13253 5.91981C7.29453 6.18981 7.45653 6.45381 7.61253 6.71181C9.00653 6.13581 10.4645 5.79381 11.9645 5.75181C13.4645 5.79381 14.9225 6.13581 16.3165 6.71181C16.4725 6.45381 16.6345 6.18981 16.7965 5.91981C17.7745 6.42981 18.6985 7.03581 19.5585 7.73781C19.5585 7.73781 19.5585 7.73181 19.5525 7.72581C19.1125 6.13581 18.1425 4.67181 16.5885 3.53181C16.3785 3.19581 16.5085 2.77581 16.8485 2.57181C17.1885 2.36781 17.6085 2.49981 17.8125 2.83581C19.5785 4.00581 20.7985 5.82381 21.1905 7.91781C21.5765 9.94581 21.4265 11.9738 20.2905 14.0558C20.2905 14.0618 20.2845 14.0678 20.2785 14.0738C20.1475 14.3858 19.9575 14.6558 19.7075 14.8778C19.7015 14.8838 19.6955 14.8898 19.6955 14.8898C19.0615 15.2558 18.3975 15.5438 17.7135 15.7598C17.5395 15.4958 17.3655 15.2258 17.1865 14.9558C18.4685 14.2858 19.7925 13.4358 21.1665 12.3218C21.4905 9.53781 20.9145 6.91581 19.5585 4.71981L20.317 4.36981ZM8.34453 12.8018C7.45053 12.8018 6.72453 12.0038 6.72453 11.0258C6.72453 10.0478 7.45653 9.24981 8.34453 9.24981C9.23253 9.24981 9.95853 10.0478 9.95253 11.0258C9.95253 12.0038 9.23253 12.8018 8.34453 12.8018ZM15.5845 12.8018C14.6905 12.8018 13.9645 12.0038 13.9645 11.0258C13.9645 10.0478 14.6965 9.24981 15.5845 9.24981C16.4725 9.24981 17.1985 10.0478 17.1925 11.0258C17.1925 12.0038 16.4725 12.8018 15.5845 12.8018Z" />
+  </svg>
 );
 
 
@@ -46,8 +48,8 @@ const Header = () => {
             <span className="font-bold font-headline text-lg">AX</span>
           </Link>
         </div>
-        
-        <nav className="hidden md:flex flex-1 items-center space-x-6 text-sm font-medium">
+
+        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {Object.entries(navigationItems).map(([title, items]) => (
             <DropdownMenu key={title}>
               <DropdownMenuTrigger className="flex items-center transition-colors hover:text-foreground/80 focus:outline-none data-[state=open]:text-foreground/80">
@@ -66,9 +68,7 @@ const Header = () => {
           <Link href="/about" className="transition-colors hover:text-foreground/80">
             About
           </Link>
-          <Link href="/pricing" className="transition-colors hover:text-foreground/80">
-            Pricing
-          </Link>
+
           <Link href="/docs" className="transition-colors hover:text-foreground/80">
             Docs
           </Link>
@@ -79,8 +79,12 @@ const Header = () => {
             Investors
           </Link>
         </nav>
-          
-        <div className="flex flex-1 items-center justify-end gap-2">
+
+        <div className="flex-1 hidden md:flex items-center justify-center px-4">
+          <HeaderSearch className="w-56" />
+        </div>
+
+        <div className="flex items-center justify-end gap-2 ml-auto">
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
@@ -97,58 +101,52 @@ const Header = () => {
                   </Link>
                   <div className="flex flex-col space-y-6">
                     {Object.entries(navigationItems).map(([title, items]) => (
-                       <div key={title} className="flex flex-col space-y-2">
-                          <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">{title}</h4>
-                          {items.map((item) => (
-                            <Link
-                              key={item.name}
-                              href={item.href}
-                              onClick={() => setIsMobileMenuOpen(false)}
-                              className="text-foreground hover:text-foreground/80"
-                            >
-                              {item.name}
-                            </Link>
-                          ))}
-                        </div>
-                    ))}
-                     <div className="flex flex-col space-y-2">
-                        <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">More</h4>
-                         <Link
-                          href="/about"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-foreground hover:text-foreground/80"
-                        >
-                          About
-                        </Link>
-                         <Link
-                          href="/pricing"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-foreground hover:text-foreground/80"
-                        >
-                          Pricing
-                        </Link>
-                        <Link
-                          href="/docs"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-foreground hover:text-foreground/80"
-                        >
-                          Docs
-                        </Link>
-                        <Link
-                          href="/blog"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-foreground hover:text-foreground/80"
-                        >
-                          Blog
-                        </Link>
-                        <Link
-                          href="/investors"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-foreground hover:text-foreground/80"
-                        >
-                          Investors
-                        </Link>
+                      <div key={title} className="flex flex-col space-y-2">
+                        <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">{title}</h4>
+                        {items.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-foreground hover:text-foreground/80"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
                       </div>
+                    ))}
+                    <div className="flex flex-col space-y-2">
+                      <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">More</h4>
+                      <Link
+                        href="/about"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-foreground hover:text-foreground/80"
+                      >
+                        About
+                      </Link>
+
+                      <Link
+                        href="/docs"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-foreground hover:text-foreground/80"
+                      >
+                        Docs
+                      </Link>
+                      <Link
+                        href="/blog"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-foreground hover:text-foreground/80"
+                      >
+                        Blog
+                      </Link>
+                      <Link
+                        href="/investors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-foreground hover:text-foreground/80"
+                      >
+                        Investors
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </SheetContent>
@@ -164,8 +162,8 @@ const Header = () => {
             </Button>
             <Button asChild className="h-9 px-4 bg-secondary hover:bg-secondary/80 text-blue-500">
               <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium">
-                  <Github className="h-5 w-5" />
-                  <span>GitHub</span>
+                <Github className="h-5 w-5" />
+                <span>GitHub</span>
               </Link>
             </Button>
             <Button asChild size="lg" className="h-9 w-[10rem] bg-blue-600 hover:bg-blue-700 text-white">
