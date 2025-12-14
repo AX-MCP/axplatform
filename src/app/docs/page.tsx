@@ -37,7 +37,7 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
-import { sections as allSectionsData } from './layout';
+import { sections as allSectionsData, useDocsSearch } from './layout';
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -328,7 +328,26 @@ const allDocsSections = allSectionsData
 
 
 export default function DocsPage() {
-  const sectionsToRender = allDocsSections;
+  const { searchQuery } = useDocsSearch();
+
+  const filteredSections = React.useMemo(() => {
+    if (!searchQuery) {
+      return allDocsSections;
+    }
+    return allDocsSections
+      .map(section => {
+        const filteredItems = section.items.filter(
+          item =>
+            item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.description.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        return { ...section, items: filteredItems };
+      })
+      .filter(section => section.items.length > 0);
+  }, [searchQuery]);
+
+
+  const sectionsToRender = filteredSections;
 
   const featuredPaths = [
     {

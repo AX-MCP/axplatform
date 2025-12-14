@@ -17,6 +17,7 @@ import {
   SidebarInput,
 } from "@/components/ui/sidebar";
 import { Bot, Compass, Rocket, Settings, Plug, Brain, Lightbulb, BookCopy, Search, Wrench, Package, Terminal, MousePointerClick, Database, UserSquare } from "lucide-react";
+import React, { createContext, useContext, useState } from "react";
 
 export const sections = [
   {
@@ -61,51 +62,75 @@ export const sections = [
   },
 ];
 
+interface DocsSearchContextType {
+  searchQuery: string;
+  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const DocsSearchContext = createContext<DocsSearchContextType | undefined>(undefined);
+
+export const useDocsSearch = () => {
+  const context = useContext(DocsSearchContext);
+  if (!context) {
+    throw new Error("useDocsSearch must be used within a DocsSearchProvider");
+  }
+  return context;
+};
+
+
 export default function DocsLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+  const [searchQuery, setSearchQuery] = useState('');
 
   return (
-    <SidebarProvider>
-      <Sidebar>
-        <SidebarHeader className="h-14 justify-start items-center p-4">
-           <Link href="/" className="flex items-center space-x-2">
-            <Bot className="h-8 w-8 text-accent" />
-            <span className="font-bold font-headline text-xl group-data-[collapsible=icon]:hidden">AX</span>
-          </Link>
-        </SidebarHeader>
-        <SidebarContent className="mt-8">
-          <div className="px-4 mb-4 relative group-data-[collapsible=icon]:hidden">
-            <Search className="absolute left-6 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-            <SidebarInput placeholder="Search..." className="pl-10 h-12" />
-          </div>
-          <SidebarMenu className="px-4">
-            {sections.map((section) => (
-              <SidebarMenuItem key={section.category} className="border-b border-sidebar-border last:border-b-0">
-                <SidebarMenuButton
-                  asChild
-                  isActive={pathname.startsWith(section.href)}
-                  tooltip={section.category}
-                  className="h-16 justify-start"
-                  size="lg"
-                >
-                  <Link href={section.href}>
-                    <section.icon className="h-6 w-6" />
-                    <span className="text-base">{section.category}</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            ))}
-          </SidebarMenu>
-        </SidebarContent>
-        <SidebarFooter>
-          <SidebarTrigger />
-        </SidebarFooter>
-      </Sidebar>
-      <SidebarInset>{children}</SidebarInset>
-    </SidebarProvider>
+    <DocsSearchContext.Provider value={{ searchQuery, setSearchQuery }}>
+      <SidebarProvider>
+        <Sidebar>
+          <SidebarHeader className="h-14 justify-start items-center p-4">
+            <Link href="/" className="flex items-center space-x-2">
+              <Bot className="h-8 w-8 text-accent" />
+              <span className="font-bold font-headline text-xl group-data-[collapsible=icon]:hidden">AX</span>
+            </Link>
+          </SidebarHeader>
+          <SidebarContent className="mt-8">
+            <div className="px-4 mb-4 relative group-data-[collapsible=icon]:hidden">
+              <Search className="absolute left-6 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <SidebarInput 
+                placeholder="Search..." 
+                className="pl-10 h-12"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+            <SidebarMenu className="px-4">
+              {sections.map((section) => (
+                <SidebarMenuItem key={section.category} className="border-b border-sidebar-border last:border-b-0">
+                  <SidebarMenuButton
+                    asChild
+                    isActive={pathname.startsWith(section.href)}
+                    tooltip={section.category}
+                    className="h-16 justify-start"
+                    size="lg"
+                  >
+                    <Link href={section.href}>
+                      <section.icon className="h-6 w-6" />
+                      <span className="text-base">{section.category}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarContent>
+          <SidebarFooter>
+            <SidebarTrigger />
+          </SidebarFooter>
+        </Sidebar>
+        <SidebarInset>{children}</SidebarInset>
+      </SidebarProvider>
+    </DocsSearchContext.Provider>
   );
 }
