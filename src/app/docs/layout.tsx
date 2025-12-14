@@ -111,7 +111,7 @@ export default function DocsLayout({
                       side: "right",
                       align: "center",
                     }}
-                    className="h-16 justify-start"
+                    className="h-16 justify-start group-data-[collapsible=icon]:justify-center"
                     size="lg"
                   >
                     <Link href={section.href}>
