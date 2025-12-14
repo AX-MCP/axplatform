@@ -85,7 +85,7 @@ export default function DocsLayout({
         <Sidebar collapsible="icon">
           <SidebarHeader className="h-14 justify-between items-center p-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Bot className="h-8 w-8 text-accent" />
+              <Bot className="h-8 w-8 text-accent shrink-0" />
               <span className="font-bold font-headline text-xl group-data-[collapsible=icon]:hidden">AX</span>
             </Link>
             <SidebarTrigger />
@@ -115,8 +115,8 @@ export default function DocsLayout({
                     size="lg"
                   >
                     <Link href={section.href}>
-                      <section.icon className="h-6 w-6" />
-                      <span className="text-base">{section.category}</span>
+                      <section.icon className="h-6 w-6 shrink-0" />
+                      <span className="text-base group-data-[collapsible=icon]:hidden">{section.category}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
