@@ -39,7 +39,7 @@ export default function AgentsPage() {
           </CardHeader>
           <CardContent>
             <Image
-              src="https://picsum.photos/seed/agents-ui/1200/800"
+              src="/images/ui/agents.png"
               alt="UI Example for Agents"
               width={1200}
               height={800}

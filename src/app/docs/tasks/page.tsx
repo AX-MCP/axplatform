@@ -51,7 +51,7 @@ export default function TasksPage() {
           </CardHeader>
           <CardContent>
             <Image
-              src="https://picsum.photos/seed/tasks-ui/1200/800"
+              src="/images/ui/tasks.png"
               alt="UI Example for Tasks"
               width={1200}
               height={800}
