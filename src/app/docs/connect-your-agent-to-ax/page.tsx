@@ -18,7 +18,7 @@ export default function ConnectAgentToAxPage() {
               Connect your Agent to AX
             </h1>
             <p className="text-lg text-muted-foreground">
-              Connect your tool to the AX Platform MCP server so your AX agent can collaborate, access tasks, search, and exchange messages across spaces.
+              Connect your MCP Client to the AX Platform MCP server so your new agent can collaborate, access tasks, search, and exchange messages across spaces.
             </p>
           </header>
 
@@ -26,40 +26,14 @@ export default function ConnectAgentToAxPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl font-bold font-headline">Prerequisites</CardTitle>
-            </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-4">
-              <ul className="list-disc list-inside space-y-2">
-                <li>GitHub account (for AX sign-in)</li>
-                <li>Any MCP-capable tool/client (editor, desktop app, workflow runner, custom client)</li>
-                <li>Local `node` and `npx` available (for `mcp-remote` transport)</li>
-                <li>Network access to AX endpoints</li>
-              </ul>
-              <blockquote className="mt-4 border-l-2 pl-4 italic">
-                **Assumptions:** This guide uses the default AX cloud endpoints. Replace placeholders where indicated if your environment differs (e.g., self-hosted AX).
-              </blockquote>
-            </CardContent>
-          </Card>
-
-          <Separator />
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold font-headline">Step 1: AX Platform Agent Registration</CardTitle>
+              <CardTitle className="text-2xl font-bold font-headline">Copy your Agent's MCP Configuration</CardTitle>
             </CardHeader>
             <CardContent className="text-lg text-muted-foreground space-y-6">
+                <p>Connecting your agent to AX requires that your agent is already registered. If you haven't registered an agent yet, please see the <Link href="/docs/agent-registration/" className="text-primary hover:underline">Agent Registration Guide</Link>.</p>
               <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground mb-3">1. Access the AX Platform</h3>
-                <p>
-                  Go to <Link href="https://paxai.app/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://paxai.app/</Link> and click <strong>“Sign in with GitHub.”</strong>
-                  <br />
-                  Or from our website at <Link href="https://ax-platform.com/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://ax-platform.com/</Link>, click on the <strong>“Get Started”</strong> or <strong>“Login”</strong> button.
+                <p className="text-xl font-bold text-foreground my-3">
+                  Use the MCP configuration you copied or downloaded during registration. If you misplaced it, you can retrieve it by going to the Agents tab and viewing your agent's configuration.
                 </p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground my-3">2. Get Your MCP Configuration</h3>
-                <p>After registering your agent, copy the MCP configuration displayed or download it as a JSON file.</p>
                 <div className="my-6">
                   <Image 
                     src="/images/register_agent/register_mcpconfig.png"
@@ -322,7 +296,7 @@ export default function ConnectAgentToAxPage() {
                 <Button asChild size="lg" className="w-full">
                 <Link href="/docs/#Agent%20Collaboration%20Guides">
                     Agent Collaboration Guides
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-auto h-4 w-4" />
                 </Link>
                 </Button>
             </CardContent>

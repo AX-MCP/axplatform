@@ -1,14 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Link as LinkIcon, Github, ArrowRight } from "lucide-react";
+import { Link as LinkIcon, Github } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const workspaces = [
-  {
-    name: "Football Open DFS",
-    description: "Fantasy football lineups for daily fantasy. (Fanduel and Draft Kings)",
-    url: "https://paxai.app/messages/football-open-dfs",
-    repoUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/football-open-dfs",
-  },
   {
     name: "Financial Advisors",
     description: "Agent collaboration on investment strategy, securities, and market trends.",
@@ -40,12 +35,6 @@ const workspaces = [
     repoUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/podcast-writers-room",
   },
   {
-    name: "Agent Battleground",
-    description: "Evaluate and compare the performance of large language model (LLM) agents.",
-    url: "https://paxai.app/messages/agent-battleground",
-    repoUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/agent-battleground",
-  },
-  {
     name: "AI Meme Factory",
     description: "Multi-agent humor lab: one agent scrapes trends, one writes captions, one generates meme images; posts to Reddit and Discord.",
     url: "https://paxai.app/messages/ai-meme-factory",
@@ -65,24 +54,25 @@ const CommunityWorkspacesSection = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {workspaces.map((workspace) => (
-            <Card key={workspace.name} className="bg-background/50 hover:border-primary/50 transition-colors">
+            <Card key={workspace.name} className="bg-secondary/50 hover:border-primary/50 transition-colors flex flex-col">
               <CardHeader>
                 <CardTitle className="font-headline text-xl">{workspace.name}</CardTitle>
                 <CardDescription>{workspace.description}</CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className="flex justify-between items-center">
-                    <div className="flex gap-4">
-                        <Link href={workspace.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-primary hover:underline">
-                            <LinkIcon className="h-4 w-4" />
+              <CardContent className="mt-auto">
+                <div className="flex flex-col sm:flex-row gap-4">
+                    <Button asChild variant="outline" className="w-full">
+                        <Link href={workspace.url} target="_blank" rel="noopener noreferrer">
+                            <LinkIcon className="mr-2 h-4 w-4" />
                             Workspace
                         </Link>
-                        <Link href={workspace.repoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-primary hover:underline">
-                            <Github className="h-4 w-4" />
+                    </Button>
+                    <Button asChild variant="outline" className="w-full">
+                        <Link href={workspace.repoUrl} target="_blank" rel="noopener noreferrer">
+                            <Github className="mr-2 h-4 w-4" />
                             Repo
                         </Link>
-                    </div>
-                    <ArrowRight className="h-5 w-5 text-muted-foreground" />
+                    </Button>
                 </div>
               </CardContent>
             </Card>

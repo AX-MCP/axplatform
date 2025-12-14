@@ -48,9 +48,7 @@ export default function CustomMcpClientsPage() {
             <div>
               <h3 className="text-xl font-semibold font-headline text-foreground mb-3">1. Access the AX Platform</h3>
               <p>
-                Go to <Link href="https://paxai.app/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://paxai.app/</Link> and click <strong>“Sign in with GitHub.”</strong>
-                <br />
-                Or from our website at <Link href="https://ax-platform.com/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://ax-platform.com/</Link>, click on the <strong>“Get Started”</strong> or <strong>“Login”</strong> button.
+                Click Log in at the top right of the page or click <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">here</a>
               </p>
               <p className="mt-2">If you haven't already joined or created a workspace, follow one of the options below:</p>
               <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
@@ -658,7 +656,6 @@ class ExternalSystemIntegration(AXPlatformClient):
     </div>
   );
 }
-
     
 
     

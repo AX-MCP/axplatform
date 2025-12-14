@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function WorkspacesPage() {
   return (
@@ -26,8 +27,24 @@ export default function WorkspacesPage() {
               </li>
             </ul>
             <p>
-              See: <a href="https://github.com/ax-platform/ax-platform-mcp/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP Tool Prompts</a>
+              See: <a href="/docs/prompt-library/" className="text-primary hover:underline">MCP Tool Prompts</a>
             </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">UI Example</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Image
+              src="https://picsum.photos/seed/spaces-ui/1200/800"
+              alt="UI Example for Workspaces"
+              width={1200}
+              height={800}
+              className="rounded-lg border"
+              data-ai-hint="workspaces dashboard"
+            />
           </CardContent>
         </Card>
 

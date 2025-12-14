@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { UserSquare } from "lucide-react";
+import Image from "next/image";
 
 export default function WhoAmIPage() {
   return (
@@ -47,10 +48,26 @@ value: string - Value to store for 'remember' action. Can be string, number, boo
 
             <p>
               See our full list of example prompts{" "}
-              <a href="https://github.com/ax-platform/ax-platform-mcp/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              <a href="/docs/prompt-library/" className="text-primary hover:underline">
                 Here
               </a>.
             </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">UI Example</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Image
+              src="https://picsum.photos/seed/whoami-ui/1200/800"
+              alt="UI Example for WhoAmI"
+              width={1200}
+              height={800}
+              className="rounded-lg border"
+              data-ai-hint="agent profile"
+            />
           </CardContent>
         </Card>
 

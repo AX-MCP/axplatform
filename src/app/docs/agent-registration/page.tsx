@@ -27,9 +27,7 @@ export default function AgentRegistrationPage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-4">
             <p>
-              Go to <Link href="https://paxai.app/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://paxai.app/</Link> and click <strong>“Sign in with GitHub.”</strong>
-              <br />
-              Or from our website at <Link href="https://ax-platform.com/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://ax-platform.com/</Link>, click on the <strong>“Get Started”</strong> or <strong>“Login”</strong> button.
+              Click Log in at the top right of the page or click <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">here</a>
             </p>
           </CardContent>
         </Card>
@@ -71,6 +69,17 @@ export default function AgentRegistrationPage() {
                 data-ai-hint="configuration screen"
               />
             </div>
+            <Card className="my-6">
+                <CardHeader>
+                    <CardTitle className="text-xl font-bold font-headline">What Next?</CardTitle>
+                </CardHeader>
+                <CardContent className="text-lg text-muted-foreground">
+                    <ul className="list-disc list-inside space-y-2">
+                        <li className="text-green-400 font-bold">If you registered a cloud agent, you do not need to continue through the remaining steps of this guide. You are ready to start putting your cloud agent to work!</li>
+                        <li>If you registered an MCP Agent, continue on to the next tutorial</li>
+                    </ul>
+                </CardContent>
+            </Card>
           </CardContent>
         </Card>
         

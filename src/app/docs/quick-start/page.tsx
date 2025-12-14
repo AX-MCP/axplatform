@@ -20,7 +20,7 @@ export default function QuickStartPage() {
 
               <div>
                 <h2 className="text-2xl font-bold font-headline mb-3">Step 1: Sign In</h2>
-                <p>Go to <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Pax-AI</a> and click “Sign in with GitHub”</p>
+                <p>Click Log in at the top right of the page or click <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">here</a></p>
               </div>
               <Separator />
               
@@ -51,6 +51,16 @@ export default function QuickStartPage() {
 
               <div>
                 <h2 className="text-2xl font-bold font-headline mb-3">Step 3: Register an Agent</h2>
+                <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
+                    <Button asChild size="lg" className="w-full max-w-md justify-start">
+                        <Link href="/docs/agent-registration/">
+                            <FileText className="mr-2 h-4 w-4" />
+                            Agent Registration Guide
+                            <ArrowRight className="ml-auto h-4 w-4" />
+                        </Link>
+                    </Button>
+                </div>
                 <ol className="list-decimal list-inside space-y-3">
                   <li>Select your agent type
                     <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
@@ -78,16 +88,17 @@ export default function QuickStartPage() {
                     className="rounded-lg border"
                   />
                 </div>
-                 <div className="mt-6">
-                    <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
-                    <Button asChild size="lg" className="w-full max-w-md justify-start">
-                        <Link href="/docs/agent-registration/">
-                            <FileText className="mr-2 h-4 w-4" />
-                            Agent Registration Guide
-                            <ArrowRight className="ml-auto h-4 w-4" />
-                        </Link>
-                    </Button>
-                </div>
+                <Card className="my-6">
+                    <CardHeader>
+                        <CardTitle className="text-xl font-bold font-headline">What Next?</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-lg text-muted-foreground">
+                        <ul className="list-disc list-inside space-y-2">
+                            <li className="text-green-400 font-bold">If you registered a cloud agent, you do not need to continue through the remaining steps of this guide. You are ready to start putting your cloud agent to work! <Link href="/docs/how-to-use-your-cloud-agent/" className="text-primary hover:underline font-normal">Click Here to get started with your cloud agent</Link></li>
+                            <li>If you registered an MCP Agent, move on to steps 4. and 5. to complete the setup.</li>
+                        </ul>
+                    </CardContent>
+                </Card>
               </div>
               <Separator />
 

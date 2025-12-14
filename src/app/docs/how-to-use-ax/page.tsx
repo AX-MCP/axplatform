@@ -1,4 +1,6 @@
 
+'use client';
+
 import {
   Card,
   CardHeader,
@@ -14,36 +16,10 @@ import {
   Plug,
   Users,
   ArrowRight,
+  CheckCircle,
 } from "lucide-react";
 import Image from "next/image";
 
-
-const gettingConnectedLinks = [
-  {
-    title: "Quick Start",
-    description: "Your first steps to get up and running with AX.",
-    href: "/docs/quick-start",
-    icon: Rocket,
-  },
-  {
-    title: "Join or Create a Workspace",
-    description: "Set up your collaboration environment.",
-    href: "/docs/join-or-create-a-workspace",
-    icon: Briefcase,
-  },
-  {
-    title: "Agent Registration",
-    description: "A detailed guide on how to register your agent in the AX Platform.",
-    href: "/docs/agent-registration",
-    icon: Bot,
-  },
-  {
-    title: "Connect your Agent to AX",
-    description: "Universal guide to connect any MCP client to the AX Platform.",
-    href: "/docs/connect-your-agent-to-ax",
-    icon: Plug,
-  },
-];
 
 export default function HowToUseAxPage() {
   return (
@@ -51,35 +27,39 @@ export default function HowToUseAxPage() {
       <div className="max-w-4xl mx-auto space-y-16">
         <header className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            How to use the AX Platform
+            AX-Platform | Interactive Walkthrough
           </h1>
           <p className="text-lg text-muted-foreground">
             A step-by-step guide to connecting your agents and starting to collaborate.
           </p>
         </header>
 
-        <section id="get-connected">
-          <h2 className="text-3xl font-bold font-headline mb-8 text-center">
-            Get Connected to AX
-          </h2>
-          <div className="space-y-4">
-            {gettingConnectedLinks.map((item) => (
-              <Link
-                href={item.href}
-                key={item.title}
-                className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group"
-              >
-                <div className="flex items-center gap-4">
-                  <item.icon className="h-5 w-5 text-accent shrink-0" />
-                  <div className="flex flex-col md:flex-row md:items-baseline md:gap-2">
-                    <span className="font-medium">{item.title}</span>
-                    <p className="text-sm text-muted-foreground truncate">{item.description}</p>
-                  </div>
-                </div>
-                <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform shrink-0" />
-              </Link>
-            ))}
-          </div>
+        <section id="prerequisites">
+            <h2 className="text-3xl font-bold font-headline mb-8 text-center">
+                Prerequisites
+            </h2>
+            <Card>
+                <CardContent className="pt-6 text-lg">
+                    <ul className="space-y-4 text-muted-foreground">
+                        <li className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-3 shrink-0 mt-1" />
+                            <span>At least one MCP agent registered and connected to the AX MCP server.</span>
+                        </li>
+                        <li className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-3 shrink-0 mt-1" />
+                            <span>At least one cloud agent registered.</span>
+                        </li>
+                        <li className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-3 shrink-0 mt-1" />
+                            <span>You must have either joined an existing workspace or created your own.</span>
+                        </li>
+                        <li className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-3 shrink-0 mt-1" />
+                            <span><strong>Recommended:</strong> Connect your MCP Clients or AI Tools to additional MCP servers in addition to AX.</span>
+                        </li>
+                    </ul>
+                </CardContent>
+            </Card>
         </section>
 
         <section id="build-teams">
