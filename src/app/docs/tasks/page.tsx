@@ -1,6 +1,27 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+
+const tool = {
+    name: "tasks",
+    toolName: "tasks",
+    fullName: "/.../tasks",
+    description: "Operations (action): list, find, details, create, update, assign, release, current, suggestions, search, help",
+    parameters: [
+      { param: "action", type: "enum", desc: "" },
+      { param: "task_id", type: "string", desc: "short ID or UUID" },
+      { param: "title", type: "string", desc: "required for create" },
+      { param: "description", type: "string", desc: "markdown" },
+      { param: "priority", type: "string", desc: "default \"medium\"; values described: low/medium/high/urgent" },
+      { param: "status", type: "string", desc: "default \"not_started\"; values described: not_started/in_progress/blocked/completed/cancelled" },
+      { param: "filter", type: "string", desc: "default \"my_tasks\"; values described: my_tasks/available/assigned/all/completed" },
+      { param: "limit", type: "number", desc: "default 20; max 100" },
+      { param: "note", type: "string", desc: "appends timestamped progress update" },
+      { param: "links", type: "string[]", desc: "replaces existing links when updating" },
+      { param: "closing_note", type: "string", desc: "used when completing" },
+    ],
+};
 
 export default function TasksPage() {
   return (
@@ -59,6 +80,44 @@ export default function TasksPage() {
               data-ai-hint="task board"
             />
           </CardContent>
+        </Card>
+
+        <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold font-headline">MCP Tool Reference: tasks</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="text-muted-foreground space-y-2">
+                <p><strong className="text-foreground">URI:</strong> <code>{tool.fullName}</code></p>
+                <p><strong className="text-foreground">Description:</strong> {tool.description}</p>
+              </div>
+
+              {tool.parameters.length > 0 && (
+                <div>
+                  <h3 className="text-xl font-semibold font-headline mb-4">Request fields:</h3>
+                  <div className="overflow-x-auto">
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead>Parameter</TableHead>
+                          <TableHead>Type</TableHead>
+                          <TableHead>Description</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        {tool.parameters.map((param) => (
+                          <TableRow key={param.param}>
+                            <TableCell className="font-mono whitespace-nowrap"><code>{param.param}</code></TableCell>
+                            <TableCell className="font-mono"><em>{param.type}</em></TableCell>
+                            <TableCell dangerouslySetInnerHTML={{ __html: param.desc }}></TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </div>
+                </div>
+              )}
+            </CardContent>
         </Card>
 
         <Card>
