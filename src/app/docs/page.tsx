@@ -327,8 +327,26 @@ const allDocsSections = allSectionsData
   }));
 
 
-export default function DocsPage() {
-  const sectionsToRender = allDocsSections;
+export default function DocsPage({ searchQuery }: { searchQuery: string }) {
+
+  const filteredSections = React.useMemo(() => {
+    if (!searchQuery) {
+      return allDocsSections;
+    }
+    return allDocsSections
+      .map(section => {
+        const filteredItems = section.items.filter(
+          item =>
+            item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.description.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        return { ...section, items: filteredItems };
+      })
+      .filter(section => section.items.length > 0);
+  }, [searchQuery]);
+
+
+  const sectionsToRender = filteredSections;
 
   const featuredPaths = [
     {
