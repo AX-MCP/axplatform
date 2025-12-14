@@ -82,12 +82,13 @@ export default function DocsLayout({
 
   return (
       <SidebarProvider>
-        <Sidebar>
-          <SidebarHeader className="h-14 justify-start items-center p-4">
+        <Sidebar collapsible="icon">
+          <SidebarHeader className="h-14 justify-between items-center p-4">
             <Link href="/" className="flex items-center space-x-2">
               <Bot className="h-8 w-8 text-accent" />
               <span className="font-bold font-headline text-xl group-data-[collapsible=icon]:hidden">AX</span>
             </Link>
+            <SidebarTrigger />
           </SidebarHeader>
           <SidebarContent className="mt-8">
             <div className="px-4 mb-4 relative group-data-[collapsible=icon]:hidden">
@@ -105,7 +106,11 @@ export default function DocsLayout({
                   <SidebarMenuButton
                     asChild
                     isActive={pathname.startsWith(section.href)}
-                    tooltip={section.category}
+                    tooltip={{
+                      children: section.category,
+                      side: "right",
+                      align: "center",
+                    }}
                     className="h-16 justify-start"
                     size="lg"
                   >
@@ -119,7 +124,7 @@ export default function DocsLayout({
             </SidebarMenu>
           </SidebarContent>
           <SidebarFooter>
-            <SidebarTrigger />
+            {/* The trigger is now in the header */}
           </SidebarFooter>
         </Sidebar>
         <SidebarInset>{childrenWithProps}</SidebarInset>
