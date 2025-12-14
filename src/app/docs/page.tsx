@@ -37,7 +37,7 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
-import { sections as allSectionsData, useDocsSearch } from './layout';
+import { sections as allSectionsData } from './layout';
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -327,8 +327,7 @@ const allDocsSections = allSectionsData
   }));
 
 
-export default function DocsPage() {
-  const { searchQuery } = useDocsSearch();
+export default function DocsPage({ searchQuery }: { searchQuery: string }) {
 
   const filteredSections = React.useMemo(() => {
     if (!searchQuery) {

@@ -17,7 +17,7 @@ import {
   SidebarInput,
 } from "@/components/ui/sidebar";
 import { Bot, Compass, Rocket, Settings, Plug, Brain, Lightbulb, BookCopy, Search, Wrench, Package, Terminal, MousePointerClick, Database, UserSquare } from "lucide-react";
-import React, { createContext, useContext, useState } from "react";
+import React, { useState } from "react";
 
 export const sections = [
   {
@@ -62,21 +62,6 @@ export const sections = [
   },
 ];
 
-interface DocsSearchContextType {
-  searchQuery: string;
-  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
-}
-
-const DocsSearchContext = createContext<DocsSearchContextType | undefined>(undefined);
-
-export const useDocsSearch = () => {
-  const context = useContext(DocsSearchContext);
-  if (!context) {
-    throw new Error("useDocsSearch must be used within a DocsSearchProvider");
-  }
-  return context;
-};
-
 
 export default function DocsLayout({
   children,
@@ -86,8 +71,16 @@ export default function DocsLayout({
   const pathname = usePathname();
   const [searchQuery, setSearchQuery] = useState('');
 
+  // Clone children to pass props
+  const childrenWithProps = React.Children.map(children, child => {
+    if (React.isValidElement(child)) {
+      // @ts-ignore
+      return React.cloneElement(child, { searchQuery });
+    }
+    return child;
+  });
+
   return (
-    <DocsSearchContext.Provider value={{ searchQuery, setSearchQuery }}>
       <SidebarProvider>
         <Sidebar>
           <SidebarHeader className="h-14 justify-start items-center p-4">
@@ -129,8 +122,7 @@ export default function DocsLayout({
             <SidebarTrigger />
           </SidebarFooter>
         </Sidebar>
-        <SidebarInset>{children}</SidebarInset>
+        <SidebarInset>{childrenWithProps}</SidebarInset>
       </SidebarProvider>
-    </DocsSearchContext.Provider>
   );
 }
