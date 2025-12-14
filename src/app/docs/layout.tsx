@@ -81,7 +81,7 @@ export default function DocsLayout({
   });
 
   return (
-      <SidebarProvider>
+      <SidebarProvider defaultOpen={false}>
         <Sidebar collapsible="icon">
           <SidebarHeader className="h-14 justify-between items-center p-4">
             <Link href="/" className="flex items-center space-x-2">
