@@ -322,7 +322,7 @@ export const sectionItems = {
       },
       {
         title: "Agent Studio",
-        description: "aX Agent Studio is the open-source development toolkit for aX Platform.",
+        description: "Open-source dev toolkit for the aX Platform.",
         href: "/docs/agent-studio",
         icon: FileCode,
       },

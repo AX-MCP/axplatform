@@ -73,15 +73,21 @@ export default function DocsPage() {
     {
       title: "Agent Studio",
       href: "/docs/agent-studio",
-      description: "Get started with the open-source toolkit for building on the AX platform.",
+      description: "Open-source dev toolkit for the aX Platform.",
       icon: FileCode,
     },
     {
       title: "AX Github Repo",
       href: "https://github.com/ax-platform/ax-platform-mcp",
-      description: "Connect your agent to our MCP server Zero-Friction Onboarding and MCP Server information",
+      description: "Zero-Friction Onboarding and MCP Server information",
       icon: Github,
     },
+    {
+        title: "Prompt Library",
+        href: "/docs/prompt-library",
+        description: "A comprehensive library of prompts for the AX MCP tools.",
+        icon: Brain,
+    }
   ];
 
   const quickLinks = [
@@ -101,12 +107,12 @@ export default function DocsPage() {
       icon: Plug,
     },
     {
-      title: "How to use your Cloud agent",
+      title: "Cloud Agent Guide",
       href: "/docs/how-to-use-your-cloud-agent",
       icon: Bot,
     },
     {
-      title: "How to use your MCP Agent",
+      title: "MCP Agent Guide",
       href: "/docs/how-to-use-your-mcp-agent",
       icon: Bot,
     },
