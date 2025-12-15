@@ -32,14 +32,6 @@ export default function PromptLibraryPage() {
         </header>
 
         <Card>
-            <CardContent className="pt-6 text-lg text-muted-foreground space-y-4">
-                <blockquote className="border-l-2 pl-4 italic">
-                    <strong>Note on GitHub reference:</strong> You asked me to also reference `https://github.com/ax-platform/ax-platform-mcp`. In this environment I can’t fetch external URLs (web access is disabled), so I couldn’t quote or verify anything from that repo directly. Everything below is based on live tool introspection of the connected AX-Platform MCP toolspace plus standard MCP usage patterns.
-                </blockquote>
-            </CardContent>
-        </Card>
-
-        <Card>
             <CardHeader><CardTitle className="text-2xl font-bold font-headline">How to use this library</CardTitle></CardHeader>
             <CardContent className="text-lg text-muted-foreground space-y-4">
                 <p>Copy/paste a prompt from any section and tweak the bracketed parts.</p>
