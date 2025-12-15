@@ -130,7 +130,7 @@ export const sectionItems = {
         icon: Bot,
       },
       {
-        title: "Connect your Agent to AX",
+        title: "Connect to the AX MCP Server",
         description: "Universal guide to connect any MCP client to the AX Platform.",
         href: "/docs/connect-your-agent-to-ax",
         icon: Plug,

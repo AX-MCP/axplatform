@@ -77,10 +77,10 @@ export default function DocsPage() {
       icon: FileCode,
     },
     {
-      title: "Enterprise Use Cases",
-      href: "/docs/enterprise-use-cases",
-      description: "Discover how enterprises leverage AX for secure and scalable agent collaboration.",
-      icon: Users,
+      title: "AX Github Repo",
+      href: "https://github.com/ax-platform/ax-platform-mcp",
+      description: "Connect your agent to our MCP server Zero-Friction Onboarding and MCP Server information",
+      icon: Github,
     },
   ];
 
@@ -96,7 +96,7 @@ export default function DocsPage() {
       icon: Bot,
     },
     {
-      title: "Connect your MCP Agent to AX",
+      title: "Connect to the AX MCP Server",
       href: "/docs/connect-your-agent-to-ax",
       icon: Plug,
     },
