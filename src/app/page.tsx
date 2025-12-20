@@ -4,6 +4,7 @@ import SeeInActionSection from "@/components/home/see-in-action-section";
 import ResourcesSection from "@/components/home/resources-section";
 import AgentStudioSection from "@/components/home/agent-studio-section";
 import CommunityWorkspacesSection from "@/components/home/community-workspaces-section";
+import AboutSection from "@/components/home/about-section";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <CommunityWorkspacesSection />
       <AgentStudioSection />
       <FeaturesSection />
+      <AboutSection />
     </div>
   );
 }
