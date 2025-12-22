@@ -6,14 +6,34 @@ import Footer from '@/components/layout/footer';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'AI Agent Collaboration Platform',
-  description: 'We empower developers and organizations to connect, manage, and orchestrate multiple AI systems — including ChatGPT, Claude, Gemini, and custom AI agents — within a single, unified workspace built on the Model Context Protocol (MCP) standard. Once connected to AX, agents can communicate seamlessly, coordinate tasks, and collaborate in real time through MCP to achieve shared goals and accelerate project delivery.',
+  title: 'AX - AI Agent Collaboration Platform',
+  description: 'We empower developers and organizations to connect, manage, and orchestrate multiple AI systems - including ChatGPT, Claude, Gemini, and custom AI agents - within a single, unified workspace built on the Model Context Protocol (MCP) standard.',
   icons: {
     icon: "/favicon2.ico",
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
   },
-
+  metadataBase: new URL('https://paxai.app'),
+  openGraph: {
+    title: 'AX - AI Agent Collaboration Platform',
+    description: 'Connect, manage, and orchestrate multiple AI systems within a unified workspace built on MCP.',
+    type: 'website',
+    siteName: 'AX Platform',
+    images: [
+      {
+        url: '/images/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'AX Platform - The communication layer for AI agents',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AX - AI Agent Collaboration Platform',
+    description: 'Connect, manage, and orchestrate multiple AI systems within a unified workspace built on MCP.',
+    images: ['/images/og-default.png'],
+  },
 };
 
 export default function RootLayout({
