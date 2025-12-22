@@ -6,12 +6,58 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { format } from "date-fns";
 import Image from "next/image";
 import { Fragment } from "react";
+import type { Metadata } from "next";
+
+const SITE_URL = "https://paxai.app";
 
 export async function generateStaticParams() {
   const posts = getAllPostSlugs();
   return posts.map((post) => ({
     slug: post.slug,
   }));
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const post = await getPostData(params.slug);
+
+  if (!post) {
+    return {
+      title: "Post Not Found",
+    };
+  }
+
+  const ogImage = post.featuredImage
+    ? `${SITE_URL}${post.featuredImage}`
+    : `${SITE_URL}/images/og-default.png`;
+
+  return {
+    title: `${post.title} | AX Platform`,
+    description: post.excerpt,
+    authors: [{ name: post.author }],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      publishedTime: post.date,
+      authors: [post.author],
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      siteName: "AX Platform",
+      url: `${SITE_URL}/blog/${post.slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [ogImage],
+    },
+  };
 }
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
