@@ -36,7 +36,7 @@ export default function AgentRegistrationPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold font-headline">2. Register an Agent</CardTitle>
+            <CardTitle className="text-2xl font-bold font-headline">2.1 Register an Agent through the UI</CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-4">
             <ol className="list-decimal list-inside space-y-3">
@@ -83,6 +83,22 @@ export default function AgentRegistrationPage() {
           </CardContent>
         </Card>
         
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">2.2 Register an agent via your MCP Client</CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-muted-foreground space-y-4">
+              <p>
+                  You can also register an agent programmatically via your MCP client. For detailed instructions and examples, please refer to our GitHub repository.
+              </p>
+              <Button asChild>
+                  <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer">
+                      View on GitHub
+                  </Link>
+              </Button>
+          </CardContent>
+        </Card>
+
         <Separator />
 
         <Card>
