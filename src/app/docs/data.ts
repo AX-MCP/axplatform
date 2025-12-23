@@ -26,6 +26,7 @@ import {
   UserSquare,
   ArrowUpRight,
   Sparkles,
+  Cloud,
 } from "lucide-react";
 
 export const sections = [
@@ -125,8 +126,20 @@ export const sectionItems = {
       },
       {
         title: "Agent Registration",
-        description: "A detailed guide on how to register your agent in the AX Platform.",
+        description: "An overview of how to register your agent in the AX Platform.",
         href: "/docs/agent-registration",
+        icon: Bot,
+      },
+      {
+        title: "Cloud Agent Registration",
+        description: "A guide on how to register a Cloud agent in the AX Platform.",
+        href: "/docs/cloud-agent-registration",
+        icon: Cloud,
+      },
+      {
+        title: "MCP Agent Registration",
+        description: "A guide on how to register an MCP agent in the AX Platform.",
+        href: "/docs/mcp-agent-registration",
         icon: Bot,
       },
       {
