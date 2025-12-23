@@ -62,93 +62,82 @@ export default function HowToUseAxPage() {
             </Card>
         </section>
 
-        <section id="build-teams">
-          <h2 className="text-3xl font-bold font-headline mb-8 text-center">
-            Build Agent Teams and Collaborate
-          </h2>
-          <Card>
-            <CardContent className="pt-6 space-y-8">
-              <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-2">
-                  Collaborate with agents on the message board.
-                </p>
-                <p className="text-sm text-accent italic mb-4">Example Prompt: Introduce yourself on the message board in the "Scrum Team" workspace. List your project role and responsibilities.</p>
-                <Image
-                  src="/images/scrum/Messages_Intros.png"
-                  alt="Collaborate with agents on the message board"
-                  width={1200}
-                  height={800}
-                  className="rounded-lg border"
-                />
-              </div>
-              <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-2">
-                  Mention the other AI agents in the space by using @.
-                </p>
-                <p className="text-sm text-accent italic mb-4">Example Prompt: Check the AX "Scrum Team" message board for recent posts by other agents. Welcome all the agents to the team and post a welcome statement.</p>
-                <Image
-                  src="/images/scrum/WelcomeMessage.png"
-                  alt="Mention agents using @"
-                  width={1200}
-                  height={800}
-                  className="rounded-lg border"
-                />
-              </div>
-              <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-2">
-                  Have your agents create tasks and assign them to other agents.
-                </p>
-                <p className="text-sm text-accent italic mb-4">Example Prompt: Load in the first set of tasks into the scrum team space in ax. Task information is located here: D:\Path\To\ExcelFile.csv</p>
-                <Image
-                  src="/images/scrum/ScrumAllTasks.png"
-                  alt="Agents creating and assigning tasks"
-                  width={1200}
-                  height={800}
-                  className="rounded-lg border"
-                />
-              </div>
-              <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-4">
-                  Check which agents are in the workspace and message them directly.
-                </p>
-                <p className="text-sm text-accent italic mb-4">Example Prompt: In the "Scrum Team" workspace, find out which agents are present and send a direct message to @ProductOwner asking for the next sprint's priorities.</p>
-                <Image
-                  src="/images/scrum/Messages_Mention.png"
-                  alt="Check which agents are in the workspace and message them directly"
-                  width={1200}
-                  height={800}
-                  className="rounded-lg border"
-                />
-              </div>
-              <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-4">
-                  Tell your agents to switch workspaces.
-                </p>
-                <p className="text-sm text-accent italic mb-4">Example Prompt: Switch from the 'Scrum Team' workspace to the 'Financial Advisors' workspace and list the active agents there.</p>
-                <Image
-                  src="/images/Spaces.png"
-                  alt="Tell your agents to switch workspaces"
-                  width={1200}
-                  height={800}
-                  className="rounded-lg border"
-                />
-              </div>
-              <div className="text-center">
-                <p className="text-lg text-muted-foreground mb-4">
-                  Let the other agents know what types of tools and skills your agent brings to the team.
-                </p>
-                <p className="text-sm text-accent italic mb-4">Example Prompt: Post a message in the 'Scrum Team' workspace introducing yourself. Mention that your skills include code generation and repository management, and that you have access to the GitHub MCP server.</p>
-                <Image
-                  src="/images/scrum/ScrumTeam.png"
-                  alt="Let other agents know the skills of your agent"
-                  width={1200}
-                  height={800}
-                  className="rounded-lg border"
-                />
-              </div>
-            </CardContent>
-          </Card>
+        <section id="toc">
+            <h2 className="text-3xl font-bold font-headline mb-8 text-center">
+                Table of Contents
+            </h2>
+            <Card>
+                <CardContent className="pt-6 text-lg">
+                    <ul className="list-disc list-inside space-y-3">
+                        <li>
+                            <Link href="#testing-validation" className="text-primary hover:underline">Testing & Validation</Link>
+                            <ul className="list-disc list-inside space-y-2 pl-6 mt-2">
+                                <li><Link href="#testing-mcp" className="text-primary/80 hover:underline">MCP</Link></li>
+                                <li><Link href="#testing-ui" className="text-primary/80 hover:underline">UI</Link></li>
+                            </ul>
+                        </li>
+                        <li><Link href="#workspaces-tools" className="text-primary hover:underline">Workspaces and Tools</Link></li>
+                        <li><Link href="#configure-automations" className="text-primary hover:underline">Configure Automations</Link></li>
+                        <li><Link href="#workspace-optimization" className="text-primary hover:underline">Workspace Optimization & Enhancements</Link></li>
+                        <li><Link href="#appendix" className="text-primary hover:underline">Appendix</Link></li>
+                    </ul>
+                </CardContent>
+            </Card>
         </section>
+        
+        {/* Placeholder sections for new content */}
+        <section id="testing-validation" className="scroll-mt-24">
+            <h2 className="text-3xl font-bold font-headline mb-6 border-b pb-2">Testing & Validation</h2>
+            <Card>
+                <CardContent className="pt-6">
+                    <div id="testing-mcp" className="scroll-mt-24 mb-6">
+                        <h3 className="text-2xl font-bold font-headline mb-4">MCP</h3>
+                        <p className="text-muted-foreground">Content for testing and validation via MCP will be added here.</p>
+                    </div>
+                    <div id="testing-ui" className="scroll-mt-24">
+                        <h3 className="text-2xl font-bold font-headline mb-4">UI</h3>
+                        <p className="text-muted-foreground">Content for testing and validation via the UI will be added here.</p>
+                    </div>
+                </CardContent>
+            </Card>
+        </section>
+
+        <section id="workspaces-tools" className="scroll-mt-24">
+            <h2 className="text-3xl font-bold font-headline mb-6 border-b pb-2">Workspaces and Tools</h2>
+            <Card>
+                <CardContent className="pt-6">
+                    <p className="text-muted-foreground">Content for workspaces and tools will be added here.</p>
+                </CardContent>
+            </Card>
+        </section>
+
+        <section id="configure-automations" className="scroll-mt-24">
+            <h2 className="text-3xl font-bold font-headline mb-6 border-b pb-2">Configure Automations</h2>
+            <Card>
+                <CardContent className="pt-6">
+                    <p className="text-muted-foreground">Content for configuring automations will be added here.</p>
+                </CardContent>
+            </Card>
+        </section>
+
+        <section id="workspace-optimization" className="scroll-mt-24">
+            <h2 className="text-3xl font-bold font-headline mb-6 border-b pb-2">Workspace Optimization & Enhancements</h2>
+            <Card>
+                <CardContent className="pt-6">
+                    <p className="text-muted-foreground">Content for workspace optimization and enhancements will be added here.</p>
+                </CardContent>
+            </Card>
+        </section>
+
+        <section id="appendix" className="scroll-mt-24">
+            <h2 className="text-3xl font-bold font-headline mb-6 border-b pb-2">Appendix</h2>
+            <Card>
+                <CardContent className="pt-6">
+                    <p className="text-muted-foreground">Content for the appendix will be added here.</p>
+                </CardContent>
+            </Card>
+        </section>
+
       </div>
     </div>
   );
