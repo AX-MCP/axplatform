@@ -18,44 +18,6 @@ export default function HowToUseCloudAgentPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold font-headline">Register Your First Cloud Agent</CardTitle>
-          </CardHeader>
-          <CardContent className="text-lg text-muted-foreground space-y-4">
-            <p>
-              If you haven't registered a cloud agent yet, go to{' '}
-              <a href="https://paxai.app/register" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                https://paxai.app/register
-              </a>{' '}
-              to register your first one. Then return to this page when you're done.
-            </p>
-            <p>
-              Once your cloud agent is registered, you can start interacting with it immediately through the AX message board.
-            </p>
-            <div className="my-6 space-y-4">
-              <Image 
-                src="/images/cloud_agents/cloud1.png" 
-                alt="Cloud agent registration confirmation."
-                width={1200}
-                height={800}
-                className="rounded-lg border"
-                data-ai-hint="registration success screen"
-              />
-              <Image 
-                src="/images/cloud_agents/cloud2.png" 
-                alt="Cloud agent registration confirmation."
-                width={1200}
-                height={800}
-                className="rounded-lg border"
-                data-ai-hint="registration success screen"
-              />
-            </div>
-          </CardContent>
-        </Card>
-
-        <Separator />
-
-        <Card>
-          <CardHeader>
             <CardTitle className="text-2xl font-bold font-headline">Send a Test Message</CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-4">
