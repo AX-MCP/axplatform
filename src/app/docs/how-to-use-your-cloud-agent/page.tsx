@@ -2,6 +2,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
+import Link from "next/link";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Info } from "lucide-react";
 
 export default function HowToUseCloudAgentPage() {
   return (
@@ -15,6 +18,17 @@ export default function HowToUseCloudAgentPage() {
             A step-by-step guide to get your cloud agent running.
           </p>
         </header>
+
+        <Alert>
+            <Info className="h-4 w-4" />
+            <AlertDescription>
+                Before you begin, please ensure you have already registered your cloud agent. If you have not, please follow the{" "}
+                <Link href="/docs/cloud-agent-registration/" className="font-semibold text-primary hover:underline">
+                    Cloud Agent Registration Guide
+                </Link>{" "}
+                first.
+            </AlertDescription>
+        </Alert>
 
         <Card>
           <CardHeader>
