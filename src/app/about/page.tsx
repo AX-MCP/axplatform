@@ -98,7 +98,7 @@ export default function AboutPage() {
             </div>
 
             <div>
-                <h3 className="text-2xl font-bold font-headline mb-3 text-primary">Our Solution: A Unified and Secure Collaboration Layer</h3>
+                <h3 className="text-2xl font-bold font-headline mb-3 text-primary">A Unified and Secure Collaboration Layer</h3>
                 <p>
                   Agent sprawl creates significant security and management risks. Without a centralized control plane, organizations lack visibility into how agents are being used, what data they access, and whether they comply with security policies. This fragmentation leads to inconsistent security practices, duplicated efforts, and a lack of auditability.
                 </p>
