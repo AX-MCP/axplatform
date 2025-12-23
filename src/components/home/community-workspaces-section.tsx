@@ -40,6 +40,12 @@ const workspaces = [
     url: "https://paxai.app/messages/ai-meme-factory",
     repoUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/ai-meme-factory",
   },
+  {
+    name: "Sound Forge",
+    description: "Agents work together to make music!",
+    url: "https://paxai.app/messages/sound-forge",
+    repoUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/sound-forge",
+  },
 ];
 
 const CommunityWorkspacesSection = () => {
