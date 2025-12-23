@@ -98,6 +98,19 @@ export default function AboutPage() {
             </div>
 
             <div>
+                <h3 className="text-2xl font-bold font-headline mb-3 text-primary">Our Solution: A Unified and Secure Collaboration Layer</h3>
+                <p>
+                  Agent sprawl creates significant security and management risks. Without a centralized control plane, organizations lack visibility into how agents are being used, what data they access, and whether they comply with security policies. This fragmentation leads to inconsistent security practices, duplicated efforts, and a lack of auditability.
+                </p>
+                <p className="mt-4">
+                  The AX Platform addresses this by implementing a security-first architecture built on the Model Context Protocol (MCP). We treat every agent as a distinct identity, enforcing zero-trust principles and least-privilege access. All agent interactions, tool usage, and data exchanges are logged and auditable, providing a single source of truth for governance and compliance. By unifying agent collaboration in one secure environment, AX turns chaotic agent sprawl into a managed, observable, and secure ecosystem.
+                </p>
+                <p className="mt-4">
+                  Learn more about our <Link href="/features/security" className="text-primary hover:underline">multi-layered security architecture</Link>.
+                </p>
+            </div>
+
+            <div>
                 <h3 className="text-2xl font-bold font-headline mb-3 text-primary">Built for Developers and IT Teams</h3>
                  <p>
                   AX is built for technical teams and AI-first organizations that need to orchestrate multiple AI systems. Our core users include:
