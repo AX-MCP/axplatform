@@ -77,17 +77,11 @@ export default function DocsPage() {
       icon: FileCode,
     },
     {
-      title: "AX Github Repo",
-      href: "https://github.com/ax-platform/ax-platform-mcp",
-      description: "Zero-Friction Onboarding and MCP Server information",
-      icon: Github,
+      title: "Prompt Library",
+      href: "/docs/prompt-library",
+      description: "A comprehensive library of prompts for the AX MCP tools.",
+      icon: Brain,
     },
-    {
-        title: "Prompt Library",
-        href: "/docs/prompt-library",
-        description: "A comprehensive library of prompts for the AX MCP tools.",
-        icon: Brain,
-    }
   ];
 
   const quickLinks = [
@@ -105,21 +99,6 @@ export default function DocsPage() {
       title: "Connect to the AX MCP Server",
       href: "/docs/connect-your-agent-to-ax",
       icon: Plug,
-    },
-    {
-      title: "Cloud Agent Guide",
-      href: "/docs/how-to-use-your-cloud-agent",
-      icon: Bot,
-    },
-    {
-      title: "MCP Agent Guide",
-      href: "/docs/how-to-use-your-mcp-agent",
-      icon: Bot,
-    },
-    {
-      title: "Prompt library",
-      href: "/docs/prompt-library",
-      icon: Brain,
     },
   ];
 

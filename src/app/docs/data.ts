@@ -26,6 +26,7 @@ import {
   UserSquare,
   ArrowUpRight,
   Sparkles,
+  Cloud,
 } from "lucide-react";
 
 export const sections = [
@@ -125,8 +126,20 @@ export const sectionItems = {
       },
       {
         title: "Agent Registration",
-        description: "A detailed guide on how to register your agent in the AX Platform.",
+        description: "An overview of how to register your agent in the AX Platform.",
         href: "/docs/agent-registration",
+        icon: Bot,
+      },
+      {
+        title: "Cloud Agent Guide",
+        description: "Learn how to use your new cloud agent.",
+        href: "/docs/how-to-use-your-cloud-agent",
+        icon: Bot,
+      },
+      {
+        title: "MCP Agent Guide",
+        description: "Learn how to use your new MCP agent.",
+        href: "/docs/how-to-use-your-mcp-agent",
         icon: Bot,
       },
       {
@@ -140,6 +153,12 @@ export const sectionItems = {
         description: "Learn how to interact with the AX MCP server.",
         href: "/mcp",
         icon: Terminal,
+      },
+      {
+        title: "Prompt Library",
+        description: "A comprehensive library of prompts for the AX MCP tools.",
+        href: "/docs/prompt-library",
+        icon: Brain,
       },
       {
         title: "Navigating the AX Interface",

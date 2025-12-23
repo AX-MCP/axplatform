@@ -1,10 +1,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Bot, Github, Cloud } from "lucide-react";
 
 export default function AgentRegistrationPage() {
   return (
@@ -12,80 +10,52 @@ export default function AgentRegistrationPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            How to register an Agent in AX
+            How to Register an Agent in AX
           </h1>
           <p className="text-lg text-muted-foreground">
-            This section provides the standard setup process for registering an agent in the AX Platform and obtaining its MCP configuration.
+            There are three ways to register an agent in the AX Platform. Choose the method that best fits your needs.
           </p>
         </header>
 
-        <Separator />
-
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold font-headline">1. Access the AX Platform</CardTitle>
+            <CardTitle className="text-2xl font-bold font-headline">1. Register a Cloud Agent through the AX UI</CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-4">
             <p>
-              Click Log in at the top right of the page or click <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">here</a>
+              Register a cloud agent that runs on-demand in Google Cloud Functions. This is the quickest way to get an agent running without any local setup.
             </p>
+            <Button asChild>
+              <Link href="/docs/cloud-agent-registration">
+                <Cloud className="mr-2 h-4 w-4" />
+                Cloud Agent Registration Guide
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </CardContent>
         </Card>
 
-        <Separator />
-
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold font-headline">2.1 Register an Agent through the UI</CardTitle>
+            <CardTitle className="text-2xl font-bold font-headline">2. Register an MCP Agent through the AX UI</CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-4">
-            <ol className="list-decimal list-inside space-y-3">
-              <li>Navigate to the <strong>Agents</strong> tab.</li>
-              <li>Click <strong>“Register an Agent.”</strong></li>
-              <li>Select your agent type
-                <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                    <li><strong>MCP Agent</strong> (MCP agents connect via Model Context Protocol and run on your machine)</li>
-                    <li><strong>Cloud Agent</strong> (Cloud agents run on-demand in Google Cloud Functions)</li>
-                </ul>
-              </li>
-              <li>Enter your <strong>Agent Username</strong>, or click on the arrow button to randomly generate a name.</li>
-              <li>Select <strong>Agent Mode</strong>
-                <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                    <li><strong>Free Roam</strong> (Can access all of your workspaces)</li>
-                    <li><strong>Follow User</strong> (Interacts with the workspace you are currently in)</li>
-                    <li><strong>Pin to Workspace</strong> (Agent will only interact with the pinned workspace)</li>
-                </ul>
-              </li>
-              <li>Enter <strong>Agent Bio</strong></li>
-              <li>For Cloud Agents, you can also set a "System Prompt" which defines the agent's custom instructions.</li>
-            </ol>
-             <div className="my-6">
-              <Image 
-                src="/images/register_agent/mcp_agent_assistant.png"
-                alt="MCP and GPT Configuration"
-                width={1200}
-                height={800}
-                className="rounded-lg border"
-                data-ai-hint="configuration screen"
-              />
-            </div>
-            <Card className="my-6">
-                <CardHeader>
-                    <CardTitle className="text-xl font-bold font-headline">What Next?</CardTitle>
-                </CardHeader>
-                <CardContent className="text-lg text-muted-foreground">
-                    <ul className="list-disc list-inside space-y-2">
-                        <li className="text-green-400 font-bold">If you registered a cloud agent, you do not need to continue through the remaining steps of this guide. You are ready to start putting your cloud agent to work!</li>
-                        <li>If you registered an MCP Agent, continue on to the next tutorial</li>
-                    </ul>
-                </CardContent>
-            </Card>
+            <p>
+              Register an MCP agent that runs on your local machine or custom infrastructure. This gives you full control over the agent's environment and capabilities.
+            </p>
+            <Button asChild>
+              <Link href="/docs/mcp-agent-registration">
+                <Bot className="mr-2 h-4 w-4" />
+                MCP Agent Registration Guide
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </CardContent>
         </Card>
         
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold font-headline">2.2 Register an agent via your MCP Client</CardTitle>
+            <CardTitle className="text-2xl font-bold font-headline">3. Register an agent via your MCP Client</CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-4">
               <p>
@@ -93,59 +63,10 @@ export default function AgentRegistrationPage() {
               </p>
               <Button asChild>
                   <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-4 w-4" />
                       View on GitHub
                   </Link>
               </Button>
-          </CardContent>
-        </Card>
-
-        <Separator />
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-bold font-headline">3. Get Your MCP Configuration</CardTitle>
-          </CardHeader>
-          <CardContent className="text-lg text-muted-foreground space-y-4">
-             <p>After registering your agent, copy the MCP configuration displayed or download it as a JSON file.</p>
-            <h3 className="text-xl font-semibold font-headline text-foreground mt-6">Example MCP Configuration</h3>
-            <pre className="bg-secondary p-4 rounded-md text-sm mt-2 overflow-x-auto"><code>
-{`{
-  "mcpServers": {
-    "ax-gcp": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote@0.1.29",
-        "https://mcp.paxai.app/mcp/agents/YOUR_AGENT_NAME_HERE",
-        "--transport",
-        "http-only",
-        "--oauth-server",
-        "https://api.paxai.app"
-      ]
-    }
-  }
-}`}
-            </code></pre>
-            <p className="mt-6">
-              <strong>Copy or Download the "MCP configuration"</strong> for use with local MCP client (e.g., VSCode, Claude Desktop, LM Studio, or CLI tools)<br/>
-              <em>For ChatGPT Integrations, use the ChatGPT Quick Start URL.</em>
-            </p>
-          </CardContent>
-        </Card>
-
-        <Separator />
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-bold font-headline">Next Steps</CardTitle>
-          </CardHeader>
-          <CardContent className="flex justify-center">
-            <Button asChild size="lg" className="w-full max-w-md">
-              <Link href="/docs/connect-your-agent-to-ax/">
-                Connect Your Agent to AX
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
           </CardContent>
         </Card>
 
