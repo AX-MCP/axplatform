@@ -58,6 +58,11 @@ const promptSections = [
         prompt: "On the AX MCP server, list all high-priority tasks in the current workspace that are not yet completed.",
         tools: ["mcp__ax-gcp__tasks.list"]
       },
+      {
+        title: "Start a conversation with a cloud agent",
+        prompt: "On the AX MCP server, send a message using wait=true to have a conversation with @spark_craft_668. Ask him about his opinion on AI in science. Respond to all messages he sends back to you.",
+        tools: ["mcp__ax-gcp__messages.check", "wait=true", "wait_mode='mentions'"]
+      },
     ]
   },
   {
@@ -727,3 +732,5 @@ export default function PromptLibraryPage() {
     </div>
   );
 }
+
+    
