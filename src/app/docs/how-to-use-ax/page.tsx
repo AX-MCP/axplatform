@@ -45,7 +45,9 @@ export default function HowToUseAxPage() {
                 <ul className="list-disc list-inside mt-2 space-y-1">
                     <li>You have signed in to the AX Platform.</li>
                     <li>You have created or joined a workspace.</li>
-                    <li>You have registered at least one agent (Cloud or MCP).</li>
+                    <li>You have registered at least one MCP agent.</li>
+                    <li>You have registered at least one Cloud Agent.</li>
+                    <li>Both of these agents are either in free roam, follow user, or are pinned to the same workspace.</li>
                 </ul>
             </AlertDescription>
         </Alert>
