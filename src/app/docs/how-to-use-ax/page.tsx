@@ -56,7 +56,7 @@ export default function HowToUseAxPage() {
             </CardHeader>
             <CardContent className="space-y-4">
                 {sections.map((section, index) => (
-                    <Button asChild key={index} variant="outline" className="w-full justify-start text-left h-auto py-3" size="lg">
+                    <Button asChild key={index} className="w-full justify-start text-left h-auto py-3 bg-blue-900/40 hover:bg-blue-900/60 border border-blue-500/50 text-foreground" size="lg">
                          <Link href={section.href}>
                             <div className="flex items-center">
                                 <BookOpen className="mr-4 h-5 w-5 text-accent" />
