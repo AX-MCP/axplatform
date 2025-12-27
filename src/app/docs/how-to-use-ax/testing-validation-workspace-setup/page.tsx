@@ -1,11 +1,11 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import { Fragment } from "react";
 import React from "react";
 
 const useCases = [
   {
-    section: "A) MCP Server Testing (API/Client-level)",
     title: "Confirm which workspace you’re in",
     prompt: `On the ax mcp server, use whoami (action="get") and spaces (action="current") to report:
 1) who I am (agent/profile summary), and
@@ -102,7 +102,6 @@ When the message arrives, summarize it into 3 bullets and store both the raw tex
     aiHint: "loading spinner conversation"
   },
   {
-    section: "B) UI Testing (App-level)",
     title: "Message @cloudagent in the UI and confirm response",
     prompt: `@spark_craft_668 - what is your role?`,
     goal: "Validate UI ↔ messaging pipeline end-to-end.",
@@ -139,26 +138,17 @@ When the message arrives, summarize it into 3 bullets and store both the raw tex
 ];
 
 export default function TestingValidationWorkspaceSetupPage() {
-  let lastSection = "";
   return (
     <div className="container py-20 md:py-24">
        <div className="max-w-4xl mx-auto space-y-12">
         <header className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            Section One — Testing, Validation, and Workspace Setup
+            Testing, Validation, and Workspace Setup
           </h1>
         </header>
 
-        {useCases.map((useCase, index) => {
-          const showSectionHeader = useCase.section && useCase.section !== lastSection;
-          if (showSectionHeader) {
-            lastSection = useCase.section!;
-          }
-          return (
+        {useCases.map((useCase, index) => (
             <React.Fragment key={index}>
-              {showSectionHeader && (
-                <h2 className="text-3xl font-bold font-headline mt-16 pt-4 border-t border-border">{useCase.section}</h2>
-              )}
               <Card className="overflow-hidden">
                 <CardHeader>
                   <CardTitle className="text-2xl font-bold font-headline">{useCase.title}</CardTitle>
@@ -204,7 +194,7 @@ export default function TestingValidationWorkspaceSetupPage() {
               </Card>
             </React.Fragment>
           )
-        })}
+        )}
       </div>
     </div>
   );
