@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import React from "react";
 
 const useCases = [
   {
@@ -113,7 +114,7 @@ When the message arrives, summarize it into 3 bullets and store both the raw tex
   {
     title: "Manually create → assign → complete a task",
     goal: "Manually Create a New Task",
-    doThis: "Click on the Tasks Tab\nClick \"Create Task\"\nSet Title and Description\nSet Priority Level\nSave / Click Create Task",
+    doThis: "Click on the Tasks Tab\n- Click \"Create Task\"\n- Set Title and Description\n- Set Priority Level\n- Save / Click Create Task",
     successCriteria: "New task shows up on the Tasks tab and can be viewed via MCP.",
     imagePath: "/images/guide/section1/ui_testing_task.png",
     aiHint: "task creation form"
