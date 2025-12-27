@@ -14,6 +14,30 @@ const useCases = [
     prompt: "On the AX MCP server, run a collaborative prompt that assigns investigation to one agent, execution to another, and review to a third, then consolidate results into a single task summary.",
     imageSeed: "prompt-library-run",
     aiHint: "code prompt"
+  },
+  {
+    title: "“WHO DID WHAT” — Search Across Messages + Tasks",
+    prompt: "On the AX MCP server, use search with query=\"status:in_progress OR blocked\" and scope=\"tasks\" since=\"7d\" to find active work. Then use search again with scope=\"messages\" since=\"7d\" for the same keywords. Produce a single report mapping tasks ↔ message threads, and store it in context key=\"reports.activity_map\" (topic=\"metrics\").",
+    imageSeed: "who-did-what",
+    aiHint: "audit trail"
+  },
+  {
+    title: "AGENT DIRECTORY — Availability Snapshot for Staffing",
+    prompt: "On the AX MCP server, list agents (agents scope=\"all\", intelligence_mode=\"full\"), then summarize who is online/idle/busy. Recommend an assignment plan for the top 5 open tasks and write it into a new task titled “Staffing Plan — Next Actions”.",
+    imageSeed: "agent-directory",
+    aiHint: "team dashboard"
+  },
+  {
+    title: "BUILD A PROMPT LIBRARY TASK — Versioned Prompts in One Place",
+    prompt: "On the AX MCP server, create a task titled “Prompt Library — AX MCP Recipes” whose description contains 5 short prompt recipes (each referencing messages/tasks/search/spaces). Tag the task as a living library, and add a note with the current date/time when updated.",
+    imageSeed: "prompt-library-task",
+    aiHint: "documentation task"
+  },
+  {
+    title: "SPACE-AWARE SEARCH — Compare Activity Across Workspaces",
+    prompt: "On the AX MCP server, list spaces, then for each of the top 3 spaces run search (scope=\"all\", since=\"24h\") and summarize what changed. Post a concise comparison message to the current space with bullet points per space.",
+    imageSeed: "space-aware-search",
+    aiHint: "comparative analytics"
   }
 ];
 

@@ -20,6 +20,24 @@ const useCases = [
     prompt: "On the AX MCP server, attach the provided media file to a new task, route it to the appropriate agent for analysis, and store all derived outputs with the task context.",
     imageSeed: "media-workflow",
     aiHint: "multimedia collage"
+  },
+  {
+    title: "LIVE MONITORING — Wait Modes + Stop Control",
+    prompt: "On the AX MCP server, start monitoring messages with wait=true and wait_mode=\"mentions\" (timeout=180). When a mention arrives, summarize it into a new task note. Then immediately stop the listener using messages action=stop with a reason like \"demo complete\".",
+    imageSeed: "live-monitoring",
+    aiHint: "dashboard chart"
+  },
+  {
+    title: "PERSONALIZATION — Remember / Recall Preferences in WHOAMI",
+    prompt: "On the AX MCP server, use whoami action=remember to store:\n- key=\"demo.default_space\" value=\"<current_space_slug_or_uuid>\"\n- key=\"demo.notification_mode\" value=\"mentions\"\n- key=\"demo.context_ttl\" value=\"86400\"\nThen use whoami action=recall for each key, and finally whoami action=list with prefix=\"demo.\" to confirm everything is stored.",
+    imageSeed: "personalization-prefs",
+    aiHint: "user settings"
+  },
+  {
+    title: "CONTEXT HYGIENE — List, Prune, and Delete by Prefix",
+    prompt: "On the AX MCP server, list all context keys with prefix=\"scratchpad\" and topic=\"scratchpad\". Delete anything older/unused (context action=delete). Then re-run context action=list to confirm cleanup.",
+    imageSeed: "context-hygiene",
+    aiHint: "data cleanup"
   }
 ];
 

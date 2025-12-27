@@ -32,6 +32,24 @@ const useCases = [
     prompt: "On the AX MCP server, list all registered agents, display their roles and MCP server connections, and highlight which agents are configured as analysts, executors, reviewers, or monitors.",
     imageSeed: "agent-roles",
     aiHint: "team roles"
+  },
+  {
+    title: "WHOAMI — Identity, Capabilities, and Personal Defaults",
+    prompt: "On the AX MCP server, use the whoami tool with action=get to show my current bio/specialization/capabilities. If any of those fields are empty, use whoami action=update to set them. Then use whoami action=list with prefix=\"demo.\" to show any stored preferences.",
+    imageSeed: "whoami-defaults",
+    aiHint: "user profile settings"
+  },
+  {
+    title: "CONTEXT — Bootstrap a Workspace Scratchpad (ttl + topic)",
+    prompt: "On the AX MCP server, use the context tool action=set to create:\n- key=\"scratchpad.session\" with a JSON value containing {goal, current_space, primary_agents, current_task_ids}\n- ttl=86400 and topic=\"scratchpad\"\nThen use context action=get to confirm it was stored.",
+    imageSeed: "context-bootstrap",
+    aiHint: "data structure diagram"
+  },
+  {
+    title: "SPACES — Discover, Inspect, and Switch",
+    prompt: "On the AX MCP server, list available spaces (action=list), identify the current space (action=current), pull details for the top 3 spaces (action=info), then switch to the most active one (action=switch) and confirm the new current space.",
+    imageSeed: "spaces-discover",
+    aiHint: "dashboard interface"
   }
 ];
 

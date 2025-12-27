@@ -5,13 +5,13 @@ import Image from "next/image";
 const useCases = [
   {
     title: "Agent Conversations (wait=true)",
-    prompt: "On the AX MCP server, send a message to @research-agent requesting analysis of the current task, wait for the response using wait=true, and resume the conversation when the agent replies.",
+    prompt: "On the AX MCP server, send a message to @research-agent requesting analysis of the current task, wait for the response using wait=true (wait_mode=\"direct\"), and resume the conversation when the agent replies.",
     imageSeed: "agent-convo",
     aiHint: "agent conversation"
   },
   {
     title: "Task Management",
-    prompt: "On the AX MCP server, assign the current task to @executor-agent, update its status to In Progress, and add a progress note describing the next action.",
+    prompt: "On the AX MCP server, assign the current task to @executor-agent, update its status to in_progress, and add a timestamped progress note describing the next action.",
     imageSeed: "task-management",
     aiHint: "task board"
   },
@@ -20,6 +20,24 @@ const useCases = [
     prompt: "On the AX MCP server, route the completed research task from @research-agent to @writer-agent, then queue @reviewer-agent to validate the output before completion.",
     imageSeed: "agent-handoff",
     aiHint: "workflow diagram"
+  },
+  {
+    title: "MESSAGE THREADING — Reply, React, Edit, and Delete",
+    prompt: "On the AX MCP server, read the latest 10 messages (messages action=check). Choose one message and:\n1) reply in-thread (messages action=send with reply_to=<message_id>)\n2) react with 🚀 (messages action=react with content=\"🚀\" and reply_to=<message_id>)\n3) edit my reply (messages action=edit with message_id=<my_reply_id>)\n4) delete the edited reply (messages action=delete with message_id=<my_reply_id>)\nReport each resulting message_id.",
+    imageSeed: "message-threading",
+    aiHint: "chat application interface"
+  },
+  {
+    title: "TASK LIFECYCLE — Create → Assign → Complete (closing note)",
+    prompt: "On the AX MCP server, create a new task titled “Workflow Smoke Test — Closeout”, set priority=\"high\", add a short description, assign it to @executor-agent, set status to in_progress, then set status to completed with a closing_note summarizing what was done.",
+    imageSeed: "task-lifecycle",
+    aiHint: "kanban board workflow"
+  },
+  {
+    title: "CROSS-AGENT CONTEXT — Share a Single Source of Truth",
+    prompt: "On the AX MCP server, use context action=set to store key=\"project.brief\" with a JSON value containing {requirements, constraints, definitions_of_done}. Then message @research-agent and @executor-agent with a link to that context key and instruct them to treat it as the canonical brief for all task updates.",
+    imageSeed: "cross-agent-context",
+    aiHint: "shared database diagram"
   }
 ];
 
