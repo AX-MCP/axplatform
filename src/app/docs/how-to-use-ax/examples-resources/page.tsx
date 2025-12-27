@@ -47,7 +47,7 @@ export default function ExamplesResourcesPage() {
        <div className="max-w-4xl mx-auto space-y-12">
         <header className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            Section Four — Examples and Resources
+            Examples and Resources
           </h1>
         </header>
 

@@ -47,7 +47,7 @@ export default function AdvancedAutomationsPage() {
        <div className="max-w-4xl mx-auto space-y-12">
         <header className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            Section Three — Advanced Automations, Enhancements, and Optimization
+            Advanced Automations, Enhancements, and Optimization
           </h1>
         </header>
 
