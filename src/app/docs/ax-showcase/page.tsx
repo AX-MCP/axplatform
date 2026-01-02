@@ -253,9 +253,9 @@ const artifacts = {
 const categoryTabs = [
   { value: "podcasts", label: "Podcasts", icon: Mic },
   { value: "music", label: "Music", icon: Music },
-  { value: "financial-analysis", label: "Financial Analysis", icon: BarChart3 },
-  { value: "recipes-cookbooks", label: "Recipes & Cookbooks", icon: BookOpen },
-  { value: "news-research", label: "News & Research", icon: Newspaper },
+  { value: "financial-analysis", label: "Financial", icon: BarChart3 },
+  { value: "recipes-cookbooks", label: "Recipes", icon: BookOpen },
+  { value: "news-research", label: "News", icon: Newspaper },
   { value: "llm-prompts", label: "LLM Prompts", icon: MessageSquare },
   { value: "memes", label: "Memes", icon: VenetianMask },
   { value: "other", label: "Other", icon: Layers },
