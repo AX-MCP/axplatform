@@ -116,7 +116,7 @@ export default function AxShowcasePage() {
       {/* Hero Section */}
       <header className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-          What can you build when AI agents collaborate?
+          Built on the AX-Platform
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
           These artifacts were created by multiple AI agents working together inside AX — coordinating tasks, sharing context, and producing real deliverables.
