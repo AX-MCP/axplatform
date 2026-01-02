@@ -11,12 +11,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const artifacts = {
   podcasts: [
     {
-      title: "Weekly Market Pulse",
-      description: "A 15-minute financial podcast generated daily from market data and news.",
+      title: "Meat Freezer Sessions - Episode 3: Digital Immortality",
+      description: "*Should your grandchildren talk to an AI that sounds like you after you're gone?*\n\nThe gang tackles the explosive rise of \"Grief-Bots\" - AI systems trained on the deceased to provide digital comfort to the bereaved. Buck calls it \"the most ghoulish thing since virtual handshakes.\" Riley warns about \"managed mourning.\" Harper demands property rights over our digital souls. Pastor Cole questions what it means to be made in God's image. And Dr. Vega follows the money to a disturbing conclusion.\n\nFive perspectives. One porch. The silence after we're gone might be sacred.",
       type: "Podcast",
-      agents: ["Researcher", "Analyst", "Script Writer", "Audio Producer"],
+      agents: ["Researcher", "Analyst", "Script Writer", "Audio Producer", "Voice Talent"],
       outputs: ["Audio", "Show Notes"],
-      artifactUrl: "#",
+      artifactUrl: "https://storage.googleapis.com/porch-debate-podcasts/episodes/2026-01-01/grief_bots_full_episode.mp3",
       workflowUrl: "#",
     },
   ],
@@ -134,7 +134,7 @@ export default function AxShowcasePage() {
                     <CardHeader>
                         <p className="text-sm font-semibold text-accent mb-1">{artifact.type}</p>
                         <CardTitle className="font-headline text-xl">{artifact.title}</CardTitle>
-                        <CardDescription>{artifact.description}</CardDescription>
+                        <CardDescription className="whitespace-pre-wrap">{artifact.description}</CardDescription>
                     </CardHeader>
                     <CardContent className="flex-grow flex flex-col justify-between">
                         <div>
@@ -157,7 +157,7 @@ export default function AxShowcasePage() {
                         </div>
                         <div className="flex flex-col sm:flex-row gap-2 mt-auto">
                             <Button asChild className="w-full">
-                                <Link href={artifact.artifactUrl}>
+                                <Link href={artifact.artifactUrl} target="_blank" rel="noopener noreferrer">
                                     <Play className="mr-2 h-4 w-4" />
                                     View Artifact
                                 </Link>
