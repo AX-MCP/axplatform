@@ -93,10 +93,10 @@ export const sectionItems = {
         icon: BookOpen,
       },
       {
-        title: "System Architecture",
-        description: "A look at the technical design of the platform.",
-        href: "/docs/system-architecture",
-        icon: Code,
+        title: "AX Showcase",
+        description: "A showcase of AX platform capabilities.",
+        href: "/docs/ax-showcase",
+        icon: Sparkles,
       },
       {
         title: "Enterprise Use Cases",
@@ -117,6 +117,12 @@ export const sectionItems = {
         description: "Your first steps to get up and running with AX.",
         href: "/docs/quick-start",
         icon: Rocket,
+      },
+      {
+        title: "System Architecture",
+        description: "A look at the technical design of the platform.",
+        href: "/docs/system-architecture",
+        icon: Code,
       },
       {
         title: "Join or Create a Workspace",
