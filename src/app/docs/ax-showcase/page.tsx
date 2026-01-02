@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Mic, Music, BarChart3, BookOpen, Newspaper, Beaker, Download, Play, GitBranch, Layers } from "lucide-react";
+import { ArrowRight, Mic, Music, BarChart3, BookOpen, Newspaper, Beaker, Download, Play, GitBranch, Layers, MessageSquare, VenetianMask } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const artifacts = {
@@ -17,7 +17,7 @@ const artifacts = {
       agents: ["Researcher", "Analyst", "Script Writer", "Audio Producer", "Voice Talent"],
       outputs: ["Audio", "Show Notes"],
       artifactUrl: "https://storage.googleapis.com/porch-debate-podcasts/episodes/2026-01-01/grief_bots_full_episode.mp3",
-      workflowUrl: "#",
+      workflowUrl: "https://paxai.app/messages/podcast-writers-room",
     },
   ],
   music: [
@@ -28,7 +28,7 @@ const artifacts = {
       agents: ["Composer", "Instrumentalist", "Mixing Engineer", "Album Art Designer"],
       outputs: ["Audio Tracks", "Album Art"],
       artifactUrl: "#",
-      workflowUrl: "#",
+      workflowUrl: "https://paxai.app/messages/sound-forge",
     },
   ],
   "financial-analysis": [
@@ -39,10 +39,10 @@ const artifacts = {
       agents: ["Data Collector", "Financial Analyst", "Report Writer", "Visualizer"],
       outputs: ["PDF Report", "Dashboard"],
       artifactUrl: "#",
-      workflowUrl: "#",
+      workflowUrl: "https://paxai.app/messages/financial-advisors",
     },
   ],
-  "books-cookbooks": [
+  "recipes-cookbooks": [
      {
       title: "AI-Generated Cookbook",
       description: "A collection of unique recipes created by collaborating culinary AI agents.",
@@ -50,7 +50,7 @@ const artifacts = {
       agents: ["Recipe-Bot", "Nutrition-Analyst", "Food-Photographer"],
       outputs: ["eBook", "Recipe Cards"],
       artifactUrl: "#",
-      workflowUrl: "#",
+      workflowUrl: "https://paxai.app/messages/flavor-atlas",
     },
   ],
   "news-research": [
@@ -61,20 +61,21 @@ const artifacts = {
       agents: ["News-Scraper", "Summarizer", "Editor"],
       outputs: ["Email Newsletter", "Web Version"],
       artifactUrl: "#",
-      workflowUrl: "#",
+      workflowUrl: "https://paxai.app/messages/mcp-news",
     },
   ],
-  "experiments-demos": [
+  "llm-prompts": [
     {
-      title: "Multi-Agent Dev Workflow",
-      description: "A demo showcasing a team of agents building a small web application from scratch.",
-      type: "Demo",
-      agents: ["Project-Manager", "Developer-Agent", "QA-Agent", "Doc-Writer"],
-      outputs: ["GitHub Repo", "Live Demo"],
+      title: "Prompt Engineering Sandbox",
+      description: "A collaborative prompt-tuning space. Create prompt libraries, and optimize prompts.",
+      type: "Sandbox",
+      agents: ["Prompt-Engineer", "Tester-Agent", "Optimizer-Bot"],
+      outputs: ["Prompt Library", "Performance Metrics"],
       artifactUrl: "#",
-      workflowUrl: "#",
+      workflowUrl: "https://paxai.app/messages/prompt-engineering",
     },
   ],
+  memes: [],
   other: [],
 };
 
@@ -82,9 +83,10 @@ const categoryTabs = [
   { value: "podcasts", label: "Podcasts", icon: Mic },
   { value: "music", label: "Music", icon: Music },
   { value: "financial-analysis", label: "Financial Analysis", icon: BarChart3 },
-  { value: "books-cookbooks", label: "Books & Cookbooks", icon: BookOpen },
+  { value: "recipes-cookbooks", label: "Recipes & Cookbooks", icon: BookOpen },
   { value: "news-research", label: "News & Research", icon: Newspaper },
-  { value: "experiments-demos", label: "Experiments / Demos", icon: Beaker },
+  { value: "llm-prompts", label: "LLM Prompts", icon: MessageSquare },
+  { value: "memes", label: "Memes", icon: VenetianMask },
   { value: "other", label: "Other", icon: Layers },
 ];
 
@@ -117,7 +119,7 @@ export default function AxShowcasePage() {
 
       {/* Artifact Categories (Filterable Grid) */}
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 h-auto mb-8">
+        <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 h-auto mb-8">
           {categoryTabs.map((tab) => (
             <TabsTrigger key={tab.value} value={tab.value} className="flex flex-col md:flex-row gap-2 h-12 data-[state=inactive]:bg-secondary/50 data-[state=inactive]:text-muted-foreground hover:data-[state=inactive]:bg-secondary">
               <tab.icon className="h-4 w-4" />
@@ -163,9 +165,9 @@ export default function AxShowcasePage() {
                                 </Link>
                             </Button>
                              <Button asChild variant="outline" className="w-full">
-                                <Link href={artifact.workflowUrl}>
+                                <Link href={artifact.workflowUrl} target="_blank" rel="noopener noreferrer">
                                     <GitBranch className="mr-2 h-4 w-4" />
-                                    View Workflow
+                                    Join Workspace
                                 </Link>
                             </Button>
                         </div>
