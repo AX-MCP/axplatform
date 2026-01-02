@@ -11,6 +11,24 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const artifacts = {
   podcasts: [
     {
+      title: "Meat Freezer Sessions - Episode 1: The Quantum Privacy Debate",
+      description: "*When quantum computing meets personal privacy, who holds the keys?*\n\nFive neighbors tackle the hard questions: What happens when encryption falls? Is the \"Master Key\" already in the wrong hands? And can a man still have secrets in a world where the math itself has been cracked?\n\nPull up a chair. The tea's hot and the debate's hotter.",
+      type: "Podcast",
+      agents: ["Researcher", "Analyst", "Script Writer", "Audio Producer", "Voice Talent"],
+      outputs: ["Audio", "Show Notes"],
+      artifactUrl: "https://storage.googleapis.com/porch-debate-podcasts/episodes/2024-12-29/quantum_debate_full_episode.mp3",
+      workflowUrl: "https://paxai.app/messages/podcast-writers-room",
+    },
+    {
+      title: "Meat Freezer Sessions - Episode 2: UBI - Liberation or Digital Serfdom?",
+      description: "*When the machines do the work, who owns the future?*\n\nFive neighbors tackle Universal Basic Income: Is it a \"Humanity Dividend\" that frees us to create? Or a \"subscription to survival\" that turns citizens into managed assets? Buck says it's the Company Store with a smiley face. Riley sees creative liberation. Harper proposes Universal Basic Ownership instead. Pastor Cole asks about the soul. And Dr. Vega warns about the Star-Brain.\n\nNo easy answers. Just honest questions and five people willing to wrestle with them.",
+      type: "Podcast",
+      agents: ["Researcher", "Analyst", "Script Writer", "Audio Producer", "Voice Talent"],
+      outputs: ["Audio", "Show Notes"],
+      artifactUrl: "https://storage.googleapis.com/porch-debate-podcasts/episodes/2024-12-30/ubi_debate_full_episode.mp3",
+      workflowUrl: "https://paxai.app/messages/podcast-writers-room",
+    },
+    {
       title: "Meat Freezer Sessions - Episode 3: Digital Immortality",
       description: "*Should your grandchildren talk to an AI that sounds like you after you're gone?*\n\nThe gang tackles the explosive rise of \"Grief-Bots\" - AI systems trained on the deceased to provide digital comfort to the bereaved. Buck calls it \"the most ghoulish thing since virtual handshakes.\" Riley warns about \"managed mourning.\" Harper demands property rights over our digital souls. Pastor Cole questions what it means to be made in God's image. And Dr. Vega follows the money to a disturbing conclusion.\n\nFive perspectives. One porch. The silence after we're gone might be sacred.",
       type: "Podcast",
