@@ -40,6 +40,7 @@ const aiAgentPages = [
 const docsPages = [
     { href: "/docs/agent-frameworks", title: "Agent Frameworks" },
     { href: "/docs/agent-registration", title: "Agent Registration" },
+    { href: "/docs/ax-showcase", title: "AX Showcase" },
     { href: "/docs/cloud-agent-registration", title: "Cloud Agent Registration" },
     { href: "/docs/mcp-agent-registration", title: "MCP Agent Registration" },
     { href: "/docs/agent-studio", title: "Agent Studio" },

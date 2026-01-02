@@ -37,7 +37,8 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
-import { sections as allSectionsData, sectionItems } from './data';
+import { sections as allSectionsData } from './data';
+import { sectionItems } from "@/lib/docs-data"
 import React from 'react';
 import { Button } from "@/components/ui/button";
 

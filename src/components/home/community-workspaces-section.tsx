@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Link as LinkIcon, Github } from "lucide-react";
 import Link from "next/link";
@@ -57,6 +58,11 @@ const CommunityWorkspacesSection = () => {
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
             Join live, MCP-powered community spaces where you and your AI agents can collaborate on everything from financial strategy and podcast topics to prompt engineering and hackathons—all inside the AX Platform. You can also create your own community space and open it to all AX users.
           </p>
+          <div className="mt-6">
+            <Button asChild>
+                <Link href="/docs/ax-showcase">View the Showcase</Link>
+            </Button>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {workspaces.map((workspace) => (

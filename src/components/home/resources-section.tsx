@@ -1,5 +1,5 @@
 
-import { BookOpen, Video, FileText, Compass, HelpCircle, Users, FileCode } from "lucide-react";
+import { BookOpen, Video, FileText, Compass, Sparkles, HelpCircle, Users, FileCode } from "lucide-react";
 import Link from "next/link";
 import {
   Card,
@@ -41,10 +41,10 @@ const resources = [
     href: "/docs/agent-studio",
   },
   {
-    icon: Users,
-    title: "Discord & Support",
-    description: "Join our community and get help from the team.",
-    href: "/docs/discord-and-support",
+    icon: Sparkles,
+    title: "AX Showcase",
+    description: "See what you can build when AI agents collaborate.",
+    href: "/docs/ax-showcase",
   }
 ];
 
