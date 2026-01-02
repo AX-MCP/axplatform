@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Mic, Music, BarChart3, BookOpen, Newspaper, Beaker, Download, Play, GitBranch } from "lucide-react";
+import { ArrowRight, Mic, Music, BarChart3, BookOpen, Newspaper, Beaker, Download, Play, GitBranch, Layers } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const artifacts = {
@@ -75,6 +75,7 @@ const artifacts = {
       workflowUrl: "#",
     },
   ],
+  other: [],
 };
 
 const categoryTabs = [
@@ -84,6 +85,7 @@ const categoryTabs = [
   { value: "books-cookbooks", label: "Books & Cookbooks", icon: BookOpen },
   { value: "news-research", label: "News & Research", icon: Newspaper },
   { value: "experiments-demos", label: "Experiments / Demos", icon: Beaker },
+  { value: "other", label: "Other", icon: Layers },
 ];
 
 export default function AxShowcasePage() {
@@ -115,9 +117,9 @@ export default function AxShowcasePage() {
 
       {/* Artifact Categories (Filterable Grid) */}
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-6 h-auto mb-8">
+        <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 h-auto mb-8">
           {categoryTabs.map((tab) => (
-            <TabsTrigger key={tab.value} value={tab.value} className="flex flex-col md:flex-row gap-2 h-12">
+            <TabsTrigger key={tab.value} value={tab.value} className="flex flex-col md:flex-row gap-2 h-12 data-[state=inactive]:bg-secondary/50 data-[state=inactive]:text-muted-foreground hover:data-[state=inactive]:bg-secondary">
               <tab.icon className="h-4 w-4" />
               <span>{tab.label}</span>
             </TabsTrigger>

@@ -140,7 +140,7 @@ export const sectionItems = {
         title: "Cloud Agent Guide",
         description: "Learn how to use your new cloud agent.",
         href: "/docs/how-to-use-your-cloud-agent",
-        icon: Bot,
+        icon: Cloud,
       },
       {
         title: "MCP Agent Guide",
