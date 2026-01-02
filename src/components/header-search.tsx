@@ -11,7 +11,7 @@ import {
     PopoverTrigger,
 } from "@/components/ui/popover"
 import { Input } from "@/components/ui/input"
-import { sectionItems } from "@/app/docs/data"
+import { sectionItems } from "@/lib/docs-data"
 
 export function HeaderSearch({ className }: { className?: string }) {
     const [open, setOpen] = React.useState(false)
