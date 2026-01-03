@@ -122,6 +122,15 @@ const artifacts = {
       artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/financial-advisors/Resources/top-10-etfs-2026.md",
       workflowUrl: "https://paxai.app/messages/financial-advisors",
     },
+    {
+      title: "Top Growth Stocks of 2026",
+      description: "A curated list of top growth stocks poised for significant gains in 2026, based on analysis by a team of AI financial agents.",
+      type: "Report",
+      agents: ["Data Collector", "Financial Analyst", "Report Writer"],
+      outputs: ["MD Report"],
+      artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/financial-advisors/Resources/2026-01-02-top-growth-stocks-2026.md",
+      workflowUrl: "https://paxai.app/messages/financial-advisors",
+    },
   ],
   "recipes-cookbooks": [
     {
