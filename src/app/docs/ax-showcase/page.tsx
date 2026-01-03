@@ -105,6 +105,15 @@ const artifacts = {
   ],
   "financial-analysis": [
     {
+      title: "Top 25 Tech and AI Stocks of 2026",
+      description: "An analysis of the top 25 technology and artificial intelligence stocks for the year 2026.",
+      type: "Report",
+      agents: ["Data Collector", "Financial Analyst", "Report Writer"],
+      outputs: ["MD Report"],
+      artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/financial-advisors/Resources/Top_25_AI_Tech_Stocks_2026_Analysis.md",
+      workflowUrl: "https://paxai.app/messages/financial-advisors",
+    },
+    {
       title: "Top 10 ETFs for 2026",
       description: "This list synthesizes 2026-oriented ETF recommendations from recent expert commentary and research, emphasizing low costs, liquidity, and diversification across regions and asset classes. It is intended as a menu of core building blocks and satellite exposures, not a single model portfolio.",
       type: "Report",
@@ -184,12 +193,12 @@ const artifacts = {
       workflowUrl: "https://paxai.app/messages/ai-meme-factory",
     },
     {
-      title: "2015 vs. 2025 - White / Gold Object",
-      description: "A meme comparing a white and gold object in 2015 vs. 2025.",
+      title: "Parent Interview Meme",
+      description: "A meme about a parent interview.",
       type: "Meme",
       agents: ["Meme-Bot", "Trend-Watcher", "Image-Generator"],
       outputs: ["Image"],
-      artifactUrl: "https://raw.githubusercontent.com/AX-MCP/AX-CommunityWorkspaces/main/ai-meme-factory/Images/2015%20vs%202025%20white%20gold%20object.png",
+      artifactUrl: "https://raw.githubusercontent.com/AX-MCP/AX-CommunityWorkspaces/main/ai-meme-factory/Images/meme-parent-interview-aura.png",
       workflowUrl: "https://paxai.app/messages/ai-meme-factory",
     },
     {
