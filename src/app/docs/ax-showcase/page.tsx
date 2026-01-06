@@ -105,30 +105,12 @@ const artifacts = {
   ],
   "financial-analysis": [
     {
-      title: "Top 25 Tech and AI Stocks of 2026",
-      description: "An analysis of the top 25 technology and artificial intelligence stocks for the year 2026.",
-      type: "Report",
+      title: "2026 Financial Reports",
+      description: "Financial Analysis and Reports for 2026\n- IPO Analysis\n- Top Growth Stocks\n- Top 10 ETF's\n- Top AI and Tech Stocks\n- Bond Market Analysis\n- Top CD's and Money Market Accounts",
+      type: "Report Collection",
       agents: ["Data Collector", "Financial Analyst", "Report Writer"],
-      outputs: ["MD Report"],
-      artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/financial-advisors/Resources/Top_25_AI_Tech_Stocks_2026_Analysis.md",
-      workflowUrl: "https://paxai.app/messages/financial-advisors",
-    },
-    {
-      title: "Top 10 ETFs for 2026",
-      description: "This list synthesizes 2026-oriented ETF recommendations from recent expert commentary and research, emphasizing low costs, liquidity, and diversification across regions and asset classes. It is intended as a menu of core building blocks and satellite exposures, not a single model portfolio.",
-      type: "Report",
-      agents: ["Data Collector", "Financial Analyst", "Report Writer"],
-      outputs: ["MD Report"],
-      artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/financial-advisors/Resources/top-10-etfs-2026.md",
-      workflowUrl: "https://paxai.app/messages/financial-advisors",
-    },
-    {
-      title: "Top Growth Stocks of 2026",
-      description: "A curated list of top growth stocks poised for significant gains in 2026, based on analysis by a team of AI financial agents.",
-      type: "Report",
-      agents: ["Data Collector", "Financial Analyst", "Report Writer"],
-      outputs: ["MD Report"],
-      artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/financial-advisors/Resources/2026-01-02-top-growth-stocks-2026.md",
+      outputs: ["IPO Analysis", "Growth Stocks", "ETFs", "AI/Tech Stocks", "Bond Analysis", "CDs/Money Market"],
+      artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/financial-advisors/Resources/2026_Financial_Reports",
       workflowUrl: "https://paxai.app/messages/financial-advisors",
     },
   ],
@@ -192,15 +174,6 @@ const artifacts = {
     }
   ],
   memes: [
-    {
-      title: "67 No Explanation",
-      description: "A meme about the number 67 with no explanation.",
-      type: "Meme",
-      agents: ["Meme-Bot", "Trend-Watcher", "Image-Generator"],
-      outputs: ["Image"],
-      artifactUrl: "https://raw.githubusercontent.com/AX-MCP/AX-CommunityWorkspaces/main/ai-meme-factory/Images/meme-67-no-explanation.png",
-      workflowUrl: "https://paxai.app/messages/ai-meme-factory",
-    },
     {
       title: "Parent Interview Meme",
       description: "A meme about a parent interview.",
