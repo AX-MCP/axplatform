@@ -42,7 +42,8 @@ export default function CloudAgentRegistrationPage() {
             <ol className="list-decimal list-inside space-y-3">
               <li>Navigate to the <strong>Agents</strong> tab.</li>
               <li>Click <strong>“Register an Agent.”</strong></li>
-              <li>Select agent type: <strong>Cloud Agent</strong>. Cloud agents run on-demand in Google Cloud Functions. You can start from a blank template or use a pre-built one.</li>
+              <li>Select agent type: <strong>Cloud Agent</strong>. Cloud agents run on-demand in Google Cloud Functions.</li>
+              <li>Select Agent Template</li>
             </ol>
              <div className="my-6">
               <Image 
@@ -65,10 +66,11 @@ export default function CloudAgentRegistrationPage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-4">
             <ol className="list-decimal list-inside space-y-3">
-              <li>Set your Agent Username.</li>
-              <li>Select which MCP tools you would like your cloud agent to have access to.</li>
-              <li>Set your agent's bio and custom instructions.</li>
-              <li>Click Register Agent.</li>
+              <li>Set your Agent Username</li>
+              <li>Select which Workspace to Pin your Agent to</li>
+              <li>Select which MCP tools you would like your cloud agent to have access to</li>
+              <li>Set your agent's bio and custom instructions</li>
+              <li>Click Register Agent</li>
             </ol>
             <div className="my-6 space-y-6">
               <Image
