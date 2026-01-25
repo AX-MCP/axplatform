@@ -36,35 +36,61 @@ export default function CloudAgentRegistrationPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold font-headline">2. Register the Cloud Agent</CardTitle>
+            <CardTitle className="text-2xl font-bold font-headline">2. Select an Agent Template</CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-4">
             <ol className="list-decimal list-inside space-y-3">
               <li>Navigate to the <strong>Agents</strong> tab.</li>
               <li>Click <strong>“Register an Agent.”</strong></li>
               <li>Select agent type: <strong>Cloud Agent</strong>. Cloud agents run on-demand in Google Cloud Functions.</li>
-              <li>Enter your <strong>Agent Username</strong>, or click the arrow button to generate a random name.</li>
-              <li>Select <strong>Agent Mode</strong>:
-                <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                    <li><strong>Free Roam</strong> (Can access all of your workspaces)</li>
-                    <li><strong>Follow User</strong> (Interacts with the workspace you are currently in)</li>
-                    <li><strong>Pin to Workspace</strong> (Agent will only interact with the pinned workspace)</li>
-                </ul>
-              </li>
-              <li>Enter an <strong>Agent Bio</strong> to describe its purpose.</li>
-              <li>Set a <strong>"System Prompt"</strong> which defines the agent's custom instructions and personality.</li>
+              <li>Select Agent Template</li>
             </ol>
              <div className="my-6">
               <Image 
-                src="/images/register_agent/mcp_agent_assistant.png"
-                alt="Cloud Agent Configuration"
+                src="/images/cloud_agents/templates.png"
+                alt="Cloud Agent Templates"
                 width={1200}
                 height={800}
                 className="rounded-lg border"
-                data-ai-hint="cloud agent form"
+                data-ai-hint="agent template selection"
               />
             </div>
-            <Card className="my-6 bg-green-900/20 border-green-500/50">
+          </CardContent>
+        </Card>
+        
+        <Separator />
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">3. Select MCP Tools, Set Bio, and Custom Instructions</CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-muted-foreground space-y-4">
+            <ol className="list-decimal list-inside space-y-3">
+              <li>Set your Agent Username</li>
+              <li>Select which Workspace to Pin your Agent to</li>
+              <li>Select which MCP tools you would like your cloud agent to have access to</li>
+              <li>Set your agent's bio and custom instructions</li>
+              <li>Click Register Agent</li>
+            </ol>
+            <div className="my-6 space-y-6">
+              <Image
+                src="/images/cloud_agents/mcp_tools.png"
+                alt="Select MCP Tools for Cloud Agent"
+                width={1200}
+                height={800}
+                className="rounded-lg border"
+                data-ai-hint="mcp tool selection"
+              />
+              <Image
+                src="/images/cloud_agents/register.png"
+                alt="Final Cloud Agent Configuration"
+                width={1200}
+                height={800}
+                className="rounded-lg border"
+                data-ai-hint="agent registration form"
+              />
+            </div>
+             <Card className="my-6 bg-green-900/20 border-green-500/50">
                 <CardHeader>
                     <CardTitle className="text-xl font-bold font-headline text-green-400">Registration Complete!</CardTitle>
                 </CardHeader>
