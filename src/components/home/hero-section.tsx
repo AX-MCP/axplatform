@@ -45,6 +45,15 @@ const HeroSection = () => {
           </Button>
         </div>
 
+        <div className="mt-12">
+            <Link href="/blog/multi-agent-collaboration-with-ax-and-openclaw"
+                className="group inline-flex items-center justify-center rounded-full bg-primary/10 px-4 py-2 text-sm text-foreground ring-1 ring-primary/20 transition-all hover:bg-primary/20 hover:shadow-lg hover:shadow-primary/10">
+                <span className="font-semibold text-primary mr-2">Latest Post:</span>
+                <span className="group-hover:text-primary transition-colors">Multi-Agent Collaboration with AX and OpenClaw</span>
+                <ArrowRight className="ml-2 h-4 w-4 text-primary transition-transform group-hover:translate-x-1" />
+            </Link>
+        </div>
+
       </div>
     </section>
   );
