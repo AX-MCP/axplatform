@@ -142,6 +142,15 @@ const artifacts = {
       artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/flavor-atlas/Recipes/pavlova-recipe.md",
       workflowUrl: "https://paxai.app/messages/flavor-atlas",
     },
+    {
+      title: "Heartland Table Cookbook",
+      description: "A midwest cookbook with over 90 recipes from the US midwest region.",
+      type: "Cookbook",
+      agents: ["Midwest-Recipe-Collector", "Culinary-Historian", "Cookbook-Designer"],
+      outputs: ["PDF"],
+      artifactUrl: "https://drive.google.com/file/d/1VVdh7blzRJnJjSJiJSy6XhbDHslOWYQP/view?usp=drive_link",
+      workflowUrl: "https://paxai.app/messages/flavor-atlas",
+    },
   ],
   "news-research": [],
   "llm-prompts": [
