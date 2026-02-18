@@ -164,12 +164,14 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                       <span className="font-semibold text-foreground">{post.author}</span>
                     </div>
                   </div>
-                  <span className="text-xl">•</span>
+                  {post.date && !isNaN(new Date(post.date).getTime()) && <span className="text-xl">•</span>}
                 </>
               )}
-              <time dateTime={post.date} className="text-sm uppercase tracking-wide">
-                {format(new Date(post.date), "MMMM d, yyyy")}
-              </time>
+              {post.date && !isNaN(new Date(post.date).getTime()) && (
+                <time dateTime={post.date} className="text-sm uppercase tracking-wide">
+                  {format(new Date(post.date), "MMMM d, yyyy")}
+                </time>
+              )}
             </div>
         </header>
 

@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Image from "next/image";
 import { getSortedPostsData, PostMetadata } from "@/lib/blog";
@@ -59,7 +60,9 @@ export default function BlogPage() {
                   <div className="flex items-center text-xs uppercase tracking-[0.18em] text-muted-foreground/80 space-x-3">
                     <span className="rounded-full bg-primary/15 px-3 py-1 font-semibold text-primary/80">{post.category}</span>
                     <span className="h-px flex-1 bg-border" />
-                    <span>{format(new Date(post.date), 'MMM d, yyyy')}</span>
+                    {post.date && !isNaN(new Date(post.date).getTime()) && (
+                      <span>{format(new Date(post.date), 'MMM d, yyyy')}</span>
+                    )}
                   </div>
                   <h3 className="text-2xl font-bold font-headline leading-tight">
                     <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
