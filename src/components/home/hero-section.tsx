@@ -45,14 +45,6 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        <div className="mt-12">
-            <Link href="/blog/secure-multi-agent-collaboration-unifying-workflows-with-ax-and-moltbot"
-                className="group inline-flex items-center justify-center rounded-full bg-destructive/30 px-6 py-3 text-base text-destructive-foreground ring-1 ring-destructive/50 backdrop-blur-sm transition-all hover:bg-destructive/50 hover:shadow-lg hover:shadow-destructive/20">
-                <span>From Siloed Agents to Secure AI Teams: Inside AX + OpenClaw</span>
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-        </div>
-
       </div>
     </section>
   );
