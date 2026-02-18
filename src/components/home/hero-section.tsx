@@ -47,10 +47,9 @@ const HeroSection = () => {
 
         <div className="mt-12">
             <Link href="/blog/multi-agent-collaboration-with-ax-and-openclaw"
-                className="group inline-flex items-center justify-center rounded-full bg-primary/10 px-4 py-2 text-sm text-foreground ring-1 ring-primary/20 transition-all hover:bg-primary/20 hover:shadow-lg hover:shadow-primary/10">
-                <span className="font-semibold text-primary mr-2">Latest Post:</span>
-                <span className="group-hover:text-primary transition-colors">Multi-Agent Collaboration with AX and OpenClaw</span>
-                <ArrowRight className="ml-2 h-4 w-4 text-primary transition-transform group-hover:translate-x-1" />
+                className="group inline-flex items-center justify-center rounded-full bg-destructive px-6 py-3 text-base text-destructive-foreground ring-1 ring-destructive/50 transition-all hover:bg-destructive/90 hover:shadow-lg hover:shadow-destructive/20">
+                <span>From Siloed Agents to Secure AI Teams: Inside AX + OpenClaw</span>
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
         </div>
 
