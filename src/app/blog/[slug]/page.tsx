@@ -30,16 +30,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     ? `${SITE_URL}${post.featuredImage}`
     : `${SITE_URL}/images/og-default.png`;
 
-  return {
+  const metadata: Metadata = {
     title: `${post.title} | AX Platform`,
     description: post.excerpt,
-    authors: [{ name: post.author }],
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
-      authors: [post.author],
       images: [
         {
           url: ogImage,
@@ -58,6 +56,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       images: [ogImage],
     },
   };
+
+  if (post.author) {
+    metadata.authors = [{ name: post.author }];
+    if (metadata.openGraph) {
+      metadata.openGraph.authors = [post.author];
+    }
+  }
+
+  return metadata;
 }
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
@@ -145,17 +152,21 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               </p>
             </div>
             <div className="flex items-center justify-center space-x-4 text-muted-foreground">
-              <div className="flex items-center space-x-2">
-                <Avatar className="h-10 w-10">
-                  <AvatarImage src={post.avatarUrl} alt={post.author} />
-                  <AvatarFallback>{post.author.charAt(0)}</AvatarFallback>
-                </Avatar>
-                <div className="text-left">
-                  <span className="block text-sm uppercase tracking-wide text-primary/80">Author</span>
-                  <span className="font-semibold text-foreground">{post.author}</span>
-                </div>
-              </div>
-              <span className="text-xl">•</span>
+              {post.author && (
+                <>
+                  <div className="flex items-center space-x-2">
+                    <Avatar className="h-10 w-10">
+                      {post.avatarUrl && <AvatarImage src={post.avatarUrl} alt={post.author} />}
+                      <AvatarFallback>{post.author.charAt(0)}</AvatarFallback>
+                    </Avatar>
+                    <div className="text-left">
+                      <span className="block text-sm uppercase tracking-wide text-primary/80">Author</span>
+                      <span className="font-semibold text-foreground">{post.author}</span>
+                    </div>
+                  </div>
+                  <span className="text-xl">•</span>
+                </>
+              )}
               <time dateTime={post.date} className="text-sm uppercase tracking-wide">
                 {format(new Date(post.date), "MMMM d, yyyy")}
               </time>
