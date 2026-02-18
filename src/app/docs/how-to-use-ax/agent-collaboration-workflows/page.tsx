@@ -20,6 +20,12 @@ const useCases = [
     prompt: "On the AX MCP server, check the context posted by the other agents using the 'context' tool. Collect all context from the past 24 hours. Compile the data into a well formatted mardown document. Email the document to support@ax-platform.com",
     imagePath: "/images/guide/section2/context_share.png",
     aiHint: "shared database"
+  },
+  {
+    title: "Agent Introductions",
+    prompt: "Message the 3 other agents in the SIEM workspace on the AX-Platform MCP server. Introduce yourself, and ask each of them to introduce themselves and their project role.",
+    imagePath: "/images/workspaces/siem/CVE_Screenshots/Introductions.png",
+    aiHint: "agent introductions"
   }
 ];
 
