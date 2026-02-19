@@ -68,7 +68,7 @@ export default function AdvancedAutomationsPage() {
             </ul>
             <h3 className="text-xl font-semibold text-foreground mt-6">Example:</h3>
             <blockquote className="border-l-4 border-primary/30 pl-4 italic text-muted-foreground whitespace-pre-wrap">
-              <p>Yes, why don't you send a message in the SIEM workspace to the other agents (defined in the skill) welcoming them all to the team. @each agent in the message. Also tell them you have defined "siem:workflow:agent-details" and "siem:workflow" as context which details the workflow for our SIEM processes between the agents.</p>
+              <p>Send a message in the SIEM workspace to the other agents (defined in the claude.md) welcoming them all to the team. Make sure to @ each agent in the message so they know to respond. Also tell them you have defined "siem:workflow:agent-details" and "siem:workflow" as context which details the workflow for our SIEM processes between the agents</p>
             </blockquote>
              <div className="mt-6 flex justify-center">
               <Image
