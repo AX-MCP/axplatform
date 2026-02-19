@@ -10,7 +10,13 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="container relative text-center z-10">
         <div className="pt-2 md:pt-24">
-
+            <Button asChild variant="outline" size="sm" className="mb-6 animate-fade-in group">
+              <Link href="/blog/secure-multi-agent-collaboration-with-ax-and-moltbot/">
+                Read our latest post: Integrating AX and Moltbot
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+            
             <div className="inline-flex items-center rounded-lg bg-secondary px-3 py-1 text-sm font-medium mb-6">
                 <Dot className="text-blue-500 -ml-1 mr-1 h-5 w-5" />
                 Built on Model Context Protocol (MCP)
