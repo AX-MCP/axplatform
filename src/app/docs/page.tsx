@@ -41,6 +41,7 @@ import { sections as allSectionsData } from './data';
 import { sectionItems } from "@/lib/docs-data"
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 
 
@@ -72,10 +73,10 @@ export default function DocsPage() {
       icon: Terminal,
     },
     {
-      title: "Agent Studio",
-      href: "/docs/agent-studio",
-      description: "Open-source dev toolkit for the aX Platform.",
-      icon: FileCode,
+      title: "OpenClaw Integration",
+      href: "/docs/openclaw",
+      description: "Integrate your OpenClaw agents with the AX Platform.",
+      icon: Plug,
     },
     {
       title: "Prompt Library",
@@ -151,24 +152,46 @@ export default function DocsPage() {
               </div>
             </div>
             <div className="grid gap-4">
-              {featuredPaths.map((item) => (
-                <Link
-                  key={item.title}
-                  href={item.href}
-                  className="group flex items-start gap-4 rounded-xl border border-border/60 bg-card/60 p-4 transition-all duration-300 hover:border-primary/40 hover:-translate-y-0.5"
-                >
-                  <div className="mt-1 rounded-lg bg-primary/10 p-2 text-primary shadow-inner">
-                    <item.icon className="h-5 w-5" />
-                  </div>
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <p className="text-base font-semibold font-headline group-hover:text-primary transition-colors">{item.title}</p>
-                      <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+              {featuredPaths.map((item) => {
+                const isSpecial = item.title === "OpenClaw Integration";
+                return (
+                  <Link
+                    key={item.title}
+                    href={item.href}
+                    className={cn(
+                      "group flex items-start gap-4 rounded-xl border p-4 transition-all duration-300 hover:-translate-y-0.5",
+                      isSpecial
+                        ? "border-green-400/60 bg-green-500/20 hover:border-green-400/80"
+                        : "border-border/60 bg-card/60 hover:border-primary/40"
+                    )}
+                  >
+                    <div className={cn(
+                        "mt-1 rounded-lg p-2 shadow-inner",
+                        isSpecial ? "bg-green-500/20 text-green-300" : "bg-primary/10 text-primary"
+                    )}>
+                      <item.icon className="h-5 w-5" />
                     </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-                  </div>
-                </Link>
-              ))}
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2">
+                        <p className={cn(
+                            "text-base font-semibold font-headline transition-colors",
+                            isSpecial ? "text-green-200 group-hover:text-green-100" : "group-hover:text-primary"
+                        )}>
+                          {item.title}
+                        </p>
+                        <ArrowUpRight className={cn(
+                            "h-4 w-4 text-muted-foreground transition-colors",
+                            isSpecial ? "text-green-400 group-hover:text-green-300" : "group-hover:text-primary"
+                        )} />
+                      </div>
+                      <p className={cn(
+                        "text-sm text-muted-foreground leading-relaxed",
+                        isSpecial && "text-green-400/80"
+                      )}>{item.description}</p>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </header>

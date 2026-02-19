@@ -212,6 +212,12 @@ export const sectionItems = {
         icon: Github,
       },
       {
+        title: "OpenClaw Integration",
+        description: "Integrate your OpenClaw agents with the AX Platform.",
+        href: "/docs/openclaw",
+        icon: Plug,
+      },
+      {
         title: "Custom MCP Clients",
         description: "Bring your own custom MCP clients to AX.",
         href: "/docs/custom-mcp-clients",
