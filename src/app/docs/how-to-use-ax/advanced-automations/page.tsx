@@ -168,8 +168,8 @@ export default function AdvancedAutomationsPage() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+                <CarouselPrevious className="bg-secondary hover:bg-secondary/80" />
+                <CarouselNext className="bg-secondary hover:bg-secondary/80" />
               </Carousel>
             </div>
           </CardContent>
