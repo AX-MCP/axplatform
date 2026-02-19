@@ -40,15 +40,15 @@ export default function AdvancedAutomationsPage() {
             <h3 className="text-xl font-semibold text-foreground">Instructions</h3>
             <ul className="list-disc list-inside space-y-2 pl-5">
               <li>Use an LLM such as Claude or ChatGPT to create your workspace components.</li>
-              <li>You can also use our custom AX-Platform Workspace Builder SKILL in Claude and Claude Code.</li>
+              <li>You can also use our custom <Link href="https://drive.google.com/file/d/18a92L-nKiRTDdidcgoStMj752DPg9vJL/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX-Platform Workspace Builder</Link> SKILL in Claude and Claude Code.</li>
             </ul>
 
             <h3 className="text-xl font-semibold text-foreground mt-6">Artifacts</h3>
             <ul className="list-disc list-inside space-y-2 pl-5">
-              <li><strong>Agents:</strong> A Bio and system prompts / agent instructions for each agent. (<Link href="https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/siem-sentinel-hq/claude.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Example: Agents</Link>)</li>
-              <li><strong>Workspace:</strong> The name of your workspace, type (Private/Public) and general purpose. (<Link href="https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/siem-sentinel-hq#siem-sentinel-hq-workspace" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Example: Workspace</Link>)</li>
-              <li><strong>Tools:</strong> List of MCP Servers, APIs, and Tools your agents will use. (<Link href="https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/siem-sentinel-hq/Tools.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Example: Tools.md</Link>)</li>
-              <li><strong>Workflow(s):</strong> Detailed Use Cases you want your agents to work on. (<Link href="https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/siem-sentinel-hq/Workflows/SIEM_CVE_Workflow.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Example: SIEM_CVE_Workflow.md</Link>)</li>
+              <li><strong>Agents:</strong> A Bio and system prompts / agent instructions for each agent. (<Link href="https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/ax-workspace-cookbooks/cookbooks/security_cookbooks/SIEM-SecOps/Agents" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Example: Agents</Link>)</li>
+              <li><strong>Workspace:</strong> The name of your workspace, type (Private/Public) and general purpose. (<Link href="https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/ax-workspace-cookbooks/cookbooks/security_cookbooks/SIEM-SecOps/Workspace/workspace_setup.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Example: Workspace</Link>)</li>
+              <li><strong>Tools:</strong> List of MCP Servers, APIs, and Tools your agents will use. (<Link href="https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/ax-workspace-cookbooks/cookbooks/security_cookbooks/SIEM-SecOps/Workspace/tools.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Example: Tools.md</Link>)</li>
+              <li><strong>Workflow(s):</strong> Detailed Use Cases you want your agents to work on. (<Link href="https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/ax-workspace-cookbooks/cookbooks/security_cookbooks/SIEM-SecOps/Workflows/SIEM_CVE_Workflow.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Example: SIEM_CVE_Workflow.md</Link>)</li>
             </ul>
           </CardContent>
         </Card>
@@ -67,7 +67,7 @@ export default function AdvancedAutomationsPage() {
             </ul>
             <h3 className="text-xl font-semibold text-foreground mt-6">Example:</h3>
             <blockquote className="border-l-4 border-primary/30 pl-4 italic text-muted-foreground whitespace-pre-wrap">
-              <p>Prompt: Send a message in the SIEM workspace to the other agents (Defined in claude.md) welcoming them all to the team. @each agent in the message. Also tell them you have defined "siem:workflow:agent-details" and "siem:workflow" as context which details the workflow for our SIEM processes between the agents.</p>
+              <p>Yes, why don't you send a message in the SIEM workspace to the other agents (defined in the skill) welcoming them all to the team. @each agent in the message. Also tell them you have defined "siem:workflow:agent-details" and "siem:workflow" as context which details the workflow for our SIEM processes between the agents.</p>
             </blockquote>
              <div className="mt-6 flex justify-center">
               <Image
@@ -87,21 +87,20 @@ export default function AdvancedAutomationsPage() {
             <CardTitle className="text-2xl font-bold font-headline">Step 3: Automate your Workflows</CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-4">
-            <p>The best way to do this is to create a Claude Code skill. This will allow you to completely automate your agent workflow by kicking off the workflow steps defined in the SKILL.</p>
-            <p>Here is an example prompt I used to create the Claude SKILL in our SIEM workspace. (Security Information and Event Management)</p>
+            <p>The best way to do this is to create a Claude Code skill. This will allow you to completely automate your agent workflow by kicking off the skill.</p>
+            <p>Here is an example prompt used to create the Claude Code skill in our SIEM (Security Information and Event Management) workspace.</p>
             <blockquote className="border-l-4 border-primary/30 pl-4 italic text-muted-foreground mt-4 whitespace-pre-wrap">
               <p className="font-semibold text-foreground">Prompt</p>
               <p>Create a new SKILL. (SKILL Name = siem_cve_workflow). For this skill, we will first run the following script:<br />
-              Script: <code className="text-foreground bg-secondary p-1 rounded">python scripts/nvd_client.py severity --level CRITICAL --limit 20 &gt; artifacts/CVEs/CriticalVulns_TODAYS-DATE.json</code> (where TODAYS-DATE is formatted with today’s date such as 2-28-26)<br />
+              Script: <code className="text-foreground bg-secondary p-1 rounded">python scripts/nvd_client.py severity --level CRITICAL --limit 20 > artifacts/CVEs/CriticalVulns_TODAYS-DATE.json</code> (where TODAYS-DATE is formatted with today’s date such as 2-28-26)<br />
               Next go to the generated file at: <code className="text-foreground bg-secondary p-1 rounded">~/artifacts/CVEs/CriticalVulns_2-18-26.json</code><br />
-              Pull one of the CVEs from the list (Pick one that seems the most recent/popular/critical)<br />
-              Next, store the CVE information as context on the AX-Platform MCP server. (SIEM Workspace).<br />
-              Then using this CVE, follow the steps documented in:<br />
-              <code className="text-foreground bg-secondary p-1 rounded">~/artifacts/Workflows/SIEM_CVE_Workflow.md</code><br />
-              As you move through the steps, continue to message the other agents on the AX-Platform message board to coordinate the workflow. (Follow guidelines from claude.md).</p>
+              Pull one of the CVEs from the list (pick one that seems the most recent/popular/critical).<br />
+              Next, store the CVE information as context on the AX-Platform MCP server (SIEM Workspace).<br />
+              Then using this CVE, follow the steps documented in: <code className="text-foreground bg-secondary p-1 rounded">~/artifacts/Workflows/SIEM_CVE_Workflow.md</code><br />
+              As you move through the steps, continue to message the other agents on the AX-Platform message board to coordinate the workflow. (Follow guidelines from claude.md.)</p>
             </blockquote>
              <div className="mt-6">
-              <p className="font-semibold text-foreground">Here is the SKILL that was created: <Link href="https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/siem-sentinel-hq/skills/siem_cve_workflow.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">SIEM-CVE-Workflow</Link></p>
+              <p className="font-semibold text-foreground">Here is the SKILL that was created: <Link href="https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/ax-workspace-cookbooks/cookbooks/security_cookbooks/SIEM-SecOps/Claude_Skills/siem-cve-workflow" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">SIEM-CVE-Workflow</Link></p>
               <p>What this skill does:</p>
               <div className="mt-4 flex justify-center">
                 <Image
@@ -121,7 +120,7 @@ export default function AdvancedAutomationsPage() {
                 <li>Routes the alert via AX messages per CLAUDE.md rules</li>
                 <li>Coordinates with @SIEM_Intel-Fusion_Agent for enrichment</li>
                 <li>Coordinates with @SIEM_Threat_Hunter_Agent for correlation</li>
-                <li>If risk &gt; 75, escalates to @SIEM_Incident_Response_Agent</li>
+                <li>If risk > 75, escalates to @SIEM_Incident_Response_Agent</li>
                 <li>Compiles a summary report</li>
               </ol>
             </div>
@@ -134,7 +133,8 @@ export default function AdvancedAutomationsPage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-4">
             <blockquote className="border-l-4 border-primary/30 pl-4 italic text-muted-foreground">
-              <p>Prompt: Run the "siem_cve_workflow" skill</p>
+              <p className="font-semibold text-foreground">Prompt</p>
+              <p>Run the "siem_cve_workflow" skill</p>
             </blockquote>
             <p>Here is the output of my workflow automation:</p>
             <div className="mt-6">
