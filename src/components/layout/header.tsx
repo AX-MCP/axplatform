@@ -42,15 +42,10 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm">
       <div className="container flex h-14 items-center">
-        <div className="mr-4 flex items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="bg-primary text-primary-foreground p-1.5 rounded-md flex items-center justify-center h-8 w-8">
-              <span className="font-bold text-sm">AX</span>
-            </div>
-          </Link>
-        </div>
-
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+          <Link href="/" className="transition-colors hover:text-foreground/80">
+            Home
+          </Link>
           {Object.entries(navigationItems).map(([title, items]) => (
             <DropdownMenu key={title}>
               <DropdownMenuTrigger className="flex items-center transition-colors hover:text-foreground/80 focus:outline-none data-[state=open]:text-foreground/80">
@@ -73,9 +68,6 @@ const Header = () => {
           <Link href="/docs" className="transition-colors hover:text-foreground/80">
             Docs
           </Link>
-          <Link href="/blog" className="transition-colors hover:text-foreground/80">
-            Blog
-          </Link>
           <Link href="/investors" className="transition-colors hover:text-foreground/80">
             Investors
           </Link>
@@ -94,12 +86,14 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent side="left" className="w-[240px]">
                 <div className="p-4">
-                  <Link href="/" className="flex items-center space-x-2 mb-8" onClick={() => setIsMobileMenuOpen(false)}>
-                    <div className="bg-primary text-primary-foreground p-1.5 rounded-md flex items-center justify-center h-8 w-8">
-                      <span className="font-bold text-sm">AX</span>
-                    </div>
-                  </Link>
-                  <div className="flex flex-col space-y-6">
+                  <div className="flex flex-col space-y-6 pt-8">
+                    <Link
+                      href="/"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-foreground hover:text-foreground/80"
+                    >
+                      Home
+                    </Link>
                     {Object.entries(navigationItems).map(([title, items]) => (
                       <div key={title} className="flex flex-col space-y-2">
                         <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">{title}</h4>
