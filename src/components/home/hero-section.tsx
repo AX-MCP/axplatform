@@ -4,7 +4,7 @@ import { ArrowRight, Calendar, Dot } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-8 md:pt-24 md:pb-32 bg-background overflow-hidden">
+    <section className="relative pt-8 md:pt-12 md:pb-32 bg-background overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial" />
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="container relative text-center z-10">
@@ -45,7 +45,7 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-6">
-          <Button asChild size="lg" variant="outline" className="border-green-500/50 text-green-400 hover:bg-green-900/20 hover:text-green-300 px-10 py-7 text-xl">
+          <Button asChild size="lg" className="border-green-400/60 bg-green-500/20 text-green-300 hover:bg-green-500/30 hover:text-green-200 px-10 py-5 text-lg">
             <Link href="/blog/secure-multi-agent-collaboration-with-ax-and-moltbot/">
               Connect to OpenClaw
             </Link>
