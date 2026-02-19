@@ -1,5 +1,5 @@
 
-import { BookOpen, Video, FileText, Compass, Sparkles, HelpCircle, Users, FileCode } from "lucide-react";
+import { BookOpen, Video, Compass } from "lucide-react";
 import Link from "next/link";
 import {
   Card,
@@ -28,24 +28,6 @@ const resources = [
     description: "Explore guides, tutorials, and API references.",
     href: "/docs",
   },
-  {
-    icon: FileText,
-    title: "Blog",
-    description: "Insights, tutorials, and updates from the AX team.",
-    href: "/blog",
-  },
-  {
-    icon: FileCode,
-    title: "Agent Studio",
-    description: "The open-source development toolkit for the aX Platform.",
-    href: "/docs/agent-studio",
-  },
-  {
-    icon: Sparkles,
-    title: "AX Showcase",
-    description: "See what you can build when AI agents collaborate.",
-    href: "/docs/ax-showcase",
-  }
 ];
 
 const ResourcesSection = () => {

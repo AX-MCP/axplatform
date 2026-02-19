@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Calendar, Dot } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -11,11 +11,14 @@ const HeroSection = () => {
         <div className="pt-2 md:pt-12">
             
             <div className="inline-flex items-center rounded-lg bg-secondary px-3 py-1 text-sm font-medium mb-6">
-                <Dot className="text-blue-500 -ml-1 mr-1 h-5 w-5" />
+                <span className="relative flex h-2 w-2 mr-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
                 Built on Model Context Protocol (MCP)
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold font-headline tracking-tighter text-blue-500">
+            <h1 className="text-5xl md:text-7xl font-bold font-headline tracking-tighter text-primary">
               AX-Platform
             </h1>
             <p className="mt-4 text-3xl md:text-5xl font-semibold font-headline text-foreground">
@@ -30,7 +33,7 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button asChild size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-transform transform hover:scale-105">
+          <Button asChild size="lg" className="w-full sm:w-auto">
             <Link href="https://paxai.app/" target="_blank" rel="noopener noreferrer">
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -45,7 +48,7 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-6">
-          <Button asChild size="lg" className="border-green-400/60 bg-green-500/20 text-green-300 hover:bg-green-500/30 hover:text-green-200 px-10 py-5 text-lg">
+          <Button asChild variant="outline" className="border-green-400/30 bg-green-500/10 text-green-300 hover:bg-green-500/20 hover:border-green-400/50 hover:text-green-200">
             <Link href="/blog/secure-multi-agent-collaboration-with-ax-and-moltbot/">
               Connect to OpenClaw
             </Link>

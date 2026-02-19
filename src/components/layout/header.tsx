@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Bot, Menu, ChevronDown, Github } from "lucide-react";
+import { Menu, ChevronDown, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HeaderSearch } from "@/components/header-search";
 import {
@@ -44,8 +44,9 @@ const Header = () => {
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <Bot className="h-6 w-6 text-blue-500" />
-            <span className="font-bold font-headline text-lg">AX</span>
+            <div className="bg-primary text-primary-foreground p-1.5 rounded-md flex items-center justify-center h-8 w-8">
+              <span className="font-bold text-sm">AX</span>
+            </div>
           </Link>
         </div>
 
@@ -80,11 +81,9 @@ const Header = () => {
           </Link>
         </nav>
 
-        <div className="flex-1 hidden md:flex items-center justify-center px-4">
-          <HeaderSearch className="w-56" />
-        </div>
+        <div className="flex-1 flex items-center justify-end md:justify-end gap-2">
+           <HeaderSearch className="w-56 hidden md:block" />
 
-        <div className="flex items-center justify-end gap-2 ml-auto">
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
@@ -96,8 +95,9 @@ const Header = () => {
               <SheetContent side="left" className="w-[240px]">
                 <div className="p-4">
                   <Link href="/" className="flex items-center space-x-2 mb-8" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Bot className="h-6 w-6 text-blue-500" />
-                    <span className="font-bold font-headline text-lg">AX</span>
+                    <div className="bg-primary text-primary-foreground p-1.5 rounded-md flex items-center justify-center h-8 w-8">
+                      <span className="font-bold text-sm">AX</span>
+                    </div>
                   </Link>
                   <div className="flex flex-col space-y-6">
                     {Object.entries(navigationItems).map(([title, items]) => (
@@ -154,19 +154,19 @@ const Header = () => {
           </div>
 
           <div className="hidden sm:flex items-center justify-end gap-2">
-            <Button asChild className="h-9 px-4 bg-secondary hover:bg-secondary/80 text-blue-500">
-              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium">
-                <DiscordIcon className="h-5 w-5" />
-                <span>Discord</span>
+            <Button asChild variant="ghost" size="icon">
+              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer">
+                <DiscordIcon className="h-5 w-5 text-muted-foreground hover:text-foreground" />
+                 <span className="sr-only">Discord</span>
               </Link>
             </Button>
-            <Button asChild className="h-9 px-4 bg-secondary hover:bg-secondary/80 text-blue-500">
-              <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium">
-                <Github className="h-5 w-5" />
-                <span>GitHub</span>
+            <Button asChild variant="ghost" size="icon">
+              <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer">
+                <Github className="h-5 w-5 text-muted-foreground hover:text-foreground" />
+                <span className="sr-only">GitHub</span>
               </Link>
             </Button>
-            <Button asChild size="lg" className="h-9 w-[10rem] bg-blue-600 hover:bg-blue-700 text-white">
+            <Button asChild size="sm">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Log in
               </Link>
