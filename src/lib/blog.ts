@@ -8,7 +8,7 @@ import html from 'remark-html';
 const postsDirectory = path.join(process.cwd(), 'src/content/blog');
 
 const slugsToIgnore = [
-    'secure-multi-agent-collaboration-unifying-workflows-with-ax-and-moltbot'
+    'multi-agent-collaboration-with-ax-and-openclaw'
 ];
 
 export type Post = {

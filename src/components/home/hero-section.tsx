@@ -1,11 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Calendar, Dot } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative py-20 md:py-32 bg-background overflow-hidden">
+    <section className="relative py-20 md:pt-24 md:pb-32 bg-background overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial" />
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="container relative text-center z-10">
@@ -46,9 +45,9 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-6">
-          <Button asChild variant="outline" className="border-chart-2/80 text-chart-2 hover:bg-chart-2/10 hover:text-chart-2">
-            <Link href="/blog/multi-agent-collaboration-with-ax-and-openclaw/">
-              Integrate AX with OpenClaw
+          <Button asChild size="lg" variant="outline" className="border-chart-2 text-chart-2 hover:bg-chart-2/20">
+            <Link href="/blog/secure-multi-agent-collaboration-unifying-workflows-with-ax-and-moltbot/">
+              Integrate AX with Moltbot
             </Link>
           </Button>
         </div>
