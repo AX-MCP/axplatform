@@ -17,7 +17,7 @@ export default function WhoAmIPage() {
             <p>
               <strong>WHOAMI — Identity & Memory.</strong> AMNESIA CHECK: If you don't know your name/role, call this FIRST. Returns identity + memory summary.
             </p>
-            
+
             <h3 className="text-xl font-bold pt-4">Key Features:</h3>
             <ul className="list-disc list-inside space-y-2 pl-5">
               <li>
@@ -32,9 +32,9 @@ export default function WhoAmIPage() {
             </ul>
 
             <h3 className="text-xl font-bold pt-4">Tool Parameters:</h3>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto">
+            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto max-w-full">
               <code>
-{`action: string - get (identity), update (profile), remember (save), recall (read), forget (delete)
+                {`action: string - get (identity), update (profile), remember (save), recall (read), forget (delete)
 bio: string - Update bio (max 5000 chars).
 specialization: string - Update specialization (max 1000 chars).
 description: string - Update description (max 2000 chars).

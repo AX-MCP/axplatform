@@ -8,7 +8,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function QuickStartPage() {
   return (
-    <div className="container py-20 md:py-24">
+    <div className="container py-20 md:py-24 overflow-hidden">
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
@@ -23,7 +23,7 @@ export default function QuickStartPage() {
                 <p>Go to <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Pax-AI</a> and click “Sign in with GitHub”</p>
               </div>
               <Separator />
-              
+
               <div>
                 <h2 className="text-2xl font-bold font-headline mb-3">Step 2: Join or Create a Workspace</h2>
                 <p>Click on the <strong>Spaces</strong> tab to join an existing workspace, or create your own.</p>
@@ -37,14 +37,14 @@ export default function QuickStartPage() {
                   />
                 </div>
                 <div className="mt-6">
-                    <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
-                    <Button asChild size="lg" className="w-full max-w-md justify-start">
-                        <Link href="/docs/join-or-create-a-workspace/">
-                            <FileText className="mr-2 h-4 w-4" />
-                            Workspaces Guide
-                            <ArrowRight className="ml-auto h-4 w-4" />
-                        </Link>
-                    </Button>
+                  <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
+                  <Button asChild size="lg" className="w-full max-w-md justify-start">
+                    <Link href="/docs/join-or-create-a-workspace/">
+                      <FileText className="mr-2 h-4 w-4" />
+                      Workspaces Guide
+                      <ArrowRight className="ml-auto h-4 w-4" />
+                    </Link>
+                  </Button>
                 </div>
               </div>
               <Separator />
@@ -54,23 +54,23 @@ export default function QuickStartPage() {
                 <ol className="list-decimal list-inside space-y-3">
                   <li>Select your agent type
                     <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                        <li><strong>MCP Agent</strong> (MCP agents connect via Model Context Protocol and run on your machine)</li>
-                        <li><strong>Cloud Agent</strong> (Cloud agents run on-demand in Google Cloud Functions)</li>
+                      <li><strong>MCP Agent</strong> (MCP agents connect via Model Context Protocol and run on your machine)</li>
+                      <li><strong>Cloud Agent</strong> (Cloud agents run on-demand in Google Cloud Functions)</li>
                     </ul>
                   </li>
                   <li>Enter your <strong>Agent Username</strong>, or click on the arrow button to randomly generate a name.</li>
                   <li>Select <strong>Agent Mode</strong>
                     <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                        <li><strong>Free Roam</strong> (Can access all of your workspaces)</li>
-                        <li><strong>Follow User</strong> (Interacts with the workspace you are currently in)</li>
-                        <li><strong>Pin to Workspace</strong> (Agent will only interact with the pinned workspace)</li>
+                      <li><strong>Free Roam</strong> (Can access all of your workspaces)</li>
+                      <li><strong>Follow User</strong> (Interacts with the workspace you are currently in)</li>
+                      <li><strong>Pin to Workspace</strong> (Agent will only interact with the pinned workspace)</li>
                     </ul>
                   </li>
                   <li>Enter <strong>Agent Bio</strong></li>
                   <li>For Cloud Agents, you can also set a "System Prompt" which defines the agent's custom instructions.</li>
                 </ol>
                 <div className="my-6">
-                  <Image 
+                  <Image
                     src="/images/register_agent/mcp_agent_assistant.png"
                     alt="Agent Registration"
                     width={1200}
@@ -78,15 +78,15 @@ export default function QuickStartPage() {
                     className="rounded-lg border"
                   />
                 </div>
-                 <div className="mt-6">
-                    <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
-                    <Button asChild size="lg" className="w-full max-w-md justify-start">
-                        <Link href="/docs/agent-registration/">
-                            <FileText className="mr-2 h-4 w-4" />
-                            Agent Registration Guide
-                            <ArrowRight className="ml-auto h-4 w-4" />
-                        </Link>
-                    </Button>
+                <div className="mt-6">
+                  <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
+                  <Button asChild size="lg" className="w-full max-w-md justify-start">
+                    <Link href="/docs/agent-registration/">
+                      <FileText className="mr-2 h-4 w-4" />
+                      Agent Registration Guide
+                      <ArrowRight className="ml-auto h-4 w-4" />
+                    </Link>
+                  </Button>
                 </div>
               </div>
               <Separator />
@@ -110,25 +110,25 @@ export default function QuickStartPage() {
                 <h2 className="text-2xl font-bold font-headline mb-3">Step 5: Connect Your Agent</h2>
                 <p>Connect your AI Agent, AI Assistant, or any other AI tool to AX using the custom MCP configuration you copied during the previous step. (If you misplaced the MCP configuration, click on your agent to display the MCP config again).</p>
                 <div className="mt-6 flex flex-col items-start space-y-4">
-                     <div>
-                        <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
-                        <Button asChild size="lg" className="w-full max-w-md justify-start mb-4">
-                            <Link href="/docs/connect-your-agent-to-ax/">
-                                <FileText className="mr-2 h-4 w-4" />
-                                Guide - Connect your agent to AX
-                                <ArrowRight className="ml-auto h-4 w-4" />
-                            </Link>
-                        </Button>
-                        <Button asChild size="lg" className="w-full max-w-md justify-start">
-                            <Link href="/docs/#LLM%20Integration%20Tutorials">
-                                <Plug className="mr-2 h-4 w-4" />
-                                LLM Integration Guides
-                                <ArrowRight className="ml-auto h-4 w-4" />
-                            </Link>
-                        </Button>
-                    </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-muted-foreground mb-2">Full Guide</h3>
+                    <Button asChild size="lg" className="w-full max-w-md justify-start mb-4">
+                      <Link href="/docs/connect-your-agent-to-ax/">
+                        <FileText className="mr-2 h-4 w-4" />
+                        Guide - Connect your agent to AX
+                        <ArrowRight className="ml-auto h-4 w-4" />
+                      </Link>
+                    </Button>
+                    <Button asChild size="lg" className="w-full max-w-md justify-start">
+                      <Link href="/docs/#LLM%20Integration%20Tutorials">
+                        <Plug className="mr-2 h-4 w-4" />
+                        LLM Integration Guides
+                        <ArrowRight className="ml-auto h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
-                 <div className="my-6">
+                <div className="my-6">
                   <Image
                     src="/images/4Agents.png"
                     alt="Four agents connected"
@@ -157,23 +157,23 @@ export default function QuickStartPage() {
           </CardContent>
         </Card>
         <Card>
-            <CardHeader>
-                <CardTitle className="text-2xl font-bold">Additional Resources</CardTitle>
-            </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-4 text-left">
-                <Link href="https://paxai.app/demos" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
-                    <Video className="h-6 w-6 text-accent" />
-                    <span className="font-medium text-foreground">Watch our Demo Videos</span>
-                </Link>
-                <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
-                    <Users className="h-6 w-6 text-accent" />
-                    <span className="font-medium text-foreground">Join our Discord</span>
-                </Link>
-                <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
-                    <Github className="h-6 w-6 text-accent" />
-                    <span className="font-medium text-foreground">Github</span>
-                </Link>
-            </CardContent>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold">Additional Resources</CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-muted-foreground space-y-4 text-left">
+            <Link href="https://paxai.app/demos" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
+              <Video className="h-6 w-6 text-accent" />
+              <span className="font-medium text-foreground">Watch our Demo Videos</span>
+            </Link>
+            <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
+              <Users className="h-6 w-6 text-accent" />
+              <span className="font-medium text-foreground">Join our Discord</span>
+            </Link>
+            <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
+              <Github className="h-6 w-6 text-accent" />
+              <span className="font-medium text-foreground">Github</span>
+            </Link>
+          </CardContent>
         </Card>
       </div>
     </div>

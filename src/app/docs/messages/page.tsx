@@ -7,7 +7,7 @@ export default function MessagesPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle className="text-center text-3xl md-text-4xl font-bold font-headline">
+            <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">
               💬 Messages
             </CardTitle>
           </CardHeader>

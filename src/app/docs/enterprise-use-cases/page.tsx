@@ -7,7 +7,7 @@ import { Download } from "lucide-react";
 
 export default function EnterpriseUseCasesPage() {
   return (
-    <div className="container py-20 md:py-24">
+    <div className="container py-20 md:py-24 overflow-hidden">
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
@@ -25,40 +25,40 @@ export default function EnterpriseUseCasesPage() {
         </Card>
 
         <Card>
-            <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline">Featured Use Case Slide Decks</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-                <div className="space-y-3">
-                    <h3 className="text-xl font-semibold font-headline text-foreground">Knowledge Hub (Knowledge Management and Research)</h3>
-                    <Button asChild>
-                        <Link href="https://drive.google.com/file/d/1z7BiLHKaqXMSYvLLZC60G3y2DSUFPVlO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            <Download className="mr-2 h-4 w-4" />
-                            Download PDF
-                        </Link>
-                    </Button>
-                </div>
-                <div className="space-y-3">
-                    <h3 className="text-xl font-semibold font-headline text-foreground">SIEM (Cloud SecOps and Compliance Automation)</h3>
-                    <Button asChild>
-                        <Link href="https://drive.google.com/file/d/15YX-C_axV07pSbcw7j7Fq0W8Hsrtg9Pr/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            <Download className="mr-2 h-4 w-4" />
-                            Download PDF
-                        </Link>
-                    </Button>
-                </div>
-                <div className="space-y-3">
-                    <h3 className="text-xl font-semibold font-headline text-foreground">Scrum Team (Agile Development Automation)</h3>
-                    <Button asChild>
-                        <Link href="https://drive.google.com/file/d/1ske0rLDQP1VHEjP7Kfv-x0sEdTeukRzl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            <Download className="mr-2 h-4 w-4" />
-                            Download PDF
-                        </Link>
-                    </Button>
-                </div>
-            </CardContent>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">Featured Use Case Slide Decks</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="space-y-3">
+              <h3 className="text-xl font-semibold font-headline text-foreground">Knowledge Hub (Knowledge Management and Research)</h3>
+              <Button asChild>
+                <Link href="https://drive.google.com/file/d/1z7BiLHKaqXMSYvLLZC60G3y2DSUFPVlO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download PDF
+                </Link>
+              </Button>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-xl font-semibold font-headline text-foreground">SIEM (Cloud SecOps and Compliance Automation)</h3>
+              <Button asChild>
+                <Link href="https://drive.google.com/file/d/15YX-C_axV07pSbcw7j7Fq0W8Hsrtg9Pr/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download PDF
+                </Link>
+              </Button>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-xl font-semibold font-headline text-foreground">Scrum Team (Agile Development Automation)</h3>
+              <Button asChild>
+                <Link href="https://drive.google.com/file/d/1ske0rLDQP1VHEjP7Kfv-x0sEdTeukRzl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download PDF
+                </Link>
+              </Button>
+            </div>
+          </CardContent>
         </Card>
-        
+
         <Card>
           <CardHeader>
             <CardTitle className="text-2xl font-bold">Cloud SecOps and Compliance Automation</CardTitle>
@@ -109,20 +109,20 @@ export default function EnterpriseUseCasesPage() {
             <p>
               The Scrum Team Collaboration Hub orchestrates agile development through intelligent agent coordination and MCP-native integrations. This workspace transforms traditional Scrum processes by automating ceremony management, streamlining backlog prioritization, and providing real-time performance insights while maintaining human oversight.
             </p>
-             <p className="font-bold">Use Case: Agile Development Automation</p>
-             <ul className="list-disc list-inside space-y-2 pl-5">
-                <li><strong>@ScrumMaster:</strong> Ensures ceremonies run smoothly and impediments are quickly resolved.</li>
-                <li><strong>@ProductOwner:</strong> Maintains a well-prioritized backlog aligned with business objectives.</li>
-                <li><strong>@TechLead:</strong> Provides technical oversight and architecture guidance.</li>
-                <li><strong>@QALead:</strong> Ensures comprehensive quality assurance through automated testing.</li>
-                <li><strong>@TeamAnalyst:</strong> Continuously monitors performance to identify optimization opportunities.</li>
+            <p className="font-bold">Use Case: Agile Development Automation</p>
+            <ul className="list-disc list-inside space-y-2 pl-5">
+              <li><strong>@ScrumMaster:</strong> Ensures ceremonies run smoothly and impediments are quickly resolved.</li>
+              <li><strong>@ProductOwner:</strong> Maintains a well-prioritized backlog aligned with business objectives.</li>
+              <li><strong>@TechLead:</strong> Provides technical oversight and architecture guidance.</li>
+              <li><strong>@QALead:</strong> Ensures comprehensive quality assurance through automated testing.</li>
+              <li><strong>@TeamAnalyst:</strong> Continuously monitors performance to identify optimization opportunities.</li>
             </ul>
             <p>
               This unified approach provides unprecedented visibility into team dynamics, connecting tools like Jira, GitHub, and Slack to eliminate information silos and create a self-improving agile environment.
             </p>
           </CardContent>
         </Card>
-        
+
         <Card>
           <CardHeader>
             <CardTitle className="text-2xl font-bold">Cross-Department Collaboration</CardTitle>

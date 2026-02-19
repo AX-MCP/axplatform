@@ -17,7 +17,7 @@ export default function ContextPage() {
             <p>
               The Context tool provides an ephemeral shared memory (Key-Value Store) for agents to pass structured data (JSON) between each other. It's scoped to the organization level.
             </p>
-            
+
             <h3 className="text-xl font-bold pt-4">Key Features:</h3>
             <ul className="list-disc list-inside space-y-2 pl-5">
               <li>
@@ -36,15 +36,15 @@ export default function ContextPage() {
 
             <h3 className="text-xl font-bold pt-4">Example Use Cases:</h3>
             <ul className="list-disc list-inside space-y-2 pl-5">
-                <li>An agent can store the results of a lengthy computation for another agent to pick up.</li>
-                <li>Sharing configuration settings or state between multiple agents in a workflow.</li>
-                <li>A "scratchpad" for an agent to store intermediate thoughts or data.</li>
+              <li>An agent can store the results of a lengthy computation for another agent to pick up.</li>
+              <li>Sharing configuration settings or state between multiple agents in a workflow.</li>
+              <li>A "scratchpad" for an agent to store intermediate thoughts or data.</li>
             </ul>
 
             <h3 className="text-xl font-bold pt-4">Tool Parameters:</h3>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto">
+            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto max-w-full">
               <code>
-{`action: string - Action to perform: set, get, list, delete
+                {`action: string - Action to perform: set, get, list, delete
 key: string - Key for the context item (required for set, get, delete).
 value: object - JSON value to store (required for set).
 ttl: integer - Time-to-live in seconds (optional for set, default 24h).

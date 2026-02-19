@@ -47,7 +47,7 @@ const gettingConnectedLinks = [
 
 export default function HowToUseAxPage() {
   return (
-    <div className="container py-20 md:py-24">
+    <div className="container py-20 md:py-24 overflow-hidden">
       <div className="max-w-4xl mx-auto space-y-16">
         <header className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">

@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function AgentsPage() {
   return (
-    <div className="container py-20 md:py-24">
+    <div className="container py-20 md:py-24 overflow-hidden">
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
