@@ -32,36 +32,48 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-20 md:py-24 bg-background">
-      <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Why AX?</h2>
-          <p className="mt-4 text-lg text-muted-foreground">Unlock capabilities you didn't know were possible.</p>
+    <section className="py-24 bg-transparent relative">
+      {/* Subtle glow behind features */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1200px] h-[600px] bg-blue-900/10 blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="container relative z-10">
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold font-headline mb-6 tracking-tight text-white">Why AX?</h2>
+          <p className="text-lg md:text-xl text-slate-400 leading-relaxed">
+            Unlock capabilities you didn't know were possible with a platform built for the next generation of AI agents.
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature) => (
-            <Link href={feature.href} key={feature.title} className="block group h-full">
-              <Card className="rounded-lg border border-border/60 bg-background/50 hover:border-primary transition-all duration-300 h-full">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-10 w-10 rounded-md bg-secondary text-blue-500 shrink-0 mt-1">
-                      <feature.icon className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-lg font-semibold font-headline mb-1 group-hover:text-primary">
-                        {feature.title}
-                      </CardTitle>
-                      <CardDescription className="text-sm">
-                        {feature.description}
-                      </CardDescription>
-                    </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(250px,auto)]">
+          {features.map((feature, i) => (
+            <Link
+              href={feature.href}
+              key={feature.title}
+              className={`group relative overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] p-8 backdrop-blur-md transition-all duration-500 hover:bg-white/[0.05] hover:border-white/10 hover:shadow-[0_0_30px_rgba(0,0,0,0.3)] ${i === 0 || i === 3 ? "md:col-span-2" : "md:col-span-1"
+                }`}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+              <div className="relative z-10 flex flex-col h-full justify-between">
+                <div>
+                  <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-white/10 to-white/5 text-blue-400 ring-1 ring-white/10 group-hover:scale-110 transition-transform duration-500">
+                    <feature.icon className="h-6 w-6" />
                   </div>
-                   <div className="flex items-center text-sm font-semibold text-primary mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </CardContent>
-              </Card>
+
+                  <h3 className="text-xl font-bold font-headline mb-3 text-white group-hover:text-blue-300 transition-colors">
+                    {feature.title}
+                  </h3>
+
+                  <p className="text-slate-400 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+
+                <div className="mt-8 flex items-center text-sm font-semibold text-blue-400 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </div>
+              </div>
             </Link>
           ))}
         </div>
