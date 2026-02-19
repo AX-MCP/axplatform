@@ -1,14 +1,38 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { ListTodo } from "lucide-react";
+
+const tool = {
+    name: "tasks",
+    toolName: "tasks",
+    fullName: "/.../tasks",
+    description: "Operations (action): list, find, details, create, update, assign, release, current, suggestions, search, help",
+    parameters: [
+      { param: "action", type: "enum", desc: "" },
+      { param: "task_id", type: "string", desc: "short ID or UUID" },
+      { param: "title", type: "string", desc: "required for create" },
+      { param: "description", type: "string", desc: "markdown" },
+      { param: "priority", type: "string", desc: "default \"medium\"; values described: low/medium/high/urgent" },
+      { param: "status", type: "string", desc: "default \"not_started\"; values described: not_started/in_progress/blocked/completed/cancelled" },
+      { param: "filter", type: "string", desc: "default \"my_tasks\"; values described: my_tasks/available/assigned/all/completed" },
+      { param: "limit", type: "number", desc: "default 20; max 100" },
+      { param: "note", type: "string", desc: "appends timestamped progress update" },
+      { param: "links", type: "string[]", desc: "replaces existing links when updating" },
+      { param: "closing_note", type: "string", desc: "used when completing" },
+    ],
+};
 
 export default function TasksPage() {
   return (
-    <div className="container py-20 md:py-24">
+    <div className="container py-12 md:py-20">
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">
-              ✅ Tasks
+            <CardTitle className="text-center text-2xl sm:text-3xl font-bold font-headline flex items-center justify-center gap-3">
+              <ListTodo className="h-8 w-8" />
+              Tasks
             </CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
@@ -39,9 +63,63 @@ export default function TasksPage() {
               "Change the status of task #42 to 'In Progress'."</code></pre>
 
             <p>
-              See: <a href="https://github.com/ax-platform/ax-platform-mcp/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MCP Tool Prompts</a>
+              See: <a href="/docs/prompt-library/" className="text-primary hover:underline">MCP Tool Prompts</a>
             </p>
           </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">UI Example</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Image
+              src="/images/ui/tasks.png"
+              alt="UI Example for Tasks"
+              width={1200}
+              height={800}
+              className="rounded-lg border"
+              data-ai-hint="task board"
+            />
+          </CardContent>
+        </Card>
+
+        <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold font-headline">MCP Tool Reference: tasks</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="text-muted-foreground space-y-2">
+                <p><strong className="text-foreground">URI:</strong> <code>{tool.fullName}</code></p>
+                <p><strong className="text-foreground">Description:</strong> {tool.description}</p>
+              </div>
+
+              {tool.parameters.length > 0 && (
+                <div>
+                  <h3 className="text-xl font-semibold font-headline mb-4">Request fields:</h3>
+                  <div className="overflow-x-auto">
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead>Parameter</TableHead>
+                          <TableHead>Type</TableHead>
+                          <TableHead>Description</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        {tool.parameters.map((param) => (
+                          <TableRow key={param.param}>
+                            <TableCell className="font-mono whitespace-nowrap"><code>{param.param}</code></TableCell>
+                            <TableCell className="font-mono"><em>{param.type}</em></TableCell>
+                            <TableCell dangerouslySetInnerHTML={{ __html: param.desc }}></TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </div>
+                </div>
+              )}
+            </CardContent>
         </Card>
 
         <Card>

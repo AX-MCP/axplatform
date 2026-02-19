@@ -1,14 +1,35 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { UserSquare } from "lucide-react";
+import Image from "next/image";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+
+const tool = {
+  name: "whoami",
+  toolName: "whoami",
+  fullName: "/.../whoami",
+  description: "Operations (action): get, update, remember, recall, forget, list",
+  parameters: [
+    { param: "action", type: "enum", desc: "" },
+    { param: "bio", type: "string", desc: "update" },
+    { param: "specialization", type: "string", desc: "update" },
+    { param: "description", type: "string", desc: "update" },
+    { param: "system_prompt", type: "string", desc: "update" },
+    { param: "capabilities", type: "string[]", desc: "update" },
+    { param: "key", type: "string", desc: "for remember/recall/forget/list" },
+    { param: "value", type: "string", desc: "for remember - schema says string/number/bool/JSON, but field type is provided as string here" },
+    { param: "ttl", type: "number", desc: "seconds; remember; max 1 year" },
+    { param: "prefix", type: "string", desc: "list filter" },
+  ],
+};
 
 export default function WhoAmIPage() {
   return (
-    <div className="container py-20 md:py-24">
+    <div className="container py-12 md:py-20">
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline flex items-center justify-center gap-3">
+            <CardTitle className="text-center text-2xl sm:text-3xl font-bold font-headline flex items-center justify-center gap-3">
               <UserSquare className="h-8 w-8" />
               WhoAmI
             </CardTitle>
@@ -31,26 +52,66 @@ export default function WhoAmIPage() {
               </li>
             </ul>
 
-            <h3 className="text-xl font-bold pt-4">Tool Parameters:</h3>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto max-w-full">
-              <code>
-                {`action: string - get (identity), update (profile), remember (save), recall (read), forget (delete)
-bio: string - Update bio (max 5000 chars).
-specialization: string - Update specialization (max 1000 chars).
-description: string - Update description (max 2000 chars).
-system_prompt: string - Update system prompt (max 10000 chars).
-capabilities: array - Update capabilities.
-key: string - Key for memory operations (remember/recall/forget).
-value: string - Value to store for 'remember' action. Can be string, number, boolean, or JSON object.`}
-              </code>
-            </pre>
-
             <p>
               See our full list of example prompts{" "}
-              <a href="https://github.com/ax-platform/ax-platform-mcp/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              <a href="/docs/prompt-library/" className="text-primary hover:underline">
                 Here
               </a>.
             </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">UI Example</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Image
+              src="https://picsum.photos/seed/whoami-ui/1200/800"
+              alt="UI Example for WhoAmI"
+              width={1200}
+              height={800}
+              className="rounded-lg border"
+              data-ai-hint="agent profile"
+            />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">MCP Tool Reference: whoami</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="text-muted-foreground space-y-2">
+              <p><strong className="text-foreground">URI:</strong> <code>{tool.fullName}</code></p>
+              <p><strong className="text-foreground">Description:</strong> {tool.description}</p>
+            </div>
+
+            {tool.parameters.length > 0 && (
+              <div>
+                <h3 className="text-xl font-semibold font-headline mb-4">Request fields:</h3>
+                <div className="overflow-x-auto">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Parameter</TableHead>
+                        <TableHead>Type</TableHead>
+                        <TableHead>Description</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {tool.parameters.map((param) => (
+                        <TableRow key={param.param}>
+                          <TableCell className="font-mono whitespace-nowrap"><code>{param.param}</code></TableCell>
+                          <TableCell className="font-mono"><em>{param.type}</em></TableCell>
+                          <TableCell dangerouslySetInnerHTML={{ __html: param.desc }}></TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+              </div>
+            )}
           </CardContent>
         </Card>
 

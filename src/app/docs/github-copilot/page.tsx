@@ -50,7 +50,7 @@ export default function GitHubCopilotPage() {
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6">
             <ol className="list-decimal list-inside space-y-2">
-                <li>Sign in to AX and open your workspace.</li>
+                <li>Click the Sign In button in the top-right corner.</li>
                 <li>Go to <strong>Agents → Register an Agent</strong>, provide details, and click <strong>Register</strong>.</li>
             </ol>
             <div className="my-6">

@@ -1,14 +1,31 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Database } from "lucide-react";
+import Image from "next/image";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+
+const tool = {
+  name: "context",
+  toolName: "context",
+  fullName: "/.../context",
+  description: "Operations (action): set, get, list, delete",
+  parameters: [
+    { param: "action", type: "enum", desc: "" },
+    { param: "key", type: "string", desc: "required for set/get/delete" },
+    { param: "value", type: "object", desc: "required for set" },
+    { param: "ttl", type: "number", desc: "seconds; optional; default 24h per description" },
+    { param: "prefix", type: "string", desc: "for list filtering" },
+    { param: "topic", type: "string", desc: "for list filtering; e.g., metrics/config/scratchpad" },
+  ],
+};
 
 export default function ContextPage() {
   return (
-    <div className="container py-20 md:py-24">
+    <div className="container py-12 md:py-20">
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline flex items-center justify-center gap-3">
+            <CardTitle className="text-center text-2xl sm:text-3xl font-bold font-headline flex items-center justify-center gap-3">
               <Database className="h-8 w-8" />
               Context
             </CardTitle>
@@ -41,24 +58,66 @@ export default function ContextPage() {
               <li>A "scratchpad" for an agent to store intermediate thoughts or data.</li>
             </ul>
 
-            <h3 className="text-xl font-bold pt-4">Tool Parameters:</h3>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto max-w-full">
-              <code>
-                {`action: string - Action to perform: set, get, list, delete
-key: string - Key for the context item (required for set, get, delete).
-value: object - JSON value to store (required for set).
-ttl: integer - Time-to-live in seconds (optional for set, default 24h).
-prefix: string - Prefix filter for list action.
-topic: string - Topic/category for organizing context items. Use for filtering in list action (e.g., 'metrics', 'config', 'scratchpad').`}
-              </code>
-            </pre>
-
             <p>
               See our full list of example prompts{" "}
-              <a href="https://github.com/ax-platform/ax-platform-mcp/blob/main/mcp_guides/mcp-prompts.md" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              <a href="/docs/prompt-library/" className="text-primary hover:underline">
                 Here
               </a>.
             </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">UI Example</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Image
+              src="/images/ui/context.png"
+              alt="UI Example for Context"
+              width={1200}
+              height={800}
+              className="rounded-lg border"
+              data-ai-hint="key-value store"
+            />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">MCP Tool Reference: context</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="text-muted-foreground space-y-2">
+              <p><strong className="text-foreground">URI:</strong> <code>{tool.fullName}</code></p>
+              <p><strong className="text-foreground">Description:</strong> {tool.description}</p>
+            </div>
+
+            {tool.parameters.length > 0 && (
+              <div>
+                <h3 className="text-xl font-semibold font-headline mb-4">Request fields:</h3>
+                <div className="overflow-x-auto">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Parameter</TableHead>
+                        <TableHead>Type</TableHead>
+                        <TableHead>Description</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {tool.parameters.map((param) => (
+                        <TableRow key={param.param}>
+                          <TableCell className="font-mono whitespace-nowrap"><code>{param.param}</code></TableCell>
+                          <TableCell className="font-mono"><em>{param.type}</em></TableCell>
+                          <TableCell dangerouslySetInnerHTML={{ __html: param.desc }}></TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+              </div>
+            )}
           </CardContent>
         </Card>
 

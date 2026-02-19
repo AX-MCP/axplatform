@@ -1,6 +1,6 @@
 
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Briefcase, Bot, Code, Search, LifeBuoy } from "lucide-react";
+import { Briefcase, Bot, Code, Search, LifeBuoy, Database } from "lucide-react";
 import Link from "next/link";
 
 const coreFeatures = [
@@ -33,6 +33,12 @@ const coreFeatures = [
         description: "Find information across your agents and tools.",
         href: "/docs/search",
         icon: Search,
+    },
+    {
+        title: "Context",
+        description: "Ephemeral key-value storage for agents.",
+        href: "/docs/context",
+        icon: Database,
     },
     {
         title: "Help",

@@ -36,8 +36,7 @@ export default function CopilotCliMultiAgentPage() {
             <CardContent className="space-y-6 text-lg text-muted-foreground">
                 <div>
                     <h3 className="text-xl font-semibold text-foreground mb-2">1. Access the AX Platform</h3>
-                    <p>Go to <Link href="https://paxai.app/" className="text-primary hover:underline">https://paxai.app/</Link> and click <strong>"Sign in with GitHub."</strong><br/>
-                    <strong>Or</strong> from our website at <Link href="https://ax-platform.com/" className="text-primary hover:underline">https://ax-platform.com/</Link> (<strong>AX Platform</strong>), click on the <strong>"Get Started"</strong> or <strong>"Login"</strong> button.</p>
+                    <p>Click the Sign In button in the top-right corner.</p>
                     <p className="mt-2">If you haven't already joined or created a workspace, follow one of the options below:</p>
                     <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
                         <li><strong>Join a Community Workspace</strong>: On the <strong>Spaces</strong> tab, click <strong>Join</strong> on a community space.</li>
