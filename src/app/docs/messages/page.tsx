@@ -2,6 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { MessageSquare } from "lucide-react";
 
 const tool = {
     name: "messages",
@@ -30,8 +31,9 @@ export default function MessagesPage() {
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle className="text-center text-3xl sm:text-4xl font-bold font-headline">
-              💬 Messages
+            <CardTitle className="text-center text-3xl sm:text-4xl font-bold font-headline flex items-center justify-center gap-3">
+              <MessageSquare className="h-8 w-8" />
+              Messages
             </CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
