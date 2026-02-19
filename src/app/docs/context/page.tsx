@@ -21,11 +21,11 @@ const tool = {
 
 export default function ContextPage() {
   return (
-    <div className="container py-16 md:py-24">
+    <div className="container py-12 md:py-20">
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle className="text-center text-3xl sm:text-4xl font-bold font-headline flex items-center justify-center gap-3">
+            <CardTitle className="text-center text-2xl sm:text-3xl font-bold font-headline flex items-center justify-center gap-3">
               <Database className="h-8 w-8" />
               Context
             </CardTitle>

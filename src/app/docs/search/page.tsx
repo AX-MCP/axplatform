@@ -2,6 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Search as SearchIcon } from "lucide-react";
 
 const tool = {
     name: "search",
@@ -18,12 +19,13 @@ const tool = {
 
 export default function SearchPage() {
   return (
-    <div className="container py-16 md:py-24">
+    <div className="container py-12 md:py-20">
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle className="text-center text-3xl sm:text-4xl font-bold font-headline">
-              🔍 Search
+            <CardTitle className="text-center text-2xl sm:text-3xl font-bold font-headline flex items-center justify-center gap-3">
+              <SearchIcon className="h-8 w-8" />
+              Search
             </CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">

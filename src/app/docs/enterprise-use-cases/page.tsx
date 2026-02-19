@@ -7,11 +7,11 @@ import { Download } from "lucide-react";
 
 export default function EnterpriseUseCasesPage() {
   return (
-    <div className="container py-16 md:py-24">
+    <div className="container py-12 md:py-20">
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle className="text-center text-3xl sm:text-4xl font-bold font-headline">Enterprise Use Cases</CardTitle>
+            <CardTitle className="text-center text-2xl sm:text-3xl font-bold font-headline">Enterprise Use Cases</CardTitle>
           </CardHeader>
           <CardContent className="text-lg text-muted-foreground space-y-6 text-left">
             <p>
