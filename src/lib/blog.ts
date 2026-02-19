@@ -9,7 +9,7 @@ const postsDirectory = path.join(process.cwd(), 'src/content/blog');
 
 const slugsToIgnore = [
     'multi-agent-collaboration-with-ax-and-openclaw',
-    'secure-multi-agent-collaboration-with-ax-and-moltbot'
+    'secure-multi-agent-collaboration-unifying-workflows-with-ax-and-moltbot'
 ];
 
 export type Post = {
