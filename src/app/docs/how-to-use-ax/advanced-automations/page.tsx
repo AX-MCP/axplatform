@@ -168,8 +168,8 @@ export default function AdvancedAutomationsPage() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="bg-secondary hover:bg-secondary/80" />
-                <CarouselNext className="bg-secondary hover:bg-secondary/80" />
+                <CarouselPrevious className="bg-destructive hover:bg-destructive/90 text-destructive-foreground" />
+                <CarouselNext className="bg-destructive hover:bg-destructive/90 text-destructive-foreground" />
               </Carousel>
             </div>
           </CardContent>
