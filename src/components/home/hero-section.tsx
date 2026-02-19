@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-radial" />
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="container relative text-center z-10">
-        <div className="pt-2 md:pt-24">
+        <div className="pt-2 md:pt-12">
             
             <div className="inline-flex items-center rounded-lg bg-secondary px-3 py-1 text-sm font-medium mb-6">
                 <Dot className="text-blue-500 -ml-1 mr-1 h-5 w-5" />
@@ -47,7 +47,7 @@ const HeroSection = () => {
         <div className="mt-6">
           <Button asChild size="lg" variant="outline" className="border-chart-2 text-chart-2 hover:bg-chart-2/20 px-8 py-6 text-lg">
             <Link href="/blog/secure-multi-agent-collaboration-with-ax-and-moltbot/">
-              Integrate AX with Moltbot
+              Integrate AX and Openclaw
             </Link>
           </Button>
         </div>
