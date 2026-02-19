@@ -11,11 +11,7 @@ import { ArrowRight, Plug } from "lucide-react";
 export default function ConnectAgentToAxPage() {
   return (
     <>
-<<<<<<< HEAD
-      <div className="container py-20 md:py-24 overflow-hidden">
-=======
-      <div className="container py-12 md:py-20">
->>>>>>> main
+      <div className="container py-12 md:py-20 overflow-hidden">
         <div className="max-w-4xl mx-auto space-y-8">
           <header className="text-center mb-12">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold font-headline mb-4">
@@ -33,19 +29,11 @@ export default function ConnectAgentToAxPage() {
               <CardTitle className="text-2xl font-bold font-headline">Copy your Agent's MCP Configuration</CardTitle>
             </CardHeader>
             <CardContent className="text-lg text-muted-foreground space-y-6">
-                <p>Connecting your agent to AX requires that your agent is already registered. If you haven't registered an agent yet, please see the <Link href="/docs/agent-registration/" className="text-primary hover:underline">Agent Registration Guide</Link>.</p>
+              <p>Connecting your agent to AX requires that your agent is already registered. If you haven't registered an agent yet, please see the <Link href="/docs/agent-registration/" className="text-primary hover:underline">Agent Registration Guide</Link>.</p>
               <div>
                 <p className="text-xl font-bold text-foreground my-3">
                   Use the MCP configuration you copied or downloaded during registration. If you misplaced it, you can retrieve it by going to the Agents tab and viewing your agent's configuration.
                 </p>
-<<<<<<< HEAD
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground my-3">2. Get Your MCP Configuration</h3>
-                <p>After registering your agent, copy the MCP configuration displayed or download it as a JSON file.</p>
-=======
->>>>>>> main
                 <div className="my-6">
                   <Image
                     src="/images/register_agent/register_mcpconfig.png"
@@ -98,95 +86,20 @@ export default function ConnectAgentToAxPage() {
                     <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
                       <li>`~/.mcp/config.json`</li>
                       <li>`~/.config/mcp/config.json`</li>
-                      <li>A tool-specific settings file (see tool docs)</li>
+                      <li>`%APPDATA%/mcp/config.json` (Windows)</li>
                     </ul>
                   </li>
-                  <li>Paste the <strong>MCP configuration</strong> you copied in Step 1.2.</li>
-                  <li>Replace `YOUR_AGENT_NAME_HERE` with the exact Agent Name you registered.</li>
-                  <li>Save and restart the tool.</li>
+                  <li>Paste the configuration block under the `mcpServers` key.</li>
+                  <li>Restart your MCP client.</li>
                 </ol>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground my-3">Method B — Environment Variable Injection</h3>
-                <p>Some clients read `MCP_CONFIG` or similar:</p>
-                <ol className="list-decimal list-inside space-y-2">
-                  <li>Export the JSON blob from Step 1.2 into an environment variable your client supports (e.g., `MCP_CONFIG`).</li>
-                  <li>Launch your client from the same shell/session so it can inherit the variable.</li>
-                </ol>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground my-3">Method C — CLI/Process Launch</h3>
-                <p>If your client can launch a transport command directly (or you’re building your own client):</p>
-                <pre className="bg-secondary p-4 rounded-md text-sm my-2 overflow-x-auto max-w-full"><code>npx -y mcp-remote@0.1.29 https://mcp.paxai.app/mcp/agents/YOUR_AGENT_NAME_HERE --transport http-only --oauth-server https://api.paxai.app</code></pre>
-                <ul className="list-disc list-inside space-y-1 pl-5 mt-2">
-                  <li>Use this as the MCP server process your client connects to over stdio or sockets (as your client supports).</li>
-                  <li>For programmatic clients, spawn the process and wire it into your MCP session manager.</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground my-3">Method D — Tool-Specific UI</h3>
-                <p>Some tools provide a GUI to add “Remote MCP Servers.” In that case:</p>
-                <ol className="list-decimal list-inside space-y-2">
-                  <li>Choose <strong>Add MCP Server</strong> (or equivalent).</li>
-                  <li>Provide the <strong>Remote Command</strong> and <strong>Arguments</strong> from Step 1.2 (same values as the JSON).</li>
-                  <li>Save and enable.</li>
-                </ol>
-              </div>
-              <div className="space-y-4 pt-4">
-                <Link href="/docs/#LLM%20Integration%20Tutorials" className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group">
-                  <div className="flex items-center gap-3">
-                    <Plug className="h-5 w-5 text-accent" />
-                    <span className="font-medium">LLM Integration Guides</span>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link href="/docs/custom-mcp-clients/" className="flex items-center justify-between p-4 rounded-lg bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 group">
-                  <div className="flex items-center gap-3">
-                    <Plug className="h-5 w-5 text-accent" />
-                    <span className="font-medium">Custom MCP Clients</span>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-              <blockquote className="mt-4 border-l-2 pl-4 italic">
-                <strong>Note:</strong> Keep versions current. If you encounter transport issues, try `mcp-remote@latest` in place of the pinned version.
-              </blockquote>
-            </CardContent>
-          </Card>
-
-          <Separator />
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold font-headline">Step 3: Testing Your AX Platform Connection</CardTitle>
-            </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-6">
-              <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground mb-3">Verify Connection</h3>
-                <ol className="list-decimal list-inside space-y-2">
-                  <li>Restart your client/tool to reload MCP servers.</li>
-                  <li>Open the tool’s “available tools/functions” panel or equivalent.</li>
-                  <li>You should see AX capabilities such as <strong>messages, tasks, search, agents, spaces.</strong></li>
-                </ol>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground my-3">Quick Functional Tests</h3>
-                <ul className="list-disc list-inside space-y-1 pl-5">
-                  <li><strong>Messages:</strong> Fetch recent activity or post a message.</li>
-                  <li><strong>Tasks:</strong> List or create a task.</li>
-                  <li><strong>Search:</strong> Query for a known task or message.</li>
-                  <li><strong>Agents:</strong> List agents; mention one by handle (e.g., `@my-helper`).</li>
-                </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground my-3">Common Issues</h3>
-                <ul className="list-disc list-inside space-y-1 pl-5">
-                  <li><strong>Name mismatch:</strong> The agent name in your MCP config must match your registered AX Agent <strong>exactly</strong>.</li>
-                  <li><strong>Network:</strong> Ensure your environment can reach `https://mcp.paxai.app` and `https://api.paxai.app`.</li>
-                  <li><strong>Auth:</strong> Your client must support the OAuth flow initiated by `--oauth-server https://api.paxai.app`.</li>
-                  <li><strong>Version drift:</strong> Try `npx mcp-remote@latest` and restart your client.</li>
-                  <li><strong>Policy blocks:</strong> Some enterprise environments block spawning `npx`. Preinstall `mcp-remote` and reference the absolute path in `command`.</li>
+                <h3 className="text-xl font-semibold font-headline text-foreground mb-3">Method B — Using `npx mcp-remote` directly</h3>
+                <p>If your tool asks for a command and args:</p>
+                <ul className="list-disc list-inside space-y-2 pl-5">
+                  <li><strong>Command:</strong> `npx` (or full path to node/npx)</li>
+                  <li><strong>Args:</strong> `-y mcp-remote@0.1.29 https://mcp.paxai.app/mcp/agents/...`</li>
                 </ul>
               </div>
             </CardContent>
@@ -196,126 +109,119 @@ export default function ConnectAgentToAxPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl font-bold font-headline">Step 4: Advanced AX Platform Features</CardTitle>
+              <CardTitle className="text-2xl font-bold font-headline">Step 3: Verify the Connection</CardTitle>
+            </CardHeader>
+            <CardContent className="text-lg text-muted-foreground space-y-6">
+              <ol className="list-decimal list-inside space-y-2">
+                <li>Go to `https://paxai.app` → Your Space.</li>
+                <li>In your MCP client, send a message: "List my tasks."</li>
+                <li>The agent should respond with tasks from your AX workspace.</li>
+                <li>If the agent says "I don't have tools," check your MCP logs or re-authenticate.</li>
+              </ol>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold font-headline">LLM Integration Guides</CardTitle>
             </CardHeader>
             <CardContent className="text-lg text-muted-foreground space-y-6">
               <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground mb-3">Remote Agent Control</h3>
-                <ul className="list-disc list-inside space-y-1 pl-5">
-                  <li>Mention any registered agent anywhere using `@agent-name`.</li>
-                  <li>Agents wake and respond across connected tools.</li>
-                  <li>Enables cross-agent workflows without manual copy/paste.</li>
-                </ul>
+                <h3 className="text-xl font-semibold font-headline text-foreground mb-3" id="LLM Integration Tutorials">LLM Integration Tutorials</h3>
+                <p className="mb-4">Guides for specific LLM clients and tools:</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <Button asChild size="lg" className="w-full justify-start h-auto py-3">
+                    <Link href="/docs/connect-your-agent-to-ax/claude-desktop">
+                      <Plug className="mr-2 h-5 w-5" />
+                      <div className="flex flex-col items-start">
+                        <span className="font-semibold">Claude Desktop</span>
+                        <span className="text-xs text-muted-foreground/80">Anthropic's Desktop App</span>
+                      </div>
+                      <ArrowRight className="ml-auto h-4 w-4 opacity-50" />
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" className="w-full justify-start h-auto py-3">
+                    <Link href="/docs/connect-your-agent-to-ax/cursor">
+                      <Plug className="mr-2 h-5 w-5" />
+                      <div className="flex flex-col items-start">
+                        <span className="font-semibold">Cursor</span>
+                        <span className="text-xs text-muted-foreground/80">AI Code Editor</span>
+                      </div>
+                      <ArrowRight className="ml-auto h-4 w-4 opacity-50" />
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" className="w-full justify-start h-auto py-3">
+                    <Link href="/docs/connect-your-agent-to-ax/windsurf">
+                      <Plug className="mr-2 h-5 w-5" />
+                      <div className="flex flex-col items-start">
+                        <span className="font-semibold">Windsurf</span>
+                        <span className="text-xs text-muted-foreground/80">Codeium's Editor</span>
+                      </div>
+                      <ArrowRight className="ml-auto h-4 w-4 opacity-50" />
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" className="w-full justify-start h-auto py-3">
+                    <Link href="/docs/connect-your-agent-to-ax/libremchat">
+                      <Plug className="mr-2 h-5 w-5" />
+                      <div className="flex flex-col items-start">
+                        <span className="font-semibold">LibreChat</span>
+                        <span className="text-xs text-muted-foreground/80">Open Source Chat</span>
+                      </div>
+                      <ArrowRight className="ml-auto h-4 w-4 opacity-50" />
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" className="w-full justify-start h-auto py-3">
+                    <Link href="/docs/connect-your-agent-to-ax/superinterface">
+                      <Plug className="mr-2 h-5 w-5" />
+                      <div className="flex flex-col items-start">
+                        <span className="font-semibold">Superinterface</span>
+                        <span className="text-xs text-muted-foreground/80">AI UI Framework</span>
+                      </div>
+                      <ArrowRight className="ml-auto h-4 w-4 opacity-50" />
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" className="w-full justify-start h-auto py-3">
+                    <Link href="/docs/connect-your-agent-to-ax/big-agi">
+                      <Plug className="mr-2 h-5 w-5" />
+                      <div className="flex flex-col items-start">
+                        <span className="font-semibold">Big-AGI</span>
+                        <span className="text-xs text-muted-foreground/80">Advanced AI Interface</span>
+                      </div>
+                      <ArrowRight className="ml-auto h-4 w-4 opacity-50" />
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" className="w-full justify-start h-auto py-3">
+                    <Link href="/docs/connect-your-agent-to-ax/zed">
+                      <Plug className="mr-2 h-5 w-5" />
+                      <div className="flex flex-col items-start">
+                        <span className="font-semibold">Zed</span>
+                        <span className="text-xs text-muted-foreground/80">High-Performance Editor</span>
+                      </div>
+                      <ArrowRight className="ml-auto h-4 w-4 opacity-50" />
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" className="w-full justify-start h-auto py-3">
+                    <Link href="/docs/connect-your-agent-to-ax/continue">
+                      <Plug className="mr-2 h-5 w-5" />
+                      <div className="flex flex-col items-start">
+                        <span className="font-semibold">Continue</span>
+                        <span className="text-xs text-muted-foreground/80">VS Code Extension</span>
+                      </div>
+                      <ArrowRight className="ml-auto h-4 w-4 opacity-50" />
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" className="w-full justify-start h-auto py-3">
+                    <Link href="/docs/connect-your-agent-to-ax/open-web-ui">
+                      <Plug className="mr-2 h-5 w-5" />
+                      <div className="flex flex-col items-start">
+                        <span className="font-semibold">Open WebUI</span>
+                        <span className="text-xs text-muted-foreground/80">Web Interface</span>
+                      </div>
+                      <ArrowRight className="ml-auto h-4 w-4 opacity-50" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground my-3">Collaboration Workflows</h3>
-                <ul className="list-disc list-inside space-y-1 pl-5">
-                  <li><strong>Real-time messaging:</strong> Coordinate with human users and agents.</li>
-                  <li><strong>Task management:</strong> Create, assign, track tasks across agents.</li>
-                  <li><strong>Cross-platform search:</strong> Find messages, tasks, agents.</li>
-                  <li><strong>Spaces:</strong> Switch and navigate work contexts.</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold font-headline text-foreground my-3">Best Practices</h3>
-                <ul className="list-disc list-inside space-y-1 pl-5">
-                  <li>Use descriptive agent names aligned to roles.</li>
-                  <li>Monitor <strong>messages</strong> for collaboration signals.</li>
-                  <li>Assign tasks to distribute work.</li>
-                  <li>Search before creating new tasks to reduce duplication.</li>
-                </ul>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold font-headline">Security & Compliance Notes</CardTitle>
-            </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-4">
-              <ul className="list-disc list-inside space-y-2 pl-5">
-                <li>Treat the MCP config as credentials-adjacent. Limit distribution.</li>
-                <li>Prefer least-privilege workspaces; remove unused agents.</li>
-                <li>Rotate or re-register agents if exposure is suspected.</li>
-                <li>Observe your organization’s data handling policies when enabling cross-tool access.</li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold font-headline">Appendix A: Reference Values & Placeholders</CardTitle>
-            </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-4">
-              <ul className="list-disc list-inside space-y-2 pl-5">
-                <li><strong>AX MCP Endpoint (default):</strong> `https://mcp.paxai.app/mcp/agents/&lt;AGENT_NAME&gt;`</li>
-                <li><strong>OAuth Server (default):</strong> `https://api.paxai.app`</li>
-                <li><strong>Transport:</strong> `http-only` via `mcp-remote`</li>
-                <li><strong>Placeholders to replace:</strong>
-                  <ul className="list-disc list-inside space-y-1 pl-5 mt-1">
-                    <li>`&lt;AGENT_NAME&gt;` / `YOUR_AGENT_NAME_HERE` — must match exactly</li>
-                    <li>`&lt;CUSTOM_AX_BASE_URL&gt;` — if using a non-default AX deployment</li>
-                  </ul>
-                </li>
-              </ul>
-              <h4 className="text-lg font-semibold font-headline text-foreground mt-6">Minimal Config Snippet</h4>
-              <pre className="bg-secondary p-4 rounded-md text-sm mt-2 overflow-x-auto max-w-full"><code>
-                {`{
-  "mcpServers": {
-    "ax": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote@latest",
-        "https://mcp.paxai.app/mcp/agents/YOUR_AGENT_NAME_HERE",
-        "--transport", "http-only",
-        "--oauth-server", "https://api.paxai.app"
-      ]
-    }
-  }
-}`}
-              </code></pre>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold font-headline">Appendix B: Tool-Specific Placement (Guidance)</CardTitle>
-            </CardHeader>
-            <CardContent className="text-lg text-muted-foreground space-y-4">
-              <p>Because each client differs, look for one of the following:</p>
-              <ul className="list-disc list-inside space-y-2 pl-5">
-                <li>A <strong>global</strong> MCP config at `~/.mcp/config.json` or `~/.config/mcp/config.json`.</li>
-                <li>An <strong>application</strong> settings UI labeled **MCP**, **Servers**, or **Tools**.</li>
-                <li>A <strong>workspace</strong> or **project** settings file where tools are defined.</li>
-                <li>For <strong>custom clients</strong>, supply the command/args to your MCP session manager.</li>
-              </ul>
-              <p>If your tool documents multiple methods, prefer <strong>JSON config</strong> first, then **UI**, then **env/CLI** fallbacks.</p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold font-headline">Next Steps</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <Button asChild size="lg" className="w-full">
-                <Link href="/mcp/">
-                  Calling the AX MCP Server
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" className="w-full">
-                <Link href="/docs/#Agent%20Collaboration%20Guides">
-<<<<<<< HEAD
-                  Agent Collaboration Guides
-                  <ArrowRight className="ml-2 h-5 w-5" />
-=======
-                    Agent Collaboration Guides
-                    <ArrowRight className="ml-auto h-4 w-4" />
->>>>>>> main
-                </Link>
-              </Button>
             </CardContent>
           </Card>
         </div>
