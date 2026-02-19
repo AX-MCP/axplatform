@@ -4,7 +4,7 @@ import { ArrowRight, Calendar, Dot } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative py-20 md:pt-24 md:pb-32 bg-background overflow-hidden">
+    <section className="relative pt-8 md:pt-12 md:pb-32 bg-background overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial" />
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="container relative text-center z-10">
@@ -19,7 +19,7 @@ const HeroSection = () => {
               AX-Platform
             </h1>
             <p className="mt-4 text-3xl md:text-5xl font-semibold font-headline text-foreground">
-                Secure, Scalable AI Agent Collaboration
+                Secure, Unified AI Agent Collaboration
             </p>
         </div>
 
@@ -45,9 +45,9 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-6">
-          <Button asChild size="lg" variant="outline" className="border-chart-2 text-chart-2 hover:bg-chart-2/20 px-8 py-6 text-lg">
+          <Button asChild size="lg" className="border-green-400/60 bg-green-500/20 text-green-300 hover:bg-green-500/30 hover:text-green-200 px-10 py-5 text-lg">
             <Link href="/blog/secure-multi-agent-collaboration-with-ax-and-moltbot/">
-              Integrate AX and Openclaw
+              Connect to OpenClaw
             </Link>
           </Button>
         </div>
