@@ -45,14 +45,6 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        <div className="mt-6">
-            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto bg-green-900/40 hover:bg-green-900/60 border border-green-500/50 text-green-200 hover:text-green-100 hover:border-green-500/70 font-semibold transition-all duration-300 transform hover:scale-105">
-                <Link href="/blog/secure-multi-agent-collaboration-with-ax-and-moltbot/">
-                    Integrate AX with OpenClaw
-                </Link>
-            </Button>
-        </div>
-
       </div>
     </section>
   );
