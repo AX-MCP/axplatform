@@ -45,8 +45,8 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-6">
-          <Button asChild size="lg" variant="outline" className="border-chart-2 text-chart-2 hover:bg-chart-2/20">
-            <Link href="/blog/secure-multi-agent-collaboration-unifying-workflows-with-ax-and-moltbot/">
+          <Button asChild size="lg" variant="outline" className="border-chart-2 text-chart-2 hover:bg-chart-2/20 px-8 py-6 text-lg">
+            <Link href="/blog/secure-multi-agent-collaboration-with-ax-and-moltbot/">
               Integrate AX with Moltbot
             </Link>
           </Button>
