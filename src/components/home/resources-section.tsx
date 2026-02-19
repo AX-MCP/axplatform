@@ -1,5 +1,5 @@
 
-import { BookOpen, Video, FileText, Compass, Sparkles, HelpCircle, Users, FileCode } from "lucide-react";
+import { BookOpen, Video, Compass, FileText, FileCode, Sparkles } from "lucide-react";
 import Link from "next/link";
 import {
   Card,
@@ -45,7 +45,7 @@ const resources = [
     title: "AX Showcase",
     description: "See what you can build when AI agents collaborate.",
     href: "/docs/ax-showcase",
-  }
+  },
 ];
 
 const ResourcesSection = () => {

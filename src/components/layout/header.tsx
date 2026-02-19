@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Bot, Menu, ChevronDown, Github } from "lucide-react";
+import { Menu, ChevronDown, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HeaderSearch } from "@/components/header-search";
 import {
@@ -42,14 +42,10 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm">
       <div className="container flex h-14 items-center">
-        <div className="mr-4 flex items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <Bot className="h-6 w-6 text-blue-500" />
-            <span className="font-bold font-headline text-lg">AX</span>
-          </Link>
-        </div>
-
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+          <Link href="/" className="transition-colors hover:text-foreground/80">
+            Home
+          </Link>
           {Object.entries(navigationItems).map(([title, items]) => (
             <DropdownMenu key={title}>
               <DropdownMenuTrigger className="flex items-center transition-colors hover:text-foreground/80 focus:outline-none data-[state=open]:text-foreground/80">
@@ -72,19 +68,14 @@ const Header = () => {
           <Link href="/docs" className="transition-colors hover:text-foreground/80">
             Docs
           </Link>
-          <Link href="/blog" className="transition-colors hover:text-foreground/80">
-            Blog
-          </Link>
           <Link href="/investors" className="transition-colors hover:text-foreground/80">
             Investors
           </Link>
         </nav>
 
-        <div className="flex-1 hidden md:flex items-center justify-center px-4">
-          <HeaderSearch className="w-56" />
-        </div>
+        <div className="flex-1 flex items-center justify-end md:justify-end gap-2">
+           <HeaderSearch className="w-56 hidden md:block" />
 
-        <div className="flex items-center justify-end gap-2 ml-auto">
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
@@ -95,11 +86,14 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent side="left" className="w-[240px]">
                 <div className="p-4">
-                  <Link href="/" className="flex items-center space-x-2 mb-8" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Bot className="h-6 w-6 text-blue-500" />
-                    <span className="font-bold font-headline text-lg">AX</span>
-                  </Link>
-                  <div className="flex flex-col space-y-6">
+                  <div className="flex flex-col space-y-6 pt-8">
+                    <Link
+                      href="/"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-foreground hover:text-foreground/80"
+                    >
+                      Home
+                    </Link>
                     {Object.entries(navigationItems).map(([title, items]) => (
                       <div key={title} className="flex flex-col space-y-2">
                         <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">{title}</h4>
@@ -154,19 +148,19 @@ const Header = () => {
           </div>
 
           <div className="hidden sm:flex items-center justify-end gap-2">
-            <Button asChild className="h-9 px-4 bg-secondary hover:bg-secondary/80 text-blue-500">
-              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium">
-                <DiscordIcon className="h-5 w-5" />
-                <span>Discord</span>
+            <Button asChild variant="ghost" size="icon">
+              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer">
+                <DiscordIcon className="h-5 w-5 text-muted-foreground hover:text-foreground" />
+                 <span className="sr-only">Discord</span>
               </Link>
             </Button>
-            <Button asChild className="h-9 px-4 bg-secondary hover:bg-secondary/80 text-blue-500">
-              <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium">
-                <Github className="h-5 w-5" />
-                <span>GitHub</span>
+            <Button asChild variant="ghost" size="icon">
+              <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer">
+                <Github className="h-5 w-5 text-muted-foreground hover:text-foreground" />
+                <span className="sr-only">GitHub</span>
               </Link>
             </Button>
-            <Button asChild size="lg" className="h-9 w-[10rem] bg-blue-600 hover:bg-blue-700 text-white">
+            <Button asChild size="sm">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Log in
               </Link>
