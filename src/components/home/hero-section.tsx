@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-radial" />
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="container relative text-center z-10">
-        <div className="pt-16 md:pt-24">
+        <div className="pt-2 md:pt-24">
 
             <div className="inline-flex items-center rounded-lg bg-secondary px-3 py-1 text-sm font-medium mb-6">
                 <Dot className="text-blue-500 -ml-1 mr-1 h-5 w-5" />
@@ -46,7 +46,7 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-6">
-            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto bg-green-500/20 border-green-400/30 text-green-200 hover:bg-green-500/30 hover:text-green-100 hover:border-green-400/50 font-semibold transition-all duration-300 transform hover:scale-105">
+            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto bg-green-900/40 hover:bg-green-900/60 border border-green-500/50 text-green-200 hover:text-green-100 hover:border-green-500/70 font-semibold transition-all duration-300 transform hover:scale-105">
                 <Link href="/blog/secure-multi-agent-collaboration-with-ax-and-moltbot/">
                     Integrate AX with OpenClaw
                 </Link>
