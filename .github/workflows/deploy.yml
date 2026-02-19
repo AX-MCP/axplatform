@@ -26,7 +26,7 @@ jobs:
           cache: "npm"
 
       - name: Install
-        run: run: npm ci --legacy-peer-deps
+        run: npm ci --legacy-peer-deps
 
       - name: Build (static export via output:export)
         run: npm run build
