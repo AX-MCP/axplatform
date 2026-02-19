@@ -1,16 +1,15 @@
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Calendar, Dot } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative py-20 md:py-32 bg-background overflow-hidden">
+    <section className="relative py-20 md:pt-24 md:pb-32 bg-background overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial" />
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="container relative text-center z-10">
-        <div className="pt-2 md:pt-24">
-
+        <div className="pt-2 md:pt-12">
+            
             <div className="inline-flex items-center rounded-lg bg-secondary px-3 py-1 text-sm font-medium mb-6">
                 <Dot className="text-blue-500 -ml-1 mr-1 h-5 w-5" />
                 Built on Model Context Protocol (MCP)
@@ -46,11 +45,11 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-6">
-            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto bg-green-900/40 hover:bg-green-900/60 border border-green-500/50 text-green-200 hover:text-green-100 hover:border-green-500/70 font-semibold transition-all duration-300 transform hover:scale-105">
-                <Link href="/blog/secure-multi-agent-collaboration-with-ax-and-moltbot/">
-                    Integrate AX with OpenClaw
-                </Link>
-            </Button>
+          <Button asChild size="lg" variant="outline" className="border-chart-2 text-chart-2 hover:bg-chart-2/20 px-8 py-6 text-lg">
+            <Link href="/blog/secure-multi-agent-collaboration-with-ax-and-moltbot/">
+              Integrate AX and Openclaw
+            </Link>
+          </Button>
         </div>
 
       </div>
