@@ -5,21 +5,21 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Search as SearchIcon } from "lucide-react";
 
 const tool = {
-    name: "search",
-    toolName: "search",
-    fullName: "/.../search",
-    description: "Operation: search (no action field; you pass a query)",
-    parameters: [
-      { param: "query", type: "string", desc: "required" },
-      { param: "scope", type: "string", desc: "default \"all\"; described: messages/tasks/agents/all" },
-      { param: "limit", type: "number", desc: "default 20; 1-100" },
-      { param: "since", type: "string", desc: "described: \"1h\" | \"24h\" | \"7d\" | \"30d\" | \"all\"" },
-    ],
+  name: "search",
+  toolName: "search",
+  fullName: "/.../search",
+  description: "Operation: search (no action field; you pass a query)",
+  parameters: [
+    { param: "query", type: "string", desc: "required" },
+    { param: "scope", type: "string", desc: "default \"all\"; described: messages/tasks/agents/all" },
+    { param: "limit", type: "number", desc: "default 20; 1-100" },
+    { param: "since", type: "string", desc: "described: \"1h\" | \"24h\" | \"7d\" | \"30d\" | \"all\"" },
+  ],
 };
 
 export default function SearchPage() {
   return (
-    <div className="container py-12 md:py-20">
+    <div className="container py-12 md:py-20 overflow-hidden">
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
@@ -71,41 +71,41 @@ export default function SearchPage() {
         </Card>
 
         <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold font-headline">MCP Tool Reference: search</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="text-muted-foreground space-y-2">
-                <p><strong className="text-foreground">URI:</strong> <code>{tool.fullName}</code></p>
-                <p><strong className="text-foreground">Description:</strong> {tool.description}</p>
-              </div>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">MCP Tool Reference: search</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="text-muted-foreground space-y-2">
+              <p><strong className="text-foreground">URI:</strong> <code>{tool.fullName}</code></p>
+              <p><strong className="text-foreground">Description:</strong> {tool.description}</p>
+            </div>
 
-              {tool.parameters.length > 0 && (
-                <div>
-                  <h3 className="text-xl font-semibold font-headline mb-4">Request fields:</h3>
-                  <div className="overflow-x-auto">
-                    <Table>
-                      <TableHeader>
-                        <TableRow>
-                          <TableHead>Parameter</TableHead>
-                          <TableHead>Type</TableHead>
-                          <TableHead>Description</TableHead>
+            {tool.parameters.length > 0 && (
+              <div>
+                <h3 className="text-xl font-semibold font-headline mb-4">Request fields:</h3>
+                <div className="overflow-x-auto">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Parameter</TableHead>
+                        <TableHead>Type</TableHead>
+                        <TableHead>Description</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {tool.parameters.map((param) => (
+                        <TableRow key={param.param}>
+                          <TableCell className="font-mono whitespace-nowrap"><code>{param.param}</code></TableCell>
+                          <TableCell className="font-mono"><em>{param.type}</em></TableCell>
+                          <TableCell dangerouslySetInnerHTML={{ __html: param.desc }}></TableCell>
                         </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        {tool.parameters.map((param) => (
-                          <TableRow key={param.param}>
-                            <TableCell className="font-mono whitespace-nowrap"><code>{param.param}</code></TableCell>
-                            <TableCell className="font-mono"><em>{param.type}</em></TableCell>
-                            <TableCell dangerouslySetInnerHTML={{ __html: param.desc }}></TableCell>
-                          </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
-                  </div>
+                      ))}
+                    </TableBody>
+                  </Table>
                 </div>
-              )}
-            </CardContent>
+              </div>
+            )}
+          </CardContent>
         </Card>
 
         <Card>

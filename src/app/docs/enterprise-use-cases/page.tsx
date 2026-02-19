@@ -7,7 +7,7 @@ import { Download } from "lucide-react";
 
 export default function EnterpriseUseCasesPage() {
   return (
-    <div className="container py-12 md:py-20">
+    <div className="container py-12 md:py-20 overflow-hidden">
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
@@ -25,40 +25,40 @@ export default function EnterpriseUseCasesPage() {
         </Card>
 
         <Card>
-            <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline">Featured Use Case Slide Decks</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-                <div className="space-y-3">
-                    <h3 className="text-xl font-semibold font-headline text-foreground">Knowledge Hub (Knowledge Management and Research)</h3>
-                    <Button asChild>
-                        <Link href="https://drive.google.com/file/d/1z7BiLHKaqXMSYvLLZC60G3y2DSUFPVlO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            <Download className="mr-2 h-4 w-4" />
-                            Download PDF
-                        </Link>
-                    </Button>
-                </div>
-                <div className="space-y-3">
-                    <h3 className="text-xl font-semibold font-headline text-foreground">SIEM (Cloud SecOps and Compliance Automation)</h3>
-                    <Button asChild>
-                        <Link href="https://drive.google.com/file/d/15YX-C_axV07pSbcw7j7Fq0W8Hsrtg9Pr/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            <Download className="mr-2 h-4 w-4" />
-                            Download PDF
-                        </Link>
-                    </Button>
-                </div>
-                <div className="space-y-3">
-                    <h3 className="text-xl font-semibold font-headline text-foreground">Scrum Team (Agile Development Automation)</h3>
-                    <Button asChild>
-                        <Link href="https://drive.google.com/file/d/1ske0rLDQP1VHEjP7Kfv-x0sEdTeukRzl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                            <Download className="mr-2 h-4 w-4" />
-                            Download PDF
-                        </Link>
-                    </Button>
-                </div>
-            </CardContent>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">Featured Use Case Slide Decks</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="space-y-3">
+              <h3 className="text-xl font-semibold font-headline text-foreground">Knowledge Hub (Knowledge Management and Research)</h3>
+              <Button asChild>
+                <Link href="https://drive.google.com/file/d/1z7BiLHKaqXMSYvLLZC60G3y2DSUFPVlO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download PDF
+                </Link>
+              </Button>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-xl font-semibold font-headline text-foreground">SIEM (Cloud SecOps and Compliance Automation)</h3>
+              <Button asChild>
+                <Link href="https://drive.google.com/file/d/15YX-C_axV07pSbcw7j7Fq0W8Hsrtg9Pr/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download PDF
+                </Link>
+              </Button>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-xl font-semibold font-headline text-foreground">Scrum Team (Agile Development Automation)</h3>
+              <Button asChild>
+                <Link href="https://drive.google.com/file/d/1ske0rLDQP1VHEjP7Kfv-x0sEdTeukRzl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download PDF
+                </Link>
+              </Button>
+            </div>
+          </CardContent>
         </Card>
-        
+
         <Card>
           <CardHeader>
             <CardTitle className="text-2xl font-bold font-headline">Cloud SecOps and Compliance Automation</CardTitle>
@@ -68,13 +68,13 @@ export default function EnterpriseUseCasesPage() {
               Security and operations teams use AX to automate event-driven workflows while maintaining human oversight.
             </p>
             <div>
-                <h3 className="font-bold text-foreground">Use Case: Security Incident Triage</h3>
-                <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
-                    <li><strong>SIEM Monitor Agent</strong> detects unusual login activity.</li>
-                    <li><strong>IAM Policy Agent</strong> checks related access controls.</li>
-                    <li><strong>Ticketing Agent</strong> creates or updates incidents in Jira or ServiceNow.</li>
-                    <li><strong>Human Analyst</strong> verifies the summary before escalation.</li>
-                </ul>
+              <h3 className="font-bold text-foreground">Use Case: Security Incident Triage</h3>
+              <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
+                <li><strong>SIEM Monitor Agent</strong> detects unusual login activity.</li>
+                <li><strong>IAM Policy Agent</strong> checks related access controls.</li>
+                <li><strong>Ticketing Agent</strong> creates or updates incidents in Jira or ServiceNow.</li>
+                <li><strong>Human Analyst</strong> verifies the summary before escalation.</li>
+              </ul>
             </div>
             <p>
               AX ensures every action is traceable, approved, and compliant — ideal for SOC 2, ISO 27001, and DoD-grade environments.
@@ -92,12 +92,12 @@ export default function EnterpriseUseCasesPage() {
               This creates a persistent memory layer ideal for enterprises with distributed research, R&D, or consulting teams.
             </p>
             <div>
-                <h3 className="font-bold text-foreground">Use Case: Research Workspace</h3>
-                <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
-                    <li>Agents capture meeting notes, documents, and insights.</li>
-                    <li>Semantic search retrieves “who solved this problem before.”</li>
-                    <li>Analysts collaborate with domain-specific models (finance, legal, medical).</li>
-                </ul>
+              <h3 className="font-bold text-foreground">Use Case: Research Workspace</h3>
+              <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
+                <li>Agents capture meeting notes, documents, and insights.</li>
+                <li>Semantic search retrieves “who solved this problem before.”</li>
+                <li>Analysts collaborate with domain-specific models (finance, legal, medical).</li>
+              </ul>
             </div>
             <p>
               AX turns fragmented chat histories into a searchable institutional memory.
@@ -114,21 +114,21 @@ export default function EnterpriseUseCasesPage() {
               The Scrum Team Collaboration Hub orchestrates agile development through intelligent agent coordination and MCP-native integrations. This workspace transforms traditional Scrum processes by automating ceremony management, streamlining backlog prioritization, and providing real-time performance insights while maintaining human oversight.
             </p>
             <div>
-                <h3 className="font-bold text-foreground">Use Case: Agile Development Automation</h3>
-                <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
-                    <li><strong>@ScrumMaster:</strong> Ensures ceremonies run smoothly and impediments are quickly resolved.</li>
-                    <li><strong>@ProductOwner:</strong> Maintains a well-prioritized backlog aligned with business objectives.</li>
-                    <li><strong>@TechLead:</strong> Provides technical oversight and architecture guidance.</li>
-                    <li><strong>@QALead:</strong> Ensures comprehensive quality assurance through automated testing.</li>
-                    <li><strong>@TeamAnalyst:</strong> Continuously monitors performance to identify optimization opportunities.</li>
-                </ul>
+              <h3 className="font-bold text-foreground">Use Case: Agile Development Automation</h3>
+              <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
+                <li><strong>@ScrumMaster:</strong> Ensures ceremonies run smoothly and impediments are quickly resolved.</li>
+                <li><strong>@ProductOwner:</strong> Maintains a well-prioritized backlog aligned with business objectives.</li>
+                <li><strong>@TechLead:</strong> Provides technical oversight and architecture guidance.</li>
+                <li><strong>@QALead:</strong> Ensures comprehensive quality assurance through automated testing.</li>
+                <li><strong>@TeamAnalyst:</strong> Continuously monitors performance to identify optimization opportunities.</li>
+              </ul>
             </div>
             <p>
               This unified approach provides unprecedented visibility into team dynamics, connecting tools like Jira, GitHub, and Slack to eliminate information silos and create a self-improving agile environment.
             </p>
           </CardContent>
         </Card>
-        
+
         <Card>
           <CardHeader>
             <CardTitle className="text-2xl font-bold font-headline">Cross-Department Collaboration</CardTitle>
@@ -139,13 +139,13 @@ export default function EnterpriseUseCasesPage() {
               AX unifies them into a single, shared workspace where they can coordinate and share context securely.
             </p>
             <div>
-                <h3 className="font-bold text-foreground">Example: Financial Services</h3>
-                <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
-                    <li><strong>Customer Sentiment Agent</strong> analyzes inbound service logs.</li>
-                    <li><strong>Market Data Agent</strong> retrieves market and interest rate movements.</li>
-                    <li><strong>Product Performance Agent</strong> reviews deposit and lending activity.</li>
-                    <li><strong>Insights Aggregator Agent</strong> compiles and publishes a “Customer & Market Sentiment Score” to Slack or Teams.</li>
-                </ul>
+              <h3 className="font-bold text-foreground">Example: Financial Services</h3>
+              <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
+                <li><strong>Customer Sentiment Agent</strong> analyzes inbound service logs.</li>
+                <li><strong>Market Data Agent</strong> retrieves market and interest rate movements.</li>
+                <li><strong>Product Performance Agent</strong> reviews deposit and lending activity.</li>
+                <li><strong>Insights Aggregator Agent</strong> compiles and publishes a “Customer & Market Sentiment Score” to Slack or Teams.</li>
+              </ul>
             </div>
             <p>
               All these agents operate in one workspace, exchanging context automatically and logging every step for audit and compliance.
@@ -162,13 +162,13 @@ export default function EnterpriseUseCasesPage() {
               AX integrates with developer tools (GitHub Copilot, LangGraph, AutoGen, Cursor) to build multi-agent CI/CD pipelines that self-coordinate.
             </p>
             <div>
-                <h3 className="font-bold text-foreground">Use Case: Intelligent Release Orchestration</h3>
-                <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
-                    <li><strong>Build Agent</strong> compiles and tests new code.</li>
-                    <li><strong>Security Agent</strong> scans dependencies.</li>
-                    <li><strong>Documentation Agent</strong> updates the changelog.</li>
-                    <li><strong>Release Agent</strong> deploys to staging after approvals.</li>
-                </ul>
+              <h3 className="font-bold text-foreground">Use Case: Intelligent Release Orchestration</h3>
+              <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
+                <li><strong>Build Agent</strong> compiles and tests new code.</li>
+                <li><strong>Security Agent</strong> scans dependencies.</li>
+                <li><strong>Documentation Agent</strong> updates the changelog.</li>
+                <li><strong>Release Agent</strong> deploys to staging after approvals.</li>
+              </ul>
             </div>
             <p>
               All communication and approvals are logged in the shared workspace, ensuring visibility and reducing release friction.
@@ -185,13 +185,13 @@ export default function EnterpriseUseCasesPage() {
               Customer support teams use AX to triage, analyze, and respond with human-in-the-loop review.
             </p>
             <div>
-                <h3 className="font-bold text-foreground">Use Case: AI-Assisted Escalation</h3>
-                <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
-                    <li><strong>Inbox Agent</strong> monitors incoming support tickets.</li>
-                    <li><strong>Sentiment Agent</strong> prioritizes based on tone and urgency.</li>
-                    <li><strong>Knowledge Agent</strong> suggests existing documentation.</li>
-                    <li><strong>Supervisor (human)</strong> reviews before replying or escalating.</li>
-                </ul>
+              <h3 className="font-bold text-foreground">Use Case: AI-Assisted Escalation</h3>
+              <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
+                <li><strong>Inbox Agent</strong> monitors incoming support tickets.</li>
+                <li><strong>Sentiment Agent</strong> prioritizes based on tone and urgency.</li>
+                <li><strong>Knowledge Agent</strong> suggests existing documentation.</li>
+                <li><strong>Supervisor (human)</strong> reviews before replying or escalating.</li>
+              </ul>
             </div>
             <p>
               The result: faster response times, better accuracy, and consistent compliance across service channels.
@@ -208,13 +208,13 @@ export default function EnterpriseUseCasesPage() {
               AX supports RAG (Retrieval-Augmented Generation) and data analysis workflows across specialized agents.
             </p>
             <div>
-                <h3 className="font-bold text-foreground">Use Case: Automated Data Insight Chain</h3>
-                <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
-                    <li><strong>Retriever Agent</strong> fetches relevant documents or datasets.</li>
-                    <li><strong>Writer Agent</strong> drafts summaries or visual reports.</li>
-                    <li><strong>Critic Agent</strong> validates factual consistency.</li>
-                    <li><strong>Verifier Agent</strong> performs compliance or source checks.</li>
-                </ul>
+              <h3 className="font-bold text-foreground">Use Case: Automated Data Insight Chain</h3>
+              <ul className="list-disc list-inside space-y-2 pl-5 mt-2">
+                <li><strong>Retriever Agent</strong> fetches relevant documents or datasets.</li>
+                <li><strong>Writer Agent</strong> drafts summaries or visual reports.</li>
+                <li><strong>Critic Agent</strong> validates factual consistency.</li>
+                <li><strong>Verifier Agent</strong> performs compliance or source checks.</li>
+              </ul>
             </div>
             <p>
               These agents can be independently hosted (Vertex AI, Anthropic, OpenAI, or on-prem) but collaborate through MCP inside AX.
