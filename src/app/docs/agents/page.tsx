@@ -19,7 +19,11 @@ const tool = {
 
 export default function AgentsPage() {
   return (
+<<<<<<< HEAD
+    <div className="container py-20 md:py-24 overflow-hidden">
+=======
     <div className="container py-12 md:py-20">
+>>>>>>> main
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>

@@ -5,18 +5,18 @@ import Image from "next/image";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const tool = {
-    name: "context",
-    toolName: "context",
-    fullName: "/.../context",
-    description: "Operations (action): set, get, list, delete",
-    parameters: [
-      { param: "action", type: "enum", desc: "" },
-      { param: "key", type: "string", desc: "required for set/get/delete" },
-      { param: "value", type: "object", desc: "required for set" },
-      { param: "ttl", type: "number", desc: "seconds; optional; default 24h per description" },
-      { param: "prefix", type: "string", desc: "for list filtering" },
-      { param: "topic", type: "string", desc: "for list filtering; e.g., metrics/config/scratchpad" },
-    ],
+  name: "context",
+  toolName: "context",
+  fullName: "/.../context",
+  description: "Operations (action): set, get, list, delete",
+  parameters: [
+    { param: "action", type: "enum", desc: "" },
+    { param: "key", type: "string", desc: "required for set/get/delete" },
+    { param: "value", type: "object", desc: "required for set" },
+    { param: "ttl", type: "number", desc: "seconds; optional; default 24h per description" },
+    { param: "prefix", type: "string", desc: "for list filtering" },
+    { param: "topic", type: "string", desc: "for list filtering; e.g., metrics/config/scratchpad" },
+  ],
 };
 
 export default function ContextPage() {
@@ -34,7 +34,7 @@ export default function ContextPage() {
             <p>
               The Context tool provides an ephemeral shared memory (Key-Value Store) for agents to pass structured data (JSON) between each other. It's scoped to the organization level.
             </p>
-            
+
             <h3 className="text-xl font-bold pt-4">Key Features:</h3>
             <ul className="list-disc list-inside space-y-2 pl-5">
               <li>
@@ -53,9 +53,9 @@ export default function ContextPage() {
 
             <h3 className="text-xl font-bold pt-4">Example Use Cases:</h3>
             <ul className="list-disc list-inside space-y-2 pl-5">
-                <li>An agent can store the results of a lengthy computation for another agent to pick up.</li>
-                <li>Sharing configuration settings or state between multiple agents in a workflow.</li>
-                <li>A "scratchpad" for an agent to store intermediate thoughts or data.</li>
+              <li>An agent can store the results of a lengthy computation for another agent to pick up.</li>
+              <li>Sharing configuration settings or state between multiple agents in a workflow.</li>
+              <li>A "scratchpad" for an agent to store intermediate thoughts or data.</li>
             </ul>
 
             <p>
@@ -84,41 +84,41 @@ export default function ContextPage() {
         </Card>
 
         <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold font-headline">MCP Tool Reference: context</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="text-muted-foreground space-y-2">
-                <p><strong className="text-foreground">URI:</strong> <code>{tool.fullName}</code></p>
-                <p><strong className="text-foreground">Description:</strong> {tool.description}</p>
-              </div>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold font-headline">MCP Tool Reference: context</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="text-muted-foreground space-y-2">
+              <p><strong className="text-foreground">URI:</strong> <code>{tool.fullName}</code></p>
+              <p><strong className="text-foreground">Description:</strong> {tool.description}</p>
+            </div>
 
-              {tool.parameters.length > 0 && (
-                <div>
-                  <h3 className="text-xl font-semibold font-headline mb-4">Request fields:</h3>
-                  <div className="overflow-x-auto">
-                    <Table>
-                      <TableHeader>
-                        <TableRow>
-                          <TableHead>Parameter</TableHead>
-                          <TableHead>Type</TableHead>
-                          <TableHead>Description</TableHead>
+            {tool.parameters.length > 0 && (
+              <div>
+                <h3 className="text-xl font-semibold font-headline mb-4">Request fields:</h3>
+                <div className="overflow-x-auto">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Parameter</TableHead>
+                        <TableHead>Type</TableHead>
+                        <TableHead>Description</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {tool.parameters.map((param) => (
+                        <TableRow key={param.param}>
+                          <TableCell className="font-mono whitespace-nowrap"><code>{param.param}</code></TableCell>
+                          <TableCell className="font-mono"><em>{param.type}</em></TableCell>
+                          <TableCell dangerouslySetInnerHTML={{ __html: param.desc }}></TableCell>
                         </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        {tool.parameters.map((param) => (
-                          <TableRow key={param.param}>
-                            <TableCell className="font-mono whitespace-nowrap"><code>{param.param}</code></TableCell>
-                            <TableCell className="font-mono"><em>{param.type}</em></TableCell>
-                            <TableCell dangerouslySetInnerHTML={{ __html: param.desc }}></TableCell>
-                          </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
-                  </div>
+                      ))}
+                    </TableBody>
+                  </Table>
                 </div>
-              )}
-            </CardContent>
+              </div>
+            )}
+          </CardContent>
         </Card>
 
         <Card>

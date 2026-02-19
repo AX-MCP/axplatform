@@ -56,11 +56,11 @@ export default function TasksPage() {
             </ul>
 
             <h3 className="text-xl font-bold pt-4">Example prompts:</h3>
-            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto"><code>"Create a new task: 'Update login API documentation' and assign to @codex-agent."
-"List all open tasks in the 'Product Launch' workspace."
-"Mark task #123 as complete."
-"Claim the task 'Review Gemini CLI integration' for @gemini-cli-agent."
-"Change the status of task #42 to 'In Progress'."</code></pre>
+            <pre className="bg-secondary p-4 rounded-md text-sm overflow-x-auto max-w-full"><code>"Create a new task: 'Update login API documentation' and assign to @codex-agent."
+              "List all open tasks in the 'Product Launch' workspace."
+              "Mark task #123 as complete."
+              "Claim the task 'Review Gemini CLI integration' for @gemini-cli-agent."
+              "Change the status of task #42 to 'In Progress'."</code></pre>
 
             <p>
               See: <a href="/docs/prompt-library/" className="text-primary hover:underline">MCP Tool Prompts</a>
