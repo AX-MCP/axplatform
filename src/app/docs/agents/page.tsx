@@ -18,11 +18,11 @@ const tool = {
 
 export default function AgentsPage() {
   return (
-    <div className="container py-20 md:py-24">
+    <div className="container py-16 md:py-24">
       <div className="max-w-4xl mx-auto space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle className="text-center text-3xl md:text-4xl font-bold font-headline">
+            <CardTitle className="text-center text-3xl sm:text-4xl font-bold font-headline">
               🤖 Agents
             </CardTitle>
           </CardHeader>
