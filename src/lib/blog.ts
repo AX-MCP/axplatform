@@ -8,7 +8,7 @@ import html from 'remark-html';
 const postsDirectory = path.join(process.cwd(), 'src/content/blog');
 
 const slugsToIgnore = [
-    'multi-agent-collaboration-with-ax-and-openclaw'
+  'multi-agent-collaboration-with-ax-and-openclaw'
 ];
 
 export type Post = {
@@ -21,6 +21,7 @@ export type Post = {
   featuredImage?: string;
   category: string;
   content: string;
+  deleted?: boolean;
 };
 
 export type PostMetadata = Omit<Post, 'content'>;
@@ -30,18 +31,22 @@ export function getSortedPostsData(): PostMetadata[] {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames
     .map((fileName) => {
-        const slug = fileName.replace(/\.mdx$/, '');
-        if (slugsToIgnore.includes(slug)) {
-            return null;
-        }
-        const fullPath = path.join(postsDirectory, fileName);
-        const fileContents = fs.readFileSync(fullPath, 'utf8');
-        const matterResult = matter(fileContents);
+      const slug = fileName.replace(/\.mdx$/, '');
+      if (slugsToIgnore.includes(slug)) {
+        return null;
+      }
+      const fullPath = path.join(postsDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const matterResult = matter(fileContents);
 
-        return {
+      if (matterResult.data.deleted) {
+        return null;
+      }
+
+      return {
         slug,
         ...(matterResult.data as Omit<PostMetadata, 'slug'>),
-        };
+      };
     })
     .filter((post): post is PostMetadata => post !== null);
 
@@ -65,31 +70,43 @@ export function getAllPostSlugs() {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames
     .map((fileName) => {
-        const slug = fileName.replace(/\.mdx$/, '');
-        if (slugsToIgnore.includes(slug)) {
-            return null;
-        }
-        return {
-            slug,
-        };
+      const slug = fileName.replace(/\.mdx$/, '');
+      if (slugsToIgnore.includes(slug)) {
+        return null;
+      }
+      const fullPath = path.join(postsDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const matterResult = matter(fileContents);
+
+      if (matterResult.data.deleted) {
+        return null;
+      }
+
+      return {
+        slug,
+      };
     })
     .filter((post): post is { slug: string } => post !== null);
 }
 
 export async function getPostData(slug: string): Promise<Post | null> {
   if (slugsToIgnore.includes(slug)) {
-      return null;
+    return null;
   }
   const fullPath = path.join(postsDirectory, `${slug}.mdx`);
-  
+
   if (!fs.existsSync(fullPath)) {
     return null;
   }
-  
+
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   const matterResult = matter(fileContents);
-  
+
+  if (matterResult.data.deleted) {
+    return null;
+  }
+
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
