@@ -59,7 +59,7 @@ export default function AddAxAsMcpPage() {
 
             <h4>2. Add AX MCP Server Configuration</h4>
             <p>Edit your OpenClaw MCP config:</p>
-            <pre><code>nano ~/.openclaw/workspace/config/mcporter.json</code></pre>
+            <pre><code>{`nano ~/.openclaw/workspace/config/mcporter.json`}</code></pre>
             <p>Add a new server entry:</p>
             <pre><code>
 {`{
@@ -116,7 +116,9 @@ mcp list-tools mike_openclaw`}
 
             <h4>4. Test Connection</h4>
             <p>Send a test message to your AX workspace:</p>
-            <pre><code>mcp call mike_openclaw.ax_messages action=send content="Hello from OpenClaw MCP!"</code></pre>
+            <pre><code>{`mcp call mike_openclaw.ax_messages \\
+  action=send \\
+  content="Hello from OpenClaw MCP!"`}</code></pre>
             <p>Check the AX web app — you should see the message in your workspace.</p>
 
             <h4>5. Token Refresh (Important)</h4>

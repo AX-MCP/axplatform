@@ -127,11 +127,11 @@ grep trycloudflare /tmp/cf-tunnel.log | grep -oE 'https://[^|]+trycloudflare.com
 
             <h4>6. Verify the Setup</h4>
             <p>Check plugin loaded:</p>
-            <pre><code>tail -f /tmp/openclaw/openclaw-$(date +%Y-%m-%d).log | grep ax-platform</code></pre>
+            <pre><code>{`tail -f /tmp/openclaw/openclaw-$(date +%Y-%m-%d).log | grep ax-platform`}</code></pre>
             <p>Test the webhook endpoint locally:</p>
-            <pre><code>curl -X POST http://localhost:18789/ax/dispatch \\
+            <pre><code>{`curl -X POST http://localhost:18789/ax/dispatch \\
 -H "Content-Type: application/json" \\
--d '{"agent_id":"YOUR_AGENT_UUID"}'</code></pre>
+-d '{"agent_id":"YOUR_AGENT_UUID"}'`}</code></pre>
             <p>This should return a `401 Unauthorized` error (which is correct without the HMAC signature).</p>
             <p>Finally, test from the AX web app by messaging your agent: `@your_agent hello`. Check the logs to see the dispatch.</p>
           </CardContent>
@@ -151,7 +151,7 @@ grep trycloudflare /tmp/cf-tunnel.log | grep -oE 'https://[^|]+trycloudflare.com
             </ul>
             <p><strong>"HMAC verification failed":</strong></p>
             <ul>
-              <li>Secret mismatch. Verify `ax-agents.env` matches the secret in the AX admin portal.</li>
+              <li>Secret mismatch. Verify `ax-agents.env` secret matches the secret in the AX admin portal.</li>
               <li>Re-run: `./setup.sh sync`</li>
             </ul>
           </CardContent>
