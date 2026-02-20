@@ -212,7 +212,7 @@ export const sectionItems = {
         icon: Github,
       },
       {
-        title: "OpenClaw Integration",
+        title: "OpenClaw + AX Integration",
         description: "Integrate your OpenClaw agents with the AX Platform.",
         href: "/docs/openclaw",
         icon: Plug,

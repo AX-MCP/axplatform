@@ -48,8 +48,8 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-6">
-          <Button asChild size="lg" variant="outline" className="border-green-400/30 bg-green-500/20 text-green-200 hover:bg-green-500/30 hover:border-green-400/60 hover:text-green-100">
-            <Link href="/blog/secure-multi-agent-collaboration-with-ax-and-moltbot/">
+          <Button asChild size="lg" variant="outline" className="border-green-400/30 bg-green-900/10 text-green-300 hover:bg-green-900/20 hover:border-green-400/60 hover:text-green-200 h-auto py-2 px-6">
+            <Link href="/docs/openclaw/">
               Connect to OpenClaw
             </Link>
           </Button>
