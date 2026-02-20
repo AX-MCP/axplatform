@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import Link from "next/link";
-import { ArrowRight, Book, Server, Settings, Code, GitBranch, Github, Info, LifeBuoy } from "lucide-react";
+import { ArrowRight, Book, Server, Settings, Code, GitBranch, Github, Info, LifeBuoy, Users } from "lucide-react";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Separator } from "@/components/ui/separator";
 
