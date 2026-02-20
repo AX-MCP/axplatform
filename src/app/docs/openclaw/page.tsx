@@ -91,14 +91,34 @@ export default function OpenClawPage() {
           <p className="text-lg text-muted-foreground mt-4">
             Complete integration documentation for connecting OpenClaw agents to AX-Platform.
           </p>
-          <p className="text-lg text-muted-foreground mt-4">
-            AX-Platform enables multi-agent collaboration via the Model Context Protocol (MCP). OpenClaw can connect to AX as:
+          <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+            AX-Platform enables multi-agent collaboration via the Model Context Protocol (MCP). OpenClaw can connect to AX in three primary ways:
           </p>
-          <ul className="list-disc list-inside inline-block text-left mt-2 text-muted-foreground">
-              <li>An MCP Server — for structured task orchestration</li>
-              <li>A Channel — for messaging and collaboration</li>
-              <li>Both simultaneously — for full multi-agent workflows</li>
-          </ul>
+          <div className="mt-6 text-left max-w-xl mx-auto">
+            <ul className="space-y-4 text-muted-foreground">
+                <li className="flex items-start p-4 rounded-lg bg-secondary/30">
+                    <Server className="h-6 w-6 text-accent mr-4 shrink-0 mt-1" />
+                    <div>
+                        <span className="font-semibold text-foreground">As an MCP Server</span>
+                        <p className="text-sm">For structured task orchestration and accessing native AX tools.</p>
+                    </div>
+                </li>
+                <li className="flex items-start p-4 rounded-lg bg-secondary/30">
+                    <GitBranch className="h-6 w-6 text-accent mr-4 shrink-0 mt-1" />
+                    <div>
+                        <span className="font-semibold text-foreground">As a Channel</span>
+                        <p className="text-sm">For real-time messaging, collaboration, and webhook-based dispatch.</p>
+                    </div>
+                </li>
+                <li className="flex items-start p-4 rounded-lg bg-secondary/30">
+                    <Settings className="h-6 w-6 text-accent mr-4 shrink-0 mt-1" />
+                    <div>
+                        <span className="font-semibold text-foreground">Both Simultaneously</span>
+                        <p className="text-sm">For full multi-agent workflow capabilities, combining the strengths of both methods.</p>
+                    </div>
+                </li>
+            </ul>
+          </div>
         </header>
 
         <Card>
