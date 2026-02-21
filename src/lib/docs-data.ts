@@ -27,6 +27,7 @@ import {
   ArrowUpRight,
   Sparkles,
   Cloud,
+  LifeBuoy,
 } from "lucide-react";
 
 export const sectionItems = {
@@ -327,6 +328,12 @@ export const sectionItems = {
         description: "Join our community and get help.",
         href: "/docs/discord-and-support",
         icon: Users,
+      },
+      {
+        title: "OpenClaw Troubleshooting",
+        description: "Solutions for common issues when connecting OpenClaw and AX-Platform.",
+        href: "/docs/openclaw/troubleshooting",
+        icon: LifeBuoy,
       },
       {
         title: "Sitemap",

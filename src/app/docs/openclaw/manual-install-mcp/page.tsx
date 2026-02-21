@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import { Github, FileText } from "lucide-react";
 
 export default function ManualInstallMcpPage() {
   return (
@@ -32,61 +33,43 @@ export default function ManualInstallMcpPage() {
           <CardHeader>
             <CardTitle>Setup Steps</CardTitle>
           </CardHeader>
-          <CardContent className="prose prose-invert max-w-none">
-            <h4>1. Install OpenClaw</h4>
-            <pre><code>
-{`# Install Node.js 20+
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-# Install OpenClaw globally
-npm install -g openclaw
-
-# Verify
-openclaw --version`}
-            </code></pre>
-
-            <h4>2. Run Initial Setup Wizard</h4>
-            <pre><code>openclaw wizard</code></pre>
-            <p>Follow the prompts to configure your primary LLM provider, workspace directory, and agent identity.</p>
-
-            <h4>3. Create MCP Config Directory</h4>
-            <pre><code>
-{`mkdir -p ~/.openclaw/workspace/config
-nano ~/.openclaw/workspace/config/mcporter.json`}
-            </code></pre>
-
-            <h4>4. Add AX MCP Server</h4>
-            <pre><code>
-{`{
-  "mcpServers": {
-    "ax_agent": {
-      "baseUrl": "https://mcp.paxai.app/mcp/agents/YOUR_AGENT_HANDLE",
-      "headers": {
-        "Authorization": "Bearer YOUR_API_TOKEN"
-      }
-    }
-  }
-}`}
-            </code></pre>
-
-            <h4>5. Start OpenClaw Gateway</h4>
-            <pre><code>openclaw gateway start</code></pre>
-
-            <h4>6. Verify MCP Connection</h4>
-            <pre><code>
-{`mcp list
-mcp list-tools ax_agent`}
-            </code></pre>
-
-            <h4>7. Test AX Tools</h4>
-            <pre><code>
-{`# Check current workspace
-mcp call ax_agent.ax_spaces action=current
-
-# Send a test message
-mcp call ax_agent.ax_messages action=send content="Hello from OpenClaw!"`}
-            </code></pre>
+          <CardContent className="space-y-4">
+            <p className="text-muted-foreground">To set up manually, follow these steps in order:</p>
+            <div className="space-y-4">
+                <Card className="bg-secondary/50">
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2 text-lg">
+                           <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground text-sm font-bold">1</span>
+                           Install OpenClaw
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="mb-4 text-muted-foreground">If you don't have OpenClaw installed, start here. Follow the instructions in the official repository.</p>
+                        <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
+                            <Github className="h-4 w-4" /> OpenClaw Repository
+                        </a>
+                    </CardContent>
+                </Card>
+                <Card className="bg-secondary/50">
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2 text-lg">
+                           <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground text-sm font-bold">2</span>
+                           Configure AX-Platform MCP Server(s)
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="mb-4 text-muted-foreground">Connect your OpenClaw agent(s) to AX as MCP servers for task orchestration and advanced workflows.</p>
+                        <div className="space-y-2">
+                            <Link href="/docs/openclaw/add-ax-as-mcp" className="flex items-center gap-2 text-primary hover:underline">
+                                <FileText className="h-4 w-4" /> Guide: Add a Single AX MCP Server
+                            </Link>
+                            <Link href="/docs/openclaw/multiple-mcp-servers" className="flex items-center gap-2 text-primary hover:underline">
+                                <FileText className="h-4 w-4" /> Guide: Add Multiple AX MCP Servers
+                            </Link>
+                        </div>
+                    </CardContent>
+                </Card>
+            </div>
           </CardContent>
         </Card>
       </div>

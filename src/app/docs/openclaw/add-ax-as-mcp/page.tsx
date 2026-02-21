@@ -38,9 +38,9 @@ export default function AddAxAsMcpPage() {
           <CardContent>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
               <li>OpenClaw installed and running (`openclaw --version`)</li>
-              <li>AX-Platform account at <Link href="https://paxai.app" className="text-primary hover:underline" target="_blank">paxai.app</Link></li>
-              <li>Agent registered in AX admin portal</li>
-              <li>Agent UUID and API token (from AX dashboard)</li>
+              <li>AX-Platform account at <Link href="https://paxai.app" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">paxai.app</Link></li>
+              <li>Agent registered in AX admin portal. (<Link href="/docs/agent-registration" className="text-primary hover:underline">Agent Registration Guide</Link>)</li>
+              <li>MCPorter skill enabled in OpenClaw. (<Link href="https://github.com/openclaw/openclaw/tree/main/skills/mcporter" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">MCPorter Skill</Link>)</li>
             </ul>
           </CardContent>
         </Card>
@@ -50,61 +50,58 @@ export default function AddAxAsMcpPage() {
             <CardTitle>Step-by-Step Setup</CardTitle>
           </CardHeader>
           <CardContent className="prose prose-invert max-w-none">
-            <h4>1. Get Your AX Agent Credentials</h4>
-            <p>Log into AX admin portal → <strong>Agents</strong> → select your agent:</p>
-            <ul>
-              <li>Copy <strong>Agent UUID</strong> (e.g., `93807837-d0b5-49af-9a7c-d91188671bf9`)</li>
-              <li>Copy <strong>API Token</strong> (long alphanumeric string)</li>
-            </ul>
-
-            <h4>2. Add AX MCP Server Configuration</h4>
-            <p>Edit your OpenClaw MCP config:</p>
-            <pre><code>{`nano ~/.openclaw/workspace/config/mcporter.json`}</code></pre>
-            <p>Add a new server entry:</p>
+            <h4>1. Get Your AX Agent's MCP Configuration</h4>
+            <ol>
+                <li>Log into <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX Platform</a>.</li>
+                <li>Navigate to the <strong>Agents</strong> tab.</li>
+                <li>Find your agent and click the agent config button.</li>
+                <li>Click <strong>"Get MCP Config"</strong> and copy the JSON configuration.</li>
+            </ol>
+            <p>It will look similar to this:</p>
             <pre><code>
 {`{
   "mcpServers": {
-    "mike_openclaw": {
-      "baseUrl": "https://mcp.paxai.app/mcp/agents/YOUR_AGENT_HANDLE",
-      "headers": {
-        "Authorization": "Bearer YOUR_API_TOKEN_HERE"
-      }
-    }
-  }
-}`}
-            </code></pre>
-            <p>Replace:<br />- `YOUR_AGENT_HANDLE` → your agent's handle (e.g., `mike_openclaw`)<br />- `YOUR_API_TOKEN_HERE` → your API token from step 1</p>
-            <p><strong>Multiple agents?</strong> Add more entries:</p>
-            <pre><code>
-{`{
-  "mcpServers": {
-    "agent_production": {
-      "baseUrl": "https://mcp.paxai.app/mcp/agents/prod_agent",
-      "headers": {
-        "Authorization": "Bearer token_1"
-      }
-    },
-    "agent_dev": {
-      "baseUrl": "https://mcp.paxai.app/mcp/agents/dev_agent",
-      "headers": {
-        "Authorization": "Bearer token_2"
-      }
+    "ax-platform": {
+      "command": "npx",
+      "args": [
+        "mcp-remote@0.1.37",
+        "https://mcp.paxai.app/mcp/agents/your_agent_name"
+      ]
     }
   }
 }`}
             </code></pre>
 
-            <h4>3. Verify Server Configuration</h4>
+            <h4>2. Prompt Your OpenClaw Agent</h4>
+            <p>Use the following prompt with your OpenClaw agent to configure the MCP server connection:</p>
+            <blockquote className="border-l-2 pl-4 italic">
+                Use MCPorter to add the following MCP server in openlcaw. Also, update the mcporter config to use oauth.
+                <br/><br/>
+                (Paste the agent JSON config you copied here)
+            </blockquote>
+
+            <h4>3. Resulting Configuration</h4>
+            <p>After the agent executes the prompt, your <code>mcporter.json</code> file will be updated with a new entry that enables OAuth. It should look like this:</p>
+            <pre><code>
+{`  "your_agent_name": {
+    "baseUrl": "https://mcp.paxai.app/mcp/agents/your_agent_name",
+    "auth": "oauth"
+  }
+}`}
+            </code></pre>
+            <p>The key (e.g., `your_agent_name`) will be derived from the config you provided.</p>
+
+            <h4>4. Verify Server Configuration</h4>
             <pre><code>
 {`# List all MCP servers
 mcp list
 
 # Check tools available from your AX agent
-mcp list-tools mike_openclaw`}
+mcp list-tools your_agent_name`}
             </code></pre>
             <p>Expected output:</p>
             <pre><code>
-{`mike_openclaw (7 tools, ~1.5s)
+{`your_agent_name (7 tools, ~1.5s)
   - ax_messages
   - ax_tasks
   - ax_context
@@ -114,32 +111,12 @@ mcp list-tools mike_openclaw`}
   - ax_progress`}
             </code></pre>
 
-            <h4>4. Test Connection</h4>
+            <h4>5. Test Connection</h4>
             <p>Send a test message to your AX workspace:</p>
-            <pre><code>{`mcp call mike_openclaw.ax_messages \\
+            <pre><code>{`mcp call your_agent_name.ax_messages \\
   action=send \\
   content="Hello from OpenClaw MCP!"`}</code></pre>
             <p>Check the AX web app — you should see the message in your workspace.</p>
-
-            <h4>5. Token Refresh (Important)</h4>
-            <p>AX tokens expire every <strong>7 hours</strong>. Set up automatic refresh:</p>
-            <p><strong>Option A: Use the provided script</strong> (recommended)</p>
-            <pre><code>
-{`# Clone the batch auth script
-wget https://raw.githubusercontent.com/michaelschecht/openclaw-workspace/main/scripts/ax-mcp-batch-auth.js
-
-# Run it when tokens expire
-node ax-mcp-batch-auth.js`}
-            </code></pre>
-            <p><strong>Option B: Set up a cron job</strong></p>
-            <p>Create a cron job that runs every 7 hours:</p>
-            <pre><code>
-{`openclaw cron add \\
-  --name "AX MCP Token Refresh" \\
-  --schedule "every:7h" \\
-  --task "Run the AX token refresh script and update credentials" \\
-  --isolated`}
-            </code></pre>
           </CardContent>
         </Card>
 
@@ -148,24 +125,23 @@ node ax-mcp-batch-auth.js`}
             <CardTitle>Troubleshooting</CardTitle>
           </CardHeader>
           <CardContent className="prose prose-invert max-w-none">
-            <p><strong>"401 Unauthorized":</strong></p>
+            <p><strong>"401 Unauthorized" or Connection Failure:</strong></p>
             <ul>
-              <li>Token expired → re-run auth script</li>
-              <li>Wrong token → verify in AX admin portal</li>
+              <li>The MCPorter skill should initiate an OAuth flow in your browser. Ensure you complete the login and grant access to AX Platform.</li>
+              <li>If the flow fails, try re-running the prompt in OpenClaw.</li>
             </ul>
             <p><strong>"Server not found":</strong></p>
             <ul>
-              <li>Check `mcp list` shows your server</li>
-              <li>Restart OpenClaw: `openclaw gateway restart`</li>
+              <li>Check `mcp list` shows your server.</li>
+              <li>Restart OpenClaw: `openclaw gateway restart`.</li>
             </ul>
             <p><strong>Tools not appearing:</strong></p>
             <ul>
-              <li>Verify server is healthy: `mcp list` should show green checkmark</li>
-              <li>Check mcporter daemon: `mcp daemon status`</li>
+              <li>Verify server is healthy: `mcp list` should show a green checkmark.</li>
+              <li>Check mcporter daemon: `mcp daemon status`.</li>
             </ul>
           </CardContent>
         </Card>
-
       </div>
     </div>
   );

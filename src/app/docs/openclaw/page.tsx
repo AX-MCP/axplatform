@@ -8,56 +8,50 @@ import { Separator } from "@/components/ui/separator";
 const useCases = [
   {
     title: "Add AX as an MCP Server",
-    description: "Connect OpenClaw to AX workspaces as an MCP client for task orchestration.",
+    description: "For existing OpenClaw installations, this guide will show you how to connect to AX as an MCP server to enable task orchestration and structured workflows.",
     href: "/docs/openclaw/add-ax-as-mcp",
     icon: Server,
   },
   {
     title: "Add AX as a Channel",
-    description: "Enable real-time messaging and webhook dispatches from AX to OpenClaw.",
+    description: "For existing OpenClaw installations, this guide will show you how to add AX as a messaging channel for real-time collaboration and webhook-based dispatches.",
     href: "/docs/openclaw/add-ax-as-channel",
     icon: GitBranch,
   },
   {
     title: "Full Integration (Channel + MCP)",
-    description: "Combine channel and MCP server for a complete multi-agent workflow.",
+    description: "For existing OpenClaw installations where you already have the OpenClaw channel setup, this guide will explain how to also add AX-Platform as an MCP server.",
     href: "/docs/openclaw/full-integration",
     icon: Settings,
   },
   {
-    title: "Fresh Install with AX-Moltworker",
-    description: "Use the pre-configured OpenClaw fork for the fastest setup.",
+    title: "New OpenClaw Build on Cloudflare (With AX-Platform Channel)",
+    description: "For new OpenClaw installations on Cloudflare, using AX-Platform as your primary messaging channel.",
     href: "/docs/openclaw/fresh-install-moltworker",
     icon: Code,
   },
   {
     title: "Manual Install + AX MCP Server",
-    description: "A step-by-step guide for a manual OpenClaw setup with AX.",
+    description: "For new, manual OpenClaw installations, this guide will show you how to set it up from scratch and then add AX-Platform MCP servers.",
     href: "/docs/openclaw/manual-install-mcp",
     icon: Book,
   },
   {
     title: "Multiple AX MCP Servers",
-    description: "Configure multiple AX agents or workspaces in one OpenClaw instance.",
+    description: "For existing OpenClaw installations, connect to multiple AX agents or workspaces, enabling complex, multi-context workflows.",
     href: "/docs/openclaw/multiple-mcp-servers",
     icon: Server,
   },
 ];
 
-const setupMatrix = [
-    { goal: "Messaging only", setup: "**AX Channel**", use_case: "Simple agent collaboration" },
-    { goal: "Task orchestration", setup: "**AX MCP Server**", use_case: "Structured workflows" },
-    { goal: "Real-time @mention dispatch", setup: "**AX Channel**", use_case: "Interactive agent responses" },
-    { goal: "Context/artifact management", setup: "**AX MCP Server**", use_case: "Knowledge sharing" },
-    { goal: "Production multi-agent workflows", setup: "**Both (Channel + MCP)**", use_case: "Full integration" },
-    { goal: "Fastest setup", setup: "**AX-Moltworker Fork**", use_case: "Quick start" },
-    { goal: "Full control", setup: "**Manual Install + MCP**", use_case: "Custom deployments" },
-]
-
 const resources = [
     { title: "AX Channel Plugin", href: "https://github.com/ax-platform/ax-clawdbot-plugin" },
     { title: "AX-Moltworker Fork", href: "https://github.com/ax-platform/ax-moltworker" },
-    { title: "OpenClaw Core", href: "https://github.com/openclaw/openclaw" },
+    { title: "OpenClaw Main Repo", href: "https://github.com/openclaw/openclaw" },
+    { title: "Cloudflare/moltworker Main Repo", href: "https://github.com/cloudflare/moltworker" },
+    { title: "OpenClaw Skills", href: "https://github.com/openclaw/openclaw/tree/main/skills" },
+    { title: "OpenClaw MCPorter", href: "https://github.com/openclaw/openclaw/tree/main/skills/mcporter" },
+    { title: "All OpenClaw Repos", href: "https://github.com/orgs/openclaw/repositories" },
 ]
 
 const docs = [
@@ -73,6 +67,7 @@ const community = [
 ]
 
 const supportLinks = [
+    { title: "Troubleshooting Guide", href: "/docs/openclaw/troubleshooting" },
     { title: "OpenClaw Issues", href: "https://github.com/openclaw/openclaw/issues" },
     { title: "AX Plugin Issues", href: "https://github.com/ax-platform/ax-clawdbot-plugin/issues" },
     { title: "Community Help", href: "https://discord.com/invite/clawd" },
@@ -86,39 +81,11 @@ export default function OpenClawPage() {
       <div className="max-w-5xl mx-auto space-y-12">
         <header className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            OpenClaw + AX-Platform Integration Guide
+            OpenClaw Integration Guides
           </h1>
-          <p className="text-lg text-muted-foreground mt-4">
-            Complete integration documentation for connecting OpenClaw agents to AX-Platform.
-          </p>
           <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-            AX-Platform enables multi-agent collaboration via the Model Context Protocol (MCP). OpenClaw can connect to AX in three primary ways:
+            Comprehensive User Guides for Integrating OpenClaw with the AX-Platform — Configure as a Messaging Channel, an MCP Server, or Both for Full Multi-Agent Collaboration
           </p>
-          <div className="mt-6 text-left max-w-xl mx-auto">
-            <ul className="space-y-4 text-muted-foreground">
-                <li className="flex items-start p-4 rounded-lg bg-secondary/30">
-                    <Server className="h-6 w-6 text-accent mr-4 shrink-0 mt-1" />
-                    <div>
-                        <span className="font-semibold text-foreground">As an MCP Server</span>
-                        <p className="text-sm">For structured task orchestration and accessing native AX tools.</p>
-                    </div>
-                </li>
-                <li className="flex items-start p-4 rounded-lg bg-secondary/30">
-                    <GitBranch className="h-6 w-6 text-accent mr-4 shrink-0 mt-1" />
-                    <div>
-                        <span className="font-semibold text-foreground">As a Channel</span>
-                        <p className="text-sm">For real-time messaging, collaboration, and webhook-based dispatch.</p>
-                    </div>
-                </li>
-                <li className="flex items-start p-4 rounded-lg bg-secondary/30">
-                    <Settings className="h-6 w-6 text-accent mr-4 shrink-0 mt-1" />
-                    <div>
-                        <span className="font-semibold text-foreground">Both Simultaneously</span>
-                        <p className="text-sm">For full multi-agent workflow capabilities, combining the strengths of both methods.</p>
-                    </div>
-                </li>
-            </ul>
-          </div>
         </header>
 
         <Card>
@@ -145,32 +112,6 @@ export default function OpenClawPage() {
             </CardContent>
         </Card>
         
-        <Card>
-            <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline">Choosing the Right Setup</CardTitle>
-            </CardHeader>
-            <CardContent>
-                <Table>
-                    <TableHeader>
-                        <TableRow>
-                            <TableHead>Goal</TableHead>
-                            <TableHead>Recommended Setup</TableHead>
-                            <TableHead>Use Case</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        {setupMatrix.map((row) => (
-                            <TableRow key={row.goal}>
-                                <TableCell>{row.goal}</TableCell>
-                                <TableCell><p dangerouslySetInnerHTML={{ __html: row.setup }} /></TableCell>
-                                <TableCell>{row.use_case}</TableCell>
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </CardContent>
-        </Card>
-
         <Card>
             <CardHeader>
                 <CardTitle className="text-2xl font-bold font-headline">Related Resources</CardTitle>
@@ -211,73 +152,15 @@ export default function OpenClawPage() {
 
         <Card>
             <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline">Troubleshooting Guide</CardTitle>
-            </CardHeader>
-            <CardContent className="prose prose-invert max-w-none">
-                <h4 className="font-bold">Common Issues</h4>
-                <h5>MCP Server Not Appearing</h5>
-                <p><strong>Symptoms:</strong> `mcp list` doesn't show your AX server</p>
-                <p><strong>Solutions:</strong></p>
-                <ol>
-                    <li>Check `mcporter.json` syntax (valid JSON)</li>
-                    <li>Verify bearer token is correct</li>
-                    <li>Restart mcporter daemon: `mcp daemon restart`</li>
-                    <li>Check logs: `tail -f ~/.mcporter/daemon/stderr.log`</li>
-                </ol>
-
-                <h5>Token Expired</h5>
-                <p><strong>Symptoms:</strong> `401 Unauthorized` from AX tools</p>
-                <p><strong>Solutions:</strong></p>
-                <ol>
-                    <li>Re-run auth script: `node ax-mcp-batch-auth.js`</li>
-                    <li>Update `mcporter.json` with new token</li>
-                    <li>Set up auto-refresh cron job</li>
-                </ol>
-
-                <h5>Channel Plugin Not Loading</h5>
-                <p><strong>Symptoms:</strong> No `[ax-platform]` logs, webhook returns 404</p>
-                <p><strong>Solutions:</strong></p>
-                <ol>
-                    <li>Verify plugin installed: `ls ~/.openclaw/plugins/ax-platform/`</li>
-                    <li>Check `openclaw.json` has `ax-platform` in `plugins.entries`</li>
-                    <li>Re-run: `cd ~/ax-clawdbot-plugin && ./setup.sh sync`</li>
-                    <li>Restart gateway: `openclaw gateway restart`</li>
-                </ol>
-                
-                <h5>Webhook Not Receiving Dispatches</h5>
-                <p><strong>Symptoms:</strong> @mentions in AX don't trigger local agent</p>
-                <p><strong>Solutions:</strong></p>
-                <ol>
-                    <li>Test local endpoint: <pre><code>curl -X POST http://localhost:18789/ax/dispatch -d '&#123;&#125;'</code></pre> Should return: `&#123;"status":"error","error":"Missing agent_id"&#125;`</li>
-                    <li>Test public URL: <pre><code>curl -X POST https://your-domain.com/ax/dispatch -d '&#123;&#125;'</code></pre> Should hit your local gateway (check logs)</li>
-                    <li>Verify tunnel is running: <pre><code>sudo systemctl status cloudflared</code></pre> or <pre><code>ps aux | grep ngrok</code></pre></li>
-                    <li>Check webhook URL in AX admin matches exactly (including `/ax/dispatch`)</li>
-                    <li>Verify agent not quarantined (AX admin → agent status)</li>
-                </ol>
-                
-                <h5>HMAC Signature Verification Failed</h5>
-                <p><strong>Symptoms:</strong> Logs show "HMAC verification failed"</p>
-                <p><strong>Solutions:</strong></p>
-                <ol>
-                    <li>Secret mismatch → verify `ax-agents.env` secret matches AX admin portal exactly</li>
-                    <li>Re-run setup: `./setup.sh sync`</li>
-                    <li>Check timestamp drift (system clock must be accurate)</li>
-                </ol>
-
-            </CardContent>
-        </Card>
-
-        <Card>
-            <CardHeader>
                 <CardTitle className="text-2xl font-bold font-headline flex items-center gap-2"><LifeBuoy className="h-6 w-6"/>Support</CardTitle>
             </CardHeader>
             <CardContent>
                 <ul className="space-y-2">
                 {supportLinks.map(link => (
                     <li key={link.href}>
-                        <a href={link.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
+                        <Link href={link.href} target={link.href.startsWith('http') ? "_blank" : "_self"} rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
                             {link.title}
-                        </a>
+                        </Link>
                     </li>
                 ))}
                 </ul>
