@@ -26,7 +26,7 @@ const useCases = [
   },
   {
     title: "New OpenClaw Build on Cloudflare (with AX-Platform Channel)",
-    description: "For new installations on Cloudflare, use this pre-configured OpenClaw fork which includes the AX channel for the fastest setup.",
+    description: "Forked version of the https://github.com/cloudflare/moltworker repo with the AX-Platform channel pre-configured for new OpenClaw installations on Cloudflare.",
     href: "/docs/openclaw/fresh-install-moltworker",
     icon: Code,
   },
@@ -38,7 +38,7 @@ const useCases = [
   },
   {
     title: "Multiple AX MCP Servers",
-    description: "Configure one OpenClaw instance to connect to multiple AX agents or workspaces, enabling complex, multi-context workflows.",
+    description: "For existing OpenClaw installations, connect to multiple AX agents or workspaces, enabling complex, multi-context workflows.",
     href: "/docs/openclaw/multiple-mcp-servers",
     icon: Server,
   },
