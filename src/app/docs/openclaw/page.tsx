@@ -25,8 +25,8 @@ const useCases = [
     icon: Settings,
   },
   {
-    title: "Fresh Install (Cloudflare) with AX-Moltworker",
-    description: "Use the pre-configured OpenClaw fork for the fastest setup on Cloudflare.",
+    title: "New OpenClaw Build on Cloudflare (with AX-Platform Channel)",
+    description: "A forked version of the https://github.com/cloudflare/moltworker repository.",
     href: "/docs/openclaw/fresh-install-moltworker",
     icon: Code,
   },
