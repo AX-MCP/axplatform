@@ -67,7 +67,7 @@ const community = [
 ]
 
 const supportLinks = [
-    { title: "Troubleshooting Guide", href: "/docs/openclaw/troubleshooting" },
+    { title: "OpenClaw Support Guide", href: "/docs/openclaw/support-guide" },
     { title: "OpenClaw Issues", href: "https://github.com/openclaw/openclaw/issues" },
     { title: "AX Plugin Issues", href: "https://github.com/ax-platform/ax-clawdbot-plugin/issues" },
     { title: "Community Help", href: "https://discord.com/invite/clawd" },
@@ -114,6 +114,26 @@ export default function OpenClawPage() {
         
         <Card>
             <CardHeader>
+                <CardTitle className="text-2xl font-bold font-headline flex items-center gap-2"><LifeBuoy className="h-6 w-6"/>Support and Troubleshooting Guide</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <div className="h-full bg-secondary/50 hover:border-primary transition-colors p-4 rounded-lg border group">
+                     <Link href="/docs/openclaw/support-guide">
+                        <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     </Link>
+                     <p className="text-sm text-muted-foreground mb-4">One page with all guides for setting up and troubleshooting your OpenClaw + AX integration.</p>
+                     <div className="flex flex-col space-y-2 text-sm">
+                        <Link href="/docs/openclaw/support-guide#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</Link>
+                        <Link href="/docs/openclaw/support-guide#batch-authentication" className="text-primary hover:underline">Batch Authentication Guide</Link>
+                        <Link href="/docs/openclaw/support-guide#cron-jobs" className="text-primary hover:underline">Cron Job Automation</Link>
+                        <Link href="/docs/openclaw/support-guide#troubleshooting" className="text-primary hover:underline">Troubleshooting</Link>
+                     </div>
+                </div>
+            </CardContent>
+        </Card>
+
+        <Card>
+            <CardHeader>
                 <CardTitle className="text-2xl font-bold font-headline">Related Resources</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -147,23 +167,6 @@ export default function OpenClawPage() {
                         ))}
                     </div>
                 </div>
-            </CardContent>
-        </Card>
-
-        <Card>
-            <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline flex items-center gap-2"><LifeBuoy className="h-6 w-6"/>Support</CardTitle>
-            </CardHeader>
-            <CardContent>
-                <ul className="space-y-2">
-                {supportLinks.map(link => (
-                    <li key={link.href}>
-                        <Link href={link.href} target={link.href.startsWith('http') ? "_blank" : "_self"} rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
-                            {link.title}
-                        </Link>
-                    </li>
-                ))}
-                </ul>
             </CardContent>
         </Card>
 

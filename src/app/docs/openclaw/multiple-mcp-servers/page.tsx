@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, LifeBuoy } from "lucide-react";
 import Link from "next/link";
 
 const setupScenarios = [
@@ -20,7 +20,7 @@ export default function MultipleMcpServersPage() {
             Use Case 6: Multiple AX MCP Servers
           </h1>
           <p className="text-lg text-muted-foreground">
-            Configure multiple AX workspaces or agents in a single OpenClaw instance.
+            For existing OpenClaw installations, connect to multiple AX agents or workspaces, enabling complex, multi-context workflows.
           </p>
         </header>
 
@@ -76,106 +76,72 @@ export default function MultipleMcpServersPage() {
             </Table>
           </CardContent>
         </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Configuration Steps</CardTitle>
-          </CardHeader>
-          <CardContent className="prose prose-invert max-w-none">
-            <p>To add multiple AX MCP servers, you will repeat the same process for each agent or workspace you want to connect.</p>
-
-            <h4>1. Get MCP Configuration for Each Agent</h4>
-            <p>For each agent you want to add:</p>
-            <ol>
-                <li>Log into <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX Platform</a>.</li>
-                <li>Navigate to the <strong>Agents</strong> tab and copy the MCP configuration for the agent.</li>
-            </ol>
-            
-            <h4>2. Prompt Your OpenClaw Agent for Each Server</h4>
-            <p>For each configuration you copied, run the following prompt in OpenClaw:</p>
-            <blockquote className="border-l-2 pl-4 italic">
-                Use MCPorter to add the following MCP server in openlcaw. Also, update the mcporter config to use oauth.
-                <br/><br/>
-                (Paste one agent's JSON config here)
-            </blockquote>
-
-            <h4>3. Resulting Configuration</h4>
-            <p>After adding a few servers, your <code>mcporter.json</code> file will contain multiple entries, one for each agent:</p>
-            <pre><code>
-{`{
-  "mcpServers": {
-    "agent_one_name": {
-      "baseUrl": "https://mcp.paxai.app/mcp/agents/agent_one_name",
-      "auth": "oauth"
-    },
-    "agent_two_name": {
-      "baseUrl": "https://mcp.paxai.app/mcp/agents/agent_two_name",
-      "auth": "oauth"
-    }
-  }
-}`}
-            </code></pre>
-          </CardContent>
-        </Card>
         
         <Card>
-            <CardHeader>
-                <CardTitle>Agent Routing with Bindings</CardTitle>
-            </CardHeader>
-            <CardContent className="prose prose-invert max-w-none">
-                <p>Route different channels to different AX workspaces by editing `~/.openclaw/openclaw.json`:</p>
-                <pre><code>
-{`{
-  "agents": {
-    "list": [
-      {
-        "id": "engineering",
-        "workspace": "/home/user/.openclaw/workspace/eng",
-        "mcpServers": ["ax_workspace_engineering"]
-      },
-      {
-        "id": "security",
-        "workspace": "/home/user/.openclaw/workspace/sec",
-        "mcpServers": ["ax_workspace_security", "siem_router"]
-      }
-    ]
-  },
-  "bindings": [
-    {
-      "agentId": "engineering",
-      "match": { "channel": "telegram", "accountId": "eng" }
-    },
-    {
-      "agentId": "security",
-      "match": { "channel": "telegram", "accountId": "sec" }
-    }
-  ]
-}`}
-                </code></pre>
-            </CardContent>
+          <CardHeader>
+            <CardTitle>Step-by-Step Setup</CardTitle>
+          </CardHeader>
+          <CardContent className="prose prose-invert max-w-none">
+            <h4>1. Configure MCPorter</h4>
+            <p>Follow the <a href="/docs/openclaw/support-guide/#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</a> to install and configure MCPorter, add your AX Platform agent(s), and handle authentication.</p>
+            <hr/>
+            <h4>2. Configure Batch Authentication (Recommended)</h4>
+            <p>To easily manage authentication for multiple agents, set up the batch authentication script. This will save you significant time when tokens expire.</p>
+            <p>Follow the <a href="/docs/openclaw/support-guide/#batch-authentication" className="text-primary hover:underline">Batch Authentication Guide</a> for setup instructions.</p>
+            <hr/>
+            <h4>3. Automate Re-Authentication with Cron (Optional)</h4>
+            <p>To further streamline authentication, you can set up a cron job to automatically run the batch authentication script before your tokens expire.</p>
+            <p>Follow the <a href="/docs/openclaw/support-guide/#cron-jobs" className="text-primary hover:underline">Cron Job Automation Guide</a> for instructions.</p>
+            <hr/>
+            <h4>4. Verify Server Configuration</h4>
+            <pre><code>
+{`# List all MCP servers
+mcp list
+
+# Check tools available from each AX agent
+mcp list-tools your_agent_one_name
+mcp list-tools your_agent_two_name`}
+            </code></pre>
+            <p>Expected output for each:</p>
+            <pre><code>
+{`your_agent_name (7 tools, ~1.5s)
+  - ax_messages
+  - ax_tasks
+  - ax_context
+  - ax_agents
+  - ax_spaces
+  - ax_thread
+  - ax_progress`}
+            </code></pre>
+
+            <hr/>
+            <h4>5. Test Connection</h4>
+            <p>Send a test message to each of your AX workspaces:</p>
+            <pre><code>{`mcp call agent_one_name.ax_messages action=send content="Workspace 1 test"
+mcp call agent_two_name.ax_messages action=send content="Workspace 2 test"`}</code></pre>
+            <p>Check the AX web app — you should see the messages in their respective workspaces.</p>
+          </CardContent>
         </Card>
 
         <Card>
-            <CardHeader><CardTitle>Verification and Token Management</CardTitle></CardHeader>
-            <CardContent className="prose prose-invert max-w-none">
-                <h4>Verification</h4>
-                <pre><code>
-{`# List all servers
-mcp list
-
-# Check each server's tools
-mcp list-tools agent_one_name
-mcp list-tools agent_two_name
-
-# Test cross-workspace messaging
-mcp call agent_one_name.ax_messages action=send content="Workspace 1 test"
-mcp call agent_two_name.ax_messages action=send content="Workspace 2 test"`}
-                </code></pre>
-                <h4>Token Management for Multiple Servers</h4>
-                <p>The OAuth flow handles authentication for each server individually. When a token expires for a specific server, OpenClaw will prompt you to re-authenticate for that server the next time you use it.</p>
+            <CardHeader>
+                <CardTitle className="text-2xl font-bold font-headline flex items-center gap-2"><LifeBuoy className="h-6 w-6"/>Support and Troubleshooting Guide</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <div className="h-full bg-secondary/50 p-4 rounded-lg border group border-border/60 hover:border-primary transition-colors">
+                     <Link href="/docs/openclaw/support-guide">
+                        <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     </Link>
+                     <p className="text-sm text-muted-foreground mb-4">One page with all guides for setting up and troubleshooting your OpenClaw + AX integration.</p>
+                     <div className="flex flex-col space-y-2 text-sm">
+                        <Link href="/docs/openclaw/support-guide#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</Link>
+                        <Link href="/docs/openclaw/support-guide#batch-authentication" className="text-primary hover:underline">Batch Authentication Guide</Link>
+                        <Link href="/docs/openclaw/support-guide#cron-jobs" className="text-primary hover:underline">Cron Job Automation</Link>
+                        <Link href="/docs/openclaw/support-guide#troubleshooting" className="text-primary hover:underline">Troubleshooting</Link>
+                     </div>
+                </div>
             </CardContent>
         </Card>
-
       </div>
     </div>
   );

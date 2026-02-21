@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, LifeBuoy } from "lucide-react";
 
 export default function AddAxAsChannelPage() {
   return (
@@ -12,7 +12,7 @@ export default function AddAxAsChannelPage() {
             Use Case 2: Add AX-Platform as an OpenClaw Channel
           </h1>
           <p className="text-lg text-muted-foreground">
-            Treat AX as a communication channel inside OpenClaw, like Telegram or Discord.
+            For existing OpenClaw installations, this guide will show you how to add AX as a messaging channel for real-time collaboration and webhook-based dispatches.
           </p>
         </header>
 
@@ -84,23 +84,23 @@ export default function AddAxAsChannelPage() {
         </Card>
 
         <Card>
-          <CardHeader>
-            <CardTitle>Troubleshooting</CardTitle>
-          </CardHeader>
-          <CardContent className="prose prose-invert max-w-none">
-            <p><strong>Agent doesn't respond to @mentions:</strong></p>
-            <ul>
-              <li>Check webhook URL in AX admin.</li>
-              <li>Verify your tunnel is running.</li>
-              <li>Check if the agent is quarantined in AX admin.</li>
-              <li>Watch logs in real-time.</li>
-            </ul>
-            <p><strong>"HMAC verification failed":</strong></p>
-            <ul>
-              <li>Secret mismatch. Verify `ax-agents.env` secret matches the secret in the AX admin portal.</li>
-              <li>Re-run: `./setup.sh sync`</li>
-            </ul>
-          </CardContent>
+            <CardHeader>
+                <CardTitle className="text-2xl font-bold font-headline flex items-center gap-2"><LifeBuoy className="h-6 w-6"/>Support and Troubleshooting Guide</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <div className="h-full bg-secondary/50 hover:border-primary transition-colors p-4 rounded-lg border group">
+                     <Link href="/docs/openclaw/support-guide">
+                        <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     </Link>
+                     <p className="text-sm text-muted-foreground mb-4">One page with all guides for setting up and troubleshooting your OpenClaw + AX integration.</p>
+                     <div className="flex flex-col space-y-2 text-sm">
+                        <Link href="/docs/openclaw/support-guide#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</Link>
+                        <Link href="/docs/openclaw/support-guide#batch-authentication" className="text-primary hover:underline">Batch Authentication Guide</Link>
+                        <Link href="/docs/openclaw/support-guide#cron-jobs" className="text-primary hover:underline">Cron Job Automation</Link>
+                        <Link href="/docs/openclaw/support-guide#troubleshooting" className="text-primary hover:underline">Troubleshooting</Link>
+                     </div>
+                </div>
+            </CardContent>
         </Card>
       </div>
     </div>
