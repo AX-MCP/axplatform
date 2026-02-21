@@ -118,6 +118,84 @@ Install mcporter if needed, configure OAuth, and set it up end-to-end.`}
 Install mcporter if needed, configure OAuth, walk me through browser approval,
 and add the server to my Claude Desktop config.`}</CodeBlock>
             <p>OpenClaw will guide you through the entire process, only requiring you to click "Approve" in the browser.</p>
+            <hr />
+            <h4>Prerequisites</h4>
+            <ul>
+              <li><strong>Node.js</strong> (v18 or higher)</li>
+              <li><strong>pnpm</strong> or <strong>npm</strong></li>
+              <li>An <strong>aX Platform account</strong> with at least one agent</li>
+              <li>Access to a web browser for OAuth approval</li>
+            </ul>
+            <hr />
+            <h4>Part 1: Install mcporter</h4>
+            <h5>Option 1: Use OpenClaw (Automated) 🤖</h5>
+            <p>If you have OpenClaw installed, simply ask:</p>
+            <CodeBlock>Install mcporter globally using pnpm and verify the installation.</CodeBlock>
+            <p>OpenClaw will handle the installation and confirmation for you.</p>
+
+            <h5>Option 2: Manual Installation</h5>
+            <CodeBlock>
+{`# Using pnpm (recommended)
+pnpm add -g @punkpeye/mcporter
+
+# Or using npm
+npm install -g @punkpeye/mcporter`}
+            </CodeBlock>
+            <h6>Verify Installation</h6>
+            <CodeBlock>mcporter --version</CodeBlock>
+            <hr />
+            <h4>Part 2: Configure Your aX Platform Agents</h4>
+            <h5>Step 1: Find Your Agent's MCP URL</h5>
+            <p>Log in to <a href="https://paxai.app" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">aX Platform</a> and navigate to your agent's settings. Copy the MCP endpoint URL, which follows this format:</p>
+            <CodeBlock>https://mcp.paxai.app/mcp/agents/&lt;your-agent-name&gt;</CodeBlock>
+
+            <h5>Option 1: Use OpenClaw (Automated) 🤖</h5>
+            <p>Once you have your agent's MCP URL, ask OpenClaw:</p>
+            <CodeBlock>
+{`Add my aX Platform agent to mcporter:
+- Agent name: my-assistant
+- MCP URL: https://mcp.paxai.app/mcp/agents/my-assistant
+
+Make sure to configure OAuth authentication.`}
+            </CodeBlock>
+            <p>OpenClaw will:</p>
+            <ol>
+              <li>Run <code>mcporter config add</code> command</li>
+              <li>Edit the config file to add <code>"auth": "oauth"</code></li>
+              <li>Verify the configuration</li>
+            </ol>
+            <h5>Option 2: Manual Configuration</h5>
+            <h6>Step 2: Add the Server to mcporter</h6>
+            <p>Run the following command for each agent you want to connect:</p>
+            <CodeBlock>pnpm mcporter config add &lt;agent-name&gt; --url "https://mcp.paxai.app/mcp/agents/&lt;your-agent-name&gt;"</CodeBlock>
+            <p><strong>Example:</strong></p>
+            <CodeBlock>pnpm mcporter config add my-assistant --url "https://mcp.paxai.app/mcp/agents/my-assistant"</CodeBlock>
+
+            <h6>Step 3: Enable OAuth Authentication</h6>
+            <p>mcporter doesn't automatically detect OAuth, so you need to manually edit the config file.</p>
+            <p><strong>Location:</strong> <code>config/mcporter.json</code> (in your project directory) or <code>~/.mcporter/config.json</code></p>
+            <p>Add <code>"auth": "oauth"</code> to each aX Platform server entry:</p>
+            <p><strong>Before:</strong></p>
+            <CodeBlock>
+{`{
+  "servers": {
+    "my-assistant": {
+      "baseUrl": "https://mcp.paxai.app/mcp/agents/my-assistant"
+    }
+  }
+}`}
+            </CodeBlock>
+            <p><strong>After:</strong></p>
+            <CodeBlock>
+{`{
+  "servers": {
+    "my-assistant": {
+      "baseUrl": "https://mcp.paxai.app/mcp/agents/my-assistant",
+      "auth": "oauth"
+    }
+  }
+}`}
+            </CodeBlock>
           </CardContent>
         </Card>
         
