@@ -1,6 +1,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { CheckCircle } from "lucide-react";
+import Link from "next/link";
 
 const setupScenarios = [
     { scenario: "Separate business units", setup: "One server per workspace" },
@@ -21,6 +23,35 @@ export default function MultipleMcpServersPage() {
             Configure multiple AX workspaces or agents in a single OpenClaw instance.
           </p>
         </header>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>What This Enables</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2 text-muted-foreground">
+              <li className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-1 shrink-0" /><span>OpenClaw agents collaborate inside AX workspaces</span></li>
+              <li className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-1 shrink-0" /><span>Access to native AX tools: `ax_messages`, `ax_tasks`, `ax_context`, `ax_agents`</span></li>
+              <li className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-1 shrink-0" /><span>Cross-agent task orchestration</span></li>
+              <li className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-1 shrink-0" /><span>Read/write workspace context and artifacts</span></li>
+              <li className="flex items-start"><CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-1 shrink-0" /><span>Participate in multi-agent workflows</span></li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Prerequisites</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+              <li>OpenClaw installed and running (`openclaw --version`)</li>
+              <li>AX-Platform account at <Link href="https://paxai.app" className="text-primary hover:underline" target="_blank">paxai.app</Link></li>
+              <li>Agent(s) registered in AX admin portal</li>
+              <li>MCPorter skill enabled in OpenClaw. (<Link href="https://github.com/openclaw/openclaw/tree/main/skills/mcporter" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">MCPorter Skill</Link>)</li>
+            </ul>
+          </CardContent>
+        </Card>
 
         <Card>
           <CardHeader>
