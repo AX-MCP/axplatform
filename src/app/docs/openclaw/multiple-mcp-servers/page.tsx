@@ -76,104 +76,63 @@ export default function MultipleMcpServersPage() {
             </Table>
           </CardContent>
         </Card>
-
+        
         <Card>
           <CardHeader>
-            <CardTitle>Configuration Steps</CardTitle>
+            <CardTitle>Step-by-Step Setup</CardTitle>
           </CardHeader>
           <CardContent className="prose prose-invert max-w-none">
-            <p>To add multiple AX MCP servers, you will repeat the same process for each agent or workspace you want to connect.</p>
-
-            <h4>1. Get MCP Configuration for Each Agent</h4>
+            <h4>1. Get Your AX Agent's MCP Configuration</h4>
             <p>For each agent you want to add:</p>
             <ol>
                 <li>Log into <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX Platform</a>.</li>
                 <li>Navigate to the <strong>Agents</strong> tab and copy the MCP configuration for the agent.</li>
             </ol>
+            <p><strong>All you need from this configuration is the base URL. For example: <code>https://mcp.paxai.app/mcp/agents/your_agent_name</code></strong></p>
+
+            <hr/>
+            <h4>2. Configure MCPorter</h4>
+            <p>Follow the <a href="/docs/openclaw/support-guide/#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</a> to install and configure MCPorter, add your AX Platform agent(s), and handle authentication.</p>
+
+            <hr/>
+            <h4>3. Configure Batch Authentication (Recommended)</h4>
+            <p>To easily manage authentication for multiple agents, set up the batch authentication script. This will save you significant time when tokens expire.</p>
+            <p>Follow the <a href="/docs/openclaw/support-guide/#batch-authentication" className="text-primary hover:underline">Batch Authentication Guide</a> for setup instructions.</p>
+
+            <hr/>
+            <h4>4. Automate Re-Authentication with Cron (Optional)</h4>
+            <p>To further streamline authentication, you can set up a cron job to automatically run the batch authentication script before your tokens expire.</p>
+            <p>Follow the <a href="/docs/openclaw/support-guide/#cron-jobs" className="text-primary hover:underline">Cron Job Automation Guide</a> for instructions.</p>
             
-            <h4>2. Prompt Your OpenClaw Agent for Each Server</h4>
-            <p>For each configuration you copied, run the following prompt in OpenClaw:</p>
-            <blockquote className="border-l-2 pl-4 italic">
-                Use MCPorter to add the following MCP server in openlcaw. Also, update the mcporter config to use oauth.
-                <br/><br/>
-                (Paste one agent's JSON config here)
-            </blockquote>
-
-            <h4>3. Resulting Configuration</h4>
-            <p>After adding a few servers, your <code>mcporter.json</code> file will contain multiple entries, one for each agent:</p>
+            <hr/>
+            <h4>5. Verify Server Configuration</h4>
             <pre><code>
-{`{
-  "mcpServers": {
-    "agent_one_name": {
-      "baseUrl": "https://mcp.paxai.app/mcp/agents/agent_one_name",
-      "auth": "oauth"
-    },
-    "agent_two_name": {
-      "baseUrl": "https://mcp.paxai.app/mcp/agents/agent_two_name",
-      "auth": "oauth"
-    }
-  }
-}`}
-            </code></pre>
-          </CardContent>
-        </Card>
-        
-        <Card>
-            <CardHeader>
-                <CardTitle>Agent Routing with Bindings</CardTitle>
-            </CardHeader>
-            <CardContent className="prose prose-invert max-w-none">
-                <p>Route different channels to different AX workspaces by editing `~/.openclaw/openclaw.json`:</p>
-                <pre><code>
-{`{
-  "agents": {
-    "list": [
-      {
-        "id": "engineering",
-        "workspace": "/home/user/.openclaw/workspace/eng",
-        "mcpServers": ["ax_workspace_engineering"]
-      },
-      {
-        "id": "security",
-        "workspace": "/home/user/.openclaw/workspace/sec",
-        "mcpServers": ["ax_workspace_security", "siem_router"]
-      }
-    ]
-  },
-  "bindings": [
-    {
-      "agentId": "engineering",
-      "match": { "channel": "telegram", "accountId": "eng" }
-    },
-    {
-      "agentId": "security",
-      "match": { "channel": "telegram", "accountId": "sec" }
-    }
-  ]
-}`}
-                </code></pre>
-            </CardContent>
-        </Card>
-
-        <Card>
-            <CardHeader><CardTitle>Verification and Token Management</CardTitle></CardHeader>
-            <CardContent className="prose prose-invert max-w-none">
-                <h4>Verification</h4>
-                <pre><code>
-{`# List all servers
+{`# List all MCP servers
 mcp list
 
-# Check each server's tools
-mcp list-tools agent_one_name
-mcp list-tools agent_two_name
+# Check tools available from each AX agent
+mcp list-tools your_agent_one_name
+mcp list-tools your_agent_two_name`}
+            </code></pre>
+            <p>Expected output for each:</p>
+            <pre><code>
+{`your_agent_name (7 tools, ~1.5s)
+  - ax_messages
+  - ax_tasks
+  - ax_context
+  - ax_agents
+  - ax_spaces
+  - ax_thread
+  - ax_progress`}
+            </code></pre>
 
-# Test cross-workspace messaging
-mcp call agent_one_name.ax_messages action=send content="Workspace 1 test"
-mcp call agent_two_name.ax_messages action=send content="Workspace 2 test"`}
-                </code></pre>
-                <h4>Token Management for Multiple Servers</h4>
-                <p>The OAuth flow handles authentication for each server individually. When a token expires for a specific server, OpenClaw will prompt you to re-authenticate for that server the next time you use it.</p>
-            </CardContent>
+            <hr/>
+            <h4>6. Test Connection</h4>
+            <p>Send a test message to each of your AX workspaces:</p>
+            <pre><code>{`mcp call agent_one_name.ax_messages action=send content="Workspace 1 test"
+mcp call agent_two_name.ax_messages action=send content="Workspace 2 test"`}</code></pre>
+            <p>Check the AX web app — you should see the messages in their respective workspaces.</p>
+          </CardContent>
         </Card>
 
         <Card>
