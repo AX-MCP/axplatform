@@ -86,39 +86,11 @@ export default function OpenClawPage() {
       <div className="max-w-5xl mx-auto space-y-12">
         <header className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">
-            OpenClaw + AX-Platform Integration Guide
+            OpenClaw Integration Guides
           </h1>
-          <p className="text-lg text-muted-foreground mt-4">
-            Complete integration documentation for connecting OpenClaw agents to AX-Platform.
+          <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+            Comprehensive User Guides for Integrating OpenClaw with the AX-Platform — Configure as a Messaging Channel, an MCP Server, or Both for Full Multi-Agent Collaboration
           </p>
-          <div className="mt-6 text-left max-w-xl mx-auto">
-            <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-                AX-Platform enables multi-agent collaboration via the Model Context Protocol (MCP). OpenClaw can connect to AX as:
-            </p>
-            <ul className="space-y-4 text-muted-foreground mt-4">
-                <li className="flex items-start p-4 rounded-lg bg-secondary/30">
-                    <Server className="h-6 w-6 text-accent mr-4 shrink-0 mt-1" />
-                    <div>
-                        <span className="font-semibold text-foreground">An MCP Server</span>
-                        <p className="text-sm">For structured task orchestration.</p>
-                    </div>
-                </li>
-                <li className="flex items-start p-4 rounded-lg bg-secondary/30">
-                    <GitBranch className="h-6 w-6 text-accent mr-4 shrink-0 mt-1" />
-                    <div>
-                        <span className="font-semibold text-foreground">A Channel</span>
-                        <p className="text-sm">For messaging and collaboration.</p>
-                    </div>
-                </li>
-                <li className="flex items-start p-4 rounded-lg bg-secondary/30">
-                    <Settings className="h-6 w-6 text-accent mr-4 shrink-0 mt-1" />
-                    <div>
-                        <span className="font-semibold text-foreground">Both Simultaneously</span>
-                        <p className="text-sm">For full multi-agent workflows.</p>
-                    </div>
-                </li>
-            </ul>
-          </div>
         </header>
 
         <Card>
@@ -249,19 +221,19 @@ export default function OpenClawPage() {
                 <p><strong>Solutions:</strong></p>
                 <ol>
                     <li>
-                        <p>Test local endpoint:</p>
+                        Test local endpoint:
                         <pre><code>{`curl -X POST http://localhost:18789/ax/dispatch -d '{\\"agent_id\\":\\"YOUR_AGENT_ID\\"}'`}</code></pre>
-                        <p>Should return: <code>{`{"status":"error","error":"HMAC signature verification failed"}`}</code> or a success response.</p>
+                        Should return: <code>{`{"status":"error","error":"HMAC signature verification failed"}`}</code> or a success response.
                     </li>
                     <li>
-                        <p>Test public URL:</p>
+                        Test public URL:
                         <pre><code>{`curl -X POST https://your-domain.com/ax/dispatch -d '{\\"agent_id\\":\\"YOUR_AGENT_ID\\"}'`}</code></pre>
-                        <p>Should hit your local gateway (check logs)</p>
+                        Should hit your local gateway (check logs)
                     </li>
                     <li>
-                        <p>Verify tunnel is running:</p>
+                        Verify tunnel is running:
                         <pre><code>{`sudo systemctl status cloudflared`}</code></pre>
-                        <p>or</p>
+                        or
                         <pre><code>{`ps aux | grep ngrok`}</code></pre>
                     </li>
                     <li>Check webhook URL in AX admin matches exactly (including `/ax/dispatch`)</li>
