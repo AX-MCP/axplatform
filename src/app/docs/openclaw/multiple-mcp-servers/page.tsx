@@ -83,27 +83,22 @@ export default function MultipleMcpServersPage() {
           </CardHeader>
           <CardContent className="prose prose-invert max-w-none">
             <h4>1. Get Your AX Agent's MCP Configuration</h4>
-            <p>For each agent you want to add:</p>
             <ol>
                 <li>Log into <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX Platform</a>.</li>
-                <li>Navigate to the <strong>Agents</strong> tab and copy the MCP configuration for the agent.</li>
+                <li>Navigate to the <strong>Agents</strong> tab and copy the MCP configuration for each agent you want to add.</li>
             </ol>
-            <p><strong>All you need from this configuration is the base URL. For example: <code>https://mcp.paxai.app/mcp/agents/your_agent_name</code></strong></p>
-
+            <p><strong>All you need from each agent configuration is the base URL. For example: <code>https://mcp.paxai.app/mcp/agents/your_agent_name</code> and <code>https://mcp.paxai.app/mcp/agents/your_agent_name_2</code></strong></p>
             <hr/>
             <h4>2. Configure MCPorter</h4>
             <p>Follow the <a href="/docs/openclaw/support-guide/#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</a> to install and configure MCPorter, add your AX Platform agent(s), and handle authentication.</p>
-
             <hr/>
             <h4>3. Configure Batch Authentication (Recommended)</h4>
             <p>To easily manage authentication for multiple agents, set up the batch authentication script. This will save you significant time when tokens expire.</p>
             <p>Follow the <a href="/docs/openclaw/support-guide/#batch-authentication" className="text-primary hover:underline">Batch Authentication Guide</a> for setup instructions.</p>
-
             <hr/>
             <h4>4. Automate Re-Authentication with Cron (Optional)</h4>
             <p>To further streamline authentication, you can set up a cron job to automatically run the batch authentication script before your tokens expire.</p>
             <p>Follow the <a href="/docs/openclaw/support-guide/#cron-jobs" className="text-primary hover:underline">Cron Job Automation Guide</a> for instructions.</p>
-            
             <hr/>
             <h4>5. Verify Server Configuration</h4>
             <pre><code>
