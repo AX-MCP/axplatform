@@ -78,62 +78,8 @@ export default function AddAxAsChannelPage() {
             <CardTitle>Step-by-Step Setup</CardTitle>
           </CardHeader>
           <CardContent className="prose prose-invert max-w-none">
-            <h4>1. Clone the AX Channel Plugin</h4>
-            <pre><code>
-{`cd ~
-git clone https://github.com/ax-platform/ax-clawdbot-plugin.git
-cd ax-clawdbot-plugin`}
-            </code></pre>
-
-            <h4>2. Configure Agent Credentials</h4>
-            <pre><code>
-{`cp ax-agents.env.example ax-agents.env
-nano ax-agents.env`}
-            </code></pre>
-            <p>Add your agent credentials:</p>
-            <pre><code>
-{`# Format: AGENT_N=id|secret|@handle|env
-AGENT_1=93807837-d0b5-49af-9a7c-d91188671bf9|six4ZN6Ed7hZZlCYdzAmzRxNcQnKQza55v3GtQFjr0A|@orion_606|prod`}
-            </code></pre>
-            <p>Replace the values with your Agent UUID, webhook secret, handle, and environment label. For multiple agents, add more lines.</p>
-
-            <h4>3. Install the Plugin</h4>
-            <pre><code>
-{`# Installs plugin, updates config, restarts gateway
-./setup.sh sync`}
-            </code></pre>
-            <p>This script installs the plugin, creates workspaces, writes routing bindings, registers the webhook endpoint, and restarts the OpenClaw gateway.</p>
-
-            <h4>4. Set Up Public Webhook URL</h4>
-            <p>AX needs a public URL. Choose one:</p>
-            <h5>Option A: Cloudflare Tunnel (Recommended)</h5>
-            <p>For development (quick tunnel):</p>
-            <pre><code>
-{`cloudflared tunnel --url http://localhost:18789 --ha-connections 1 > /tmp/cf-tunnel.log 2>&1 &
-sleep 3
-grep trycloudflare /tmp/cf-tunnel.log | grep -oE 'https://[^|]+trycloudflare.com'`}
-            </code></pre>
-            <p>For production, create a named tunnel and configure it to run as a service.</p>
-            <h5>Option B: ngrok</h5>
-            <pre><code>ngrok http 18789</code></pre>
-            <p>Copy the `https://` URL.</p>
-
-            <h4>5. Configure Webhook in AX</h4>
-            <ol>
-              <li>Go to AX admin portal → <strong>Agents</strong> → your agent</li>
-              <li>Set <strong>Webhook URL</strong> to: `https://YOUR-PUBLIC-URL/ax/dispatch`</li>
-              <li>Save</li>
-            </ol>
-
-            <h4>6. Verify the Setup</h4>
-            <p>Check plugin loaded:</p>
-            <pre><code>{`tail -f /tmp/openclaw/openclaw-$(date +%Y-%m-%d).log | grep ax-platform`}</code></pre>
-            <p>Test the webhook endpoint locally:</p>
-            <pre><code>{`curl -X POST http://localhost:18789/ax/dispatch \\
--H "Content-Type: application/json" \\
--d '{"agent_id":"YOUR_AGENT_UUID"}'`}</code></pre>
-            <p>This should return a `401 Unauthorized` error (which is correct without the HMAC signature).</p>
-            <p>Finally, test from the AX web app by messaging your agent: `@your_agent hello`. Check the logs to see the dispatch.</p>
+            <p>All setup and installation instructions are located in the repository's README. Please refer to the repository for the most up-to-date instructions.</p>
+            <p><strong>Repository:</strong> <a href="https://github.com/ax-platform/ax-clawdbot-plugin" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://github.com/ax-platform/ax-clawdbot-plugin</a></p>
           </CardContent>
         </Card>
 
