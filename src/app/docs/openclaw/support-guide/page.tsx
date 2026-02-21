@@ -107,6 +107,12 @@ Install mcporter if needed, configure OAuth, and set it up end-to-end.`}
               <li>Authenticating via OAuth device flow</li>
               <li>Troubleshooting common issues</li>
             </ul>
+            <h4>1. Get Your AX Agent's MCP Configuration</h4>
+            <ol>
+                <li>Log into <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX Platform</a>.</li>
+                <li>Navigate to the <strong>Agents</strong> tab and copy the MCP configuration for each agent you want to add.</li>
+            </ol>
+            <p><strong>All you need from each agent configuration is the base URL. For example: <code>https://mcp.paxai.app/mcp/agents/your_agent_name</code> and <code>https://mcp.paxai.app/mcp/agents/your_agent_name_2</code></strong></p>
             <hr />
             <h4>🚀 Complete Setup with OpenClaw</h4>
             <p>If you have <strong>OpenClaw</strong> installed, you can automate the entire setup with one prompt:</p>
