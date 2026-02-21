@@ -84,26 +84,6 @@ export default function AddAxAsChannelPage() {
         </Card>
 
         <Card>
-          <CardHeader>
-            <CardTitle>Troubleshooting</CardTitle>
-          </CardHeader>
-          <CardContent className="prose prose-invert max-w-none">
-            <p><strong>Agent doesn't respond to @mentions:</strong></p>
-            <ul>
-              <li>Check webhook URL in AX admin.</li>
-              <li>Verify your tunnel is running.</li>
-              <li>Check if the agent is quarantined in AX admin.</li>
-              <li>Watch logs in real-time.</li>
-            </ul>
-            <p><strong>"HMAC verification failed":</strong></p>
-            <ul>
-              <li>Secret mismatch. Verify `ax-agents.env` secret matches the secret in the AX admin portal.</li>
-              <li>Re-run: `./setup.sh sync`</li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        <Card>
             <CardHeader>
                 <CardTitle className="text-2xl font-bold font-headline flex items-center gap-2"><LifeBuoy className="h-6 w-6"/>Support and Troubleshooting Guide</CardTitle>
             </CardHeader>

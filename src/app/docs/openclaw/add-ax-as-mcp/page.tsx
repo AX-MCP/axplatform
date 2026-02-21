@@ -71,7 +71,7 @@ export default function AddAxAsMcpPage() {
   }
 }`}
             </code></pre>
-            <p><strong>From this configuration, you only need the <code>baseUrl</code>. For example: <code>https://mcp.paxai.app/mcp/agents/your_agent_name</code></strong></p>
+            <p><strong>All you need from this configuration is the base URL. For example: <code>https://mcp.paxai.app/mcp/agents/your_agent_name</code></strong></p>
 
             <hr/>
             <h4>2. Configure MCPorter</h4>
@@ -107,29 +107,6 @@ mcp list-tools your_agent_name`}
             <p>Check the AX web app — you should see the message in your workspace.</p>
           </CardContent>
         </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Troubleshooting</CardTitle>
-          </CardHeader>
-          <CardContent className="prose prose-invert max-w-none">
-            <p><strong>"401 Unauthorized" or Connection Failure:</strong></p>
-            <ul>
-              <li>The MCPorter skill should initiate an OAuth flow in your browser. Ensure you complete the login and grant access to AX Platform.</li>
-              <li>If the flow fails, try re-running the prompt in OpenClaw.</li>
-            </ul>
-            <p><strong>"Server not found":</strong></p>
-            <ul>
-              <li>Check `mcp list` shows your server.</li>
-              <li>Restart OpenClaw: `openclaw gateway restart`.</li>
-            </ul>
-            <p><strong>Tools not appearing:</strong></p>
-            <ul>
-              <li>Verify server is healthy: `mcp list` should show a green checkmark.</li>
-              <li>Check mcporter daemon: `mcp daemon status`.</li>
-            </ul>
-          </CardContent>
-        </Card>
         
         <Card>
             <CardHeader>
@@ -137,7 +114,7 @@ mcp list-tools your_agent_name`}
             </CardHeader>
             <CardContent>
                 <div className="h-full bg-secondary/50 hover:border-primary transition-colors p-4 rounded-lg border group">
-                     <Link href="/docs/openclaw/support-guide" className="group">
+                     <Link href="/docs/openclaw/support-guide">
                         <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
                      </Link>
                      <p className="text-sm text-muted-foreground mb-4">One page with all guides for setting up and troubleshooting your OpenClaw + AX integration.</p>
