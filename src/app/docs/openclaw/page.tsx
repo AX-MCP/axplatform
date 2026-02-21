@@ -47,7 +47,11 @@ const useCases = [
 const resources = [
     { title: "AX Channel Plugin", href: "https://github.com/ax-platform/ax-clawdbot-plugin" },
     { title: "AX-Moltworker Fork", href: "https://github.com/ax-platform/ax-moltworker" },
-    { title: "OpenClaw Core", href: "https://github.com/openclaw/openclaw" },
+    { title: "OpenClaw Main Repo", href: "https://github.com/openclaw/openclaw" },
+    { title: "Cloudflare/moltworker Main Repo", href: "https://github.com/cloudflare/moltworker" },
+    { title: "OpenClaw Skills", href: "https://github.com/openclaw/openclaw/tree/main/skills" },
+    { title: "OpenClaw MCPorter", href: "https://github.com/openclaw/openclaw/tree/main/skills/mcporter" },
+    { title: "All OpenClaw Repos", href: "https://github.com/orgs/openclaw/repositories" },
 ]
 
 const docs = [
