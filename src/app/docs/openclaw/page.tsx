@@ -8,31 +8,31 @@ import { Separator } from "@/components/ui/separator";
 const useCases = [
   {
     title: "Add AX as an MCP Server",
-    description: "For existing OpenClaw installations, connect to AX as an MCP server to enable task orchestration and structured workflows.",
+    description: "For existing OpenClaw installations, this guide will show you how to connect to AX as an MCP server to enable task orchestration and structured workflows.",
     href: "/docs/openclaw/add-ax-as-mcp",
     icon: Server,
   },
   {
     title: "Add AX as a Channel",
-    description: "For existing OpenClaw installations, add AX as a messaging channel for real-time collaboration and webhook-based dispatches.",
+    description: "For existing OpenClaw installations, this guide will show you how to add AX as a messaging channel for real-time collaboration and webhook-based dispatches.",
     href: "/docs/openclaw/add-ax-as-channel",
     icon: GitBranch,
   },
   {
     title: "Full Integration (Channel + MCP)",
-    description: "For existing OpenClaw installations, this guide explains how to combine both the AX channel and MCP server for full multi-agent capabilities.",
+    description: "For existing OpenClaw installations where you already have the OpenClaw channel setup, this guide will explain how to also add AX-Platform as an MCP server.",
     href: "/docs/openclaw/full-integration",
     icon: Settings,
   },
   {
-    title: "New OpenClaw Build on Cloudflare (with AX-Platform Channel)",
-    description: "Forked version of the https://github.com/cloudflare/moltworker repo with the AX-Platform channel pre-configured for new OpenClaw installations on Cloudflare.",
+    title: "New OpenClaw Build on Cloudflare (With AX-Platform Channel)",
+    description: "For new OpenClaw installations on Cloudflare, using AX-Platform as your primary messaging channel.",
     href: "/docs/openclaw/fresh-install-moltworker",
     icon: Code,
   },
   {
     title: "Manual Install + AX MCP Server",
-    description: "For new, manual OpenClaw installations, this guide shows how to set it up from scratch and then add AX Platform MCP servers.",
+    description: "For new, manual OpenClaw installations, this guide will show you how to set it up from scratch and then add AX-Platform MCP servers.",
     href: "/docs/openclaw/manual-install-mcp",
     icon: Book,
   },
@@ -91,11 +91,11 @@ export default function OpenClawPage() {
           <p className="text-lg text-muted-foreground mt-4">
             Complete integration documentation for connecting OpenClaw agents to AX-Platform.
           </p>
-          <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-            AX-Platform enables multi-agent collaboration via the Model Context Protocol (MCP). OpenClaw can connect to AX as:
-          </p>
           <div className="mt-6 text-left max-w-xl mx-auto">
-            <ul className="space-y-4 text-muted-foreground">
+            <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+                AX-Platform enables multi-agent collaboration via the Model Context Protocol (MCP). OpenClaw can connect to AX as:
+            </p>
+            <ul className="space-y-4 text-muted-foreground mt-4">
                 <li className="flex items-start p-4 rounded-lg bg-secondary/30">
                     <Server className="h-6 w-6 text-accent mr-4 shrink-0 mt-1" />
                     <div>
@@ -248,9 +248,22 @@ export default function OpenClawPage() {
                 <p><strong>Symptoms:</strong> @mentions in AX don't trigger local agent</p>
                 <p><strong>Solutions:</strong></p>
                 <ol>
-                    <li>Test local endpoint: <pre><code>curl -X POST http://localhost:18789/ax/dispatch -d '&#123;&#125;'</code></pre> Should return: `&#123;"status":"error","error":"Missing agent_id"&#125;`</li>
-                    <li>Test public URL: <pre><code>curl -X POST https://your-domain.com/ax/dispatch -d '&#123;&#125;'</code></pre> Should hit your local gateway (check logs)</li>
-                    <li>Verify tunnel is running: <pre><code>sudo systemctl status cloudflared</code></pre> or <pre><code>ps aux | grep ngrok</code></pre></li>
+                    <li>
+                        <p>Test local endpoint:</p>
+                        <pre><code>{`curl -X POST http://localhost:18789/ax/dispatch -d '{\\"agent_id\\":\\"YOUR_AGENT_ID\\"}'`}</code></pre>
+                        <p>Should return: <code>{`{"status":"error","error":"HMAC signature verification failed"}`}</code> or a success response.</p>
+                    </li>
+                    <li>
+                        <p>Test public URL:</p>
+                        <pre><code>{`curl -X POST https://your-domain.com/ax/dispatch -d '{\\"agent_id\\":\\"YOUR_AGENT_ID\\"}'`}</code></pre>
+                        <p>Should hit your local gateway (check logs)</p>
+                    </li>
+                    <li>
+                        <p>Verify tunnel is running:</p>
+                        <pre><code>{`sudo systemctl status cloudflared`}</code></pre>
+                        <p>or</p>
+                        <pre><code>{`ps aux | grep ngrok`}</code></pre>
+                    </li>
                     <li>Check webhook URL in AX admin matches exactly (including `/ax/dispatch`)</li>
                     <li>Verify agent not quarantined (AX admin → agent status)</li>
                 </ol>
