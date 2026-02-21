@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, LifeBuoy } from "lucide-react";
 
 export default function FreshInstallMoltworkerPage() {
   return (
@@ -33,6 +33,24 @@ export default function FreshInstallMoltworkerPage() {
             </p>
             <p className="mt-4"><strong>Repository:</strong> <a href="https://github.com/ax-platform/ax-moltworker" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://github.com/ax-platform/ax-moltworker</a></p>
           </CardContent>
+        </Card>
+
+        <Card>
+            <CardHeader>
+                <CardTitle className="text-2xl font-bold font-headline flex items-center gap-2"><LifeBuoy className="h-6 w-6"/>Support and Troubleshooting Guide</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <div className="h-full bg-secondary/50 hover:border-primary transition-colors p-4 rounded-lg border group">
+                     <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     <p className="text-sm text-muted-foreground mb-4">One page with all guides for setting up and troubleshooting your OpenClaw + AX integration.</p>
+                     <div className="flex flex-col space-y-2 text-sm">
+                        <Link href="/docs/openclaw/support-guide#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</Link>
+                        <Link href="/docs/openclaw/support-guide#batch-authentication" className="text-primary hover:underline">Batch Authentication Guide</Link>
+                        <Link href="/docs/openclaw/support-guide#cron-jobs" className="text-primary hover:underline">Cron Job Automation</Link>
+                        <Link href="/docs/openclaw/support-guide#troubleshooting" className="text-primary hover:underline">Troubleshooting</Link>
+                     </div>
+                </div>
+            </CardContent>
         </Card>
       </div>
     </div>
