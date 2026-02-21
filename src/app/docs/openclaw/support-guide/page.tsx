@@ -107,6 +107,7 @@ Install mcporter if needed, configure OAuth, and set it up end-to-end.`}
               <li>Authenticating via OAuth device flow</li>
               <li>Troubleshooting common issues</li>
             </ul>
+            <hr />
             <h4>1. Get Your AX Agent's MCP Configuration</h4>
             <ol>
                 <li>Log into <a href="https://paxai.app/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AX Platform</a>.</li>
