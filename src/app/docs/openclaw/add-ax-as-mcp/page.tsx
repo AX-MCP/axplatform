@@ -51,15 +51,12 @@ export default function AddAxAsMcpPage() {
           </CardHeader>
           <CardContent className="prose prose-invert max-w-none">
             
-            <h4>1. Get Your AX Agent's MCP Configuration</h4>
-            <p>To get started, follow the instructions in the <a href="/docs/openclaw/support-guide/#overview" className="text-primary hover:underline">OpenClaw Support Guide</a> to obtain the base URL for each of your agents.</p>
-
-            <h4>2. Configure MCPorter</h4>
+            <h4>1. Configure MCPorter</h4>
             <p>Follow the <a href="/docs/openclaw/support-guide/#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</a> to install and configure MCPorter, add your AX Platform agent(s), and handle authentication.</p>
             
             <hr/>
 
-            <h4>3. Verify Server Configuration</h4>
+            <h4>2. Verify Server Configuration</h4>
             <pre><code>
 {`# List all MCP servers
 mcp list
@@ -79,7 +76,7 @@ mcp list-tools your_agent_name`}
   - ax_progress`}
             </code></pre>
 
-            <h4>4. Test Connection</h4>
+            <h4>3. Test Connection</h4>
             <p>Send a test message to your AX workspace:</p>
             <pre><code>{`mcp call your_agent_name.ax_messages \\
   action=send \\
