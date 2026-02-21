@@ -25,8 +25,8 @@ const useCases = [
     icon: Settings,
   },
   {
-    title: "Fresh Install with AX-Moltworker",
-    description: "Use the pre-configured OpenClaw fork for the fastest setup.",
+    title: "Fresh Install (Cloudflare) with AX-Moltworker",
+    description: "Use the pre-configured OpenClaw fork for the fastest setup on Cloudflare.",
     href: "/docs/openclaw/fresh-install-moltworker",
     icon: Code,
   },
@@ -92,29 +92,29 @@ export default function OpenClawPage() {
             Complete integration documentation for connecting OpenClaw agents to AX-Platform.
           </p>
           <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-            AX-Platform enables multi-agent collaboration via the Model Context Protocol (MCP). OpenClaw can connect to AX in three primary ways:
+            AX-Platform enables multi-agent collaboration via the Model Context Protocol (MCP). OpenClaw can connect to AX as:
           </p>
           <div className="mt-6 text-left max-w-xl mx-auto">
             <ul className="space-y-4 text-muted-foreground">
                 <li className="flex items-start p-4 rounded-lg bg-secondary/30">
                     <Server className="h-6 w-6 text-accent mr-4 shrink-0 mt-1" />
                     <div>
-                        <span className="font-semibold text-foreground">As an MCP Server</span>
-                        <p className="text-sm">For structured task orchestration and accessing native AX tools.</p>
+                        <span className="font-semibold text-foreground">An MCP Server</span>
+                        <p className="text-sm">For structured task orchestration.</p>
                     </div>
                 </li>
                 <li className="flex items-start p-4 rounded-lg bg-secondary/30">
                     <GitBranch className="h-6 w-6 text-accent mr-4 shrink-0 mt-1" />
                     <div>
-                        <span className="font-semibold text-foreground">As a Channel</span>
-                        <p className="text-sm">For real-time messaging, collaboration, and webhook-based dispatch.</p>
+                        <span className="font-semibold text-foreground">A Channel</span>
+                        <p className="text-sm">For messaging and collaboration.</p>
                     </div>
                 </li>
                 <li className="flex items-start p-4 rounded-lg bg-secondary/30">
                     <Settings className="h-6 w-6 text-accent mr-4 shrink-0 mt-1" />
                     <div>
                         <span className="font-semibold text-foreground">Both Simultaneously</span>
-                        <p className="text-sm">For full multi-agent workflow capabilities, combining the strengths of both methods.</p>
+                        <p className="text-sm">For full multi-agent workflows.</p>
                     </div>
                 </li>
             </ul>
