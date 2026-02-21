@@ -74,33 +74,12 @@ export default function AddAxAsMcpPage() {
             <p><strong>From this configuration, you only need the <code>baseUrl</code>. For example: <code>https://mcp.paxai.app/mcp/agents/your_agent_name</code></strong></p>
 
             <hr/>
-            <h4>2. Add the AX Server via OpenClaw</h4>
-
-            <h5>If you already have MCPorter Configured...</h5>
-            <p>Use the following prompt with your OpenClaw agent to configure the MCP server connection:</p>
-            <blockquote className="border-l-2 pl-4 italic">
-                Use MCPorter to add the following MCP server in openlcaw. Also, update the mcporter config to use oauth.
-                <br/><br/>
-                (Paste the agent JSON config you copied here)
-            </blockquote>
-
-            <h5>If you don’t have MCPorter set up yet...</h5>
-            <p>Please follow our <a href="/docs/openclaw/support-guide/#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</a> to get started. Once MCPorter is configured, return to the step above to prompt your OpenClaw agent.</p>
-
+            <h4>2. Configure MCPorter</h4>
+            <p>Follow the <a href="/docs/openclaw/support-guide/#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</a> to install and configure MCPorter, add your AX Platform agent(s), and handle authentication.</p>
+            
             <hr/>
 
-            <h4>3. Resulting Configuration</h4>
-            <p>After the agent executes the prompt, your <code>mcporter.json</code> file will be updated with a new entry that enables OAuth. It should look like this:</p>
-            <pre><code>
-{`  "your_agent_name": {
-    "baseUrl": "https://mcp.paxai.app/mcp/agents/your_agent_name",
-    "auth": "oauth"
-  }
-}`}
-            </code></pre>
-            <p>The key (e.g., `your_agent_name`) will be derived from the config you provided.</p>
-
-            <h4>4. Verify Server Configuration</h4>
+            <h4>3. Verify Server Configuration</h4>
             <pre><code>
 {`# List all MCP servers
 mcp list
@@ -120,7 +99,7 @@ mcp list-tools your_agent_name`}
   - ax_progress`}
             </code></pre>
 
-            <h4>5. Test Connection</h4>
+            <h4>4. Test Connection</h4>
             <p>Send a test message to your AX workspace:</p>
             <pre><code>{`mcp call your_agent_name.ax_messages \\
   action=send \\
@@ -157,7 +136,7 @@ mcp list-tools your_agent_name`}
                 <CardTitle className="text-2xl font-bold font-headline flex items-center gap-2"><LifeBuoy className="h-6 w-6"/>Support and Troubleshooting Guide</CardTitle>
             </CardHeader>
             <CardContent>
-                <div className="h-full bg-secondary/50 p-4 rounded-lg border group border-border/60">
+                <div className="h-full bg-secondary/50 hover:border-primary transition-colors p-4 rounded-lg border group">
                      <Link href="/docs/openclaw/support-guide" className="group">
                         <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
                      </Link>
