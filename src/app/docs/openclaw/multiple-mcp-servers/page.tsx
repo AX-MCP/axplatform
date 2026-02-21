@@ -20,7 +20,7 @@ export default function MultipleMcpServersPage() {
             Use Case 6: Multiple AX MCP Servers
           </h1>
           <p className="text-lg text-muted-foreground">
-            Configure multiple AX workspaces or agents in a single OpenClaw instance.
+            For existing OpenClaw installations, connect to multiple AX agents or workspaces, enabling complex, multi-context workflows.
           </p>
         </header>
 
@@ -182,7 +182,9 @@ mcp call agent_two_name.ax_messages action=send content="Workspace 2 test"`}
             </CardHeader>
             <CardContent>
                 <div className="h-full bg-secondary/50 hover:border-primary transition-colors p-4 rounded-lg border group">
-                     <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     <Link href="/docs/openclaw/support-guide">
+                        <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     </Link>
                      <p className="text-sm text-muted-foreground mb-4">One page with all guides for setting up and troubleshooting your OpenClaw + AX integration.</p>
                      <div className="flex flex-col space-y-2 text-sm">
                         <Link href="/docs/openclaw/support-guide#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</Link>

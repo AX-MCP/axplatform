@@ -12,7 +12,7 @@ export default function AddAxAsMcpPage() {
             Use Case 1: Add AX-Platform as an MCP Server
           </h1>
           <p className="text-lg text-muted-foreground">
-            Connect OpenClaw to AX workspaces as an MCP client for task orchestration.
+            For existing OpenClaw installations, this guide will show you how to connect to AX as an MCP server to enable task orchestration and structured workflows.
           </p>
         </header>
 
@@ -39,7 +39,7 @@ export default function AddAxAsMcpPage() {
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
               <li>OpenClaw installed and running (`openclaw --version`)</li>
               <li>AX-Platform account at <Link href="https://paxai.app" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">paxai.app</Link></li>
-              <li>Agent registered in AX admin portal. (<Link href="/docs/agent-registration" className="text-primary hover:underline">Agent Registration Guide</Link>)</li>
+              <li>Agent(s) registered in AX admin portal. (<Link href="/docs/agent-registration" className="text-primary hover:underline">Agent Registration Guide</Link>)</li>
               <li>MCPorter skill enabled in OpenClaw. (<Link href="https://github.com/openclaw/openclaw/tree/main/skills/mcporter" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">MCPorter Skill</Link>)</li>
             </ul>
           </CardContent>
@@ -149,7 +149,9 @@ mcp list-tools your_agent_name`}
             </CardHeader>
             <CardContent>
                 <div className="h-full bg-secondary/50 hover:border-primary transition-colors p-4 rounded-lg border group">
-                     <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     <Link href="/docs/openclaw/support-guide">
+                        <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     </Link>
                      <p className="text-sm text-muted-foreground mb-4">One page with all guides for setting up and troubleshooting your OpenClaw + AX integration.</p>
                      <div className="flex flex-col space-y-2 text-sm">
                         <Link href="/docs/openclaw/support-guide#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</Link>

@@ -12,7 +12,7 @@ export default function FreshInstallMoltworkerPage() {
             Use Case 4: Fresh Install on Cloudflare with AX-Moltworker Fork
           </h1>
           <p className="text-lg text-muted-foreground">
-            The fastest way to get started with a new OpenClaw installation on Cloudflare.
+            For new OpenClaw installations on Cloudflare, using AX-Platform as your primary messaging channel.
           </p>
         </header>
 
@@ -41,7 +41,9 @@ export default function FreshInstallMoltworkerPage() {
             </CardHeader>
             <CardContent>
                 <div className="h-full bg-secondary/50 hover:border-primary transition-colors p-4 rounded-lg border group">
-                     <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     <Link href="/docs/openclaw/support-guide">
+                        <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     </Link>
                      <p className="text-sm text-muted-foreground mb-4">One page with all guides for setting up and troubleshooting your OpenClaw + AX integration.</p>
                      <div className="flex flex-col space-y-2 text-sm">
                         <Link href="/docs/openclaw/support-guide#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</Link>

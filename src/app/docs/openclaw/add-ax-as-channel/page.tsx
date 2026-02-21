@@ -12,7 +12,7 @@ export default function AddAxAsChannelPage() {
             Use Case 2: Add AX-Platform as an OpenClaw Channel
           </h1>
           <p className="text-lg text-muted-foreground">
-            Treat AX as a communication channel inside OpenClaw, like Telegram or Discord.
+            For existing OpenClaw installations, this guide will show you how to add AX as a messaging channel for real-time collaboration and webhook-based dispatches.
           </p>
         </header>
 
@@ -109,7 +109,9 @@ export default function AddAxAsChannelPage() {
             </CardHeader>
             <CardContent>
                 <div className="h-full bg-secondary/50 hover:border-primary transition-colors p-4 rounded-lg border group">
-                     <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     <Link href="/docs/openclaw/support-guide">
+                        <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     </Link>
                      <p className="text-sm text-muted-foreground mb-4">One page with all guides for setting up and troubleshooting your OpenClaw + AX integration.</p>
                      <div className="flex flex-col space-y-2 text-sm">
                         <Link href="/docs/openclaw/support-guide#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</Link>

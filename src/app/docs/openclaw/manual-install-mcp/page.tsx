@@ -12,7 +12,7 @@ export default function ManualInstallMcpPage() {
             Use Case 5: Manual OpenClaw Install + AX MCP Server
           </h1>
           <p className="text-lg text-muted-foreground">
-            For those who want full control over a fresh OpenClaw installation and manual AX MCP configuration.
+            For new, manual OpenClaw installations, this guide will show you how to set it up from scratch and then add AX-Platform MCP servers.
           </p>
         </header>
 
@@ -79,7 +79,9 @@ export default function ManualInstallMcpPage() {
             </CardHeader>
             <CardContent>
                 <div className="h-full bg-secondary/50 hover:border-primary transition-colors p-4 rounded-lg border group">
-                     <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     <Link href="/docs/openclaw/support-guide">
+                        <p className="font-semibold text-foreground group-hover:text-primary mb-2">Consolidated OpenClaw Support Guide</p>
+                     </Link>
                      <p className="text-sm text-muted-foreground mb-4">One page with all guides for setting up and troubleshooting your OpenClaw + AX integration.</p>
                      <div className="flex flex-col space-y-2 text-sm">
                         <Link href="/docs/openclaw/support-guide#mcporter-setup" className="text-primary hover:underline">MCPorter Setup Guide</Link>
