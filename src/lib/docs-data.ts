@@ -330,9 +330,9 @@ export const sectionItems = {
         icon: Users,
       },
       {
-        title: "OpenClaw Troubleshooting",
-        description: "Solutions for common issues when connecting OpenClaw and AX-Platform.",
-        href: "/docs/openclaw/troubleshooting",
+        title: "OpenClaw Support Guide",
+        description: "A consolidated guide for setting up and troubleshooting OpenClaw with AX.",
+        href: "/docs/openclaw/support-guide",
         icon: LifeBuoy,
       },
       {

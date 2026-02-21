@@ -80,7 +80,7 @@ const docsPages = [
     { href: "/docs/openclaw/full-integration", title: "OpenClaw: Full Integration" },
     { href: "/docs/openclaw/manual-install-mcp", title: "OpenClaw: Manual Install + MCP" },
     { href: "/docs/openclaw/multiple-mcp-servers", title: "OpenClaw: Multiple MCP Servers" },
-    { href: "/docs/openclaw/troubleshooting", title: "OpenClaw Troubleshooting" },
+    { href: "/docs/openclaw/support-guide", title: "OpenClaw Support Guide" },
     { href: "/docs/prompt-library", title: "Prompt Library" },
     { href: "/docs/quick-start", title: "Quick Start" },
     { href: "/docs/search", title: "Search" },
