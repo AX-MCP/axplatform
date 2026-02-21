@@ -40,12 +40,20 @@ export default function EnterpriseUseCasesPage() {
             </div>
             <div className="space-y-3">
               <h3 className="text-xl font-semibold font-headline text-foreground">SIEM (Cloud SecOps and Compliance Automation)</h3>
-              <Button asChild>
-                <Link href="https://drive.google.com/file/d/15YX-C_axV07pSbcw7j7Fq0W8Hsrtg9Pr/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download PDF
-                </Link>
-              </Button>
+              <div className="flex space-x-4">
+                <Button asChild>
+                  <Link href="https://drive.google.com/file/d/15YX-C_axV07pSbcw7j7Fq0W8Hsrtg9Pr/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download PDF
+                  </Link>
+                </Button>
+                <Button asChild>
+                  <Link href="https://drive.google.com/file/d/1IBJQyQKroL3gpTOLG4yojpVRsdqBdtwK/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download PDF
+                  </Link>
+                </Button>
+              </div>
             </div>
             <div className="space-y-3">
               <h3 className="text-xl font-semibold font-headline text-foreground">Scrum Team (Agile Development Automation)</h3>
