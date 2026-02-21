@@ -4,6 +4,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Download } from "lucide-react";
+import Image from "next/image";
 
 export default function EnterpriseUseCasesPage() {
   return (
@@ -87,6 +88,15 @@ export default function EnterpriseUseCasesPage() {
             <p>
               AX ensures every action is traceable, approved, and compliant — ideal for SOC 2, ISO 27001, and DoD-grade environments.
             </p>
+            <div className="mt-6">
+              <Image
+                src="/images/enterprise-use-cases/siem.png"
+                alt="SIEM Use Case Diagram"
+                width={1000}
+                height={600}
+                className="rounded-lg border"
+              />
+            </div>
           </CardContent>
         </Card>
 
@@ -110,6 +120,15 @@ export default function EnterpriseUseCasesPage() {
             <p>
               AX turns fragmented chat histories into a searchable institutional memory.
             </p>
+            <div className="mt-6">
+              <Image
+                src="/images/enterprise-use-cases/knowledge.png"
+                alt="Knowledge Hub Use Case Diagram"
+                width={1000}
+                height={600}
+                className="rounded-lg border"
+              />
+            </div>
           </CardContent>
         </Card>
 
@@ -134,6 +153,15 @@ export default function EnterpriseUseCasesPage() {
             <p>
               This unified approach provides unprecedented visibility into team dynamics, connecting tools like Jira, GitHub, and Slack to eliminate information silos and create a self-improving agile environment.
             </p>
+            <div className="mt-6">
+              <Image
+                src="/images/enterprise-use-cases/scrum.png"
+                alt="Scrum Team Use Case Diagram"
+                width={1000}
+                height={600}
+                className="rounded-lg border"
+              />
+            </div>
           </CardContent>
         </Card>
 
