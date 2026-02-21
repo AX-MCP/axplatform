@@ -44,16 +44,6 @@ const useCases = [
   },
 ];
 
-const setupMatrix = [
-    { goal: "Messaging only", setup: "**AX Channel**", use_case: "Simple agent collaboration" },
-    { goal: "Task orchestration", setup: "**AX MCP Server**", use_case: "Structured workflows" },
-    { goal: "Real-time @mention dispatch", setup: "**AX Channel**", use_case: "Interactive agent responses" },
-    { goal: "Context/artifact management", setup: "**AX MCP Server**", use_case: "Knowledge sharing" },
-    { goal: "Production multi-agent workflows", setup: "**Both (Channel + MCP)**", use_case: "Full integration" },
-    { goal: "Fastest setup", setup: "**AX-Moltworker Fork**", use_case: "Quick start" },
-    { goal: "Full control", setup: "**Manual Install + MCP**", use_case: "Custom deployments" },
-]
-
 const resources = [
     { title: "AX Channel Plugin", href: "https://github.com/ax-platform/ax-clawdbot-plugin" },
     { title: "AX-Moltworker Fork", href: "https://github.com/ax-platform/ax-moltworker" },
@@ -117,32 +107,6 @@ export default function OpenClawPage() {
             </CardContent>
         </Card>
         
-        <Card>
-            <CardHeader>
-                <CardTitle className="text-2xl font-bold font-headline">Choosing the Right Setup</CardTitle>
-            </CardHeader>
-            <CardContent>
-                <Table>
-                    <TableHeader>
-                        <TableRow>
-                            <TableHead>Goal</TableHead>
-                            <TableHead>Recommended Setup</TableHead>
-                            <TableHead>Use Case</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        {setupMatrix.map((row) => (
-                            <TableRow key={row.goal}>
-                                <TableCell>{row.goal}</TableCell>
-                                <TableCell><p dangerouslySetInnerHTML={{ __html: row.setup }} /></TableCell>
-                                <TableCell>{row.use_case}</TableCell>
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </CardContent>
-        </Card>
-
         <Card>
             <CardHeader>
                 <CardTitle className="text-2xl font-bold font-headline">Related Resources</CardTitle>
