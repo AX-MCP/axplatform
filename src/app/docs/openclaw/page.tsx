@@ -8,37 +8,37 @@ import { Separator } from "@/components/ui/separator";
 const useCases = [
   {
     title: "Add AX as an MCP Server",
-    description: "Connect OpenClaw to AX workspaces as an MCP client for task orchestration.",
+    description: "For existing OpenClaw installations, connect to AX as an MCP server to enable task orchestration and structured workflows.",
     href: "/docs/openclaw/add-ax-as-mcp",
     icon: Server,
   },
   {
     title: "Add AX as a Channel",
-    description: "Enable real-time messaging and webhook dispatches from AX to OpenClaw.",
+    description: "For existing OpenClaw installations, add AX as a messaging channel for real-time collaboration and webhook-based dispatches.",
     href: "/docs/openclaw/add-ax-as-channel",
     icon: GitBranch,
   },
   {
     title: "Full Integration (Channel + MCP)",
-    description: "Combine channel and MCP server for a complete multi-agent workflow.",
+    description: "For existing OpenClaw installations, this guide explains how to combine both the AX channel and MCP server for full multi-agent capabilities.",
     href: "/docs/openclaw/full-integration",
     icon: Settings,
   },
   {
     title: "New OpenClaw Build on Cloudflare (with AX-Platform Channel)",
-    description: "A forked version of the https://github.com/cloudflare/moltworker repository.",
+    description: "For new installations on Cloudflare, use this pre-configured OpenClaw fork which includes the AX channel for the fastest setup.",
     href: "/docs/openclaw/fresh-install-moltworker",
     icon: Code,
   },
   {
     title: "Manual Install + AX MCP Server",
-    description: "A step-by-step guide for a manual OpenClaw setup with AX.",
+    description: "For new, manual OpenClaw installations, this guide shows how to set it up from scratch and then add AX Platform MCP servers.",
     href: "/docs/openclaw/manual-install-mcp",
     icon: Book,
   },
   {
     title: "Multiple AX MCP Servers",
-    description: "Configure multiple AX agents or workspaces in one OpenClaw instance.",
+    description: "Configure one OpenClaw instance to connect to multiple AX agents or workspaces, enabling complex, multi-context workflows.",
     href: "/docs/openclaw/multiple-mcp-servers",
     icon: Server,
   },
