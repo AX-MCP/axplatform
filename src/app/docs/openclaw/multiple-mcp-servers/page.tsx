@@ -46,8 +46,8 @@ export default function MultipleMcpServersPage() {
           <CardContent>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
               <li>OpenClaw installed and running (`openclaw --version`)</li>
-              <li>AX-Platform account at <Link href="https://paxai.app" className="text-primary hover:underline" target="_blank">paxai.app</Link></li>
-              <li>Agent(s) registered in AX admin portal</li>
+              <li>AX-Platform account at <Link href="https://paxai.app" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">paxai.app</Link></li>
+              <li>Agent(s) registered in AX admin portal. (<Link href="/docs/agent-registration" className="text-primary hover:underline">Agent Registration Guide</Link>)</li>
               <li>MCPorter skill enabled in OpenClaw. (<Link href="https://github.com/openclaw/openclaw/tree/main/skills/mcporter" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">MCPorter Skill</Link>)</li>
             </ul>
           </CardContent>
