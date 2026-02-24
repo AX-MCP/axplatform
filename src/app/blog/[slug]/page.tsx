@@ -77,19 +77,15 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   // A simple function to parse the HTML and split it into sections
   const parseContent = (htmlContent: string) => {
     if (typeof DOMParser === 'undefined') {
-        // Simple split for server-side rendering if DOMParser is not available
-        const sections = htmlContent.split(/(?=<h2)/);
-        return sections.map((section, index) => {
-            const h2Match = section.match(/<h2.*?>(.*?)<\/h2>/);
-            const title = h2Match ? h2Match[1] : (index === 0 ? post.title : '');
-            const content = h2Match ? section.substring(section.indexOf('</h2>') + 5) : section;
-
-            return {
-                id: index,
-                title: title,
-                content: content
-            };
-        });
+        // For servers/scrapers, just return the whole content as one section
+        // to ensure it's always rendered and accessible. This avoids brittle
+        // server-side HTML parsing. The client will still progressively
+        // enhance if it needs to.
+        return [{
+            id: 0,
+            title: post.title,
+            content: htmlContent
+        }];
     }
     // This part will run on the client, but we will do our best to make it work on the server.
     const parser = new DOMParser();

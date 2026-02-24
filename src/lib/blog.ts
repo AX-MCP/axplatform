@@ -7,10 +7,6 @@ import html from 'remark-html';
 
 const postsDirectory = path.join(process.cwd(), 'src/content/blog');
 
-const slugsToIgnore = [
-  'multi-agent-collaboration-with-ax-and-openclaw'
-];
-
 export type Post = {
   slug: string;
   title: string;
@@ -32,9 +28,6 @@ export function getSortedPostsData(): PostMetadata[] {
   const allPostsData = fileNames
     .map((fileName) => {
       const slug = fileName.replace(/\.mdx$/, '');
-      if (slugsToIgnore.includes(slug)) {
-        return null;
-      }
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
       const matterResult = matter(fileContents);
@@ -71,9 +64,6 @@ export function getAllPostSlugs() {
   return fileNames
     .map((fileName) => {
       const slug = fileName.replace(/\.mdx$/, '');
-      if (slugsToIgnore.includes(slug)) {
-        return null;
-      }
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
       const matterResult = matter(fileContents);
@@ -90,9 +80,6 @@ export function getAllPostSlugs() {
 }
 
 export async function getPostData(slug: string): Promise<Post | null> {
-  if (slugsToIgnore.includes(slug)) {
-    return null;
-  }
   const fullPath = path.join(postsDirectory, `${slug}.mdx`);
 
   if (!fs.existsSync(fullPath)) {
