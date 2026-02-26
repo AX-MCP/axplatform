@@ -3,6 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 const demos = [
   {
+    title: "AX-Platform - The SIEM WorkFlow with OpenClaw",
+    description: "AX-Platform - The SIEM WorkFlow with OpenClaw.",
+    youtubeId: "qRppB34ilTc",
+  },
+  {
     title: "AX Platform Overview",
     description: "A general overview of the AX platform and its capabilities for multi-agent collaboration.",
     youtubeId: "Mppv-8edaSQ",
