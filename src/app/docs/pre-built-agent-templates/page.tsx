@@ -1,3 +1,7 @@
+import { getDocsMetadata } from "@/lib/docs-metadata";
+
+export const metadata = getDocsMetadata("pre-built-agent-templates");
+
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
