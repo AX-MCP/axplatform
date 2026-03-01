@@ -39,19 +39,19 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm">
-      <div className="container flex h-14 items-center">
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          <Link href="/" className="transition-colors hover:text-foreground/80">
+    <header className="sticky top-0 z-50 w-full border-b border-border/30 bg-background/80 backdrop-blur-xl">
+      <div className="container flex h-16 items-center">
+        <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
+          <Link href="/" className="px-3 py-2 rounded-lg transition-colors hover:text-foreground hover:bg-secondary/50 text-muted-foreground">
             Home
           </Link>
           {Object.entries(navigationItems).map(([title, items]) => (
             <DropdownMenu key={title}>
-              <DropdownMenuTrigger className="flex items-center transition-colors hover:text-foreground/80 focus:outline-none data-[state=open]:text-foreground/80">
+              <DropdownMenuTrigger className="flex items-center px-3 py-2 rounded-lg transition-colors hover:text-foreground hover:bg-secondary/50 text-muted-foreground focus:outline-none data-[state=open]:text-foreground data-[state=open]:bg-secondary/50">
                 {title}
-                <ChevronDown className="ml-1 h-4 w-4" />
+                <ChevronDown className="ml-1 h-3.5 w-3.5 opacity-60" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent>
+              <DropdownMenuContent className="glass border-border/40">
                 {items.map((item) => (
                   <DropdownMenuItem key={item.name} asChild>
                     <Link href={item.href}>{item.name}</Link>
@@ -60,51 +60,50 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           ))}
-          <Link href="/about" className="transition-colors hover:text-foreground/80">
+          <Link href="/about" className="px-3 py-2 rounded-lg transition-colors hover:text-foreground hover:bg-secondary/50 text-muted-foreground">
             About
           </Link>
-
-          <Link href="/docs" className="transition-colors hover:text-foreground/80">
+          <Link href="/docs" className="px-3 py-2 rounded-lg transition-colors hover:text-foreground hover:bg-secondary/50 text-muted-foreground">
             Docs
           </Link>
-          <Link href="/investors" className="transition-colors hover:text-foreground/80">
+          <Link href="/investors" className="px-3 py-2 rounded-lg transition-colors hover:text-foreground hover:bg-secondary/50 text-muted-foreground">
             Investors
           </Link>
-          <Link href="/blog" className="transition-colors hover:text-foreground/80">
+          <Link href="/blog" className="px-3 py-2 rounded-lg transition-colors hover:text-foreground hover:bg-secondary/50 text-muted-foreground">
             Blog
           </Link>
         </nav>
 
-        <div className="flex-1 flex items-center justify-end md:justify-end gap-2">
-           <HeaderSearch className="w-56 hidden md:block" />
+        <div className="flex-1 flex items-center justify-end gap-2">
+          <HeaderSearch className="w-56 hidden md:block" />
 
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" className="hover:bg-secondary/50">
                   <Menu className="h-5 w-5" />
                   <span className="sr-only">Open Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="w-[240px]">
+              <SheetContent side="left" className="w-[260px] bg-surface-1 border-border/30">
                 <div className="p-4">
                   <div className="flex flex-col space-y-6 pt-8">
                     <Link
                       href="/"
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-foreground hover:text-foreground/80"
+                      className="text-foreground hover:text-primary transition-colors"
                     >
                       Home
                     </Link>
                     {Object.entries(navigationItems).map(([title, items]) => (
                       <div key={title} className="flex flex-col space-y-2">
-                        <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">{title}</h4>
+                        <h4 className="font-semibold text-muted-foreground tracking-wider uppercase text-xs">{title}</h4>
                         {items.map((item) => (
                           <Link
                             key={item.name}
                             href={item.href}
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="text-foreground hover:text-foreground/80"
+                            className="text-foreground/80 hover:text-primary transition-colors pl-2"
                           >
                             {item.name}
                           </Link>
@@ -112,34 +111,17 @@ const Header = () => {
                       </div>
                     ))}
                     <div className="flex flex-col space-y-2">
-                      <h4 className="font-semibold text-muted-foreground tracking-wide uppercase text-xs">More</h4>
-                      <Link
-                        href="/about"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="text-foreground hover:text-foreground/80"
-                      >
+                      <h4 className="font-semibold text-muted-foreground tracking-wider uppercase text-xs">More</h4>
+                      <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors pl-2">
                         About
                       </Link>
-
-                      <Link
-                        href="/docs"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="text-foreground hover:text-foreground/80"
-                      >
+                      <Link href="/docs" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors pl-2">
                         Docs
                       </Link>
-                      <Link
-                        href="/blog"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="text-foreground hover:text-foreground/80"
-                      >
+                      <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors pl-2">
                         Blog
                       </Link>
-                      <Link
-                        href="/investors"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="text-foreground hover:text-foreground/80"
-                      >
+                      <Link href="/investors" onClick={() => setIsMobileMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors pl-2">
                         Investors
                       </Link>
                     </div>
@@ -149,20 +131,20 @@ const Header = () => {
             </Sheet>
           </div>
 
-          <div className="hidden sm:flex items-center justify-end gap-2">
-            <Button asChild variant="ghost" size="icon">
+          <div className="hidden sm:flex items-center justify-end gap-1.5">
+            <Button asChild variant="outline" size="icon" className="border-[#5865F2]/40 bg-transparent text-[#5865F2] hover:text-[#7289DA] hover:border-[#5865F2]/70 hover:bg-[#5865F2]/10 transition-all">
               <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer">
-                <DiscordIcon className="h-5 w-5 text-muted-foreground hover:text-foreground" />
-                 <span className="sr-only">Discord</span>
+                <DiscordIcon className="h-4.5 w-4.5" />
+                <span className="sr-only">Discord</span>
               </Link>
             </Button>
-            <Button asChild variant="ghost" size="icon">
+            <Button asChild variant="outline" size="icon" className="border-[#6e7681]/50 bg-transparent text-[#e6edf3] hover:text-white hover:border-[#8b949e]/70 hover:bg-[#6e7681]/10 transition-all">
               <Link href="https://github.com/ax-platform/ax-platform-mcp" target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5 text-muted-foreground hover:text-foreground" />
+                <Github className="h-4.5 w-4.5" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </Button>
-            <Button asChild size="sm">
+            <Button asChild size="sm" className="rounded-lg ml-1 h-9 px-6 font-semibold shadow-md shadow-primary/15">
               <Link href="https://paxai.app" target="_blank" rel="noopener noreferrer">
                 Log in
               </Link>

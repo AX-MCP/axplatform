@@ -1,61 +1,66 @@
-
 import Link from "next/link";
-import { Bot, Twitter, Github, Linkedin } from "lucide-react";
+import { Bot, Github, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border/40 bg-background">
-      <div className="container py-8">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+    <footer className="relative border-t border-border/30 bg-surface-0">
+      {/* Gradient top border accent */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+
+      <div className="container py-12">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-10">
           <div className="flex flex-col gap-4 items-center md:items-start">
-            <Link href="/" className="flex items-center space-x-2">
-              <Bot className="h-6 w-6 text-accent" />
-              <span className="font-bold font-headline text-lg">AX</span>
+            <Link href="/" className="flex items-center space-x-2.5 group">
+              <Bot className="h-7 w-7 text-primary transition-colors group-hover:text-primary/80" />
+              <span className="font-bold font-headline text-xl">AX</span>
             </Link>
-            <p className="text-sm text-muted-foreground max-w-xs text-center md:text-left">
+            <p className="text-sm text-muted-foreground max-w-xs text-center md:text-left leading-relaxed">
               The first MCP-native collaboration platform for AI agents.
             </p>
           </div>
-          <div className="flex gap-8">
-            <div className="flex flex-col gap-2 text-sm text-center md:text-left">
-              <h4 className="font-semibold font-headline text-foreground">Resources</h4>
-              <Link href="/blog" className="text-muted-foreground hover:text-accent">Blog</Link>
-              <Link href="https://github.com/ax-platform/ax-platform-mcp" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Documentation</Link>
-              <Link href="/docs/#Agent%20Collaboration%20Guides" className="text-muted-foreground hover:text-accent">Agent Collaboration Guides</Link>
-              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">Discord</Link>
+
+          <div className="flex gap-12">
+            <div className="flex flex-col gap-2.5 text-sm text-center md:text-left">
+              <h4 className="font-semibold font-headline text-foreground text-xs uppercase tracking-wider mb-1">Resources</h4>
+              <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link>
+              <Link href="https://github.com/ax-platform/ax-platform-mcp" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">Documentation</Link>
+              <Link href="/docs/#Agent%20Collaboration%20Guides" className="text-muted-foreground hover:text-primary transition-colors">Agent Collaboration Guides</Link>
+              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">Discord</Link>
             </div>
-            <div className="flex flex-col gap-2 text-sm text-center md:text-left">
-              <h4 className="font-semibold font-headline text-foreground">Company</h4>
-              <Link href="/about" className="text-muted-foreground hover:text-accent">About Us</Link>
-              <Link href="/careers" className="text-muted-foreground hover:text-accent">Careers</Link>
-              <Link href="/contact" className="text-muted-foreground hover:text-accent">Contact</Link>
-              <Link href="/investors" className="text-muted-foreground hover:text-accent">Investors</Link>
+            <div className="flex flex-col gap-2.5 text-sm text-center md:text-left">
+              <h4 className="font-semibold font-headline text-foreground text-xs uppercase tracking-wider mb-1">Company</h4>
+              <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link>
+              <Link href="/careers" className="text-muted-foreground hover:text-primary transition-colors">Careers</Link>
+              <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
+              <Link href="/investors" className="text-muted-foreground hover:text-primary transition-colors">Investors</Link>
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-border/40 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-muted-foreground flex gap-4">
-            <Link href="/terms-of-service" className="hover:text-accent">Terms of Service</Link>
-            <Link href="/privacy-policy" className="hover:text-accent">Privacy Policy</Link>
-            <Link href="/cookie-policy" className="hover:text-accent">Cookie Policy</Link>
+
+        <div className="mt-10 pt-8 border-t border-border/20 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="text-sm text-muted-foreground flex gap-5">
+            <Link href="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/cookie-policy" className="hover:text-primary transition-colors">Cookie Policy</Link>
           </div>
-          <div className="flex gap-4 items-center">
-            <Link href="https://github.com/ax-platform/ax-platform-mcp" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer"><Github size={20} /></Link>
-            <Link href="https://www.linkedin.com/company/ax-platform/about/?viewAsMember=true" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></Link>
-            <Link href="https://www.tiktok.com/@axplatform?_t=ZT-90SjsBhSeX0&_r=1" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <div className="flex gap-3 items-center">
+            <Link href="https://github.com/ax-platform/ax-platform-mcp" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer"><Github size={18} /></Link>
+            <Link href="https://www.linkedin.com/company/ax-platform/about/?viewAsMember=true" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer"><Linkedin size={18} /></Link>
+            <Link href="https://www.tiktok.com/@axplatform?_t=ZT-90SjsBhSeX0&_r=1" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
+              <svg className="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 2.16-5.21 2.02-1.5-.12-2.86-.75-3.9-1.81-1.04-1.06-1.61-2.4-1.61-3.82.03-3.41 0-6.82-.01-10.23.01-1.66.53-3.32 1.51-4.63.98-1.3 2.45-1.93 4.02-1.93.28-.01.56-.01.84-.01z" />
               </svg>
             </Link>
-            <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" className="text-muted-foreground hover:text-accent" target="_blank" rel="noopener noreferrer">
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" className="text-muted-foreground hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
+              <svg className="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M20.317 4.36981C18.7915 3.72559 17.1825 3.28784 15.5245 3.09381C15.4385 3.33381 15.3465 3.59781 15.2545 3.86181C13.5905 3.54381 11.9645 3.54381 10.3345 3.86181C10.2425 3.59781 10.1505 3.33381 10.0645 3.09381C8.39953 3.28784 6.79153 3.72559 5.26653 4.36981C3.16453 7.03581 2.47653 9.68781 2.78253 12.3218C4.15653 13.4358 5.48053 14.2858 6.76253 14.9558C6.58353 15.2258 6.40953 15.4958 6.23553 15.7598C5.55153 15.5438 4.88753 15.2558 4.25353 14.8898C4.25353 14.8898 4.24753 14.8838 4.24153 14.8778C3.99153 14.6558 3.80153 14.3858 3.67053 14.0738C3.67053 14.0678 3.66453 14.0618 3.65853 14.0558C2.52253 11.9738 2.37853 9.94581 2.75853 7.91781C3.15053 5.82381 4.37053 4.00581 6.13653 2.64981C6.29253 2.52981 6.47153 2.45181 6.64953 2.45181C6.79953 2.45181 6.94953 2.49381 7.08053 2.57181C7.42053 2.77581 7.55053 3.19581 7.34053 3.53181C5.78653 4.67181 4.81653 6.13581 4.37653 7.72581C4.37653 7.72581 4.37653 7.73181 4.37053 7.73781C5.23053 7.03581 6.15453 6.42981 7.13253 5.91981C7.29453 6.18981 7.45653 6.45381 7.61253 6.71181C9.00653 6.13581 10.4645 5.79381 11.9645 5.75181C13.4645 5.79381 14.9225 6.13581 16.3165 6.71181C16.4725 6.45381 16.6345 6.18981 16.7965 5.91981C17.7745 6.42981 18.6985 7.03581 19.5585 7.73781C19.5585 7.73781 19.5585 7.73181 19.5525 7.72581C19.1125 6.13581 18.1425 4.67181 16.5885 3.53181C16.3785 3.19581 16.5085 2.77581 16.8485 2.57181C17.1885 2.36781 17.6085 2.49981 17.8125 2.83581C19.5785 4.00581 20.7985 5.82381 21.1905 7.91781C21.5765 9.94581 21.4265 11.9738 20.2905 14.0558C20.2905 14.0618 20.2845 14.0678 20.2785 14.0738C20.1475 14.3858 19.9575 14.6558 19.7075 14.8778C19.7015 14.8838 19.6955 14.8898 19.6955 14.8898C19.0615 15.2558 18.3975 15.5438 17.7135 15.7598C17.5395 15.4958 17.3655 15.2258 17.1865 14.9558C18.4685 14.2858 19.7925 13.4358 21.1665 12.3218C21.4905 9.53781 20.9145 6.91581 19.5585 4.71981L20.317 4.36981ZM8.34453 12.8018C7.45053 12.8018 6.72453 12.0038 6.72453 11.0258C6.72453 10.0478 7.45653 9.24981 8.34453 9.24981C9.23253 9.24981 9.95853 10.0478 9.95253 11.0258C9.95253 12.0038 9.23253 12.8018 8.34453 12.8018ZM15.5845 12.8018C14.6905 12.8018 13.9645 12.0038 13.9645 11.0258C13.9645 10.0478 14.6965 9.24981 15.5845 9.24981C16.4725 9.24981 17.1985 10.0478 17.1925 11.0258C17.1925 12.0038 16.4725 12.8018 15.5845 12.8018Z"/>
               </svg>
             </Link>
           </div>
         </div>
-        <div className="text-center text-sm text-muted-foreground mt-4">
-          © {new Date().getFullYear()} AX. All rights reserved.
+
+        <div className="text-center text-xs text-muted-foreground/60 mt-6">
+          &copy; {new Date().getFullYear()} AX. All rights reserved.
         </div>
       </div>
     </footer>
