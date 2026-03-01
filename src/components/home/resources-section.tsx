@@ -38,11 +38,11 @@ const resources = [
   {
     icon: Youtube,
     title: "SIEM Workflow Demo",
-    description: "See a real-world SecOps workflow in action, featuring OpenClaw integration.",
+    description: "Watch our latest demo video showcasing a real-world SecOps workflow with OpenClaw integration.",
     href: "https://youtu.be/qRppB34ilTc",
     isExternal: true,
-    className: "bg-red-900/20 border-red-500/30 hover:border-red-500/60",
-    iconContainerClassName: "bg-red-900/30 text-red-400",
+    className: "bg-green-900/20 border-green-500/30 hover:border-green-500/60",
+    iconContainerClassName: "bg-green-900/30 text-green-400",
   },
   {
     icon: Sparkles,
@@ -73,8 +73,8 @@ const ResourcesSection = () => {
               target={resource.isExternal ? "_blank" : undefined}
               rel={resource.isExternal ? "noopener noreferrer" : undefined}
             >
-              <Card className={cn("rounded-lg border border-border/60 bg-background/50 hover:border-primary transition-all duration-300 h-full", resource.className)}>
-                <CardContent className="p-6">
+              <Card className={cn("rounded-lg border border-border/60 bg-background/50 hover:border-primary transition-all duration-300 h-full flex flex-col", resource.className)}>
+                <CardContent className="p-6 flex-grow">
                   <div className="flex items-start gap-4">
                     <div className={cn("flex items-center justify-center h-10 w-10 rounded-md bg-secondary text-blue-500 shrink-0 mt-1", resource.iconContainerClassName)}>
                       <resource.icon className="h-5 w-5" />
