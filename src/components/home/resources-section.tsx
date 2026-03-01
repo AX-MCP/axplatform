@@ -38,7 +38,7 @@ const resources = [
   {
     icon: Youtube,
     title: "SIEM Workflow Demo",
-    description: "Watch our latest demo video showcasing a real-world SecOps workflow with OpenClaw integration.",
+    description: "Watch our latest SecOps workflow demo with OpenClaw.",
     href: "https://youtu.be/qRppB34ilTc",
     isExternal: true,
     className: "bg-green-900/20 border-green-500/30 hover:border-green-500/60",
