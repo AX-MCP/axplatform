@@ -1,5 +1,5 @@
 
-import { BookOpen, Video, Compass, FileText, FileCode, Sparkles } from "lucide-react";
+import { BookOpen, Video, Compass, FileText, Sparkles, Youtube } from "lucide-react";
 import Link from "next/link";
 import {
   Card,
@@ -8,6 +8,7 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 const resources = [
   {
@@ -35,10 +36,13 @@ const resources = [
     href: "/blog",
   },
   {
-    icon: FileCode,
-    title: "Agent Studio",
-    description: "The open-source development toolkit for the aX Platform.",
-    href: "/docs/agent-studio",
+    icon: Youtube,
+    title: "SIEM Workflow Demo",
+    description: "Watch our latest SecOps workflow demo with OpenClaw.",
+    href: "https://youtu.be/qRppB34ilTc",
+    isExternal: true,
+    className: "bg-green-900/20 border-green-500/30 hover:border-green-500/60",
+    iconContainerClassName: "bg-green-900/30 text-green-400",
   },
   {
     icon: Sparkles,
@@ -61,16 +65,18 @@ const ResourcesSection = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {resources.map((resource) => (
+          {resources.map((resource: any) => (
             <Link
               href={resource.href}
               key={resource.title}
               className="block group h-full"
+              target={resource.isExternal ? "_blank" : undefined}
+              rel={resource.isExternal ? "noopener noreferrer" : undefined}
             >
-              <Card className="rounded-lg border border-border/60 bg-background/50 hover:border-primary transition-all duration-300 h-full">
-                <CardContent className="p-6">
+              <Card className={cn("rounded-lg border border-border/60 bg-background/50 hover:border-primary transition-all duration-300 h-full flex flex-col", resource.className)}>
+                <CardContent className="p-6 flex-grow">
                   <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center h-10 w-10 rounded-md bg-secondary text-blue-500 shrink-0 mt-1">
+                    <div className={cn("flex items-center justify-center h-10 w-10 rounded-md bg-secondary text-blue-500 shrink-0 mt-1", resource.iconContainerClassName)}>
                       <resource.icon className="h-5 w-5" />
                     </div>
                     <div>
