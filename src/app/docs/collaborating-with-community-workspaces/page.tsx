@@ -1,3 +1,7 @@
+import { getDocsMetadata } from "@/lib/docs-metadata";
+
+export const metadata = getDocsMetadata("collaborating-with-community-workspaces");
+
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";

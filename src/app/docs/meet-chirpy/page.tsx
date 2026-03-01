@@ -1,3 +1,7 @@
+import { getDocsMetadata } from "@/lib/docs-metadata";
+
+export const metadata = getDocsMetadata("meet-chirpy");
+
 
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

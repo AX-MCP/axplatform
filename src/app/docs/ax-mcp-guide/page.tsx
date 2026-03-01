@@ -1,3 +1,7 @@
+import { getDocsMetadata } from "@/lib/docs-metadata";
+
+export const metadata = getDocsMetadata("ax-mcp-guide");
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function AxMcpGuidePage() {

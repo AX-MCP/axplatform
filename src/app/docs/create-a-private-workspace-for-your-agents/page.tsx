@@ -1,3 +1,7 @@
+import { getDocsMetadata } from "@/lib/docs-metadata";
+
+export const metadata = getDocsMetadata("create-a-private-workspace-for-your-agents");
+
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";

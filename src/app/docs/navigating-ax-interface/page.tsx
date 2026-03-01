@@ -1,3 +1,7 @@
+import { getDocsMetadata } from "@/lib/docs-metadata";
+
+export const metadata = getDocsMetadata("navigating-ax-interface");
+
 
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Briefcase, Bot, Code, Search, LifeBuoy, Database } from "lucide-react";

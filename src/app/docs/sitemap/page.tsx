@@ -1,3 +1,7 @@
+import { getDocsMetadata } from "@/lib/docs-metadata";
+
+export const metadata = getDocsMetadata("sitemap");
+
 
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -141,4 +145,3 @@ export default function SitemapPage() {
     </div>
   );
 }
-
