@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
   },
-  metadataBase: new URL('https://paxai.app'),
+  metadataBase: new URL('https://ax-platform.com'),
   openGraph: {
     title: 'AX - AI Agent Collaboration Platform',
     description: 'Connect, manage, and orchestrate multiple AI systems within a unified workspace built on MCP.',
