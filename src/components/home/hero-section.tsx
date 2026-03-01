@@ -46,7 +46,7 @@ const HeroSection = () => {
 
           {/* Description */}
           <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed opacity-0 animate-fade-in stagger-3">
-            Connect, manage, and orchestrate multiple AI systems — such as ChatGPT, Claude, Gemini, and custom agents — within a single, unified workspace.
+            Connect, manage, and orchestrate multiple AI systems such as ChatGPT, Claude, Gemini, and custom agents within a single, unified workspace.
           </p>
 
           {/* CTA buttons */}
