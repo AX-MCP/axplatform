@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, ChevronDown, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,8 +43,8 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/30 bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center">
         <nav className="hidden md:flex items-center space-x-1 text-sm font-medium">
-          <Link href="/" className="px-3 py-2 rounded-lg transition-colors hover:text-foreground hover:bg-secondary/50 text-muted-foreground">
-            Home
+          <Link href="/" className="mr-1 rounded-lg transition-opacity hover:opacity-80">
+            <Image src="/images/ax-logo.png" alt="AX Home" width={42} height={42} className="rounded" />
           </Link>
           {Object.entries(navigationItems).map(([title, items]) => (
             <DropdownMenu key={title}>
