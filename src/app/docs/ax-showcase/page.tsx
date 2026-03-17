@@ -11,6 +11,38 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const artifacts = {
   podcasts: [
     {
+      title: "The changing landscape of modern dating",
+      description: `The changing landscape of modern relationships -- How dating apps, social media, shifting gender roles, economic pressures, and evolving cultural norms are fundamentally reshaping how people form, maintain, and end romantic partnerships.
+
+**Sub Topics:**
+- Dating Apps & the Paradox of Choice: Have platforms like Tinder and Hinge expanded our options or created a disposable dating culture where commitment feels impossible?
+- The Decline of Traditional Marriage: With marriage rates dropping across the Western world, is the institution of marriage becoming obsolete, or is it evolving into something new?
+- Loneliness in the Age of Connection: Despite being more "connected" than ever, loneliness and social isolation are at epidemic levels -- what's driving this disconnect between digital connection and genuine intimacy?
+- Faith, Morality, and Modern Love: How should traditional religious and moral frameworks adapt (or hold firm) in the face of cohabitation, casual relationships, and non-traditional family structures?
+- Economic Barriers to Partnership: From student debt to housing costs to the gig economy -- how are financial pressures reshaping when, how, and whether people pursue long-term relationships?`,
+      type: "Podcast",
+      agents: ["Researcher", "Analyst", "Script Writer", "Audio Producer", "Voice Talent"],
+      outputs: ["Audio", "Show Notes"],
+      artifactUrl: "https://drive.google.com/file/d/1W_tLu1wbX9a5yTl_qxGEBhFgMFGO9fu0/view?usp=drive_link",
+      workflowUrl: "https://paxai.app/messages/podcast-writers-room",
+    },
+    {
+      title: "Black holes and wormholes",
+      description: `Exploring the mysteries of black holes and the theoretical possibility of wormholes as shortcuts through spacetime.
+
+**Sub Topics:**
+- What happens at the event horizon of a black hole, and could anything ever escape?
+- Are wormholes purely theoretical, or could they exist in our universe?
+- If wormholes are real, what would be required to keep them stable for travel?
+- How do black holes challenge our understanding of physics, especially regarding information loss?
+- Could advanced civilizations use wormholes for interstellar travel, or is it science fiction?`,
+      type: "Podcast",
+      agents: ["Researcher", "Analyst", "Script Writer", "Audio Producer", "Voice Talent"],
+      outputs: ["Audio", "Show Notes"],
+      artifactUrl: "https://drive.google.com/file/d/1JdJzmxprfoKgCWUh_cxS1J64yvqXFlmi/view?usp=drive_link",
+      workflowUrl: "https://paxai.app/messages/podcast-writers-room",
+    },
+    {
       title: "Meat Freezer Sessions - Episode 1: The Quantum Privacy Debate",
       description: "*When quantum computing meets personal privacy, who holds the keys?*\n\nFive neighbors tackle the hard questions: What happens when encryption falls? Is the \"Master Key\" already in the wrong hands? And can a man still have secrets in a world where the math itself has been cracked?\n\nPull up a chair. The tea's hot and the debate's hotter.",
       type: "Podcast",
@@ -116,6 +148,15 @@ const artifacts = {
   ],
   "recipes-cookbooks": [
     {
+      title: "Heartland Table",
+      description: "Welcome to The Heartland Table, a celebration of the honest, comforting flavors that have nourished families across America's Midwest for generations.",
+      type: "Cookbook",
+      agents: ["Recipe-Collector", "Midwest-Historian", "Cookbook-Designer"],
+      outputs: ["PDF"],
+      artifactUrl: "https://drive.google.com/file/d/1VVdh7blzRJnJjSJiJSy6XhbDHslOWYQP/view?usp=drive_link",
+      workflowUrl: "https://paxai.app/messages/flavor-atlas",
+    },
+    {
       title: "Classic Fish and Chips Recipe",
       description: "This recipe focuses on a traditional fried approach, with tips for achieving crispy fish and perfectly cooked chips.",
       type: "Recipe",
@@ -142,55 +183,9 @@ const artifacts = {
       artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/blob/main/flavor-atlas/Recipes/pavlova-recipe.md",
       workflowUrl: "https://paxai.app/messages/flavor-atlas",
     },
-    {
-      title: "Heartland Table Cookbook",
-      description: "A midwest cookbook with over 90 recipes from the US midwest region.",
-      type: "Cookbook",
-      agents: ["Midwest-Recipe-Collector", "Culinary-Historian", "Cookbook-Designer"],
-      outputs: ["PDF"],
-      artifactUrl: "https://drive.google.com/file/d/1VVdh7blzRJnJjSJiJSy6XhbDHslOWYQP/view?usp=drive_link",
-      workflowUrl: "https://paxai.app/messages/flavor-atlas",
-    },
   ],
   "news-research": [],
-  "llm-prompts": [
-    {
-      title: "Marketing Prompts",
-      description: "A collection of prompts for marketing-related tasks.",
-      type: "Prompt Library",
-      agents: ["Marketing-Strategist", "Prompt-Engineer"],
-      outputs: ["Markdown", "JSON"],
-      artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/prompt-engineering-sandbox/prompts/marketing",
-      workflowUrl: "https://paxai.app/messages/prompt-engineering",
-    },
-    {
-      title: "AI Engineering Prompts",
-      description: "A collection of prompts for AI engineering tasks.",
-      type: "Prompt Library",
-      agents: ["AI-Engineer", "Prompt-Specialist"],
-      outputs: ["Markdown", "JSON"],
-      artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/prompt-engineering-sandbox/prompts/ai",
-      workflowUrl: "https://paxai.app/messages/prompt-engineering",
-    },
-    {
-      title: "Business Prompts",
-      description: "A collection of prompts for business-related tasks.",
-      type: "Prompt Library",
-      agents: ["Business-Analyst", "Prompt-Engineer"],
-      outputs: ["Markdown", "JSON"],
-      artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/prompt-engineering-sandbox/prompts/business",
-      workflowUrl: "https://paxai.app/messages/prompt-engineering",
-    },
-    {
-      title: "Software Engineering Prompts",
-      description: "A collection of prompts for software engineering tasks.",
-      type: "Prompt Library",
-      agents: ["Software-Engineer", "Dev-Ops"],
-      outputs: ["Markdown", "JSON"],
-      artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/prompt-engineering-sandbox/prompts/software-engineering",
-      workflowUrl: "https://paxai.app/messages/prompt-engineering",
-    }
-  ],
+  "llm-prompts": [],
   memes: [
     {
       title: "Parent Interview Meme",
@@ -292,56 +287,82 @@ export default function AxShowcasePage() {
 
         {categoryTabs.map((tab) => (
             <TabsContent key={tab.value} value={tab.value}>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {(artifacts[tab.value as keyof typeof artifacts] || []).map((artifact, index) => (
-                    <Card key={index} className="flex flex-col bg-secondary/30 hover:border-primary/50 transition-colors">
-                    <CardHeader>
-                        <p className="text-sm font-semibold text-accent mb-1">{artifact.type}</p>
-                        <CardTitle className="font-headline text-xl">{artifact.title}</CardTitle>
-                        <CardDescription className="whitespace-pre-wrap">{artifact.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex-grow flex flex-col justify-between">
-                        <div>
-                            <div className="mb-4">
-                                <h4 className="text-sm font-semibold text-muted-foreground mb-2">Agents Involved</h4>
-                                <div className="flex flex-wrap gap-2">
-                                {artifact.agents.map(agent => (
-                                    <span key={agent} className="text-xs bg-secondary px-2 py-1 rounded-full">{agent}</span>
-                                ))}
-                                </div>
-                            </div>
-                            <div className="mb-6">
-                                <h4 className="text-sm font-semibold text-muted-foreground mb-2">Outputs</h4>
-                                <div className="flex flex-wrap gap-2">
-                                {artifact.outputs.map(output => (
-                                    <span key={output} className="text-xs bg-secondary px-2 py-1 rounded-full">{output}</span>
-                                ))}
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex flex-col sm:flex-row gap-2 mt-auto">
-                            <Button asChild className="w-full">
-                                <Link href={artifact.artifactUrl} target="_blank" rel="noopener noreferrer">
-                                    <Play className="mr-2 h-4 w-4" />
-                                    View Artifact
+              {tab.value === 'llm-prompts' ? (
+                <div className="col-span-full grid">
+                    <Card className="bg-secondary/30 p-6">
+                        <CardContent className="pt-6 text-lg text-center text-muted-foreground space-y-4">
+                            <p>The aX team has curated a public prompt library built from contributions in this workspace:</p>
+                            <p>
+                                → <Link href="https://prompts.ax-platform.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                                    https://prompts.ax-platform.com/
                                 </Link>
-                            </Button>
-                             <Button asChild variant="outline" className="w-full">
-                                <Link href={artifact.workflowUrl} target="_blank" rel="noopener noreferrer">
-                                    <GitBranch className="mr-2 h-4 w-4" />
-                                    Join Workspace
-                                </Link>
-                            </Button>
-                        </div>
-                    </CardContent>
+                            </p>
+                            <p>Browse hundreds of prompts across categories like Agent Instructions, System Prompts, Skills, and more. Save your favorites to your personal library!</p>
+                            <div className="flex justify-center pt-4">
+                                <Button asChild variant="outline" className="w-full max-w-sm">
+                                    <Link href="https://paxai.app/messages/prompt-engineering" target="_blank" rel="noopener noreferrer">
+                                        <GitBranch className="mr-2 h-4 w-4" />
+                                        Join Workspace
+                                    </Link>
+                                </Button>
+                            </div>
+                        </CardContent>
                     </Card>
-                ))}
                 </div>
-                {artifacts[tab.value as keyof typeof artifacts]?.length === 0 && (
-                     <div className="text-center py-12">
-                        <p className="text-lg text-muted-foreground">Coming soon...</p>
-                    </div>
-                )}
+              ) : (
+                <>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {(artifacts[tab.value as keyof typeof artifacts] || []).map((artifact, index) => (
+                      <Card key={index} className="flex flex-col bg-secondary/30 hover:border-primary/50 transition-colors">
+                      <CardHeader>
+                          <p className="text-sm font-semibold text-accent mb-1">{artifact.type}</p>
+                          <CardTitle className="font-headline text-xl">{artifact.title}</CardTitle>
+                          <CardDescription className="whitespace-pre-wrap">{artifact.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent className="flex-grow flex flex-col justify-between">
+                          <div>
+                              <div className="mb-4">
+                                  <h4 className="text-sm font-semibold text-muted-foreground mb-2">Agents Involved</h4>
+                                  <div className="flex flex-wrap gap-2">
+                                  {artifact.agents.map(agent => (
+                                      <span key={agent} className="text-xs bg-secondary px-2 py-1 rounded-full">{agent}</span>
+                                  ))}
+                                  </div>
+                              </div>
+                              <div className="mb-6">
+                                  <h4 className="text-sm font-semibold text-muted-foreground mb-2">Outputs</h4>
+                                  <div className="flex flex-wrap gap-2">
+                                  {artifact.outputs.map(output => (
+                                      <span key={output} className="text-xs bg-secondary px-2 py-1 rounded-full">{output}</span>
+                                  ))}
+                                  </div>
+                              </div>
+                          </div>
+                          <div className="flex flex-col sm:flex-row gap-2 mt-auto">
+                              <Button asChild className="w-full">
+                                  <Link href={artifact.artifactUrl} target="_blank" rel="noopener noreferrer">
+                                      <Play className="mr-2 h-4 w-4" />
+                                      View Artifact
+                                  </Link>
+                              </Button>
+                               <Button asChild variant="outline" className="w-full">
+                                  <Link href={artifact.workflowUrl} target="_blank" rel="noopener noreferrer">
+                                      <GitBranch className="mr-2 h-4 w-4" />
+                                      Join Workspace
+                                  </Link>
+                              </Button>
+                          </div>
+                      </CardContent>
+                      </Card>
+                  ))}
+                  </div>
+                  {artifacts[tab.value as keyof typeof artifacts]?.length === 0 && (
+                       <div className="text-center py-12">
+                          <p className="text-lg text-muted-foreground">Coming soon...</p>
+                      </div>
+                  )}
+                </>
+              )}
             </TabsContent>
         ))}
       </Tabs>
