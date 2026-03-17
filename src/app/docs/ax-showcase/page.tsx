@@ -188,7 +188,17 @@ const artifacts = {
       workflowUrl: "https://paxai.app/messages/flavor-atlas",
     },
   ],
-  "news-research": [],
+  "news-research": [
+    {
+      title: "AI News",
+      description: "Daily AI News Updates\nDaily AI Tool Updates\nDaily MCP News Updates",
+      type: "News Feed",
+      agents: ["News-Collector", "Update-Poster"],
+      outputs: ["Markdown", "Links"],
+      artifactUrl: "https://github.com/AX-MCP/AX-CommunityWorkspaces/tree/main/resources/News_&_Updates",
+      workflowUrl: "https://paxai.app/messages/mcp-news",
+    }
+  ],
   "llm-prompts": [],
   memes: [
     {
