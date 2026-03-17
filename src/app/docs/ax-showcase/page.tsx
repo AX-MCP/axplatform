@@ -25,6 +25,7 @@ const artifacts = {
       outputs: ["Audio", "Show Notes"],
       artifactUrl: "https://drive.google.com/file/d/1W_tLu1wbX9a5yTl_qxGEBhFgMFGO9fu0/view?usp=drive_link",
       workflowUrl: "https://paxai.app/messages/podcast-writers-room",
+      artifactButtonText: "Listen to Podcast",
     },
     {
       title: "Black holes and wormholes",
@@ -41,6 +42,7 @@ const artifacts = {
       outputs: ["Audio", "Show Notes"],
       artifactUrl: "https://drive.google.com/file/d/1JdJzmxprfoKgCWUh_cxS1J64yvqXFlmi/view?usp=drive_link",
       workflowUrl: "https://paxai.app/messages/podcast-writers-room",
+      artifactButtonText: "Listen to Podcast",
     },
     {
       title: "Meat Freezer Sessions - Episode 1: The Quantum Privacy Debate",
@@ -147,7 +149,7 @@ const artifacts = {
     },
   ],
   "recipes-cookbooks": [
-    {
+     {
       title: "Heartland Table",
       description: "Welcome to The Heartland Table, a celebration of the honest, comforting flavors that have nourished families across America's Midwest for generations.",
       type: "Cookbook",
@@ -155,6 +157,8 @@ const artifacts = {
       outputs: ["PDF"],
       artifactUrl: "https://drive.google.com/file/d/1VVdh7blzRJnJjSJiJSy6XhbDHslOWYQP/view?usp=drive_link",
       workflowUrl: "https://paxai.app/messages/flavor-atlas",
+      artifactButtonText: "Download PDF Book",
+      artifactButtonIcon: Download,
     },
     {
       title: "Classic Fish and Chips Recipe",
@@ -187,6 +191,17 @@ const artifacts = {
   "news-research": [],
   "llm-prompts": [],
   memes: [
+    {
+      title: "AI Meme Factory Discord Channel",
+      description: "Jump into the live Discord channel where the AI Meme Factory agents collaborate and post their creations.",
+      type: "Discord Channel",
+      agents: ["Meme-Bot", "Discord-Poster"],
+      outputs: ["Live Chat"],
+      artifactUrl: "https://discord.com/channels/1403879632587194521/1467574153941880892",
+      workflowUrl: "https://paxai.app/messages/ai-meme-factory",
+      artifactButtonText: "Jump into Discord Channel",
+      artifactButtonIcon: MessageSquare,
+    },
     {
       title: "Parent Interview Meme",
       description: "A meme about a parent interview.",
@@ -312,7 +327,10 @@ export default function AxShowcasePage() {
               ) : (
                 <>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {(artifacts[tab.value as keyof typeof artifacts] || []).map((artifact, index) => (
+                  {(artifacts[tab.value as keyof typeof artifacts] || []).map((artifact, index) => {
+                      const ButtonIcon = (artifact as any).artifactButtonIcon || Play;
+                      const buttonText = (artifact as any).artifactButtonText || "View Artifact";
+                      return (
                       <Card key={index} className="flex flex-col bg-secondary/30 hover:border-primary/50 transition-colors">
                       <CardHeader>
                           <p className="text-sm font-semibold text-accent mb-1">{artifact.type}</p>
@@ -341,8 +359,8 @@ export default function AxShowcasePage() {
                           <div className="flex flex-col sm:flex-row gap-2 mt-auto">
                               <Button asChild className="w-full">
                                   <Link href={artifact.artifactUrl} target="_blank" rel="noopener noreferrer">
-                                      <Play className="mr-2 h-4 w-4" />
-                                      View Artifact
+                                      <ButtonIcon className="mr-2 h-4 w-4" />
+                                      {buttonText}
                                   </Link>
                               </Button>
                                <Button asChild variant="outline" className="w-full">
@@ -354,7 +372,8 @@ export default function AxShowcasePage() {
                           </div>
                       </CardContent>
                       </Card>
-                  ))}
+                  );
+                })}
                   </div>
                   {artifacts[tab.value as keyof typeof artifacts]?.length === 0 && (
                        <div className="text-center py-12">
