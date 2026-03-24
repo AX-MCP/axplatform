@@ -38,12 +38,17 @@ Take a straightforward Intune compliance check: list non-compliant devices, cros
 
 ![Token cost: MCP vs. CLI](/images/blog/mcp_vs_cli/token_cost.png)
 
-| Phase | MCP | CLI |
-|---|---|---|
-| Tool schema injection | ~28,000 tokens | 0 tokens |
-| Agent reasoning + tool selection | ~3,200 tokens | ~800 tokens |
-| API calls + response parsing | ~113,800 tokens | ~3,350 tokens |
-| **Total** | **~145,000 tokens** | **~4,150 tokens** |
+<table>
+<thead>
+<tr><th>Phase</th><th>MCP</th><th>CLI</th></tr>
+</thead>
+<tbody>
+<tr><td>Tool schema injection</td><td>~28,000 tokens</td><td>0 tokens</td></tr>
+<tr><td>Agent reasoning + tool selection</td><td>~3,200 tokens</td><td>~800 tokens</td></tr>
+<tr><td>API calls + response parsing</td><td>~113,800 tokens</td><td>~3,350 tokens</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>~145,000 tokens</strong></td><td><strong>~4,150 tokens</strong></td></tr>
+</tbody>
+</table>
 
 *Source: Jannik Reinhard (2026), real enterprise workflow benchmark. That's a ~35x reduction.*
 
@@ -109,17 +114,22 @@ But once your agent touches shared infrastructure, external users, or anything r
 
 ## Benchmarks at a glance
 
-| Dimension | CLI | MCP |
-|---|---|---|
-| Context window cost | Zero schema overhead | High on init (50K+ tokens) |
-| Model fluency | Native (trained on terminal data) | Runtime schema, no training data |
-| Token efficiency (simple tasks) | ~35x more efficient | Schema overhead dominates |
-| Multi-step complex tasks | More total actions | Fewer tool calls, structured data |
-| Per-user identity / auth | Not designed for it | Protocol-level support |
-| Multi-tenant safety | Architectural gap | Implementable |
-| Composability | Unix pipes, 50 years of battle testing | No native chaining (yet) |
-| Portability across AI clients | Per-machine setup | Any MCP-compatible client |
-| **Best for** | **Developer inner loop, solo automation** | **Production agents, multi-tenant, audit** |
+<table>
+<thead>
+<tr><th>Dimension</th><th>CLI</th><th>MCP</th></tr>
+</thead>
+<tbody>
+<tr><td>Context window cost</td><td>Zero schema overhead</td><td>High on init (50K+ tokens)</td></tr>
+<tr><td>Model fluency</td><td>Native (trained on terminal data)</td><td>Runtime schema, no training data</td></tr>
+<tr><td>Token efficiency (simple tasks)</td><td>~35x more efficient</td><td>Schema overhead dominates</td></tr>
+<tr><td>Multi-step complex tasks</td><td>More total actions</td><td>Fewer tool calls, structured data</td></tr>
+<tr><td>Per-user identity / auth</td><td>Not designed for it</td><td>Protocol-level support</td></tr>
+<tr><td>Multi-tenant safety</td><td>Architectural gap</td><td>Implementable</td></tr>
+<tr><td>Composability</td><td>Unix pipes, 50 years of battle testing</td><td>No native chaining (yet)</td></tr>
+<tr><td>Portability across AI clients</td><td>Per-machine setup</td><td>Any MCP-compatible client</td></tr>
+<tr><td><strong>Best for</strong></td><td><strong>Developer inner loop, solo automation</strong></td><td><strong>Production agents, multi-tenant, audit</strong></td></tr>
+</tbody>
+</table>
 
 One development worth watching: dynamic tool loading, where servers expose a minimal set of tools upfront and lazy-load the rest on demand. Most servers don't implement this yet, but the architecture supports it. If it catches on, the context overhead argument gets a lot weaker.
 
