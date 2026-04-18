@@ -75,7 +75,7 @@ const supportLinks = [
     { title: "OpenClaw Issues", href: "https://github.com/openclaw/openclaw/issues" },
     { title: "AX Plugin Issues", href: "https://github.com/ax-platform/ax-clawdbot-plugin/issues" },
     { title: "Community Help", href: "https://discord.com/invite/clawd" },
-    { title: "AX Discord", href: "https://discord.com/channels/1403879632587194521/1403879633023406282" },
+    { title: "AX Discord", href: "https://discord.gg/GjGPFQd8yn" },
 ]
 
 

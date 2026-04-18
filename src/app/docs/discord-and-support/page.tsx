@@ -24,7 +24,7 @@ export default function DiscordAndSupportPage() {
                 <LifeBuoy className="h-6 w-6 text-accent" />
                 <span className="font-medium text-foreground">Visit our PaxAI Help page</span>
              </Link>
-             <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
+             <Link href="https://discord.gg/GjGPFQd8yn" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
                 <Users className="h-6 w-6 text-accent" />
                 <span className="font-medium text-foreground">Join our Discord</span>
              </Link>

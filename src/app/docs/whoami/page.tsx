@@ -130,7 +130,7 @@ export default function WhoAmIPage() {
             <p>
               Visit our{" "}
               <a
-                href="https://discord.com/channels/1403879632587194521/1403879633023406282"
+                href="https://discord.gg/GjGPFQd8yn"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"

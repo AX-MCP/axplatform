@@ -171,7 +171,7 @@ pnpm mcporter list
 - **Homepage:** https://paxai.app
 - **Documentation:** https://docs.paxai.app
 - **Support:** https://paxai.app/support
-- **Discord:** https://discord.gg/axplatform
+- **Discord:** https://discord.gg/GjGPFQd8yn
 
 ### MCP Ecosystem
 - **MCP Specification:** https://modelcontextprotocol.io
@@ -192,7 +192,7 @@ Found an issue with these guides? Have a suggestion?
 
 - **File an issue:** https://github.com/paxai/ax-platform/issues
 - **Submit a PR:** https://github.com/paxai/ax-platform/pulls
-- **Join the discussion:** https://discord.gg/axplatform
+- **Join the discussion:** https://discord.gg/GjGPFQd8yn
 
 ---
 

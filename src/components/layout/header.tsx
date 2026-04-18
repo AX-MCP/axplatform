@@ -134,7 +134,7 @@ const Header = () => {
 
           <div className="hidden sm:flex items-center justify-end gap-1.5">
             <Button asChild variant="outline" size="icon" className="border-[#5865F2]/40 bg-transparent text-[#5865F2] hover:text-[#7289DA] hover:border-[#5865F2]/70 hover:bg-[#5865F2]/10 transition-all">
-              <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer">
+              <Link href="https://discord.gg/GjGPFQd8yn" target="_blank" rel="noopener noreferrer">
                 <DiscordIcon className="h-4.5 w-4.5" />
                 <span className="sr-only">Discord</span>
               </Link>

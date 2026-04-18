@@ -42,7 +42,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold text-lg text-foreground">Discord Community</h3>
                 <p className="text-muted-foreground">Join our community for discussions and live support.</p>
-                <Link href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                <Link href="https://discord.gg/GjGPFQd8yn" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   Join our Discord
                 </Link>
               </div>

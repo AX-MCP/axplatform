@@ -135,7 +135,7 @@ export default function TasksPage() {
               Need Help? Visit our <a href="/contact" className="text-primary hover:underline">PaxAI Help page</a>
             </p>
             <p>
-              Visit our <a href="https://discord.com/channels/1403879632587194521/1403879633023406282" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Discord</a>
+              Visit our <a href="https://discord.gg/GjGPFQd8yn" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Discord</a>
             </p>
             <p>
               Email our Support Team <a href="mailto:support@ax-platform.com" className="text-primary hover:underline">AX Team</a>
